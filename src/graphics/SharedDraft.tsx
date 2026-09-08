@@ -71,12 +71,16 @@ export const SharedDraft: React.FC<SharedDraftProps> = ({
   const slotY = (row: number) =>
     cy + (row === 0 ? -1 : 1) * height * 0.27 - CHIP.height / 2;
 
-  let done = 0;
-  for (const step of steps) {
-    if (frame >= step.at) {
-      done += 1;
+  // Whose turn it is now: the last one to have started. A fixed window would
+  // leave two turns lit at once, since consecutive turns here are closer
+  // together than any window wide enough to read.
+  let current = -1;
+  for (let i = 0; i < steps.length; i++) {
+    if (frame >= steps[i].at) {
+      current = i;
     }
   }
+  const done = current + 1;
   const quality = interpolate(done, [0, steps.length], [0.35, 0.95], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -197,7 +201,7 @@ export const SharedDraft: React.FC<SharedDraftProps> = ({
             if (frame < step.at - 2) {
               return null;
             }
-            const live = frame < step.at + 44;
+            const live = i === current;
 
             return (
               <div
