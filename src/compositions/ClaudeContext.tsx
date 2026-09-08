@@ -190,7 +190,7 @@ export const ClaudeContext: React.FC = () => {
               {...size}
               syntax={[
                 "### ROLE: you are a world-class expert",
-                "<constraints> tone=formal, len<=300 </constraints>",
+                "<constraints> tone=formal, len<=300 </c>",
                 "{{ output_format: markdown | table }}",
                 "IMPORTANT!!! think step by step",
                 "--temperature 0.7 --top_p 0.95",

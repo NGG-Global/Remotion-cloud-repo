@@ -110,16 +110,19 @@ export const NextLayer: React.FC<NextLayerProps> = ({
         if (frame < file.at - 2) {
           return null;
         }
-        const lift = (files.length - i) * 26;
+        const ROW = 74;
         return (
           <div
             key={i}
             style={{
               position: "absolute",
               left: panelLeft + 34 + i * 22,
-              top: panelTop - lift * land + (1 - land) * -140,
+              // Each plane settles onto its own line inside the panel, coming
+              // in from above so the arrival reads as landing rather than
+              // fading up.
+              top: panelTop + 92 + i * (ROW + 16) + (1 - land) * -150,
               width: PANEL.width - 68,
-              height: 74,
+              height: ROW,
               borderRadius: 14,
               background: COLORS.surfaceRaised,
               border: `1px solid rgba(217,119,87,${0.3 + work * 0.35})`,

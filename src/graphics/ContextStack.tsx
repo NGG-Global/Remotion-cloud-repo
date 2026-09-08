@@ -46,7 +46,9 @@ export const ContextStack: React.FC<ContextStackProps> = ({
   const liveLeft = width * 0.56;
   const emptyLeft = width * 0.08;
 
-  const slotHeight = (COL.height - 108) / layers.length;
+  /** Room kept clear at the top of a column for its title and subtitle. */
+  const HEADER = 150;
+  const slotHeight = (COL.height - HEADER) / layers.length;
 
   const arrive = interpolate(frame, [newChatAt, newChatAt + 26], [0, 1], {
     extrapolateLeft: "clamp",
