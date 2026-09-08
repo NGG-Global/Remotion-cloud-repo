@@ -362,19 +362,19 @@ export const ClaudeContext: React.FC = () => {
                   label: "סבב 1",
                   at: seconds(0.4),
                   fit: 0.45,
-                  verdict: "בכיוון, לא שם",
+                  verdict: "בכיוון הכללי",
                 },
                 {
                   label: "סבב 2",
                   at: seconds(4.6),
                   fit: 0.74,
-                  verdict: "מתקרב",
+                  verdict: "מדויק יותר",
                 },
                 {
                   label: "סבב 3",
                   at: seconds(5.8),
                   fit: 0.95,
-                  verdict: "זה זה",
+                  verdict: "מתאים",
                 },
               ]}
             />

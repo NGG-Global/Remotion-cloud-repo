@@ -81,6 +81,13 @@ export const ConstraintNarrows: React.FC<ConstraintNarrowsProps> = ({
       ? Math.sin((frame - rejectAt) * 1.5) * (1 - (frame - rejectAt) / 16) * 7
       : 0;
 
+  /**
+   * Until the constraint is known, no approach can be shown as fitting. The
+   * paths were coloured from `fits` the moment they were drawn, which put the
+   * answer on screen several seconds before the narration got to it.
+   */
+  const revealed = frame >= pruneAt;
+
   const originX = width * 0.8;
   const originY = height * 0.52;
   const chipRight = width * 0.34;
@@ -190,14 +197,16 @@ export const ConstraintNarrows: React.FC<ConstraintNarrowsProps> = ({
               key={i}
               d={`M ${originX} ${originY} C ${originX - 150} ${originY}, ${chipRight + 150} ${y}, ${chipRight + 8} ${y}`}
               fill="none"
-              stroke={option.fits ? COLORS.accent : COLORS.textMuted}
-              strokeWidth={option.fits && cut === 0 ? 3 : 2.5}
+              stroke={
+                revealed && option.fits ? COLORS.accent : COLORS.textMuted
+              }
+              strokeWidth={revealed && option.fits ? 3 : 2.5}
               // pathLength normalises the path to 1, so it can be drawn on
               // without measuring its real length in the DOM.
               pathLength="1"
               strokeDasharray={1}
               strokeDashoffset={1 - draw}
-              opacity={(option.fits ? 0.75 : 0.4) * (1 - cut)}
+              opacity={(revealed && option.fits ? 0.75 : 0.45) * (1 - cut)}
             />
           );
         })}
