@@ -210,6 +210,7 @@ export const BEATS_EP4 = [
   { at: 282.86, id: "same-chat" },
 
   { at: 289.24, id: "next" },
+  { at: 301.74, id: "outro" },
 ] as const satisfies readonly Beat[];
 
 export type BeatIdEp4 = (typeof BEATS_EP4)[number]["id"];

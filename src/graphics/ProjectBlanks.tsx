@@ -28,6 +28,8 @@ type ProjectBlanksProps = {
   readonly recedeAt: number;
   /** Frame at which the blanks fill themselves in. */
   readonly guessAt: number;
+  /** Frame at which the filling is named for what it is. */
+  readonly tagAt: number;
   /** Frame at which the guessed answer is graded. */
   readonly stampAt: number;
 };
@@ -111,6 +113,7 @@ export const ProjectBlanks: React.FC<ProjectBlanksProps> = ({
   rows,
   recedeAt,
   guessAt,
+  tagAt,
   stampAt,
 }) => {
   const frame = useCurrentFrame();
@@ -349,7 +352,7 @@ export const ProjectBlanks: React.FC<ProjectBlanksProps> = ({
             background: COLORS.warn,
             padding: "6px 16px",
             borderRadius: 999,
-            opacity: interpolate(guess, [0.55, 0.9], [0, 1], {
+            opacity: interpolate(frame - tagAt, [0, 18], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
             }),

@@ -5,6 +5,10 @@ import {
   ClaudeConnect,
   CLAUDE_CONNECT_DURATION,
 } from "./compositions/ClaudeConnect";
+import {
+  ClaudeContext,
+  CLAUDE_CONTEXT_DURATION,
+} from "./compositions/ClaudeContext";
 import { ClaudeIntro, CLAUDE_INTRO_DURATION } from "./compositions/ClaudeIntro";
 import { ClaudeSetup, CLAUDE_SETUP_DURATION } from "./compositions/ClaudeSetup";
 import { Explainer, EXPLAINER_DURATION } from "./compositions/Explainer";
@@ -53,6 +57,13 @@ export const RemotionRoot: React.FC = () => {
         id="ClaudeConnect"
         component={ClaudeConnect}
         durationInFrames={CLAUDE_CONNECT_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="ClaudeContext"
+        component={ClaudeContext}
+        durationInFrames={CLAUDE_CONTEXT_DURATION}
         {...FORMAT}
       />
 
