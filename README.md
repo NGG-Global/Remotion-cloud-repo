@@ -140,11 +140,13 @@ interpolated colour) has to be an inline style.
 | `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it    |
 | `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings  |
 | `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see |
+| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft |
 
 ```bash
 npx remotion render ClaudeIntro out/claude-explainer-ep1.mp4
 npx remotion render ClaudeSetup out/claude-explainer-ep2.mp4
 npx remotion render ClaudeConnect out/claude-explainer-ep3.mp4
+npx remotion render ClaudeContext out/claude-explainer-ep4.mp4
 ```
 
 ### How it is put together
@@ -231,6 +233,25 @@ new icon can be added by appending its `d` strings and nothing else.
 | `ChatAsk`                        | A short exchange as chat bubbles                                   |
 | `SystemRouter`                   | One request routed to whichever system holds the answer            |
 | `PermissionMirror`               | Your access and Claude's, side by side and identical               |
+| `SameToolSplit`                  | One request down two branches, and the gap between the results     |
+| `AimAtInput`                     | Ruling out the model, and landing on what it was given             |
+| `VagueReply`                     | A reply that is right about everything and addressed to no one     |
+| `BriefSlots`                     | The brief filling in, and the deliverable resolving because of it  |
+| `NoSecretLanguage`               | An incantation crossed out, and a plain briefing in its place      |
+| `ProjectBlanks`                  | General knowledge beside an empty project, filled with guesses     |
+| `AttachInstead`                  | Describing a document, next to handing one over                    |
+| `ConstraintNarrows`              | A rejected proposal, and the approaches it rules out               |
+| `BriefBoth`                      | The same briefing delivered to a colleague and to Claude           |
+| `NotFinalStamp`                  | A “final” stamp that will not take                                 |
+| `RetypeLoop`                     | Starting over, drawn as the loop it is, with the context gauge     |
+| `RoundsConverge`                 | Three passes closing on a fixed target                             |
+| `LiveEdits`                      | Blunt corrections, each answered by the page itself                |
+| `ContextStack`                   | What a conversation holds, and what a new one does not             |
+| `SharedDraft`                    | Two bubbles becoming one document worked on from both sides        |
+| `FeedbackAim`                    | The same note worded two ways, and the edit each produces          |
+| `OneThreadFiveGoals`             | Five goals, five outputs, one thread that never changes            |
+| `SameChat`                       | Five features collapsing into one conversation                     |
+| `NextLayer`                      | Files settling onto the conversation as another layer              |
 
 Two things keep them from looking like clip art:
 
@@ -247,6 +268,29 @@ Two things keep them from looking like clip art:
   labels on each other's elements, and a row of step numbers on the opposite
   side from the rail they belong to. Position against an SVG with `left`.
   `right: 0` paired with `left: 0` is a full-width span and is fine.
+
+**When the animation is the argument, give it the frame.** Episode 4 was
+briefed as animation carrying the narration rather than scenes captioning it,
+which changed how it is built. `CanvasScene` hands almost the whole frame to
+one graphic and keeps text to a single line beneath it, and `BezierFlow`
+supplies the motion those graphics keep needing — tokens travelling a cubic
+bezier, evaluated from its control points rather than measured off a rendered
+path, because a `getPointAtLength()` reading needs a ref and an effect and a
+frame that depends on a previous frame's measurement cannot be rendered out of
+order.
+
+Two habits from that episode are worth keeping:
+
+- **Hold a causal chain in one take.** Where the narration is one argument
+  rather than several claims — the brief filling in and the output resolving
+  because of it, the blanks being guessed and the answer coming out nearly
+  right — the beats are rendered by a single graphic using `extend`, so the
+  cause stays on screen with its effect. Cutting between them turns one
+  argument into a list of complaints.
+- **Animate the consequence, not the advice.** The feedback passage does not
+  set two phrasings side by side and label one better; it shows the edit each
+  one produces, precise against diffuse. The constraint passage does not state
+  that time is saved; it draws the candidate approaches and prunes them.
 
 **Where a screen would leak, draw it instead.** Episode 3's narration walks
 through the Microsoft sign-in and consent screens. Those carry a real
