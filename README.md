@@ -4,7 +4,7 @@ Animated explainer videos built as React components with Remotion. Compositions
 are written in TypeScript, previewed in the Remotion Studio, and rendered to MP4
 from the command line or CI.
 
-Currently holds episodes 1 and 2 of a Hebrew-narrated series on using Claude,
+Currently holds episodes 1 to 3 of a Hebrew-narrated series on using Claude,
 plus the scene library, graphics and interface-callout machinery the episodes
 share.
 
@@ -135,14 +135,16 @@ interpolated colour) has to be an inline style.
 
 ## The Claude explainer series
 
-| Composition   | Episode | Length | Subject                                                        |
-| ------------- | ------- | ------ | -------------------------------------------------------------- |
-| `ClaudeIntro` | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it   |
-| `ClaudeSetup` | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings |
+| Composition     | Episode | Length | Subject                                                         |
+| --------------- | ------- | ------ | --------------------------------------------------------------- |
+| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it    |
+| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings  |
+| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see |
 
 ```bash
 npx remotion render ClaudeIntro out/claude-explainer-ep1.mp4
 npx remotion render ClaudeSetup out/claude-explainer-ep2.mp4
+npx remotion render ClaudeConnect out/claude-explainer-ep3.mp4
 ```
 
 ### How it is put together
@@ -219,6 +221,16 @@ new icon can be added by appending its `d` strings and nothing else.
 | `FunnelRule`                     | Text, data and an idea dropping into a funnel that returns a tick  |
 | `EffortCompare`                  | Explaining the task versus doing it, to scale                      |
 | `PathShortcut`                   | A winding route and a direct one to the same destination           |
+| `PlatformGrid`                   | One account reaching browser, desktop and mobile                   |
+| `ModelLadder`                    | The model line-up on a speed-to-depth axis                         |
+| `Overkill`                       | A small task sent to a large model, and what it costs              |
+| `EffortDial`                     | The effort control sweeping its three levels                       |
+| `ABCompare`                      | The same task on two models, marking what one missed               |
+| `PermissionGate`                 | Material reaching Claude only through existing permissions         |
+| `ConnectFlow`                    | The connection as four steps landing in turn                       |
+| `ChatAsk`                        | A short exchange as chat bubbles                                   |
+| `SystemRouter`                   | One request routed to whichever system holds the answer            |
+| `PermissionMirror`               | Your access and Claude's, side by side and identical               |
 
 Two things keep them from looking like clip art:
 
@@ -231,8 +243,16 @@ Two things keep them from looking like clip art:
   Getting that backwards reads as a Latin layout with Hebrew dropped into it.
 - **Never mix CSS `right` with SVG coordinates in an RTL container.** SVG uses
   left-origin coordinates and CSS `right` measures from the other edge, so the
-  two mirror each other. This silently reversed a card order and put two
-  labels on each other's elements before it was caught in a still.
+  two mirror each other. This bit three times — a reversed card order, two
+  labels on each other's elements, and a row of step numbers on the opposite
+  side from the rail they belong to. Position against an SVG with `left`.
+  `right: 0` paired with `left: 0` is a full-width span and is fine.
+
+**Where a screen would leak, draw it instead.** Episode 3's narration walks
+through the Microsoft sign-in and consent screens. Those carry a real
+organisational address and tenant name, so `ConnectFlow` draws the four steps
+rather than showing captures of them — the sequence is what the viewer needs,
+and the credentials are not.
 
 **Claims about the product come from the product.** `ModelLadder` uses the
 picker's own one-line descriptions rather than written-up ones, so the video

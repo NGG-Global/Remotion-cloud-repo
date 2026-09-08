@@ -20,6 +20,7 @@ export type Beat = {
 /** Length of each episode's narration track, in seconds. */
 export const NARRATION_SECONDS = 218.57;
 export const NARRATION_SECONDS_EP2 = 413.23;
+export const NARRATION_SECONDS_EP3 = 276.24;
 
 export const BEATS = [
   { at: 0.0, id: "hook" },
@@ -115,6 +116,48 @@ export const BEATS_EP2 = [
 export type BeatIdEp2 = (typeof BEATS_EP2)[number]["id"];
 
 /**
+ * Episode 3: connecting to Microsoft 365, what that opens up, and — the part
+ * the narration calls the most important — what Claude can and cannot see.
+ */
+export const BEATS_EP3 = [
+  { at: 0.0, id: "recap" },
+  { at: 5.54, id: "title" },
+  { at: 11.38, id: "where-work-lives" },
+  { at: 15.62, id: "hook" },
+
+  { at: 26.7, id: "chapter-connect" },
+  { at: 29.46, id: "connect-steps" },
+  { at: 45.82, id: "access-scope" },
+  { at: 50.7, id: "org-account-only" },
+
+  { at: 61.76, id: "chapter-opens" },
+  { at: 64.24, id: "outlook" },
+  { at: 74.06, id: "calendar-questions" },
+  { at: 91.1, id: "sharepoint" },
+  { at: 107.1, id: "teams" },
+  { at: 117.84, id: "teams-questions" },
+  { at: 124.76, id: "transcript-required" },
+
+  { at: 139.16, id: "no-need-to-know" },
+  { at: 147.3, id: "one-request" },
+  { at: 164.26, id: "the-big-change" },
+
+  { at: 172.78, id: "chapter-permissions" },
+  { at: 179.88, id: "sees-only-yours" },
+  { at: 193.92, id: "no-master-key" },
+  { at: 199.94, id: "same-rules" },
+
+  { at: 210.78, id: "no-download" },
+
+  { at: 225.68, id: "read-vs-do" },
+  { at: 244.68, id: "send-example" },
+  { at: 253.68, id: "rule" },
+  { at: 263.68, id: "outro" },
+] as const satisfies readonly Beat[];
+
+export type BeatIdEp3 = (typeof BEATS_EP3)[number]["id"];
+
+/**
  * Timeline lookups for one episode's beat list.
  *
  * Returning a pair of closures rather than exporting two functions per episode
@@ -148,3 +191,4 @@ export const timeline = <Id extends string>(
 
 export const EP1 = timeline(BEATS, NARRATION_SECONDS);
 export const EP2 = timeline(BEATS_EP2, NARRATION_SECONDS_EP2);
+export const EP3 = timeline(BEATS_EP3, NARRATION_SECONDS_EP3);
