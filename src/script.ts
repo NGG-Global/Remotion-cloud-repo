@@ -21,6 +21,7 @@ export type Beat = {
 export const NARRATION_SECONDS = 218.57;
 export const NARRATION_SECONDS_EP2 = 413.23;
 export const NARRATION_SECONDS_EP3 = 276.24;
+export const NARRATION_SECONDS_EP4 = 304.52;
 
 export const BEATS = [
   { at: 0.0, id: "hook" },
@@ -158,6 +159,62 @@ export const BEATS_EP3 = [
 export type BeatIdEp3 = (typeof BEATS_EP3)[number]["id"];
 
 /**
+ * Episode 4: giving Claude context, and treating the first answer as a draft.
+ *
+ * Timings come from a segment-level transcription of `narration-ep4.mp3`. Two
+ * corrections were applied against the raw output: the pass merged a ten-second
+ * span and dropped the spoken example of a constraint (recovered by
+ * transcribing 122.4-129.5 on its own), and it emitted "shorten it by a third"
+ * twice where the audio says it once.
+ *
+ * Every beat here is carried by a purpose-built graphic rather than by a list
+ * of phrases. Where a beat runs long, the graphic stages itself internally
+ * instead of being split into more beats, so the picture develops with the
+ * voice rather than cutting under it.
+ */
+export const BEATS_EP4 = [
+  { at: 0.0, id: "gap" },
+  { at: 13.5, id: "not-claude" },
+  { at: 19.14, id: "promise" },
+
+  { at: 28.16, id: "vague" },
+  { at: 37.38, id: "for-nobody" },
+  { at: 41.72, id: "brief" },
+  { at: 55.56, id: "workable" },
+  { at: 59.26, id: "what-changed" },
+  { at: 66.98, id: "no-language" },
+
+  { at: 78.66, id: "world-not-project" },
+  { at: 85.68, id: "blanks" },
+  { at: 98.56, id: "guesses" },
+  { at: 104.06, id: "roughly-right" },
+
+  { at: 108.14, id: "attach" },
+  { at: 119.2, id: "constraint" },
+  { at: 133.42, id: "rule-of-thumb" },
+
+  { at: 142.64, id: "not-final" },
+  { at: 151.52, id: "retype-loop" },
+  { at: 161.36, id: "rounds" },
+  { at: 168.2, id: "live-edits" },
+
+  { at: 185.82, id: "context-stack" },
+  { at: 194.16, id: "new-chat-cost" },
+  { at: 199.48, id: "shared-draft" },
+
+  { at: 211.62, id: "useful-feedback" },
+  { at: 227.8, id: "specific-aim" },
+
+  { at: 233.16, id: "everyday" },
+  { at: 236.76, id: "one-thread" },
+  { at: 282.86, id: "same-chat" },
+
+  { at: 289.24, id: "next" },
+] as const satisfies readonly Beat[];
+
+export type BeatIdEp4 = (typeof BEATS_EP4)[number]["id"];
+
+/**
  * Timeline lookups for one episode's beat list.
  *
  * Returning a pair of closures rather than exporting two functions per episode
@@ -192,3 +249,4 @@ export const timeline = <Id extends string>(
 export const EP1 = timeline(BEATS, NARRATION_SECONDS);
 export const EP2 = timeline(BEATS_EP2, NARRATION_SECONDS_EP2);
 export const EP3 = timeline(BEATS_EP3, NARRATION_SECONDS_EP3);
+export const EP4 = timeline(BEATS_EP4, NARRATION_SECONDS_EP4);
