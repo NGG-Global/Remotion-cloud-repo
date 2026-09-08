@@ -1,12 +1,22 @@
 import React from "react";
 import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
 import { CrossFade } from "../components/CrossFade";
+import { ClickMaze } from "../graphics/ClickMaze";
+import { DraftEdit } from "../graphics/DraftEdit";
+import { EffortCompare } from "../graphics/EffortCompare";
+import { FunnelRule } from "../graphics/FunnelRule";
+import { IdeaToOutputs } from "../graphics/IdeaToOutputs";
+import { PageStack } from "../graphics/PageStack";
+import { PathShortcut } from "../graphics/PathShortcut";
+import { ReadMaterial } from "../graphics/ReadMaterial";
+import { SearchResults } from "../graphics/SearchResults";
 import { CardsScene } from "../scenes/CardsScene";
 import { ChapterCard } from "../scenes/ChapterCard";
 import { ContrastScene } from "../scenes/ContrastScene";
 import { ItemsScene } from "../scenes/ItemsScene";
 import { OutroScene } from "../scenes/OutroScene";
 import { ShowcaseScene } from "../scenes/ShowcaseScene";
+import { StagedScene } from "../scenes/StagedScene";
 import { StatementScene } from "../scenes/StatementScene";
 import { TitleScene } from "../scenes/TitleScene";
 import { beatAt, beatLength, NARRATION_SECONDS, type BeatId } from "../script";
@@ -57,9 +67,12 @@ export const ClaudeIntro: React.FC = () => {
 
       <Beat id="hook">
         <StatementScene
-          statement="רוב הכלים שאנחנו עובדים איתם דורשים שנדע בדיוק מה לעשות ואיפה ללחוץ"
-          emphasise={["בדיוק"]}
-          align="center"
+          statement="רוב הכלים דורשים שנדע בדיוק מה לעשות ואיפה ללחוץ"
+          emphasise={["בדיוק", "ללחוץ"]}
+          graphic={({ width, height }) => (
+            <ClickMaze width={width} height={height} span={seconds(4.6)} />
+          )}
+          panel={{ width: 820, height: 500 }}
         />
       </Beat>
 
@@ -75,9 +88,13 @@ export const ClaudeIntro: React.FC = () => {
         <ItemsScene
           heading="בסרטון הזה"
           items={[
-            { text: "מה קלוד באמת יודע לעשות", marker: "1" },
-            { text: "לאלו משימות הוא מתאים", marker: "2" },
-            { text: "ובאלו מקרים עדיף לוותר עליו", marker: "3" },
+            { text: "מה קלוד באמת יודע לעשות", marker: "1", icon: "bulb" },
+            { text: "לאלו משימות הוא מתאים", marker: "2", icon: "check" },
+            {
+              text: "ובאלו מקרים עדיף לוותר עליו",
+              marker: "3",
+              icon: "warning",
+            },
           ]}
           stagger={22}
         />
@@ -89,22 +106,68 @@ export const ClaudeIntro: React.FC = () => {
 
       <Beat id="not-search">
         <ContrastScene
-          not={{ label: "הוא לא", lines: ["מנוע חיפוש", "מחזיר קישורים"] }}
-          but={{ label: "הוא כן", lines: ["עובד על החומר עצמו"] }}
+          not={{
+            label: "הוא לא",
+            lines: ["מנוע חיפוש", "מחזיר קישורים"],
+            graphic: ({ width, height }) => (
+              <SearchResults width={width} height={height} delay={12} />
+            ),
+          }}
+          but={{
+            label: "הוא כן",
+            lines: ["עובד על החומר עצמו"],
+            graphic: ({ width, height }) => (
+              <ReadMaterial
+                width={width}
+                height={height}
+                delay={seconds(2.6)}
+              />
+            ),
+          }}
           butAt={seconds(2.4)}
         />
       </Beat>
 
+      {/* Three examples in a row: shown one at a time so the picture and the
+          sentence stay together instead of the viewer reading ahead. */}
       <Beat id="give-it">
-        <ItemsScene
+        <StagedScene
           heading="תנו לו — והוא יעשה"
-          items={[
+          panel={{ width: 660, height: 460 }}
+          steps={[
             {
-              text: "מסמך של 40 עמודים — יקרא אותו ויענה עליו לעומק",
-              at: seconds(0.9),
+              at: seconds(0.5),
+              graphic: ({ width, height }) => (
+                <PageStack width={width} height={height} delay={seconds(0.5)} />
+              ),
+              caption: "מסמך של 40 עמודים — יקרא אותו ויענה עליו לעומק",
+              emphasise: ["לעומק"],
             },
-            { text: "טיוטה — יערוך אותה", at: seconds(6.1) },
-            { text: "רעיון — יבנה ממנו מסמך, טבלה או מצגת", at: seconds(9.0) },
+            {
+              at: seconds(5.6),
+              graphic: ({ width, height }) => (
+                <DraftEdit
+                  width={width}
+                  height={height}
+                  delay={seconds(5.6)}
+                  span={seconds(2.6)}
+                />
+              ),
+              caption: "טיוטה — יערוך אותה",
+              emphasise: ["יערוך"],
+            },
+            {
+              at: seconds(8.5),
+              graphic: ({ width, height }) => (
+                <IdeaToOutputs
+                  width={width}
+                  height={height}
+                  delay={seconds(8.5)}
+                />
+              ),
+              caption: "רעיון — יבנה ממנו מסמך, טבלה או מצגת",
+              emphasise: ["יבנה"],
+            },
           ]}
         />
       </Beat>
@@ -152,13 +215,13 @@ export const ClaudeIntro: React.FC = () => {
       <Beat id="task-read">
         <ItemsScene
           kicker="הראשון"
-          blockWidth={1020}
+          blockWidth={700}
           heading="לקרוא ולנתח"
           items={[
-            { text: "לסכם מפגש" },
-            { text: "לעבור על דוח" },
-            { text: "להשוות בין שני מסמכים" },
-            { text: "לחלץ נתונים מטבלה" },
+            { text: "לסכם מפגש", icon: "meeting" },
+            { text: "לעבור על דוח", icon: "report" },
+            { text: "להשוות בין שני מסמכים", icon: "compare" },
+            { text: "לחלץ נתונים מטבלה", icon: "table" },
           ]}
           stagger={seconds(0.85)}
         />
@@ -167,13 +230,13 @@ export const ClaudeIntro: React.FC = () => {
       <Beat id="task-write">
         <ItemsScene
           kicker="השני"
-          blockWidth={1020}
+          blockWidth={700}
           heading="לכתוב ולייצר"
           items={[
-            { text: "טיוטת הצעה ללקוח" },
-            { text: "מסמך תהליך" },
-            { text: "תוכן שיווקי" },
-            { text: "שלד של מצגת" },
+            { text: "טיוטת הצעה ללקוח", icon: "pen" },
+            { text: "מסמך תהליך", icon: "flow" },
+            { text: "תוכן שיווקי", icon: "megaphone" },
+            { text: "שלד של מצגת", icon: "slides" },
           ]}
           stagger={seconds(0.85)}
         />
@@ -182,12 +245,12 @@ export const ClaudeIntro: React.FC = () => {
       <Beat id="task-think">
         <ItemsScene
           kicker="השלישי"
-          blockWidth={1020}
+          blockWidth={700}
           heading="לחשוב יחד"
           items={[
-            { text: "ללבן רעיון להתערבות" },
-            { text: "לבנות מבנה לסדנה" },
-            { text: "לבחון אם ההיגיון של הצעה מחזיק" },
+            { text: "ללבן רעיון להתערבות", icon: "bulb" },
+            { text: "לבנות מבנה לסדנה", icon: "framework" },
+            { text: "לבחון אם ההיגיון של הצעה מחזיק", icon: "scale" },
           ]}
           stagger={seconds(1.1)}
         />
@@ -196,12 +259,12 @@ export const ClaudeIntro: React.FC = () => {
       <Beat id="task-order">
         <ItemsScene
           kicker="והרביעי"
-          blockWidth={1020}
+          blockWidth={700}
           heading="לעשות סדר"
           items={[
-            { text: "משימות חוזרות שגוזלות זמן" },
-            { text: "התאמת חומרים לעברית" },
-            { text: "עיבוד קבצים" },
+            { text: "משימות חוזרות שגוזלות זמן", icon: "repeat" },
+            { text: "התאמת חומרים לעברית", icon: "globe" },
+            { text: "עיבוד קבצים", icon: "files" },
           ]}
           stagger={seconds(1.1)}
         />
@@ -212,6 +275,10 @@ export const ClaudeIntro: React.FC = () => {
           kicker="כלל אצבע פשוט"
           statement="אם המשימה מתחילה מטקסט, מנתונים או מרעיון — היא כנראה מתאימה"
           emphasise={["מטקסט,", "מנתונים", "מרעיון"]}
+          graphic={({ width, height }) => (
+            <FunnelRule width={width} height={height} delay={seconds(0.5)} />
+          )}
+          panel={{ width: 700, height: 520 }}
         />
       </Beat>
 
@@ -321,10 +388,14 @@ export const ClaudeIntro: React.FC = () => {
           kicker="בנוסף"
           heading="החשבון הארגוני מתחבר למיקרוסופט 365"
           items={[
-            { text: "מיילים", marker: "◆", at: seconds(1.2) },
-            { text: "קבצים", marker: "◆", at: seconds(2.0) },
-            { text: "פגישות", marker: "◆", at: seconds(2.8) },
-            { text: "תמיד לפי ההרשאות שכבר יש לכם", at: seconds(5.4) },
+            { text: "מיילים", icon: "mail", at: seconds(1.2) },
+            { text: "קבצים", icon: "files", at: seconds(2.0) },
+            { text: "פגישות", icon: "calendar", at: seconds(2.8) },
+            {
+              text: "תמיד לפי ההרשאות שכבר יש לכם",
+              icon: "lock",
+              at: seconds(5.4),
+            },
           ]}
         />
       </Beat>
@@ -344,13 +415,13 @@ export const ClaudeIntro: React.FC = () => {
       <Beat id="limit-accuracy">
         <ItemsScene
           kicker="ראשית"
-          blockWidth={1280}
+          blockWidth={1120}
           heading="קלוד טועה לפעמים"
           accent={COLORS.warn}
           items={[
-            { text: "במספרים", at: seconds(2.3) },
-            { text: "בציטוטים", at: seconds(3.1) },
-            { text: "ובמקורות", at: seconds(3.9) },
+            { text: "במספרים", icon: "table", at: seconds(2.3) },
+            { text: "בציטוטים", icon: "quote", at: seconds(3.1) },
+            { text: "ובמקורות", icon: "doc", at: seconds(3.9) },
             {
               text: "כל עובדה שנכנסת לתוצר שיוצא ללקוח — עוברת אימות שלכם",
               at: seconds(6.4),
@@ -362,13 +433,17 @@ export const ClaudeIntro: React.FC = () => {
       <Beat id="limit-judgement">
         <ItemsScene
           kicker="שנית"
-          blockWidth={1280}
+          blockWidth={1120}
           heading="שיקול דעת מקצועי נשאר אצלכם"
           accent={COLORS.warn}
           items={[
-            { text: "משוב על עובד", at: seconds(4.8) },
-            { text: "החלטה על אדם", at: seconds(6.0) },
-            { text: "קריאה של דינמיקה בחדר", at: seconds(7.2) },
+            { text: "משוב על עובד", icon: "person", at: seconds(4.8) },
+            { text: "החלטה על אדם", icon: "scale", at: seconds(6.0) },
+            {
+              text: "קריאה של דינמיקה בחדר",
+              icon: "meeting",
+              at: seconds(7.2),
+            },
             {
               text: "הוא יכול לעזור לנסח — אבל ההחלטה והאחריות שלכם",
               at: seconds(9.8),
@@ -380,21 +455,32 @@ export const ClaudeIntro: React.FC = () => {
       <Beat id="limit-privacy">
         <ItemsScene
           kicker="שלישית"
-          blockWidth={1280}
+          blockWidth={1120}
           heading="מידע רגיש"
           accent={COLORS.warn}
           items={[
-            { text: "עובדים רק בחשבון הארגוני", at: seconds(3.0) },
-            { text: "ולפי ההרשאות", at: seconds(4.4) },
-            { text: "לא מוציאים מידע פנימי החוצה", at: seconds(5.6) },
+            {
+              text: "עובדים רק בחשבון הארגוני",
+              icon: "shield",
+              at: seconds(3.0),
+            },
+            { text: "ולפי ההרשאות", icon: "lock", at: seconds(4.4) },
+            {
+              text: "לא מוציאים מידע פנימי החוצה",
+              icon: "warning",
+              at: seconds(5.6),
+            },
           ]}
         />
       </Beat>
 
       <Beat id="limit-effort">
         <StatementScene
-          statement="ואם המשימה קצרה יותר מההסבר עליה — פשוט תעשו אותה לבד"
-          align="center"
+          statement="ואם המשימה קצרה יותר מההסבר עליה"
+          graphic={({ width, height }) => (
+            <EffortCompare width={width} height={height} delay={seconds(0.6)} />
+          )}
+          panel={{ width: 780, height: 430 }}
         />
       </Beat>
 
@@ -403,6 +489,10 @@ export const ClaudeIntro: React.FC = () => {
           kicker="בשורה התחתונה"
           statement="קלוד לא מחליף את המומחיות שלכם — הוא מקצר את הדרך אליה"
           emphasise={["מקצר"]}
+          graphic={({ width, height }) => (
+            <PathShortcut width={width} height={height} delay={seconds(0.5)} />
+          )}
+          panel={{ width: 720, height: 400 }}
         />
       </Beat>
 

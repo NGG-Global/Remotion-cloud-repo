@@ -14,6 +14,11 @@ import { COLORS, FONT_SIZE, seconds } from "../theme";
 type Panel = {
   readonly label: string;
   readonly lines: readonly string[];
+  /** Illustration for the panel, given the space available to it. */
+  readonly graphic?: (size: {
+    width: number;
+    height: number;
+  }) => React.ReactNode;
 };
 
 type ContrastSceneProps = {
@@ -30,7 +35,8 @@ const PanelBlock: React.FC<{
   readonly panel: Panel;
   readonly delay: number;
   readonly tone: "muted" | "accent";
-}> = ({ panel, delay, tone }) => {
+  readonly graphicSize: { width: number; height: number };
+}> = ({ panel, delay, tone, graphicSize }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -82,6 +88,23 @@ const PanelBlock: React.FC<{
         {panel.label}
       </div>
 
+      {panel.graphic ? (
+        <div
+          style={{
+            marginTop: 26,
+            width: graphicSize.width,
+            height: graphicSize.height,
+            alignSelf: "center",
+            opacity: interpolate(progress, [0.3, 1], [0, 1], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            }),
+          }}
+        >
+          {panel.graphic(graphicSize)}
+        </div>
+      ) : null}
+
       <div
         style={{
           marginTop: 30,
@@ -107,10 +130,12 @@ const PanelBlock: React.FC<{
                   position: "absolute",
                   top: "54%",
                   right: 0,
+                  left: 0,
                   height: 3,
-                  width: `${strikeAt(i) * 100}%`,
                   backgroundColor: COLORS.accent,
                   opacity: 0.85,
+                  transform: `scaleX(${strikeAt(i)})`,
+                  transformOrigin: "right center",
                 }}
               />
             ) : null}
@@ -167,8 +192,18 @@ export const ContrastScene: React.FC<ContrastSceneProps> = ({
         ) : null}
 
         <div style={{ display: "flex", gap: 40, alignItems: "stretch" }}>
-          <PanelBlock panel={not} delay={seconds(0.4)} tone="muted" />
-          <PanelBlock panel={but} delay={butAt} tone="accent" />
+          <PanelBlock
+            panel={not}
+            delay={seconds(0.4)}
+            tone="muted"
+            graphicSize={{ width: 620, height: 250 }}
+          />
+          <PanelBlock
+            panel={but}
+            delay={butAt}
+            tone="accent"
+            graphicSize={{ width: 620, height: 250 }}
+          />
         </div>
       </AbsoluteFill>
     </Stage>

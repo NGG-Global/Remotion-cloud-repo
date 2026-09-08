@@ -67,6 +67,7 @@ src/
   theme.ts          Format and design tokens (dimensions, fps, colours, type scale).
   fonts.ts          Self-hosted font loading.
   components/       Animation building blocks (kinetic text, stage, motif).
+  graphics/         Line icons and the bespoke scene illustrations.
   scenes/           The scene types the video is assembled from.
   ui/               Machinery for filming the interface screenshot.
   compositions/     One file per video.
@@ -158,10 +159,12 @@ That runs `tools/transcribe.mjs`, which transcribes locally through
 whisper.cpp — the audio never leaves the machine, which matters when the
 narration discusses internal material.
 
-**Scenes are types, not one-offs.** `src/scenes/` holds the seven shapes the
+**Scenes are types, not one-offs.** `src/scenes/` holds the eight shapes the
 video uses — a title, a chapter divider, a full-frame statement, a staggered
-list, a not-this-but-that contrast, a row of cards, and the interface
-showcase. Episode 2 should reuse these rather than add more.
+list, a not-this-but-that contrast, a row of cards, a staged walkthrough, and
+the interface showcase. Episode 2 should reuse these rather than add more.
+Every one of them takes an illustration slot, so a new beat gets a graphic
+without a new scene type.
 
 **The interface screenshot is treated as a set.** `src/ui/` holds the
 machinery for filming it:
@@ -184,6 +187,45 @@ Two decisions in there are worth keeping:
   frames its container via `frameOn` and the ring still lands on the element.
 - **The camera clamps at the image edges.** Centring an element near a corner
   would otherwise slide blank window into frame.
+
+### Graphics
+
+The narration is mostly abstract, so the text scenes carry illustration rather
+than typography alone. `src/graphics/` holds two kinds:
+
+**A line-icon set** (`LineIcon.tsx`) used as row markers throughout the lists.
+Icons are stored as path sets and draw themselves on stroke by stroke. Every
+path carries `pathLength="1"`, which normalises its length whatever its
+geometry — so one dash offset animates any path without measuring it, and a
+new icon can be added by appending its `d` strings and nothing else.
+
+**Bespoke illustrations** for the beats that earn one:
+
+| Graphic                          | Beat it carries                                                    |
+| -------------------------------- | ------------------------------------------------------------------ |
+| `ClickMaze`                      | The opening: a pointer hunting a wall of controls, hitting nothing |
+| `SearchResults` / `ReadMaterial` | The contrast: links crossed off, versus a document being read      |
+| `PageStack`                      | A long document fanning open and being read through                |
+| `DraftEdit`                      | A draft with lines struck and rewritten in place                   |
+| `IdeaToOutputs`                  | One idea branching into a document, a table and a deck             |
+| `FunnelRule`                     | Text, data and an idea dropping into a funnel that returns a tick  |
+| `EffortCompare`                  | Explaining the task versus doing it, to scale                      |
+| `PathShortcut`                   | A winding route and a direct one to the same destination           |
+
+Two things keep them from looking like clip art:
+
+- **Motion is derived from the thing being shown, not bolted on.** The click
+  maze routes its pointer through the buttons' own positions rather than
+  through fixed coordinates, so every stab lands on a control — which is the
+  whole joke. Fixed coordinates missed the buttons entirely.
+- **Layout follows the writing direction.** In an RTL row the first child sits
+  rightmost, so scenes put the text block first and the illustration second.
+  Getting that backwards reads as a Latin layout with Hebrew dropped into it.
+
+`StagedScene` swaps one illustration and caption at a time in step with the
+voice, for the stretches that walk through several examples in a row. A list
+would put them all on screen at once and let the viewer read ahead of the
+narration.
 
 ### Redaction
 

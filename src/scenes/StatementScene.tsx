@@ -18,6 +18,16 @@ type StatementSceneProps = {
   readonly footnote?: string;
   readonly align?: "start" | "center";
   readonly fontSize?: number;
+  /**
+   * Illustration to sit alongside the statement. Given the panel size it may
+   * draw into. When present the scene lays out as a row, text first — which
+   * in RTL puts the words on the right and the picture on the left.
+   */
+  readonly graphic?: (size: {
+    width: number;
+    height: number;
+  }) => React.ReactNode;
+  readonly panel?: { width: number; height: number };
 };
 
 /**
@@ -33,6 +43,8 @@ export const StatementScene: React.FC<StatementSceneProps> = ({
   footnote,
   align = "start",
   fontSize = FONT_SIZE.heading,
+  graphic,
+  panel = { width: 760, height: 480 },
 }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
@@ -54,47 +66,71 @@ export const StatementScene: React.FC<StatementSceneProps> = ({
           opacity: exit,
           transform: `scale(${push})`,
           direction: "rtl",
+          flexDirection: graphic ? "row" : "column",
           justifyContent: "center",
-          alignItems: align === "center" ? "center" : "flex-start",
-          padding: "0 170px",
+          alignItems: graphic
+            ? "center"
+            : align === "center"
+              ? "center"
+              : "flex-start",
+          gap: graphic ? 84 : 0,
+          padding: graphic ? "0 130px" : "0 170px",
         }}
       >
-        {kicker ? (
-          <div style={{ marginBottom: 30 }}>
-            <KineticText
-              text={kicker}
-              fontSize={FONT_SIZE.caption}
-              fontWeight={600}
-              color={COLORS.accentSoft}
-              align={align === "center" ? "center" : "start"}
-              stagger={1.4}
-            />
-          </div>
-        ) : null}
+        <div
+          style={{
+            flex: graphic ? 1 : undefined,
+            display: "flex",
+            flexDirection: "column",
+            alignItems:
+              align === "center" && !graphic ? "center" : "flex-start",
+          }}
+        >
+          {kicker ? (
+            <div style={{ marginBottom: 30 }}>
+              <KineticText
+                text={kicker}
+                fontSize={FONT_SIZE.caption}
+                fontWeight={600}
+                color={COLORS.accentSoft}
+                align={align === "center" ? "center" : "start"}
+                stagger={1.4}
+              />
+            </div>
+          ) : null}
 
-        <KineticText
-          text={statement}
-          delay={kicker ? seconds(0.25) : 0}
-          fontSize={fontSize}
-          fontWeight={800}
-          emphasise={emphasise}
-          align={align === "center" ? "center" : "start"}
-          maxWidth={1520}
-          stagger={2.2}
-        />
+          <KineticText
+            text={statement}
+            delay={kicker ? seconds(0.25) : 0}
+            fontSize={fontSize}
+            fontWeight={800}
+            emphasise={emphasise}
+            align={align === "center" && !graphic ? "center" : "start"}
+            maxWidth={graphic ? 780 : 1520}
+            stagger={2.2}
+          />
 
-        {footnote ? (
-          <div style={{ marginTop: 40 }}>
-            <KineticText
-              text={footnote}
-              delay={seconds(0.9)}
-              fontSize={FONT_SIZE.body}
-              fontWeight={400}
-              color={COLORS.textMuted}
-              align={align === "center" ? "center" : "start"}
-              maxWidth={1300}
-              stagger={1}
-            />
+          {footnote ? (
+            <div style={{ marginTop: 40 }}>
+              <KineticText
+                text={footnote}
+                delay={seconds(0.9)}
+                fontSize={FONT_SIZE.body}
+                fontWeight={400}
+                color={COLORS.textMuted}
+                align={align === "center" ? "center" : "start"}
+                maxWidth={1300}
+                stagger={1}
+              />
+            </div>
+          ) : null}
+        </div>
+
+        {graphic ? (
+          <div
+            style={{ width: panel.width, height: panel.height, flexShrink: 0 }}
+          >
+            {graphic(panel)}
           </div>
         ) : null}
       </AbsoluteFill>

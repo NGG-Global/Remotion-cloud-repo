@@ -7,6 +7,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { KineticText } from "../components/KineticText";
+import { LineIcon, type IconName } from "../graphics/LineIcon";
 import { Stage } from "../components/Stage";
 import { fontFamily } from "../fonts";
 import { COLORS, FONT_SIZE, seconds } from "../theme";
@@ -15,6 +16,8 @@ export type Item = {
   readonly text: string;
   /** Optional leading marker: a numeral, or a short glyph. */
   readonly marker?: string;
+  /** Line icon for the row, drawn in place of the marker. */
+  readonly icon?: IconName;
   /** Frames after the scene start at which this row appears. */
   readonly at?: number;
 };
@@ -68,7 +71,28 @@ const Row: React.FC<{
         padding: boxed ? "26px 34px" : undefined,
       }}
     >
-      {item.marker ? (
+      {item.icon ? (
+        <div
+          style={{
+            flexShrink: 0,
+            width: 72,
+            height: 72,
+            borderRadius: 20,
+            backgroundColor: `${accent}1c`,
+            border: `1.5px solid ${accent}55`,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <LineIcon
+            name={item.icon}
+            size={40}
+            delay={delay + 3}
+            color={accent}
+          />
+        </div>
+      ) : item.marker ? (
         <div
           style={{
             flexShrink: 0,
@@ -89,15 +113,25 @@ const Row: React.FC<{
           {item.marker}
         </div>
       ) : (
+        // Same leading width as an icon tile, so a row without an icon still
+        // lines its text up with the rows that have one.
         <div
           style={{
             flexShrink: 0,
-            width: 14,
-            height: 14,
-            borderRadius: "50%",
-            backgroundColor: accent,
+            width: 72,
+            display: "flex",
+            justifyContent: "center",
           }}
-        />
+        >
+          <div
+            style={{
+              width: 14,
+              height: 14,
+              borderRadius: "50%",
+              backgroundColor: accent,
+            }}
+          />
+        </div>
       )}
 
       <div
