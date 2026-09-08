@@ -13,8 +13,16 @@ export type Round = {
   readonly label: string;
   /** Frame at which this round lands. */
   readonly at: number;
-  /** How close it gets, 0-1. The last one should be close to 1. */
+  /**
+   * How close this round gets, 0-1. Drives the geometry only: it is how far
+   * the blocks sit from the outline, not a measurement of anything.
+   */
   readonly fit: number;
+  /**
+   * How close it got, in words. Shown instead of a number, which would read
+   * as a score for something that was never scored.
+   */
+  readonly verdict: string;
 };
 
 type RoundsConvergeProps = {
@@ -70,7 +78,7 @@ export const RoundsConverge: React.FC<RoundsConvergeProps> = ({
     height: height * 0.78,
   };
   const panelLeft = width * 0.5 - PANEL.width / 2;
-  const panelTop = (height - PANEL.height) / 2;
+  const panelTop = (height - PANEL.height) / 2 + 24;
 
   // The round currently on screen, and how far it has settled.
   let index = -1;
@@ -114,6 +122,9 @@ export const RoundsConverge: React.FC<RoundsConvergeProps> = ({
           top: panelTop,
           width: PANEL.width,
           height: PANEL.height,
+          background: COLORS.surface,
+          borderRadius: 16,
+          border: "1px solid rgba(255,255,255,0.08)",
         }}
       >
         {TARGET.map((block, i) => (
@@ -128,7 +139,7 @@ export const RoundsConverge: React.FC<RoundsConvergeProps> = ({
               width: block.w * PANEL.width,
               height: block.h * PANEL.height,
               borderRadius: 8,
-              border: "2px dashed rgba(255,255,255,0.22)",
+              border: "2px dashed rgba(255,255,255,0.42)",
               opacity: interpolate(frame, [0, 18], [0, 1], {
                 extrapolateLeft: "clamp",
                 extrapolateRight: "clamp",
@@ -152,9 +163,8 @@ export const RoundsConverge: React.FC<RoundsConvergeProps> = ({
                     width: w * PANEL.width,
                     height: block.h * PANEL.height,
                     borderRadius: 8,
-                    background:
-                      done && snap > 0.3 ? COLORS.accent : COLORS.accentSoft,
-                    opacity: done && snap > 0.3 ? 0.95 : 0.62,
+                    background: COLORS.accent,
+                    opacity: done && snap > 0.3 ? 0.95 : 0.72,
                   }}
                 />
               );
@@ -178,7 +188,7 @@ export const RoundsConverge: React.FC<RoundsConvergeProps> = ({
             style={{
               position: "absolute",
               left: panelLeft + PANEL.width + 40,
-              top: panelTop + 20 + i * 88,
+              top: panelTop + 12 + i * 132,
               direction: "rtl",
               opacity: show,
               transform: `translateX(${(1 - show) * -16}px)`,
@@ -204,7 +214,32 @@ export const RoundsConverge: React.FC<RoundsConvergeProps> = ({
                 color: live ? COLORS.text : "#6b6259",
               }}
             >
-              {`התאמה ${Math.round((live ? fit : round.fit) * 100)}%`}
+              {round.verdict}
+            </div>
+            {/* A bar rather than a figure: it shows the closing without
+                claiming to have measured it. */}
+            <div
+              style={{
+                marginTop: 8,
+                width: 190,
+                height: 10,
+                borderRadius: 5,
+                background: "rgba(255,255,255,0.08)",
+                overflow: "hidden",
+                position: "relative",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  width: `${(live ? fit : round.fit) * 100}%`,
+                  borderRadius: 5,
+                  background: live ? COLORS.accent : "rgba(255,255,255,0.22)",
+                }}
+              />
             </div>
           </div>
         );
@@ -214,13 +249,13 @@ export const RoundsConverge: React.FC<RoundsConvergeProps> = ({
       <div
         style={{
           position: "absolute",
-          left: panelLeft - 300,
-          top: panelTop + 20,
-          width: 260,
+          left: panelLeft,
+          top: panelTop - 52,
+          width: PANEL.width,
           direction: "rtl",
-          textAlign: "left",
+          textAlign: "center",
           fontFamily,
-          fontSize: 32,
+          fontSize: 30,
           fontWeight: 700,
           color: COLORS.textMuted,
           opacity: interpolate(frame, [8, 26], [0, 1], {

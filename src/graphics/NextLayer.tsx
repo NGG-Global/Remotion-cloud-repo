@@ -85,19 +85,6 @@ export const NextLayer: React.FC<NextLayerProps> = ({
         >
           השיחה
         </div>
-        {[0.9, 0.68, 0.84].map((w, i) => (
-          <div
-            key={i}
-            style={{
-              height: 12,
-              width: `${w * 100}%`,
-              marginBottom: 14,
-              borderRadius: 6,
-              background: COLORS.text,
-              opacity: 0.3,
-            }}
-          />
-        ))}
       </div>
 
       {/* Each file type as a plane settling onto it. */}
@@ -155,7 +142,7 @@ export const NextLayer: React.FC<NextLayerProps> = ({
             >
               {file.label}
             </span>
-            {work > 0.3 ? (
+            {work > 0.3 && i === files.length - 1 ? (
               <span
                 style={{
                   marginRight: "auto",
@@ -178,7 +165,7 @@ export const NextLayer: React.FC<NextLayerProps> = ({
       })}
 
       {/* The blank page, on its way out. */}
-      {frame >= blankAt - 40 ? (
+      {frame >= blankAt - 90 ? (
         <div
           style={{
             position: "absolute",
@@ -201,7 +188,7 @@ export const NextLayer: React.FC<NextLayerProps> = ({
             padding: 18,
             boxSizing: "border-box",
             opacity:
-              interpolate(frame - (blankAt - 40), [0, 20], [0, 1], {
+              interpolate(frame - (blankAt - 90), [0, 20], [0, 1], {
                 extrapolateLeft: "clamp",
                 extrapolateRight: "clamp",
               }) *

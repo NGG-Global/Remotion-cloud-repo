@@ -32,10 +32,10 @@ export const AimAtInput: React.FC<AimAtInputProps> = ({
 }) => {
   const frame = useCurrentFrame();
 
-  const CARD = { width: Math.min(400, width * 0.24), height: height * 0.46 };
+  const CARD = { width: Math.min(470, width * 0.28), height: height * 0.54 };
   const cy = height * 0.46;
-  const modelX = width * 0.735;
-  const inputX = width * 0.265;
+  const modelX = width * 0.72;
+  const inputX = width * 0.28;
 
   // The reticle starts off the top of the frame, settles on the model, holds
   // while it is ruled out, then travels to the input.

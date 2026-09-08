@@ -288,6 +288,9 @@ export const RetypeLoop: React.FC<RetypeLoopProps> = ({
             fontSize: 78,
             fontWeight: 900,
             color: COLORS.accent,
+            // The slash runs through this word, so it carries its own ground.
+            textShadow:
+              "0 0 22px rgba(20,17,14,0.98), 0 0 8px rgba(20,17,14,1)",
             opacity: Math.min(1, verdictPop * 1.3),
             transform: `scale(${0.7 + Math.min(1, verdictPop) * 0.3})`,
           }}

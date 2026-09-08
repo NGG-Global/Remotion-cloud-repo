@@ -36,7 +36,7 @@ export const NotFinalStamp: React.FC<NotFinalStampProps> = ({
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const SHEET = { width: Math.min(560, width * 0.32), height: height * 0.66 };
+  const SHEET = { width: Math.min(680, width * 0.38), height: height * 0.66 };
   const sheetLeft = width / 2 - SHEET.width / 2;
   const sheetTop = height * 0.08;
 

@@ -72,37 +72,46 @@ export const DocSheet: React.FC<DocSheetProps> = ({
         background,
         border: `1px solid ${borderColor}`,
         overflow: "hidden",
-        filter: blur > 0 ? `blur(${blur}px)` : undefined,
         opacity,
       }}
     >
-      {lines.map((line, i) => {
-        // Fraction of this line that is written: 1 for lines already passed,
-        // a partial for the line the cursor is on, 0 for lines not yet reached.
-        const fill = Math.max(0, Math.min(1, written - i));
-        if (fill <= 0) {
-          return null;
-        }
-        const barHeight = line.heading ? gap * 0.4 : gap * 0.22;
+      {/* Only the written content softens. The tag is a label on the sheet,
+          not part of it, and has to stay readable. */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          filter: blur > 0 ? `blur(${blur}px)` : undefined,
+        }}
+      >
+        {lines.map((line, i) => {
+          // Fraction of this line that is written: 1 for lines already passed,
+          // a partial for the line the cursor is on, 0 for lines not yet reached.
+          const fill = Math.max(0, Math.min(1, written - i));
+          if (fill <= 0) {
+            return null;
+          }
+          const barHeight = line.heading ? gap * 0.4 : gap * 0.22;
 
-        return (
-          <div
-            key={i}
-            style={{
-              position: "absolute",
-              top: padY + i * gap + (gap - barHeight) / 2,
-              // Text starts at the right edge of the column: these sheets
-              // stand in for Hebrew documents.
-              right: padX,
-              width: column * line.width * fill,
-              height: barHeight,
-              borderRadius: barHeight / 2,
-              background: line.heading ? accent : tone,
-              opacity: line.heading ? 0.95 : 0.5,
-            }}
-          />
-        );
-      })}
+          return (
+            <div
+              key={i}
+              style={{
+                position: "absolute",
+                top: padY + i * gap + (gap - barHeight) / 2,
+                // Text starts at the right edge of the column: these sheets
+                // stand in for Hebrew documents.
+                right: padX,
+                width: column * line.width * fill,
+                height: barHeight,
+                borderRadius: barHeight / 2,
+                background: line.heading ? accent : tone,
+                opacity: line.heading ? 0.95 : 0.5,
+              }}
+            />
+          );
+        })}
+      </div>
 
       {tag ? (
         <div

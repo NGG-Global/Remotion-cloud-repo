@@ -42,7 +42,9 @@ export const VagueReply: React.FC<VagueReplyProps> = ({
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const PANEL = { width: Math.min(1020, width * 0.6), height: height * 0.86 };
+  const PANEL = { width: Math.min(1020, width * 0.6), height: height * 0.8 };
+  /** Fixed, so the reply below it can be sized to fill what is left. */
+  const PROMPT_HEIGHT = 88;
   const panelLeft = width / 2 - PANEL.width / 2;
 
   const shown = Math.round(
@@ -103,7 +105,10 @@ export const VagueReply: React.FC<VagueReplyProps> = ({
             fontWeight: 600,
             color: COLORS.text,
             transform: `translateY(${(1 - sent) * -4}px)`,
-            minHeight: 40,
+            height: PROMPT_HEIGHT,
+            boxSizing: "border-box",
+            display: "flex",
+            alignItems: "center",
           }}
         >
           {prompt.slice(0, shown)}
@@ -133,7 +138,7 @@ export const VagueReply: React.FC<VagueReplyProps> = ({
           >
             <DocSheet
               width={sheetWidth}
-              height={PANEL.height * 0.5}
+              height={PANEL.height - 60 - PROMPT_HEIGHT - 30}
               lines={PLAIN_LINES}
               progress={streamed}
               tone={COLORS.text}

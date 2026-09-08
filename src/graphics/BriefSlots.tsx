@@ -53,7 +53,10 @@ export const BriefSlots: React.FC<BriefSlotsProps> = ({
 
   const rowGap = (CARD.height - 108) / slots.length;
 
-  const sharp = interpolate(frame - sharpenAt, [0, 26], [0, 1], {
+  // Short, so the two sheets do not sit at half opacity over each other long
+  // enough to ghost. The line it lands on is "suddenly there is something to
+  // work with", which wants a snap rather than a dissolve.
+  const sharp = interpolate(frame - sharpenAt, [0, 13], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });

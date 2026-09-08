@@ -48,11 +48,11 @@ export const NoSecretLanguage: React.FC<NoSecretLanguageProps> = ({
     extrapolateRight: "clamp",
   });
 
-  const CARD = { width: Math.min(760, width * 0.44), height: height * 0.74 };
+  const CARD = { width: Math.min(760, width * 0.44), height: height * 0.52 };
   const cardLeft = width / 2 - CARD.width / 2;
   const cardTop = height * 0.1;
 
-  const NOTE = { width: Math.min(700, width * 0.4), height: height * 0.6 };
+  const NOTE = { width: Math.min(700, width * 0.4), height: height * 0.44 };
   const note = spring({
     frame: frame - briefAt,
     fps,

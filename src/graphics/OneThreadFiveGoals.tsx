@@ -78,7 +78,7 @@ const EditShape: React.FC<ShapeProps> = ({
           // A change of tone recolours the whole page rather than one line.
           boxShadow:
             tone > 0
-              ? `inset 0 0 90px rgba(107,163,196,${tone * 0.3})`
+              ? `inset 0 0 60px rgba(107,163,196,${tone * 0.16})`
               : undefined,
         }}
       >
@@ -88,7 +88,9 @@ const EditShape: React.FC<ShapeProps> = ({
             return null;
           }
           // The last two lines go when the piece is cut.
-          const dropped = i >= BODY.length - 2 ? shorten : 0;
+          // Capped short of full transparency: a strike needs something
+          // left to strike through.
+          const dropped = i >= BODY.length - 2 ? shorten * 0.82 : 0;
           const tightened = i === 1 ? sharpen * 0.22 : 0;
           return (
             <div
@@ -510,7 +512,9 @@ const CompareShape: React.FC<ShapeProps> = ({
                 key={i}
                 style={{
                   position: "absolute",
-                  left: col.left + 16,
+                  // Anchored to the column's right inner edge, so a row grows
+                  // leftwards the way a line of Hebrew does.
+                  left: col.left + COLW - 16 - (COLW - 32) * w,
                   top: top + 20 + i * gap,
                   width: (COLW - 32) * w,
                   height: 12,
@@ -553,10 +557,21 @@ const CompareShape: React.FC<ShapeProps> = ({
         </svg>
       ) : null}
 
+      {/* Each note is set level with the row it is about. */}
       {[
-        { show: changed, text: "מה השתנה", color: COLORS.accent, y: 0.02 },
-        { show: missing, text: "מה חסר", color: COLORS.warn, y: 0.36 },
-        { show: conflict, text: "איפה סותרות", color: COLORS.warn, y: 0.7 },
+        {
+          show: changed,
+          text: "מה השתנה",
+          color: COLORS.accent,
+          row: CHANGED_ROWS[0],
+        },
+        { show: missing, text: "מה חסר", color: COLORS.warn, row: MISSING_ROW },
+        {
+          show: conflict,
+          text: "איפה סותרות",
+          color: COLORS.warn,
+          row: CONFLICT_ROW,
+        },
       ].map((note, i) =>
         note.show > 0 ? (
           <div
@@ -564,7 +579,7 @@ const CompareShape: React.FC<ShapeProps> = ({
             style={{
               position: "absolute",
               left: 0,
-              top: height * note.y + height * 0.1,
+              top: top + 12 + note.row * gap,
               width: width * 0.25,
               direction: "rtl",
               textAlign: "left",
@@ -615,7 +630,7 @@ const StructureShape: React.FC<ShapeProps> = ({
           left: width * 0.04,
           top: tableTop,
           width: width * 0.4,
-          height: TABLE.height,
+          height: TABLE.height * 0.66,
           borderRadius: 14,
           background: COLORS.surface,
           border: "1px solid rgba(255,255,255,0.08)",
@@ -714,29 +729,46 @@ const StructureShape: React.FC<ShapeProps> = ({
                 border: `1px solid ${head ? COLORS.accent : "rgba(255,255,255,0.09)"}`,
                 opacity: show * (head ? 0.9 : 1),
                 transform: `scale(${0.86 + show * 0.14})`,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
-            />
+            >
+              {head ? null : (
+                <span
+                  style={{
+                    width: `${[54, 68, 46, 60][c]}%`,
+                    height: 8,
+                    borderRadius: 4,
+                    background: COLORS.text,
+                    opacity: 0.34,
+                  }}
+                />
+              )}
+            </div>
           );
         })}
       </div>
 
+      {/* The shape came from the ask, so the ask is what is marked here. The
+          wording itself is already on the chip below the panel. */}
       {say > 0 ? (
         <div
           style={{
             position: "absolute",
-            left: 0,
-            right: 0,
-            top: tableTop + TABLE.height + 18,
+            left: tableLeft,
+            top: tableTop + TABLE.height + 16,
+            width: TABLE.width,
             textAlign: "center",
             direction: "rtl",
             fontFamily,
-            fontSize: 32,
+            fontSize: 30,
             fontWeight: 700,
             color: COLORS.accent,
             opacity: say,
           }}
         >
-          תגידו איך אתם רוצים שזה ייראה
+          בצורה שביקשתם
         </div>
       ) : null}
     </div>

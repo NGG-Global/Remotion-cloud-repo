@@ -143,7 +143,7 @@ export const ClaudeContext: React.FC = () => {
       {/* Brief, deliverable and recap in one shot, so the improvement on the
           left reads as caused by the fields on the right. */}
       <Beat id="brief" extend={span("workable", "what-changed")}>
-        <CanvasScene title="הבריף">
+        <CanvasScene>
           {(size) => (
             <BriefSlots
               {...size}
@@ -358,9 +358,24 @@ export const ClaudeContext: React.FC = () => {
             <RoundsConverge
               {...size}
               rounds={[
-                { label: "סבב 1", at: seconds(0.4), fit: 0.45 },
-                { label: "סבב 2", at: seconds(4.6), fit: 0.74 },
-                { label: "סבב 3", at: seconds(5.8), fit: 0.95 },
+                {
+                  label: "סבב 1",
+                  at: seconds(0.4),
+                  fit: 0.45,
+                  verdict: "בכיוון, לא שם",
+                },
+                {
+                  label: "סבב 2",
+                  at: seconds(4.6),
+                  fit: 0.74,
+                  verdict: "מתקרב",
+                },
+                {
+                  label: "סבב 3",
+                  at: seconds(5.8),
+                  fit: 0.95,
+                  verdict: "זה זה",
+                },
               ]}
             />
           )}
@@ -554,7 +569,7 @@ export const ClaudeContext: React.FC = () => {
                     { at: seconds(10.98), text: "שרשור מיילים" },
                     { at: seconds(13.32), text: "פרוטוקול או דוח ארוך" },
                     { at: seconds(14.94), text: "לשאול שאלות על התוכן" },
-                    { at: seconds(17.2), text: "לא לעבור ידנית" },
+                    { at: seconds(17.2), text: "בלי לקרוא את הכול" },
                   ],
                 },
                 {
@@ -619,7 +634,7 @@ export const ClaudeContext: React.FC = () => {
             <NextLayer
               {...size}
               workAt={seconds(10.5)}
-              blankAt={seconds(11.0)}
+              blankAt={seconds(11.2)}
               files={[
                 { label: "מסמכים", icon: "doc", at: seconds(4.38) },
                 { label: "מצגות", icon: "slides", at: seconds(5.3) },

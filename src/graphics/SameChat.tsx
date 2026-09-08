@@ -64,7 +64,7 @@ export const SameChat: React.FC<SameChatProps> = ({
     extrapolateRight: "clamp",
   });
 
-  const PANEL = { width: width * 0.32, height: height * 0.46 };
+  const PANEL = { width: width * 0.32, height: height * 0.36 };
 
   return (
     <div style={{ position: "relative", width, height }}>
@@ -99,7 +99,7 @@ export const SameChat: React.FC<SameChatProps> = ({
           >
             אותה שיחה
           </div>
-          {[0.92, 0.7, 0.86, 0.62].map((w, i) => (
+          {[0.92, 0.7, 0.86, 0.62, 0.78].map((w, i) => (
             <div
               key={i}
               style={{
@@ -183,8 +183,10 @@ export const SameChat: React.FC<SameChatProps> = ({
       {/* Same five, now as goals set on one conversation. */}
       {regoal > 0
         ? goals.map((goal, i) => {
+            // Negated so the first goal named sits rightmost and the fan
+            // runs with the language rather than against it.
             const angle =
-              (-90 + (i - (goals.length - 1) / 2) * 34) * (Math.PI / 180);
+              (-90 - (i - (goals.length - 1) / 2) * 34) * (Math.PI / 180);
             const radius = Math.min(width * 0.31, height * 0.62);
             const x = cx + Math.cos(angle) * radius;
             const y = cy + Math.sin(angle) * radius * 0.62;

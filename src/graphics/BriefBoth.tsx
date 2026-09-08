@@ -39,7 +39,7 @@ export const BriefBoth: React.FC<BriefBothProps> = ({
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const CARD = { width: Math.min(430, width * 0.25), height: height * 0.42 };
+  const CARD = { width: Math.min(450, width * 0.26), height: height * 0.3 };
   const cy = height * 0.4;
   const centreX = width * 0.5;
   const colleagueX = width * 0.81;
@@ -212,7 +212,7 @@ const BriefCard: React.FC<{
           key={i}
           style={{
             fontFamily,
-            fontSize: 26,
+            fontSize: 30,
             fontWeight: 600,
             lineHeight: 1.5,
             color: "#3a332c",

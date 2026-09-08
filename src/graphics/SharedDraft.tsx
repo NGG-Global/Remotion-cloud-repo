@@ -43,7 +43,7 @@ export const SharedDraft: React.FC<SharedDraftProps> = ({
   const { fps } = useVideoConfig();
 
   const cx = width * 0.5;
-  const cy = height * 0.47;
+  const cy = height * 0.5;
 
   const qa = interpolate(frame - qaAt, [0, 18], [0, 1], {
     extrapolateLeft: "clamp",
@@ -217,18 +217,12 @@ export const SharedDraft: React.FC<SharedDraftProps> = ({
                   fontSize: 31,
                   fontWeight: 800,
                   borderRadius: 14,
-                  color:
-                    step.by === "you"
-                      ? COLORS.background
-                      : live
-                        ? COLORS.background
-                        : COLORS.text,
-                  background:
-                    step.by === "you"
-                      ? COLORS.accentSoft
-                      : live
-                        ? COLORS.accent
-                        : "rgba(255,255,255,0.08)",
+                  color: live ? COLORS.background : COLORS.textMuted,
+                  background: live ? COLORS.accent : "rgba(255,255,255,0.07)",
+                  border: `1px solid ${
+                    live ? COLORS.accent : "rgba(255,255,255,0.1)"
+                  }`,
+                  boxSizing: "border-box",
                   opacity: pop * (live ? 1 : 0.55),
                   transform: `scale(${0.86 + Math.min(1, pop) * 0.14})`,
                 }}

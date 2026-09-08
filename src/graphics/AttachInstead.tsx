@@ -46,7 +46,7 @@ export const AttachInstead: React.FC<AttachInsteadProps> = ({
   const COL = width * 0.42;
   const rightLeft = width - COL;
   const leftLeft = width * 0.045;
-  const panelHeight = height * 0.84;
+  const panelHeight = height * 0.68;
   const panelTop = (height - panelHeight) / 2;
 
   const struck = interpolate(frame - strikeAt, [0, 16], [0, 1], {
@@ -100,25 +100,33 @@ export const AttachInstead: React.FC<AttachInsteadProps> = ({
             />
           );
         })}
-        {struck > 0 ? (
-          <svg
-            width={COL}
-            height={panelHeight}
-            style={{ position: "absolute", left: 0, top: 0 }}
-          >
-            <line
-              x1={COL - 30}
-              y1={panelHeight - 34}
-              x2={COL - 30 - (COL - 60) * struck}
-              y2={panelHeight - 34 - (panelHeight - 80) * struck}
-              stroke={COLORS.warn}
-              strokeWidth={8}
-              strokeLinecap="round"
-              opacity={0.9}
-            />
-          </svg>
-        ) : null}
       </div>
+
+      {/* The strike, drawn outside the panel: the panel desaturates as it is
+          ruled out, and a filter on a parent would take the strike with it. */}
+      {struck > 0 ? (
+        <svg
+          width={COL}
+          height={panelHeight}
+          style={{
+            position: "absolute",
+            left: rightLeft,
+            top: panelTop,
+            pointerEvents: "none",
+          }}
+        >
+          <line
+            x1={COL - 30}
+            y1={panelHeight - 34}
+            x2={COL - 30 - (COL - 60) * struck}
+            y2={panelHeight - 34 - (panelHeight - 80) * struck}
+            stroke={COLORS.warn}
+            strokeWidth={8}
+            strokeLinecap="round"
+            opacity={0.9}
+          />
+        </svg>
+      ) : null}
 
       {/* Giving it. Each file docks as a chip above the composer. */}
       <div

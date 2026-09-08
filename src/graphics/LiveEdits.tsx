@@ -219,8 +219,14 @@ export const LiveEdits: React.FC<LiveEditsProps> = ({
                     key={c}
                     style={{
                       position: "absolute",
-                      // Alternative one sits rightmost, with the language.
-                      left: pageLeft + 24 + c * (colWidth + 12),
+                      // Alternative one sits rightmost, with the language:
+                      // laid out from the page's right inner edge inwards.
+                      left:
+                        pageLeft +
+                        PAGE.width -
+                        24 -
+                        (c + 1) * colWidth -
+                        c * 12,
                       top,
                       width: colWidth,
                       height: h - 12,
