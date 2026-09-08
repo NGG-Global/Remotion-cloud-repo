@@ -1,0 +1,43 @@
+{
+  "name": "remotion-cloud-repo",
+  "version": "0.1.0",
+  "description": "Programmatic video production with Remotion",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "remotion studio",
+    "studio": "remotion studio",
+    "render": "remotion render",
+    "still": "remotion still",
+    "bundle": "remotion bundle",
+    "compositions": "remotion compositions",
+    "typecheck": "tsc",
+    "lint": "eslint src && tsc",
+    "format": "prettier --write \"**/*.{ts,tsx,css,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,css,json,md}\"",
+    "upgrade-remotion": "remotion upgrade"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.522",
+    "@remotion/fonts": "4.0.522",
+    "@remotion/tailwind-v4": "4.0.522",
+    "@remotion/transitions": "4.0.522",
+    "@remotion/zod-types": "4.0.522",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.522",
+    "tailwindcss": "4.0.0",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.522",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

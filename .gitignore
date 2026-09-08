@@ -1,0 +1,13 @@
+node_modules
+dist
+
+# Rendered output. Videos you import as source belong in public/ instead.
+out
+
+# Remotion Studio and bundler caches
+.remotion
+
+.DS_Store
+.env
+.env.local
+*.log

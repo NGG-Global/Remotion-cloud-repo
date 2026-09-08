@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/*
+ * Tailwind utilities are available inside compositions. Use them for static
+ * layout; keep per-frame values (opacity, transform, colour interpolation) in
+ * inline styles, since those change on every frame and cannot be expressed as
+ * a fixed class.
+ */
