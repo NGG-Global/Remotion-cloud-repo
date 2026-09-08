@@ -5,18 +5,19 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "remotion studio",
-    "studio": "remotion studio",
-    "render": "remotion render",
-    "still": "remotion still",
     "bundle": "remotion bundle",
     "compositions": "remotion compositions",
-    "typecheck": "tsc",
-    "lint": "eslint src && tsc",
+    "dev": "remotion studio",
     "format": "prettier --write \"**/*.{ts,tsx,css,json,md}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,css,json,md}\"",
-    "upgrade-remotion": "remotion upgrade",
-    "transcribe": "node tools/transcribe.mjs"
+    "lint": "eslint src && tsc",
+    "render": "remotion render",
+    "smoke": "remotion render --scale=0.25 --muted --concurrency=4",
+    "still": "remotion still",
+    "studio": "remotion studio",
+    "transcribe": "node tools/transcribe.mjs",
+    "typecheck": "tsc",
+    "upgrade-remotion": "remotion upgrade"
   },
   "dependencies": {
     "@remotion/cli": "4.0.522",

@@ -13,6 +13,8 @@ type HighlightProps = {
   readonly color?: string;
   /** Dim the rest of the interface to push attention onto the region. */
   readonly dim?: boolean;
+  /** Scales the dimming, 0-1. Dark screenshots need less. */
+  readonly dimStrength?: number;
 };
 
 /**
@@ -29,6 +31,7 @@ export const Highlight: React.FC<HighlightProps> = ({
   pad = 10,
   color = COLORS.accent,
   dim = true,
+  dimStrength = 1,
 }) => {
   const frame = useCurrentFrame();
   const { project } = useProjection();
@@ -93,7 +96,7 @@ export const Highlight: React.FC<HighlightProps> = ({
             width="100%"
             height="100%"
             fill={COLORS.scrim}
-            opacity={appear}
+            opacity={appear * dimStrength}
             mask={`url(#${maskId})`}
           />
         </svg>

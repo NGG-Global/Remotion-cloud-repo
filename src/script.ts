@@ -17,8 +17,9 @@ export type Beat = {
   readonly id: string;
 };
 
-/** Total length of the narration, in seconds. */
+/** Length of each episode's narration track, in seconds. */
 export const NARRATION_SECONDS = 218.57;
+export const NARRATION_SECONDS_EP2 = 413.23;
 
 export const BEATS = [
   { at: 0.0, id: "hook" },
@@ -50,24 +51,100 @@ export const BEATS = [
 
 export type BeatId = (typeof BEATS)[number]["id"];
 
-/** Start second of a beat. */
-export const beatAt = (id: BeatId): number => {
-  const beat = BEATS.find((b) => b.id === id);
-  if (!beat) {
-    throw new Error(`Unknown beat: ${id}`);
-  }
-  return beat.at;
-};
+/**
+ * Episode 2: installing, signing in, the four things on screen, choosing a
+ * model, and the settings worth doing once.
+ */
+export const BEATS_EP2 = [
+  { at: 0.0, id: "title" },
+  { at: 5.0, id: "roadmap" },
+  { at: 9.4, id: "hook-setting" },
+
+  { at: 15.58, id: "chapter-account" },
+  { at: 24.14, id: "account-decides" },
+  { at: 33.36, id: "account-outside" },
+  { at: 37.5, id: "platforms" },
+
+  { at: 46.36, id: "why-install" },
+  { at: 53.04, id: "desktop-unlocks" },
+  { at: 64.78, id: "install-steps" },
+
+  { at: 75.8, id: "first-open" },
+  { at: 82.94, id: "entry-point" },
+  { at: 86.32, id: "chat-history" },
+  { at: 95.78, id: "attach" },
+  { at: 105.94, id: "model-chip" },
+  { at: 112.84, id: "settings-corner" },
+
+  { at: 119.24, id: "chapter-models" },
+  { at: 125.52, id: "model-family" },
+  { at: 131.44, id: "model-axes" },
+  { at: 140.26, id: "haiku" },
+  { at: 152.82, id: "sonnet" },
+  { at: 164.76, id: "sonnet-default" },
+  { at: 172.64, id: "opus" },
+  { at: 185.44, id: "fable" },
+  { at: 194.64, id: "fable-plans" },
+  { at: 202.54, id: "cost" },
+  { at: 205.02, id: "strongest-not-right" },
+  { at: 221.94, id: "consultant" },
+
+  { at: 232.44, id: "effort-intro" },
+  { at: 240.86, id: "effort-levels" },
+
+  { at: 252.72, id: "experiment-intro" },
+  { at: 263.38, id: "experiment-run" },
+  { at: 271.12, id: "experiment-look" },
+  { at: 280.86, id: "experiment-learn" },
+
+  { at: 292.24, id: "chapter-settings" },
+  { at: 300.66, id: "prefs-context" },
+  { at: 310.82, id: "prefs-example" },
+  { at: 322.62, id: "prefs-style" },
+  { at: 334.02, id: "prefs-style-saves" },
+  { at: 339.68, id: "capabilities" },
+  { at: 352.04, id: "capabilities-know" },
+  { at: 358.04, id: "connections-teaser" },
+  { at: 367.68, id: "org-locked" },
+  { at: 378.06, id: "org-level" },
+
+  { at: 384.98, id: "summary" },
+  { at: 396.42, id: "outro" },
+] as const satisfies readonly Beat[];
+
+export type BeatIdEp2 = (typeof BEATS_EP2)[number]["id"];
 
 /**
- * Length of a beat in seconds — up to the next beat, or to the end of the
- * narration for the final one.
+ * Timeline lookups for one episode's beat list.
+ *
+ * Returning a pair of closures rather than exporting two functions per episode
+ * keeps a composition from accidentally reading the other episode's timings,
+ * which would silently place its scenes against the wrong voice track.
  */
-export const beatLength = (id: BeatId): number => {
-  const index = BEATS.findIndex((b) => b.id === id);
-  if (index === -1) {
-    throw new Error(`Unknown beat: ${id}`);
-  }
-  const next = BEATS[index + 1];
-  return (next ? next.at : NARRATION_SECONDS) - BEATS[index].at;
+export const timeline = <Id extends string>(
+  beats: readonly { readonly at: number; readonly id: Id }[],
+  totalSeconds: number,
+) => {
+  const at = (id: Id): number => {
+    const beat = beats.find((b) => b.id === id);
+    if (!beat) {
+      throw new Error(`Unknown beat: ${id}`);
+    }
+    return beat.at;
+  };
+
+  /** Up to the next beat, or to the end of the narration for the last one. */
+  const length = (id: Id): number => {
+    const index = beats.findIndex((b) => b.id === id);
+    if (index === -1) {
+      throw new Error(`Unknown beat: ${id}`);
+    }
+    const next = beats[index + 1];
+    return (next ? next.at : totalSeconds) - beats[index].at;
+  };
+
+  return { at, length, totalSeconds };
 };
+
+export const EP1 = timeline(BEATS, NARRATION_SECONDS);
+export const EP2 = timeline(BEATS_EP2, NARRATION_SECONDS_EP2);

@@ -4,8 +4,9 @@ Animated explainer videos built as React components with Remotion. Compositions
 are written in TypeScript, previewed in the Remotion Studio, and rendered to MP4
 from the command line or CI.
 
-Currently holds episode 1 of a Hebrew-narrated series on using Claude, plus the
-scene library and interface-callout machinery the rest of the series reuses.
+Currently holds episodes 1 and 2 of a Hebrew-narrated series on using Claude,
+plus the scene library, graphics and interface-callout machinery the episodes
+share.
 
 Remotion version: **4.0.522** · Output format: **1920x1080, 30 fps, H.264**
 
@@ -69,11 +70,11 @@ src/
   components/       Animation building blocks (kinetic text, stage, motif).
   graphics/         Line icons and the bespoke scene illustrations.
   scenes/           The scene types the video is assembled from.
-  ui/               Machinery for filming the interface screenshot.
+  ui/               The screenshot registry and the machinery for filming it.
   compositions/     One file per video.
   dev/              Development-only compositions. Not delivered.
 public/
-  audio/            Narration tracks.
+  audio/            Narration tracks, one per episode.
   img/              Interface screenshots.
   fonts/            Self-hosted font files and their licences.
 tools/
@@ -134,22 +135,29 @@ interpolated colour) has to be an inline style.
 
 ## The Claude explainer series
 
-`ClaudeIntro` is episode 1: a Hebrew-narrated explainer on what Claude is for,
-which tasks suit it, and where not to use it. It runs 3:40 against the supplied
-narration track.
+| Composition   | Episode | Length | Subject                                                        |
+| ------------- | ------- | ------ | -------------------------------------------------------------- |
+| `ClaudeIntro` | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it   |
+| `ClaudeSetup` | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings |
 
 ```bash
 npx remotion render ClaudeIntro out/claude-explainer-ep1.mp4
+npx remotion render ClaudeSetup out/claude-explainer-ep2.mp4
 ```
 
 ### How it is put together
 
 **Timings come from the narration, not from guesswork.** `src/script.ts` holds
-one entry per beat of the voice-over with the second it starts at, transcribed
-from `public/audio/narration.mp3`. Scenes are placed by beat id and their
-lengths are derived from the gaps between beats, so re-timing one beat cannot
-leave a scene overlapping its neighbour. To re-derive the timings after a
-narration change:
+one entry per beat of each episode's voice-over with the second it starts at,
+transcribed from the tracks in `public/audio`. Scenes are placed by beat id and
+their lengths are derived from the gaps between beats, so re-timing one beat
+cannot leave a scene overlapping its neighbour.
+
+Each episode gets its lookups from `timeline()` — `EP1`, `EP2` — rather than
+from shared free functions, so a composition cannot accidentally read the other
+episode's timings and place its scenes against the wrong voice track.
+
+To re-derive the timings after a narration change:
 
 ```bash
 npm run transcribe -- public/audio/narration.mp3 he
@@ -221,11 +229,37 @@ Two things keep them from looking like clip art:
 - **Layout follows the writing direction.** In an RTL row the first child sits
   rightmost, so scenes put the text block first and the illustration second.
   Getting that backwards reads as a Latin layout with Hebrew dropped into it.
+- **Never mix CSS `right` with SVG coordinates in an RTL container.** SVG uses
+  left-origin coordinates and CSS `right` measures from the other edge, so the
+  two mirror each other. This silently reversed a card order and put two
+  labels on each other's elements before it was caught in a still.
+
+**Claims about the product come from the product.** `ModelLadder` uses the
+picker's own one-line descriptions rather than written-up ones, so the video
+cannot assert more about a model than the interface does. Its depth axis is a
+relative position for reading the picture, not a measured score.
 
 `StagedScene` swaps one illustration and caption at a time in step with the
 voice, for the stretches that walk through several examples in a row. A list
 would put them all on screen at once and let the viewer read ahead of the
 narration.
+
+### Check every frame before rendering
+
+```bash
+npm run smoke -- ClaudeSetup /tmp/smoke.mp4
+```
+
+A quarter-scale muted render of the whole timeline. It takes a few minutes and
+it evaluates every frame, which is the point: a scene's _first_ frames are where
+frame-derived arithmetic breaks, and spot-checking stills walks straight past
+them.
+
+The bug that prompted this: a graphic computed `Math.floor(local / hold)` as an
+array index. Before its delay elapsed, `local` was negative, the index was −1,
+and the render died 7,226 frames in — at a scene whose middle frames had all
+been checked by hand and looked fine. Clamp both ends of any frame-derived
+index, and smoke the timeline rather than sampling it.
 
 ### Redaction
 
@@ -238,10 +272,19 @@ teaches them. Pass `redact={[]}` to turn it off, or add regions to cover more.
 
 `src/dev/` holds two development-only compositions, not part of the video:
 
-- `Calibration` renders the screenshot under a labelled percentage grid, so
-  `regions.ts` can be re-measured. Render it as a still.
-- `UIKitDemo` exercises every indicator at once, for checking the kit from a
-  few stills instead of a full render.
+- `Calibration` renders a screenshot under a labelled percentage grid, so
+  coordinates can be read straight off it.
+- `RegionCheck` draws every region of a screen as a labelled box over the
+  screenshot, so a whole map is verified in one still rather than by rendering
+  the video and watching where the rings land.
+- `UIKitDemo` exercises every indicator at once.
+
+Both take a screen name, so any screenshot in the registry can be checked:
+
+```bash
+npx remotion still Calibration out/grid.png --props='{"screen":"settings"}'
+npx remotion still RegionCheck out/map.png  --props='{"screen":"settings"}'
+```
 
 ## Starter examples
 

@@ -11,9 +11,10 @@ import { COLORS, FONT_SIZE, seconds } from "../theme";
 import { Callout, type CalloutSide } from "../ui/Callout";
 import { Cursor, type CursorStop } from "../ui/Cursor";
 import { Highlight } from "../ui/Highlight";
-import { REGIONS, type Region } from "../ui/regions";
+import type { Region } from "../ui/regions";
+import type { Screen } from "../ui/screens";
 import { UIShowcase } from "../ui/UIShowcase";
-import { SCREENSHOT_WIDTH, useFocus, type FocusStep } from "../ui/useFocus";
+import { useFocus, type FocusStep } from "../ui/useFocus";
 
 export type ShowcaseStep = {
   /** Frame, relative to the scene, at which this step begins. */
@@ -39,6 +40,8 @@ export type ShowcaseStep = {
 };
 
 type ShowcaseSceneProps = {
+  /** The screenshot to film. Carries its regions, native size and redactions. */
+  readonly screen: Screen;
   /** Persistent title in the corner, naming the section. */
   readonly title?: string;
   readonly steps: readonly ShowcaseStep[];
@@ -54,21 +57,9 @@ type ShowcaseSceneProps = {
   /** Frames the window takes to appear. Set to 0 when cutting from another
    * showcase scene, so the window does not pop between shots. */
   readonly revealFrames?: number;
-  /**
-   * Override which regions are blurred. Defaults to the conversation list and
-   * the account row, which carry real internal titles and a user's name.
-   */
+  /** Override which regions are blurred. Defaults to the screen's own list. */
   readonly redact?: readonly Region[];
 };
-
-/**
- * Blurred by default: the sidebar's conversation history and the account row.
- * Neither is being taught in this video, and both carry live internal content.
- */
-const DEFAULT_REDACTIONS: readonly Region[] = [
-  REGIONS.chatList,
-  REGIONS.account,
-];
 
 /**
  * The interface screenshot under a moving camera, with one indicator at a time.
@@ -79,12 +70,13 @@ const DEFAULT_REDACTIONS: readonly Region[] = [
  * on screen at once leaves the viewer choosing where to look.
  */
 export const ShowcaseScene: React.FC<ShowcaseSceneProps> = ({
+  screen,
   title,
   steps,
   windowWidth = 1500,
   cursor,
   revealFrames = seconds(0.6),
-  redact = DEFAULT_REDACTIONS,
+  redact,
   extras,
 }) => {
   const frame = useCurrentFrame();
@@ -106,7 +98,7 @@ export const ShowcaseScene: React.FC<ShowcaseSceneProps> = ({
   const MAX_UPSCALE = 1.25;
   const focus = useFocus(
     focusSteps,
-    (SCREENSHOT_WIDTH * MAX_UPSCALE) / windowWidth,
+    (screen.width * MAX_UPSCALE) / windowWidth,
   );
 
   const reveal =
@@ -150,10 +142,11 @@ export const ShowcaseScene: React.FC<ShowcaseSceneProps> = ({
         }}
       >
         <UIShowcase
+          screen={screen}
           focus={focus}
           width={windowWidth}
           reveal={reveal}
-          redact={redact}
+          redact={redact ?? screen.redact ?? []}
         >
           {showIndicator && active?.region ? (
             <>
@@ -161,6 +154,7 @@ export const ShowcaseScene: React.FC<ShowcaseSceneProps> = ({
                 region={active.region}
                 delay={indicatorDelay}
                 dim={active.dim ?? true}
+                dimStrength={screen.scrim ?? 1}
               />
               {active.label ? (
                 <Callout

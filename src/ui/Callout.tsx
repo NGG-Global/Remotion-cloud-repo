@@ -26,11 +26,19 @@ const DIRECTION: Record<CalloutSide, { dx: number; dy: number }> = {
   bottom: { dx: 0, dy: 1 },
 };
 
-const OPPOSITE: Record<CalloutSide, CalloutSide> = {
-  left: "right",
-  right: "left",
-  top: "bottom",
-  bottom: "top",
+/**
+ * Sides to try, in order, for each requested side: the request, its opposite,
+ * then the perpendicular pair.
+ *
+ * Trying only the opposite is not enough — a ring around a wide element leaves
+ * room on neither the left nor the right, and the label was clipped by the
+ * window's `overflow: hidden`.
+ */
+const FALLBACKS: Record<CalloutSide, readonly CalloutSide[]> = {
+  left: ["left", "right", "top", "bottom"],
+  right: ["right", "left", "top", "bottom"],
+  top: ["top", "bottom", "right", "left"],
+  bottom: ["bottom", "top", "right", "left"],
 };
 
 /** Rough width of the rendered pill, used only to keep it inside the window. */
@@ -76,11 +84,13 @@ export const Callout: React.FC<CalloutProps> = ({
     return ey - pillHeight - margin >= 0;
   };
 
-  const chosen: CalloutSide = fits(side)
-    ? side
-    : fits(OPPOSITE[side])
-      ? OPPOSITE[side]
-      : side;
+  const chosen: CalloutSide = FALLBACKS[side].find(fits) ?? side;
+  /**
+   * Whether any side had room. When a ring is nearly as large as the window
+   * none does, and the label has to be clamped inside the frame instead of
+   * being tethered outside the element.
+   */
+  const anySideFits = FALLBACKS[side].some(fits);
 
   const { dx, dy } = DIRECTION[chosen];
 
@@ -94,8 +104,29 @@ export const Callout: React.FC<CalloutProps> = ({
   const endX = startX + dx * reach;
   const endY = startY + dy * reach;
 
-  const drawnX = startX + (endX - startX) * progress;
-  const drawnY = startY + (endY - startY) * progress;
+  /**
+   * Keep the pill inside the window even when no side had room. Without this
+   * the label runs past the window's `overflow: hidden` and loses its last
+   * words, which is worse than a connector that sits a little short.
+   */
+  const clampEnd = (): { x: number; y: number } => {
+    if (anySideFits) {
+      return { x: endX, y: endY };
+    }
+    const halfW = pillWidth / 2;
+    const halfH = pillHeight / 2;
+    return {
+      x: Math.min(windowWidth - halfW - margin, Math.max(halfW + margin, endX)),
+      y: Math.min(
+        windowHeight - halfH - margin,
+        Math.max(halfH + margin, endY),
+      ),
+    };
+  };
+
+  const clamped = clampEnd();
+  const drawnX = startX + (clamped.x - startX) * progress;
+  const drawnY = startY + (clamped.y - startY) * progress;
 
   const transform: Record<CalloutSide, string> = {
     left: "translate(-100%, -50%)",
@@ -138,10 +169,10 @@ export const Callout: React.FC<CalloutProps> = ({
       <div
         style={{
           position: "absolute",
-          left: endX,
-          top: endY,
-          transform: transform[chosen],
-          ...nudge[chosen],
+          left: clamped.x,
+          top: clamped.y,
+          transform: anySideFits ? transform[chosen] : "translate(-50%, -50%)",
+          ...(anySideFits ? nudge[chosen] : {}),
           opacity: interpolate(progress, [0.55, 1], [0, 1], {
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",

@@ -60,11 +60,14 @@ export const ClickMaze: React.FC<ClickMazeProps> = ({
   };
 
   const legs = ROUTE.length;
+  // Clamped at both ends: before the shot starts `frame` is negative, and an
+  // unclamped value would index the route from the wrong end.
   const t = interpolate(frame, [0, span], [0, 1], {
+    extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
   const legFloat = t * legs;
-  const leg = Math.min(legs - 1, Math.floor(legFloat));
+  const leg = Math.max(0, Math.min(legs - 1, Math.floor(legFloat)));
   const legT = EASE(Math.min(1, legFloat - leg));
 
   const from = centre(ROUTE[Math.max(0, leg - 1)]);

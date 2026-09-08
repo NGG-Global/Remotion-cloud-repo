@@ -2,13 +2,6 @@ import { Easing, interpolate, useCurrentFrame } from "remotion";
 import type { Region } from "./regions";
 import { regionCenter } from "./regions";
 
-/** Native pixel size of `public/img/claude-home.jpg`. */
-export const SCREENSHOT_WIDTH = 2959;
-export const SCREENSHOT_HEIGHT = 1766;
-
-/** Screenshot aspect ratio. */
-export const SCREENSHOT_ASPECT = SCREENSHOT_WIDTH / SCREENSHOT_HEIGHT;
-
 export type FocusStep = {
   /** Frame at which the move towards this target begins. */
   readonly at: number;

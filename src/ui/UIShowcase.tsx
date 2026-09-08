@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useMemo } from "react";
-import { Img, staticFile } from "remotion";
+import { Img } from "remotion";
 import { COLORS } from "../theme";
 import type { Region } from "./regions";
+import type { Screen } from "./screens";
 import type { FocusTransform } from "./useFocus";
-import { SCREENSHOT_ASPECT } from "./useFocus";
 
 /** A rectangle in window pixels. */
 export type Rect = {
@@ -38,6 +38,8 @@ export const useProjection = (): Projection => {
 };
 
 type UIShowcaseProps = {
+  /** The screenshot being filmed, with its region map and native size. */
+  readonly screen: Screen;
   /** Camera position, normally from `useFocus()`. */
   readonly focus: FocusTransform;
   /** Width of the window on the canvas, in pixels. */
@@ -64,13 +66,14 @@ const clamp = (value: number, min: number, max: number): number =>
  * that can push into any region.
  */
 export const UIShowcase: React.FC<UIShowcaseProps> = ({
+  screen,
   focus,
   width,
   children,
   reveal = 1,
   redact = [],
 }) => {
-  const height = width / SCREENSHOT_ASPECT;
+  const height = width / (screen.width / screen.height);
 
   const contentWidth = width * focus.scale;
   const contentHeight = height * focus.scale;
@@ -133,7 +136,7 @@ export const UIShowcase: React.FC<UIShowcaseProps> = ({
         }}
       >
         <Img
-          src={staticFile("img/claude-home.jpg")}
+          src={screen.src}
           style={{ width: "100%", height: "100%", display: "block" }}
         />
 
@@ -154,7 +157,7 @@ export const UIShowcase: React.FC<UIShowcaseProps> = ({
             }}
           >
             <Img
-              src={staticFile("img/claude-home.jpg")}
+              src={screen.src}
               style={{
                 position: "absolute",
                 left: -region.x * contentWidth,

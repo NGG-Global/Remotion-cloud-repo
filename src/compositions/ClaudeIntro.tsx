@@ -19,13 +19,15 @@ import { ShowcaseScene } from "../scenes/ShowcaseScene";
 import { StagedScene } from "../scenes/StagedScene";
 import { StatementScene } from "../scenes/StatementScene";
 import { TitleScene } from "../scenes/TitleScene";
-import { beatAt, beatLength, NARRATION_SECONDS, type BeatId } from "../script";
+import { EP1, type BeatId } from "../script";
 import { COLORS, seconds } from "../theme";
-import { REGIONS } from "../ui/regions";
+import { SCREENS } from "../ui/screens";
+
+const HOME = SCREENS.home.regions;
 import { TypedPrompt } from "../ui/TypedPrompt";
 
 /** Total length of the video: the narration, plus a beat of air at the end. */
-export const CLAUDE_INTRO_DURATION = seconds(NARRATION_SECONDS + 1.2);
+export const CLAUDE_INTRO_DURATION = seconds(EP1.totalSeconds + 1.2);
 
 /**
  * Places a scene on the narration's timeline.
@@ -43,10 +45,10 @@ const Beat: React.FC<{
   readonly children: React.ReactNode;
 }> = ({ id, extend = 0, children }) => (
   <Sequence
-    from={seconds(beatAt(id))}
+    from={seconds(EP1.at(id))}
     // One crossfade longer than the beat, so this scene is still on screen
     // underneath while the next one fades in over it.
-    durationInFrames={seconds(beatLength(id) + extend) + CROSSFADE}
+    durationInFrames={seconds(EP1.length(id) + extend) + CROSSFADE}
     name={id}
   >
     <CrossFade frames={CROSSFADE}>{children}</CrossFade>
@@ -295,6 +297,7 @@ export const ClaudeIntro: React.FC = () => {
           them, so the viewer keeps their bearings in the layout. */}
       <Beat id="spaces-tour">
         <ShowcaseScene
+          screen={SCREENS.home}
           title="מרחבי העבודה"
           windowWidth={1520}
           steps={[
@@ -304,8 +307,8 @@ export const ClaudeIntro: React.FC = () => {
               // puts the typed line inside the undimmed cut-out where it
               // reads at full contrast.
               at: 0,
-              region: REGIONS.composer,
-              frameOn: REGIONS.composerBlock,
+              region: HOME.composer,
+              frameOn: HOME.composerBlock,
               fill: 0.82,
               label: "צ'אט — נקודת ההתחלה",
               side: "top",
@@ -314,8 +317,8 @@ export const ClaudeIntro: React.FC = () => {
             },
             {
               at: seconds(5.4),
-              region: REGIONS.projects,
-              frameOn: REGIONS.navBlock,
+              region: HOME.projects,
+              frameOn: HOME.navBlock,
               fill: 0.72,
               label: "פרויקטים — מרחב קבוע לנושא או ללקוח",
               side: "right",
@@ -324,8 +327,8 @@ export const ClaudeIntro: React.FC = () => {
             },
             {
               at: seconds(15.1),
-              region: REGIONS.coworkPill,
-              frameOn: REGIONS.composerBlock,
+              region: HOME.coworkPill,
+              frameOn: HOME.composerBlock,
               fill: 0.78,
               label: "קו-וורק — למשימות ארוכות",
               side: "top",
@@ -334,8 +337,8 @@ export const ClaudeIntro: React.FC = () => {
             },
             {
               at: seconds(22.8),
-              region: REGIONS.design,
-              frameOn: REGIONS.designBlock,
+              region: HOME.design,
+              frameOn: HOME.designBlock,
               fill: 0.66,
               label: "דיזיין — הסביבה החזותית",
               side: "right",
@@ -347,35 +350,35 @@ export const ClaudeIntro: React.FC = () => {
           // starts, a request types itself into the composer.
           extras={
             <TypedPrompt
-              region={REGIONS.promptLine}
+              region={HOME.promptLine}
               text="סכם לי את הפגישה ותוציא רשימת משימות"
               delay={seconds(1.7)}
               speed={13}
             />
           }
           cursor={[
-            { at: seconds(0.6), region: REGIONS.greeting },
+            { at: seconds(0.6), region: HOME.greeting },
             {
               at: seconds(1.0),
-              region: REGIONS.chatPill,
+              region: HOME.chatPill,
               click: true,
               duration: seconds(0.5),
             },
             {
               at: seconds(5.6),
-              region: REGIONS.projects,
+              region: HOME.projects,
               click: true,
               duration: seconds(0.9),
             },
             {
               at: seconds(15.3),
-              region: REGIONS.coworkPill,
+              region: HOME.coworkPill,
               click: true,
               duration: seconds(0.9),
             },
             {
               at: seconds(23.0),
-              region: REGIONS.design,
+              region: HOME.design,
               click: true,
               duration: seconds(0.9),
             },
@@ -402,6 +405,7 @@ export const ClaudeIntro: React.FC = () => {
 
       <Beat id="next-video-teaser">
         <ShowcaseScene
+          screen={SCREENS.home}
           windowWidth={1660}
           revealFrames={seconds(0.35)}
           steps={[{ at: 0, moveDuration: seconds(0.9) }]}

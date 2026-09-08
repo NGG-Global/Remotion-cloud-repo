@@ -4,7 +4,9 @@ import { Stage } from "../components/Stage";
 import { Callout } from "../ui/Callout";
 import { Cursor } from "../ui/Cursor";
 import { Highlight } from "../ui/Highlight";
-import { REGIONS } from "../ui/regions";
+import { SCREENS } from "../ui/screens";
+
+const HOME = SCREENS.home.regions;
 import { UIShowcase } from "../ui/UIShowcase";
 import { useFocus } from "../ui/useFocus";
 
@@ -18,8 +20,8 @@ export const UIKitDemo: React.FC = () => {
 
   const focus = useFocus([
     { at: 0 },
-    { at: 40, region: REGIONS.newChat, fill: 0.42, duration: 30 },
-    { at: 110, region: REGIONS.composer, fill: 0.62, duration: 30 },
+    { at: 40, region: HOME.newChat, fill: 0.42, duration: 30 },
+    { at: 110, region: HOME.composer, fill: 0.62, duration: 30 },
     { at: 190 },
   ]);
 
@@ -31,12 +33,17 @@ export const UIKitDemo: React.FC = () => {
   return (
     <Stage>
       <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
-        <UIShowcase focus={focus} width={1560} reveal={reveal}>
+        <UIShowcase
+          screen={SCREENS.home}
+          focus={focus}
+          width={1560}
+          reveal={reveal}
+        >
           {frame >= 45 && frame < 105 ? (
             <>
-              <Highlight region={REGIONS.newChat} delay={45} />
+              <Highlight region={HOME.newChat} delay={45} />
               <Callout
-                region={REGIONS.newChat}
+                region={HOME.newChat}
                 label="שיחה חדשה"
                 side="right"
                 delay={52}
@@ -47,9 +54,9 @@ export const UIKitDemo: React.FC = () => {
 
           {frame >= 115 ? (
             <>
-              <Highlight region={REGIONS.composer} delay={115} pad={14} />
+              <Highlight region={HOME.composer} delay={115} pad={14} />
               <Callout
-                region={REGIONS.modelPicker}
+                region={HOME.modelPicker}
                 label="בחירת מודל"
                 side="top"
                 delay={130}
@@ -61,10 +68,10 @@ export const UIKitDemo: React.FC = () => {
           <Cursor
             appearAt={30}
             stops={[
-              { at: 30, region: REGIONS.logo },
-              { at: 45, region: REGIONS.newChat, click: true },
-              { at: 120, region: REGIONS.composer },
-              { at: 150, region: REGIONS.modelPicker, click: true },
+              { at: 30, region: HOME.logo },
+              { at: 45, region: HOME.newChat, click: true },
+              { at: 120, region: HOME.composer },
+              { at: 150, region: HOME.modelPicker, click: true },
             ]}
           />
         </UIShowcase>
