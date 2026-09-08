@@ -1,7 +1,11 @@
-# Remotion video project
+# Claude explainer videos
 
-Animated videos built as React components. Compositions are written in TypeScript,
-previewed in the Remotion Studio, and rendered to MP4 from the command line or CI.
+Animated explainer videos built as React components with Remotion. Compositions
+are written in TypeScript, previewed in the Remotion Studio, and rendered to MP4
+from the command line or CI.
+
+Currently holds episode 1 of a Hebrew-narrated series on using Claude, plus the
+scene library and interface-callout machinery the rest of the series reuses.
 
 Remotion version: **4.0.522** · Output format: **1920x1080, 30 fps, H.264**
 
@@ -27,11 +31,10 @@ scrub the timeline, and edit props live in the right-hand panel.
 
 ```bash
 # Render a composition by its id
-npx remotion render TitleCard out/title-card.mp4
-npx remotion render Explainer out/explainer.mp4
+npx remotion render ClaudeIntro out/claude-explainer-ep1.mp4
 
 # A single frame, e.g. for a thumbnail
-npx remotion still TitleCard out/thumbnail.png --frame=100
+npx remotion still ClaudeIntro out/thumbnail.png --frame=270
 
 # Override props at render time (validated against the composition's schema)
 npx remotion render TitleCard out/custom.mp4 \
@@ -60,11 +63,20 @@ Rendered files land in `out/`, which is git-ignored.
 src/
   index.ts          Entry point. Calls registerRoot() — rarely needs changing.
   Root.tsx          Every renderable video is registered here.
+  script.ts         The narration timeline: one entry per beat of the voice-over.
   theme.ts          Format and design tokens (dimensions, fps, colours, type scale).
   fonts.ts          Self-hosted font loading.
-  components/       Reusable animation building blocks.
+  components/       Animation building blocks (kinetic text, stage, motif).
+  scenes/           The scene types the video is assembled from.
+  ui/               Machinery for filming the interface screenshot.
   compositions/     One file per video.
-public/             Static assets reachable via staticFile(). Fonts live here.
+  dev/              Development-only compositions. Not delivered.
+public/
+  audio/            Narration tracks.
+  img/              Interface screenshots.
+  fonts/            Self-hosted font files and their licences.
+tools/
+  transcribe.mjs    Narration -> timed script, locally via whisper.cpp.
 out/                Render output (git-ignored).
 remotion.config.ts  CLI and Studio configuration.
 ```
@@ -94,13 +106,22 @@ range unless you pass `extrapolateLeft: "clamp"` and `extrapolateRight: "clamp"`
 Unclamped values overshoot — a common cause of elements flickering past full
 opacity.
 
-**Fonts are self-hosted.** `src/fonts.ts` loads Inter from `public/fonts` with
-`loadFont()` from `@remotion/fonts`, which holds the render open until the font
-is ready. `@remotion/google-fonts` is deliberately not used: it fetches font
-files over the network mid-render, so an offline runner or one behind a proxy
-either fails or silently substitutes a different face and changes the output.
+**Fonts are self-hosted.** `src/fonts.ts` loads Rubik (Hebrew and Latin) and
+Inter from `public/fonts` with `loadFont()` from `@remotion/fonts`, which holds
+the render open until the face is ready. `@remotion/google-fonts` is
+deliberately not used: it fetches font files over the network mid-render, so an
+offline runner or one behind a proxy either fails or silently substitutes a
+different face and changes the output.
 
-To add a brand font, drop the files in `public/fonts` and load them the same way.
+Rubik ships one file per script, registered under one family with the unicode
+range each covers. Without the Hebrew file, Hebrew text falls back to a system
+face and the layout breaks. To add a brand font, drop the files in
+`public/fonts` and load them the same way.
+
+**Hebrew lays out RTL at the container.** Splitting a Hebrew string on spaces
+gives words in logical order; only `direction: rtl` on the flex container puts
+the first word on the right. Setting direction on the words themselves renders
+them reversed.
 
 **Static assets go through `staticFile()`.** Put images, video and audio in
 `public/` and reference them as `staticFile("logo.png")`. Relative paths and
@@ -110,19 +131,82 @@ imports do not resolve reliably during a render.
 for static layout, but anything that changes every frame (opacity, transform,
 interpolated colour) has to be an inline style.
 
-## What is in the repository now
+## The Claude explainer series
 
-Two compositions, both intended as patterns to copy rather than finished assets:
+`ClaudeIntro` is episode 1: a Hebrew-narrated explainer on what Claude is for,
+which tasks suit it, and where not to use it. It runs 3:40 against the supplied
+narration track.
 
-- **`TitleCard`** — a five second title card. Shows word-by-word `spring()`
-  entrances, a clamped fade-out, `<Sequence>` for offsetting a child's timeline,
-  and a Zod schema that makes the props editable in the Studio and validated on
-  the command line.
-- **`Explainer`** — a three scene piece assembled with `<TransitionSeries>` from
-  `@remotion/transitions`, using a slide and a fade between scenes. Its total
-  length is computed from the scene and transition constants instead of being
-  hand-counted, so edits to the timing cannot drift out of sync with the
-  registered duration.
+```bash
+npx remotion render ClaudeIntro out/claude-explainer-ep1.mp4
+```
+
+### How it is put together
+
+**Timings come from the narration, not from guesswork.** `src/script.ts` holds
+one entry per beat of the voice-over with the second it starts at, transcribed
+from `public/audio/narration.mp3`. Scenes are placed by beat id and their
+lengths are derived from the gaps between beats, so re-timing one beat cannot
+leave a scene overlapping its neighbour. To re-derive the timings after a
+narration change:
+
+```bash
+npm run transcribe -- public/audio/narration.mp3 he
+```
+
+That runs `tools/transcribe.mjs`, which transcribes locally through
+whisper.cpp — the audio never leaves the machine, which matters when the
+narration discusses internal material.
+
+**Scenes are types, not one-offs.** `src/scenes/` holds the seven shapes the
+video uses — a title, a chapter divider, a full-frame statement, a staggered
+list, a not-this-but-that contrast, a row of cards, and the interface
+showcase. Episode 2 should reuse these rather than add more.
+
+**The interface screenshot is treated as a set.** `src/ui/` holds the
+machinery for filming it:
+
+| Piece             | What it does                                                       |
+| ----------------- | ------------------------------------------------------------------ |
+| `regions.ts`      | Every interface element's position, in fractions of the screenshot |
+| `useFocus.ts`     | Camera path across a list of targets, eased and edge-clamped       |
+| `UIShowcase.tsx`  | The window itself, and the projection overlays draw against        |
+| `Highlight.tsx`   | Focus ring, with the rest of the interface dimmed                  |
+| `Callout.tsx`     | Hebrew label tethered to an element, flipping side near an edge    |
+| `Cursor.tsx`      | Pointer that travels between elements and clicks                   |
+| `TypedPrompt.tsx` | Types a request into the composer                                  |
+
+Two decisions in there are worth keeping:
+
+- **The camera is capped** at a little over the screenshot's own resolution.
+  Past that a close-up is just a blown-up screenshot. Where an element is too
+  small to fill the frame sharply — a toggle inside the composer — the camera
+  frames its container via `frameOn` and the ring still lands on the element.
+- **The camera clamps at the image edges.** Centring an element near a corner
+  would otherwise slide blank window into frame.
+
+### Redaction
+
+The supplied screenshot contains real conversation titles and an account name.
+`ShowcaseScene` blurs the conversation list and the account row by default —
+see `DEFAULT_REDACTIONS`. The navigation items stay legible because the video
+teaches them. Pass `redact={[]}` to turn it off, or add regions to cover more.
+
+### Recalibrating after a screenshot change
+
+`src/dev/` holds two development-only compositions, not part of the video:
+
+- `Calibration` renders the screenshot under a labelled percentage grid, so
+  `regions.ts` can be re-measured. Render it as a still.
+- `UIKitDemo` exercises every indicator at once, for checking the kit from a
+  few stills instead of a full render.
+
+## Starter examples
+
+`TitleCard` and `Explainer` are the minimal compositions this project started
+from. They are not part of the series; they are kept because they demonstrate
+two features the explainer does not use — Zod-schema props editable in the
+Studio, and `<TransitionSeries>`.
 
 ## Cloud rendering
 

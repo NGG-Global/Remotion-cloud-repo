@@ -7,6 +7,9 @@ out
 # Remotion Studio and bundler caches
 .remotion
 
+# Local transcription working directory: whisper.cpp build and models
+.cache
+
 .DS_Store
 .env
 .env.local

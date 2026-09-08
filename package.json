@@ -15,7 +15,8 @@
     "lint": "eslint src && tsc",
     "format": "prettier --write \"**/*.{ts,tsx,css,json,md}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,css,json,md}\"",
-    "upgrade-remotion": "remotion upgrade"
+    "upgrade-remotion": "remotion upgrade",
+    "transcribe": "node tools/transcribe.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.522",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.522",
+    "@remotion/install-whisper-cpp": "4.0.522",
     "@types/react": "19.2.7",
     "@types/web": "0.0.166",
     "eslint": "9.19.0",
