@@ -16,14 +16,14 @@ Remotion version: **4.0.522** · Output format: **1920x1080, 30 fps, H.264**
 product film for the Left Lane driving simulator. Everything specific to it
 lives in `src/leftlane/`:
 
-| File                     | Holds                                                        |
-| ------------------------ | ------------------------------------------------------------ |
+| File                     | Holds                                                                                          |
+| ------------------------ | ---------------------------------------------------------------------------------------------- |
 | `timing.ts`              | Every pacing constant: narration cut points, scene bounds, footage in/out points, label timing |
-| `brand.ts`               | Colours and road geometry sampled from the official end card and logo |
-| `RoadScenes.tsx`         | The abstract top-down road: the opening habit scene and the closing confidence scene |
-| `Showcase.tsx`           | The simulator recording, framed and tracked, plus the montage labels |
-| `BrandResolve.tsx`       | The official end card animation, its held final frame, the tagline |
-| `LeftLaneCommercial.tsx` | Assembles the scenes and places the narration segments |
+| `brand.ts`               | Colours and road geometry sampled from the official end card and logo                          |
+| `RoadScenes.tsx`         | The abstract top-down road: the opening habit scene and the closing confidence scene           |
+| `Showcase.tsx`           | The simulator recording, framed and tracked, plus the montage labels                           |
+| `BrandResolve.tsx`       | The official end card animation, its held final frame, the tagline                             |
+| `LeftLaneCommercial.tsx` | Assembles the scenes and places the narration segments                                         |
 
 Assets are in `public/leftlane/`. The narration master is untouched and played
 in five segments with trim offsets; the silence between them is timeline
