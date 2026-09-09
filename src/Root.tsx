@@ -28,6 +28,10 @@ import {
   regionCheckSchema,
 } from "./dev/RegionCheck";
 import { UIKitDemo } from "./dev/UIKitDemo";
+import {
+  LEFT_LANE_DURATION,
+  LeftLaneCommercial,
+} from "./leftlane/LeftLaneCommercial";
 import { FORMAT, seconds } from "./theme";
 
 /**
@@ -39,6 +43,13 @@ import { FORMAT, seconds } from "./theme";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="LeftLane"
+        component={LeftLaneCommercial}
+        durationInFrames={LEFT_LANE_DURATION}
+        {...FORMAT}
+      />
+
       <Composition
         id="ClaudeIntro"
         component={ClaudeIntro}

@@ -6,9 +6,30 @@ from the command line or CI.
 
 Currently holds episodes 1 to 3 of a Hebrew-narrated series on using Claude,
 plus the scene library, graphics and interface-callout machinery the episodes
-share.
+share, and the Left Lane product commercial (composition id `LeftLane`).
 
 Remotion version: **4.0.522** · Output format: **1920x1080, 30 fps, H.264**
+
+## Left Lane commercial
+
+`npx remotion render LeftLane out/left-lane-commercial.mp4` renders a 29-second
+product film for the Left Lane driving simulator. Everything specific to it
+lives in `src/leftlane/`:
+
+| File                     | Holds                                                        |
+| ------------------------ | ------------------------------------------------------------ |
+| `timing.ts`              | Every pacing constant: narration cut points, scene bounds, footage in/out points, label timing |
+| `brand.ts`               | Colours and road geometry sampled from the official end card and logo |
+| `RoadScenes.tsx`         | The abstract top-down road: the opening habit scene and the closing confidence scene |
+| `Showcase.tsx`           | The simulator recording, framed and tracked, plus the montage labels |
+| `BrandResolve.tsx`       | The official end card animation, its held final frame, the tagline |
+| `LeftLaneCommercial.tsx` | Assembles the scenes and places the narration segments |
+
+Assets are in `public/leftlane/`. The narration master is untouched and played
+in five segments with trim offsets; the silence between them is timeline
+spacing, so re-pacing means changing numbers in `timing.ts`. The simulator
+recording is a lossless remux of the supplied screen capture (video stream
+copied, silent audio track dropped).
 
 ## Requirements
 
