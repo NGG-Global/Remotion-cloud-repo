@@ -22,6 +22,7 @@ export const NARRATION_SECONDS = 218.57;
 export const NARRATION_SECONDS_EP2 = 413.23;
 export const NARRATION_SECONDS_EP3 = 276.24;
 export const NARRATION_SECONDS_EP4 = 304.52;
+export const NARRATION_SECONDS_EP5 = 235.55;
 
 export const BEATS = [
   { at: 0.0, id: "hook" },
@@ -216,6 +217,59 @@ export const BEATS_EP4 = [
 export type BeatIdEp4 = (typeof BEATS_EP4)[number]["id"];
 
 /**
+ * Episode 5: working with files, and where Chat stops and Cowork starts.
+ *
+ * Timings come from a segment-level transcription of `narration-ep5.mp3`.
+ * Four corrections were applied against the raw pass, each checked by
+ * transcribing the span on its own:
+ *
+ * - "שריקה" (a whistle) in a list of file types is "סריקה", a scan.
+ * - "הרמת מספרים" is "ערמת מספרים", a heap of numbers.
+ * - The pass split one sentence into "שהופך לשקיעה" plus "ולשקפים", inventing
+ *   a third transformation. The audio has two: a methodology document that
+ *   becomes slides, and a meeting summary that becomes a client email.
+ * - "קורורק" / "קוורק" / "קורוק" is Cowork, which the interface names in
+ *   Latin on the composer's own toggle. Written that way on screen.
+ *
+ * This episode leans on the interface: almost everything it describes — the
+ * composer, attaching a file, the question you type, the Chat and Cowork
+ * pills — is visible in the home screenshot, so those beats are filmed rather
+ * than drawn. Where the subject is a folder on someone's own machine, which
+ * no screenshot of the web app can show, it is drawn instead.
+ */
+export const BEATS_EP5 = [
+  { at: 0.0, id: "hook" },
+  { at: 9.6, id: "ask-instead" },
+  { at: 13.52, id: "title" },
+
+  { at: 19.84, id: "drag-in" },
+  { at: 23.22, id: "formats" },
+  { at: 29.6, id: "structure" },
+
+  { at: 44.66, id: "dont-describe" },
+  { at: 54.68, id: "say-why" },
+
+  { at: 66.36, id: "summarize-weak" },
+  { at: 75.28, id: "better-questions" },
+  { at: 93.7, id: "multi-file" },
+  { at: 109.9, id: "transform" },
+
+  { at: 128.56, id: "why-cowork" },
+  { at: 136.74, id: "same-claude" },
+  { at: 145.02, id: "mode-anatomy" },
+  { at: 174.32, id: "hand-over" },
+
+  { at: 187.38, id: "which-when" },
+  { at: 199.88, id: "switch" },
+  { at: 208.76, id: "later" },
+
+  { at: 215.04, id: "recap" },
+  { at: 225.46, id: "outro" },
+] as const satisfies readonly Beat[];
+
+export type BeatIdEp5 = (typeof BEATS_EP5)[number]["id"];
+
+/**
  * Timeline lookups for one episode's beat list.
  *
  * Returning a pair of closures rather than exporting two functions per episode
@@ -251,3 +305,4 @@ export const EP1 = timeline(BEATS, NARRATION_SECONDS);
 export const EP2 = timeline(BEATS_EP2, NARRATION_SECONDS_EP2);
 export const EP3 = timeline(BEATS_EP3, NARRATION_SECONDS_EP3);
 export const EP4 = timeline(BEATS_EP4, NARRATION_SECONDS_EP4);
+export const EP5 = timeline(BEATS_EP5, NARRATION_SECONDS_EP5);
