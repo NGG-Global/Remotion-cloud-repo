@@ -141,12 +141,14 @@ interpolated colour) has to be an inline style.
 | `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings  |
 | `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see |
 | `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft |
+| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts |
 
 ```bash
 npx remotion render ClaudeIntro out/claude-explainer-ep1.mp4
 npx remotion render ClaudeSetup out/claude-explainer-ep2.mp4
 npx remotion render ClaudeConnect out/claude-explainer-ep3.mp4
 npx remotion render ClaudeContext out/claude-explainer-ep4.mp4
+npx remotion render ClaudeFiles out/claude-explainer-ep5.mp4
 ```
 
 ### How it is put together
@@ -252,6 +254,13 @@ new icon can be added by appending its `d` strings and nothing else.
 | `OneThreadFiveGoals`             | Five goals, five outputs, one thread that never changes            |
 | `SameChat`                       | Five features collapsing into one conversation                     |
 | `NextLayer`                      | Files settling onto the conversation as another layer              |
+| `PdfHunt`                        | The slog through a long PDF for the one paragraph that matters     |
+| `StructuredRead`                 | A deck read as slides, and a sheet read as a table                 |
+| `PurposeSplit`                   | One file, two reasons for opening it, two different answers        |
+| `MaterialTransform`              | Material you already have, becoming something else                 |
+| `ModeAnatomy`                    | Where the files sit in Chat, and where they sit in Cowork          |
+| `HandOff`                        | Handing over a whole task instead of steering every step           |
+| `ModeChoice`                     | The two cases, and which mode each one is                          |
 
 Two things keep them from looking like clip art:
 
@@ -291,6 +300,35 @@ Two habits from that episode are worth keeping:
   set two phrasings side by side and label one better; it shows the edit each
   one produces, precise against diffuse. The constraint passage does not state
   that time is saved; it draws the candidate approaches and prunes them.
+
+**Film what the interface shows; draw what it cannot.** Episode 5 is the
+clearest case. Its narration is almost entirely about things visible in the
+home screenshot — the composer, attaching a file, the question you type, the
+Chat and Cowork pills — so ten of its twenty-one beats are filmed on that
+screenshot, and the composer carries the first half as one continuous shot.
+Two overlays make that possible:
+
+- `AttachedChips` draws files sitting in the composer, in screenshot
+  coordinates, covering the baked-in placeholder the way `TypedPrompt` does.
+  The screenshot was captured with an empty composer, so without this an
+  episode about bringing files in has nothing to point at. Chips arrive one at
+  a time; `newestFirst` keeps the most recent arrival at the right-hand end so
+  a long run of formats stays on screen.
+- `StruckLine` crosses out something in the interface, for the beats that show
+  a wrong way before the right one.
+
+The counterpart rule still holds: the second half of that episode is about
+where files sit on your own machine, and no screenshot of the web app shows a
+local folder, so `ModeAnatomy` draws it.
+
+**A tight shot needs its own framing.** Two lessons from episode 5's
+showcase beats. `useFocus` frames on `frameOn` whether or not a `region` is
+given, while `ShowcaseScene` only draws an indicator when there is a
+`region` — so omitting `region` holds the shot and leaves the frame to the
+overlay, which is what you want when the overlay _is_ the content. And
+because `fill` is capped by `MAX_UPSCALE`, asking for a very tight shot on a
+small control just pins it at the cap: to pull back from a control you have
+to drop `fill` below the cap, not raise it.
 
 **Where a screen would leak, draw it instead.** Episode 3's narration walks
 through the Microsoft sign-in and consent screens. Those carry a real
