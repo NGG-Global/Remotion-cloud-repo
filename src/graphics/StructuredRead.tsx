@@ -3,11 +3,21 @@ import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { fontFamily, uiFontFamily } from "../fonts";
 import { COLORS } from "../theme";
 
+/** What a slide holds. Drawn, so the label has something to be about. */
+export type SlideKind = "title" | "chart" | "bullets" | "summary";
+
+export type DeckSlide = {
+  readonly label: string;
+  readonly kind: SlideKind;
+  /** Frame at which this slide's contents are named. */
+  readonly at: number;
+};
+
 type StructuredReadProps = {
   readonly width: number;
   readonly height: number;
   /** What each slide of the deck turns out to hold. */
-  readonly slides: readonly { readonly label: string; readonly at: number }[];
+  readonly slides: readonly DeckSlide[];
   /** Frame at which the deck gives way to the spreadsheet. */
   readonly sheetAt: number;
   /** Parts of the table that get recognised, in order. */
@@ -77,15 +87,15 @@ export const StructuredRead: React.FC<StructuredReadProps> = ({
 const Deck: React.FC<{
   readonly width: number;
   readonly height: number;
-  readonly slides: readonly { readonly label: string; readonly at: number }[];
+  readonly slides: readonly DeckSlide[];
   readonly frame: number;
   readonly fps: number;
 }> = ({ width, height, slides, frame, fps }) => {
-  const SLIDE = { width: width * 0.19, height: height * 0.34 };
-  const gap = width * 0.025;
+  const SLIDE = { width: width * 0.2, height: height * 0.4 };
+  const gap = width * 0.026;
   const total = slides.length * SLIDE.width + (slides.length - 1) * gap;
   const startRight = width - (width - total) / 2;
-  const top = height * 0.28;
+  const top = height * 0.3;
 
   return (
     <>
@@ -119,33 +129,7 @@ const Deck: React.FC<{
                 overflow: "hidden",
               }}
             >
-              {/* A slide's worth of content, so "what sits on each" has
-                  something to refer to. */}
-              <div
-                style={{
-                  position: "absolute",
-                  right: SLIDE.width * 0.09,
-                  top: SLIDE.height * 0.12,
-                  width: SLIDE.width * 0.55,
-                  height: 11,
-                  borderRadius: 6,
-                  background: read > 0.4 ? COLORS.accent : "#b8b1a5",
-                }}
-              />
-              {[0.72, 0.6, 0.66].map((w, l) => (
-                <div
-                  key={l}
-                  style={{
-                    position: "absolute",
-                    right: SLIDE.width * 0.09,
-                    top: SLIDE.height * (0.34 + l * 0.16),
-                    width: SLIDE.width * 0.82 * w,
-                    height: 7,
-                    borderRadius: 4,
-                    background: "#cfc9bd",
-                  }}
-                />
-              ))}
+              <SlideContent kind={slide.kind} size={SLIDE} read={read > 0.4} />
               <div
                 style={{
                   position: "absolute",
@@ -446,5 +430,159 @@ const Sheet: React.FC<{
         באקסל הוא קורא טבלה כטבלה
       </div>
     </>
+  );
+};
+
+/**
+ * The contents of one slide.
+ *
+ * Drawn per kind rather than as a generic block of lines: the passage claims
+ * Claude sees what sits on each slide, and four identical slides would give
+ * that claim nothing to point at.
+ */
+const SlideContent: React.FC<{
+  readonly kind: SlideKind;
+  readonly size: { width: number; height: number };
+  readonly read: boolean;
+}> = ({ kind, size, read }) => {
+  const ink = read ? COLORS.accent : "#b8b1a5";
+  const body = "#cfc9bd";
+  const pad = size.width * 0.09;
+
+  if (kind === "title") {
+    return (
+      <>
+        <div
+          style={{
+            position: "absolute",
+            right: pad,
+            top: size.height * 0.36,
+            width: size.width * 0.72,
+            height: 15,
+            borderRadius: 8,
+            background: ink,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            right: pad,
+            top: size.height * 0.52,
+            width: size.width * 0.46,
+            height: 8,
+            borderRadius: 4,
+            background: body,
+          }}
+        />
+      </>
+    );
+  }
+
+  if (kind === "chart") {
+    const heights = [0.3, 0.52, 0.4, 0.66];
+    const barWidth = (size.width - pad * 2) / 6;
+    return (
+      <>
+        <div
+          style={{
+            position: "absolute",
+            right: pad,
+            top: size.height * 0.12,
+            width: size.width * 0.46,
+            height: 9,
+            borderRadius: 5,
+            background: body,
+          }}
+        />
+        {heights.map((h, i) => (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              // Bars run right to left, like the rest of the frame.
+              right: pad + i * barWidth * 1.35,
+              bottom: size.height * 0.16,
+              width: barWidth,
+              height: size.height * 0.5 * h,
+              borderRadius: 3,
+              background: i === heights.length - 1 ? ink : body,
+            }}
+          />
+        ))}
+        <div
+          style={{
+            position: "absolute",
+            right: pad,
+            left: pad,
+            bottom: size.height * 0.15,
+            height: 2,
+            background: "#b8b1a5",
+          }}
+        />
+      </>
+    );
+  }
+
+  if (kind === "bullets") {
+    return (
+      <>
+        {[0.78, 0.62, 0.72, 0.54].map((w, i) => (
+          <React.Fragment key={i}>
+            <div
+              style={{
+                position: "absolute",
+                right: pad,
+                top: size.height * (0.2 + i * 0.17) + 2,
+                width: 8,
+                height: 8,
+                borderRadius: "50%",
+                background: i === 0 ? ink : body,
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                right: pad + 18,
+                top: size.height * (0.2 + i * 0.17),
+                width: (size.width - pad * 2 - 18) * w,
+                height: 8,
+                borderRadius: 4,
+                background: body,
+              }}
+            />
+          </React.Fragment>
+        ))}
+      </>
+    );
+  }
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        right: pad,
+        left: pad,
+        top: size.height * 0.24,
+        height: size.height * 0.52,
+        borderRadius: 8,
+        border: `2px solid ${ink}`,
+        padding: size.width * 0.06,
+        boxSizing: "border-box",
+      }}
+    >
+      {[0.9, 0.66].map((w, i) => (
+        <div
+          key={i}
+          style={{
+            width: `${w * 100}%`,
+            height: 8,
+            marginBottom: 12,
+            borderRadius: 4,
+            background: body,
+            marginRight: "auto",
+          }}
+        />
+      ))}
+    </div>
   );
 };

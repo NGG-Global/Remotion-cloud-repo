@@ -178,14 +178,20 @@ export const ShowcaseScene: React.FC<ShowcaseSceneProps> = ({
         <div
           style={{
             position: "absolute",
-            top: 56,
-            right: 72,
+            top: 44,
+            right: 60,
             direction: "rtl",
             fontFamily,
             fontSize: FONT_SIZE.caption,
             fontWeight: 600,
             letterSpacing: "0.08em",
-            color: COLORS.textMuted,
+            color: COLORS.text,
+            // The screenshot behind this is light, and in a tight shot it
+            // fills the corner. The band keeps the label readable over either
+            // the stage or the interface.
+            background: "rgba(12,10,8,0.66)",
+            padding: "8px 18px",
+            borderRadius: 999,
             opacity: interpolate(frame, [seconds(0.3), seconds(0.9)], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",

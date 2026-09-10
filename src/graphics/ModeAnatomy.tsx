@@ -139,6 +139,12 @@ export const ModeAnatomy: React.FC<ModeAnatomyProps> = ({
             person makes, which is exactly what the other mode removes. */}
         {cowork < 1 ? (
           <g opacity={1 - cowork}>
+            <TransferArc
+              curve={upCurve}
+              at={uploadAt}
+              frame={frame}
+              color={COLORS.accent}
+            />
             <BezierFlow
               curve={upCurve}
               delay={uploadAt}
@@ -146,6 +152,13 @@ export const ModeAnatomy: React.FC<ModeAnatomyProps> = ({
               stagger={11}
               count={3}
               until={uploadAt + 40}
+              showTrack={false}
+            />
+            <TransferArc
+              curve={downCurve}
+              at={downloadAt}
+              frame={frame}
+              color={COLORS.accentSoft}
             />
             <BezierFlow
               curve={downCurve}
@@ -155,6 +168,7 @@ export const ModeAnatomy: React.FC<ModeAnatomyProps> = ({
               count={2}
               color={COLORS.accentSoft}
               until={downloadAt + 30}
+              showTrack={false}
             />
           </g>
         ) : null}
@@ -172,6 +186,16 @@ export const ModeAnatomy: React.FC<ModeAnatomyProps> = ({
               strokeDashoffset={1 - reach}
               opacity={0.85}
             />
+            {reach > 0.92 ? (
+              <path
+                d={`M ${folderLeft - 26} ${cy - 13} L ${folderLeft - 6} ${cy} L ${folderLeft - 26} ${cy + 13} Z`}
+                fill={COLORS.accent}
+                opacity={interpolate(reach, [0.92, 1], [0, 0.9], {
+                  extrapolateLeft: "clamp",
+                  extrapolateRight: "clamp",
+                })}
+              />
+            ) : null}
             {struck > 0 ? (
               <>
                 <path
@@ -246,7 +270,7 @@ export const ModeAnatomy: React.FC<ModeAnatomyProps> = ({
             marginBottom: 14,
           }}
         >
-          תיקייה על המחשב שלכם
+          {cowork > 0.5 ? "תיקייה על המחשב שלכם" : "המחשב שלכם"}
         </div>
         {FILES.map((name, i) => (
           <div
@@ -406,6 +430,45 @@ export const ModeAnatomy: React.FC<ModeAnatomyProps> = ({
           : null}
 
         {/* You, in the loop the whole way. Only in chat. */}
+        {cowork > 0.5 ? (
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 16,
+              opacity: cowork,
+            }}
+          >
+            <span
+              style={{
+                fontFamily,
+                fontSize: 92,
+                fontWeight: 800,
+                color: COLORS.accent,
+                lineHeight: 1,
+              }}
+            >
+              ✻
+            </span>
+            <span
+              style={{
+                fontFamily,
+                fontSize: 26,
+                fontWeight: 700,
+                color: COLORS.textMuted,
+                textAlign: "center",
+                padding: "0 18px",
+              }}
+            >
+              לא מחזיק את הקבצים
+            </span>
+          </div>
+        ) : null}
+
         {cowork < 0.5 && frame >= loopAt - 2 ? (
           <div
             style={{
@@ -480,5 +543,56 @@ export const ModeAnatomy: React.FC<ModeAnatomyProps> = ({
         })}
       </div>
     </div>
+  );
+};
+
+/**
+ * One transfer, drawn on with a head at its far end.
+ *
+ * The tokens say something is moving; the arc says where it went and stays
+ * there afterwards, which is what lets the second half of the scene cross it
+ * out. Two of these in opposite directions read as two journeys, where two
+ * plain dashed tracks read as one loop.
+ */
+const TransferArc: React.FC<{
+  readonly curve: Curve;
+  readonly at: number;
+  readonly frame: number;
+  readonly color: string;
+}> = ({ curve, at, frame, color }) => {
+  const drawn = interpolate(frame - at, [0, 34], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  if (drawn <= 0) {
+    return null;
+  }
+
+  // The head sits at the curve's end point, angled along its final segment.
+  const angle =
+    (Math.atan2(curve.to.y - curve.c2.y, curve.to.x - curve.c2.x) * 180) /
+    Math.PI;
+
+  return (
+    <>
+      <path
+        d={curveToPath(curve)}
+        fill="none"
+        stroke={color}
+        strokeWidth={3}
+        strokeDasharray={1}
+        pathLength="1"
+        strokeDashoffset={1 - drawn}
+        opacity={0.45}
+      />
+      {drawn > 0.95 ? (
+        <path
+          d="M -20 -10 L 0 0 L -20 10 Z"
+          fill={color}
+          opacity={0.7}
+          transform={`translate(${curve.to.x} ${curve.to.y}) rotate(${angle})`}
+        />
+      ) : null}
+    </>
   );
 };

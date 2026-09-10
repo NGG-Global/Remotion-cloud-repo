@@ -43,7 +43,7 @@ export const ModeChoice: React.FC<ModeChoiceProps> = ({
 
   const rowHeight = height * 0.3;
   const top = height * 0.24;
-  const VERDICT = { width: width * 0.22, height: rowHeight * 0.62 };
+  const VERDICT = { width: width * 0.24, height: rowHeight * 0.62 };
 
   return (
     <div style={{ position: "relative", width, height }}>
@@ -82,9 +82,9 @@ export const ModeChoice: React.FC<ModeChoiceProps> = ({
             <div
               style={{
                 position: "absolute",
-                right: width - width * 0.94,
+                right: width * 0.04,
                 top: y,
-                width: width * 0.62,
+                width: width * 0.52,
                 height: rowHeight,
                 direction: "rtl",
                 display: "flex",
@@ -136,7 +136,7 @@ export const ModeChoice: React.FC<ModeChoiceProps> = ({
               <div
                 style={{
                   position: "absolute",
-                  left: width * 0.06,
+                  left: width * 0.13,
                   top: y + (rowHeight - VERDICT.height) / 2,
                   width: VERDICT.width,
                   height: VERDICT.height,
@@ -171,9 +171,9 @@ export const ModeChoice: React.FC<ModeChoiceProps> = ({
               }}
             >
               <line
-                x1={width * 0.32}
+                x1={width * 0.42}
                 y1={y + rowHeight / 2}
-                x2={width * 0.29}
+                x2={width * 0.385}
                 y2={y + rowHeight / 2}
                 stroke={COLORS.accent}
                 strokeWidth={4}
@@ -181,7 +181,7 @@ export const ModeChoice: React.FC<ModeChoiceProps> = ({
                 opacity={Math.min(1, landed) * 0.8}
               />
               <path
-                d={`M ${width * 0.29} ${y + rowHeight / 2 - 11} L ${width * 0.275} ${y + rowHeight / 2} L ${width * 0.29} ${y + rowHeight / 2 + 11} Z`}
+                d={`M ${width * 0.385} ${y + rowHeight / 2 - 11} L ${width * 0.368} ${y + rowHeight / 2} L ${width * 0.385} ${y + rowHeight / 2 + 11} Z`}
                 fill={COLORS.accent}
                 opacity={Math.min(1, landed) * 0.8}
               />

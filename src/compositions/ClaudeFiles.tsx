@@ -214,10 +214,10 @@ export const ClaudeFiles: React.FC = () => {
             <StructuredRead
               {...size}
               slides={[
-                { label: "כותרת", at: seconds(4.6) },
-                { label: "גרף", at: seconds(5.5) },
-                { label: "נקודות", at: seconds(6.4) },
-                { label: "סיכום", at: seconds(7.3) },
+                { label: "כותרת", kind: "title", at: seconds(4.6) },
+                { label: "גרף", kind: "chart", at: seconds(5.5) },
+                { label: "נקודות", kind: "bullets", at: seconds(6.4) },
+                { label: "סיכום", kind: "summary", at: seconds(7.3) },
               ]}
               sheetAt={seconds(8.1)}
               parts={[
@@ -494,8 +494,11 @@ export const ClaudeFiles: React.FC = () => {
             {
               at: 0,
               region: HOME.modeToggle,
-              frameOn: HOME.composerBlock,
-              fill: 0.5,
+              // Low enough to stay under the upscale cap, so this reads as a
+              // pull-back rather than the cap deciding the shot: the toggle
+              // stays legible and the rest of the composer stays in frame.
+              fill: 0.12,
+              dim: false,
               label: "אם קלוד עובד עם קבצים — למה בכלל Cowork?",
               side: "top",
               reach: 170,

@@ -84,10 +84,11 @@ export const HandOff: React.FC<HandOffProps> = ({
     extrapolateRight: "clamp",
   });
 
-  const TASK = { width: Math.min(400, width * 0.23), height: height * 0.2 };
+  const TASK = { width: Math.min(310, width * 0.18), height: height * 0.18 };
   const taskCx = width * 0.5;
   const taskCy = height * 0.5;
-  const ringR = Math.min(height * 0.16, width * 0.1);
+  /** Comfortably clear of the card's corners, so the ring reads as a ring. */
+  const ringR = Math.min(height * 0.23, width * 0.14);
 
   return (
     <div style={{ position: "relative", width, height }}>
@@ -115,14 +116,14 @@ export const HandOff: React.FC<HandOffProps> = ({
         />
         {struck > 0 ? (
           <line
-            x1={chainRight + 20}
-            y1={chainY + 46}
-            x2={chainRight + 20 - (chainSpan + 40) * struck}
-            y2={chainY + 46 - 92 * struck}
+            x1={chainRight + 24}
+            y1={chainY}
+            x2={chainRight + 24 - (chainSpan + 48) * struck}
+            y2={chainY}
             stroke={COLORS.warn}
-            strokeWidth={8}
+            strokeWidth={9}
             strokeLinecap="round"
-            opacity={0.9}
+            opacity={0.92}
           />
         ) : null}
       </svg>
@@ -255,10 +256,9 @@ export const HandOff: React.FC<HandOffProps> = ({
         <div
           style={{
             position: "absolute",
-            left:
-              taskCx + ringR + 50 + away * width * 0.16 - back * width * 0.16,
-            top: taskCy - 46,
-            width: 220,
+            left: taskCx + ringR + 70 + away * width * 0.1 - back * width * 0.1,
+            top: taskCy - 56,
+            width: 260,
             textAlign: "center",
             direction: "rtl",
             opacity: away,
