@@ -9,6 +9,7 @@ import {
   ClaudeContext,
   CLAUDE_CONTEXT_DURATION,
 } from "./compositions/ClaudeContext";
+import { ClaudeFiles, CLAUDE_FILES_DURATION } from "./compositions/ClaudeFiles";
 import { ClaudeIntro, CLAUDE_INTRO_DURATION } from "./compositions/ClaudeIntro";
 import { ClaudeSetup, CLAUDE_SETUP_DURATION } from "./compositions/ClaudeSetup";
 import { Explainer, EXPLAINER_DURATION } from "./compositions/Explainer";
@@ -64,6 +65,13 @@ export const RemotionRoot: React.FC = () => {
         id="ClaudeContext"
         component={ClaudeContext}
         durationInFrames={CLAUDE_CONTEXT_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="ClaudeFiles"
+        component={ClaudeFiles}
+        durationInFrames={CLAUDE_FILES_DURATION}
         {...FORMAT}
       />
 
