@@ -62,7 +62,12 @@ for (const cue of cues) {
 }
 
 // ---- transcript words --------------------------------------------------------
-const transcript = JSON.parse(fs.readFileSync(transcriptPath, "utf8"));
+// Accepts either the tool's own transcript ({from,to,text}[]) or whisper.cpp's
+// native JSON ({transcription:[{offsets:{from,to},text}]}, offsets in ms).
+const raw = JSON.parse(fs.readFileSync(transcriptPath, "utf8"));
+const transcript = Array.isArray(raw)
+  ? raw
+  : raw.transcription.map((seg) => ({ from: seg.offsets.from / 1000, to: seg.offsets.to / 1000, text: seg.text }));
 const asrWords = [];
 for (const seg of transcript) {
   const words = normalise(seg.text);
