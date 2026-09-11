@@ -1,19 +1,17 @@
 import React from "react";
-import { AbsoluteFill, useCurrentFrame } from "remotion";
+import { AbsoluteFill, staticFile } from "remotion";
+import { useCurrentFrame } from "remotion";
 
 /**
- * A soft cloud tile. Low-frequency turbulence, luminance lifted into alpha, so
- * the tile can be tinted with a background colour and layered with `screen`.
+ * Three pre-rendered cloud tiles (public/fog), generated once as periodic
+ * value noise so they tile without a seam. Rasterised fog is the difference
+ * between a two-second frame and a ninety-second one: an SVG turbulence
+ * filter re-rasterises at full size every frame, a PNG is just composited.
  */
-const cloudTile = (seed: number, freq: number) =>
-  `url("data:image/svg+xml;utf8,${encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="512"><filter id="f" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="${freq} ${freq * 1.6}" numOctaves="4" seed="${seed}" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  1.6 0 0 0 -0.55"/></filter><rect width="1024" height="512" filter="url(#f)"/></svg>`,
-  )}")`;
-
 const TILES = [
-  cloudTile(3, 0.0022),
-  cloudTile(11, 0.0031),
-  cloudTile(19, 0.0045),
+  staticFile("fog/cloud-0.png"),
+  staticFile("fog/cloud-1.png"),
+  staticFile("fog/cloud-2.png"),
 ];
 
 type FogProps = {
@@ -33,7 +31,7 @@ type FogProps = {
 
 /**
  * Three drifting cloud layers, each at a different speed and scale, so the
- * fog has parallax. Edges are masked with a gradient so it never shows a seam.
+ * fog has parallax. The band is a vertical gradient mask on the container.
  */
 export const Fog: React.FC<FogProps> = ({
   density = 0.5,
@@ -59,29 +57,38 @@ export const Fog: React.FC<FogProps> = ({
         maskImage: mask,
         WebkitMaskImage: mask,
         mixBlendMode: blend,
+        overflow: "hidden",
       }}
     >
       {TILES.map((tile, i) => {
         const k = 1 + i * 0.9;
-        const x = -((frame * speed * k) % 1024);
-        const y = Math.sin(frame * 0.004 * k + i) * 18;
         const scale = 1.35 + i * 0.35;
+        const tileW = 1024 * scale;
+        const x = -((frame * speed * k) % tileW);
+        const y = Math.sin(frame * 0.004 * k + i) * 18;
         return (
           <div
             key={i}
             style={{
               position: "absolute",
-              inset: "-25%",
+              inset: -40,
               backgroundColor: tint,
-              maskImage: tile,
-              WebkitMaskImage: tile,
+              backgroundImage: `url(${tile})`,
+              backgroundRepeat: "repeat",
+              backgroundPosition: `${x}px ${y}px`,
+              backgroundSize: `${tileW}px ${512 * scale}px`,
+              backgroundBlendMode: "multiply",
+              // Only the cloud's alpha is wanted: the tint fills it via the
+              // background colour and the image's alpha clips it.
+              maskImage: `url(${tile})`,
+              WebkitMaskImage: `url(${tile})`,
               maskRepeat: "repeat",
               WebkitMaskRepeat: "repeat",
               maskPosition: `${x}px ${y}px`,
               WebkitMaskPosition: `${x}px ${y}px`,
-              maskSize: `${1024 * scale}px ${512 * scale}px`,
-              WebkitMaskSize: `${1024 * scale}px ${512 * scale}px`,
-              opacity: density * (0.55 - i * 0.12),
+              maskSize: `${tileW}px ${512 * scale}px`,
+              WebkitMaskSize: `${tileW}px ${512 * scale}px`,
+              opacity: density * (0.6 - i * 0.12),
             }}
           />
         );

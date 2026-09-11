@@ -462,6 +462,12 @@ renderer to `swangle`; no other backend creates a context in a headless
 container. Three-dimensional scenes render their canvas at half size and
 upscale, and the fog and grain overlays hide the difference.
 
+**Fog is a raster, not a filter.** The first fog was three SVG `feTurbulence`
+masks; at 1080p they cost forty to ninety seconds a frame in the software
+compositor. The tiles in `public/fog` are periodic value noise generated once
+(the script is in the commit that added them) and simply composited, and a
+frame is back under two seconds.
+
 **Images must escape Tailwind's preflight.** `img { max-width: 100% }` caps any
 `<Img>` wider than the frame, which silently shrinks a Ken Burns move. Every
 transformed image sets `maxWidth: "none"`.
