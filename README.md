@@ -411,3 +411,57 @@ before rolling this out more widely.
 
 Inter is bundled under the SIL Open Font License 1.1 — see
 `public/fonts/Inter-LICENSE.txt`.
+
+## Behind the Nightmare: Jack the Ripper
+
+`JackTheRipper` is a fourteen-minute documentary episode for a Hebrew-language
+YouTube channel, cut to a delivered voice track. It lives in `src/doc/` and
+shares nothing with the explainer series except the format and the `timeline()`
+helper: the palette is cold and period, the type is serif, and almost nothing
+on screen is text.
+
+```bash
+npx remotion render JackTheRipper out/jack-the-ripper.mp4
+npm run smoke -- JackTheRipper /tmp/smoke.mp4
+```
+
+### What it is made of
+
+| Layer                   | Where                       | What                                                                                                   |
+| ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Archive                 | `public/archive/`           | Public-domain material from Wikimedia Commons, 1888-1902: the illustrated press, Punch, the letters, the streets, the 1894 Ordnance Survey plan. `SOURCES.md` lists every file with its Commons page and licence. |
+| Ken Burns               | `components/Archival.tsx`   | Moves expressed in image space (a focal point and a zoom over "cover"), with a period grade.            |
+| The street              | `graphics/Street3D.tsx`     | A three.js night street in fog, with silhouette billboards, gas lamps and a constable's lantern.        |
+| The figures             | `graphics/Figures.tsx`      | A shadow-theatre cast: walkers, a constable, women, the top-hatted myth, the trades, a crowd.           |
+| The map                 | `graphics/WhitechapelMap.tsx` | The 1894 plan with the five sites as ink blots, the eleven-case file, the double-event route, a lens. |
+| The documents           | `graphics/Letters.tsx`      | "Dear Boss" read to its signature, the flood of hoax letters, the Lusk parcel, "From Hell".            |
+| Staged moments          | `scenes/Staged.tsx`         | Everything the record does not picture, played by silhouettes and the street.                          |
+| Timeline                | `beats.ts`                  | One entry per beat, in seconds of the voice track.                                                     |
+
+### Decisions worth keeping
+
+**Nothing explicit.** No wound, no body, no crime-scene photograph. Where the
+narration reaches the violence, the film shows a covered shape by a gate, a
+door closing on candlelight, or a drop of ink. Two mortuary images of the
+victims' faces are used, treated softly and never zoomed into; the crime-scene
+photographs that exist were deliberately not downloaded.
+
+**Only the record is shown as record.** Where no photograph exists (Aaron
+Kosminski, Michael Ostrog, two of the women) the film shows a silhouette, not a
+stand-in. A Commons file claiming to be Kosminski's portrait was rejected as
+unverified.
+
+**The voice sets the clock.** The subtitle file delivered with the track ran up
+to twenty seconds ahead of the audio: its timings were generated from the text
+with paragraph pauses collapsed. `tools/align-srt.mjs` aligns the subtitle
+words to a local whisper.cpp transcript and rewrites `beats.ts`; run it again if
+the narration is re-recorded.
+
+**WebGL renders through SwiftShader.** `remotion.config.ts` sets the OpenGL
+renderer to `swangle`; no other backend creates a context in a headless
+container. Three-dimensional scenes render their canvas at half size and
+upscale, and the fog and grain overlays hide the difference.
+
+**Images must escape Tailwind's preflight.** `img { max-width: 100% }` caps any
+`<Img>` wider than the frame, which silently shrinks a Ken Burns move. Every
+transformed image sets `maxWidth: "none"`.

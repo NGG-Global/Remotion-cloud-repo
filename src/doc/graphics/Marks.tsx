@@ -19,38 +19,45 @@ export const InkDrop: React.FC<{
 }> = ({ at = 0, x = 960, y = 540, size = 520 }) => {
   const frame = useCurrentFrame();
   const t = easeOut(ramp(frame, at, at + 70));
-  const settle = easeInOut(ramp(frame, at + 70, at + 200));
-  const r = size * (0.15 + 0.85 * t) * (1 + settle * 0.12);
+  const settle = easeInOut(ramp(frame, at + 70, at + 220));
+  const r = size * (0.2 + 0.8 * t) * (1 + settle * 0.25);
   const lobes = [];
-  for (let i = 0; i < 7; i++) {
-    const a = (i / 7) * Math.PI * 2 + hash(i) * 0.5;
-    const d = r * (0.55 + hash(i * 3) * 0.35) * t;
+  for (let i = 0; i < 6; i++) {
+    const a = (i / 6) * Math.PI * 2 + hash(i) * 0.6;
+    const d = r * (0.3 + hash(i * 3) * 0.4) * t;
+    const rr = r * (0.5 + hash(i * 5) * 0.4);
     lobes.push(
-      <circle
+      <div
         key={i}
-        cx={x + Math.cos(a) * d * 0.6}
-        cy={y + Math.sin(a) * d * 0.45}
-        r={r * (0.35 + hash(i * 5) * 0.3)}
-        fill={DOC.red}
+        style={{
+          position: "absolute",
+          left: x + Math.cos(a) * d - rr,
+          top: y + Math.sin(a) * d * 0.7 - rr,
+          width: rr * 2,
+          height: rr * 2,
+          borderRadius: "50%",
+          background: `radial-gradient(circle, rgba(140,20,28,${0.55 * t}) 0%, rgba(120,14,22,${0.3 * t}) 40%, rgba(90,11,16,0) 70%)`,
+        }}
       />,
     );
   }
   return (
-    <AbsoluteFill>
-      <svg
-        width={1920}
-        height={1080}
-        style={{ position: "absolute", left: 0, top: 0, filter: "blur(2px)" }}
-      >
-        <g opacity={0.9 * t}>
-          <ellipse cx={x} cy={y} rx={r * 0.8} ry={r * 0.6} fill={DOC.redDeep} />
-          {lobes}
-          <ellipse cx={x} cy={y} rx={r * 0.55} ry={r * 0.42} fill={DOC.red} />
-        </g>
-      </svg>
+    <AbsoluteFill style={{ filter: "blur(6px)" }}>
+      {lobes}
+      <div
+        style={{
+          position: "absolute",
+          left: x - r * 0.9,
+          top: y - r * 0.7,
+          width: r * 1.8,
+          height: r * 1.4,
+          borderRadius: "50%",
+          background: `radial-gradient(circle, rgba(168,23,31,${0.7 * t}) 0%, rgba(120,14,22,${0.35 * t}) 45%, rgba(90,11,16,0) 75%)`,
+        }}
+      />
       <AbsoluteFill
         style={{
-          background: `radial-gradient(40% 40% at ${(x / 1920) * 100}% ${(y / 1080) * 100}%, rgba(168,23,31,${0.25 * t}) 0%, transparent 70%)`,
+          background: `radial-gradient(50% 50% at ${(x / 1920) * 100}% ${(y / 1080) * 100}%, rgba(168,23,31,${0.18 * t}) 0%, transparent 70%)`,
         }}
       />
     </AbsoluteFill>
