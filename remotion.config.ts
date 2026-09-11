@@ -19,4 +19,8 @@ Config.setOverwriteOutput(true);
 // downstream editors. Switch to "h265" or "prores" for mastering.
 Config.setCodec("h264");
 
+// The documentary uses three.js scenes. Headless Chrome in this environment
+// only creates a WebGL context through SwiftShader's ANGLE backend.
+Config.setChromiumOpenGlRenderer("swangle");
+
 Config.overrideBundlerConfig(enableTailwind);

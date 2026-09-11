@@ -29,6 +29,7 @@ import {
   regionCheckSchema,
 } from "./dev/RegionCheck";
 import { UIKitDemo } from "./dev/UIKitDemo";
+import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
 import { FORMAT, seconds } from "./theme";
 
 /**
@@ -72,6 +73,13 @@ export const RemotionRoot: React.FC = () => {
         id="ClaudeFiles"
         component={ClaudeFiles}
         durationInFrames={CLAUDE_FILES_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="JackTheRipper"
+        component={JackTheRipper}
+        durationInFrames={JACK_THE_RIPPER_DURATION}
         {...FORMAT}
       />
 
