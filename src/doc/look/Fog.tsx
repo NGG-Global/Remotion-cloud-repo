@@ -1,6 +1,5 @@
 import React from "react";
-import { AbsoluteFill, staticFile } from "remotion";
-import { useCurrentFrame } from "remotion";
+import { AbsoluteFill, Img, staticFile, useCurrentFrame } from "remotion";
 
 /**
  * Three pre-rendered cloud tiles (public/fog), generated once as periodic
@@ -60,6 +59,13 @@ export const Fog: React.FC<FogProps> = ({
         overflow: "hidden",
       }}
     >
+      {TILES.map((tile) => (
+        <Img
+          key={tile}
+          src={tile}
+          style={{ position: "absolute", width: 1, height: 1, opacity: 0 }}
+        />
+      ))}
       {TILES.map((tile, i) => {
         const k = 1 + i * 0.9;
         const scale = 1.35 + i * 0.35;
@@ -73,6 +79,10 @@ export const Fog: React.FC<FogProps> = ({
               position: "absolute",
               inset: -40,
               backgroundColor: tint,
+              // The tile is also loaded through <Img> below, which holds the
+              // render until it has arrived, so this CSS reference never
+              // paints before the file is available.
+              // eslint-disable-next-line @remotion/no-background-image
               backgroundImage: `url(${tile})`,
               backgroundRepeat: "repeat",
               backgroundPosition: `${x}px ${y}px`,
