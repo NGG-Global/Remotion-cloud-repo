@@ -23,6 +23,7 @@ export const NARRATION_SECONDS_EP2 = 413.23;
 export const NARRATION_SECONDS_EP3 = 276.24;
 export const NARRATION_SECONDS_EP4 = 304.52;
 export const NARRATION_SECONDS_EP5 = 235.55;
+export const NARRATION_SECONDS_EP6 = 184.32;
 
 export const BEATS = [
   { at: 0.0, id: "hook" },
@@ -270,6 +271,60 @@ export const BEATS_EP5 = [
 export type BeatIdEp5 = (typeof BEATS_EP5)[number]["id"];
 
 /**
+ * Episode 6: pulling what you need straight out of Microsoft 365 — closing the
+ * "working effectively" module that episodes 4 and 5 opened.
+ *
+ * Timings come from a segment-level transcription of `narration-ep6.mp3`,
+ * anchored to the second each sentence begins. The episode has two halves. The
+ * first is the everyday case the narration keeps returning to: you ask for a
+ * result and Claude decides which system holds it — so the requests are filmed
+ * in the real composer, and the routing and assembly that a screenshot cannot
+ * show are drawn (`AskAcross`). The second is the one feature that behaves
+ * differently — Teams meeting transcripts — which sits behind a separate
+ * permission, so the Teams recording menu and Outlook are rebuilt as mockups
+ * rather than screenshotted: those windows carry real names and inboxes that
+ * should not travel in a shared video.
+ */
+export const BEATS_EP6 = [
+  { at: 0.0, id: "recap" },
+  { at: 5.1, id: "title" },
+
+  { at: 10.74, id: "just-ask" },
+  { at: 15.82, id: "email-ask" },
+  { at: 26.14, id: "docs-ask" },
+
+  { at: 34.26, id: "phrasing" },
+  { at: 42.98, id: "decides" },
+  { at: 49.06, id: "permissions" },
+
+  { at: 53.08, id: "daily" },
+  { at: 59.14, id: "prep-ask" },
+  { at: 65.34, id: "picture" },
+  { at: 72.26, id: "useful-when" },
+
+  { at: 79.36, id: "no-dig" },
+  { at: 85.78, id: "bigger" },
+  { at: 88.16, id: "bigpic-ask" },
+  { at: 96.56, id: "assemble" },
+  { at: 108.38, id: "useful-before" },
+
+  { at: 118.84, id: "pivot" },
+  { at: 125.64, id: "transcripts" },
+  { at: 129.36, id: "not-invite" },
+  { at: 133.5, id: "transcript-ask" },
+
+  { at: 138.7, id: "but-separate" },
+  { at: 149.0, id: "needs-approval" },
+  { at: 153.48, id: "not-a-bug" },
+  { at: 158.5, id: "who-records" },
+
+  { at: 164.46, id: "recap-module" },
+  { at: 174.82, id: "outro" },
+] as const satisfies readonly Beat[];
+
+export type BeatIdEp6 = (typeof BEATS_EP6)[number]["id"];
+
+/**
  * Timeline lookups for one episode's beat list.
  *
  * Returning a pair of closures rather than exporting two functions per episode
@@ -306,3 +361,4 @@ export const EP2 = timeline(BEATS_EP2, NARRATION_SECONDS_EP2);
 export const EP3 = timeline(BEATS_EP3, NARRATION_SECONDS_EP3);
 export const EP4 = timeline(BEATS_EP4, NARRATION_SECONDS_EP4);
 export const EP5 = timeline(BEATS_EP5, NARRATION_SECONDS_EP5);
+export const EP6 = timeline(BEATS_EP6, NARRATION_SECONDS_EP6);
