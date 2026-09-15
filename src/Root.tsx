@@ -30,6 +30,15 @@ import {
   regionCheckSchema,
 } from "./dev/RegionCheck";
 import { UIKitDemo } from "./dev/UIKitDemo";
+import {
+  StarReveal,
+  StarRevealGallery,
+  STAR_REVEAL_DURATION,
+  STAR_REVEAL_FPS,
+  STAR_REVEAL_GALLERY_DURATION,
+  starRevealDefaultProps,
+  starRevealSchema,
+} from "./compositions/StarReveal";
 import { FORMAT, seconds } from "./theme";
 
 /**
@@ -128,6 +137,37 @@ export const RemotionRoot: React.FC = () => {
         component={Explainer}
         durationInFrames={EXPLAINER_DURATION}
         {...FORMAT}
+      />
+
+      <Composition
+        id="StarReveal"
+        component={StarReveal}
+        durationInFrames={STAR_REVEAL_DURATION}
+        fps={STAR_REVEAL_FPS}
+        width={1920}
+        height={1080}
+        schema={starRevealSchema}
+        defaultProps={starRevealDefaultProps}
+      />
+
+      <Composition
+        id="StarRevealPortrait"
+        component={StarReveal}
+        durationInFrames={STAR_REVEAL_DURATION}
+        fps={STAR_REVEAL_FPS}
+        width={720}
+        height={1280}
+        schema={starRevealSchema}
+        defaultProps={starRevealDefaultProps}
+      />
+
+      <Composition
+        id="StarRevealGallery"
+        component={StarRevealGallery}
+        durationInFrames={STAR_REVEAL_GALLERY_DURATION}
+        fps={STAR_REVEAL_FPS}
+        width={1920}
+        height={1080}
       />
     </>
   );
