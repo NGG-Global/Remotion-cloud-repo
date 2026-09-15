@@ -168,38 +168,48 @@ export const AskAcross: React.FC<AskAcrossProps> = ({
           : null}
       </svg>
 
-      {/* The gathered pieces, one per source, sliding down the return path. */}
+      {/* The gathered pieces, streaming down the return paths for as long as
+          the beat runs — the narration's "it just keeps collecting", and what
+          keeps a long assembly beat alive rather than static after one pass. */}
       {answer && gatherAt !== undefined
-        ? sources.map((source, i) => {
-            const send = interpolate(
-              frame - (gatherAt + i * 4),
-              [0, 20],
-              [0, 1],
-              { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
-            );
-            if (send <= 0 || send >= 1) {
-              return null;
+        ? sources.flatMap((_, i) => {
+            const start = gatherAt + i * 4;
+            if (frame < start) {
+              return [];
             }
+            const travel = 24;
+            const streams = 3;
             const sx = tileCx(i);
             const sy = rowTop + tileH;
-            const x = interpolate(send, [0, 1], [sx, answerCx]);
-            const y = interpolate(send, [0, 1], [sy, answerTop]);
-            const dot = tileH * 0.16;
-            return (
-              <div
-                key={`piece${i}`}
-                style={{
-                  position: "absolute",
-                  left: x - dot / 2,
-                  top: y - dot / 2,
-                  width: dot,
-                  height: dot,
-                  borderRadius: 6,
-                  background: COLORS.accentSoft,
-                  boxShadow: `0 0 14px ${COLORS.accent}66`,
-                }}
-              />
-            );
+            const dot = tileH * 0.15;
+            return Array.from({ length: streams }, (__, p) => {
+              const raw = (frame - start) / travel - p / streams;
+              if (raw < 0) {
+                return null;
+              }
+              const t = raw - Math.floor(raw);
+              const x = interpolate(t, [0, 1], [sx, answerCx]);
+              const y = interpolate(t, [0, 1], [sy, answerTop]);
+              // A soft envelope so pieces fade in leaving the source and fade
+              // out arriving, instead of popping at the endpoints.
+              const fade = Math.sin(Math.PI * t);
+              return (
+                <div
+                  key={`piece${i}-${p}`}
+                  style={{
+                    position: "absolute",
+                    left: x - dot / 2,
+                    top: y - dot / 2,
+                    width: dot,
+                    height: dot,
+                    borderRadius: 5,
+                    background: COLORS.accentSoft,
+                    boxShadow: `0 0 14px ${COLORS.accent}66`,
+                    opacity: fade,
+                  }}
+                />
+              );
+            });
           })
         : null}
 
@@ -314,19 +324,29 @@ export const AskAcross: React.FC<AskAcrossProps> = ({
                   >
                     {answer.title}
                   </div>
-                  {[0.9, 0.7, 0.82].map((w, r) => (
-                    <div
-                      key={r}
-                      style={{
-                        height: answerH * 0.07,
-                        width: `${w * 100}%`,
-                        marginBottom: answerH * 0.06,
-                        borderRadius: 4,
-                        background: COLORS.textMuted,
-                        opacity: 0.5 * rise,
-                      }}
-                    />
-                  ))}
+                  {[0.9, 0.7, 0.82].map((w, r) => {
+                    // Each line fills in turn as the pieces keep arriving, so
+                    // the card reads as being composed rather than dropped in.
+                    const build = interpolate(
+                      frame - (gatherAt + 20 + r * 14),
+                      [0, 18],
+                      [0, 1],
+                      { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+                    );
+                    return (
+                      <div
+                        key={r}
+                        style={{
+                          height: answerH * 0.07,
+                          width: `${w * build * 100}%`,
+                          marginBottom: answerH * 0.06,
+                          borderRadius: 4,
+                          background: COLORS.textMuted,
+                          opacity: 0.5 * rise,
+                        }}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             );
