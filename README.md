@@ -44,12 +44,42 @@ npx remotion render TitleCard out/custom.mp4 \
 
 Rendered files land in `out/`, which is git-ignored.
 
+### Higher-quality export
+
+The default `render` captures frames as JPEG (fast, small). For a
+delivery-quality file, render from PNG frames at a low CRF instead:
+
+```bash
+# High-quality H.264 (PNG frames, CRF 16) — best for sharing and upload
+npm run render:hq -- ClaudeReach out/claude-explainer-ep6.mp4
+
+# ProRes 422 HQ master (10-bit 4:2:2, PCM audio) — for archival or re-editing
+npm run render:master -- ClaudeReach out/claude-explainer-ep6.mov
+```
+
+Both render the full 1920x1080, 30 fps timeline with audio.
+
+### Download from GitHub (no local render)
+
+The [`Render video`](.github/workflows/render-video.yml) GitHub Actions workflow
+renders on demand and publishes the file as a downloadable artifact:
+
+1. Open the repository's **Actions** tab and pick **Render video**.
+2. Click **Run workflow**, choose a composition and a quality (`high` or
+   `master`), and run it.
+3. When the run finishes, download the file from its **Artifacts** section.
+
+The **Run workflow** button only appears once this workflow exists on the
+repository's default branch, so merge it there first.
+
 ## Scripts
 
 | Script                     | What it does                                          |
 | -------------------------- | ----------------------------------------------------- |
 | `npm run dev`              | Open the Remotion Studio                              |
 | `npm run render`           | Render a composition (`npm run render -- <id> <out>`) |
+| `npm run render:hq`        | High-quality H.264 render (PNG frames, CRF 16)        |
+| `npm run render:master`    | ProRes 422 HQ master (10-bit, for archival)           |
 | `npm run still`            | Render a single frame                                 |
 | `npm run compositions`     | List every registered composition with its length     |
 | `npm run bundle`           | Build a static Remotion bundle for a render service   |

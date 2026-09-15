@@ -12,6 +12,8 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,css,json,md}\"",
     "lint": "eslint src && tsc",
     "render": "remotion render",
+    "render:hq": "remotion render --image-format=png --crf=16",
+    "render:master": "remotion render --codec=prores --prores-profile=hq --image-format=png --audio-codec=pcm-16",
     "smoke": "remotion render --scale=0.25 --muted --concurrency=4",
     "still": "remotion still",
     "studio": "remotion studio",
