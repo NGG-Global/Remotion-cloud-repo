@@ -1,0 +1,74 @@
+# Render a composition at high quality and publish it as a downloadable
+# artifact. Trigger it from the repository's Actions tab (Run workflow), pick a
+# composition and a quality, and download the file from the finished run's
+# "Artifacts" section.
+#
+# Note: GitHub only shows the "Run workflow" button once this file exists on the
+# repository's default branch, so merge it there first.
+name: Render video
+
+on:
+  workflow_dispatch:
+    inputs:
+      composition:
+        description: Which composition to render
+        type: choice
+        default: ClaudeReach
+        options:
+          - ClaudeIntro
+          - ClaudeSetup
+          - ClaudeConnect
+          - ClaudeContext
+          - ClaudeFiles
+          - ClaudeReach
+          - TitleCard
+          - Explainer
+      quality:
+        description: "high = H.264 (CRF 16, PNG frames); master = ProRes HQ"
+        type: choice
+        default: high
+        options:
+          - high
+          - master
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Fetch the Chrome Headless Shell Remotion renders with, up front, so a
+      # render failure is never confused with a download failure.
+      - name: Ensure a browser
+        run: npx remotion browser ensure
+
+      - name: Render ${{ inputs.composition }} (${{ inputs.quality }})
+        id: render
+        run: |
+          set -euo pipefail
+          comp="${{ inputs.composition }}"
+          if [ "${{ inputs.quality }}" = "master" ]; then
+            outfile="out/${comp}-master.mov"
+            npm run render:master -- "$comp" "$outfile"
+          else
+            outfile="out/${comp}.mp4"
+            npm run render:hq -- "$comp" "$outfile"
+          fi
+          echo "outfile=$outfile" >> "$GITHUB_OUTPUT"
+
+      - name: Upload the rendered video
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.composition }}-${{ inputs.quality }}
+          path: ${{ steps.render.outputs.outfile }}
+          if-no-files-found: error
+          retention-days: 14
