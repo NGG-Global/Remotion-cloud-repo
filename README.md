@@ -4,7 +4,7 @@ Animated explainer videos built as React components with Remotion. Compositions
 are written in TypeScript, previewed in the Remotion Studio, and rendered to MP4
 from the command line or CI.
 
-Currently holds episodes 1 to 3 of a Hebrew-narrated series on using Claude,
+Currently holds episodes 1 to 6 of a Hebrew-narrated series on using Claude,
 plus the scene library, graphics and interface-callout machinery the episodes
 share.
 
@@ -142,6 +142,7 @@ interpolated colour) has to be an inline style.
 | `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see |
 | `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft |
 | `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts |
+| `ClaudeReach`   | 6       | 3:04   | Pulling from Microsoft 365 by asking, and the Teams-transcript caveat |
 
 ```bash
 npx remotion render ClaudeIntro out/claude-explainer-ep1.mp4
@@ -149,6 +150,7 @@ npx remotion render ClaudeSetup out/claude-explainer-ep2.mp4
 npx remotion render ClaudeConnect out/claude-explainer-ep3.mp4
 npx remotion render ClaudeContext out/claude-explainer-ep4.mp4
 npx remotion render ClaudeFiles out/claude-explainer-ep5.mp4
+npx remotion render ClaudeReach out/claude-explainer-ep6.mp4
 ```
 
 ### How it is put together
