@@ -10,6 +10,9 @@ out
 # Local transcription working directory: whisper.cpp build and models
 .cache
 
+# Transcripts derived from narration tracks (regenerate with `npm run transcribe`)
+*.transcript.json
+
 .DS_Store
 .env
 .env.local
