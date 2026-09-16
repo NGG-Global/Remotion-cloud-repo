@@ -19,7 +19,7 @@ export const MapRoad: React.FC<MapRoadProps> = ({ delay = 0 }) => {
 
   const nodes = Array.from({ length: 8 }, (_, i) => {
     const x = 180 + i * 210 + Math.sin(i * 1.4) * 28;
-    const y = 540 + Math.sin(i * 0.9) * 70 + (i % 2 === 0 ? -20 : 30);
+    const y = 680 + Math.sin(i * 0.9) * 55 + (i % 2 === 0 ? -16 : 24);
     return { x, y };
   });
 
@@ -37,7 +37,12 @@ export const MapRoad: React.FC<MapRoadProps> = ({ delay = 0 }) => {
       <AbsoluteFill
         style={{ background: `linear-gradient(#c5d6a8, #d5e0c4 40%, ${sand})` }}
       />
-      <svg width="100%" height="100%" viewBox="0 0 1920 1080">
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 1920 1080"
+        style={{ position: "absolute", inset: 0, display: "block" }}
+      >
         <ellipse cx="240" cy="200" rx="160" ry="50" fill="#b7c992" />
         <ellipse cx="1680" cy="260" rx="200" ry="60" fill="#b7c992" />
         <path

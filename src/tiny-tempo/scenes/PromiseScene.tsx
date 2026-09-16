@@ -1,7 +1,6 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
 import { StarMedal } from "../components/feedback";
-import { PaperField } from "../components/stage";
 import { BodyCopy, StampType } from "../components/type";
 import { MapRoad } from "../graphics/MapRoad";
 import { TT } from "../theme";
@@ -9,7 +8,7 @@ import { seconds } from "../../theme";
 
 export const PromiseScene: React.FC = () => {
   return (
-    <PaperField paper="#d5e0c4" sun="#f0e2a8" sunX={50} sunY={18}>
+    <AbsoluteFill>
       <MapRoad />
       <AbsoluteFill
         style={{
@@ -47,9 +46,9 @@ export const PromiseScene: React.FC = () => {
         viewBox="0 0 1920 1080"
         style={{ position: "absolute", inset: 0, pointerEvents: "none" }}
       >
-        <StarMedal x={660} y={900} radius={78} delay={seconds(0.7)} />
-        <StarMedal x={960} y={880} radius={92} delay={seconds(1.05)} />
-        <StarMedal x={1260} y={900} radius={78} delay={seconds(1.4)} />
+        <StarMedal x={660} y={860} radius={78} delay={seconds(0.15)} />
+        <StarMedal x={960} y={840} radius={96} delay={seconds(0.4)} />
+        <StarMedal x={1260} y={860} radius={78} delay={seconds(0.65)} />
       </svg>
       <AbsoluteFill
         style={{
@@ -61,10 +60,10 @@ export const PromiseScene: React.FC = () => {
         <BodyCopy
           text="Perfect is ±55 ms. The rest is character."
           color={TT.ink}
-          delay={seconds(1.7)}
+          delay={seconds(0.9)}
           size={30}
         />
       </AbsoluteFill>
-    </PaperField>
+    </AbsoluteFill>
   );
 };

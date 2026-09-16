@@ -44,7 +44,7 @@ export const BugShoe: React.FC<BugShoeProps> = ({ hits }) => {
   const ride = finished ? easeOut(clamp01((age - 0.2) / 0.5)) : 0;
   const bugX = 960 + bugSlide + ride * -90;
   const bugY = 700 - 24 - ride * 120 - Math.sin(clamp01(ride) * Math.PI) * 80;
-  const ken = clamp(time, [0, durationInFrames / fps], [1, 1.05]);
+  const ken = clamp(time, [0, durationInFrames / fps], [1.18, 1.28]);
   const upper = faces(GARDEN.upper);
   const cream = faces(GARDEN.cream);
   const coral = faces(GARDEN.coral);
@@ -62,7 +62,10 @@ export const BugShoe: React.FC<BugShoeProps> = ({ hits }) => {
         width="100%"
         height="100%"
         viewBox="0 0 1920 1080"
-        style={{ transform: `scale(${ken})`, transformOrigin: "50% 70%" }}
+        style={{
+          transform: `scale(${ken})`,
+          transformOrigin: "50% 68%",
+        }}
       >
         <rect x="0" y="720" width="1920" height="400" fill={GARDEN.tile} />
         {Array.from({ length: 8 }, (_, i) => (

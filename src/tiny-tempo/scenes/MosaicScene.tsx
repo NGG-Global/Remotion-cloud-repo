@@ -30,7 +30,7 @@ export const MosaicScene: React.FC = () => {
     <AbsoluteFill
       style={{
         backgroundColor: TT.inkDeep,
-        padding: 18,
+        padding: "96px 18px 18px",
         gap: 18,
         flexDirection: "column",
       }}
@@ -65,7 +65,16 @@ export const MosaicScene: React.FC = () => {
                 transform: `scale(${0.86 + enter * 0.14})`,
               }}
             >
-              <Graphic hits={HITS} />
+              <div
+                style={{
+                  position: "absolute",
+                  inset: "-18%",
+                  width: "136%",
+                  height: "136%",
+                }}
+              >
+                <Graphic hits={HITS} />
+              </div>
               <div
                 style={{
                   position: "absolute",
@@ -89,7 +98,7 @@ export const MosaicScene: React.FC = () => {
         style={{
           justifyContent: "flex-start",
           alignItems: "center",
-          paddingTop: 28,
+          paddingTop: 22,
           pointerEvents: "none",
         }}
       >

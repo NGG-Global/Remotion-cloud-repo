@@ -15,7 +15,7 @@ export const WindowClean: React.FC<WindowCleanProps> = ({ hits }) => {
   const strokeP = Number.isFinite(age) ? easeOut(clamp01(age / 0.23)) : 1;
   const lane = (strokes - 1) % 4;
   const squeegeeX = Number.isFinite(age) ? -160 + strokeP * 320 : 160;
-  const ken = clamp(time, [0, durationInFrames / fps], [1, 1.08]);
+  const ken = clamp(time, [0, durationInFrames / fps], [1.12, 1.2]);
   const frame = faces(GLASS.frame);
   const glove = faces(GLASS.glove);
   const clean = Math.min(1, strokes / Math.max(1, hits.length));
@@ -26,7 +26,7 @@ export const WindowClean: React.FC<WindowCleanProps> = ({ hits }) => {
         width="100%"
         height="100%"
         viewBox="0 0 800 900"
-        style={{ transform: `scale(${ken})`, transformOrigin: "50% 48%" }}
+        style={{ transform: `scale(${ken})`, transformOrigin: "50% 42%" }}
       >
         <rect x="0" y="0" width="800" height="900" fill={GLASS.paper} />
         <rect
@@ -131,7 +131,7 @@ export const WindowClean: React.FC<WindowCleanProps> = ({ hits }) => {
           fill={faces(GLASS.sill).lit}
         />
 
-        <g transform={`translate(${400 + squeegeeX} ${210 + lane * 90})`}>
+        <g transform={`translate(${400 + squeegeeX} ${520 + (lane % 2) * 40})`}>
           <rect
             x="-70"
             y="-14"

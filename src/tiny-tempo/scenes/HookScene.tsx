@@ -1,13 +1,20 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
-import { BEAT } from "../theme";
+import { AbsoluteFill, interpolate } from "remotion";
+import { seconds } from "../../theme";
+import { useClock } from "../clock";
 import { StampType } from "../components/type";
 import { HammerNail } from "../graphics/HammerNail";
-import { seconds } from "../../theme";
+import { BEAT } from "../theme";
 
 const POSTER_HITS = [BEAT * 3];
 
 export const HookScene: React.FC = () => {
+  const { time } = useClock();
+  const watchOut = interpolate(time, [1.55, 1.9], [1, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
   return (
     <AbsoluteFill>
       <HammerNail hits={POSTER_HITS} poster />
@@ -15,7 +22,8 @@ export const HookScene: React.FC = () => {
         style={{
           justifyContent: "flex-start",
           alignItems: "center",
-          paddingTop: 72,
+          paddingTop: 64,
+          opacity: watchOut,
         }}
       >
         <StampType
@@ -27,12 +35,12 @@ export const HookScene: React.FC = () => {
       </AbsoluteFill>
       <AbsoluteFill
         style={{
-          justifyContent: "flex-end",
+          justifyContent: "center",
           alignItems: "center",
-          paddingBottom: 64,
+          paddingTop: 420,
         }}
       >
-        <StampType text={"TINY\nTEMPO"} size={128} delay={seconds(1.85)} />
+        <StampType text="TINY TEMPO" size={108} delay={seconds(1.85)} />
       </AbsoluteFill>
     </AbsoluteFill>
   );

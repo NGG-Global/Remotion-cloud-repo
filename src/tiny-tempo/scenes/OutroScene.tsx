@@ -14,10 +14,10 @@ export const OutroScene: React.FC = () => {
       </AbsoluteFill>
       <AbsoluteFill
         style={{
-          justifyContent: "flex-end",
+          justifyContent: "center",
           alignItems: "center",
-          paddingBottom: 72,
-          gap: 22,
+          paddingTop: 280,
+          gap: 20,
         }}
       >
         <BodyCopy

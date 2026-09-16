@@ -294,6 +294,8 @@ export const PhasePill: React.FC<PhasePillProps> = ({
       style={{
         display: "inline-flex",
         alignItems: "center",
+        alignSelf: "flex-start",
+        width: "fit-content",
         padding: "10px 28px",
         borderRadius: 999,
         background: accent ? TT.coral : TT.cream,

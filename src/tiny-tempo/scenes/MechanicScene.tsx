@@ -70,7 +70,7 @@ export const MechanicScene: React.FC = () => {
               boxShadow: `0 18px 0 ${TT.inkDeep}22, 0 0 0 2px ${TT.cream}`,
             }}
           >
-            <HammerNail hits={hits} />
+            <HammerNail hits={hits} scale={1.22} />
             {yourTurn ? <JudgementPop hits={PLAY} x={980} y={280} /> : null}
           </div>
         </div>

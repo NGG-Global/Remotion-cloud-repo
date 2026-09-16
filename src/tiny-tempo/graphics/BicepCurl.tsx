@@ -24,7 +24,7 @@ export const BicepCurl: React.FC<BicepCurlProps> = ({ hits }) => {
   const wind = until !== null && until < 0.22 ? 1 - until / 0.22 : 0;
   const flex = Math.max(squeeze, wind * 0.85);
   const arm = -70 + flex * 118;
-  const ken = clamp(time, [0, durationInFrames / fps], [1, 1.05]);
+  const ken = clamp(time, [0, durationInFrames / fps], [1.16, 1.24]);
   const kit = faces(GYM.kit);
   const skin = faces(GYM.skin);
   const iron = faces(GYM.iron);

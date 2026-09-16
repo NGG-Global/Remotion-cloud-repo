@@ -30,7 +30,7 @@ export const SawTimber: React.FC<SawTimberProps> = ({ hits }) => {
       ? Math.sin((1 - until / 0.2) * Math.PI) * -28 * dir
       : 0;
   const kerf = Math.min(1, bites / Math.max(2, hits.length)) * 70;
-  const ken = clamp(time, [0, durationInFrames / fps], [1, 1.06]);
+  const ken = clamp(time, [0, durationInFrames / fps], [1.18, 1.28]);
   const steel = faces(TIMBER.steel);
   const grip = faces(TIMBER.grip);
   const wood = faces(TIMBER.sapwood);

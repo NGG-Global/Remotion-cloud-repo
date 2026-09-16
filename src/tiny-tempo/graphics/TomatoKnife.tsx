@@ -31,7 +31,7 @@ export const TomatoKnife: React.FC<TomatoKnifeProps> = ({ hits }) => {
     Number.isFinite(age) && age < 0.16 ? (1 - easeOut(age / 0.16)) * 38 : 0;
   const rest = 28;
   const knifeRot = rest + windup - drop;
-  const ken = clamp(time, [0, durationInFrames / fps], [1, 1.07]);
+  const ken = clamp(time, [0, durationInFrames / fps], [1.12, 1.2]);
   const press = squash(age, 0.14, 8);
   const steel = faces(KITCHEN.steel);
   const handle = faces(KITCHEN.handle);
@@ -46,7 +46,7 @@ export const TomatoKnife: React.FC<TomatoKnifeProps> = ({ hits }) => {
         width="100%"
         height="100%"
         viewBox="0 0 1920 1080"
-        style={{ transform: `scale(${ken})`, transformOrigin: "46% 60%" }}
+        style={{ transform: `scale(${ken})`, transformOrigin: "46% 58%" }}
       >
         {Array.from({ length: 6 }, (_, row) =>
           Array.from({ length: 10 }, (_, col) => (

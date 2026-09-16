@@ -29,7 +29,7 @@ export const ScissorsPaper: React.FC<ScissorsPaperProps> = ({ hits }) => {
   const open = Number.isFinite(age) ? easeOut(clamp01(age / 0.22)) : 1;
   const blade = 18 + (1 - open) * 22;
   const unfold = clamp01((cut - 0.55) / 0.45);
-  const ken = clamp(time, [0, durationInFrames / fps], [1, 1.07]);
+  const ken = clamp(time, [0, durationInFrames / fps], [1.12, 1.2]);
   const steel = faces(CRAFT.steel);
   const coral = faces(CRAFT.coral);
   const star = faces(CRAFT.star);
