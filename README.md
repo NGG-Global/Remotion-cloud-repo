@@ -4,7 +4,7 @@ Animated explainer videos built as React components with Remotion. Compositions
 are written in TypeScript, previewed in the Remotion Studio, and rendered to MP4
 from the command line or CI.
 
-Currently holds episodes 1 to 6 of a Hebrew-narrated series on using Claude,
+Currently holds episodes 1 to 7 of a Hebrew-narrated series on using Claude,
 plus the scene library, graphics and interface-callout machinery the episodes
 share.
 
@@ -165,14 +165,15 @@ interpolated colour) has to be an inline style.
 
 ## The Claude explainer series
 
-| Composition     | Episode | Length | Subject                                                         |
-| --------------- | ------- | ------ | --------------------------------------------------------------- |
-| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it    |
-| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings  |
-| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see |
-| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft |
-| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts |
-| `ClaudeReach`   | 6       | 3:04   | Pulling from Microsoft 365 by asking, and the Teams-transcript caveat |
+| Composition      | Episode | Length | Subject                                                               |
+| ---------------- | ------- | ------ | --------------------------------------------------------------------- |
+| `ClaudeIntro`    | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it          |
+| `ClaudeSetup`    | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings        |
+| `ClaudeConnect`  | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see       |
+| `ClaudeContext`  | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft       |
+| `ClaudeFiles`    | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts       |
+| `ClaudeReach`    | 6       | 3:04   | Pulling from Microsoft 365 by asking, and the Teams-transcript caveat |
+| `ClaudeProjects` | 7       | 3:39   | Projects: what they hold, what they share, and when to open one       |
 
 ```bash
 npx remotion render ClaudeIntro out/claude-explainer-ep1.mp4
@@ -181,6 +182,7 @@ npx remotion render ClaudeConnect out/claude-explainer-ep3.mp4
 npx remotion render ClaudeContext out/claude-explainer-ep4.mp4
 npx remotion render ClaudeFiles out/claude-explainer-ep5.mp4
 npx remotion render ClaudeReach out/claude-explainer-ep6.mp4
+npx remotion render ClaudeProjects out/claude-explainer-ep7.mp4
 ```
 
 ### How it is put together
@@ -293,6 +295,13 @@ new icon can be added by appending its `d` strings and nothing else.
 | `ModeAnatomy`                    | Where the files sit in Chat, and where they sit in Cowork          |
 | `HandOff`                        | Handing over a whole task instead of steering every step           |
 | `ModeChoice`                     | The two cases, and which mode each one is                          |
+| `ProjectGround`                  | The same preamble at the top of every chat — and then in one place |
+| `ProjectCreate`                  | The create-a-project dialog, filled in                             |
+| `ProjectWorkspace`               | A project open, with a ring that travels to each of its panels     |
+| `ProjectPanels`                  | The panel column, opened one panel at a time                       |
+| `ProjectInstructionsDialog`      | The instructions dialog, written into                              |
+| `MaterialsUpdate`                | One document swapped, and everything downstream following          |
+| `SharedGroundSeparateChats`      | A shared base, and conversations that do not feed each other       |
 
 Two things keep them from looking like clip art:
 
@@ -361,6 +370,38 @@ overlay, which is what you want when the overlay _is_ the content. And
 because `fill` is capped by `MAX_UPSCALE`, asking for a very tight shot on a
 small control just pins it at the cap: to pull back from a control you have
 to drop `fill` below the cap, not raise it.
+
+**A whole interface can be rebuilt rather than filmed.** Episode 7 is about
+Projects, and the captures it was briefed from carry an account name, a real
+chat list and an organisation's own project titles — on the create dialog, the
+project page, the panel column and the instructions dialog alike. Rather than
+blur four screenshots into uselessness, the interface itself is drawn:
+`src/graphics/parts/ClaudeUI.tsx` holds Claude's light palette, the left rail,
+the window and the dialog shell, and each Projects graphic composes them. Every
+label the video teaches is reproduced as the product words it; everything it
+does not teach — the chat list, the account row — is bars, the treatment
+`DocSheet` and `OutlookMock` already use.
+
+Three decisions from that episode are worth keeping:
+
+- **Compose a dialog at its own size and scale it to fit.** Laying a dialog out
+  against whatever pixels the scene hands it either overflows the box or
+  shrinks the labels past reading size. `FitBox` draws a fixed design — 1040 by
+  1290 for the create dialog — and scales the whole thing, so a label is always
+  the same fraction of the dialog whatever the scene does. Reproducing the
+  panel column at the interface's own scale, for comparison, would have put its
+  headings at twenty pixels on a 1080p frame.
+- **A panel that is being explained should be the one with room.** `ProjectPanels`
+  expands whichever panel the narration is on and compresses the other three.
+  The column stays recognisably itself, the open panel gets space to show what
+  it holds, and the move from one to the next is the animation instead of a cut.
+  The shares are held as weights rather than pixels, each step raising its own
+  panel and lowering the previous one on the same spring, so overlapping
+  transitions always add up.
+- **Say only what the narration says.** The panel column has four sections and
+  the create dialog has a visibility choice, but this narration covers two
+  panels and never mentions visibility. Both are drawn, because they are on the
+  real screen; neither is ringed, captioned or claimed.
 
 **Where a screen would leak, draw it instead.** Episode 3's narration walks
 through the Microsoft sign-in and consent screens. Those carry a real
