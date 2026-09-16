@@ -24,6 +24,7 @@ export const NARRATION_SECONDS_EP3 = 276.24;
 export const NARRATION_SECONDS_EP4 = 304.52;
 export const NARRATION_SECONDS_EP5 = 235.55;
 export const NARRATION_SECONDS_EP6 = 184.32;
+export const NARRATION_SECONDS_EP7 = 219.04;
 
 export const BEATS = [
   { at: 0.0, id: "hook" },
@@ -325,6 +326,70 @@ export const BEATS_EP6 = [
 export type BeatIdEp6 = (typeof BEATS_EP6)[number]["id"];
 
 /**
+ * Episode 7: projects — the first of the advanced module.
+ *
+ * Timings come from a segment-level transcription of `narration-ep7.mp3`,
+ * anchored to the second each sentence begins. The episode is built around one
+ * argument the narration returns to three times: what a project holds is
+ * shared across its conversations, and what is said inside one of them is not.
+ * So the two halves of a project — the material folder and the standing
+ * instructions — are shown on a rebuilt interface (`ProjectCreate`,
+ * `ProjectWorkspace`, `ProjectPanels`, `ProjectInstructionsDialog`), and the
+ * relationship between them and the conversations above them, which no screen
+ * shows, is drawn (`ProjectGround`, `SharedGroundSeparateChats`,
+ * `MaterialsUpdate`).
+ *
+ * The interface here is drawn rather than screenshotted throughout. The
+ * captures this was briefed from carry an account name, a real chat list and
+ * an organisation's own projects, and episode 3 already set the rule: where a
+ * screen would leak, draw it.
+ */
+export const BEATS_EP7 = [
+  { at: 0.0, id: "hook" },
+  { at: 9.9, id: "title" },
+
+  { at: 16.36, id: "create" },
+  { at: 23.22, id: "workspace" },
+  { at: 26.5, id: "two-parts" },
+  { at: 32.78, id: "sees-both" },
+
+  { at: 40.52, id: "vs-chat" },
+  { at: 42.86, id: "chat-or-home" },
+  { at: 51.64, id: "recurring" },
+
+  { at: 56.92, id: "folder" },
+  { at: 62.0, id: "what-goes-in" },
+  { at: 70.54, id: "knows-it" },
+  { at: 76.22, id: "just-ask" },
+  { at: 83.64, id: "updates" },
+  { at: 86.46, id: "swap-version" },
+
+  { at: 94.42, id: "instructions" },
+  { at: 100.14, id: "instruction-example" },
+  { at: 112.6, id: "saves" },
+  { at: 118.14, id: "every-chat" },
+  { at: 122.34, id: "write-once" },
+
+  { at: 127.84, id: "the-point" },
+  { at: 135.14, id: "shared" },
+  { at: 144.08, id: "not-carried" },
+  { at: 154.04, id: "not-a-limit" },
+  { at: 157.94, id: "parallel" },
+  { at: 169.38, id: "dont-rely" },
+  { at: 177.88, id: "make-permanent" },
+
+  { at: 185.3, id: "when" },
+  { at: 190.58, id: "rule" },
+  { at: 194.64, id: "worth-it" },
+  { at: 202.74, id: "one-off" },
+
+  { at: 210.1, id: "in-practice" },
+  { at: 213.68, id: "outro" },
+] as const satisfies readonly Beat[];
+
+export type BeatIdEp7 = (typeof BEATS_EP7)[number]["id"];
+
+/**
  * Timeline lookups for one episode's beat list.
  *
  * Returning a pair of closures rather than exporting two functions per episode
@@ -362,3 +427,4 @@ export const EP3 = timeline(BEATS_EP3, NARRATION_SECONDS_EP3);
 export const EP4 = timeline(BEATS_EP4, NARRATION_SECONDS_EP4);
 export const EP5 = timeline(BEATS_EP5, NARRATION_SECONDS_EP5);
 export const EP6 = timeline(BEATS_EP6, NARRATION_SECONDS_EP6);
+export const EP7 = timeline(BEATS_EP7, NARRATION_SECONDS_EP7);
