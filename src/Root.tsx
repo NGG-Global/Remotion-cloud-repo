@@ -31,6 +31,11 @@ import {
 } from "./dev/RegionCheck";
 import { UIKitDemo } from "./dev/UIKitDemo";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
+import {
+  TINY_TEMPO_VERTICAL_DURATION,
+  VerticalAd,
+  VERTICAL_FORMAT,
+} from "./tiny-tempo/vertical/VerticalAd";
 import { FORMAT, seconds } from "./theme";
 
 /**
@@ -136,6 +141,13 @@ export const RemotionRoot: React.FC = () => {
         component={TinyTempoAd}
         durationInFrames={TINY_TEMPO_AD_DURATION}
         {...FORMAT}
+      />
+
+      <Composition
+        id="TinyTempoVertical"
+        component={VerticalAd}
+        durationInFrames={TINY_TEMPO_VERTICAL_DURATION}
+        {...VERTICAL_FORMAT}
       />
     </>
   );

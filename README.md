@@ -6,9 +6,10 @@ from the command line or CI.
 
 Currently holds episodes 1 to 6 of a Hebrew-narrated series on using Claude,
 plus the scene library, graphics and interface-callout machinery the episodes
-share.
+share, and two ads for the mobile rhythm game Tiny Tempo.
 
-Remotion version: **4.0.522** · Output format: **1920x1080, 30 fps, H.264**
+Remotion version: **4.0.522** · Output format: **1920x1080, 30 fps, H.264**,
+except the vertical Tiny Tempo ad, which is **1080x1920**.
 
 ## Requirements
 
@@ -102,6 +103,7 @@ src/
   scenes/           The scene types the video is assembled from.
   ui/               The screenshot registry and the machinery for filming it.
   compositions/     One file per video.
+  tiny-tempo/       The Tiny Tempo game ads: shared tokens, acts and scenes.
   dev/              Development-only compositions. Not delivered.
 public/
   audio/            Narration tracks, one per episode.
@@ -165,13 +167,13 @@ interpolated colour) has to be an inline style.
 
 ## The Claude explainer series
 
-| Composition     | Episode | Length | Subject                                                         |
-| --------------- | ------- | ------ | --------------------------------------------------------------- |
-| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it    |
-| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings  |
-| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see |
-| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft |
-| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts |
+| Composition     | Episode | Length | Subject                                                               |
+| --------------- | ------- | ------ | --------------------------------------------------------------------- |
+| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it          |
+| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings        |
+| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see       |
+| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft       |
+| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts       |
 | `ClaudeReach`   | 6       | 3:04   | Pulling from Microsoft 365 by asking, and the Teams-transcript caveat |
 
 ```bash
@@ -419,6 +421,65 @@ Both take a screen name, so any screenshot in the registry can be checked:
 npx remotion still Calibration out/grid.png --props='{"screen":"settings"}'
 npx remotion still RegionCheck out/map.png  --props='{"screen":"settings"}'
 ```
+
+## Tiny Tempo ads
+
+Two ads for the mobile rhythm game Tiny Tempo, sharing one library under
+`src/tiny-tempo/`.
+
+| Composition         | Format    | Length | For                                   |
+| ------------------- | --------- | ------ | ------------------------------------- |
+| `TinyTempoVertical` | 1080x1920 | 20 s   | Store listings, TikTok, Reels, Shorts |
+| `TinyTempoAd`       | 1920x1080 | 24 s   | YouTube, web embeds                   |
+
+```bash
+npm run render:hq -- TinyTempoVertical out/tiny-tempo-vertical.mp4
+```
+
+The game is portrait-only and authored against a 720x1280 design box, so the
+vertical cut is the primary asset and its acts are drawn in that same box —
+1080x1920 is exactly 1.5x it. Geometry lifted from a vignette therefore lands
+where the game puts it rather than being re-eyeballed against a wider canvas,
+and a frame of the video is framed the way a frame of the game is. The
+landscape cut crops its own compositions and does not share the portrait acts.
+
+### How the vertical cut is put together
+
+`src/tiny-tempo/vertical/`
+
+```
+VerticalAd.tsx     The cut list. Ten bars of the shipped track.
+frame.ts           The 720x1280 authoring box and the one key light.
+Curtain.tsx        The game's scene curtain, cut for the portrait frame.
+acts/              One file per act, plus the shared paper stage and the map road.
+hud/GameHud.tsx    Phase cue, beat track, tap ripple, verdict stamp.
+scenes/            What each bar of the ad is.
+```
+
+Three things hold it together:
+
+- **Every cut lands on a bar or a half bar.** The track is 120 BPM, so one bar
+  is 60 frames. `CUT` in `VerticalAd.tsx` is written in bars for that reason;
+  the audience for a rhythm game notices when an edit floats.
+- **Contact is the beat, not the wind-up.** Acts take a list of contact instants
+  and sample their pose from it — `hammerAngle` in `clock.ts` puts the face on
+  the nail at each instant whatever the tempo, rather than tweening a swing and
+  hoping it lands. Anything that strikes, snips, pops or wipes is driven the
+  same way.
+- **The HUD is the game's HUD.** The phase cue, the beat track and the verdict
+  are the game's own, because the beat track is the only thing on screen that
+  records whether a tap was kept — which is the whole reason the game has one.
+
+The first two bars teach the mechanic — watch a phrase, tap it back — and
+everything after them trades on it, so no bar is spent explaining the game
+twice.
+
+### Fonts
+
+Fredoka and Nunito are the game's own faces, loaded from `public/fonts/` by
+`src/tiny-tempo/fonts.ts`. That module is a side-effect-only import, so it is
+listed in the `sideEffects` field of `package.json`: without it the bundler is
+free to drop the import and both ads silently fall back to a system serif.
 
 ## Starter examples
 
