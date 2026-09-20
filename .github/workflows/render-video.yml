@@ -23,6 +23,8 @@ on:
           - ClaudeReach
           - TitleCard
           - Explainer
+          - TinyTempoAd
+          - TinyTempoBoot
       quality:
         description: "high = H.264 (CRF 16, PNG frames); master = ProRes HQ"
         type: choice
