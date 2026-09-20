@@ -4,3 +4,4 @@ snapshots
 out
 .hyperframes
 *.log
+chrome-headless-shell

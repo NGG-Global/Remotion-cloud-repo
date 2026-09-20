@@ -7,6 +7,7 @@ videos/**/renders
 videos/**/snapshots
 videos/**/out
 videos/**/.hyperframes
+videos/**/chrome-headless-shell
 
 # Remotion Studio and bundler caches
 .remotion

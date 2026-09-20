@@ -93,8 +93,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        padding: 0 80px 96px;
-        gap: 18px;
+        padding: 0 80px 88px;
+        gap: 36px;
         pointer-events: none;
       }
 
@@ -104,17 +104,20 @@
         align-items: center;
         color: var(--ink);
         font-weight: 800;
-        font-size: 118px;
-        line-height: 0.86;
+        font-size: 108px;
+        line-height: 1;
         letter-spacing: 0.04em;
         text-align: center;
         text-transform: lowercase;
+        gap: 0;
       }
 
       #word-tiny,
       #word-tempo {
         display: block;
-        width: 100%;
+        line-height: 1;
+        height: 1em;
+        overflow: visible;
       }
 
       #tagline {
@@ -122,10 +125,11 @@
         color: var(--ink);
         font-weight: 700;
         font-size: 30px;
-        line-height: 1.2;
+        line-height: 1.25;
         letter-spacing: 0.01em;
         text-align: center;
         max-width: 920px;
+        padding-top: 4px;
       }
 
       #beads {
@@ -231,7 +235,7 @@
           </g>
 
           <g id="mallet-enter">
-            <g id="mallet-spin">
+            <g id="mallet-spin" data-layout-ignore="true">
               <g transform="scale(1.18) translate(-52 -102)">
                 <rect x="90" y="90" width="310" height="52" rx="18" fill="#1a2e28" opacity="0.18" />
                 <rect
@@ -438,7 +442,7 @@
           rotation: WINDUP,
           transformOrigin: "0px 0px",
         });
-        gsap.set("#mallet-enter", { x: -420, y: -140, rotation: -24, opacity: 0 });
+        gsap.set("#mallet-enter", { x: -380, y: -80, rotation: -8, opacity: 0 });
         gsap.set("#graphic", { scale: 1, transformOrigin: "52% 42%", x: 0, y: 0 });
         gsap.set("#impact", { opacity: 0, scale: 0.6, transformOrigin: "700px 1072px" });
         gsap.set(".chip", { opacity: 0, x: CHIP_ORIGIN.x, y: CHIP_ORIGIN.y, rotation: 0 });
@@ -462,12 +466,12 @@
         );
         tl.to(
           "#mallet-enter",
-          { x: 0, y: 0, rotation: 0, opacity: 1, duration: 0.62, ease: "power3.out" },
-          0.68,
+          { x: 0, y: 0, rotation: 0, opacity: 1, duration: 0.55, ease: "power3.out" },
+          0.52,
         );
 
-        tl.to("#mallet-spin", { rotation: WINDUP - 10, duration: 0.18, ease: "sine.out" }, 1.02);
-        tl.to("#mallet-spin", { rotation: CONTACT, duration: 0.3, ease: "power4.in" }, 1.2);
+        tl.to("#mallet-spin", { rotation: WINDUP - 10, duration: 0.16, ease: "sine.out" }, 1.14);
+        tl.to("#mallet-spin", { rotation: CONTACT, duration: 0.2, ease: "power4.in" }, 1.3);
 
         tl.to("#peg-squash", { scaleY: 0.94, duration: 0.08, ease: "power2.out" }, HIT);
         tl.to("#peg-squash", { scaleY: 1, duration: 0.22, ease: "power2.out" }, HIT + 0.08);
