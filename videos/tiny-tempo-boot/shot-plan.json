@@ -1,0 +1,33 @@
+{
+  "category": "logo-reveal",
+  "duration_s": 5,
+  "fps": 30,
+  "canvas": { "w": 1080, "h": 1920, "aspect": "9:16" },
+  "style": "Premium portrait splash ident: the Tiny Tempo launcher mark comes alive — coral field, tan floor, cream mallet, ink peg — one 120 BPM wind-up and a single beat-locked strike that lands in the app-icon pose, then a round Nunito ExtraBold lockup. Poppy, smooth, no ink stroke on type.",
+  "palette": [
+    "#cf5134",
+    "#e07358",
+    "#a33c26",
+    "#fff4dc",
+    "#243e35",
+    "#1a2e28",
+    "#c9a06a",
+    "#d98a48",
+    "#f6ead0"
+  ],
+  "font": "Nunito ExtraBold",
+  "beats": [1.5],
+  "export": "mp4",
+  "asset_needs": [],
+  "block": null,
+  "customize": {},
+  "content": {
+    "logo": "inline-svg-launcher-mark",
+    "tagline": "The rhythm of everyday life.",
+    "url": null,
+    "wordmark": "tiny tempo",
+    "music": "tiny-tempo.mp3",
+    "hit_s": 1.5,
+    "notes": "Hand-authored SVG sting (catalog logo-outro/logo-sting are wordmark slams, not the mallet-on-peg character). grain-overlay installed but its infinite CSS loop is replaced with the game's seeded static grain so the render stays seek-safe. Type is Nunito ExtraBold, no stroke."
+  }
+}

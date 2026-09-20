@@ -1,0 +1,12 @@
+{
+  "duration": 5,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#mallet-spin", "bySec": 1.0 },
+    { "kind": "appearsBy", "selector": "#word-tiny", "bySec": 2.05 },
+    { "kind": "appearsBy", "selector": "#tagline", "bySec": 2.5 },
+    { "kind": "before", "a": "#mallet-spin", "b": "#word-tiny" },
+    { "kind": "before", "a": "#word-tiny", "b": "#tagline" },
+    { "kind": "staysInFrame", "selector": "#wordmark" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.4 }
+  ]
+}

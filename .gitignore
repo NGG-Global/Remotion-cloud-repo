@@ -3,6 +3,10 @@ dist
 
 # Rendered output. Videos you import as source belong in public/ instead.
 out
+videos/**/renders
+videos/**/snapshots
+videos/**/out
+videos/**/.hyperframes
 
 # Remotion Studio and bundler caches
 .remotion
