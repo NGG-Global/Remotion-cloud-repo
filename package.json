@@ -13,6 +13,7 @@
     "lint": "eslint src && tsc",
     "render": "remotion render",
     "render:showreel": "remotion render RemotionShowreel out/remotion-showreel.mp4",
+    "render:3d": "remotion render Remotion3D out/remotion-3d.mp4",
     "render:hq": "remotion render --image-format=png --crf=16",
     "render:master": "remotion render --codec=prores --prores-profile=hq --image-format=png --audio-codec=pcm-16",
     "smoke": "remotion render --scale=0.25 --muted --concurrency=4",

@@ -35,6 +35,7 @@ import {
   RemotionShowreel,
   REMOTION_SHOWREEL_DURATION,
 } from "./showreel/RemotionShowreel";
+import { Remotion3D, REMOTION_3D_DURATION } from "./three-reel/Remotion3D";
 import { FORMAT, seconds } from "./theme";
 
 /**
@@ -146,6 +147,13 @@ export const RemotionRoot: React.FC = () => {
         id="RemotionShowreel"
         component={RemotionShowreel}
         durationInFrames={REMOTION_SHOWREEL_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="Remotion3D"
+        component={Remotion3D}
+        durationInFrames={REMOTION_3D_DURATION}
         {...FORMAT}
       />
     </>

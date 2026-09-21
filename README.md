@@ -78,6 +78,7 @@ repository's default branch, so merge it there first.
 | -------------------------- | ----------------------------------------------------- |
 | `npm run dev`              | Open the Remotion Studio                              |
 | `npm run render:showreel`  | Render the Remotion capability showreel               |
+| `npm run render:3d`        | Render the Remotion 3D capability film                |
 | `npm run render`           | Render a composition (`npm run render -- <id> <out>`) |
 | `npm run render:hq`        | High-quality H.264 render (PNG frames, CRF 16)        |
 | `npm run render:master`    | ProRes 422 HQ master (10-bit, for archival)           |
@@ -104,6 +105,7 @@ src/
   ui/               The screenshot registry and the machinery for filming it.
   compositions/     One file per video.
   showreel/         Remotion capability showreel (`RemotionShowreel`).
+  three-reel/       Remotion 3D capability film (`Remotion3D`).
   dev/              Development-only compositions. Not delivered.
 public/
   audio/            Narration tracks, one per episode.
@@ -429,9 +431,12 @@ Two capability films live in this repo — one per authoring model.
 | Film                          | How to render                                                                             | Length                     |
 | ----------------------------- | ----------------------------------------------------------------------------------------- | -------------------------- |
 | Remotion (`RemotionShowreel`) | `npm run render:showreel`                                                                 | ~2:48 · 1920×1080 · 30 fps |
+| Remotion 3D (`Remotion3D`)    | `npm run render:3d`                                                                       | ~1:36 · 1920×1080 · 30 fps |
 | HyperFrames                   | `cd hyperframes-showreel && npx hyperframes render --output out/hyperframes-showreel.mp4` | 2:48 · 1920×1080           |
 
 The Remotion reel walks `spring` / `interpolate`, `@remotion/transitions`, shapes and paths, noise, motion-blur trails, React Three Fiber, `@remotion/effects`, captions, audio visualization, Lottie, and GIF. The HyperFrames reel is a nested-composition project under `hyperframes-showreel/` that mixes custom GSAP scenes with catalog blocks (`code-typing`, `data-chart`, `world-map`, `flowchart`, `yt-lower-third`).
+
+A dedicated 3D film, `Remotion3D`, is a tour of `@remotion/three`: geometries, materials, moving lights, a frame-driven camera, nested orbits, instanced meshes, and a GLSL shader. Render it with `npm run render:3d`.
 
 ## Starter examples
 
