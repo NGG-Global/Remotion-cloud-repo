@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Overlay stage</title>
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face {
+          font-family: Inter;
+          src: url("assets/fonts/Inter-latin-variable.woff2") format("woff2");
+          font-weight: 100 900;
+          font-display: block;
+        }
+        #root {
+          position: absolute;
+          inset: 0;
+          font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+          color: #fafafa;
+        }
+        .fill {
+          position: absolute;
+          inset: 0;
+          background: #0a0a0a;
+        }
+        .copy {
+          position: absolute;
+          top: 120px;
+          left: 100px;
+          max-width: 1400px;
+        }
+        .kicker {
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #3ce6ac;
+        }
+        h2 {
+          margin: 14px 0 0;
+          font-size: 56px;
+          font-weight: 800;
+        }
+        p {
+          margin: 22px 0 0;
+          font-size: 28px;
+          color: #a1a1aa;
+          max-width: 920px;
+          line-height: 1.35;
+        }
+        .plate {
+          position: absolute;
+          left: 220px;
+          top: 360px;
+          width: 1480px;
+          height: 520px;
+          border-radius: 28px;
+          background:
+            radial-gradient(80% 80% at 20% 20%, rgba(60, 230, 172, 0.18), transparent 55%),
+            linear-gradient(160deg, #18181b, #0c0c0e);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .play {
+          position: absolute;
+          left: 50%;
+          top: 42%;
+          width: 92px;
+          height: 92px;
+          margin: -46px 0 0 -46px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.12);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .play::after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 16px 0 16px 26px;
+          border-color: transparent transparent transparent #fafafa;
+          margin-left: 6px;
+        }
+      </style>
+      <div
+        id="root"
+        data-composition-id="overlay-stage"
+        data-width="1920"
+        data-height="1080"
+      >
+        <div class="fill"></div>
+        <div class="copy">
+          <div class="kicker">catalog · yt-lower-third</div>
+          <h2>Overlays sit on any plate.</h2>
+          <p>
+            Catalog blocks are HTML too. Drop a YouTube-style subscribe bar over
+            talking-head footage, a product demo, or this stand-in stage.
+          </p>
+        </div>
+        <div class="plate"><div class="play"></div></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo(
+          ".plate",
+          { opacity: 0, scale: 0.96 },
+          { opacity: 1, scale: 1, duration: 0.8, ease: "power3.out" },
+          0,
+        );
+        window.__timelines["overlay-stage"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

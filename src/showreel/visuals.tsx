@@ -2,7 +2,7 @@ import { createTikTokStyleCaptions, type Caption } from "@remotion/captions";
 import { lightLeak, starburst } from "@remotion/effects";
 import { Gif } from "@remotion/gif";
 import { fitText, measureText } from "@remotion/layout-utils";
-import { Lottie } from "@remotion/lottie";
+import { Lottie, type LottieAnimationData } from "@remotion/lottie";
 import { useAudioData, visualizeAudio } from "@remotion/media-utils";
 import { Trail } from "@remotion/motion-blur";
 import { noise2D, noise3D } from "@remotion/noise";
@@ -24,11 +24,14 @@ import { flip } from "@remotion/transitions/flip";
 import { iris } from "@remotion/transitions/iris";
 import { slide } from "@remotion/transitions/slide";
 import { wipe } from "@remotion/transitions/wipe";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   AbsoluteFill,
   Easing,
   Img,
+  cancelRender,
+  continueRender,
+  delayRender,
   interpolate,
   spring,
   staticFile,
@@ -37,10 +40,39 @@ import {
 } from "remotion";
 import { uiFontFamily } from "../fonts";
 import { Kicker, Stage } from "./chrome";
-import { pulseLottie } from "./lottie";
 import { clamp, REEL } from "./theme";
 
 const seconds = (value: number, fps: number) => Math.round(value * fps);
+
+const LottieCard: React.FC = () => {
+  const [handle] = useState(() => delayRender("Loading Lottie animation"));
+  const [animationData, setAnimationData] =
+    useState<LottieAnimationData | null>(null);
+
+  useEffect(() => {
+    fetch(staticFile("lottie/showreel.json"))
+      .then((response) => response.json())
+      .then((json: LottieAnimationData) => {
+        setAnimationData(json);
+        continueRender(handle);
+      })
+      .catch((error: unknown) => {
+        cancelRender(error);
+      });
+  }, [handle]);
+
+  if (!animationData) {
+    return null;
+  }
+
+  return (
+    <Lottie
+      animationData={animationData}
+      loop
+      style={{ width: 320, height: 320 }}
+    />
+  );
+};
 
 export const TitleScene: React.FC = () => {
   const frame = useCurrentFrame();
@@ -123,9 +155,12 @@ export const SpringsScene: React.FC = () => {
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
           {easings.map((row, i) => {
-            const local = frame - i * 6;
+            const cycle = 80;
+            const shifted = Math.max(0, frame - i * 6);
+            const ping = shifted % (cycle * 2);
+            const local = ping < cycle ? ping : cycle * 2 - ping;
             const x = row.ease
-              ? interpolate(local, [0, 70], [0, 1], {
+              ? interpolate(local, [0, cycle], [0, 1], {
                   ...clamp,
                   easing: row.ease,
                 })
@@ -189,6 +224,7 @@ const TransCard: React.FC<{
       justifyContent: "center",
       alignItems: "center",
       fontFamily: uiFontFamily,
+      color: REEL.ink,
     }}
   >
     <div
@@ -198,11 +234,14 @@ const TransCard: React.FC<{
         textTransform: "uppercase",
         marginBottom: 16,
         opacity: 0.7,
+        color: REEL.ink,
       }}
     >
       @remotion/transitions
     </div>
-    <div style={{ fontSize: 84, fontWeight: 800 }}>{label}</div>
+    <div style={{ fontSize: 84, fontWeight: 800, color: REEL.ink }}>
+      {label}
+    </div>
   </AbsoluteFill>
 );
 
@@ -261,8 +300,8 @@ export const ShapesScene: React.FC = () => {
     ...clamp,
     easing: Easing.inOut(Easing.cubic),
   });
-  const starA = makeStar({ points: 5, innerRadius: 70, outerRadius: 160 });
-  const starB = makeStar({ points: 5, innerRadius: 40, outerRadius: 175 });
+  const starA = makeStar({ points: 5, innerRadius: 72, outerRadius: 150 });
+  const starB = makeStar({ points: 5, innerRadius: 28, outerRadius: 150 });
   const morphed = interpolatePath(morph, starA.path, starB.path);
   const draw = evolvePath(
     spring({ frame: frame - 4, fps, config: { damping: 18 } }),
@@ -280,14 +319,18 @@ export const ShapesScene: React.FC = () => {
           SVG as a first-class actor.
         </h2>
         <div style={{ display: "flex", gap: 48, alignItems: "center" }}>
-          <svg width={420} height={420} viewBox="0 0 360 360">
+          <svg
+            width={starA.width}
+            height={starA.height}
+            viewBox={`0 0 ${starA.width} ${starA.height}`}
+          >
             <path
               d={morphed}
-              transform="translate(180 180)"
               fill="none"
               stroke={REEL.blue}
               strokeWidth={6}
               strokeLinecap="round"
+              strokeLinejoin="round"
               strokeDasharray={draw.strokeDasharray}
               strokeDashoffset={draw.strokeDashoffset}
             />
@@ -373,9 +416,9 @@ export const NoiseScene: React.FC = () => {
 export const TrailsScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
-  const t = frame / 18;
-  const x = width / 2 + Math.cos(t) * 360;
-  const y = height / 2 + Math.sin(t * 1.35) * 210;
+  const t = frame / 11;
+  const x = width / 2 + Math.cos(t) * 480;
+  const y = height / 2 + 170 + Math.sin(t * 1.45) * 210;
 
   return (
     <Stage>
@@ -387,7 +430,7 @@ export const TrailsScene: React.FC = () => {
           Trails from time, not from a filter.
         </h2>
       </AbsoluteFill>
-      <Trail layers={16} lagInFrames={1.15} trailOpacity={0.42}>
+      <Trail layers={22} lagInFrames={1.8} trailOpacity={0.5}>
         <AbsoluteFill>
           <div
             style={{
@@ -581,18 +624,19 @@ export const DataScene: React.FC = () => {
 export const TypeScene: React.FC = () => {
   const frame = useCurrentFrame();
   const phrase = "FIT TEXT TO THE BOX";
+  const lines = ["FIT TEXT", "TO THE BOX"] as const;
   const fitted = fitText({
     text: phrase,
     withinWidth: 1600,
     fontFamily: uiFontFamily,
     fontWeight: 800,
   });
-  const measurements = phrase.split(" ").map((word) =>
+  const measurements = lines.map((line) =>
     measureText({
       fontFamily: uiFontFamily,
       fontSize: 64,
       fontWeight: "800",
-      text: `${word} `,
+      text: line,
     }),
   );
   const box = createRoundedTextBox({
@@ -631,21 +675,21 @@ export const TypeScene: React.FC = () => {
           style={{ overflow: "visible", opacity: reveal }}
         >
           <path d={box.d} fill={REEL.blue} />
-          {phrase.split(" ").map((word, i) => {
-            const x =
-              36 +
-              measurements.slice(0, i).reduce((sum, m) => sum + m.width, 0);
+          {lines.map((line, i) => {
+            const y =
+              measurements.slice(0, i).reduce((sum, m) => sum + m.height, 0) +
+              measurements[i].height * 0.74;
             return (
               <text
-                key={word}
-                x={x}
-                y={box.boundingBox.height / 2 + 18}
+                key={line}
+                x={36}
+                y={y}
                 fill={REEL.ink}
                 fontFamily={uiFontFamily}
                 fontSize={64}
                 fontWeight={800}
               >
-                {word}
+                {line}
               </text>
             );
           })}
@@ -757,7 +801,7 @@ const CAPTION_WORDS: Caption[] = [
 export const CaptionsScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const now = (frame / fps) * 1000;
+  const now = ((frame / fps) * 1000) % 9000;
   const { pages } = createTikTokStyleCaptions({
     captions: CAPTION_WORDS,
     combineTokensWithinMilliseconds: 1800,
@@ -884,11 +928,7 @@ export const MediaScene: React.FC = () => {
               justifyContent: "center",
             }}
           >
-            <Lottie
-              animationData={pulseLottie}
-              loop
-              style={{ width: 320, height: 320 }}
-            />
+            <LottieCard />
           </div>
           <div
             style={{

@@ -92,6 +92,7 @@
         ];
         orbs.forEach(([sel, ease], i) => {
           tl.fromTo(sel, { y: 160, opacity: 0, scale: 0.6 }, { y: 0, opacity: 1, scale: 1, duration: 1.1, ease }, 0.15 + i * 0.12);
+          tl.to(sel, { y: -36, duration: 1.35, yoyo: true, repeat: 5, ease: "sine.inOut" }, 2 + i * 0.08);
         });
         window.__timelines["motion"] = tl;
       </script>
