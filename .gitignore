@@ -17,3 +17,8 @@ out
 .env
 .env.local
 *.log
+
+# HyperFrames local render cache
+hyperframes-showreel/out
+hyperframes-showreel/.hyperframes
+hyperframes-showreel/node_modules

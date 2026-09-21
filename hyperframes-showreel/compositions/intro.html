@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Intro</title>
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face {
+          font-family: Inter;
+          src: url("assets/fonts/Inter-latin-variable.woff2") format("woff2");
+          font-weight: 100 900;
+          font-display: block;
+        }
+        #root {
+          position: absolute;
+          inset: 0;
+          font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+          color: #fafafa;
+        }
+        .fill {
+          position: absolute;
+          inset: 0;
+          background: #0a0a0a;
+        }
+        .stack {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 140px;
+        }
+        #intro-kicker {
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #3ce6ac;
+          margin-bottom: 22px;
+        }
+        #intro-title,
+        #intro-title-2 {
+          margin: 0;
+          font-size: 108px;
+          font-weight: 800;
+          letter-spacing: -0.05em;
+          line-height: 0.95;
+        }
+        #intro-sub {
+          margin-top: 32px;
+          font-size: 32px;
+          color: #a1a1aa;
+          max-width: 1100px;
+        }
+      </style>
+      <div id="root" data-composition-id="intro" data-width="1920" data-height="1080">
+        <div class="fill"></div>
+        <div class="stack">
+          <div id="intro-kicker">HyperFrames · HTML is the timeline</div>
+          <h1 id="intro-title">WRITE HTML.</h1>
+          <h1 id="intro-title-2">RENDER VIDEO.</h1>
+          <p id="intro-sub">
+            A showreel of every authoring surface: timed DOM, GSAP, catalog
+            blocks, captions, maps, charts, 3D, and variables.
+          </p>
+        </div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#intro-kicker", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 0.2);
+        tl.fromTo("#intro-title", { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 0.35);
+        tl.fromTo("#intro-title-2", { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 0.5);
+        tl.fromTo("#intro-sub", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, 1.1);
+        window.__timelines["intro"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

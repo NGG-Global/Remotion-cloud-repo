@@ -14,6 +14,7 @@ import { enableTailwind } from "@remotion/tailwind-v4";
 Config.setRspack(true);
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
+Config.setChromiumOpenGlRenderer("angle");
 
 // H.264 in an MP4 container: the safest default for review and for most
 // downstream editors. Switch to "h265" or "prores" for mastering.

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Audio</title>
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face {
+          font-family: Inter;
+          src: url("assets/fonts/Inter-latin-variable.woff2") format("woff2");
+          font-weight: 100 900;
+          font-display: block;
+        }
+        #root {
+          position: absolute;
+          inset: 0;
+          font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+          color: #fafafa;
+        }
+        .fill {
+          position: absolute;
+          inset: 0;
+          background: #0a0a0a;
+        }
+        .copy {
+          position: absolute;
+          top: 120px;
+          left: 100px;
+        }
+        .kicker {
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #3ce6ac;
+        }
+        h2 {
+          margin: 14px 0 0;
+          font-size: 56px;
+          font-weight: 800;
+        }
+        .bars {
+          position: absolute;
+          left: 100px;
+          right: 100px;
+          bottom: 120px;
+          height: 480px;
+          display: flex;
+          align-items: flex-end;
+          gap: 10px;
+        }
+        .bar {
+          flex: 1;
+          height: 480px;
+          border-radius: 10px 10px 4px 4px;
+          background: #3ce6ac;
+          transform-origin: 50% 100%;
+        }
+      </style>
+      <div id="root" data-composition-id="audio-viz" data-width="1920" data-height="1080">
+        <div class="fill"></div>
+        <div class="copy">
+          <div class="kicker">audio · data-volume · mix</div>
+          <h2>A bed under every scene.</h2>
+        </div>
+        <div class="bars" id="audio-bars"></div>
+      </div>
+      <script>
+        const host = document.getElementById("audio-bars");
+        for (let i = 0; i < 36; i += 1) {
+          const bar = document.createElement("div");
+          bar.className = "bar";
+          bar.id = "audio-bar-" + i;
+          host.appendChild(bar);
+        }
+        const tl = gsap.timeline({ paused: true });
+        for (let i = 0; i < 36; i += 1) {
+          const peak = 0.28 + ((i * 17) % 11) / 18;
+          tl.fromTo(
+            "#audio-bar-" + i,
+            { scaleY: 0.12 },
+            { scaleY: peak, duration: 0.42, yoyo: true, repeat: 24, ease: "sine.inOut" },
+            i * 0.04,
+          );
+        }
+        window.__timelines["audio-viz"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

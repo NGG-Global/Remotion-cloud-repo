@@ -1,0 +1,81 @@
+<!doctype html>
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"product","type":"string","label":"Product","default":"HyperFrames"},
+    {"id":"accent","type":"color","label":"Accent","default":"#3CE6AC"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face {
+          font-family: Inter;
+          src: url("assets/fonts/Inter-latin-variable.woff2") format("woff2");
+          font-weight: 100 900;
+          font-display: block;
+        }
+        #root {
+          position: absolute;
+          inset: 0;
+          font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+          color: #fafafa;
+        }
+        .fill {
+          position: absolute;
+          inset: 0;
+          background: #0a0a0a;
+        }
+        .stack {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 140px;
+        }
+        .kicker {
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: var(--accent, #3ce6ac);
+        }
+        #var-product {
+          margin: 18px 0 0;
+          font-size: 96px;
+          font-weight: 800;
+          letter-spacing: -0.05em;
+          color: var(--accent, #3ce6ac);
+        }
+        #var-note {
+          margin-top: 28px;
+          font-size: 32px;
+          color: #a1a1aa;
+          max-width: 1100px;
+        }
+      </style>
+      <div id="root" data-composition-id="variables" data-width="1920" data-height="1080">
+        <div class="fill"></div>
+        <div class="stack">
+          <div class="kicker">data-composition-variables · data-var-text</div>
+          <h1 id="var-product" data-var-text="product">HyperFrames</h1>
+          <p id="var-note">
+            One composition, many outputs. Change the variable, re-render the
+            film. The HTML stays the source of truth.
+          </p>
+        </div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#var-product", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 0.2);
+        tl.fromTo("#var-note", { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "power2.out" }, 0.5);
+        window.__timelines["variables"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

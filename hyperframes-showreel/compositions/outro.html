@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Outro</title>
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face {
+          font-family: Inter;
+          src: url("assets/fonts/Inter-latin-variable.woff2") format("woff2");
+          font-weight: 100 900;
+          font-display: block;
+        }
+        #root {
+          position: absolute;
+          inset: 0;
+          font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+          color: #fafafa;
+        }
+        .fill {
+          position: absolute;
+          inset: 0;
+          background: #0a0a0a;
+        }
+        .stack {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 140px;
+        }
+        .kicker {
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #3ce6ac;
+        }
+        #outro-title {
+          margin: 18px 0 0;
+          font-size: 88px;
+          font-weight: 800;
+          letter-spacing: -0.05em;
+          background: linear-gradient(90deg, #3ce6ac, #00e3ff);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+        }
+        #outro-sub {
+          margin-top: 28px;
+          font-size: 32px;
+          color: #a1a1aa;
+          max-width: 1100px;
+        }
+      </style>
+      <div id="root" data-composition-id="outro" data-width="1920" data-height="1080">
+        <div class="fill"></div>
+        <div class="stack">
+          <div class="kicker">npx hyperframes init</div>
+          <h1 id="outro-title">Write HTML. Render video.</h1>
+          <p id="outro-sub">
+            Preview in Studio. Check the composition. Render an MP4. The page
+            you just watched is the source.
+          </p>
+        </div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#outro-title", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 0.2);
+        tl.fromTo("#outro-sub", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, 0.55);
+        window.__timelines["outro"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

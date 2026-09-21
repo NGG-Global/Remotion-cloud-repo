@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chrome</title>
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          z-index: 20;
+        }
+        .chrome-inner {
+          position: absolute;
+          left: 48px;
+          right: 48px;
+          bottom: 28px;
+          height: 3px;
+          background: rgba(255, 255, 255, 0.12);
+          border-radius: 2px;
+          overflow: hidden;
+        }
+        #sr-bar {
+          width: 100%;
+          height: 100%;
+          background: #3ce6ac;
+        }
+      </style>
+      <div id="root" data-composition-id="chrome" data-width="1920" data-height="1080">
+        <div class="chrome-inner"><div id="sr-bar"></div></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo(
+          "#sr-bar",
+          { scaleX: 0 },
+          { scaleX: 1, duration: 168, ease: "none", transformOrigin: "left center" },
+          0,
+        );
+        window.__timelines["chrome"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

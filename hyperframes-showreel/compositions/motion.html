@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Motion</title>
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face {
+          font-family: Inter;
+          src: url("assets/fonts/Inter-latin-variable.woff2") format("woff2");
+          font-weight: 100 900;
+          font-display: block;
+        }
+        #root {
+          position: absolute;
+          inset: 0;
+          font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+          color: #fafafa;
+        }
+        .fill {
+          position: absolute;
+          inset: 0;
+          background: #0a0a0a;
+        }
+        .copy {
+          position: absolute;
+          top: 120px;
+          left: 100px;
+        }
+        .kicker {
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #3ce6ac;
+        }
+        h2 {
+          margin: 14px 0 0;
+          font-size: 56px;
+          font-weight: 800;
+        }
+        .row {
+          position: absolute;
+          left: 100px;
+          right: 100px;
+          top: 360px;
+          display: flex;
+          gap: 36px;
+        }
+        .orb {
+          width: 160px;
+          height: 160px;
+          border-radius: 80px;
+          background: #3ce6ac;
+        }
+        .label {
+          margin-top: 18px;
+          font-size: 20px;
+          color: #a1a1aa;
+          text-align: center;
+        }
+        .cell {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      </style>
+      <div id="root" data-composition-id="motion" data-width="1920" data-height="1080">
+        <div class="fill"></div>
+        <div class="copy">
+          <div class="kicker">GSAP · paused timeline · seekable</div>
+          <h2>One clock. Five eases.</h2>
+        </div>
+        <div class="row">
+          <div class="cell"><div id="motion-o1" class="orb"></div><div class="label">power3.out</div></div>
+          <div class="cell"><div id="motion-o2" class="orb" style="background:#fafafa"></div><div class="label">back.out</div></div>
+          <div class="cell"><div id="motion-o3" class="orb" style="background:#00e3ff"></div><div class="label">elastic.out</div></div>
+          <div class="cell"><div id="motion-o4" class="orb" style="background:#a1a1aa"></div><div class="label">sine.inOut</div></div>
+          <div class="cell"><div id="motion-o5" class="orb" style="background:#71717a"></div><div class="label">none</div></div>
+        </div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        const orbs = [
+          ["#motion-o1", "power3.out"],
+          ["#motion-o2", "back.out(1.7)"],
+          ["#motion-o3", "elastic.out(1, 0.4)"],
+          ["#motion-o4", "sine.inOut"],
+          ["#motion-o5", "none"],
+        ];
+        orbs.forEach(([sel, ease], i) => {
+          tl.fromTo(sel, { y: 160, opacity: 0, scale: 0.6 }, { y: 0, opacity: 1, scale: 1, duration: 1.1, ease }, 0.15 + i * 0.12);
+        });
+        window.__timelines["motion"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

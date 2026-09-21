@@ -31,6 +31,10 @@ import {
 } from "./dev/RegionCheck";
 import { UIKitDemo } from "./dev/UIKitDemo";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
+import {
+  RemotionShowreel,
+  REMOTION_SHOWREEL_DURATION,
+} from "./showreel/RemotionShowreel";
 import { FORMAT, seconds } from "./theme";
 
 /**
@@ -135,6 +139,13 @@ export const RemotionRoot: React.FC = () => {
         id="TinyTempoAd"
         component={TinyTempoAd}
         durationInFrames={TINY_TEMPO_AD_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="RemotionShowreel"
+        component={RemotionShowreel}
+        durationInFrames={REMOTION_SHOWREEL_DURATION}
         {...FORMAT}
       />
     </>

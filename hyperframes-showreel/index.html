@@ -1,0 +1,223 @@
+<!doctype html>
+<html
+  lang="en"
+  data-resolution="landscape"
+  data-composition-variables='[
+    {"id":"product","type":"string","label":"Product","default":"HyperFrames"},
+    {"id":"accent","type":"color","label":"Accent","default":"#3CE6AC"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>HyperFrames Showreel</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Inter;
+        src: url("assets/fonts/Inter-latin-variable.woff2") format("woff2");
+        font-weight: 100 900;
+        font-display: block;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0a0a0a;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+      [data-composition-id="showreel"] > div[data-composition-src] {
+        position: absolute;
+        inset: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="showreel"
+      data-start="0"
+      data-duration="168"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div
+        id="el-intro"
+        data-composition-id="intro"
+        data-composition-src="compositions/intro.html"
+        data-start="0"
+        data-duration="12"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-markup"
+        data-composition-id="markup"
+        data-composition-src="compositions/markup.html"
+        data-start="12"
+        data-duration="12"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-motion"
+        data-composition-id="motion"
+        data-composition-src="compositions/motion.html"
+        data-start="24"
+        data-duration="12"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-code"
+        data-composition-id="code-typing"
+        data-composition-src="compositions/code-typing.html"
+        data-start="36"
+        data-duration="8"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-chart"
+        data-composition-id="data-chart"
+        data-composition-src="compositions/data-chart.html"
+        data-start="44"
+        data-duration="15"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-map"
+        data-composition-id="world-map"
+        data-composition-src="compositions/world-map.html"
+        data-start="59"
+        data-duration="14"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-flow"
+        data-composition-id="flowchart"
+        data-composition-src="compositions/flowchart.html"
+        data-start="73"
+        data-duration="12"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-captions"
+        data-composition-id="captions"
+        data-composition-src="compositions/captions.html"
+        data-start="85"
+        data-duration="12"
+        data-track-index="1"
+        data-track-kind="captions"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-lower"
+        data-composition-id="yt-lower-third"
+        data-composition-src="compositions/yt-lower-third.html"
+        data-start="97"
+        data-duration="8"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-depth"
+        data-composition-id="depth"
+        data-composition-src="compositions/depth.html"
+        data-start="105"
+        data-duration="14"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-css"
+        data-composition-id="css-scene"
+        data-composition-src="compositions/css-scene.html"
+        data-start="119"
+        data-duration="12"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-vars"
+        data-composition-id="variables"
+        data-composition-src="compositions/variables.html"
+        data-start="131"
+        data-duration="12"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+        data-variable-values='{"product":"HyperFrames","accent":"#3CE6AC"}'
+      ></div>
+      <div
+        id="el-audio"
+        data-composition-id="audio-viz"
+        data-composition-src="compositions/audio-viz.html"
+        data-start="143"
+        data-duration="12"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="el-outro"
+        data-composition-id="outro"
+        data-composition-src="compositions/outro.html"
+        data-start="155"
+        data-duration="13"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="el-chrome"
+        data-composition-id="chrome"
+        data-composition-src="compositions/chrome.html"
+        data-start="0"
+        data-duration="168"
+        data-track-index="9"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <audio
+        id="showreel-bed"
+        src="assets/audio/showreel-bed.mp3"
+        data-start="0"
+        data-duration="168"
+        data-track-index="0"
+        data-volume="0.55"
+      ></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["showreel"] = tl;
+    </script>
+  </body>
+</html>

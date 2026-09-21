@@ -77,6 +77,7 @@ repository's default branch, so merge it there first.
 | Script                     | What it does                                          |
 | -------------------------- | ----------------------------------------------------- |
 | `npm run dev`              | Open the Remotion Studio                              |
+| `npm run render:showreel`  | Render the Remotion capability showreel               |
 | `npm run render`           | Render a composition (`npm run render -- <id> <out>`) |
 | `npm run render:hq`        | High-quality H.264 render (PNG frames, CRF 16)        |
 | `npm run render:master`    | ProRes 422 HQ master (10-bit, for archival)           |
@@ -102,6 +103,7 @@ src/
   scenes/           The scene types the video is assembled from.
   ui/               The screenshot registry and the machinery for filming it.
   compositions/     One file per video.
+  showreel/         Remotion capability showreel (`RemotionShowreel`).
   dev/              Development-only compositions. Not delivered.
 public/
   audio/            Narration tracks, one per episode.
@@ -165,13 +167,13 @@ interpolated colour) has to be an inline style.
 
 ## The Claude explainer series
 
-| Composition     | Episode | Length | Subject                                                         |
-| --------------- | ------- | ------ | --------------------------------------------------------------- |
-| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it    |
-| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings  |
-| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see |
-| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft |
-| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts |
+| Composition     | Episode | Length | Subject                                                               |
+| --------------- | ------- | ------ | --------------------------------------------------------------------- |
+| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it          |
+| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings        |
+| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see       |
+| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft       |
+| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts       |
 | `ClaudeReach`   | 6       | 3:04   | Pulling from Microsoft 365 by asking, and the Teams-transcript caveat |
 
 ```bash
@@ -419,6 +421,17 @@ Both take a screen name, so any screenshot in the registry can be checked:
 npx remotion still Calibration out/grid.png --props='{"screen":"settings"}'
 npx remotion still RegionCheck out/map.png  --props='{"screen":"settings"}'
 ```
+
+## Platform showreels
+
+Two capability films live in this repo — one per authoring model.
+
+| Film                          | How to render                                                                             | Length                     |
+| ----------------------------- | ----------------------------------------------------------------------------------------- | -------------------------- |
+| Remotion (`RemotionShowreel`) | `npm run render:showreel`                                                                 | ~2:48 · 1920×1080 · 30 fps |
+| HyperFrames                   | `cd hyperframes-showreel && npx hyperframes render --output out/hyperframes-showreel.mp4` | 2:48 · 1920×1080           |
+
+The Remotion reel walks `spring` / `interpolate`, `@remotion/transitions`, shapes and paths, noise, motion-blur trails, React Three Fiber, `@remotion/effects`, captions, audio visualization, Lottie, and GIF. The HyperFrames reel is a nested-composition project under `hyperframes-showreel/` that mixes custom GSAP scenes with catalog blocks (`code-typing`, `data-chart`, `world-map`, `flowchart`, `yt-lower-third`).
 
 ## Starter examples
 

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Markup</title>
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face {
+          font-family: Inter;
+          src: url("assets/fonts/Inter-latin-variable.woff2") format("woff2");
+          font-weight: 100 900;
+          font-display: block;
+        }
+        #root {
+          position: absolute;
+          inset: 0;
+          font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+          color: #fafafa;
+        }
+        .fill {
+          position: absolute;
+          inset: 0;
+          background: #0a0a0a;
+        }
+        .copy {
+          position: absolute;
+          top: 120px;
+          left: 100px;
+        }
+        .kicker {
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #3ce6ac;
+        }
+        h2 {
+          margin: 14px 0 0;
+          font-size: 56px;
+          font-weight: 800;
+          letter-spacing: -0.04em;
+        }
+        .lanes {
+          position: absolute;
+          left: 100px;
+          right: 100px;
+          top: 340px;
+          display: flex;
+          flex-direction: column;
+          gap: 28px;
+        }
+        .lane {
+          height: 92px;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 16px;
+          position: relative;
+          background: #111113;
+        }
+        .chip {
+          position: absolute;
+          top: 16px;
+          height: 60px;
+          border-radius: 12px;
+          background: #3ce6ac;
+          color: #0a0a0a;
+          font-weight: 700;
+          font-size: 22px;
+          display: flex;
+          align-items: center;
+          padding: 0 22px;
+        }
+        #markup-chip-a { left: 24px; width: 280px; }
+        #markup-chip-b { left: 340px; width: 420px; background: #fafafa; }
+        #markup-chip-c { left: 24px; width: 520px; background: #00e3ff; }
+      </style>
+      <div id="root" data-composition-id="markup" data-width="1920" data-height="1080">
+        <div class="fill"></div>
+        <div class="copy">
+          <div class="kicker">data-start · data-duration · data-track-index</div>
+          <h2>Timing lives in the markup.</h2>
+        </div>
+        <div class="lanes">
+          <div class="lane">
+            <div id="markup-chip-a" class="chip">audio · 0s</div>
+          </div>
+          <div class="lane">
+            <div id="markup-chip-b" class="chip">video · data-start="4"</div>
+          </div>
+          <div class="lane">
+            <div id="markup-chip-c" class="chip">title · class="clip"</div>
+          </div>
+        </div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#markup-chip-a", { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 0.2);
+        tl.fromTo("#markup-chip-b", { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 0.45);
+        tl.fromTo("#markup-chip-c", { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 0.7);
+        window.__timelines["markup"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

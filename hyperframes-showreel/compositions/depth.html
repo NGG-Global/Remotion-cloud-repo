@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Depth</title>
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face {
+          font-family: Inter;
+          src: url("assets/fonts/Inter-latin-variable.woff2") format("woff2");
+          font-weight: 100 900;
+          font-display: block;
+        }
+        #root {
+          position: absolute;
+          inset: 0;
+          font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+          color: #fafafa;
+        }
+        .fill {
+          position: absolute;
+          inset: 0;
+          background: #0a0a0a;
+        }
+        #depth-three-layer {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+        .copy {
+          position: absolute;
+          top: 120px;
+          left: 100px;
+          pointer-events: none;
+        }
+        .kicker {
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #3ce6ac;
+        }
+        h2 {
+          margin: 14px 0 0;
+          font-size: 56px;
+          font-weight: 800;
+          max-width: 900px;
+        }
+      </style>
+      <div
+        id="root"
+        data-composition-id="depth"
+        data-width="1920"
+        data-height="1080"
+        data-duration="14"
+      >
+        <div class="fill"></div>
+        <canvas id="depth-three-layer"></canvas>
+        <div class="copy">
+          <div class="kicker">Three.js · hf-seek</div>
+          <h2>Real 3D, still a seekable page.</h2>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        window.__timelines["depth"] = tl;
+
+        const canvas = document.getElementById("depth-three-layer");
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+        renderer.setSize(1920, 1080, false);
+        renderer.setPixelRatio(1);
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(35, 1920 / 1080, 0.1, 100);
+        camera.position.set(0, 0.2, 6.4);
+
+        const mesh = new THREE.Mesh(
+          new THREE.IcosahedronGeometry(1.5, 0),
+          new THREE.MeshStandardMaterial({ color: 0x3ce6ac, roughness: 0.32, metalness: 0.35 }),
+        );
+        const ring = new THREE.Mesh(
+          new THREE.TorusGeometry(2.2, 0.06, 12, 80),
+          new THREE.MeshStandardMaterial({ color: 0x00e3ff, roughness: 0.4 }),
+        );
+        scene.add(mesh);
+        scene.add(ring);
+        scene.add(new THREE.HemisphereLight(0xffffff, 0x111111, 1.6));
+        scene.add(new THREE.DirectionalLight(0xffffff, 1.1));
+
+        function renderAt(time) {
+          mesh.rotation.y = time * 0.7;
+          mesh.rotation.x = Math.sin(time * 0.6) * 0.18;
+          ring.rotation.x = 1.2;
+          ring.rotation.y = time * 0.35;
+          renderer.render(scene, camera);
+        }
+
+        window.addEventListener("hf-seek", function (event) {
+          renderAt(event.detail.time);
+        });
+        renderAt(window.__hfThreeTime || 0);
+      </script>
+    </template>
+  </body>
+</html>
