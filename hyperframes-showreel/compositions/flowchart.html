@@ -407,8 +407,9 @@
           // 13. Hold
           tl.addLabel("hold5", "+=0.2");
 
-          // 14. Type correction: "Pythom" → "Python"
-          const typingStart = tl.labels["hold5"];
+          // HyperFrames' GSAP proxy does not expose timeline.labels.
+          const typingStart =
+            typeof tl.duration === "function" ? tl.duration() : 0;
           const words = ["P", "Py", "Pyt", "Pyth", "Pytho", "Python"];
           words.forEach((word, i) => {
             tl.add(
