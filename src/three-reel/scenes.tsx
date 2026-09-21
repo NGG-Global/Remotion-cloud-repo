@@ -15,7 +15,12 @@ export const Ground: React.FC = () => (
   <>
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -2.15, 0]}>
       <planeGeometry args={[40, 40]} />
-      <meshStandardMaterial color="#0b0d14" metalness={0.2} roughness={0.9} />
+      <meshStandardMaterial
+        color="#0b0d14"
+        metalness={0.15}
+        roughness={0.92}
+        envMapIntensity={0.18}
+      />
     </mesh>
     <gridHelper
       args={[28, 28, "#1d2a3d", "#121722"]}
@@ -39,6 +44,7 @@ export const HeroKnot: React.FC = () => {
         color={REEL.blue}
         metalness={0.62}
         roughness={0.22}
+        envMapIntensity={1.15}
       />
     </mesh>
   );
@@ -179,9 +185,10 @@ export const MaterialLine: React.FC = () => {
       <mesh position={[-2.7, 0, 0]} rotation={[0, frame * 0.02, 0]}>
         <sphereGeometry args={[0.85, 48, 32]} />
         <meshStandardMaterial
-          color={REEL.blue}
-          metalness={0.95}
+          color="#c5daf8"
+          metalness={1}
           roughness={0.12}
+          envMapIntensity={1.45}
         />
       </mesh>
       <mesh position={[-0.9, 0, 0]} rotation={[0, frame * 0.02, 0]}>
@@ -216,7 +223,12 @@ export const LightSubject: React.FC = () => {
   return (
     <mesh rotation={[0.4, frame * 0.018, 0.2]}>
       <torusKnotGeometry args={[1.05, 0.28, 140, 20]} />
-      <meshStandardMaterial color="#e8edf7" metalness={0.7} roughness={0.18} />
+      <meshStandardMaterial
+        color="#e8edf7"
+        metalness={0.7}
+        roughness={0.18}
+        envMapIntensity={1.2}
+      />
     </mesh>
   );
 };

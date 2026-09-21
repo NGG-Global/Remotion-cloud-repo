@@ -8,7 +8,12 @@ import {
   useVideoConfig,
 } from "remotion";
 import { Overlay, type Chapter } from "./chrome";
-import { CameraRig, StageLights, type CameraBeat } from "./rig";
+import {
+  CameraRig,
+  StageLights,
+  StudioEnvironment,
+  type CameraBeat,
+} from "./rig";
 import {
   CameraSubject,
   Ground,
@@ -121,7 +126,13 @@ const CAMERAS: CameraBeat[] = [
   { at: AT.primitives, pos: [0, 0.55, 8.8], target: [0, 0.1, 0] },
   { at: AT.materials, pos: [0, 0.35, 7.4], target: [0, 0.05, 0] },
   { at: AT.lights, pos: [2.2, 1.4, 5.4], target: [0, 0, 0] },
-  { at: AT.camera, pos: [4.8, 2.2, 5.6], target: [0, 0.1, 0] },
+  {
+    at: AT.camera,
+    pos: [4.8, 2.2, 5.6],
+    target: [0, 0.1, 0],
+    orbit: Math.PI * 0.72,
+    dolly: 0.28,
+  },
   { at: AT.orbit, pos: [0.4, 2.8, 6.4], target: [0, 0, 0] },
   { at: AT.field, pos: [5.4, 3.6, 7.2], target: [0, 0, 0] },
   { at: AT.shader, pos: [0, 0.3, 5.8], target: [0, 0, 0] },
@@ -142,6 +153,7 @@ export const Remotion3D: React.FC = () => {
       >
         <color attach="background" args={["#07080d"]} />
         <fog attach="fog" args={["#07080d", 9, 22]} />
+        <StudioEnvironment />
         <CameraRig beats={CAMERAS} />
         <StageLights orbit />
         <Ground />
