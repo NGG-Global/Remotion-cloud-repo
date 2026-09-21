@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
 import { Chapter, Chrome } from "./chrome";
-import { seconds } from "../theme";
+import { FORMAT, seconds } from "../theme";
 import {
   AudioScene,
   CaptionsScene,
@@ -203,7 +203,7 @@ export const RemotionShowreel: React.FC = () => {
         <CaptionsScene />
       </Sequence>
       <Sequence from={AT.audio} durationInFrames={SCENE.audio} name="Audio">
-        <AudioScene />
+        <AudioScene offsetSeconds={AT.audio / FORMAT.fps} />
       </Sequence>
       <Sequence from={AT.media} durationInFrames={SCENE.media} name="Media">
         <MediaScene />

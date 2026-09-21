@@ -57,7 +57,7 @@ export const TitleScene: React.FC = () => {
       >
         <Kicker>remotion · compositions · sequences</Kicker>
         <div
-          style={{ display: "flex", flexWrap: "wrap", gap: "0.22em 0.32em" }}
+          style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline" }}
         >
           {words.map((word, i) => {
             const p = spring({
@@ -71,9 +71,10 @@ export const TitleScene: React.FC = () => {
                 style={{
                   fontSize: 118,
                   fontWeight: 800,
-                  letterSpacing: "-0.045em",
+                  letterSpacing: "-0.03em",
                   lineHeight: 1.02,
                   display: "inline-block",
+                  marginRight: i === words.length - 1 ? 0 : 28,
                   opacity: p,
                   transform: `translateY(${interpolate(p, [0, 1], [70, 0])}px)`,
                   color: i === 0 ? REEL.blue : REEL.ink,
@@ -261,7 +262,7 @@ export const ShapesScene: React.FC = () => {
     easing: Easing.inOut(Easing.cubic),
   });
   const starA = makeStar({ points: 5, innerRadius: 70, outerRadius: 160 });
-  const starB = makeStar({ points: 7, innerRadius: 50, outerRadius: 170 });
+  const starB = makeStar({ points: 5, innerRadius: 40, outerRadius: 175 });
   const morphed = interpolatePath(morph, starA.path, starB.path);
   const draw = evolvePath(
     spring({ frame: frame - 4, fps, config: { damping: 18 } }),
@@ -807,7 +808,9 @@ export const CaptionsScene: React.FC = () => {
   );
 };
 
-export const AudioScene: React.FC = () => {
+export const AudioScene: React.FC<{ readonly offsetSeconds: number }> = ({
+  offsetSeconds,
+}) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const audioData = useAudioData(staticFile("audio/showreel-bed.mp3"));
@@ -817,6 +820,7 @@ export const AudioScene: React.FC = () => {
         fps,
         frame,
         numberOfSamples: 32,
+        dataOffsetInSeconds: offsetSeconds,
       })
     : new Array(32).fill(0.08);
 
