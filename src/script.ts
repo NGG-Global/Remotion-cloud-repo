@@ -25,6 +25,7 @@ export const NARRATION_SECONDS_EP4 = 304.52;
 export const NARRATION_SECONDS_EP5 = 235.55;
 export const NARRATION_SECONDS_EP6 = 184.32;
 export const NARRATION_SECONDS_EP7 = 219.04;
+export const NARRATION_SECONDS_EP8 = 207.22;
 
 export const BEATS = [
   { at: 0.0, id: "hook" },
@@ -390,6 +391,65 @@ export const BEATS_EP7 = [
 export type BeatIdEp7 = (typeof BEATS_EP7)[number]["id"];
 
 /**
+ * Episode 8: skills — the last of the advanced module.
+ *
+ * Timings come from a segment-level transcription of `narration-ep8.mp3`,
+ * anchored to the second each sentence begins.
+ *
+ * The episode turns on a distinction the narration says outright that people
+ * get wrong: a project holds what you are working on, a skill holds how you
+ * work. Neither half of that is visible in a screenshot, so most of the
+ * episode is drawn rather than filmed — a procedure being re-explained and
+ * then packaged (`RestatedProcedure`, `SkillPackage`), a request finding its
+ * skill unprompted (`SkillMatch`), the three scopes side by side
+ * (`ScopeCompare`), and the rule of thumb as a fork (`RuleRouter`). The
+ * interface appears only where the narration sends the viewer to look, and
+ * even there it is rebuilt: the real Skills panel lists an organisation's
+ * private tooling and names the colleague who shared each one.
+ */
+export const BEATS_EP8 = [
+  { at: 0.0, id: "hook" },
+  { at: 7.26, id: "same-request" },
+  { at: 13.78, id: "title" },
+
+  { at: 16.64, id: "define-once" },
+  { at: 27.86, id: "package" },
+  { at: 32.26, id: "everywhere" },
+  { at: 37.12, id: "no-need-to-ask" },
+  { at: 41.7, id: "match" },
+
+  { at: 48.7, id: "three-things" },
+  { at: 54.12, id: "scope" },
+  { at: 60.78, id: "project-scope" },
+  { at: 73.18, id: "skill-scope" },
+  { at: 80.58, id: "any-subject" },
+  { at: 90.26, id: "rule" },
+  { at: 97.74, id: "rule-skill" },
+
+  { at: 102.14, id: "good-news" },
+  { at: 106.38, id: "library" },
+  { at: 109.68, id: "kinds" },
+  { at: 117.48, id: "in-settings" },
+  { at: 123.48, id: "org-ready" },
+  { at: 131.36, id: "check-first" },
+
+  { at: 140.52, id: "when-new" },
+  { at: 143.48, id: "when-items" },
+  { at: 152.08, id: "two-ways" },
+  { at: 155.1, id: "write-it" },
+  { at: 162.8, id: "show-it" },
+  { at: 174.6, id: "thumb" },
+  { at: 177.44, id: "new-hire" },
+
+  { at: 184.98, id: "recap" },
+  { at: 191.6, id: "both" },
+  { at: 194.44, id: "module-done" },
+  { at: 197.7, id: "outro" },
+] as const satisfies readonly Beat[];
+
+export type BeatIdEp8 = (typeof BEATS_EP8)[number]["id"];
+
+/**
  * Timeline lookups for one episode's beat list.
  *
  * Returning a pair of closures rather than exporting two functions per episode
@@ -428,3 +488,4 @@ export const EP4 = timeline(BEATS_EP4, NARRATION_SECONDS_EP4);
 export const EP5 = timeline(BEATS_EP5, NARRATION_SECONDS_EP5);
 export const EP6 = timeline(BEATS_EP6, NARRATION_SECONDS_EP6);
 export const EP7 = timeline(BEATS_EP7, NARRATION_SECONDS_EP7);
+export const EP8 = timeline(BEATS_EP8, NARRATION_SECONDS_EP8);
