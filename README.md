@@ -4,7 +4,7 @@ Animated explainer videos built as React components with Remotion. Compositions
 are written in TypeScript, previewed in the Remotion Studio, and rendered to MP4
 from the command line or CI.
 
-Currently holds episodes 1 to 7 of a Hebrew-narrated series on using Claude,
+Currently holds episodes 1 to 8 of a Hebrew-narrated series on using Claude,
 plus the scene library, graphics and interface-callout machinery the episodes
 share.
 
@@ -183,6 +183,7 @@ npx remotion render ClaudeContext out/claude-explainer-ep4.mp4
 npx remotion render ClaudeFiles out/claude-explainer-ep5.mp4
 npx remotion render ClaudeReach out/claude-explainer-ep6.mp4
 npx remotion render ClaudeProjects out/claude-explainer-ep7.mp4
+npx remotion render ClaudeSkills out/claude-explainer-ep8.mp4
 ```
 
 ### How it is put together
@@ -249,59 +250,67 @@ new icon can be added by appending its `d` strings and nothing else.
 
 **Bespoke illustrations** for the beats that earn one:
 
-| Graphic                          | Beat it carries                                                    |
-| -------------------------------- | ------------------------------------------------------------------ |
-| `ClickMaze`                      | The opening: a pointer hunting a wall of controls, hitting nothing |
-| `SearchResults` / `ReadMaterial` | The contrast: links crossed off, versus a document being read      |
-| `PageStack`                      | A long document fanning open and being read through                |
-| `DraftEdit`                      | A draft with lines struck and rewritten in place                   |
-| `IdeaToOutputs`                  | One idea branching into a document, a table and a deck             |
-| `FunnelRule`                     | Text, data and an idea dropping into a funnel that returns a tick  |
-| `EffortCompare`                  | Explaining the task versus doing it, to scale                      |
-| `PathShortcut`                   | A winding route and a direct one to the same destination           |
-| `PlatformGrid`                   | One account reaching browser, desktop and mobile                   |
-| `ModelLadder`                    | The model line-up on a speed-to-depth axis                         |
-| `Overkill`                       | A small task sent to a large model, and what it costs              |
-| `EffortDial`                     | The effort control sweeping its three levels                       |
-| `ABCompare`                      | The same task on two models, marking what one missed               |
-| `PermissionGate`                 | Material reaching Claude only through existing permissions         |
-| `ConnectFlow`                    | The connection as four steps landing in turn                       |
-| `ChatAsk`                        | A short exchange as chat bubbles                                   |
-| `SystemRouter`                   | One request routed to whichever system holds the answer            |
-| `PermissionMirror`               | Your access and Claude's, side by side and identical               |
-| `SameToolSplit`                  | One request down two branches, and the gap between the results     |
-| `AimAtInput`                     | Ruling out the model, and landing on what it was given             |
-| `VagueReply`                     | A reply that is right about everything and addressed to no one     |
-| `BriefSlots`                     | The brief filling in, and the deliverable resolving because of it  |
-| `NoSecretLanguage`               | An incantation crossed out, and a plain briefing in its place      |
-| `ProjectBlanks`                  | General knowledge beside an empty project, filled with guesses     |
-| `AttachInstead`                  | Describing a document, next to handing one over                    |
-| `ConstraintNarrows`              | A rejected proposal, and the approaches it rules out               |
-| `BriefBoth`                      | The same briefing delivered to a colleague and to Claude           |
-| `NotFinalStamp`                  | A “final” stamp that will not take                                 |
-| `RetypeLoop`                     | Starting over, drawn as the loop it is, with the context gauge     |
-| `RoundsConverge`                 | Three passes closing on a fixed target                             |
-| `LiveEdits`                      | Blunt corrections, each answered by the page itself                |
-| `ContextStack`                   | What a conversation holds, and what a new one does not             |
-| `SharedDraft`                    | Two bubbles becoming one document worked on from both sides        |
-| `FeedbackAim`                    | The same note worded two ways, and the edit each produces          |
-| `OneThreadFiveGoals`             | Five goals, five outputs, one thread that never changes            |
-| `SameChat`                       | Five features collapsing into one conversation                     |
-| `NextLayer`                      | Files settling onto the conversation as another layer              |
-| `PdfHunt`                        | The slog through a long PDF for the one paragraph that matters     |
-| `StructuredRead`                 | A deck read as slides, and a sheet read as a table                 |
-| `PurposeSplit`                   | One file, two reasons for opening it, two different answers        |
-| `MaterialTransform`              | Material you already have, becoming something else                 |
-| `ModeAnatomy`                    | Where the files sit in Chat, and where they sit in Cowork          |
-| `HandOff`                        | Handing over a whole task instead of steering every step           |
-| `ModeChoice`                     | The two cases, and which mode each one is                          |
-| `ProjectGround`                  | The same preamble at the top of every chat — and then in one place |
-| `ProjectCreate`                  | The create-a-project dialog, filled in                             |
-| `ProjectWorkspace`               | A project open, with a ring that travels to each of its panels     |
-| `ProjectPanels`                  | The panel column, opened one panel at a time                       |
-| `ProjectInstructionsDialog`      | The instructions dialog, written into                              |
-| `MaterialsUpdate`                | One document swapped, and everything downstream following          |
-| `SharedGroundSeparateChats`      | A shared base, and conversations that do not feed each other       |
+| Graphic                          | Beat it carries                                                        |
+| -------------------------------- | ---------------------------------------------------------------------- |
+| `ClickMaze`                      | The opening: a pointer hunting a wall of controls, hitting nothing     |
+| `SearchResults` / `ReadMaterial` | The contrast: links crossed off, versus a document being read          |
+| `PageStack`                      | A long document fanning open and being read through                    |
+| `DraftEdit`                      | A draft with lines struck and rewritten in place                       |
+| `IdeaToOutputs`                  | One idea branching into a document, a table and a deck                 |
+| `FunnelRule`                     | Text, data and an idea dropping into a funnel that returns a tick      |
+| `EffortCompare`                  | Explaining the task versus doing it, to scale                          |
+| `PathShortcut`                   | A winding route and a direct one to the same destination               |
+| `PlatformGrid`                   | One account reaching browser, desktop and mobile                       |
+| `ModelLadder`                    | The model line-up on a speed-to-depth axis                             |
+| `Overkill`                       | A small task sent to a large model, and what it costs                  |
+| `EffortDial`                     | The effort control sweeping its three levels                           |
+| `ABCompare`                      | The same task on two models, marking what one missed                   |
+| `PermissionGate`                 | Material reaching Claude only through existing permissions             |
+| `ConnectFlow`                    | The connection as four steps landing in turn                           |
+| `ChatAsk`                        | A short exchange as chat bubbles                                       |
+| `SystemRouter`                   | One request routed to whichever system holds the answer                |
+| `PermissionMirror`               | Your access and Claude's, side by side and identical                   |
+| `SameToolSplit`                  | One request down two branches, and the gap between the results         |
+| `AimAtInput`                     | Ruling out the model, and landing on what it was given                 |
+| `VagueReply`                     | A reply that is right about everything and addressed to no one         |
+| `BriefSlots`                     | The brief filling in, and the deliverable resolving because of it      |
+| `NoSecretLanguage`               | An incantation crossed out, and a plain briefing in its place          |
+| `ProjectBlanks`                  | General knowledge beside an empty project, filled with guesses         |
+| `AttachInstead`                  | Describing a document, next to handing one over                        |
+| `ConstraintNarrows`              | A rejected proposal, and the approaches it rules out                   |
+| `BriefBoth`                      | The same briefing delivered to a colleague and to Claude               |
+| `NotFinalStamp`                  | A “final” stamp that will not take                                     |
+| `RetypeLoop`                     | Starting over, drawn as the loop it is, with the context gauge         |
+| `RoundsConverge`                 | Three passes closing on a fixed target                                 |
+| `LiveEdits`                      | Blunt corrections, each answered by the page itself                    |
+| `ContextStack`                   | What a conversation holds, and what a new one does not                 |
+| `SharedDraft`                    | Two bubbles becoming one document worked on from both sides            |
+| `FeedbackAim`                    | The same note worded two ways, and the edit each produces              |
+| `OneThreadFiveGoals`             | Five goals, five outputs, one thread that never changes                |
+| `SameChat`                       | Five features collapsing into one conversation                         |
+| `NextLayer`                      | Files settling onto the conversation as another layer                  |
+| `PdfHunt`                        | The slog through a long PDF for the one paragraph that matters         |
+| `StructuredRead`                 | A deck read as slides, and a sheet read as a table                     |
+| `PurposeSplit`                   | One file, two reasons for opening it, two different answers            |
+| `MaterialTransform`              | Material you already have, becoming something else                     |
+| `ModeAnatomy`                    | Where the files sit in Chat, and where they sit in Cowork              |
+| `HandOff`                        | Handing over a whole task instead of steering every step               |
+| `ModeChoice`                     | The two cases, and which mode each one is                              |
+| `ProjectGround`                  | The same preamble at the top of every chat — and then in one place     |
+| `ProjectCreate`                  | The create-a-project dialog, filled in                                 |
+| `ProjectWorkspace`               | A project open, with a ring that travels to each of its panels         |
+| `ProjectPanels`                  | The panel column, opened one panel at a time                           |
+| `ProjectInstructionsDialog`      | The instructions dialog, written into                                  |
+| `MaterialsUpdate`                | One document swapped, and everything downstream following              |
+| `SharedGroundSeparateChats`      | A shared base, and conversations that do not feed each other           |
+| `RestatedProcedure`              | One procedure, re-explained three times in three wordings              |
+| `SkillPackage`                   | The steps folding into a named package, which then turns up everywhere |
+| `SkillMatch`                     | A request reading the descriptions until one of them answers           |
+| `ScopeCompare`                   | Three things told apart by how much of the same board each covers      |
+| `SameWayAnySubject`              | The subject ruled out, and three deliverables keeping one shape        |
+| `RuleRouter`                     | The rule of thumb as a fork, run twice down different branches         |
+| `SkillsSettings` / `SkillsList`  | The Skills panel, establishing and at reading size                     |
+| `SkillFromDoing`                 | Doing the job out loud, and the draft assembling from it               |
 
 Two things keep them from looking like clip art:
 
@@ -370,6 +379,35 @@ overlay, which is what you want when the overlay _is_ the content. And
 because `fill` is capped by `MAX_UPSCALE`, asking for a very tight shot on a
 small control just pins it at the cap: to pull back from a control you have
 to drop `fill` below the cap, not raise it.
+
+**When the subject is abstract, find the thing that varies.** Episode 8 is
+about skills, and its whole argument is a distinction — a project holds what
+you are working on, a skill holds how you work — which has no screen to film
+and no object to point at. Definitions side by side would have been three more
+sentences for the viewer to hold, so each idea got a picture built around the
+one quantity that separates it from the others:
+
+- **Scope became area.** `ScopeCompare` draws the same grid of conversations
+  under all three columns and lights a different amount of it: one cell for a
+  chat request, one subject's row for a project, the whole board for a skill.
+  The viewer stops being told the difference and starts seeing it.
+- **Sameness became alignment.** The opening claim is that the same procedure
+  gets re-explained in slightly different words every week. `RestatedProcedure`
+  puts three weeks side by side and then lights the equivalent rows across all
+  three at once — the moment the viewer works out for themselves that three
+  different-looking asks were one procedure.
+- **A negative became a strike and a shape.** "It does not need to know who the
+  client is" cannot be drawn directly, so `SameWayAnySubject` draws the clients
+  and rules them out, and lets three different deliverables come out with
+  visibly identical structure. The shape of the output carries the claim.
+- **A rule became a fork.** `RuleRouter` sends two questions down the same
+  junction and lights a different box at the end of each. The only thing that
+  differs between the two runs is the branch, which is the rule.
+
+The one piece of interface the narration sends the viewer to look at — the
+Skills panel — is rebuilt for the reason episode 7 established, and for one
+more: every shared skill in the real panel is labelled with the name of the
+colleague who shared it. In the mockup the author of a shared skill is a role.
 
 **A whole interface can be rebuilt rather than filmed.** Episode 7 is about
 Projects, and the captures it was briefed from carry an account name, a real
