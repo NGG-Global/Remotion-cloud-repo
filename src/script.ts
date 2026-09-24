@@ -26,6 +26,7 @@ export const NARRATION_SECONDS_EP5 = 235.55;
 export const NARRATION_SECONDS_EP6 = 184.32;
 export const NARRATION_SECONDS_EP7 = 219.04;
 export const NARRATION_SECONDS_EP8 = 207.22;
+export const NARRATION_SECONDS_EP9 = 381.74;
 
 export const BEATS = [
   { at: 0.0, id: "hook" },
@@ -450,6 +451,71 @@ export const BEATS_EP8 = [
 export type BeatIdEp8 = (typeof BEATS_EP8)[number]["id"];
 
 /**
+ * Episode 9: building a deck inside the conversation — the Claude Design
+ * module.
+ *
+ * Timings come from a segment-level transcription of `narration-ep9.mp3`,
+ * anchored to the second each sentence begins. The narration is a working
+ * method in five decisions — start from material or from nothing, pick a
+ * design system or none, brief properly, fix the story before the design,
+ * then refine three different ways — and the brief for the episode was to
+ * demonstrate rather than describe. So the interface beats are filmed on the
+ * home screenshot with the episode 5 machinery (`AttachedChips`,
+ * `TypedPrompt`) or rebuilt as mockups (`ComposerMenu`, `SlidesArtifact`),
+ * and the decisions themselves are drawn (`MaterialToDeck`,
+ * `DesignSystemApply`, `DesignTooEarly`, `StorylineEdit`).
+ */
+export const BEATS_EP9 = [
+  { at: 0.0, id: "hook" },
+  { at: 4.14, id: "in-chat" },
+  { at: 9.36, id: "no-tool" },
+  { at: 13.18, id: "title" },
+
+  { at: 19.44, id: "where-start" },
+  { at: 25.68, id: "attach" },
+  { at: 39.4, id: "reads" },
+  { at: 45.2, id: "from-scratch" },
+  { at: 55.66, id: "check-first" },
+
+  { at: 69.86, id: "look" },
+  { at: 73.78, id: "design-system" },
+  { at: 85.64, id: "tokens" },
+  { at: 91.48, id: "several-systems" },
+  { at: 101.3, id: "quick-idea" },
+
+  { at: 112.64, id: "brief" },
+  { at: 116.94, id: "brief-typed" },
+  { at: 132.26, id: "same-principle" },
+  { at: 138.52, id: "fewer-rounds" },
+
+  { at: 145.36, id: "saves-most" },
+  { at: 149.2, id: "tempting" },
+  { at: 155.36, id: "wrong-story" },
+  { at: 162.68, id: "rebuild" },
+  { at: 171.18, id: "stop-first" },
+  { at: 175.98, id: "skeleton" },
+  { at: 184.5, id: "review" },
+  { at: 199.12, id: "build" },
+  { at: 207.7, id: "small-diff" },
+  { at: 212.76, id: "cost" },
+
+  { at: 221.12, id: "refine" },
+  { at: 231.34, id: "way-chat" },
+  { at: 252.9, id: "way-canvas" },
+  { at: 274.68, id: "way-comment" },
+  { at: 297.0, id: "collab" },
+  { at: 304.38, id: "three-rules" },
+
+  { at: 317.3, id: "export" },
+  { at: 330.96, id: "when-worth" },
+  { at: 346.48, id: "template-exists" },
+  { at: 359.68, id: "rule" },
+  { at: 371.24, id: "outro" },
+] as const satisfies readonly Beat[];
+
+export type BeatIdEp9 = (typeof BEATS_EP9)[number]["id"];
+
+/**
  * Timeline lookups for one episode's beat list.
  *
  * Returning a pair of closures rather than exporting two functions per episode
@@ -489,3 +555,4 @@ export const EP5 = timeline(BEATS_EP5, NARRATION_SECONDS_EP5);
 export const EP6 = timeline(BEATS_EP6, NARRATION_SECONDS_EP6);
 export const EP7 = timeline(BEATS_EP7, NARRATION_SECONDS_EP7);
 export const EP8 = timeline(BEATS_EP8, NARRATION_SECONDS_EP8);
+export const EP9 = timeline(BEATS_EP9, NARRATION_SECONDS_EP9);

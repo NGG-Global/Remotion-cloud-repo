@@ -27,6 +27,25 @@ type SlidesArtifactProps = {
   readonly fixAt?: number;
   /** Which slide is selected in the filmstrip. */
   readonly selected?: number;
+  /** A request typed into the chat, and the frame the deck answers it. */
+  readonly chatPrompt?: {
+    readonly text: string;
+    readonly at: number;
+    readonly applyAt: number;
+  };
+  /** The title after a deck-wide edit has shortened it. */
+  readonly titleAfter?: string;
+  /** A pointer grabbing the logo tiles on the canvas and moving them. */
+  readonly dragAt?: number;
+  /** Reviewers' comment pins, in fractions of the slide. */
+  readonly pins?: readonly {
+    readonly at: number;
+    readonly x: number;
+    readonly y: number;
+    readonly letter: string;
+  }[];
+  /** Frame at which the export menu opens under the download control. */
+  readonly exportAt?: number;
 };
 
 /** Composed at this size, then scaled to whatever the scene has room for. */
@@ -57,6 +76,11 @@ export const SlidesArtifact: React.FC<SlidesArtifactProps> = ({
   sendAt,
   fixAt,
   selected = 0,
+  chatPrompt,
+  titleAfter,
+  dragAt,
+  pins = [],
+  exportAt,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -83,6 +107,37 @@ export const SlidesArtifact: React.FC<SlidesArtifactProps> = ({
     fixAt === undefined
       ? 0
       : spring({ frame: local - fixAt, fps, config: { damping: 200 } });
+
+  const applied =
+    chatPrompt === undefined
+      ? 0
+      : spring({
+          frame: local - chatPrompt.applyAt,
+          fps,
+          config: { damping: 200 },
+        });
+  const drag =
+    dragAt === undefined
+      ? 0
+      : interpolate(local - dragAt, [0, 14, 20, 44], [0, 0, 0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        });
+  const pointer =
+    dragAt === undefined
+      ? 0
+      : interpolate(local - dragAt, [-10, 0], [0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        });
+  const exportOpen =
+    exportAt === undefined
+      ? 0
+      : spring({
+          frame: local - exportAt,
+          fps,
+          config: { damping: 30, stiffness: 150 },
+        });
 
   const chatW = DESIGN.width * 0.33;
   const panelLeft = chatW + 16;
@@ -202,15 +257,33 @@ export const SlidesArtifact: React.FC<SlidesArtifactProps> = ({
               direction: "ltr",
             }}
           >
-            <div
-              style={{
-                fontFamily: uiFontFamily,
-                fontSize: 19,
-                color: APP.mute,
-              }}
-            >
-              Write a message…
-            </div>
+            {chatPrompt && local >= chatPrompt.at ? (
+              <div
+                style={{
+                  direction: "rtl",
+                  fontFamily,
+                  fontSize: 19,
+                  color: APP.ink,
+                }}
+              >
+                <TypeOn
+                  text={chatPrompt.text}
+                  delay={delay + chatPrompt.at}
+                  speed={22}
+                  caret={applied < 0.5}
+                />
+              </div>
+            ) : (
+              <div
+                style={{
+                  fontFamily: uiFontFamily,
+                  fontSize: 19,
+                  color: APP.mute,
+                }}
+              >
+                Write a message…
+              </div>
+            )}
           </div>
         </div>
 
@@ -396,7 +469,7 @@ export const SlidesArtifact: React.FC<SlidesArtifactProps> = ({
                     opacity: interpolate(fixed, [0, 0.5, 1], [1, 0.2, 1]),
                   }}
                 >
-                  {slideTitle}
+                  {titleAfter && applied > 0.5 ? titleAfter : slideTitle}
                 </div>
                 {slideSubtitle ? (
                   <div
@@ -442,16 +515,58 @@ export const SlidesArtifact: React.FC<SlidesArtifactProps> = ({
               <div
                 style={{
                   position: "absolute",
-                  left: slideW * 0.03,
+                  left: slideW * 0.03 + drag * slideW * 0.3,
                   bottom: slideH * 0.08,
                   display: "flex",
                   gap: 10,
                   direction: "ltr",
+                  outline:
+                    pointer > 0 && drag < 1
+                      ? `2px solid ${APP.select}`
+                      : undefined,
+                  outlineOffset: 4,
                 }}
               >
                 <Tile size={slideH * 0.09} tone="rgba(255,255,255,0.9)" />
                 <Tile size={slideH * 0.09} tone="rgba(255,255,255,0.6)" />
               </div>
+
+              {/* Reviewers' pins, each on the thing it is about. */}
+              {pins.map((pin) => {
+                const on = spring({
+                  frame: local - pin.at,
+                  fps,
+                  config: { damping: 200 },
+                });
+                if (on <= 0.001) return null;
+                return (
+                  <div
+                    key={pin.letter + pin.at}
+                    style={{
+                      position: "absolute",
+                      left: slideW * pin.x,
+                      top: slideH * pin.y,
+                      width: slideH * 0.11,
+                      height: slideH * 0.11,
+                      borderRadius: "50% 50% 50% 0",
+                      background: APP.select,
+                      border: "2px solid #fff",
+                      color: "#fff",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontFamily: uiFontFamily,
+                      fontSize: slideH * 0.05,
+                      fontWeight: 700,
+                      opacity: on,
+                      transform: `translate(-50%, -100%) scale(${0.6 + on * 0.4})`,
+                      boxShadow: "0 6px 18px rgba(0,0,0,0.3)",
+                    }}
+                  >
+                    {pin.letter}
+                  </div>
+                );
+              })}
 
               {/* The commented element, outlined while the comment is open. */}
               {comment > 0.02 ? (
@@ -468,6 +583,79 @@ export const SlidesArtifact: React.FC<SlidesArtifactProps> = ({
                   }}
                 />
               ) : null}
+            </div>
+          ) : null}
+
+          {/* The pointer doing the drag. */}
+          {pointer > 0 ? (
+            <svg
+              style={{
+                position: "absolute",
+                left: slideLeft + slideW * 0.06 + drag * slideW * 0.3,
+                top: slideTop + slideH * 0.84,
+                opacity: pointer,
+              }}
+              width={28}
+              height={32}
+              viewBox="0 0 28 32"
+              aria-hidden
+            >
+              <path
+                d="M4 2 L4 24 L10 18 L15 29 L19 27 L14 17 L22 17 Z"
+                fill="#111"
+                stroke="#fff"
+                strokeWidth={2}
+                strokeLinejoin="round"
+              />
+            </svg>
+          ) : null}
+
+          {/* The export menu, under the download control. */}
+          {exportOpen > 0.02 ? (
+            <div
+              style={{
+                position: "absolute",
+                right: 22,
+                top: headH + 66,
+                width: 280,
+                borderRadius: 14,
+                background: APP.panel,
+                border: `1px solid ${APP.line}`,
+                boxShadow: "0 18px 50px rgba(0,0,0,0.22)",
+                padding: 8,
+                opacity: exportOpen,
+                transform: `scale(${0.94 + exportOpen * 0.06})`,
+                transformOrigin: "top right",
+              }}
+            >
+              {["Export as PowerPoint", "Export as PDF", "Copy link"].map(
+                (row, i) => (
+                  <div
+                    key={row}
+                    style={{
+                      height: 44,
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 12,
+                      padding: "0 12px",
+                      borderRadius: 10,
+                      fontFamily: uiFontFamily,
+                      fontSize: 18,
+                      fontWeight: 500,
+                      color: APP.ink,
+                      opacity: interpolate(
+                        local - (exportAt ?? 0) - 3 - i * 3,
+                        [0, 8],
+                        [0, 1],
+                        { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+                      ),
+                    }}
+                  >
+                    <Tile size={18} tone={i === 2 ? APP.select : APP.mute} />
+                    {row}
+                  </div>
+                ),
+              )}
             </div>
           ) : null}
 
@@ -623,6 +811,15 @@ export const SlidesArtifact: React.FC<SlidesArtifactProps> = ({
                 { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
               );
               const isSel = i === selected;
+              const pulse =
+                chatPrompt === undefined
+                  ? 0
+                  : interpolate(
+                      local - chatPrompt.applyAt - i * 4,
+                      [0, 8, 26],
+                      [0, 1, 0],
+                      { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+                    );
               return (
                 <div
                   key={i}
@@ -631,7 +828,11 @@ export const SlidesArtifact: React.FC<SlidesArtifactProps> = ({
                     height: 84,
                     borderRadius: 8,
                     overflow: "hidden",
-                    border: `${isSel ? 2.5 : 1}px solid ${isSel ? APP.select : APP.line}`,
+                    border: `${isSel || pulse > 0.1 ? 2.5 : 1}px solid ${pulse > 0.1 ? APP.coral : isSel ? APP.select : APP.line}`,
+                    boxShadow:
+                      pulse > 0.1
+                        ? `0 0 ${18 * pulse}px ${APP.coral}88`
+                        : undefined,
                     background: i % 2 === 0 ? "#1f2a44" : APP.canvas,
                     opacity: on,
                     position: "relative",
