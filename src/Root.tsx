@@ -30,6 +30,7 @@ import {
   regionCheckSchema,
 } from "./dev/RegionCheck";
 import { UIKitDemo } from "./dev/UIKitDemo";
+import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
 import { FORMAT, seconds } from "./theme";
 
@@ -81,6 +82,13 @@ export const RemotionRoot: React.FC = () => {
         id="ClaudeReach"
         component={ClaudeReach}
         durationInFrames={CLAUDE_REACH_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="JackTheRipper"
+        component={JackTheRipper}
+        durationInFrames={JACK_THE_RIPPER_DURATION}
         {...FORMAT}
       />
 
