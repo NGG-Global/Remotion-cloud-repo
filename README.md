@@ -427,16 +427,16 @@ npm run smoke -- JackTheRipper /tmp/smoke.mp4
 
 ### What it is made of
 
-| Layer                   | Where                       | What                                                                                                   |
-| ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Archive                 | `public/archive/`           | Public-domain material from Wikimedia Commons, 1888-1902: the illustrated press, Punch, the letters, the streets, the 1894 Ordnance Survey plan. `SOURCES.md` lists every file with its Commons page and licence. |
-| Ken Burns               | `components/Archival.tsx`   | Moves expressed in image space (a focal point and a zoom over "cover"), with a period grade.            |
-| The street              | `graphics/Street3D.tsx`     | A three.js night street in fog, with silhouette billboards, gas lamps and a constable's lantern.        |
-| The figures             | `graphics/Figures.tsx`      | A shadow-theatre cast: walkers, a constable, women, the top-hatted myth, the trades, a crowd.           |
-| The map                 | `graphics/WhitechapelMap.tsx` | The 1894 plan with the five sites as ink blots, the eleven-case file, the double-event route, a lens. |
-| The documents           | `graphics/Letters.tsx`      | "Dear Boss" read to its signature, the flood of hoax letters, the Lusk parcel, "From Hell".            |
-| Staged moments          | `scenes/Staged.tsx`         | Everything the record does not picture, played by silhouettes and the street.                          |
-| Timeline                | `beats.ts`                  | One entry per beat, in seconds of the voice track.                                                     |
+| Layer          | Where                                              | What                                                                                                                                                                                                              |
+| -------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Archive        | `public/archive/`                                  | Public-domain material from Wikimedia Commons, 1888-1902: the illustrated press, Punch, the letters, the streets, the 1894 Ordnance Survey plan. `SOURCES.md` lists every file with its Commons page and licence. |
+| Ken Burns      | `components/Archival.tsx`, `components/framing.ts` | Moves expressed in image space (a focal point and a zoom over "cover"), held inside what each scan can carry, with a period grade.                                                                                |
+| The street     | `graphics/Street3D.tsx`                            | A three.js night street in fog, with silhouette billboards, gas lamps and a constable's lantern.                                                                                                                  |
+| The figures    | `graphics/Figures.tsx`                             | A shadow-theatre cast: walkers, a constable, women, the top-hatted myth, the trades, a crowd.                                                                                                                     |
+| The map        | `graphics/WhitechapelMap.tsx`                      | The 1894 plan with the five sites as ink blots, the eleven-case file, the double-event route, a lens.                                                                                                             |
+| The documents  | `graphics/Letters.tsx`                             | "Dear Boss" read to its signature, the flood of hoax letters, the Lusk parcel, "From Hell".                                                                                                                       |
+| Staged moments | `scenes/Staged.tsx`                                | Everything the record does not picture, played by silhouettes and the street.                                                                                                                                     |
+| Timeline       | `beats.ts`                                         | One entry per beat, in seconds of the voice track.                                                                                                                                                                |
 
 ### Decisions worth keeping
 
@@ -467,6 +467,21 @@ masks; at 1080p they cost forty to ninety seconds a frame in the software
 compositor. The tiles in `public/fog` are periodic value noise generated once
 (the script is in the commit that added them) and simply composited, and a
 frame is back under two seconds.
+
+**No shot is tighter than its source can carry.** Most of this archive is small
+and portrait-format: a 358 x 539 photograph of Buck's Row needs a 5.4x blow-up
+merely to cover a 16:9 frame, and leaves a third of the picture on screen.
+Authored zooms are therefore a wish, not an instruction. `framing.ts` works out
+the band of scales that still reads for a given image - from the whole picture
+on screen up to about 1.8 frame pixels per source pixel - and slides the move
+into it, keeping its direction and as much of its push as fits, so a shot
+written 2.4 -> 2.9 plays 1.4 -> 1.8 instead of turning to mush. A picture too
+small to fill the frame is shown whole on a mount of itself (`Mount.tsx`) rather
+than blown up past recognition. Two things override this: `maxUpscale`, raised
+or lowered where detail is the point (the map holds at 1.3, because street names
+are the reason to zoom), and `fill="cover"`, for a photograph used as the
+backdrop to a dramatisation rather than as a document, where a mount would read
+as a mistake.
 
 **Images must escape Tailwind's preflight.** `img { max-width: 100% }` caps any
 `<Img>` wider than the frame, which silently shrinks a Ken Burns move. Every

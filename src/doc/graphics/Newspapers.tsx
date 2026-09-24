@@ -1,6 +1,8 @@
 import React from "react";
-import { AbsoluteFill, Img, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Img, useCurrentFrame, useVideoConfig } from "remotion";
 import { ARCHIVE, archiveSrc, type ArchiveImage } from "../archive";
+import { fitZoomRange, place, zoomBand } from "../components/framing";
+import { Mount } from "../components/Mount";
 import { DOC, easeInOut, easeOut, hash, mix, ramp } from "../theme";
 
 /**
@@ -25,8 +27,7 @@ export const HeadlineSlam: React.FC<{
   zoom = 1.15,
 }) => {
   const frame = useCurrentFrame();
-  const W = 1920;
-  const H = 1080;
+  const { width: W, height: H } = useVideoConfig();
   return (
     <AbsoluteFill style={{ background: DOC.black, overflow: "hidden" }}>
       {pages.map((p, i) => {
@@ -34,11 +35,24 @@ export const HeadlineSlam: React.FC<{
         const t = ramp(frame, land, land + 7);
         if (t <= 0) return null;
         const e = easeOut(t);
-        const base = Math.max(W / p.w, H / p.h) * zoom * mix(1.35, 1, e);
+        // A front page always fills the frame here, so the band is floored at
+        // cover; the overshoot it lands from is whatever the page can carry.
+        const band = zoomBand(p, W, H, { floor: "cover" });
+        const [zLand, zOver] = fitZoomRange(zoom, zoom * 1.35, band);
         const rot = mix(hash(i * 7) * 10 - 5, hash(i * 3) * 3 - 1.5, e);
         const settle = 1 + (frame - land) * 0.0006;
-        const tx = W / 2 - focus.x * p.w * base * settle;
-        const ty = H / 2 - focus.y * p.h * base * settle;
+        const { scale, tx, ty } = place(
+          p,
+          W,
+          H,
+          {
+            x: focus.x,
+            y: focus.y,
+            // A little over cover, so the tilt cannot swing a corner into frame.
+            zoom: Math.max(1.06, mix(zOver, zLand, e) * settle),
+          },
+          band,
+        );
         return (
           <AbsoluteFill
             key={i}
@@ -55,7 +69,7 @@ export const HeadlineSlam: React.FC<{
                 maxWidth: "none",
                 maxHeight: "none",
                 transformOrigin: "0 0",
-                transform: `translate(${tx}px, ${ty}px) scale(${base * settle})`,
+                transform: `translate(${tx}px, ${ty}px) scale(${scale})`,
                 filter:
                   "sepia(0.45) contrast(1.2) brightness(0.8) saturate(0.6)",
               }}
@@ -187,16 +201,28 @@ export const CircledDetail: React.FC<{
   readonly tone?: "print" | "photo";
 }> = ({ image, focus, zoom, circleAt, radius = 190, tone = "print" }) => {
   const frame = useCurrentFrame();
-  const W = 1920;
-  const H = 1080;
+  const { width: W, height: H } = useVideoConfig();
   const drift = easeInOut(ramp(frame, 0, 400));
-  const base = Math.max(W / image.w, H / image.h) * zoom * (1 + drift * 0.06);
-  const tx = W / 2 - focus.x * image.w * base;
-  const ty = H / 2 - focus.y * image.h * base;
+  const band = zoomBand(image, W, H);
+  const [z0, z1] = fitZoomRange(zoom, zoom * 1.06, band);
+  const { scale, tx, ty, dw, dh, covers } = place(
+    image,
+    W,
+    H,
+    { x: focus.x, y: focus.y, zoom: mix(z0, z1, drift) },
+    band,
+  );
+  // The circle marks a piece of the sheet, not a piece of the screen: it sits
+  // over the detail wherever the framing put it, and if the framing had to open
+  // up to stay readable, the ring opens with it.
+  const r = Math.max(90, (radius * scale) / (band.cover * zoom));
+  const cx = tx + focus.x * dw;
+  const cy = ty + focus.y * dh;
   const draw = easeInOut(ramp(frame, circleAt, circleAt + 36));
-  const C = 2 * Math.PI * radius;
+  const C = 2 * Math.PI * r;
   return (
     <AbsoluteFill style={{ background: DOC.black, overflow: "hidden" }}>
+      {covers ? null : <Mount image={image} />}
       <Img
         src={archiveSrc(image)}
         style={{
@@ -208,7 +234,7 @@ export const CircledDetail: React.FC<{
           maxWidth: "none",
           maxHeight: "none",
           transformOrigin: "0 0",
-          transform: `translate(${tx}px, ${ty}px) scale(${base})`,
+          transform: `translate(${tx}px, ${ty}px) scale(${scale})`,
           filter:
             tone === "print"
               ? "sepia(0.4) contrast(1.15) brightness(0.8) saturate(0.5)"
@@ -221,16 +247,16 @@ export const CircledDetail: React.FC<{
         style={{ position: "absolute", left: 0, top: 0 }}
       >
         <circle
-          cx={W / 2}
-          cy={H / 2}
-          r={radius}
+          cx={cx}
+          cy={cy}
+          r={r}
           fill="none"
           stroke={DOC.red}
           strokeWidth={5}
           strokeLinecap="round"
           strokeDasharray={C}
           strokeDashoffset={C * (1 - draw)}
-          transform={`rotate(-100 ${W / 2} ${H / 2})`}
+          transform={`rotate(-100 ${cx} ${cy})`}
           opacity={0.9}
           style={{ filter: "drop-shadow(0 0 8px rgba(168,23,31,0.7))" }}
         />

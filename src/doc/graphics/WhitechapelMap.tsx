@@ -1,6 +1,7 @@
 import React, { useId } from "react";
 import { AbsoluteFill, Img, useCurrentFrame, useVideoConfig } from "remotion";
 import { ARCHIVE, archiveSrc } from "../archive";
+import { fitZoomRange, place, zoomBand } from "../components/framing";
 import { clamp01, DOC, easeInOut, easeOut, hash, mix, ramp } from "../theme";
 
 /**
@@ -569,20 +570,19 @@ export const WhitechapelMap: React.FC<WhitechapelMapProps> = ({
   const span = duration ?? durationInFrames;
   const t = easeInOut(ramp(frame, delay, delay + span));
 
-  // Ken Burns in image space, as in Archival.tsx.
-  const base = Math.max(W / MAP.w, H / MAP.h);
-  const zoom = Math.max(1, mix(from.zoom, to.zoom, t));
-  const fx = mix(from.x, to.x, t);
-  const fy = mix(from.y, to.y, t);
-  const scale = base * zoom;
-  // Focal point at frame centre, clamped so the sheet always covers the frame.
-  const tx = Math.min(
-    0,
-    Math.max(W - MAP.w * scale, W / 2 - fx * MAP.w * scale),
-  );
-  const ty = Math.min(
-    0,
-    Math.max(H - MAP.h * scale, H / 2 - fy * MAP.h * scale),
+  // Ken Burns in image space, as in Archival.tsx. The sheet always covers the
+  // frame, and the deepest zoom is the one the engraving can still carry: past
+  // about 1.3 screen pixels per printed pixel the street names turn to pulp,
+  // and a map nobody can read is not a map.
+  const band = zoomBand(MAP, W, H, { floor: "cover", maxUpscale: 1.3 });
+  const [z0, z1] = fitZoomRange(from.zoom, to.zoom, band);
+  const zoom = mix(z0, z1, t);
+  const { scale, tx, ty } = place(
+    MAP,
+    W,
+    H,
+    { x: mix(from.x, to.x, t), y: mix(from.y, to.y, t), zoom },
+    band,
   );
   const mapTransform = `translate(${tx}px, ${ty}px) scale(${scale})`;
 

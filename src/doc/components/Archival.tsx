@@ -2,13 +2,10 @@ import React from "react";
 import { AbsoluteFill, Img, useCurrentFrame, useVideoConfig } from "remotion";
 import { archiveSrc, type ArchiveImage } from "../archive";
 import { DOC, easeInOut, ramp } from "../theme";
+import { fitZoomRange, place, zoomBand, type Framing } from "./framing";
+import { Mount } from "./Mount";
 
-/** A framing of the image: focal point in image fractions, and a zoom over "cover". */
-export type Framing = {
-  readonly x: number;
-  readonly y: number;
-  readonly zoom: number;
-};
+export type { Framing } from "./framing";
 
 type ArchivalProps = {
   readonly image: ArchiveImage;
@@ -24,8 +21,17 @@ type ArchivalProps = {
   readonly desaturate?: number;
   readonly brightness?: number;
   readonly contrast?: number;
-  /** Fit the image to the frame by covering it (default) or containing it on a dark mount. */
-  readonly fit?: "cover" | "contain";
+  /**
+   * Largest blow-up allowed, in frame pixels per source pixel. Raise it only
+   * for a large sheet whose detail is the point, such as a map.
+   */
+  readonly maxUpscale?: number;
+  /**
+   * `mount` (default) shows a picture too small for the frame whole, on a
+   * mount of itself. `cover` fills the frame whatever it costs, for a photo
+   * used as the backdrop to a dramatisation rather than as a document.
+   */
+  readonly fill?: "mount" | "cover";
   /** Slight blur, for material that is out of focus behind something else. */
   readonly blur?: number;
   readonly style?: React.CSSProperties;
@@ -34,9 +40,15 @@ type ArchivalProps = {
 /**
  * Ken Burns over an archival image.
  *
- * The move is expressed in image space (a focal point and a zoom), so the
- * same framing works whatever the image's aspect. Zoom 1 is the smallest
- * scale that covers the frame; the focal point is what sits centre-frame.
+ * The move is expressed in image space (a focal point and a zoom), so the same
+ * framing works whatever the image's aspect. Zoom 1 is the smallest scale that
+ * covers the frame; the focal point is what sits centre-frame.
+ *
+ * What the call site asks for is a wish, not an instruction. `framing.ts` holds
+ * the move inside the band this particular scan can carry, and a picture too
+ * small to fill the frame is shown whole on a mount rather than blown up until
+ * nobody can tell what it is. The authored push survives; only its depth is
+ * traded for legibility.
  */
 export const Archival: React.FC<ArchivalProps> = ({
   image,
@@ -48,7 +60,8 @@ export const Archival: React.FC<ArchivalProps> = ({
   desaturate = 0.85,
   brightness = 0.82,
   contrast = 1.1,
-  fit = "cover",
+  maxUpscale,
+  fill = "mount",
   blur = 0,
   style,
 }) => {
@@ -57,18 +70,22 @@ export const Archival: React.FC<ArchivalProps> = ({
   const span = duration ?? durationInFrames;
   const t = easeInOut(ramp(frame, delay, delay + span));
 
-  const base =
-    fit === "cover"
-      ? Math.max(W / image.w, H / image.h)
-      : Math.min(W / image.w, H / image.h);
-  const zoom = from.zoom + (to.zoom - from.zoom) * t;
-  const fx = from.x + (to.x - from.x) * t;
-  const fy = from.y + (to.y - from.y) * t;
-  const scale = base * zoom;
-
-  // Put the focal point at frame centre.
-  const tx = W / 2 - fx * image.w * scale;
-  const ty = H / 2 - fy * image.h * scale;
+  const band = zoomBand(image, W, H, {
+    maxUpscale,
+    floor: fill === "cover" ? "cover" : "contain",
+  });
+  const [z0, z1] = fitZoomRange(from.zoom, to.zoom, band);
+  const { scale, tx, ty, covers } = place(
+    image,
+    W,
+    H,
+    {
+      x: from.x + (to.x - from.x) * t,
+      y: from.y + (to.y - from.y) * t,
+      zoom: z0 + (z1 - z0) * t,
+    },
+    band,
+  );
 
   const filter = [
     `saturate(${1 - desaturate})`,
@@ -93,6 +110,7 @@ export const Archival: React.FC<ArchivalProps> = ({
     <AbsoluteFill
       style={{ overflow: "hidden", background: DOC.black, ...style }}
     >
+      {covers ? null : <Mount image={image} />}
       <Img
         src={archiveSrc(image)}
         style={{
@@ -106,6 +124,9 @@ export const Archival: React.FC<ArchivalProps> = ({
           transformOrigin: "0 0",
           transform: `translate(${tx}px, ${ty}px) scale(${scale})`,
           filter,
+          boxShadow: covers
+            ? undefined
+            : `0 0 ${Math.round(46 / scale)}px rgba(0, 0, 0, 0.85)`,
           willChange: "transform",
         }}
       />

@@ -2,6 +2,8 @@ import React from "react";
 import { AbsoluteFill, Img, useCurrentFrame, useVideoConfig } from "remotion";
 import { ARCHIVE, archiveSrc } from "../archive";
 import { Archival } from "../components/Archival";
+import { fitZoomRange, place, zoomBand } from "../components/framing";
+import { Mount } from "../components/Mount";
 import { DOC, easeIn, easeInOut, easeOut, hash, mix, ramp } from "../theme";
 
 /** Where "Jack the Ripper" sits on the photograph of the letter's second page. */
@@ -19,32 +21,39 @@ export const DearBossLetter: React.FC<{
   readonly underlineAt?: number;
 }> = ({ signatureAt, underlineAt }) => {
   const frame = useCurrentFrame();
-  const { durationInFrames } = useVideoConfig();
+  const { width: W, height: H } = useVideoConfig();
   const toSig = easeInOut(ramp(frame, signatureAt, signatureAt + 40));
   const readT = easeInOut(ramp(frame, 0, signatureAt));
 
   // Focal points measured on the photograph: body of the text, then the
-  // "Jack the Ripper" line near the lower right.
-  const bodyY = mix(0.1, 0.3, readT);
-  const fx = mix(0.5, SIGNATURE.x, toSig);
-  const fy = mix(bodyY, SIGNATURE.y, toSig);
-  const zoom = mix(1.2, SIGNATURE.zoom, toSig);
+  // "Jack the Ripper" line near the lower right. The dive goes as deep as the
+  // photograph can carry and no deeper, so the signature arrives with the page
+  // still around it.
   const image = ARCHIVE.dearBoss;
-  const W = 1920;
-  const H = 1080;
-  const base = Math.max(W / image.w, H / image.h) * zoom;
-  const tx = W / 2 - fx * image.w * base;
-  const ty = H / 2 - fy * image.h * base;
+  const band = zoomBand(image, W, H);
+  const [zRead, zSig] = fitZoomRange(1.0, SIGNATURE.zoom, band);
+  const bodyY = mix(0.1, 0.3, readT);
+  const { scale, tx, ty, covers } = place(
+    image,
+    W,
+    H,
+    {
+      x: mix(0.5, SIGNATURE.x, toSig),
+      y: mix(bodyY, SIGNATURE.y, toSig),
+      zoom: mix(zRead, zSig, toSig),
+    },
+    band,
+  );
   const light =
     0.55 + 0.45 * easeOut(ramp(frame, 0, 50)) + (hash(frame) - 0.5) * 0.03;
   const underline =
     underlineAt === undefined
       ? 0
       : easeOut(ramp(frame, underlineAt, underlineAt + 24));
-  void durationInFrames;
 
   return (
     <AbsoluteFill style={{ overflow: "hidden", background: DOC.black }}>
+      {covers ? null : <Mount image={image} />}
       <Img
         src={archiveSrc(image)}
         style={{
@@ -56,7 +65,7 @@ export const DearBossLetter: React.FC<{
           maxWidth: "none",
           maxHeight: "none",
           transformOrigin: "0 0",
-          transform: `translate(${tx}px, ${ty}px) scale(${base})`,
+          transform: `translate(${tx}px, ${ty}px) scale(${scale})`,
           filter: `brightness(${0.62 * light}) contrast(1.15) saturate(1.25)`,
         }}
       />
@@ -71,9 +80,9 @@ export const DearBossLetter: React.FC<{
         <div
           style={{
             position: "absolute",
-            left: tx + 0.49 * image.w * base,
-            top: ty + 0.395 * image.h * base,
-            width: 0.36 * image.w * base * underline,
+            left: tx + 0.49 * image.w * scale,
+            top: ty + 0.395 * image.h * scale,
+            width: 0.36 * image.w * scale * underline,
             height: 3,
             background: DOC.red,
             opacity: 0.85,
@@ -365,14 +374,14 @@ export const Parcel: React.FC<{
 export const FromHellLetter: React.FC<{ readonly wordsAt?: number }> = ({
   wordsAt = 0,
 }) => {
-  const frame = useCurrentFrame();
-  const t = easeInOut(ramp(frame, wordsAt, wordsAt + 60));
+  // The whole sheet first, then up to the two words at the head of it.
   return (
     <Archival
       image={ARCHIVE.fromHell}
-      from={{ x: 0.5, y: 0.5, zoom: 1.3 }}
-      to={{ x: 0.5, y: mix(0.5, 0.12, t) + 0.0, zoom: mix(1.3, 2.4, t) }}
-      duration={1}
+      from={{ x: 0.5, y: 0.5, zoom: 1.0 }}
+      to={{ x: 0.5, y: 0.17, zoom: 2.2 }}
+      delay={wordsAt}
+      duration={60}
       tone="none"
       desaturate={0.15}
       brightness={0.7}

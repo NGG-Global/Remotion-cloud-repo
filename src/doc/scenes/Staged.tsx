@@ -214,6 +214,7 @@ export const LanternSearch: React.FC = () => {
         image={ARCHIVE.hanbury}
         from={{ x: 0.5, y: 0.7, zoom: 1.4 }}
         to={{ x: 0.4, y: 0.6, zoom: 1.9 }}
+        fill="cover"
         tone="cold"
         brightness={0.35}
       />
@@ -243,6 +244,7 @@ export const Interrupted: React.FC = () => {
         image={ARCHIVE.bernerStreet}
         from={{ x: 0.6, y: 0.6, zoom: 1.5 }}
         to={{ x: 0.3, y: 0.55, zoom: 1.7 }}
+        fill="cover"
         tone="cold"
         brightness={0.22}
       />
@@ -289,6 +291,7 @@ export const DoorToDoor: React.FC<{ readonly dimAt: number }> = ({ dimAt }) => {
         image={ARCHIVE.dorsetStreet}
         from={{ x: 0.6, y: 0.5, zoom: 1.2 }}
         to={{ x: 0.5, y: 0.55, zoom: 1.6 }}
+        fill="cover"
         tone="cold"
         brightness={0.35 * (1 - dim * 0.8)}
       />
