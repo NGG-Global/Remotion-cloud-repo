@@ -4,7 +4,7 @@ Animated explainer videos built as React components with Remotion. Compositions
 are written in TypeScript, previewed in the Remotion Studio, and rendered to MP4
 from the command line or CI.
 
-Currently holds episodes 1 to 8 of a Hebrew-narrated series on using Claude,
+Currently holds episodes 1 to 9 of a Hebrew-narrated series on using Claude,
 plus the scene library, graphics and interface-callout machinery the episodes
 share.
 
@@ -184,6 +184,7 @@ npx remotion render ClaudeFiles out/claude-explainer-ep5.mp4
 npx remotion render ClaudeReach out/claude-explainer-ep6.mp4
 npx remotion render ClaudeProjects out/claude-explainer-ep7.mp4
 npx remotion render ClaudeSkills out/claude-explainer-ep8.mp4
+npx remotion render ClaudeDesign out/claude-explainer-ep9.mp4
 ```
 
 ### How it is put together
@@ -379,6 +380,31 @@ overlay, which is what you want when the overlay _is_ the content. And
 because `fill` is capped by `MAX_UPSCALE`, asking for a very tight shot on a
 small control just pins it at the cap: to pull back from a control you have
 to drop `fill` below the cap, not raise it.
+
+**When the brief is "demonstrate", operate the interface on screen.** Episode 9
+teaches a working method for building a deck, and the brief was practical
+demonstrations rather than descriptions. Each decision in the method is
+therefore _done_ on screen: files are attached and requests typed into the
+real composer (the episode 5 machinery), the plus menu is opened and the
+design system picked (`ComposerMenu`), and the artifact panel is operated
+three different ways (`SlidesArtifact`) — a deck-wide edit asked for in the
+chat and landing on every thumbnail, a pointer dragging an element on the
+canvas, and a comment pinned to the exact element it is about, with the fix
+arriving there. The mockup keeps the shape of the real screen and drops its
+contents: the reference captures show a named client's deck and a roster of
+client design systems, and neither travels in a training video.
+
+Two motions in that episode are worth keeping in mind:
+
+- **Show the cost of the wrong order, not the advice.** "Fix the story before
+  the design" is advice. `DesignTooEarly` builds ten finished slides and then
+  pulls them about, strikes two and splits one; `StorylineEdit` makes the same
+  fixes to a six-line list — a row slides, a row is struck, two fold into one —
+  and the slides then form from the edited list. The viewer has watched both
+  costs and needs no sentence about which was cheaper.
+- **Reuse the episode's own artefact.** One `SlidesArtifact` carries seven
+  beats — the deck landing, three ways to refine, reviewers' pins, export —
+  so the viewer learns one screen once and then watches things happen to it.
 
 **When the subject is abstract, find the thing that varies.** Episode 8 is
 about skills, and its whole argument is a distinction — a project holds what
