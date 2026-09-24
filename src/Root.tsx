@@ -15,6 +15,10 @@ import {
   ClaudeProjects,
   CLAUDE_PROJECTS_DURATION,
 } from "./compositions/ClaudeProjects";
+import {
+  ClaudeDesign,
+  CLAUDE_DESIGN_DURATION,
+} from "./compositions/ClaudeDesign";
 import { ClaudeReach, CLAUDE_REACH_DURATION } from "./compositions/ClaudeReach";
 import {
   ClaudeSkills,
@@ -102,6 +106,13 @@ export const RemotionRoot: React.FC = () => {
         id="ClaudeSkills"
         component={ClaudeSkills}
         durationInFrames={CLAUDE_SKILLS_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="ClaudeDesign"
+        component={ClaudeDesign}
+        durationInFrames={CLAUDE_DESIGN_DURATION}
         {...FORMAT}
       />
 
