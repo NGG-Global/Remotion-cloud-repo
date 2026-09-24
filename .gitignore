@@ -17,3 +17,6 @@ out
 .env
 .env.local
 *.log
+
+# Alignment diagnostics written by tools/align-srt.mjs
+*.aligned.json
