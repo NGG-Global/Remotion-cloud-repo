@@ -31,6 +31,7 @@ import {
 } from "./dev/RegionCheck";
 import { UIKitDemo } from "./dev/UIKitDemo";
 import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
+import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
 import { FORMAT, seconds } from "./theme";
 
@@ -89,6 +90,13 @@ export const RemotionRoot: React.FC = () => {
         id="JackTheRipper"
         component={JackTheRipper}
         durationInFrames={JACK_THE_RIPPER_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="GacyDocumentary"
+        component={GacyDocumentary}
+        durationInFrames={GACY_DURATION}
         {...FORMAT}
       />
 
