@@ -329,3 +329,26 @@ export const Bicycle: React.FC<{ readonly x: number; readonly light?: Light; rea
     </g>
   );
 };
+
+/** Handcuffs lying flat, world scale (a cuff is ~14 units across). */
+export const Handcuffs: React.FC<{ readonly x: number; readonly y: number; readonly light?: Light; readonly rot?: number; readonly s?: number }> = ({
+  x,
+  y,
+  light = NEUTRAL,
+  rot = 0,
+  s = 1,
+}) => {
+  const steel = lit("#c8ccd2", light);
+  const dark = lit("#6a6e74", light);
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
+      <ellipse cx={0} cy={6} rx={26} ry={5} fill="#000" opacity={0.35} />
+      <ellipse cx={-13} cy={0} rx={10} ry={4} fill="none" stroke={steel} strokeWidth={2.6} />
+      <ellipse cx={13} cy={0} rx={10} ry={4} fill="none" stroke={steel} strokeWidth={2.6} />
+      <path d="M-4 0 L4 0" stroke={dark} strokeWidth={2} strokeDasharray="1.5 1" />
+      <rect x={-22} y={-3} width={5} height={6} fill={dark} />
+      <rect x={17} y={-3} width={5} height={6} fill={dark} />
+      <path d="M-20 -2 L-8 -3" stroke="#fff" strokeWidth={1} opacity={0.35} />
+    </g>
+  );
+};

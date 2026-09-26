@@ -27,6 +27,8 @@ import {
   Release,
   SignsAndMap,
 } from "../shots/EarlyLife";
+import { BigParty, Business, ClownBoard, InHindsight, Mirror, Parade, PhotoOp } from "../shots/PublicLife";
+import { Flyers, Handcuff, PathDiner, PathStation, PathWork, UnderTheHouse } from "../shots/Vanishings";
 
 /**
  * Master timeline.
@@ -78,10 +80,25 @@ export const SHOTS: readonly ShotSpec[] = [
   { id: "moving-in", at: 121.3, C: MovingIn },
   { id: "nowhere", at: 125.0, C: Nowhere },
   { id: "in-front", at: 128.3, C: InFront },
+  // Public life and Pogo
+  { id: "business", at: 130.5, C: Business },
+  { id: "parade", at: 135.75, C: Parade },
+  { id: "big-party", at: 140.4, C: BigParty },
+  { id: "mirror", at: 142.9, C: Mirror },
+  { id: "photo-op", at: 152.2, C: PhotoOp },
+  { id: "clown-board", at: 158.2, C: ClownBoard },
+  { id: "in-hindsight", at: 167.4, C: InHindsight },
+  // The disappearances
+  { id: "flyers", at: 175.75, C: Flyers, enter: { kind: "fromBlack", s: 0.6 } },
+  { id: "path-work", at: 183.0, C: PathWork },
+  { id: "path-diner", at: 185.3, C: PathDiner },
+  { id: "path-station", at: 187.2, C: PathStation },
+  { id: "handcuffs", at: 189.6, C: Handcuff },
+  { id: "under-the-house", at: 201.2, C: UnderTheHouse, enter: { kind: "fromBlack", s: 1.2 } },
 ];
 
 /** Where the rebuilt cut currently ends; the draft's scenes cover the rest. */
-export const REBUILT_UNTIL = 130.5;
+export const REBUILT_UNTIL = 222.8;
 
 export type WipeSpec = {
   readonly at: number;
@@ -100,6 +117,11 @@ export const WIPES: readonly WipeSpec[] = [
   { at: 46.55, kind: "trunk", dur: 1.0, dir: -1 },
   { at: 111.9, kind: "dark", dur: 0.5 },
   { at: 121.3, kind: "van", dur: 0.9, dir: 1, tone: "#b8bcc0" },
+  { at: 135.75, kind: "passerby", dur: 0.8, dir: -1 },
+  { at: 142.9, kind: "dark", dur: 0.6 },
+  { at: 158.2, kind: "flash", dur: 0.3, tone: "#fff8e8" },
+  { at: 185.3, kind: "trunk", dur: 0.7, dir: 1 },
+  { at: 187.2, kind: "trunk", dur: 0.7, dir: 1 },
 ];
 
 export type LabelSpec = {
@@ -114,6 +136,8 @@ export const LABELS: readonly LabelSpec[] = [
   { from: 67.7, to: 70.9, line: "שיקגו", sub: "1942" },
   { from: 106.6, to: 110.9, line: "1968" },
   { from: 117.3, to: 120.8, line: "1970" },
+  { from: 146.8, to: 150.6, line: "Pogo the Clown" },
+  { from: 176.3, to: 182.4, line: "1972 – 1978" },
 ];
 
 export const shotEnd = (i: number): number =>

@@ -25,6 +25,9 @@ export const Label: React.FC<{
     return null;
   }
   const color = tone === "light" ? "#f2ece0" : "#1c1712";
+  // Digits and Latin names are set left-to-right: in an RTL run the bidi
+  // algorithm would otherwise print "1972 – 1978" as "1978 – 1972".
+  const dir = (s: string) => (/[\u0590-\u05FF]/.test(s) ? "rtl" : "ltr");
   const rule = tone === "light" ? "#d9a45a" : "#8a5a2a";
   const pos: React.CSSProperties =
     corner === "br"
@@ -52,7 +55,7 @@ export const Label: React.FC<{
             fontWeight: 500,
             fontSize: 50,
             color,
-            direction: "rtl",
+            direction: dir(line),
             lineHeight: 1.05,
             textShadow: tone === "light" ? "0 2px 20px rgba(0,0,0,0.6)" : "none",
             whiteSpace: "nowrap",
@@ -69,7 +72,7 @@ export const Label: React.FC<{
               letterSpacing: 2,
               color,
               opacity: 0.78,
-              direction: "rtl",
+              direction: dir(sub),
               textShadow: tone === "light" ? "0 2px 16px rgba(0,0,0,0.6)" : "none",
               whiteSpace: "nowrap",
             }}

@@ -535,7 +535,7 @@ export const BackyardParty: React.FC<{ readonly wide?: boolean }> = ({ wide = fa
   const { t } = useShot();
   const L: Light = { key: "#ffc890", ambient: "#2a1e22", amb: 0.22, desat: 0.05 };
   const cam = wide
-    ? { x: keys(t, [[0, -300], [6, 300]]), y: -420, zoom: 0.55 }
+    ? { x: keys(t, [[0, -300], [6, 300]]), y: -440, zoom: 0.85 }
     : { x: keys(t, [[0, -40], [1.8, 120]]), y: -440, zoom: 1.35 };
   const laugh = Math.max(0, Math.sin(t * 5)) * 0.5;
   return (
