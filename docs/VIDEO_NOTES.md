@@ -11,14 +11,19 @@ Illustrated episode for the Hebrew narration of *מאחורי הסיוט: John W
 | Audio used by Remotion | `public/audio/gacy-narration.mp3` (copy of that file) |
 | Source script | `John_Wayne_Gacy_ElevenLabs.pdf` (untouched) |
 | FPS | 30 |
-| Resolution | 1920×1080 |
+| Composition size | 1920×1080 |
+| Delivery file | 1280×720 (`--scale=0.6666666666666666`) |
 | Duration | 645.30 seconds (the narration), 19360 frames |
 
 ## Render
 
+The composition is authored at 1920×1080. This delivery render scales it to 720p:
+
 ```bash
-npx remotion render GacyDocumentary out/gacy-documentary.mp4
+npx remotion render GacyDocumentary out/gacy-documentary.mp4 --scale=0.6666666666666666
 ```
+
+That scale is exactly 720/1080, so the file is 1280×720. Omit `--scale` for a 1080p file.
 
 Preview:
 
