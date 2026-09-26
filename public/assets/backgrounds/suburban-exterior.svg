@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#8ec8ef"/>
+  <rect y="640" width="1920" height="440" fill="#7eae52"/>
+  <rect y="820" width="1920" height="70" fill="#d9d3c8"/>
+  <rect y="890" width="1920" height="190" fill="#8e949b"/>
+  <rect x="180" y="760" width="70" height="28" fill="#c5bfb4"/>
+  <rect x="1680" y="760" width="70" height="28" fill="#c5bfb4"/>
+  <circle cx="1680" cy="170" r="74" fill="#ffe08a"/>
+  <rect x="250" y="560" width="34" height="230" fill="#6b4632"/>
+  <circle cx="267" cy="500" r="120" fill="#3d7a3c"/>
+  <circle cx="210" cy="540" r="70" fill="#4d8a48"/>
+  <rect x="640" y="430" width="700" height="430" fill="#f3eee4"/>
+  <polygon points="580,450 990,230 1400,450" fill="#8d4b38"/>
+  <rect x="900" y="620" width="130" height="240" fill="#6a432f"/>
+  <circle cx="1008" cy="740" r="6" fill="#e6c56a"/>
+  <rect x="720" y="510" width="150" height="120" fill="#d5eef8" stroke="#f7f4ee" stroke-width="10"/>
+  <rect x="1100" y="510" width="150" height="120" fill="#d5eef8" stroke="#f7f4ee" stroke-width="10"/>
+  <rect x="1120" y="360" width="28" height="70" fill="#6d5348"/>
+</svg>

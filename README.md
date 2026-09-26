@@ -111,9 +111,22 @@ tools/
   transcribe.mjs    Narration -> timed script, locally via whisper.cpp.
 out/                Render output (git-ignored).
 remotion.config.ts  CLI and Studio configuration.
+docs/ASSET_SYSTEM.md  How to compose scenes from the asset registry.
 ```
 
-### Adding a video
+## Reusable asset library
+
+New scenes should place registered characters, backgrounds, props, and animations instead of drawing one-off art. The catalogue is `src/assets/registry.ts`. Components and presets are exported from `src/library.ts`. The `AssetPlayground` composition shows what is actually available.
+
+```bash
+npm run assets:validate
+npm run preflight
+npm run asset:add -- --help
+```
+
+See `docs/ASSET_SYSTEM.md`. Agent instructions for this library live in `.agents/skills/remotion-asset-library/SKILL.md`, next to the official Remotion skills installed by `npx remotion skills add`.
+
+## Adding a video
 
 1. Create a component in `src/compositions/`.
 2. Register it in `src/Root.tsx` with a `<Composition>` entry — the `id` you give
@@ -165,13 +178,13 @@ interpolated colour) has to be an inline style.
 
 ## The Claude explainer series
 
-| Composition     | Episode | Length | Subject                                                         |
-| --------------- | ------- | ------ | --------------------------------------------------------------- |
-| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it    |
-| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings  |
-| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see |
-| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft |
-| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts |
+| Composition     | Episode | Length | Subject                                                               |
+| --------------- | ------- | ------ | --------------------------------------------------------------------- |
+| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it          |
+| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings        |
+| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see       |
+| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft       |
+| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts       |
 | `ClaudeReach`   | 6       | 3:04   | Pulling from Microsoft 365 by asking, and the Teams-transcript caveat |
 
 ```bash

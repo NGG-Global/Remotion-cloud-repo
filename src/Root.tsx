@@ -32,6 +32,14 @@ import {
 import { UIKitDemo } from "./dev/UIKitDemo";
 import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
+import {
+  ASSET_PLAYGROUND_DURATION,
+  AssetPlayground,
+} from "./compositions/AssetPlayground";
+import {
+  ASSET_SCENE_DEMO_DURATION,
+  AssetSceneDemo,
+} from "./compositions/AssetSceneDemo";
 import { FORMAT, seconds } from "./theme";
 
 /**
@@ -143,6 +151,20 @@ export const RemotionRoot: React.FC = () => {
         id="TinyTempoAd"
         component={TinyTempoAd}
         durationInFrames={TINY_TEMPO_AD_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="AssetPlayground"
+        component={AssetPlayground}
+        durationInFrames={ASSET_PLAYGROUND_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="AssetSceneDemo"
+        component={AssetSceneDemo}
+        durationInFrames={ASSET_SCENE_DEMO_DURATION}
         {...FORMAT}
       />
     </>

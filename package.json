@@ -19,13 +19,20 @@
     "studio": "remotion studio",
     "transcribe": "node tools/transcribe.mjs",
     "typecheck": "tsc",
-    "upgrade-remotion": "remotion upgrade"
+    "upgrade-remotion": "remotion upgrade",
+    "asset:add": "tsx scripts/add-asset.ts",
+    "assets:validate": "tsx scripts/validate-assets.ts",
+    "preflight": "tsx scripts/preflight.ts"
   },
   "dependencies": {
     "@react-three/fiber": "^9.7.0",
     "@remotion/cli": "4.0.522",
     "@remotion/fonts": "4.0.522",
+    "@remotion/lottie": "4.0.522",
     "@remotion/media-parser": "^4.0.522",
+    "@remotion/paths": "4.0.522",
+    "@remotion/rive": "4.0.522",
+    "@remotion/shapes": "4.0.522",
     "@remotion/tailwind-v4": "4.0.522",
     "@remotion/three": "^4.0.522",
     "@remotion/transitions": "4.0.522",
@@ -45,6 +52,7 @@
     "@types/web": "0.0.166",
     "eslint": "9.19.0",
     "prettier": "3.8.1",
+    "tsx": "4.20.6",
     "typescript": "5.9.3"
   },
   "sideEffects": [
