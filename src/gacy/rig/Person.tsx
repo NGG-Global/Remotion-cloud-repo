@@ -15,7 +15,7 @@ import { STAND, type Pose } from "./pose";
  * a room full of people cheap to render and consistent with the sets.
  */
 
-export type Build = "slim" | "average" | "stocky" | "heavy";
+export type Build = "slim" | "average" | "stocky" | "heavy" | "child";
 
 export type HairStyle =
   | "gacy"
@@ -105,6 +105,25 @@ const dimsFor = (build: Build, fem: boolean): Dims => {
     Object.assign(base, { sh: 43, waist: 37, hipW: 34, belly: 14, arm: 11.5, leg: 15, neckW: 13, head: 1.06, neck: 6 });
   } else if (build === "heavy") {
     Object.assign(base, { sh: 45, waist: 42, hipW: 38, belly: 20, arm: 12.5, leg: 16, neckW: 14, head: 1.08, neck: 6 });
+  }
+  if (build === "child") {
+    Object.assign(base, {
+      hip: 112,
+      torso: 78,
+      neck: 8,
+      thigh: 56,
+      shin: 50,
+      upper: 40,
+      fore: 36,
+      sh: 25,
+      waist: 20,
+      hipW: 20,
+      belly: 2,
+      arm: 7,
+      leg: 9,
+      neckW: 6,
+      head: 1.18,
+    });
   }
   if (fem) {
     Object.assign(base, {

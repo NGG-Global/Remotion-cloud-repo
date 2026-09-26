@@ -14,6 +14,19 @@ import {
   Screens,
   StreetPush,
 } from "../shots/Opening";
+import {
+  Album,
+  Cell,
+  Chicago1942,
+  Conviction,
+  InFront,
+  IowaLife,
+  MovingIn,
+  NoMoment,
+  Nowhere,
+  Release,
+  SignsAndMap,
+} from "../shots/EarlyLife";
 
 /**
  * Master timeline.
@@ -53,10 +66,22 @@ export const SHOTS: readonly ShotSpec[] = [
   { id: "hall", at: 41.75, C: Hall },
   { id: "crew", at: 43.6, C: Crew },
   { id: "descent", at: 46.55, C: Descent, exit: { kind: "toBlack", s: 0.7 } },
+  // Chicago, childhood, Iowa, prison, return
+  { id: "chicago-1942", at: 66.95, C: Chicago1942, enter: { kind: "fromBlack", s: 0.8 } },
+  { id: "album", at: 71.0, C: Album },
+  { id: "no-moment", at: 80.2, C: NoMoment },
+  { id: "signs-map", at: 87.6, C: SignsAndMap },
+  { id: "iowa", at: 98.7, C: IowaLife },
+  { id: "conviction", at: 105.5, C: Conviction },
+  { id: "cell", at: 111.9, C: Cell },
+  { id: "release", at: 116.5, C: Release },
+  { id: "moving-in", at: 121.3, C: MovingIn },
+  { id: "nowhere", at: 125.0, C: Nowhere },
+  { id: "in-front", at: 128.3, C: InFront },
 ];
 
 /** Where the rebuilt cut currently ends; the draft's scenes cover the rest. */
-export const REBUILT_UNTIL = 66.95;
+export const REBUILT_UNTIL = 130.5;
 
 export type WipeSpec = {
   readonly at: number;
@@ -73,6 +98,8 @@ export const WIPES: readonly WipeSpec[] = [
   { at: 41.75, kind: "passerby", dur: 0.8, dir: 1 },
   { at: 43.6, kind: "flash", dur: 0.5 },
   { at: 46.55, kind: "trunk", dur: 1.0, dir: -1 },
+  { at: 111.9, kind: "dark", dur: 0.5 },
+  { at: 121.3, kind: "van", dur: 0.9, dir: 1, tone: "#b8bcc0" },
 ];
 
 export type LabelSpec = {
@@ -84,6 +111,9 @@ export type LabelSpec = {
 
 export const LABELS: readonly LabelSpec[] = [
   { from: 36.45, to: 39.7, line: "ג׳ון וויין גייסי" },
+  { from: 67.7, to: 70.9, line: "שיקגו", sub: "1942" },
+  { from: 106.6, to: 110.9, line: "1968" },
+  { from: 117.3, to: 120.8, line: "1970" },
 ];
 
 export const shotEnd = (i: number): number =>

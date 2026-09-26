@@ -301,3 +301,31 @@ export const Crowd: React.FC<{
 );
 
 
+
+/** A child's bicycle in side view; wheels roll with x. */
+export const Bicycle: React.FC<{ readonly x: number; readonly light?: Light; readonly color?: string }> = ({
+  x,
+  light = NEUTRAL,
+  color = "#3a6a9a",
+}) => {
+  const L = (c: string) => lit(c, light);
+  const r = 44;
+  const roll = (x / r) * (180 / Math.PI);
+  const wheel = (cx: number) => (
+    <g transform={`translate(${cx} ${-r})`}>
+      <circle r={r} fill="none" stroke={L("#1a1a1a")} strokeWidth={6} />
+      <g transform={`rotate(${roll})`} stroke={L("#9a9a9a")} strokeWidth={1.5}>
+        <path d={`M${-r} 0 L${r} 0 M0 ${-r} L0 ${r}`} />
+      </g>
+    </g>
+  );
+  return (
+    <g transform={`translate(${x} 0)`}>
+      {wheel(-60)}
+      {wheel(70)}
+      <path d={`M-60 ${-r} L-10 ${-r - 70} L50 ${-r - 70} L70 ${-r} M-10 ${-r - 70} L0 ${-r} L-60 ${-r} M50 ${-r - 70} L56 ${-r - 100}`} stroke={L(color)} strokeWidth={7} fill="none" strokeLinejoin="round" />
+      <rect x={-26} y={-r - 84} width={34} height={8} rx={4} fill={L("#1a1a1a")} />
+      <path d={`M46 ${-r - 104} L70 ${-r - 108}`} stroke={L("#2a2a2a")} strokeWidth={6} strokeLinecap="round" />
+    </g>
+  );
+};
