@@ -236,7 +236,7 @@ export const DefenseArgues: React.FC = () => {
 export const JackSketch: React.FC = () => {
   const { t, dur } = useShot();
   const ghost = ramp(t, 2.6, 4.0, EASE.inOut);
-  const cam = { x: keys(t, [[0, -60], [dur, 40]]), y: keys(t, [[0, -300], [dur, -320]]), zoom: keys(t, [[0, 2.0], [dur, 2.25]], EASE.drift) };
+  const cam = { x: keys(t, [[0, -30], [dur, 50]]), y: keys(t, [[0, -190], [dur, -205]]), zoom: keys(t, [[0, 2.35], [dur, 2.6]], EASE.drift) };
   const paper = "#efe6d2";
   return (
     <AbsoluteFill>
@@ -253,8 +253,11 @@ export const JackSketch: React.FC = () => {
             <Person x={170} y={0} look={{ ...GACY_SUIT, hair: "short", jowls: 0.8 }} mode="sketch" light={SKETCH} pose={seated(t, 9, { turn: -0.8, brow: -0.8 })} />
           </g>
           <rect x={-620} y={-10} width={1000} height={6} fill="#3a332c" opacity={0.5} />
+          {/* the defence table, sketched in front of him */}
+          <rect x={-470} y={-150} width={900} height={150} fill={paper} opacity={0.55} />
+          <path d="M-480 -150 L440 -150 M-460 -150 L-460 -4 M420 -150 L420 -4 M-330 -162 L-190 -160" stroke="#3a332c" strokeWidth={3} opacity={0.55} fill="none" />
           {ghost > 0.4 ? (
-            <text x={300} y={-440} fontFamily="Frank Ruhl Libre, serif" fontStyle="italic" fontSize={46} fill="#3a332c" opacity={(ghost - 0.4) * 1.4}>
+            <text x={250} y={-330} fontFamily="Frank Ruhl Libre, serif" fontStyle="italic" fontSize={46} fill="#3a332c" opacity={(ghost - 0.4) * 1.4}>
               “Jack”
             </text>
           ) : null}

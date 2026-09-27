@@ -321,7 +321,9 @@ export const Screens: React.FC = () => {
     zoom: keys(t, [[0, 0.95], [4.7, 1.25], [9.5, 1.85]], EASE.drift),
   };
   const glow = 1 - off;
-  const tvLight: Light = { key: lerp(0, 1, off) > 0.5 ? "#c8b49a" : "#b8c8e8", ambient: "#07080c", amb: lerp(0.5, 0.72, off), desat: 0.4 };
+  // When the Hollywood image dies, an ordinary lamp comes on: the room is just a room.
+  const lamp = ramp(t, 5.4, 6.0, EASE.out);
+  const tvLight: Light = { key: off > 0.5 ? "#dcbc94" : "#b8c8e8", ambient: "#07080c", amb: lerp(0.5, lerp(0.72, 0.34, lamp), off), desat: lerp(0.4, 0.2, lamp) };
   const L = (c: string) => lit(c, tvLight);
   const tvW = 760;
   const tvH = 430;
@@ -365,6 +367,9 @@ export const Screens: React.FC = () => {
           <Pool x={0} y={40} rx={1600} ry={140} color="#b8c8f0" opacity={0.25 * glow} />
           <TableLamp x={-1750} y={-150} on={lerp(0.35, 0.8, off)} light={tvLight} />
           <rect x={-1830} y={-150} width={170} height={150} fill={L("#2a2420")} />
+          <rect x={530} y={-150} width={180} height={150} fill={L("#2a2420")} />
+          <TableLamp x={620} y={-150} on={lamp} light={tvLight} />
+          {lamp > 0 ? <Pool x={620} y={-300} rx={1000} ry={600} color="#ffd8a0" opacity={0.3 * lamp} /> : null}
         </Plane>
         <Plane d={-4.2}>
           {/* the viewer on the couch, back to us */}

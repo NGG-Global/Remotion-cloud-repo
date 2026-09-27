@@ -84,4 +84,80 @@ Everything else under `src/gacy/` failed on the rendered result, and the rig and
 
 ## Part 2: What changed
 
-_Filled in at the end of the repair; see below._
+### Approach
+
+Part 1 traced the slideshow look (V1–V5) to the rig and the sets. Patching them would not have fixed it, so the picture was rebuilt: a new camera, a new character rig, new sets, and one component per shot. The timeline idea, the fonts and the editorial rules were kept.
+
+The draft's code is kept in the tree, unchanged, under `src/gacy/legacy/` for before-and-after comparison. Nothing imports it, and no composition renders it. It can be removed in review.
+
+### What the film is built from now
+
+| Layer | Where | What it does |
+| --- | --- | --- |
+| Timeline | `src/gacy/data/timeline.ts` | `SHOTS` (100 shots: id, start in seconds, component, entrance, exit), `WIPES` (35 object wipes), `LABELS` (15 labels). Every time is seconds into the MP3. |
+| Shot clock | `src/gacy/engine/shot.tsx` | Each shot gets `t` = seconds since its narration start, so every beat inside a shot is written against the voice, not against a fraction of the scene. |
+| Camera | `src/gacy/engine/camera.tsx` | A multiplane pinhole camera at world scale (200 units per metre). Planes scale and move by their depth, so parallax, occlusion and push-ins come from one camera move. Ground is projected between depths, not drawn as a flat band. |
+| Look | `src/gacy/engine/look.tsx`, `color.ts` | Per-shot light (`lit()`), grain, vignette, haze, and a Super 8 treatment for home-movie material. |
+| Wipes | `src/gacy/engine/wipes.tsx` | Transitions carried by objects crossing the lens (a van, a passer-by, a car trunk, a folder, a floorboard, a door, a torch beam, a camera flash, darkness). |
+| Characters | `src/gacy/rig/` | A forward-kinematics rig with two-bone IK arms. Three views, builds from child to heavy, hair and clothing, idle breathing and blinks, talking, gestures, a walk cycle whose stride matches the distance covered (no foot sliding), sitting, kneeling, crawling, carrying, digging. Silhouette and court-sketch modes. The cast is in `cast.ts`. |
+| Sets and props | `src/gacy/kit/` | The suburb and the Gacy house, the house cross-section with the crawl space, interiors, the pharmacy, the police station, a car interior, the courtroom, the archive and the DNA lab, paper inserts (files, photos, receipt, notebook), vehicles, sky and light. |
+| Shots | `src/gacy/shots/` | Eleven files, one per act: `Opening`, `EarlyLife`, `PublicLife`, `Vanishings`, `Underneath`, `Piest`, `Investigation`, `Discovery`, `Trial`, `Ending`. |
+
+### Timing
+
+- The cut is re-timed from the local word timestamps and the measured voice envelope (Part 1). Every one of the 99 cuts sits inside a measured pause or a word gap, so no shot changes in the middle of a word.
+- Shots average 6.45 s. The shortest (0.9–1.7 s) are the home-movie run at 10:18 ("ordinary man, contractor, employer, neighbour, host"), cut word by word. The longest (15–22 s) are the continuous camera moves: the descent into the crawl space, the crawl-space tour, the smell sequence.
+- Transitions: 35 object wipes, 7 dissolves, 15 fades up from black (most after a fade to black at the end of an act), and straight cuts elsewhere.
+- The composition is still `ceil(645.302857 × 30) = 19360` frames, and `public/audio/gacy-narration.mp3` is still a byte-identical copy of the root MP3. Neither source file in the repo root was modified.
+
+### Status of each finding
+
+| # | Status | What changed |
+| --- | --- | --- |
+| T1 | Fixed | Sets extend past every camera move. 500 stills (five per shot) show no void frames. The only near-black frames are the deliberate fades at act breaks. |
+| T2 | Fixed | No finite backdrop is framed past its edge. Ground planes are projected and clipped at the lens. |
+| T3 | Fixed | All boundaries moved into measured pauses. The pharmacy now appears at 296.8 s, after "…worked there". The Chicago, Iowa and business beats follow the words. |
+| T4 | Fixed | Every beat is its own shot with a defined entrance. Motion inside a shot is keyed to narration time and eased. |
+| T5 | Fixed | The stage draws planes back to front by depth. Characters are placed on planes, not drawn over sets. |
+| T6 | Fixed | One world scale: 2.5 m walls, people 1.3–1.9 m, cars and vans at real size, paper at insert scale. |
+| T7 | Fixed | Labels are light serif type in the bottom-right title-safe area. Every label has a soft shadow, so it also holds on light backgrounds. |
+| T8 | Fixed | Most shots have three to six depth planes: background, set, characters, foreground and atmosphere. |
+| T9 | Fixed | Wheels rotate by the distance the vehicle travels. |
+| T10 | Fixed | The draft's dead geometry is no longer rendered. |
+| V1 | Fixed | Shots are staged with a camera move, a foreground and a lit set. Five-frame checks per shot show change within every shot. |
+| V2 | Fixed | New rig (see above). People walk to places, reach for things, carry boxes, shake hands, turn their heads, sit, kneel and dig. |
+| V3 | Fixed | Depth planes, occlusion, light pools, haze and vignettes. |
+| V4 | Fixed | Events are staged instead of symbolised: a receipt found in a kitchen, a warrant signed, a hatch opened with a torch, a verdict slip passed, a file stamped and boxed, a DNA trace and a family tree on a lab screen. |
+| V5 | Fixed | Sets rebuilt with furniture, fixtures and practical light: the pharmacy (counter, shelves, clock, door), the courtroom (bench, witness box, jury box, counsel tables, gallery), the crawl space (joists, soil, vents, trenches). |
+| V6 | Fixed | Dark passages now carry a lit subject: a lamp, a torch beam, a window or a vigil candle. |
+| V7 | Fixed | The suburb set is reused for continuity, but at different times of day, seasons, heights and distances. |
+| S1 | Fixed | The opening pushes down a night street to the house, sees the ordinary day (paper, van, party, handshake, job site), then drops through the floor, past the pipes, into the crawl space, and rises back to the lit street under the title. |
+| S2 | Fixed | The ending is the identification work: the file reopened in 2011, eight blank files, the DNA lab, three names typed, five files left blank. The last shot is those five files under a lamp. The Pogo photo is turned face down before it. |
+| S3 | Fixed | Robert Piest at work, his mother arriving, the conversation, the summer job, "a few minutes", then the wait: the clock, the counter and the empty entrance. Nothing that happened to him is shown. |
+| S4 | Fixed | The investigation is 14 shots, most of them short: report, notebook, filing cabinet, the Iowa record, warrant, search, receipt, "not letting go", stakeout, the invitation inside, the smell, the decision to go back, the police return. |
+| S5 | Fixed | The smell is its own quiet beat: one officer stops mid-conversation, the room loses colour and darkens around him, and the camera drops to the heating register, where a faint haze rises. |
+| S6 | Fixed | The hatch is opened and searched by torchlight. Markers appear one at a time, then more, then the full count across the plan. "33" appears briefly and dissolves into 33 standing silhouettes. |
+| S7 | Fixed | The workers digging the "drainage" trenches and the police dig use the same framing (`TRENCH_CAM` in `shots/Underneath.tsx`). |
+| S8 | Fixed | The makeup is applied by hand at a dressing table. The Pogo section is built on the mirror: the camera finds Gacy's reflection turning into Pogo. |
+| S9 | Fixed | There is no subscribe caption. The channel ask plays over the cinema sequence, with no text. |
+| S10 | Fixed | Minor facts get short shots, and the turn "he did it in front of everyone" gets its own shot (`in-front`). |
+| S11 | Fixed | Each date appears once, as a label, on the beat where the voice says it. |
+
+### Editorial choices
+
+- **Text.** 15 labels in the whole film, each one to three words: names, places, dates, the number 5. Other words on screen are props inside the picture (a shop sign, a folder tab, a stamp, the three names typed on files). There are no subtitles and no sentences.
+- **The clown.** Pogo appears only where the narration talks about the costume or its image: the opening home movie and makeup, the Hollywood version on TV, the costume in the closet, the mirror, the public appearances, the corkboard of 1970s clowns, the drive-in, the news graphic and posters near the end, and the photo turned face down. Everywhere else Gacy is an ordinary heavyset man.
+- **Victims.** No victim has a face. Missing-person flyers carry a blank silhouette, the "33" beat is anonymous silhouettes, and the unidentified victims appear only as files with a blank card. A card warms when a name is typed on it.
+- **Violence.** No murder, no body and no execution is shown. The crawl space shows soil, trenches and markers. The execution is a candle vigil outside the prison wall on 10 May 1994.
+
+### Limitations
+
+- **Illustration, not reconstruction.** Sets, floor plans, the hatch position, the police-car livery, the courtroom, the archive, the lab and every face are illustrative. None of them is based on a photograph or a record. The 2011 investigator is a composite character.
+- **Facts that may have changed.** The count of unidentified victims (five) and the three names follow the script. Identifications have continued since 2011, so these should be checked against the Cook County Sheriff's Office before publication. The DNA trace and the family tree on the lab screen are generic illustrations, not case data.
+- **No stated times.** Clocks in the pharmacy and the jury room have no numerals and do not show a particular time, because the script gives none.
+- **Lip movement.** Mouths move when a character talks, but they are not synced to any speech. No dialogue is heard; the narration is voice-over.
+- **Reused shots.** The home-movie run at 10:18 deliberately replays four opening shots through the Super 8 filter, as a callback. One clip (the neighbour at the fence) is new.
+- **Render cost.** A 1080p frame takes about 1.6 s to render in this 4-core container. The full film is 19360 frames, so a full-resolution render takes several hours here. `docs/VIDEO_QA.md` lists what was rendered and how long it took.
+- **Dark passages.** Night, crawl-space and prison shots are dark by design. They were checked on the stills, but they should also be watched on the target display.
+- **Draft code.** The draft is kept in `src/gacy/legacy/` (see Approach). It still passes the type check and the linter, but no composition uses it.
+

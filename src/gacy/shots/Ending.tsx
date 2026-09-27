@@ -628,7 +628,7 @@ const homeClip = (C: React.FC, offset: number): React.FC => {
   return Clip;
 };
 
-export const SawOrdinary = homeClip(Morning, 0.9);
+export const SawOrdinary = homeClip(Morning, 5.6);
 export const SawContractor = homeClip(Driveway, 0.9);
 export const SawEmployer = homeClip(Crew, 0.2);
 /** Over the back fence with the neighbour: the one new clip in the home-movie run. */
