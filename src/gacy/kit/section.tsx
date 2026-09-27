@@ -224,7 +224,7 @@ export const HouseSection: React.FC<{
         return (
           <g key={i} opacity={k}>
             <ellipse cx={p.x} cy={p.y + 4} rx={p.w / 2 + 6} ry={8} fill={C("#241a12")} opacity={0.7} />
-            <path d={`M${p.x - p.w / 2} ${p.y + 2} Q${p.x - p.w * 0.25} ${p.y - 12} ${p.x} ${p.y - 10} Q${p.x + p.w * 0.3} ${p.y - 12} ${p.x + p.w / 2} ${p.y + 2} Z`} fill={C("#5a4532")} />
+            <path d={`M${p.x - p.w / 2} ${p.y + 2} Q${p.x - p.w * 0.25} ${p.y - 12} ${p.x} ${p.y - 10} Q${p.x + p.w * 0.3} ${p.y - 12} ${p.x + p.w / 2} ${p.y + 2} Z`} fill={C("#6e5640")} />
             <path d={`M${p.x - p.w * 0.3} ${p.y - 5} Q${p.x} ${p.y - 12} ${p.x + p.w * 0.25} ${p.y - 6}`} stroke={C("#6e5840")} strokeWidth={3} fill="none" />
             {[0, 1, 2, 3].map((j) => (
               <circle key={j} cx={p.x - p.w * 0.35 + j * p.w * 0.22} cy={p.y - 2 + (j % 2) * 3} r={2.5} fill={C("#3a2c20")} />

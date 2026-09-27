@@ -29,6 +29,7 @@ import {
 } from "../shots/EarlyLife";
 import { BigParty, Business, ClownBoard, InHindsight, Mirror, Parade, PhotoOp } from "../shots/PublicLife";
 import { Flyers, Handcuff, PathDiner, PathStation, PathWork, UnderTheHouse } from "../shots/Vanishings";
+import { Burials, CastleShot, CrawlTour, OrdinaryHouse, Smell, Trenches } from "../shots/Underneath";
 
 /**
  * Master timeline.
@@ -95,10 +96,17 @@ export const SHOTS: readonly ShotSpec[] = [
   { id: "path-station", at: 187.2, C: PathStation },
   { id: "handcuffs", at: 189.6, C: Handcuff },
   { id: "under-the-house", at: 201.2, C: UnderTheHouse, enter: { kind: "fromBlack", s: 1.2 } },
+  // The crawl space
+  { id: "crawl-tour", at: 222.8, C: CrawlTour, enter: { kind: "dissolve", s: 0.8 } },
+  { id: "burials", at: 237.7, C: Burials, enter: { kind: "dissolve", s: 0.6 } },
+  { id: "trenches", at: 244.9, C: Trenches, enter: { kind: "fromBlack", s: 0.5 } },
+  { id: "smell", at: 256.9, C: Smell },
+  { id: "castle", at: 273.2, C: CastleShot, enter: { kind: "fromBlack", s: 0.8 } },
+  { id: "ordinary-house", at: 285.3, C: OrdinaryHouse },
 ];
 
 /** Where the rebuilt cut currently ends; the draft's scenes cover the rest. */
-export const REBUILT_UNTIL = 222.8;
+export const REBUILT_UNTIL = 296.8;
 
 export type WipeSpec = {
   readonly at: number;
@@ -122,6 +130,8 @@ export const WIPES: readonly WipeSpec[] = [
   { at: 158.2, kind: "flash", dur: 0.3, tone: "#fff8e8" },
   { at: 185.3, kind: "trunk", dur: 0.7, dir: 1 },
   { at: 187.2, kind: "trunk", dur: 0.7, dir: 1 },
+  { at: 256.9, kind: "floor", dur: 1.0 },
+  { at: 287.25, kind: "flash", dur: 0.5, tone: "#e8eeff" },
 ];
 
 export type LabelSpec = {
@@ -138,6 +148,7 @@ export const LABELS: readonly LabelSpec[] = [
   { from: 117.3, to: 120.8, line: "1970" },
   { from: 146.8, to: 150.6, line: "Pogo the Clown" },
   { from: 176.3, to: 182.4, line: "1972 – 1978" },
+  { from: 227.5, to: 231.8, line: "Crawl Space" },
 ];
 
 export const shotEnd = (i: number): number =>
