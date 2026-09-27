@@ -64,6 +64,25 @@ import {
   Verdict,
   WaitingHome,
 } from "../shots/Trial";
+import {
+  Archive2011,
+  DnaLab,
+  EightFiles,
+  FinalArchive,
+  FiveRemain,
+  Handshake,
+  LessCinematic,
+  Names,
+  NotOver,
+  NotPogo,
+  OrdinaryStreet,
+  Posters,
+  SawContractor,
+  SawEmployer,
+  SawHost,
+  SawNeighbor,
+  SawOrdinary,
+} from "../shots/Ending";
 
 /**
  * Master timeline.
@@ -184,10 +203,29 @@ export const SHOTS: readonly ShotSpec[] = [
   { id: "appeals", at: 534.4, C: Appeals },
   { id: "prison-night", at: 538.6, C: PrisonNight, enter: { kind: "dissolve", s: 0.8 } },
   { id: "case-closed", at: 545.9, C: CaseClosed, enter: { kind: "fromBlack", s: 0.6 } },
+  // The names
+  { id: "not-over", at: 553.6, C: NotOver },
+  { id: "archive-2011", at: 558.0, C: Archive2011 },
+  { id: "eight-files", at: 566.3, C: EightFiles },
+  { id: "dna", at: 572.9, C: DnaLab },
+  { id: "names", at: 579.7, C: Names },
+  { id: "five-remain", at: 584.4, C: FiveRemain },
+  // How he is remembered
+  { id: "not-pogo", at: 594.9, C: NotPogo },
+  { id: "posters", at: 603.0, C: Posters },
+  { id: "ordinary-street", at: 609.4, C: OrdinaryStreet },
+  { id: "saw-ordinary", at: 618.2, C: SawOrdinary },
+  { id: "saw-contractor", at: 619.9, C: SawContractor },
+  { id: "saw-employer", at: 620.9, C: SawEmployer },
+  { id: "saw-neighbor", at: 621.8, C: SawNeighbor },
+  { id: "saw-host", at: 622.8, C: SawHost },
+  { id: "handshake", at: 624.7, C: Handshake },
+  { id: "less-cinematic", at: 629.4, C: LessCinematic, enter: { kind: "dissolve", s: 0.8 }, exit: { kind: "toBlack", s: 0.5 } },
+  { id: "final-archive", at: 635.45, C: FinalArchive, enter: { kind: "fromBlack", s: 0.8 }, exit: { kind: "toBlack", s: 0.8 } },
 ];
 
-/** Where the rebuilt cut currently ends; the draft's scenes cover the rest. */
-export const REBUILT_UNTIL = 553.6;
+/** The last shot runs to the end of the narration file. */
+export const END_SECONDS = TOTAL_FRAMES / FPS;
 
 export type WipeSpec = {
   readonly at: number;
@@ -224,6 +262,15 @@ export const WIPES: readonly WipeSpec[] = [
   { at: 495.4, kind: "flash", dur: 0.4, tone: "#efe6d2" },
   { at: 500.8, kind: "flash", dur: 0.4, tone: "#efe6d2" },
   { at: 534.4, kind: "folder", dur: 0.8, dir: 1 },
+  { at: 553.6, kind: "dark", dur: 0.5 },
+  { at: 558.0, kind: "flash", dur: 0.35, tone: "#eef6ff" },
+  { at: 609.4, kind: "passerby", dur: 0.8, dir: -1 },
+  { at: 618.2, kind: "flash", dur: 0.34, tone: "#fff2d8" },
+  { at: 619.9, kind: "flash", dur: 0.16, tone: "#fff2d8" },
+  { at: 620.9, kind: "flash", dur: 0.16, tone: "#fff2d8" },
+  { at: 621.8, kind: "flash", dur: 0.16, tone: "#fff2d8" },
+  { at: 622.8, kind: "flash", dur: 0.16, tone: "#fff2d8" },
+  { at: 624.7, kind: "flash", dur: 0.3, tone: "#fff2d8" },
 ];
 
 export type LabelSpec = {
@@ -247,7 +294,9 @@ export const LABELS: readonly LabelSpec[] = [
   { from: 413.9, to: 417.4, line: "21.12.1978" },
   { from: 483.6, to: 487.8, line: "פברואר 1980" },
   { from: 539.8, to: 543.8, line: "10.5.1994" },
+  { from: 558.7, to: 562.6, line: "2011", sub: "קוק קאונטי" },
+  { from: 586.3, to: 589.8, line: "5", sub: "לא מזוהים" },
 ];
 
 export const shotEnd = (i: number): number =>
-  i + 1 < SHOTS.length ? SHOTS[i + 1].at : REBUILT_UNTIL;
+  i + 1 < SHOTS.length ? SHOTS[i + 1].at : END_SECONDS;

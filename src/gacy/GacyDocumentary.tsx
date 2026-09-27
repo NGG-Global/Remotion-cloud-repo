@@ -1,52 +1,12 @@
 import React from "react";
 import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
 import "./fonts";
-import {
-  FPS,
-  LABELS,
-  REBUILT_UNTIL,
-  SHOTS,
-  TOTAL_FRAMES,
-  WIPES,
-  shotEnd,
-} from "./data/timeline";
-import { ShotClockProvider, ShotFrame } from "./engine/shot";
+import { FPS, LABELS, SHOTS, TOTAL_FRAMES, WIPES, shotEnd } from "./data/timeline";
+import { ShotClockProvider, ShotFrame, useShot } from "./engine/shot";
 import { Wipe } from "./engine/wipes";
 import { Label } from "./type/Label";
-import { useShot } from "./engine/shot";
-import { SCENES, sceneFrames, type SceneId } from "./legacy/data/timeline";
-import { Business, Pogo } from "./legacy/scenes/PublicLife";
-import { Chicago } from "./legacy/scenes/Chicago";
-import { Crawl, Suburb } from "./legacy/scenes/CrawlSpace";
-import { Disappearances } from "./legacy/scenes/Disappearances";
-import { Ending, Names } from "./legacy/scenes/Ending";
-import { Execution, People, Search2, Trial } from "./legacy/scenes/Court";
-import { Iowa } from "./legacy/scenes/Iowa";
-import { Opening } from "./legacy/scenes/Opening";
-import { Piest, Police, Subscribe, Watch } from "./legacy/scenes/Investigation";
 
 export const GACY_DURATION = TOTAL_FRAMES;
-
-const LEGACY: Record<SceneId, React.FC> = {
-  opening: Opening,
-  chicago: Chicago,
-  iowa: Iowa,
-  business: Business,
-  pogo: Pogo,
-  missing: Disappearances,
-  crawl: Crawl,
-  suburb: Suburb,
-  piest: Piest,
-  police: Police,
-  watch: Watch,
-  subscribe: Subscribe,
-  search2: Search2,
-  people: People,
-  trial: Trial,
-  execution: Execution,
-  names: Names,
-  ending: Ending,
-};
 
 const f = (s: number) => Math.round(s * FPS);
 
@@ -79,16 +39,6 @@ export const GacyDocumentary: React.FC = () => {
                 <C />
               </ShotFrame>
             </ShotClockProvider>
-          </Sequence>
-        );
-      })}
-      {SCENES.filter((s) => s.end > REBUILT_UNTIL).map((scene) => {
-        const start = Math.max(scene.start, REBUILT_UNTIL);
-        const timing = sceneFrames(start, scene.end);
-        const View = LEGACY[scene.id];
-        return (
-          <Sequence key={scene.id} from={timing.from} durationInFrames={timing.durationInFrames} name={`draft-${scene.id}`}>
-            <View />
           </Sequence>
         );
       })}
