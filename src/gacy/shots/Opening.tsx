@@ -736,6 +736,7 @@ export const Descent: React.FC = () => {
           porch={0.85 * porchOff}
           peel={peel}
           ground={1 - sectionK}
+          sleep={ramp(t, 12.5, 19.2)}
           inside={(b) => (
             <g>
               {guests.slice(0, 4).map((gs, i) => (

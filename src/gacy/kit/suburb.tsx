@@ -108,6 +108,8 @@ export const Suburb: React.FC<{
   readonly doorOpen?: number;
   /** Fades the street's ground (lawns, road, walks, lamps) for section views. */
   readonly ground?: number;
+  /** 0–1: the neighbourhood going to bed. Other houses' windows go dark one by one. */
+  readonly sleep?: number;
 }> = ({
   t,
   mode = "night",
@@ -129,7 +131,9 @@ export const Suburb: React.FC<{
   moon = { x: 1500, y: 150 },
   doorOpen = 0,
   ground = 1,
+  sleep = 0,
 }) => {
+  const awake = (seed: number) => (sleep > 0 && sleep > hash(seed) * 0.95 ? 0 : 1);
   const light = lightFor(mode);
   const night = mode === "night" || mode === "winterNight" || mode === "predawn";
   const winter = mode.startsWith("winter") || snow > 0.3;
@@ -165,7 +169,7 @@ export const Suburb: React.FC<{
             <g key={i} transform={`translate(${hx} 0)`}>
               <path d="M-900 -560 L-400 -800 L400 -800 L900 -560 Z" fill={L(night ? "#1a1f26" : "#5a5650")} />
               <rect x={-850} y={-560} width={1700} height={560} fill={L(night ? "#20252c" : "#8a8478")} />
-              {night && hash(i + 20) > 0.45 ? (
+              {night && hash(i + 20) > 0.45 && awake(i + 60) ? (
                 <rect x={-500} y={-420} width={300} height={200} fill="#e8b870" opacity={0.5 * neighborsLit} />
               ) : null}
             </g>
@@ -191,7 +195,7 @@ export const Suburb: React.FC<{
                 style={style}
                 light={light}
                 night={night}
-                lit={isG ? gacyLit : neighborsLit * (hash(i + 2) > 0.3 ? 1 : 0.2)}
+                lit={isG ? gacyLit : neighborsLit * (hash(i + 2) > 0.3 ? 1 : 0.2) * awake(i + 90)}
                 t={t}
                 tv={isG ? tv : hash(i) > 0.6 && night}
                 snow={winter ? 1 : 0}
