@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill, Audio, staticFile, useCurrentFrame } from "remotion";
+import { Audio } from "@remotion/media";
+import { AbsoluteFill, staticFile, useCurrentFrame } from "remotion";
 import { ARCHIVE } from "./archive";
 import { Archival } from "./components/Archival";
 import { Beat, beatSeconds } from "./components/Beat";

@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
+import { Audio } from "@remotion/media";
+import { AbsoluteFill, Sequence, staticFile } from "remotion";
 import { CrossFade } from "../components/CrossFade";
 import { AskAcross } from "../graphics/AskAcross";
 import { ChatAsk } from "../graphics/ChatAsk";

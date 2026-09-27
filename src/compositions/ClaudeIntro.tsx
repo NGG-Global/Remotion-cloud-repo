@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
+import { Audio } from "@remotion/media";
+import { AbsoluteFill, Sequence, staticFile } from "remotion";
 import { CrossFade } from "../components/CrossFade";
 import { ClickMaze } from "../graphics/ClickMaze";
 import { DraftEdit } from "../graphics/DraftEdit";

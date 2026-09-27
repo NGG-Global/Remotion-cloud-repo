@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
+import { Audio } from "@remotion/media";
+import { AbsoluteFill, Sequence, staticFile } from "remotion";
 import { PaperCurtain } from "./components/chrome";
 import { useClock } from "./clock";
 import { ActScene } from "./scenes/ActScene";
@@ -80,7 +81,7 @@ export const TinyTempoAd: React.FC = () => {
     <AbsoluteFill style={{ backgroundColor: "#eee8d8" }}>
       <Audio
         src={staticFile("audio/tiny-tempo.mp3")}
-        startFrom={MUSIC_LEAD_FRAMES}
+        trimBefore={MUSIC_LEAD_FRAMES}
         volume={0.82}
       />
 

@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
+import { Audio } from "@remotion/media";
+import { AbsoluteFill, Sequence, staticFile } from "remotion";
 import "./fonts";
 import { FPS, LABELS, SHOTS, TOTAL_FRAMES, WIPES, shotEnd } from "./data/timeline";
 import { ShotClockProvider, ShotFrame, useShot } from "./engine/shot";
