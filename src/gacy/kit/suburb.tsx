@@ -94,6 +94,8 @@ export const Suburb: React.FC<{
   readonly porch?: number;
   readonly peel?: number;
   readonly inside?: (b: WindowBox) => React.ReactNode;
+  /** Picture-window contents for the other houses on the street (index ≠ 0). */
+  readonly insideOthers?: (i: number, b: WindowBox) => React.ReactNode;
   /** Slots, each drawn inside the right depth plane. */
   readonly onLawn?: React.ReactNode;
   readonly onRoad?: React.ReactNode;
@@ -116,6 +118,7 @@ export const Suburb: React.FC<{
   porch = 0,
   peel = 0,
   inside,
+  insideOthers,
   onLawn,
   onRoad,
   onNearWalk,
@@ -194,7 +197,7 @@ export const Suburb: React.FC<{
                 snow={winter ? 1 : 0}
                 garage="right"
                 porchLight={isG ? porch : night && hash(i + 9) > 0.5 ? 0.6 : 0}
-                inside={isG ? inside : undefined}
+                inside={isG ? inside : insideOthers ? (b: WindowBox) => insideOthers(i, b) : undefined}
                 peel={isG ? peel : 0}
                 doorOpen={isG ? doorOpen : 0}
               />

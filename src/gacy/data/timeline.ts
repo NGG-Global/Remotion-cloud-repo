@@ -48,6 +48,22 @@ import {
   Warrant,
 } from "../shots/Investigation";
 import { AllFinds, DigBegins, FirstFind, Hatch, MoreFinds, River, ThirtyThree } from "../shots/Discovery";
+import {
+  Appeals,
+  CaseClosed,
+  CourtExterior,
+  CourtWide,
+  DefenseArgues,
+  Exhibits,
+  JackSketch,
+  JuryRoomShot,
+  KnewExactly,
+  PrisonNight,
+  ProsecutionRises,
+  ScoreboardShot,
+  Verdict,
+  WaitingHome,
+} from "../shots/Trial";
 
 /**
  * Master timeline.
@@ -152,10 +168,26 @@ export const SHOTS: readonly ShotSpec[] = [
   { id: "all-finds", at: 431.2, C: AllFinds },
   { id: "river", at: 438.9, C: River, enter: { kind: "dissolve", s: 0.6 } },
   { id: "thirty-three", at: 442.8, C: ThirtyThree, enter: { kind: "dissolve", s: 0.6 } },
+  // Not a scoreboard
+  { id: "scoreboard", at: 454.8, C: ScoreboardShot, enter: { kind: "fromBlack", s: 0.6 } },
+  { id: "waiting-home", at: 469.4, C: WaitingHome, enter: { kind: "fromBlack", s: 1.0 } },
+  { id: "court-exterior", at: 481.0, C: CourtExterior, enter: { kind: "dissolve", s: 0.6 } },
+  // The trial
+  { id: "court-wide", at: 483.2, C: CourtWide },
+  { id: "defense", at: 490.9, C: DefenseArgues },
+  { id: "jack", at: 495.4, C: JackSketch },
+  { id: "prosecution", at: 500.8, C: ProsecutionRises },
+  { id: "exhibits", at: 507.4, C: Exhibits },
+  { id: "knew-exactly", at: 514.5, C: KnewExactly },
+  { id: "jury-room", at: 517.4, C: JuryRoomShot },
+  { id: "verdict", at: 527.4, C: Verdict },
+  { id: "appeals", at: 534.4, C: Appeals },
+  { id: "prison-night", at: 538.6, C: PrisonNight, enter: { kind: "dissolve", s: 0.8 } },
+  { id: "case-closed", at: 545.9, C: CaseClosed, enter: { kind: "fromBlack", s: 0.6 } },
 ];
 
 /** Where the rebuilt cut currently ends; the draft's scenes cover the rest. */
-export const REBUILT_UNTIL = 454.8;
+export const REBUILT_UNTIL = 553.6;
 
 export type WipeSpec = {
   readonly at: number;
@@ -189,6 +221,9 @@ export const WIPES: readonly WipeSpec[] = [
   { at: 373.4, kind: "flash", dur: 0.4, tone: "#e8eef4" },
   { at: 406.2, kind: "beam", dur: 0.9 },
   { at: 413.5, kind: "dark", dur: 0.4 },
+  { at: 495.4, kind: "flash", dur: 0.4, tone: "#efe6d2" },
+  { at: 500.8, kind: "flash", dur: 0.4, tone: "#efe6d2" },
+  { at: 534.4, kind: "folder", dur: 0.8, dir: 1 },
 ];
 
 export type LabelSpec = {
@@ -210,6 +245,8 @@ export const LABELS: readonly LabelSpec[] = [
   { from: 302.2, to: 309.8, line: "דס פליינס", sub: "11.12.1978" },
   { from: 348.9, to: 351.9, line: "13.12.1978" },
   { from: 413.9, to: 417.4, line: "21.12.1978" },
+  { from: 483.6, to: 487.8, line: "פברואר 1980" },
+  { from: 539.8, to: 543.8, line: "10.5.1994" },
 ];
 
 export const shotEnd = (i: number): number =>
