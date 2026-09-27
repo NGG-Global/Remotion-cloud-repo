@@ -42,7 +42,7 @@ npx remotion still GacyDocumentary out/gacy-frame.png --frame=900
 
 Audio in H.264 files: the default MP4 output encodes the voice as AAC. Decoded with ffmpeg, the voice in these files runs about 43 ms (1.3 frames) behind the picture: the AAC encoder's 2048 priming samples are not skipped. Other players were not tested. The composition itself is sample-exact. For an exact master, use `npm run render:master -- GacyDocumentary out/gacy-master.mov` (ProRes with PCM audio). Measurements are in `docs/VIDEO_QA.md`.
 
-Render cost: in the 4-core cloud container used for this repair, a 1080p frame took about 1.6 s as a still. `docs/VIDEO_QA.md` has the measured clip render times. Allow several hours for a full 1080p render on similar hardware.
+Render cost: in the 4-core cloud container used for this repair, the full 720p render above took 2 h 49 min and produced a 1.57 GB file. A 1080p frame took about 1.6 s as a still, so allow several hours for a full 1080p render on similar hardware. `docs/VIDEO_QA.md` has the measurements.
 
 Preview: `npm run dev`, then open `GacyDocumentary`. The two helper compositions `GacyRigSheet` (the cast and their poses) and `GacySetTest` (sets under the camera) are for development and are not part of the film.
 

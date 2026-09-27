@@ -4,7 +4,7 @@ What was rendered and checked for the repaired `GacyDocumentary`, how, and with 
 
 All checks ran in the 4-core Linux cloud container used for the repair: Remotion 4.0.522, Chrome Headless Shell, SwiftShader GL (`--gl=swangle`). The stills and clips were written to `.cache/qa/`, which is git-ignored, so they are not in the repository. Section 5 has the commands to regenerate them.
 
-**How the rendered material was reviewed.** I cannot watch video or listen to audio directly. Every visual check below was done on rendered frames: stills rendered from the composition, and frames decoded from the rendered MP4 clips (one per second, plus runs of consecutive frames to check motion). Every audio check was done numerically, by cross-correlating the clips' audio with the source MP3. A person should still watch the film once end to end for pacing, and on the target display (see section 6).
+**How the rendered material was reviewed.** I cannot watch video or listen to audio directly. Every visual check below was done on rendered frames: stills rendered from the composition, and frames decoded from the rendered MP4 clips (one per second, plus runs of consecutive frames to check motion). Every audio check was done numerically, by cross-correlating the clips' audio with the source MP3. A person should still watch the film once end to end for pacing, and on the target display (see section 7).
 
 ---
 
@@ -159,9 +159,26 @@ A sample-exact audio check needs a PCM render:
 npx remotion render GacyDocumentary out/check.mov --frames=1308-1427 --codec=prores --audio-codec=pcm-16
 ```
 
-## 6. Not covered
+## 6. Full-length 720p render
 
-- **No full-length render.** The whole film was checked as 500 stills and 11 clips (about 4 minutes of the 10:45), not as one file. A full 1080p render takes several hours in this container.
+The finished film was rendered once at 720p, after all the fixes above:
+
+```bash
+npx remotion render GacyDocumentary out/gacy-documentary-720p.mp4 --scale=0.6666666666666666 --concurrency=4
+```
+
+| Check | Result |
+| --- | --- |
+| Render time | 2 h 49 min (0.52 s per frame on average, four frames in parallel). |
+| File | `out/gacy-documentary-720p.mp4` (git-ignored), 1.57 GB, about 19.4 Mbit/s. The film grain makes the video expensive to compress at the default quality. |
+| Video | H.264, 1280×720, 30 fps, 19360 frames, 645.33 s. All 19360 frames were decoded without error. |
+| Audio | AAC, 48 kHz, stereo, 645.35 s. |
+| Sync | Cross-correlated with the source MP3 at 0–30 s, 300–330 s and 615–645 s: +42.7 ms in all three windows (correlation 0.981–0.984). The offset is constant across the whole film, so there is no drift. It is the AAC encoding delay described in section 2. |
+| Picture | One frame every 30 s decoded and checked against the shot list. Every frame shows the expected shot. Sampled once per second (mean brightness below 4 of 255), the only near-black frame is the fade up at 0 s. |
+
+## 7. Not covered
+
+- **No 1080p render.** The film was rendered in full at 720p (section 6). At 1080p, expect the render to take longer than the 2 h 49 min it took at 720p.
 - **No human viewing.** Pacing, how the voice sits against the picture, and the feel of the transitions need one watch-through by a person.
 - **Display.** Night, crawl-space and prison shots are dark by design. They were judged on stills, not on a calibrated display.
 - **Facts.** The count of unidentified victims (five) and the three names follow the script. Identifications have continued since 2011, so check the current count with the Cook County Sheriff's Office before publishing.
