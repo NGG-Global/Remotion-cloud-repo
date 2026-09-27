@@ -135,7 +135,7 @@ export const JuryRoom: React.FC<{ readonly light?: Light; readonly minutes: numb
       <rect x={-3000} y={-1200} width={6000} height={1200} fill={L("#a89a82")} />
       <rect x={-3000} y={0} width={6000} height={700} fill={L("#5a4a3a")} />
       <WindowInt x={-2400} y={-1050} w={700} h={520} outside="#9aaab8" light={light} blinds />
-      <WallClock x={380} y={-640} minutes={minutes} light={light} r={80} />
+      <WallClock x={380} y={-560} minutes={minutes} light={light} r={80} />
       <Glow x={0} y={-1100} r={1800} color="#fff4e0" opacity={0.2} />
       <rect x={-3000} y={-60} width={6000} height={60} fill={L(darken("#a89a82", 0.3))} />
     </g>

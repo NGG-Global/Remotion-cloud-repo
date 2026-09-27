@@ -53,7 +53,7 @@ const Searcher: React.FC<{
         look={TECH}
         facing={facing}
         light={CRAWL_SEARCH}
-        pose={kneel ? idle(pose({ ...KNEEL, lean: 34, neck: 18, nearUpper: 70, nearFore: 20 }), t, seed, 0.3) : walk(CRAWL, move, move > 0 ? 0.25 : 0)}
+        pose={kneel ? idle(pose({ ...CRAWL, lean: 70, neck: -50, nearUpper: 75, nearFore: 25 }), t, seed, 0.3) : walk(CRAWL, move, move > 0 ? 0.25 : 0)}
         nearHold={<Flashlight light={CRAWL_SEARCH} />}
       />
     </g>
@@ -66,7 +66,8 @@ export const Hatch: React.FC = () => {
   const down = ramp(t, 4.6, 7.4, EASE.inOut);
   const cam = {
     x: keys(t, [[0, -180], [4.6, -100], [dur, -150]], EASE.inOut),
-    y: keys(t, [[0, -330], [4.6, -300], [dur, -60]], EASE.inOut),
+    // ends on the crawl space, the kneeling officer above it down to the knees
+    y: keys(t, [[0, -330], [4.6, -300], [dur, -20]], EASE.inOut),
     zoom: keys(t, [[0, 1.9], [4.6, 2.1], [dur, 2.6]], EASE.inOut),
   };
   return (
@@ -103,8 +104,8 @@ export const Hatch: React.FC = () => {
 
 export const DigBegins: React.FC = () => {
   const { t, dur } = useShot();
-  const a = walkBetween(t, 0, 2.6, SEC.hatchX, -520);
-  const b = walkBetween(t, 0.6, 3.6, SEC.hatchX + 40, -150);
+  const a = walkBetween(t, 0, 2.6, SEC.hatchX, -560);
+  const b = walkBetween(t, 0.6, 3.6, SEC.hatchX + 40, -230);
   const c = walkBetween(t, 1.3, 4.4, SEC.hatchX + 60, 280);
   return (
     <AbsoluteFill>
@@ -119,11 +120,11 @@ export const DigBegins: React.FC = () => {
             lamps={0.4}
             snow={1}
             crawl={{ patches: 12, trenches: 0.66, hatch: 1, workLight: 0.5, vents: 0.2 }}
-            hall={<Person x={40} y={SEC.floor} look={OFFICER} facing={-1} light={ROOM_WINTER} pose={idle(pose({ lean: 20, neck: 24 }), t, 3)} />}
+            hall={<Person x={-250} y={SEC.floor} look={OFFICER} light={ROOM_WINTER} pose={idle(pose({ lean: 20, neck: 24 }), t, 3)} />}
             under={
               <g>
-                <Searcher x={a.amt > 0 ? a.x : -520} t={t} aimX={-580} kneel={a.amt === 0 && t > 2.6} seed={1} move={a.phase} />
-                <Searcher x={b.amt > 0 ? b.x : -150} t={t} aimX={-230} seed={2} move={b.phase} />
+                <Searcher x={a.amt > 0 ? a.x : -560} t={t} aimX={-620} kneel={a.amt === 0 && t > 2.6} seed={1} move={a.phase} />
+                <Searcher x={b.amt > 0 ? b.x : -230} t={t} aimX={-310} seed={2} move={b.phase} />
                 <Searcher x={c.amt > 0 ? c.x : 280} t={t} aimX={180} facing={-1} seed={3} move={c.phase} />
                 <Motes t={t} x={-1000} y={-110} w={1600} h={150} n={40} color="#e8e4d8" opacity={0.45} />
               </g>
@@ -144,15 +145,16 @@ const Finds: React.FC<{ readonly stage: "first" | "more" | "all" }> = ({ stage }
   let cam = { x: p0.x, y: 0, zoom: 3.4 };
   if (stage === "first") {
     markers = ramp(t, 1.0, 1.4, EASE.out);
-    cam = { x: keys(t, [[0, p0.x + 40], [dur, p0.x + 20]]), y: keys(t, [[0, -10], [dur, 0]]), zoom: keys(t, [[0, 3.2], [dur, 3.5]], EASE.drift) };
+    cam = { x: keys(t, [[0, p0.x + 40], [dur, p0.x + 20]]), y: keys(t, [[0, -45], [dur, -40]]), zoom: keys(t, [[0, 3.2], [dur, 3.5]], EASE.drift) };
   } else if (stage === "more") {
     markers = 1 + ramp(t, 0.5, 0.8, EASE.out) + ramp(t, 1.9, 2.2, EASE.out) + ramp(t, 2.4, 2.7, EASE.out);
-    cam = { x: keys(t, [[0, p0.x + 20], [dur, p0.x + 160]]), y: keys(t, [[0, 0], [dur, -20]]), zoom: keys(t, [[0, 3.5], [dur, 2.4]], EASE.inOut) };
+    // opens wider than the first find, on both searchers, then keeps pulling back
+    cam = { x: keys(t, [[0, -335], [dur, p0.x + 160]]), y: keys(t, [[0, -42], [dur, -45]]), zoom: keys(t, [[0, 2.9], [dur, 2.4]], EASE.inOut) };
   } else {
     markers = lerp(4, 27, ramp(t, 0.3, 4.8, EASE.inOut));
     cam = {
       x: keys(t, [[0, p0.x + 160], [5.5, 200], [dur, 500]], EASE.inOut),
-      y: keys(t, [[0, -20], [5.5, -260], [dur, -300]], EASE.inOut),
+      y: keys(t, [[0, -45], [5.5, -260], [dur, -300]], EASE.inOut),
       zoom: keys(t, [[0, 2.4], [5.5, 0.62], [dur, 0.5]], EASE.inOut),
     };
   }
@@ -303,7 +305,8 @@ export const ThirtyThree: React.FC = () => {
             const row = i < 10 ? 0 : i < 21 ? 1 : 2;
             const col = row === 0 ? i : row === 1 ? i - 10 : i - 21;
             const n = row === 1 ? 11 : row === 0 ? 10 : 12;
-            const x = (col - (n - 1) / 2) * (row === 2 ? 170 : 180) + (hash(i) - 0.5) * 30;
+            // Spaced so all 33 stand inside the frame: the count is the point.
+            const x = (col - (n - 1) / 2) * (row === 0 ? 170 : row === 1 ? 160 : 148) + (hash(i) - 0.5) * 24;
             const y = 40 + row * 110;
             const look = { ...YOUNG[i % YOUNG.length], hair: (["mop", "short", "curly", "afro", "buzz", "mop", "short"] as const)[i % 7] };
             return (

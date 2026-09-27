@@ -79,8 +79,10 @@ export const PharmacyNight: React.FC = () => {
 export const Shift: React.FC = () => {
   const { t, dur } = useShot();
   const cam = {
-    x: keys(t, [[0, -2200], [4.6, -900], [dur, -500]], EASE.inOut),
-    y: keys(t, [[0, -400], [dur, -420]]),
+    // One move, Robert at the shelves to the counter; the shelf end crosses
+    // the lens on the way, so the camera never rests on it.
+    x: keys(t, [[0, -1350], [dur, 30]], EASE.inOut),
+    y: keys(t, [[0, -250], [dur, -240]]),
     zoom: keys(t, [[0, 1.25], [4.6, 1.4], [dur, 1.1]], EASE.inOut),
   };
   const reach = Math.max(0, Math.sin(t * 1.4));
@@ -112,7 +114,8 @@ export const MotherArrives: React.FC = () => {
   const { t, dur } = useShot();
   const door = ramp(t, 0, 0.5) * (1 - ramp(t, 1.3, 1.8));
   const m = walkBetween(t, 0.15, dur + 0.4, PHARM.door + 60, PHARM.door - 520);
-  const cam = { x: keys(t, [[0, 900], [dur, 820]]), y: -420, zoom: 1.45 };
+  // The store ends at its front wall (PHARM.front): the frame stays inside it.
+  const cam = { x: keys(t, [[0, 670], [dur, 610]]), y: -265, zoom: 1.45 };
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t}>
@@ -133,7 +136,7 @@ export const TellsMom: React.FC = () => {
   const point = ramp(t, 2.6, 3.1) * (1 - ramp(t, 4.6, 5.1));
   const r = solve(STAND, ROBERT);
   const aim = reachAngles(r.near.shoulder, { x: -260, y: -300 }, r.torsoAngle, r.dims.upper, r.dims.fore);
-  const cam = { x: keys(t, [[0, 520], [dur, 470]]), y: -430, zoom: keys(t, [[0, 1.75], [dur, 1.9]], EASE.drift) };
+  const cam = { x: keys(t, [[0, 470], [dur, 450]]), y: -265, zoom: keys(t, [[0, 1.75], [dur, 1.9]], EASE.drift) };
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t}>
@@ -154,7 +157,7 @@ export const TellsMom: React.FC = () => {
 
 export const SummerJob: React.FC = () => {
   const { t, dur } = useShot();
-  const cam = { x: keys(t, [[0, -90], [dur, -40]]), y: -440, zoom: keys(t, [[0, 2.0], [dur, 2.15]], EASE.drift) };
+  const cam = { x: keys(t, [[0, -90], [dur, -40]]), y: -275, zoom: keys(t, [[0, 2.0], [dur, 2.15]], EASE.drift) };
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t}>
@@ -176,7 +179,7 @@ export const FewMinutes: React.FC = () => {
   const hand = ramp(t, 0.2, 0.5) * (1 - ramp(t, 1.4, 1.7));
   const out = walkBetween(t, 1.5, 3.1, 520, PHARM.door + 80);
   const door = ramp(t, 2.6, 2.9) * (1 - ramp(t, 3.1, 3.4));
-  const cam = { x: keys(t, [[0, 640], [dur, 900]]), y: -430, zoom: 1.5 };
+  const cam = { x: keys(t, [[0, 560], [dur, 690]]), y: -290, zoom: 1.5 };
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t}>
@@ -201,9 +204,9 @@ export const Waiting: React.FC = () => {
   const { t, dur } = useShot();
   const minutes = lerp(0, 55, ramp(t, 0.2, 5.4, EASE.inOut));
   const back = 1 - ramp(t, 2.8, 3.2);
-  const cust = walkBetween(t, 0.3, 2.4, -300, PHARM.door + 60);
+  const cust = walkBetween(t, 0.3, 2.4, -150, PHARM.door + 60);
   const cam = {
-    x: keys(t, [[0, 500], [dur, 1060]], EASE.drift),
+    x: keys(t, [[0, 500], [dur, 1000]], EASE.drift),
     y: keys(t, [[0, -440], [dur, -330]], EASE.drift),
     zoom: keys(t, [[0, 1.2], [dur, 2.1]], EASE.drift),
   };

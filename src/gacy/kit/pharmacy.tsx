@@ -63,7 +63,8 @@ export const PharmacyInterior: React.FC<{
       <rect x={-3200} y={-760} width={PHARM.front + 3200} height={760} fill={L("#e2dccc")} />
       <rect x={-3200} y={-760} width={PHARM.front + 3200} height={60} fill={L("#3e6a7a")} />
       <rect x={-3200} y={-40} width={PHARM.front + 3200} height={40} fill={L("#8a8478")} />
-      <rect x={-3200} y={0} width={PHARM.front + 3200} height={700} fill={L("#bdb6a4")} />
+      {/* the floor runs under the front wall, so the wall never stands on nothing */}
+      <rect x={-3200} y={0} width={PHARM.front + 3360} height={700} fill={L("#bdb6a4")} />
       {Array.from({ length: 24 }, (_, i) => (
         <rect key={i} x={-3200 + i * 200} y={0} width={3} height={700} fill={L("#a8a290")} />
       ))}

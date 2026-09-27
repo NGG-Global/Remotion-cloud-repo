@@ -1,5 +1,8 @@
 import React from "react";
+import { useCurrentFrame } from "remotion";
+import { useCam, usePlaneDepth } from "../engine/camera";
 import { darken, lighten, lit, mix, type Light, NEUTRAL } from "../engine/color";
+import { framingDebug, logFraming } from "../engine/framing";
 import { clamp, lerp } from "../engine/time";
 import { STAND, type Pose } from "./pose";
 
@@ -612,6 +615,12 @@ export const Person: React.FC<PersonProps> = ({
 }) => {
   const j = solve(pose, look, view, grounded);
   const d = j.dims;
+  const frame = useCurrentFrame();
+  const cam = useCam();
+  const depth = usePlaneDepth();
+  if (depth !== null && opacity > 0.3 && framingDebug()) {
+    logFraming(frame, cam, depth, { x: x + facing * s * j.headC.x, y: y + s * j.headC.y, r: 26 * d.head * s }, y, `${look.clown ? "clown" : (look.build ?? "average")}${mode === "silhouette" ? "-sil" : ""}`);
+  }
   const sil = mode === "silhouette";
   const sketch = mode === "sketch";
   const paint: Paint = sil

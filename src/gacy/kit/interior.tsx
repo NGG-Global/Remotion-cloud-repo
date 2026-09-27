@@ -34,6 +34,8 @@ export const Room: React.FC<{
   const w = x1 - x0;
   return (
     <g>
+      {/* the ceiling above the cornice, so a frame taller than the wall never shows the void above the set */}
+      <rect x={x0} y={-h - 1240} width={w} height={1200} fill={L(darken(paper, 0.6))} />
       <rect x={x0} y={-h} width={w} height={h} fill={L(paper)} />
       {stripes
         ? Array.from({ length: Math.ceil(w / 70) }, (_, i) => (
