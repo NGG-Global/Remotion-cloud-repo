@@ -427,6 +427,23 @@ from. They are not part of the series; they are kept because they demonstrate
 two features the explainer does not use — Zod-schema props editable in the
 Studio, and `<TransitionSeries>`.
 
+## Star reveal
+
+Level-end star animation for TinyTempo, authored here so the motion can be
+scrubbed at 60 fps before it is sampled in Phaser. Same `f(t)` pose lives in
+`src/motion/starReveal.ts` and TinyTempo's `src/ui/starReveal.ts`.
+
+| Composition          | Size       | What it shows                                      |
+| -------------------- | ---------- | -------------------------------------------------- |
+| `StarReveal`         | 1920×1080  | Three-star stamp (props: `earned` 0–3)             |
+| `StarRevealPortrait` | 720×1280   | The same beat in the game's portrait frame         |
+| `StarRevealGallery`  | 1920×1080  | 3, 2, 1 and 0 stars in one take                    |
+
+```bash
+npx remotion render StarReveal out/star-reveal.mp4
+npx remotion still StarReveal out/star-reveal.png --frame=90
+```
+
 ## Cloud rendering
 
 `npm run bundle` produces a static bundle that any render service can serve.
