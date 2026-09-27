@@ -19,8 +19,8 @@ The famous part is the clown, and it is the least important part. The real disgu
 | 13.95 | `makeup` | White makeup, red nose, the whole package. | Dressing-table insert. A hand dips into greasepaint beside a red nose and a wig. | flash |
 | 16.9 | `screens` | But despite films and the internet, there is no reliable evidence he killed in costume. | A dark living room. A horror-clown image fills the TV, a phone and the posters. At "no reliable evidence" the TV is switched off and a lamp comes on. | cut |
 | 26.4 | `closet` | In a way the truth is far more frightening. | The Pogo costume on a hanger. The closet door closes on it. | cut |
-| 30.05 | `morning` | He didn't need a costume. His costume was simply John Wayne Gacy. | Morning. Gacy steps out, picks up the paper, waves to a neighbour watering the lawn. | black |
-| 37.4 | `driveway` | A businessman, a construction company owner… | Gacy with a clipboard beside his contractor's van. Workers carry lumber. | cut |
+| 30.05 | `morning` | He didn't need a costume. His costume was simply John Wayne Gacy, a businessman… | Morning. Gacy steps out, picks up the paper, waves to a neighbour watering the lawn. | black |
+| 38.25 | `driveway` | …a construction company owner… | Gacy with a clipboard beside his contractor's van. Workers carry lumber. | cut |
 | 39.95 | `party` | …a neighbour who throws parties… | Backyard barbecue at dusk. Gacy at the grill, laughing with guests. | van |
 | 41.75 | `hall` | …a man involved in the community… | Community hall with bunting. Gacy in a suit shakes hands; a press camera flashes. | passer-by |
 | 43.6 | `crew` | …someone who hires young men and gives them work. | Job site. Gacy hands a young worker the keys. | flash |
@@ -49,7 +49,7 @@ No single moment made the monster, but the warning signs came early.
 | Time | Shot | Voice (gist) | Picture | In |
 | --- | --- | --- | --- | --- |
 | 130.5 | `business` | He set up a construction and remodelling business, with many young employees. | Job site. Gacy directs a crew; boards are carried across frame. | cut |
-| 135.75 | `parade` | Community work, local politics, big parties at his house… | A street parade with flags and bunting. | passer-by |
+| 136.1 | `parade` | Community work, local politics, big parties at his house… | A street parade with flags and bunting. | passer-by |
 | 140.4 | `big-party` | …and yes… | A wide backyard party at dusk under string lights. | cut |
 | 142.9 | `mirror` | …he began performing as a clown. His character was Pogo. | Dressing table and mirror. The camera travels past Gacy to the mirror, where the reflection becomes Pogo. | dark |
 | 152.2 | `photo-op` | Back then, nobody looked at Pogo and thought "serial killer". | Pogo at a parade, then the moment printed in a local paper. | cut |
@@ -60,7 +60,7 @@ No single moment made the monster, but the warning signs came early.
 
 | Time | Shot | Voice (gist) | Picture | In |
 | --- | --- | --- | --- | --- |
-| 175.75 | `flyers` | Between 1972 and 1978, boys and young men kept disappearing around him. | Missing-person flyers pile up on a pole in front of a brick apartment block. Each flyer has a blank silhouette. | black |
+| 175.84 | `flyers` | Between 1972 and 1978, boys and young men kept disappearing around him. | Missing-person flyers pile up on a pole in front of a brick apartment block. Each flyer has a blank silhouette. | black |
 | 183.0 | `path-work` | Some knew him from work… | A young man walks past the job-site framing. | cut |
 | 185.3 | `path-diner` | …some were looking for work… | A young man at a diner counter reading the want ads. | trunk |
 | 187.2 | `path-station` | …others he met in other ways. | A young man waiting on a bench at a bus station. | trunk |
@@ -95,8 +95,8 @@ Shots get shorter and busier. One beat stops for the smell.
 | --- | --- | --- | --- | --- |
 | 331.3 | `station` | For the police this is no longer a vague disappearance. | Police station: Robert's mother at the counter, a detective walks in. | black |
 | 337.2 | `notebook` | They have a 15-year-old, and the last man he went to meet. | A detective's notebook: "Robert Piest, 15", "last seen: contractor", "GACY". | folder |
-| 342.4 | `cabinet` | They start checking Gacy… | A filing-cabinet drawer is pulled open. | cut |
-| 344.9 | `record` | …and quickly find his earlier conviction. | The Gacy file opens: mugshot, and an "IOWA 1968" stamp comes down. | folder |
+| 343.2 | `cabinet` | They start checking Gacy… | A filing-cabinet drawer is pulled open. | cut |
+| 345.25 | `record` | …and quickly find his earlier conviction. | The Gacy file opens: mugshot, and an "IOWA 1968" stamp comes down. | folder |
 | 348.3 | `warrant` | On 13 December they get a search warrant. | The warrant is signed and sealed. | cut |
 | 352.2 | `search` | They still don't find Robert, but among the things there… | Officers searching the house. | dark |
 | 356.0 | `receipt` | …is a photo-processing receipt from the pharmacy, found to have been in Robert's pocket. | A gloved hand lifts the Nisson receipt into an evidence bag; a brief memory of Robert's parka. | cut |
@@ -106,7 +106,7 @@ Shots get shorter and busier. One beat stops for the smell.
 | 378.8 | `smell-moment` | Inside, one of them smells something. He knows that smell. | The living room. One officer stops mid-conversation; the room loses colour and the camera drops to the heating register. | cut |
 | 385.6 | `need-to-return` | It doesn't prove anything yet, but they know they have to come back. | Over an officer's shoulder: the house at night, from the street. | black |
 | 392.8 | `theater` | (Channel ask.) Stories where reality is stranger than the Hollywood version. | A cinema: a projector beam, the audience, a clown on the screen. No text. | black |
-| 406.2 | `police-return` | The police come back to the house, and this time they look underneath. | Police cars pull up in the snow; officers walk to the house with shovels. | beam |
+| 406.8 | `police-return` | The police come back to the house, and this time they look underneath. | Police cars pull up in the snow; officers walk to the house with shovels. | beam |
 
 ## 7. The discovery (6:53–7:35)
 
@@ -132,9 +132,9 @@ Shots get shorter and busier. One beat stops for the smell.
 | 495.4 | `jack` | Gacy himself spoke of other personalities, of a character called Jack. | A courtroom sketch of Gacy at the defence table. A second, harder version of him is drawn in beside him, with the name "Jack". | flash |
 | 500.8 | `prosecution` | The prosecution painted a different picture: a calculating man. | The prosecutor walks to the exhibit easel with the floor plan. | flash |
 | 507.4 | `exhibits` | He ran a business, hid evidence, lied, kept people away from parts of the house. | Close on the easel: the van photo, an evidence bag, a transcript, the plan with the crawl space hatched. | cut |
-| 514.5 | `knew-exactly` | He knew exactly what he was doing. | The prosecutor facing the jury. | cut |
+| 514.95 | `knew-exactly` | He knew exactly what he was doing. | The prosecutor facing the jury. | cut |
 | 517.4 | `jury-room` | The jury rejected the insanity defence and needed less than two hours. | The jury room. The clock's hands move through under two hours; hands go up. | cut |
-| 527.4 | `verdict` | Guilty of all 33 murders. Sentenced to death. | The verdict slip is passed to the judge. Gacy stands. The frame freezes into a court sketch. | cut |
+| 527.9 | `verdict` | Guilty of all 33 murders. Sentenced to death. | The verdict slip is passed to the judge. Gacy stands. The frame freezes into a court sketch. | cut |
 | 534.4 | `appeals` | For years he appealed. | Gacy at a table in prison while legal papers pile up over the years. | folder |
 | 538.6 | `prison-night` | On 10 May 1994, after more than a decade in prison, he was executed in Illinois. | Night outside the prison wall. People stand holding candles. | diss |
 | 545.9 | `case-closed` | It would be easy to end here: caught, tried, executed, the end. | The file closes, is stamped CLOSED and goes into an archive box. | black |

@@ -6,7 +6,7 @@ import { Finish, Haze } from "../engine/look";
 import { useShot } from "../engine/shot";
 import { EASE, keys, lerp, noise, ramp } from "../engine/time";
 import { Castle } from "../kit/buildings";
-import { Glow } from "../kit/light";
+import { Glow, Pool } from "../kit/light";
 import { Shovel } from "../kit/props";
 import { HouseSection, PATCHES, SEC } from "../kit/section";
 import { Motes, Sky } from "../kit/sky";
@@ -71,7 +71,14 @@ export const Burials: React.FC = () => {
   const beats = [3.25, 4.55, 6.15];
   const patches = 1 + beats.reduce((a, b) => a + ramp(t, b, b + 0.45, EASE.out), 0);
   const swing = Math.sin(t * 1.3) * 5;
-  const cam = { x: keys(t, [[0, -600], [7.2, -450]], EASE.drift), y: -40, zoom: keys(t, [[0, 2.6], [7.2, 2.85]], EASE.drift) };
+  // Each "another" is a jump in time: the bulb dips, and when it comes back the
+  // camera has moved to the newest grave and the shovel is standing in it.
+  const dip = Math.max(0, ...beats.map((b) => 1 - Math.min(1, Math.abs(t - (b - 0.1)) / 0.16)));
+  const passed = beats.filter((b) => t >= b - 0.1).length;
+  const newest = PATCHES[passed];
+  const stops = [-600, -470, -690, -400];
+  const drift = (t - (passed ? beats[passed - 1] : 0)) * 14;
+  const cam = { x: stops[passed] + drift, y: -40, zoom: keys(t, [[0, 2.6], [7.2, 2.85]], EASE.drift) };
   const bulbX = -560 + swing;
   return (
     <AbsoluteFill>
@@ -81,14 +88,15 @@ export const Burials: React.FC = () => {
           <HouseSection
             t={t}
             roomLight={{ ...ROOM_NIGHT, amb: 0.55 }}
-            crawlLight={{ ...CRAWL_LIT, amb: 0.52 }}
+            crawlLight={{ ...CRAWL_LIT, amb: 0.52 + dip * 0.38 }}
             lamps={0}
             crawl={{ patches, vents: 0.4, haze: 0.08 }}
             under={
               <g>
                 <path d={`M-560 ${SEC.joistBottom + 20} L${bulbX} ${SEC.joistBottom + 60}`} stroke="#1a1a1a" strokeWidth={2} />
                 <circle cx={bulbX} cy={SEC.joistBottom + 66} r={7} fill="#fff0c8" />
-                <Glow x={bulbX} y={SEC.joistBottom + 66} r={420} color="#f5d9a0" opacity={0.5} />
+                <Glow x={bulbX} y={SEC.joistBottom + 66} r={420} color="#f5d9a0" opacity={0.5 * (1 - dip)} />
+                <Pool x={newest.x} y={newest.y - 4} rx={newest.w * 0.9} ry={34} color="#f5d9a0" opacity={0.22 * (1 - dip)} />
                 {beats.map((b, i) => {
                   const p = PATCHES[i + 1];
                   const u = ramp(t, b, b + 1.6, EASE.out);
@@ -103,8 +111,9 @@ export const Burials: React.FC = () => {
                     </g>
                   );
                 })}
-                <g transform="translate(-300 50)">
-                  <Shovel light={CRAWL_LIT} len={200} />
+                {/* the shovel lies flat beside the newest grave: there is no room to stand it up */}
+                <g transform={`translate(${newest.x + newest.w * 0.55} ${newest.y + 14}) rotate(97)`}>
+                  <Shovel light={CRAWL_LIT} len={180} />
                 </g>
               </g>
             }

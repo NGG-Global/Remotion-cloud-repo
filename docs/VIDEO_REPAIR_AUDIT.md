@@ -105,7 +105,7 @@ The draft's code is kept in the tree, unchanged, under `src/gacy/legacy/` for be
 
 ### Timing
 
-- The cut is re-timed from the local word timestamps and the measured voice envelope (Part 1). Every one of the 99 cuts sits inside a measured pause or a word gap, so no shot changes in the middle of a word.
+- The cut is re-timed from the local word timestamps and the measured voice envelope (Part 1). The final check measured the decoded audio at every one of the 99 cuts: at each cut the voice is below 12 % of its speech level, inside a quiet stretch of at least 90 ms (median 860 ms). No shot changes in the middle of a word. That check found eight cuts that had landed on speech; they were moved into the nearest pause (`docs/VIDEO_QA.md`, section 2).
 - Shots average 6.45 s. The shortest (0.9–1.7 s) are the home-movie run at 10:18 ("ordinary man, contractor, employer, neighbour, host"), cut word by word. The longest (15–22 s) are the continuous camera moves: the descent into the crawl space, the crawl-space tour, the smell sequence.
 - Transitions: 35 object wipes, 7 dissolves, 15 fades up from black (most after a fade to black at the end of an act), and straight cuts elsewhere.
 - The composition is still `ceil(645.302857 × 30) = 19360` frames, and `public/audio/gacy-narration.mp3` is still a byte-identical copy of the root MP3. Neither source file in the repo root was modified.

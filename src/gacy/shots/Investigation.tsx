@@ -84,8 +84,9 @@ export const NotebookShot: React.FC = () => {
   const { t, dur } = useShot();
   const l1 = ramp(t, 0.15, 1.2, EASE.linear);
   const l2 = ramp(t, 2.0, 3.5, EASE.linear);
-  const l3 = ramp(t, 4.3, 4.9, EASE.linear);
-  const under = ramp(t, 4.9, 5.2, EASE.out);
+  // "…and they have a name": GACY is written on "name" (+5.0 s).
+  const l3 = ramp(t, 4.95, 5.55, EASE.linear);
+  const under = ramp(t, 5.55, 5.85, EASE.out);
   const pen = t < 1.2 ? { x: -120 + l1 * 260, y: -94 } : t < 3.6 ? { x: -120 + l2 * 280, y: -46 } : { x: -110 + l3 * 150 + under * 20, y: 26 };
   const cam = { x: keys(t, [[0, -20], [dur, 30]]), y: keys(t, [[0, -60], [dur, -20]]), zoom: keys(t, [[0, 3.6], [dur, 4.4]], EASE.drift) };
   return (
