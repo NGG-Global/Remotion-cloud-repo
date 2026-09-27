@@ -30,6 +30,24 @@ import {
 import { BigParty, Business, ClownBoard, InHindsight, Mirror, Parade, PhotoOp } from "../shots/PublicLife";
 import { Flyers, Handcuff, PathDiner, PathStation, PathWork, UnderTheHouse } from "../shots/Vanishings";
 import { Burials, CastleShot, CrawlTour, OrdinaryHouse, Smell, Trenches } from "../shots/Underneath";
+import { FewMinutes, MotherArrives, PharmacyNight, Shift, SummerJob, TellsMom, Waiting } from "../shots/Piest";
+import {
+  Cabinet,
+  Invite,
+  NeedToReturn,
+  NotLetGo,
+  NotebookShot,
+  PoliceReturn,
+  ReceiptShot,
+  RecordFile,
+  SearchHouse,
+  SmellMoment,
+  Stakeout,
+  Station,
+  TheaterShot,
+  Warrant,
+} from "../shots/Investigation";
+import { AllFinds, DigBegins, FirstFind, Hatch, MoreFinds, River, ThirtyThree } from "../shots/Discovery";
 
 /**
  * Master timeline.
@@ -103,10 +121,41 @@ export const SHOTS: readonly ShotSpec[] = [
   { id: "smell", at: 256.9, C: Smell },
   { id: "castle", at: 273.2, C: CastleShot, enter: { kind: "fromBlack", s: 0.8 } },
   { id: "ordinary-house", at: 285.3, C: OrdinaryHouse },
+  // Robert Piest
+  { id: "pharmacy-night", at: 296.8, C: PharmacyNight, enter: { kind: "fromBlack", s: 0.6 } },
+  { id: "shift", at: 301.3, C: Shift },
+  { id: "mother-arrives", at: 310.6, C: MotherArrives },
+  { id: "tells-mom", at: 312.6, C: TellsMom },
+  { id: "summer-job", at: 318.4, C: SummerJob },
+  { id: "few-minutes", at: 321.2, C: FewMinutes },
+  { id: "waiting", at: 324.6, C: Waiting, exit: { kind: "toBlack", s: 0.6 } },
+  // The investigation
+  { id: "station", at: 331.3, C: Station, enter: { kind: "fromBlack", s: 0.5 } },
+  { id: "notebook", at: 337.2, C: NotebookShot },
+  { id: "cabinet", at: 342.4, C: Cabinet },
+  { id: "record", at: 344.9, C: RecordFile },
+  { id: "warrant", at: 348.3, C: Warrant },
+  { id: "search", at: 352.2, C: SearchHouse },
+  { id: "receipt", at: 356.0, C: ReceiptShot },
+  { id: "not-let-go", at: 362.8, C: NotLetGo },
+  { id: "stakeout", at: 365.3, C: Stakeout },
+  { id: "invite", at: 373.4, C: Invite },
+  { id: "smell-moment", at: 378.8, C: SmellMoment, exit: { kind: "toBlack", s: 0.12 } },
+  { id: "need-to-return", at: 385.6, C: NeedToReturn, enter: { kind: "fromBlack", s: 0.9 } },
+  { id: "theater", at: 392.8, C: TheaterShot, enter: { kind: "fromBlack", s: 0.8 } },
+  { id: "police-return", at: 406.2, C: PoliceReturn },
+  // The discovery
+  { id: "hatch", at: 413.5, C: Hatch },
+  { id: "dig-begins", at: 421.3, C: DigBegins },
+  { id: "first-find", at: 426.3, C: FirstFind },
+  { id: "more-finds", at: 428.3, C: MoreFinds },
+  { id: "all-finds", at: 431.2, C: AllFinds },
+  { id: "river", at: 438.9, C: River, enter: { kind: "dissolve", s: 0.6 } },
+  { id: "thirty-three", at: 442.8, C: ThirtyThree, enter: { kind: "dissolve", s: 0.6 } },
 ];
 
 /** Where the rebuilt cut currently ends; the draft's scenes cover the rest. */
-export const REBUILT_UNTIL = 296.8;
+export const REBUILT_UNTIL = 454.8;
 
 export type WipeSpec = {
   readonly at: number;
@@ -132,6 +181,14 @@ export const WIPES: readonly WipeSpec[] = [
   { at: 187.2, kind: "trunk", dur: 0.7, dir: 1 },
   { at: 256.9, kind: "floor", dur: 1.0 },
   { at: 287.25, kind: "flash", dur: 0.5, tone: "#e8eeff" },
+  { at: 296.8, kind: "dark", dur: 0.6 },
+  { at: 337.2, kind: "folder", dur: 0.7, dir: -1 },
+  { at: 344.9, kind: "folder", dur: 0.7, dir: 1 },
+  { at: 352.2, kind: "dark", dur: 0.4 },
+  { at: 365.3, kind: "dark", dur: 0.5 },
+  { at: 373.4, kind: "flash", dur: 0.4, tone: "#e8eef4" },
+  { at: 406.2, kind: "beam", dur: 0.9 },
+  { at: 413.5, kind: "dark", dur: 0.4 },
 ];
 
 export type LabelSpec = {
@@ -149,6 +206,10 @@ export const LABELS: readonly LabelSpec[] = [
   { from: 146.8, to: 150.6, line: "Pogo the Clown" },
   { from: 176.3, to: 182.4, line: "1972 – 1978" },
   { from: 227.5, to: 231.8, line: "Crawl Space" },
+  { from: 297.5, to: 301.0, line: "רוברט פיסט", sub: "בן 15" },
+  { from: 302.2, to: 309.8, line: "דס פליינס", sub: "11.12.1978" },
+  { from: 348.9, to: 351.9, line: "13.12.1978" },
+  { from: 413.9, to: 417.4, line: "21.12.1978" },
 ];
 
 export const shotEnd = (i: number): number =>

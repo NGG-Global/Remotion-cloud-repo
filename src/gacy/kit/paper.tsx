@@ -179,8 +179,9 @@ export const Handwrite: React.FC<{
       <text
         x={x}
         y={y}
-        fontFamily="'Segoe Script', 'Brush Script MT', cursive"
+        fontFamily={TYPE.serif}
         fontStyle="italic"
+        fontWeight={500}
         fontSize={size}
         fill={color}
         clipPath={`url(#hw-${id})`}
