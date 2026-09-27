@@ -143,7 +143,9 @@ const Courtroom: React.FC<{
   gacy?: React.ReactNode;
   easel?: React.ReactNode;
   jurorsLook?: number;
-}> = ({ t, light = COURT_L, prosecutor, defense, gacy, easel, jurorsLook = 0 }) => (
+  /** x of each spectator on the front bench; each shot places them clear of its frame edges. */
+  gallery?: readonly number[];
+}> = ({ t, light = COURT_L, prosecutor, defense, gacy, easel, jurorsLook = 0, gallery = GALLERY }) => (
   <>
     <Plane d={4}>
       <CourtRoom light={light} t={t} />
@@ -180,21 +182,24 @@ const Courtroom: React.FC<{
     </Plane>
     <Plane d={-3.2}>
       <GalleryBench light={{ ...light, amb: 0.4 }} />
-      {Array.from({ length: 9 }, (_, i) => (
-        <Person key={i} x={-3400 + i * 800 + hash(i) * 200} y={-60} look={[...NEIGHBORS, MOTHER][i % 7]} view="back" light={{ ...light, amb: 0.5 }} pose={seated(t, i + 30)} shadow={false} />
+      {gallery.map((gx, i) => (
+        <Person key={i} x={gx} y={-60} look={[...NEIGHBORS, MOTHER][i % 7]} view="back" light={{ ...light, amb: 0.5 }} pose={seated(t, i + 30)} shadow={false} />
       ))}
     </Plane>
   </>
 );
 
+/** Front-bench spectators, seen from behind. */
+const GALLERY = Array.from({ length: 9 }, (_, i) => -3400 + i * 800 + hash(i) * 200);
+
 export const CourtWide: React.FC = () => {
   const { t, dur } = useShot();
-  const cam = { x: keys(t, [[0, -900], [dur, 200]], EASE.drift), y: keys(t, [[0, -520], [dur, -480]]), zoom: keys(t, [[0, 0.86], [dur, 0.98]], EASE.drift) };
+  const cam = { x: keys(t, [[0, -900], [dur, 60]], EASE.drift), y: keys(t, [[0, -370], [dur, -330]]), zoom: keys(t, [[0, 0.86], [dur, 0.98]], EASE.drift) };
   const sketchK = ramp(t, 0, dur, EASE.linear);
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t}>
-        <Courtroom t={t} />
+        <Courtroom t={t} gallery={[-2300, -1300, -400, 350, 1300]} />
         <Plane d={-5.5}>
           {/* the court artist, pad on her knee */}
           <Person x={-2800} y={0} s={1} look={ARTIST} light={{ ...COURT_L, amb: 0.55 }} pose={seated(t, 60, { nearUpper: 50, nearFore: 80, farUpper: 40, farFore: 90, neck: 18, lean: 12 })} />
@@ -212,13 +217,17 @@ export const CourtWide: React.FC = () => {
 export const DefenseArgues: React.FC = () => {
   const { t, dur } = useShot();
   const temple = ramp(t, 1.4, 1.9) * (1 - ramp(t, 3.0, 3.4));
-  const cam = { x: keys(t, [[0, 1100], [dur, 1250]], EASE.drift), y: -400, zoom: keys(t, [[0, 1.45], [dur, 1.6]], EASE.drift) };
+  // the jury fills the right of the frame; the judge and the end juror stay clear of the edges
+  const cam = { x: keys(t, [[0, 1320], [dur, 1385]], EASE.drift), y: -250, zoom: keys(t, [[0, 1.45], [dur, 1.6]], EASE.drift) };
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t}>
         <Courtroom
           t={t}
           jurorsLook={0.6}
+          gallery={[]}
+          // his seat is at the frame edge in this framing, so it is left empty
+          prosecutor={<g />}
           defense={
             <>
               <Person x={1150} y={0} look={DEFENSE} facing={1} light={COURT_L} pose={gesture(talk(idle(pose({ smile: 0, brow: 0.3, nearUpper: lerp(4, 150, temple), nearFore: lerp(8, 130, temple) }), t, 4), t, 4), t, 4, 0.8)} />
@@ -272,7 +281,7 @@ export const ProsecutionRises: React.FC = () => {
   const { t, dur } = useShot();
   const stand = ramp(t, 0.3, 1.1);
   const w = walkBetween(t, 1.4, 4.6, COURT.prosecution, 1500);
-  const cam = { x: keys(t, [[0, 700], [dur, 1500]], EASE.inOut), y: -480, zoom: keys(t, [[0, 1.25], [dur, 1.35]], EASE.drift) };
+  const cam = { x: keys(t, [[0, 1010], [dur, 1530]], EASE.inOut), y: -330, zoom: keys(t, [[0, 1.25], [dur, 1.35]], EASE.drift) };
   const pp = t < 1.3 ? pose({ ...SIT, hipDrop: lerp(84, 0, stand), nearThigh: lerp(86, 1, stand), nearKnee: lerp(88, 2, stand), farThigh: lerp(82, -2, stand), farKnee: lerp(84, 2, stand) }) : walk(STAND, w.phase, w.amt);
   return (
     <AbsoluteFill>
@@ -280,6 +289,7 @@ export const ProsecutionRises: React.FC = () => {
         <Courtroom
           t={t}
           jurorsLook={0.4}
+          gallery={[-200, 650, 1700, 2300]}
           easel={<PlanExhibit x={COURT.easel + 500} y={-560} light={COURT_L} s={1.2} />}
           prosecutor={<Person x={t < 1.3 ? COURT.prosecution : w.x} y={-10} look={PROSECUTOR} facing={1} light={COURT_L} pose={idle(pp, t, 6)} />}
         />
@@ -346,7 +356,7 @@ export const Exhibits: React.FC = () => {
 export const KnewExactly: React.FC = () => {
   const { t, dur } = useShot();
   const point = ramp(t, 0.6, 1.2);
-  const cam = { x: keys(t, [[0, -620], [dur, -760]], EASE.drift), y: -400, zoom: keys(t, [[0, 1.3], [dur, 1.45]], EASE.drift) };
+  const cam = { x: keys(t, [[0, -620], [dur, -760]], EASE.drift), y: -300, zoom: keys(t, [[0, 1.3], [dur, 1.45]], EASE.drift) };
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t}>
@@ -366,7 +376,11 @@ export const JuryRoomShot: React.FC = () => {
   const minutes = lerp(10, 115, ramp(t, 0.8, 8.4, EASE.inOut));
   const hands = ramp(t, 8.6, 9.3, EASE.out);
   const L: Light = { key: "#fff4e4", ambient: "#3a342c", amb: 0.12 };
-  const cam = { x: keys(t, [[0, -300], [dur, 100]], EASE.drift), y: -300, zoom: keys(t, [[0, 1.32], [dur, 1.45]], EASE.drift) };
+  const cam = { x: keys(t, [[0, -60], [dur, 40]], EASE.drift), y: -190, zoom: keys(t, [[0, 1.32], [dur, 1.45]], EASE.drift) };
+  // Across the table and nearest the lens, placed so that nobody is cut by
+  // the frame edge at either end of the drift; the rest sit outside the frame.
+  const far = [-1400, -494, 55, 596, 1300, 1700];
+  const near = [-1300, -800, -150, 250, 900, 1400];
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t}>
@@ -375,7 +389,7 @@ export const JuryRoomShot: React.FC = () => {
         </Plane>
         <Plane d={0.6}>
           {JURORS.slice(0, 6).map((j, i) => (
-            <Person key={i} x={-1500 + i * 560} y={-10} s={0.95} look={j} facing={i % 2 ? -1 : 1} light={L} pose={seated(t, i + 50, { nearUpper: lerp(30, 160, hands * (i % 3 === 1 ? 0.9 : 1)), nearFore: lerp(60, 20, hands) })} />
+            <Person key={i} x={far[i]} y={-10} s={0.95} look={j} facing={i % 2 ? -1 : 1} light={L} pose={seated(t, i + 50, { nearUpper: lerp(30, 160, hands * (i % 3 === 1 ? 0.9 : 1)), nearFore: lerp(60, 20, hands) })} />
           ))}
         </Plane>
         <Plane d={0}>
@@ -387,7 +401,7 @@ export const JuryRoomShot: React.FC = () => {
         </Plane>
         <Plane d={-1.6}>
           {JURORS.slice(6).map((j, i) => (
-            <Person key={i} x={-1700 + i * 640} y={60} s={1} look={j} view="back" light={{ ...L, amb: 0.35 }} pose={seated(t, i + 70, { nearUpper: lerp(30, 160, hands), nearFore: lerp(60, 20, hands) })} shadow={false} />
+            <Person key={i} x={near[i]} y={60} s={1} look={j} view="back" light={{ ...L, amb: 0.35 }} pose={seated(t, i + 70, { nearUpper: lerp(30, 160, hands), nearFore: lerp(60, 20, hands) })} shadow={false} />
           ))}
         </Plane>
       </Stage>
@@ -403,7 +417,7 @@ export const Verdict: React.FC = () => {
   const sketch = ramp(t, 5.6, 6.6);
   const cam = {
     x: keys(t, [[0, 300], [1.4, 150], [2.4, COURT.defense + 100], [dur, COURT.defense + 60]], EASE.inOut),
-    y: keys(t, [[0, -620], [1.4, -560], [2.4, -380], [dur, -400]], EASE.inOut),
+    y: keys(t, [[0, -620], [1.4, -560], [2.4, -260], [dur, -270]], EASE.inOut),
     zoom: keys(t, [[0, 2.2], [1.4, 1.6], [2.4, 1.4], [dur, 1.7]], EASE.inOut),
   };
   const L: Light = { ...COURT_L, desat: sketch * 0.9, amb: lerp(0.14, 0.05, sketch) };
@@ -414,6 +428,7 @@ export const Verdict: React.FC = () => {
         <Courtroom
           t={t}
           light={L}
+          gallery={[-3000, -2200, -600, 300, 1100, 1900]}
           gacy={<Person x={COURT.defense} y={-10} look={GACY_SUIT} light={L} pose={idle(gp, t, 3, 0.3)} mode={sketch > 0.5 ? "sketch" : "color"} />}
         />
         <Plane d={3.6}>
@@ -436,14 +451,14 @@ export const Appeals: React.FC = () => {
   const { t, dur } = useShot();
   const L: Light = { key: "#d8dce2", ambient: "#1a1c22", amb: 0.3, desat: 0.3 };
   const pages = Math.floor(ramp(t, 0.2, dur - 0.3, EASE.inOut) * 14);
-  const cam = { x: keys(t, [[0, -120], [dur, 0]]), y: -380, zoom: keys(t, [[0, 1.5], [dur, 1.65]], EASE.drift) };
+  const cam = { x: keys(t, [[0, -120], [dur, 0]]), y: -250, zoom: keys(t, [[0, 1.5], [dur, 1.65]], EASE.drift) };
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t} bg="#0c0d10">
         <Plane d={1.4}>
           <rect x={-2000} y={-1400} width={4000} height={1400} fill={lit("#8a8a84", L)} />
           <rect x={-2000} y={0} width={4000} height={600} fill={lit("#5a5a56", L)} />
-          <g transform="translate(560 -700)">
+          <g transform="translate(420 -470)">
             <rect x={-100} y={-120} width={200} height={240} fill={lit("#f0ece0", L)} />
             <rect x={-100} y={-120} width={200} height={56} fill={lit("#8a2a24", L)} />
             <text x={0} y={-80} textAnchor="middle" fontFamily="Frank Ruhl Libre, serif" fontSize={34} fill={lit("#f0ece0", L)}>

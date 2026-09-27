@@ -30,8 +30,15 @@ const CRAWL_LIT: Light = { key: "#f0d8a8", ambient: "#0c0a08", amb: 0.4, desat: 
 const ROOM_NIGHT: Light = { key: "#ffe2b8", ambient: "#20160e", amb: 0.2 };
 const ROOM_DAY: Light = { key: "#fff4e4", ambient: "#4a4038", amb: 0.08 };
 
-/** The framing shared by the trench-digging and the police dig. */
-export const TRENCH_CAM = { x: -420, y: -250, zoom: 1.32 } as const;
+/**
+ * The framing shared by the trench-digging and the police dig: centred on
+ * the crawl space, with the floor joists across the upper third and only
+ * the lower legs of anyone standing in the room above.
+ */
+export const TRENCH_CAM = { x: -480, y: -35, zoom: 2.2 } as const;
+
+/** Mid-shot of Gacy standing at the hatch, used when he speaks. */
+const HATCH_CAM = { x: -260, y: -330, zoom: 1.55 } as const;
 
 const bgNight = <rect x={-20000} y={-6000} width={40000} height={12000} fill="#05060a" />;
 
@@ -127,9 +134,24 @@ export const Burials: React.FC = () => {
 
 // ------------------------------------------------- "drainage" trenches
 
+/**
+ * Starts on the workers crawling in, tilts up to Gacy at the hatch while he
+ * explains the "drainage", and comes back down to the trenches for "they
+ * didn't know what the trenches were for".
+ */
+const trenchCam = (t: number, dur: number) => {
+  const up = ramp(t, 5.0, 5.9, EASE.inOut) - ramp(t, 8.4, 9.3, EASE.inOut);
+  const drift = keys(t, [[0, -20], [dur, 40]], EASE.drift);
+  return {
+    x: lerp(TRENCH_CAM.x + drift, HATCH_CAM.x, up),
+    y: lerp(TRENCH_CAM.y, HATCH_CAM.y, up),
+    zoom: lerp(TRENCH_CAM.zoom, HATCH_CAM.zoom, up),
+  };
+};
+
 export const Trenches: React.FC = () => {
   const { t, dur } = useShot();
-  const w1 = walkBetween(t, 0.4, 2.2, SEC.hatchX + 40, -700);
+  const w1 = walkBetween(t, 0.4, 2.2, SEC.hatchX + 40, -640);
   const w2 = walkBetween(t, 1.2, 3.2, SEC.hatchX + 60, -250);
   const trench = ramp(t, 2.0, dur, EASE.linear) * 0.66;
   const gTalk = t > 5.6 && t < 8.4;
@@ -153,7 +175,7 @@ export const Trenches: React.FC = () => {
     );
   return (
     <AbsoluteFill>
-      <Stage cam={{ ...TRENCH_CAM, x: keys(t, [[0, TRENCH_CAM.x - 60], [dur, TRENCH_CAM.x + 40]], EASE.drift) }} handheld={2} t={t} bg="#05060a">
+      <Stage cam={trenchCam(t, dur)} handheld={2} t={t} bg="#05060a">
         <Plane d={0}>
           {bgNight}
           <HouseSection
@@ -168,7 +190,7 @@ export const Trenches: React.FC = () => {
             }
             under={
               <g>
-                {t < 2.2 ? worker(w1.x, w1.phase, true, WORKERS[0], "a") : worker(-700, 0, false, WORKERS[0], "a", wipe)}
+                {t < 2.2 ? worker(w1.x, w1.phase, true, WORKERS[0], "a") : worker(-640, 0, false, WORKERS[0], "a", wipe)}
                 {t < 3.2 ? worker(w2.x, w2.phase, true, WORKERS[3], "b") : worker(-250, 0.5, false, WORKERS[3], "b")}
               </g>
             }
@@ -325,9 +347,10 @@ export const OrdinaryHouse: React.FC = () => {
   const enter = walkBetween(t, 2.6, 4.2, 180, -150);
   const worker = walkBetween(t, 5.9, 8.6, 900, 200);
   const cam = {
-    x: keys(t, [[0, -350], [1.9, -350], [2.4, -400], [4.4, -200], [6.2, 300], [7.4, 400], [9.2, -100], [dur, -100]], EASE.inOut),
-    y: keys(t, [[0, -520], [1.9, -520], [2.4, -420], [7.4, -420], [9.2, -160], [dur, -60]], EASE.inOut),
-    zoom: keys(t, [[0, 0.6], [1.9, 0.75], [2.4, 1.05], [7.4, 1.15], [9.2, 0.95], [dur, 1.2]], EASE.inOut),
+    // ends on the whole house, living room to kitchen, with the crawl space under it
+    x: keys(t, [[0, -350], [1.9, -350], [2.4, -400], [4.4, -200], [6.2, 300], [7.4, 400], [9.2, -230], [dur, -230]], EASE.inOut),
+    y: keys(t, [[0, -520], [1.9, -520], [2.4, -420], [7.4, -420], [9.2, -250], [dur, -230]], EASE.inOut),
+    zoom: keys(t, [[0, 0.6], [1.9, 0.75], [2.4, 1.05], [7.4, 1.15], [9.2, 0.85], [dur, 0.88]], EASE.inOut),
   };
   const day = ROOM_DAY;
   const crawlL: Light = { key: "#a8b2c4", ambient: "#0a0b0e", amb: 0.42, desat: 0.35 };

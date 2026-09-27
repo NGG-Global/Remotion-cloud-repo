@@ -44,6 +44,13 @@ Audio in H.264 files: the default MP4 output encodes the voice as AAC. Decoded w
 
 Render cost: in the 4-core cloud container used for this repair, the full 720p render above took 2 h 49 min and produced a 1.57 GB file. A 1080p frame took about 1.6 s as a still, so allow several hours for a full 1080p render on similar hardware. `docs/VIDEO_QA.md` has the measurements.
 
+Framing check (no video render): with the input prop `framingDebug`, every character logs where its head lands on screen, and `tools/framing-report.mjs` lists the frames where a head is cut by the frame edge. People drawn inside a picture (a photo, a TV screen, a monitor, a poster) are not logged: they sit inside `<OffStage>`, because their position on screen depends on the picture that holds them.
+
+```bash
+INPUT_PROPS='{"framingDebug":true}' LOGS=1 node tools/stills.mjs GacyDocumentary out/qa 0.5 7358,7437,7527 .cache/bundle > out/framing.log
+node tools/framing-report.mjs out/framing.log
+```
+
 Preview: `npm run dev`, then open `GacyDocumentary`. The two helper compositions `GacyRigSheet` (the cast and their poses) and `GacySetTest` (sets under the camera) are for development and are not part of the film.
 
 ## How the cut is organised

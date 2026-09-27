@@ -1,4 +1,5 @@
 import React from "react";
+import { OffStage } from "../engine/camera";
 import { darken, lit, mix, type Light, NEUTRAL } from "../engine/color";
 import { hash, noise } from "../engine/time";
 import { TYPE } from "../theme";
@@ -392,7 +393,7 @@ export const Monitor: React.FC<{
         </defs>
         <rect x={0} y={0} width={w} height={h} fill="#0e141a" />
         <g clipPath={`url(#mon-${id})`}>
-          <g transform={`scale(${k})`}>{children}</g>
+          <g transform={`scale(${k})`}><OffStage>{children}</OffStage></g>
         </g>
       </g>
       <Glow x={0} y={sy + h / 2} r={w * 1.3} color="#9ac8ff" opacity={0.16} />
@@ -535,7 +536,7 @@ export const FlatTV: React.FC<{
       </defs>
       <rect x={-w / 2} y={-h} width={w} height={h} fill="#08090a" />
       <g clipPath={`url(#tv-${id})`} opacity={on}>
-        <g transform={`translate(${-w / 2} ${-h}) scale(${k})`}>{children}</g>
+        <g transform={`translate(${-w / 2} ${-h}) scale(${k})`}><OffStage>{children}</OffStage></g>
       </g>
       {on > 0 ? <Glow x={0} y={-h / 2} r={w * 1.2} color="#ffd0a0" opacity={0.2 * on} /> : null}
     </g>
@@ -565,7 +566,7 @@ export const PosterFrame: React.FC<{
         </clipPath>
       </defs>
       <g clipPath={`url(#po-${id})`}>
-        <g transform={`translate(${-w / 2} ${-h})`}>{children}</g>
+        <g transform={`translate(${-w / 2} ${-h})`}><OffStage>{children}</OffStage></g>
       </g>
       {Array.from({ length: bulbs }, (_, i) => {
         const on = 0.55 + 0.45 * (Math.sin(t * 6 - i * 0.9) > 0 ? 1 : 0);

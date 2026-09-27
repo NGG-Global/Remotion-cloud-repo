@@ -1,5 +1,6 @@
 import React from "react";
 import { darken, lit, type Light, NEUTRAL } from "../engine/color";
+import { OffStage } from "../engine/camera";
 import { hash } from "../engine/time";
 import { TYPE } from "../theme";
 
@@ -52,7 +53,9 @@ export const Photo: React.FC<{
         </defs>
         <rect x={-w / 2} y={-h / 2} width={w} height={h} fill={lit(tone, light)} />
         <g clipPath={`url(#ph-${id})`}>
-          <g transform={`translate(${-w / 2} ${-h / 2})`}>{scene}</g>
+          <g transform={`translate(${-w / 2} ${-h / 2})`}>
+            <OffStage>{scene}</OffStage>
+          </g>
         </g>
         <rect x={-w / 2} y={-h / 2} width={w} height={h} fill="#fff" opacity={0.05} />
       </>

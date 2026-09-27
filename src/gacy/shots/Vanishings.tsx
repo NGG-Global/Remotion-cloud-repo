@@ -107,7 +107,7 @@ export const PathWork: React.FC = () => {
 export const PathDiner: React.FC = () => {
   const { t, dur } = useShot();
   const L: Light = { key: "#fff0d0", ambient: "#3a3430", amb: 0.12 };
-  const cam = { x: keys(t, [[0, -150], [dur, 50]]), y: -380, zoom: 1.7 };
+  const cam = { x: keys(t, [[0, -150], [dur, 50]]), y: -200, zoom: 1.7 };
   const circle = ramp(t, 0.6, 1.6);
   return (
     <AbsoluteFill>
@@ -135,7 +135,7 @@ export const PathDiner: React.FC = () => {
 export const PathStation: React.FC = () => {
   const { t, dur } = useShot();
   const L: Light = { key: "#d8e8e4", ambient: "#101416", amb: 0.3, desat: 0.3 };
-  const cam = { x: keys(t, [[0, 60], [dur, -40]]), y: -400, zoom: keys(t, [[0, 1.05], [dur, 1.2]], EASE.drift) };
+  const cam = { x: keys(t, [[0, 60], [dur, -40]]), y: -260, zoom: keys(t, [[0, 1.05], [dur, 1.2]], EASE.drift) };
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t}>
@@ -162,8 +162,8 @@ export const Handcuff: React.FC = () => {
   const reach = ramp(t, 8.2, 9.1, EASE.inOut) * (1 - ramp(t, 9.6, 10.6));
   const cam = {
     x: keys(t, [[0, -900], [dur, -620]], EASE.drift),
-    y: keys(t, [[0, -120], [dur, -40]], EASE.drift),
-    zoom: keys(t, [[0, 1.7], [dur, 3.4]], EASE.drift),
+    y: keys(t, [[0, -180], [6.0, -160], [dur, -40]], EASE.drift),
+    zoom: keys(t, [[0, 1.7], [6.0, 2.3], [dur, 3.4]], EASE.drift),
   };
   const flourish = Math.sin(t * 2.2) * ramp(t, 2.2, 3.0) * (1 - ramp(t, 7.0, 8.0));
   return (
@@ -172,13 +172,17 @@ export const Handcuff: React.FC = () => {
         <Plane d={0}>
           <GacyLivingRoom light={room} lamp={1 - off} t={t} />
           {/* his shadow on the panelling, showing a "trick" */}
-          <g opacity={0.45 * (1 - off)}>
-            <Person x={-980} y={-10} s={1.25} look={GACY} mode="silhouette" silhouette="#1a0e08" pose={pose({ nearUpper: 60 + flourish * 30, nearFore: 60 + flourish * 40, farUpper: 50 - flourish * 20, farFore: 70, turn: 0.3 })} shadow={false} />
-          </g>
+          {/* the shadow fades as the game stops being a game, before the push reaches it */}
+          {t < 7.5 ? (
+            <g opacity={0.45 * (1 - off) * (1 - ramp(t, 6.5, 7.5))}>
+              <Person x={-980} y={40} s={1.05} look={GACY} mode="silhouette" silhouette="#1a0e08" pose={pose({ nearUpper: 60 + flourish * 30, nearFore: 60 + flourish * 40, farUpper: 50 - flourish * 20, farFore: 70, turn: 0.3 })} shadow={false} />
+            </g>
+          ) : null}
           <Handcuffs x={LIVING.tableX - 60} y={lerp(-40, 56, place)} light={room} s={1.1} rot={-6} />
         </Plane>
         <Plane d={-0.8}>
-          <CloseHand x={lerp(-440, -600, place)} y={lerp(-160, 10, place) - ramp(t, 2.2, 2.8) * 160} angle={-160} skin="#e3b692" sleeve="#7a6147" s={1.15} curl={0.5} light={room} />
+          {/* enters from outside the frame to set the cuffs down */}
+          <CloseHand x={lerp(-260, -600, place)} y={lerp(-160, 10, place) - ramp(t, 2.2, 2.8) * 160} angle={-160} skin="#e3b692" sleeve="#7a6147" s={1.15} curl={0.5} light={room} />
           <CloseHand x={lerp(-1500, -1300, reach)} y={lerp(-240, -440, reach)} angle={-150} skin="#e3b692" sleeve="#7a6147" s={1.15} curl={0.7} light={room} />
         </Plane>
       </Stage>

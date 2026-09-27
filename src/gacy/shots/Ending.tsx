@@ -69,12 +69,17 @@ const DAY = lightFor("day");
 
 const SHELF_X0 = -1600;
 const GACY_SLOT = slotAt(SHELF_X0, 8, 2, 0);
-const BOX_AT = { x: -800, y: -400 };
-const GACY_FILE_AT = { x: -830, y: 190 };
+// Off to the left of the eight files, so the wide framing of the files leaves both out.
+const BOX_AT = { x: -920, y: -420 };
+const GACY_FILE_AT = { x: -900, y: 200 };
 const SLEEVE = "#4a5560";
 const SKIN = "#dfb492";
 
 const KID: Look = { build: "child", skin: "#e8bc9a", hair: "mop", hairColor: "#8a5a2a", top: "#c84a3a", pants: "#3a4a6a", age: 9 };
+
+/** The wide framing of the eight files: all of them, centred, nothing else cut by the edge. */
+const FILES_CENTRE_Y = 5;
+const FILES_ZOOM = 1.45;
 
 /** The three names, in the order the narration reads them. */
 const NAMES = [
@@ -236,9 +241,9 @@ export const EightFiles: React.FC = () => {
   const dealing = t > 2.0 && t < 4.3;
   const gFolder = { x: lerp(BOX_AT.x, GACY_FILE_AT.x, gOut), y: lerp(BOX_AT.y, GACY_FILE_AT.y, gOut) };
   const cam = {
-    x: keys(t, [[0, BOX_AT.x], [1.1, BOX_AT.x], [1.9, -700], [2.5, -300], [4.0, 150], [dur, -120]], EASE.inOut),
-    y: keys(t, [[0, BOX_AT.y], [1.1, BOX_AT.y], [1.9, -60], [2.5, -230], [4.0, -230], [dur, 0]], EASE.inOut),
-    zoom: keys(t, [[0, 2.2], [1.1, 2.2], [1.9, 1.9], [4.0, 1.9], [dur, 1.2]], EASE.inOut),
+    x: keys(t, [[0, BOX_AT.x], [1.1, BOX_AT.x], [1.9, -820], [2.5, -300], [4.0, 150], [dur, 0]], EASE.inOut),
+    y: keys(t, [[0, BOX_AT.y], [1.1, BOX_AT.y], [1.9, 40], [2.5, -230], [4.0, -230], [dur, FILES_CENTRE_Y]], EASE.inOut),
+    zoom: keys(t, [[0, 2.2], [1.1, 2.2], [1.9, 1.9], [4.0, 1.9], [dur, FILES_ZOOM]], EASE.inOut),
   };
   return (
     <AbsoluteFill>
@@ -327,9 +332,9 @@ export const Names: React.FC = () => {
   const at = (i: number) => ({ x: FILE_SLOTS[i].x, y: FILE_SLOTS[i].y + 60 });
   const [a, b, c] = NAMES.map((n) => at(n.i));
   const cam = {
-    x: keys(t, [[0, a.x], [1.0, a.x], [1.45, b.x], [2.1, b.x], [2.5, c.x], [3.7, c.x], [dur, -100]], EASE.inOut),
-    y: keys(t, [[0, a.y], [1.0, a.y], [1.45, b.y], [2.1, b.y], [2.5, c.y], [3.7, c.y], [dur, 0]], EASE.inOut),
-    zoom: keys(t, [[0, 2.3], [3.7, 2.4], [dur, 1.25]], EASE.inOut),
+    x: keys(t, [[0, a.x], [1.0, a.x], [1.45, b.x], [2.1, b.x], [2.5, c.x], [3.7, c.x], [dur, 0]], EASE.inOut),
+    y: keys(t, [[0, a.y], [1.0, a.y], [1.45, b.y], [2.1, b.y], [2.5, c.y], [3.7, c.y], [dur, FILES_CENTRE_Y]], EASE.inOut),
+    zoom: keys(t, [[0, 2.3], [3.7, 2.4], [dur, FILES_ZOOM]], EASE.inOut),
   };
   return (
     <AbsoluteFill>
@@ -361,11 +366,16 @@ export const FiveRemain: React.FC = () => {
   // Nearly fifty years: the window light crosses the wall and the room goes to evening.
   const L = blendLight(OFFICE, EVENING, ramp(t, 5.0, 10.0));
   const sun = ramp(t, 2.5, 9.5, EASE.linear);
-  const end = CARD(7);
+  // The push ends on two blank cards (2 and 3) and their number strips,
+  // framed so no neighbouring card is sliced by the edge. Zoom is eased in
+  // log space so the push keeps an even pace.
+  const push = ramp(t, 0, dur, EASE.inOut);
+  const endX = (CARD(2).x + CARD(3).x) / 2;
+  const endY = CARD(2).y + 9;
   const cam = {
-    x: keys(t, [[0, 80], [dur, end.x - 20]], EASE.inOut),
-    y: keys(t, [[0, -330], [dur, end.y + 6]], EASE.inOut),
-    zoom: keys(t, [[0, 1.2], [dur, 4.4]], EASE.inOut),
+    x: lerp(80, endX, push),
+    y: lerp(-330, endY, push),
+    zoom: 1.2 * Math.pow(11.8 / 1.2, push),
   };
   return (
     <AbsoluteFill>
@@ -563,8 +573,9 @@ export const Posters: React.FC = () => {
 export const OrdinaryStreet: React.FC = () => {
   const { t, dur } = useShot();
   const L = DAY;
-  const mom = walkBetween(t, 0, 8.8, -700, 1900);
-  const kidX = mom.x + 150;
+  // They walk right to left, past the house and out of frame before the camera closes in on him.
+  const mom = walkBetween(t, 0, 8.8, 2600, -1300);
+  const kidX = mom.x - 150;
   const waveK = ramp(t, 3.6, 4.0) - ramp(t, 5.4, 5.8);
   const momWave = ramp(t, 4.2, 4.5) - ramp(t, 5.2, 5.5);
   const gp = idle(
@@ -579,7 +590,7 @@ export const OrdinaryStreet: React.FC = () => {
   );
   const cam = {
     x: keys(t, [[0, 300], [5.0, 1150], [dur, 1480]], EASE.inOut),
-    y: keys(t, [[0, -430], [dur, -420]], EASE.inOut),
+    y: keys(t, [[0, -430], [5.0, -420], [dur, -300]], EASE.inOut),
     zoom: keys(t, [[0, 0.46], [5.0, 0.56], [dur, 1.05]], EASE.inOut),
   };
   return (
@@ -599,8 +610,8 @@ export const OrdinaryStreet: React.FC = () => {
                 <Person x={1500} look={GACY_WORK} facing={-1} light={L} pose={gp} farHold={<Clipboard light={L} />} />
               </Plane>
               <Plane d={-8.6}>
-                <Person x={mom.x} look={MOTHER} light={L} pose={walk(idle(pose({ smile: 0.6, farUpper: lerp(10, 150, momWave), turn: lerp(0, 0.5, momWave) }), t, 13), mom.phase, mom.amt)} />
-                <Person x={kidX} look={KID} light={L} pose={walk(idle(pose({ smile: 1 }), t, 14), mom.phase * 1.35, mom.amt)} />
+                <Person x={mom.x} facing={mom.facing} look={MOTHER} light={L} pose={walk(idle(pose({ smile: 0.6, farUpper: lerp(10, 150, momWave), turn: lerp(0, 0.5, momWave) }), t, 13), mom.phase, mom.amt)} />
+                <Person x={kidX} facing={mom.facing} look={KID} light={L} pose={walk(idle(pose({ smile: 1 }), t, 14), mom.phase * 1.35, mom.amt)} />
               </Plane>
             </>
           }
@@ -636,7 +647,7 @@ const FenceChat: React.FC = () => {
   const { t } = useShot();
   const L = DAY;
   const laugh = Math.max(0, Math.sin(t * 6)) * 0.6;
-  const cam = { x: keys(t, [[0, 20], [1.2, -40]]), y: -400, zoom: 1.5 };
+  const cam = { x: keys(t, [[0, 20], [1.2, -40]]), y: -340, zoom: 1.5 };
   return (
     <AbsoluteFill>
       <Stage cam={cam} handheld={4} t={t}>
@@ -686,7 +697,7 @@ export const Handshake: React.FC = () => {
   const yp = idle(pose({ smile: 0.5, nearUpper: lerp(4, ya.upper, reach), nearFore: lerp(8, ya.fore - pump, reach), neck: -4 }), t, 5);
   const cam = {
     x: keys(t, [[0, 1400], [dur, 1470]], EASE.drift),
-    y: keys(t, [[0, -420], [dur, -440]], EASE.drift),
+    y: keys(t, [[0, -290], [dur, -300]], EASE.drift),
     zoom: keys(t, [[0, 1.3], [dur, 1.6]], EASE.drift),
   };
   return (
@@ -783,7 +794,7 @@ export const FinalArchive: React.FC = () => {
   const handIn = ramp(t, 1.9, 2.5, EASE.out);
   const handOut = ramp(t, 5.2, 5.8, EASE.in);
   const face = Math.cos(flip * Math.PI);
-  const px = POGO_AT.x + slide * 900;
+  const px = POGO_AT.x + slide * 1800;
   const lift = Math.sin(flip * Math.PI) * 0.06;
   const grip = { x: px + 100 * face + 20, y: POGO_AT.y + 40 };
   const hand = {
@@ -791,9 +802,11 @@ export const FinalArchive: React.FC = () => {
     y: lerp(POGO_AT.y + 700, grip.y, handIn) + handOut * 500,
   };
   const cam = {
-    x: keys(t, [[0, -380], [2.2, POGO_AT.x], [4.4, POGO_AT.x + 60], [5.6, SNAP_AT.x], [6.6, SNAP_AT.x], [dur, 0]], EASE.inOut),
-    y: keys(t, [[0, -60], [2.2, POGO_AT.y - 40], [5.6, SNAP_AT.y - 30], [6.6, SNAP_AT.y - 30], [dur, 70]], EASE.inOut),
-    zoom: keys(t, [[0, 1.6], [2.2, 2.4], [5.6, 2.5], [6.6, 2.6], [dur, 0.8]], EASE.inOut),
+    // Opens on the whole table, then frames each photograph on its own, low
+    // enough that the folders above stay out of frame instead of being sliced.
+    x: keys(t, [[0, 0], [2.2, POGO_AT.x], [4.4, POGO_AT.x + 60], [5.6, SNAP_AT.x], [6.6, SNAP_AT.x], [dur, 0]], EASE.inOut),
+    y: keys(t, [[0, -60], [2.2, POGO_AT.y + 60], [5.6, SNAP_AT.y + 45], [6.6, SNAP_AT.y + 45], [dur, 70]], EASE.inOut),
+    zoom: keys(t, [[0, 1.25], [2.2, 2.4], [5.6, 2.5], [6.6, 2.6], [dur, 0.8]], EASE.inOut),
   };
   return (
     <AbsoluteFill>
