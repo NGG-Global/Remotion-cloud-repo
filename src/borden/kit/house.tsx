@@ -398,6 +398,7 @@ export const BordenSection: React.FC<{
         <rect x={right} y={attic} width={30} height={cellar + 420 - attic} fill={cut} />
         {/* front door opening in the left end wall, side door in the kitchen wall */}
         <rect x={left - 30} y={floor - 460} width={30} height={460} fill={props.frontDoorOpen && props.frontDoorOpen > 0.5 ? lit("#d8d0b8", light) : lit("#2e2a28", light)} />
+        <rect x={right} y={floor - 450} width={30} height={450} fill={props.backDoorOpen && props.backDoorOpen > 0.5 ? lit("#d8d0b8", light) : lit("#3a3a38", light)} />
         {/* roof */}
         <path d={`M${left - 110} ${attic - 30} L0 ${ridge - 20} L${right + 110} ${attic - 30} L${right + 110} ${attic + 6} L0 ${ridge + 20} L${left - 110} ${attic + 6} Z`} fill={lit("#2a2628", light)} />
         {/* foundation walls */}

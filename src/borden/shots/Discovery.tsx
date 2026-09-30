@@ -111,7 +111,7 @@ export const BridgetRests: React.FC = () => {
         attic: down < 0.05 ? <Person x={-40} y={-100} look={BRIDGET} light={L} pose={idle(blend(LYING_BED, SITUP, up), t, 1, 0.2)} facing={1} grounded={false} /> : null,
         backhall: down >= 0.05 && down < 0.5 ? <Person x={lerp(1100, 1250, down * 2)} y={stairY * 0 + lerp(0, HOUSE.upper - HOUSE.attic, Math.min(1, down * 2))} look={BRIDGET} light={L} pose={pose({ lean: 8, nearThigh: 30 + Math.sin(t * 6) * 20, farThigh: 30 - Math.sin(t * 6) * 20, nearKnee: 40, farKnee: 40 })} facing={1} grounded={false} /> : null,
         kitchen: down >= 0.5 ? <Person x={lerp(1250, 700, (down - 0.5) * 2)} y={lerp(0, HOUSE.floor - HOUSE.upper, Math.min(1, (down - 0.5) * 3))} look={BRIDGET} light={L} pose={pose({ lean: 8, nearThigh: 30 + Math.sin(t * 6) * 20, farThigh: 30 - Math.sin(t * 6) * 20, nearKnee: 40, farKnee: 40 })} facing={-1} grounded={false} /> : null,
-        sitting: <Person x={-470} y={-60} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0)} facing={1} grounded={false} opacity={0.0} />,
+        sitting: <Person x={-470} y={-96} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0)} facing={1} grounded={false} opacity={0.0} />,
       }}
       finish={{ temp: 0.3, vignette: 0.8 }}
     />
@@ -273,8 +273,8 @@ export const StairsShot: React.FC = () => {
       lamps={{ guest: 0.35 + see * 0.15 }}
       props={{ guestDoorOpen: 0.5, guestHem: 0.7 + see * 0.3, frontDoorOpen: 0.7 }}
       people={{
-        hall: climb < 1 ? <Person x={lerp(-1350, -1030, climb)} y={lerp(0, HOUSE.upper - HOUSE.floor, climb)} look={ALICE} light={L} pose={pose({ lean: 10, nearThigh: 30 + Math.sin(t * 6) * 20, farThigh: 30 - Math.sin(t * 6) * 20, nearKnee: 40, farKnee: 40, neck: -6 })} facing={1} grounded={false} /> : null,
-        guest: climb >= 1 ? <Person x={-720} look={ALICE} light={L} pose={idle(pose({ turn: 0.8, neck: 12, lean: 8, brow: -0.3 }), t, 5, 0.6)} facing={-1} /> : null,
+        hall: climb < 1 ? <Person x={lerp(-1330, -990, climb)} y={lerp(0, HOUSE.upper - HOUSE.floor, climb)} look={ALICE} light={L} pose={pose({ lean: 10, nearThigh: 30 + Math.sin(t * 6) * 20, farThigh: 30 - Math.sin(t * 6) * 20, nearKnee: 40, farKnee: 40, neck: -6 })} facing={1} grounded={false} /> : null,
+        guest: climb >= 1 ? <Person x={-760} look={ALICE} light={L} pose={idle(pose({ turn: 0.8, neck: 12, lean: 8, brow: -0.3 }), t, 5, 0.6)} facing={-1} /> : null,
       }}
       finish={{ temp: 0.0, vignette: 0.9 }}
     />
@@ -371,7 +371,7 @@ export const Waited: React.FC = () => {
         lizzie: <Person x={-500} look={SHADOW} mode="silhouette" silhouette="#08060a" pose={idle(pose({}), t, 9, 0.3)} facing={-1} opacity={waitK * (1 - fade)} />,
         parents: <Person x={700} look={SHADOW} mode="silhouette" silhouette="#08060a" pose={idle(pose({ lean: 6 }), t, 9, 0.3)} facing={-1} opacity={hideK * (1 - fade)} />,
         kitchen: <Person x={780} look={LIZZIE} light={L} pose={standing(t, 4, { turn: 0.2 })} facing={1} />,
-        sitting: <Person x={-470} y={-60} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />,
+        sitting: <Person x={-470} y={-96} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />,
       }}
       yard={
         <Plane d={-0.6}>

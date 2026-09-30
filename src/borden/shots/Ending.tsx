@@ -123,7 +123,7 @@ export const IfNot: React.FC = () => {
         sitting: (
           <g>
             {!up && p.x <= -150 && p.x > -950 ? fig : null}
-            <Person x={-470} y={-60} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} opacity={ramp(t, 8.0, 8.4)} />
+            <Person x={-470} y={-96} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} opacity={ramp(t, 8.0, 8.4)} />
           </g>
         ),
         hall: !up && p.x <= -950 ? fig : null,
@@ -133,7 +133,7 @@ export const IfNot: React.FC = () => {
         guest: (
           <g>
             {up && p.x <= -700 ? fig : null}
-            <Person x={-880} look={{ ...BRIDGET, top: "#4a3a3e", skirt: "#4a3a3e", pants: "#4a3a3e", apron: undefined, hairColor: "#8a8078", build: "heavy" }} light={L} pose={idle(BENT, t, 2, 0.4)} facing={1} opacity={u < 0.3 ? 1 : 0} />
+            <Person x={-1060} look={{ ...BRIDGET, top: "#4a3a3e", skirt: "#4a3a3e", pants: "#4a3a3e", apron: undefined, hairColor: "#8a8078", build: "heavy" }} light={L} pose={idle(BENT, t, 2, 0.4)} facing={-1} opacity={u < 0.3 ? 1 : 0} />
           </g>
         ),
       }}
@@ -286,7 +286,7 @@ export const IfSheDid: React.FC = () => {
       people={{
         sitting: (
           <g>
-            <Person x={-470} y={-60} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />
+            <Person x={-470} y={-96} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />
             <Person x={-740} look={LIZZIE} light={L} pose={seated(t, 3, { neck: 2, lids: 0.9 }, 0.3)} facing={1} />
           </g>
         ),
@@ -359,7 +359,7 @@ export const SomeoneElse: React.FC = () => {
         sitting: (
           <g>
             {inside && !up && p.x <= -150 && p.x > -950 ? fig : null}
-            <Person x={-470} y={-60} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} opacity={ramp(t, 9.6, 10.0)} />
+            <Person x={-470} y={-96} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} opacity={ramp(t, 9.6, 10.0)} />
           </g>
         ),
         hall: inside && !up && p.x <= -950 ? fig : null,
@@ -441,7 +441,7 @@ export const WhenHow: React.FC = () => {
               <rect x={-3000} y={-2000} width={6000} height={4000} fill={lit("#3a3a3c", TABLE)} />
               <Pool x={0} y={-100} rx={900} ry={700} color="#ffd9a0" opacity={0.3} />
               <g transform="rotate(75)">
-                <Hatchet light={TABLE} s={2.6} handle={0.12} rust={0.3} />
+                <Hatchet light={TABLE} s={4.2} handle={0.12} rust={0.3} />
               </g>
             </Plane>
           </Stage>
@@ -454,9 +454,9 @@ export const WhenHow: React.FC = () => {
           light={L}
           lamps={{ guest: 0.5 }}
           people={{
-            sitting: <Person x={-470} y={-60} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />,
+            sitting: <Person x={-470} y={-96} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />,
             kitchen: <Person x={780} look={LIZZIE} light={L} pose={standing(t, 4)} facing={1} />,
-            guest: <Person x={-880} look={{ ...BRIDGET, top: "#4a3a3e", skirt: "#4a3a3e", pants: "#4a3a3e", apron: undefined, hairColor: "#8a8078", build: "heavy" }} light={L} pose={idle(BENT, t, 2, 0.4)} facing={1} />,
+            guest: <Person x={-1060} look={{ ...BRIDGET, top: "#4a3a3e", skirt: "#4a3a3e", pants: "#4a3a3e", apron: undefined, hairColor: "#8a8078", build: "heavy" }} light={L} pose={idle(BENT, t, 2, 0.4)} facing={-1} />,
           }}
           yard={
             <Plane d={-0.6}>
@@ -510,10 +510,10 @@ export const WhoHeld: React.FC = () => {
           <rect x={-3000} y={-2000} width={6000} height={4000} fill={lit("#2a2a2c", TABLE)} />
           <Pool x={0} y={-200} rx={900} ry={700} color="#ffd9a0" opacity={0.35} />
           <g transform="rotate(75)">
-            <Hatchet light={TABLE} s={2.6} handle={0.12} rust={0.3} />
+            <Hatchet light={TABLE} s={4.6} handle={0.12} rust={0.3} />
           </g>
           {/* the shadow of a hand, from the lamp side */}
-          <g transform={`translate(${lerp(-500, -120, reach)} ${lerp(200, 60, reach)}) rotate(-40) scale(2.4)`} opacity={0.45 * reach}>
+          <g transform={`translate(${lerp(-700, -200, reach)} ${lerp(300, 100, reach)}) rotate(-40) scale(4)`} opacity={0.45 * reach}>
             <path d="M-13 4 Q-15 24 -11 34 L11 34 Q15 22 13 4 Z M-10 31 h5.6 v18 h-5.6 Z M-3.5 31 h5.6 v20 h-5.6 Z M3 31 h5.6 v19 h-5.6 Z M9.5 31 h5.6 v15 h-5.6 Z M13 10 Q24 16 22 30 Q19 34 16 30 Q16 22 11 18 Z M-13 -80 h26 v90 h-26 Z" fill="#000" />
           </g>
           <Glow x={0} y={-100} r={500} color="#ffd9a0" opacity={0.2} />

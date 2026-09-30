@@ -88,7 +88,9 @@ export const Stove: React.FC<{
   readonly fire?: number;
   readonly t?: number;
   readonly facing?: 1 | -1;
-}> = ({ x, light = NEUTRAL, fire = 0, t = 0, facing = 1 }) => {
+  /** Where the stovepipe rises, relative to the centre. */
+  readonly pipeX?: number;
+}> = ({ x, light = NEUTRAL, fire = 0, t = 0, facing = 1, pipeX = 100 }) => {
   const L = (c: string) => lit(c, light);
   const flick = 0.8 + noise(t * 14, 3) * 0.2;
   return (
@@ -117,10 +119,10 @@ export const Stove: React.FC<{
       <rect x={-6} y={-200} width={12} height={130} fill="none" />
       <circle cx={48} cy={-134} r={7} fill={L("#8a8288")} />
       {/* stovepipe */}
-      <rect x={100} y={-560} width={44} height={330} fill={L("#26242a")} />
-      <rect x={90} y={-570} width={64} height={14} fill={L("#1a181c")} />
-      <rect x={100} y={-236} width={44} height={10} fill={L("#3a383e")} />
-      <ellipse cx={122} cy={-560} rx={32} ry={8} fill={L("#3a383e")} />
+      <rect x={pipeX} y={-560} width={44} height={330} fill={L("#26242a")} />
+      <rect x={pipeX - 10} y={-570} width={64} height={14} fill={L("#1a181c")} />
+      <rect x={pipeX} y={-236} width={44} height={10} fill={L("#3a383e")} />
+      <ellipse cx={pipeX + 22} cy={-560} rx={32} ry={8} fill={L("#3a383e")} />
     </g>
   );
 };
@@ -405,8 +407,8 @@ export const IroningBoard: React.FC<{ readonly x: number; readonly light?: Light
   const L = (c: string) => lit(c, light);
   return (
     <g transform={`translate(${x} 0)`}>
-      <path d="M-200 -180 L200 -180 L240 -172 L-240 -172 Z" fill={L("#e4dcc8")} />
-      <path d="M-160 -172 L-60 0 M-140 -172 L-40 0 M160 -172 L60 0 M140 -172 L40 0" stroke={L("#5a4a3a")} strokeWidth={10} />
+      <path d="M-160 -180 L160 -180 L190 -172 L-190 -172 Z" fill={L("#e4dcc8")} />
+      <path d="M-130 -172 L-50 0 M-110 -172 L-30 0 M130 -172 L50 0 M110 -172 L30 0" stroke={L("#5a4a3a")} strokeWidth={10} />
       <path d={`M${ironX - 40} -182 L${ironX + 40} -182 L${ironX + 30} -210 L${ionX(ironX)} -210 Z`} fill={L("#26242a")} />
       <path d={`M${ironX - 30} -210 Q${ironX} -240 ${ironX + 30} -210`} stroke={L("#5a4a3a")} strokeWidth={10} fill="none" />
       <rect x={-60} y={-186} width={110} height={6} fill={L("#f4f0e8")} />

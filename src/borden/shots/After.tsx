@@ -79,7 +79,7 @@ export const TheHillHome: React.FC = () => {
   const { t, dur } = useShot();
   // The house front; the camera settles on the name on the step.
   const L = LIGHT.afternoon;
-  const c = cam(t, [[0, 0], [dur, 0]], [[0, -900], [5.0, -500], [dur, -140]], [[0, 0.4], [5.0, 0.7], [dur, 1.6]], EASE.inOut);
+  const c = cam(t, [[0, 0], [dur, 0]], [[0, -900], [5.0, -700], [dur, -810]], [[0, 0.4], [5.0, 0.7], [dur, 1.5]], EASE.inOut);
   return (
     <AbsoluteFill>
       <Stage cam={c} t={t}>
@@ -139,7 +139,7 @@ export const Shunned: React.FC = () => {
   const cross = walker(t, 0.1, 1.5, -1400, -2400, undefined, 4);
   const kids = CHILDREN.map((_, i) => walker(t, 1.6 + i * 0.15, 3.7, -2200 - i * 180, -600 - i * 160, undefined, 10 + i));
   const liz = walker(t, 1.5, 3.7, -1200, 200, undefined, 1);
-  const c = b === 0 ? cam(t, [[0, -1600], [1.5, -1800]], -560, [[0, 0.8], [1.5, 0.85]]) : b === 1 ? cam(t, [[1.5, -1400], [3.7, -300]], -560, [[1.5, 0.85], [3.7, 0.9]]) : cam(t, [[3.7, -1400], [dur, -1300]], -520, [[3.7, 1.3], [dur, 1.45]]);
+  const c = b === 0 ? cam(t, [[0, -1600], [1.5, -1800]], -560, [[0, 0.8], [1.5, 0.85]]) : b === 1 ? cam(t, [[1.5, -1400], [3.7, -300]], -560, [[1.5, 0.85], [3.7, 0.9]]) : cam(t, [[3.7, -1400], [dur, -1350]], -700, [[3.7, 0.55], [dur, 0.6]]);
   return (
     <AbsoluteFill>
       <Stage cam={c} t={t}>

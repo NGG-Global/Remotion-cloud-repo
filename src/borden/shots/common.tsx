@@ -61,12 +61,12 @@ export const walker = (t: number, t0: number, t1: number, x0: number, x1: number
 /** Lying on a sofa, head to the right: legs along the seat. */
 export const LYING: Pose = pose({
   hipDrop: 150,
-  lean: -78,
-  neck: 20,
-  nearThigh: 84,
-  nearKnee: 10,
-  farThigh: 80,
-  farKnee: 14,
+  lean: -80,
+  neck: 24,
+  nearThigh: 92,
+  nearKnee: 4,
+  farThigh: 88,
+  farKnee: 8,
   nearUpper: 10,
   nearFore: 60,
   farUpper: 4,
@@ -128,11 +128,11 @@ export const SectionScene: React.FC<SectionSceneProps> = ({ t, cam: c, light = L
           <Fence x0={-8000} x1={8000} light={outdoor} />
         </Plane>
         <GroundStrip near={-30} far={60} color={night ? "#1e2a20" : "#6a7a4a"} farColor={night ? "#161e18" : "#4e5e3e"} light={outdoor} />
-        {yard}
         <Plane d={0}>
           <BordenSection t={t} light={light} lamps={lamps} people={people} props={props} opacity={open} shell={shell} />
           <BordenSide light={outdoor} lit={windowsLit} t={t} night={night} opacity={1 - open} atWindow={atWindow} />
         </Plane>
+        {yard}
         {foreground}
       </Stage>
       <Finish {...(finish ?? { temp: night ? -0.4 : 0.2, vignette: 0.7 })} />

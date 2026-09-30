@@ -33,10 +33,10 @@ export const NineThirty: React.FC = () => {
       people={{
         guest: (
           <g>
-            <Person x={-880} look={ABBY} light={L} pose={bedMaking(t, 2)} facing={1} />
-            <MantelClock x={-1000} y={-410} minutes={570} light={L} s={0.55} />
+            <Person x={-1060} look={ABBY} light={L} pose={bedMaking(t, 2)} facing={-1} />
+            <MantelClock x={-1180} y={-410} minutes={570} light={L} s={0.55} />
             {/* a shadow reaching across the floor from the door */}
-            <path d={`M-700 0 L${-700 - shadow * 520} 0 L${-700 - shadow * 380} 30 L-700 30 Z`} fill="#000" opacity={0.5 * shadow} />
+            <path d={`M-760 0 L${-760 - shadow * 420} 0 L${-760 - shadow * 300} 30 L-760 30 Z`} fill="#000" opacity={0.5 * shadow} />
           </g>
         ),
         lizzie: <path d={`M-700 ${-440} L-700 0 L${-700 + 60 * shadow} 0 Z`} fill="#000" opacity={0.35 * shadow} />,
@@ -62,8 +62,8 @@ export const DontKnow: React.FC = () => {
       people={{
         guest: (
           <g>
-            <Person x={-880} look={ABBY} light={L} pose={bedMaking(t, 2)} facing={1} />
-            <Person x={-775} look={SHADOW} mode="silhouette" silhouette="#08060a" pose={idle(pose({}), t, 9, 0.3)} facing={-1} opacity={fill} />
+            <Person x={-1060} look={ABBY} light={L} pose={bedMaking(t, 2)} facing={-1} />
+            <Person x={-800} look={SHADOW} mode="silhouette" silhouette="#08060a" pose={idle(pose({}), t, 9, 0.3)} facing={-1} opacity={fill} />
           </g>
         ),
       }}

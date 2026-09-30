@@ -166,7 +166,7 @@ export const WhatIsMissing: React.FC = () => {
             <g key={i} transform={`translate(${x} 0)`}>
               <rect x={-120} y={-220} width={240} height={220} fill={lit("#4a3020", COURT_L)} />
               <rect x={-130} y={-232} width={260} height={16} fill={lit("#8a6a48", COURT_L)} />
-              <g opacity={ks[i]} transform="translate(0 -232)" fill="none" stroke={stroke} strokeWidth={3} strokeDasharray="8 8">
+              <g opacity={ks[i]} transform="translate(0 -232)" fill="none" stroke={stroke} strokeWidth={5} strokeDasharray="10 8">
                 {i === 0 ? <Person x={0} y={0} s={0.55} look={SHADOW} mode="silhouette" silhouette="none" pose={pose({})} /> : null}
                 {i === 0 ? <path d="M-40 0 L-40 -200 L40 -200 L40 0" /> : null}
                 {i === 1 ? <g transform="rotate(80)"><path d="M-6 -4 L8 -4 L8 12 L-6 12 Z M8 -10 L30 -14 Q36 0 30 16 L8 14 Z M-4 0 L4 0 L5 64 L-5 64 Z" transform="scale(2.2)" /></g> : null}
@@ -209,14 +209,14 @@ export const PaleMan: React.FC = () => {
   const { t, dur } = useShot();
   // Second Street, that morning: a pale young man by the fence, pacing, looking at the house.
   const L = LIGHT.morning;
-  const pace = walker(t, 0.4, 3.2, -900, -500, undefined, 3);
-  const back = walker(t, 3.6, 6.4, -500, -800, undefined, 3);
+  const pace = walker(t, 0.4, 3.2, -1000, -600, undefined, 3);
+  const back = walker(t, 3.6, 6.4, -600, -900, undefined, 3);
   const w = t < 3.6 ? pace : back;
-  const c = cam(t, [[0, -300], [dur, -600]], [[0, -520], [dur, -480]], [[0, 0.8], [dur, 1.1]]);
+  const c = cam(t, [[0, -300], [dur, -700]], [[0, -520], [dur, -440]], [[0, 0.8], [dur, 1.2]]);
   return (
     <AbsoluteFill>
       <Stage cam={c} t={t}>
-        <SecondStreet t={t + 200} light={L} onWalk={<Person x={w.x} look={PALE_MAN} light={L} pose={w.pose.nearThigh !== 1 ? w.pose : idle(pose({ turn: 0.6, neck: -4 }), t, 3, 0.7)} facing={w.facing} />} />
+        <SecondStreet t={t + 200} light={L} inYard={<Person x={w.x} look={PALE_MAN} light={L} pose={w.pose.nearThigh !== 1 ? w.pose : idle(pose({ turn: 0.6, neck: -4 }), t, 3, 0.7)} facing={w.facing} />} />
         <Plane d={-9}>
           <Person x={-2000} look={DR_BOWEN} light={L} pose={standing(t, 8, { turn: 0.4 })} facing={1} />
         </Plane>
@@ -231,19 +231,19 @@ export const WasItHim: React.FC = () => {
   // He turns to the camera; his face goes to a blank silhouette; he walks off and is gone.
   const turn = ramp(t, 0.4, 1.4, EASE.inOut);
   const blank = ramp(t, 1.8, 2.8);
-  const w = walker(t, 3.2, dur + 0.5, -700, -2400, undefined, 3);
+  const w = walker(t, 3.2, dur + 0.5, -900, -2400, undefined, 3);
   const L = LIGHT.morning;
-  const c = cam(t, [[0, -700], [3.2, -700], [dur, -1200]], [[0, -400], [dur, -480]], [[0, 1.7], [3.2, 1.7], [dur, 1.1]], EASE.inOut);
+  const c = cam(t, [[0, -900], [3.2, -900], [dur, -1400]], [[0, -400], [dur, -480]], [[0, 1.7], [3.2, 1.7], [dur, 1.0]], EASE.inOut);
   return (
     <AbsoluteFill>
       <Stage cam={c} t={t}>
         <SecondStreet
           t={t + 210}
           light={L}
-          onWalk={
+          inYard={
             <g>
-              <Person x={t < 3.2 ? -700 : w.x} look={PALE_MAN} light={L} pose={t < 3.2 ? idle(pose({ turn: lerp(0.6, -1, turn) }), t, 3, 0.5) : w.pose} facing={t < 3.2 ? 1 : w.facing} opacity={1 - blank} view={turn > 0.9 && t < 3.2 ? "front" : "3q"} />
-              <Person x={t < 3.2 ? -700 : w.x} look={SHADOW} mode="silhouette" silhouette="#2a2a30" pose={t < 3.2 ? idle(pose({ turn: -1 }), t, 3, 0.5) : w.pose} facing={t < 3.2 ? 1 : w.facing} opacity={blank * (1 - ramp(t, dur - 1.2, dur))} view={t < 3.2 ? "front" : "3q"} />
+              <Person x={t < 3.2 ? -900 : w.x} look={PALE_MAN} light={L} pose={t < 3.2 ? idle(pose({ turn: lerp(0.6, -1, turn) }), t, 3, 0.5) : w.pose} facing={t < 3.2 ? 1 : w.facing} opacity={1 - blank} view={turn > 0.9 && t < 3.2 ? "front" : "3q"} />
+              <Person x={t < 3.2 ? -900 : w.x} look={SHADOW} mode="silhouette" silhouette="#2a2a30" pose={t < 3.2 ? idle(pose({ turn: -1 }), t, 3, 0.5) : w.pose} facing={t < 3.2 ? 1 : w.facing} opacity={blank * (1 - ramp(t, dur - 1.2, dur))} view={t < 3.2 ? "front" : "3q"} />
             </g>
           }
         />

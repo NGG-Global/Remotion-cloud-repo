@@ -343,7 +343,7 @@ export const EvidenceTable: React.FC = () => {
           <rect x={-3000} y={-2000} width={6000} height={4000} fill={lit("#2c4a3a", TABLE)} />
           {/* the photograph of Abby, placed */}
           <g transform={`translate(0 ${-(1 - photo) * 300})`} opacity={photo}>
-            <Photo id="abby" x={-300} y={-140} w={200} h={250} rot={-5} light={TABLE} tone="#8a7a6a" scene={<Person x={100} y={300} s={0.9} look={ABBY} light={LIGHT.sepia} pose={seated(0, 1)} view="front" />} />
+            <Photo id="abby" x={-300} y={-140} w={200} h={250} rot={-5} light={TABLE} tone="#8a7a6a" scene={<Person x={100} y={420} s={1.5} look={ABBY} light={LIGHT.sepia} pose={seated(0, 1)} view="front" />} />
           </g>
           {/* the axe of the rhyme, and the hatchet it probably was */}
           <g transform="translate(260 -160) rotate(70)">
@@ -403,12 +403,12 @@ export const Portraits: React.FC = () => {
           <MantelClock x={-550} y={-316} minutes={640} light={ROOM} s={0.9} />
           <Portrait id="pa" x={-780} y={-560} w={170} h={220} light={ROOM} oval>
             <g opacity={lerp(0.55, 1, a)}>
-              <Person x={0} y={330} s={1.1} look={ANDREW} light={LIGHT.sepia} pose={seated(0, 1)} view="front" />
+              <Person x={0} y={400} s={1.7} look={ANDREW} light={LIGHT.sepia} pose={seated(0, 1)} view="front" />
             </g>
           </Portrait>
           <Portrait id="pb" x={-320} y={-560} w={170} h={220} light={ROOM} oval>
             <g opacity={lerp(0.55, 1, b)}>
-              <Person x={0} y={330} s={1.1} look={ABBY} light={LIGHT.sepia} pose={seated(0, 2)} view="front" />
+              <Person x={0} y={400} s={1.7} look={ABBY} light={LIGHT.sepia} pose={seated(0, 2)} view="front" />
             </g>
           </Portrait>
           <Glow x={-780} y={-560} r={260} color="#ffe0b0" opacity={0.35 * a} />

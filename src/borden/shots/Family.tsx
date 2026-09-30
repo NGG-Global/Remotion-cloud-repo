@@ -162,10 +162,10 @@ export const Thrifty: React.FC = () => {
       people={{
         dining: (
           <g>
-            <Person x={330} look={ANDREW_HOME} light={LIGHT.lamp} pose={seated(t, 1, { lean: 14, neck: 16, nearUpper: lerp(30, 70, reach), nearFore: lerp(60, 30, reach), farUpper: 34, farFore: 70 }, 0.4)} facing={-1} />
-            <Coins x={150} y={-160} n={5} light={LIGHT.lamp} />
-            <Coins x={100} y={-158} n={3} light={LIGHT.lamp} />
-            <g transform="translate(200 -160) scale(0.55)">
+            <Person x={420} look={ANDREW_HOME} light={LIGHT.lamp} pose={seated(t, 1, { lean: 14, neck: 16, nearUpper: lerp(30, 70, reach), nearFore: lerp(60, 30, reach), farUpper: 34, farFore: 70 }, 0.4)} facing={-1} />
+            <Coins x={40} y={-160} n={5} light={LIGHT.lamp} />
+            <Coins x={-10} y={-158} n={3} light={LIGHT.lamp} />
+            <g transform="translate(180 -150) scale(0.32) rotate(-70)">
               <Ledger x={0} y={-2} light={LIGHT.lamp} rot={0} lines={10} />
             </g>
           </g>
@@ -230,7 +230,7 @@ export const Sisters: React.FC = () => {
   // 115.4 Lizzie; 117.5 Emma; 120.6 both; 122.5–124.4 "in their father's house": Andrew.
   const c = cam(
     t,
-    [[0, -700], [1.8, -700], [2.6, -360], [4.8, -360], [5.6, -560], [7.6, -560], [8.6, -600], [dur, -600]],
+    [[0, -560], [1.8, -560], [2.6, -760], [4.8, -760], [5.6, -600], [7.6, -600], [8.6, -560], [dur, -560]],
     [[0, eye(HOUSE.floor, 230)], [dur, eye(HOUSE.floor, 250)]],
     [[0, 1.9], [1.8, 1.9], [2.6, 1.9], [4.8, 1.9], [5.6, 1.3], [7.6, 1.3], [8.6, 1.15], [dur, 1.15]],
     EASE.inOut,
@@ -246,9 +246,9 @@ export const Sisters: React.FC = () => {
         sitting: (
           <g>
             {/* Lizzie sewing on the sofa */}
-            <Person x={-560} look={LIZZIE} light={L} pose={seated(t, 1, { lean: 10, neck: 14, nearUpper: 40 + Math.sin(t * 2.6) * 6, nearFore: 70, farUpper: 36, farFore: 76 }, 0.4)} facing={1} />
+            <Person x={-540} look={LIZZIE} light={L} pose={seated(t, 1, { lean: 10, neck: 14, nearUpper: 40 + Math.sin(t * 2.6) * 6, nearFore: 70, farUpper: 36, farFore: 76 }, 0.4)} facing={1} />
             {/* Emma reading in the armchair */}
-            <Person x={-780} look={EMMA} light={L} pose={seated(t, 2, { lean: 4, neck: 12, nearUpper: 34, nearFore: 84, farUpper: 30, farFore: 88 }, 0.4)} facing={1} nearHold={<HymnBook light={L} />} />
+            <Person x={-800} look={EMMA} light={L} pose={seated(t, 2, { lean: 4, neck: 12, nearUpper: 34, nearFore: 84, farUpper: 30, farFore: 88 }, 0.4)} facing={1} nearHold={<HymnBook light={L} />} />
             <Person x={andrew.x} look={ANDREW_HOME} light={L} pose={t > 7.2 ? andrew.pose : standing(t, 3)} facing={t > 7.2 ? andrew.facing : -1} opacity={ramp(t, 7.0, 7.4)} />
           </g>
         ),
@@ -264,22 +264,22 @@ const EMMA_YOUNG = { ...CHILDREN[0], top: "#2a2a30", skirt: "#2a2a30", pants: "#
 export const MotherDied: React.FC = () => {
   const { t, dur } = useShot();
   // 128.0 "then Andrew married Abby": she walks in and takes his arm.
-  const abby = walker(t, 3.0, 5.4, 1600, 380, undefined, 6);
+  const abby = walker(t, 3.0, 5.4, 1500, 260, undefined, 6);
   const L = LIGHT.grey;
-  const c = cam(t, [[0, 100], [3.0, 60], [dur, 200]], [[0, -380], [dur, -400]], [[0, 0.9], [3.0, 0.95], [dur, 0.8]]);
+  const c = cam(t, [[0, -200], [3.0, -160], [dur, 0]], [[0, -380], [dur, -400]], [[0, 0.9], [3.0, 0.95], [dur, 0.8]]);
   return (
     <AbsoluteFill>
       <Stage cam={c} t={t}>
         <Cemetery t={t} light={L}>
-          <g transform="translate(-1500 0)">
+          <g transform="translate(-700 0)">
             <Headstone x={0} h={220} w={130} light={L} />
             <path d="M-160 0 Q0 -30 160 0 Z" fill={lit("#4a3a2a", L)} />
           </g>
         </Cemetery>
         <Plane d={-1.5}>
-          <Person x={-1200} look={ANDREW_YOUNG} light={L} pose={idle(pose({ neck: 14, turn: 0.3 }), t, 1, 0.5)} facing={-1} />
-          <Person x={-1040} look={LIZZIE_CHILD} light={L} pose={idle(pose({ neck: -20, turn: t > 4 ? 0.9 : 0.2, farUpper: -40, farFore: 10 }), t, 2, 0.6)} facing={t > 4.6 ? 1 : -1} />
-          <Person x={-880} look={EMMA_YOUNG} light={L} pose={idle(pose({ neck: 10 }), t, 3, 0.5)} facing={-1} />
+          <Person x={-400} look={ANDREW_YOUNG} light={L} pose={idle(pose({ neck: 14, turn: 0.3 }), t, 1, 0.5)} facing={-1} />
+          <Person x={-240} look={LIZZIE_CHILD} light={L} pose={idle(pose({ neck: -20, turn: t > 4 ? 0.9 : 0.2, farUpper: -40, farFore: 10 }), t, 2, 0.6)} facing={t > 4.6 ? 1 : -1} />
+          <Person x={-80} look={EMMA_YOUNG} light={L} pose={idle(pose({ neck: 10 }), t, 3, 0.5)} facing={-1} />
           <Person x={abby.x} look={ABBY} light={L} pose={abby.pose} facing={abby.facing} opacity={ramp(t, 2.8, 3.3)} />
         </Plane>
       </Stage>
@@ -382,8 +382,8 @@ export const SistersReact: React.FC = () => {
       people={{
         sitting: (
           <g>
-            <Person x={-720} look={EMMA} light={L} pose={idle(pose({ ...FOLDED, brow: -0.6, turn: -0.2 }), t, 1, 0.5)} facing={1} />
-            <Person x={-540} look={LIZZIE} light={L} pose={idle(pose({ ...FOLDED, brow: -0.8, turn: -0.3, neck: -3 }), t, 2, 0.5)} facing={-1} />
+            <Person x={-740} look={EMMA} light={L} pose={idle(pose({ ...FOLDED, brow: -0.6, turn: -0.2 }), t, 1, 0.5)} facing={1} />
+            <Person x={-560} look={LIZZIE} light={L} pose={idle(pose({ ...FOLDED, brow: -0.8, turn: -0.3, neck: -3 }), t, 2, 0.5)} facing={-1} />
           </g>
         ),
       }}
@@ -510,7 +510,7 @@ export const Apart: React.FC = () => {
           </g>
         ),
         lizzie: <Person x={-500} look={LIZZIE} light={L} pose={seated(t, 3, { neck: 14, nearUpper: 34, nearFore: 84 }, 0.3)} facing={1} nearHold={<HymnBook light={L} />} />,
-        sitting: <Person x={-780} look={EMMA} light={L} pose={seated(t, 4, { neck: 12 }, 0.3)} facing={1} />,
+        sitting: <Person x={-820} look={EMMA} light={L} pose={seated(t, 4, { neck: 12 }, 0.3)} facing={1} />,
         attic: <Person x={-100} look={BRIDGET} light={L} pose={seated(t, 5, { neck: 8 }, 0.3)} facing={-1} />,
       }}
       finish={{ temp: 0.1, vignette: 0.85 }}

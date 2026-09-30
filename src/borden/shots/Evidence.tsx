@@ -8,7 +8,7 @@ import { ANDREW_HAT, ANDREW_HOME, BRIDGET, JUDGES, JURORS, KNOWLTON, LIZZIE, OFF
 import { HOUSE } from "../kit/house";
 import { COURT, Courtroom, ExhibitTable, LanternHall, SeriesSlide } from "../kit/interiors";
 import { Axe, ClockFace, Hatchet, HeldDress } from "../kit/props";
-import { BENT, EASE, Finish, LIGHT, LYING, Person, Plane, SectionScene, Stage, between, cam, eye, idle, lerp, pose, ramp, seated, speaking, standing, useShot, walker } from "./common";
+import { BENT, EASE, Finish, LIGHT, LYING, Person, Plane, SectionScene, Stage, between, cam, eye, idle, lerp, pose, ramp, seated, speaking, standing, useShot, walker, type Light } from "./common";
 
 /**
  * 10:05–11:38. The channel, and then what the prosecution did not have:
@@ -165,7 +165,7 @@ export const WeaponProblem: React.FC = () => {
   return <SectionScene t={t} cam={c} light={L} lamps={{ cellar: open * 0.6 }} props={{}} finish={{ temp: 0.0, vignette: 0.9 }} />;
 };
 
-const CellarTools: React.FC<{ light: typeof LIGHT.cellar; glint?: number }> = ({ light, glint = 0 }) => (
+const CellarTools: React.FC<{ light: Light; glint?: number }> = ({ light, glint = 0 }) => (
   <g>
     <g transform="translate(40 -20) rotate(100)">
       <Axe light={light} s={0.8} />
@@ -188,7 +188,7 @@ export const CellarShot: React.FC = () => {
   const { t, dur } = useShot();
   // The cellar: a lamp finds the shelf of hatchets and axes.
   const lamp = ramp(t, 0.2, 1.2);
-  const c = cam(t, [[0, 400], [dur, 800]], [[0, HOUSE.cellar - 220], [dur, HOUSE.cellar - 200]], [[0, 1.0], [dur, 1.5]]);
+  const c = cam(t, [[0, 200], [dur, 600]], [[0, HOUSE.cellar - 220], [dur, HOUSE.cellar - 200]], [[0, 1.0], [dur, 1.4]]);
   const L = LIGHT.cellar;
   return (
     <SectionScene
@@ -196,9 +196,9 @@ export const CellarShot: React.FC = () => {
       cam={c}
       light={L}
       lamps={{ cellar: lamp }}
-      props={{ cellarTools: <CellarTools light={L} /> }}
+      props={{ cellarTools: <CellarTools light={{ ...L, amb: 0.4 }} /> }}
       people={{
-        cellar: <Person x={300} look={OFFICER} light={L} pose={idle(pose({ nearUpper: 100, nearFore: 20, neck: 8, lean: 6 }), t, 1, 0.4)} facing={1} nearHold={<g transform="translate(0 20)"><rect x={-8} y={0} width={16} height={40} fill={lit("#8a7a4a", L)} /><Glow x={0} y={0} r={400} color="#ffd080" opacity={0.6 * lamp} /></g>} />,
+        cellar: <Person x={100} look={OFFICER} light={L} pose={idle(pose({ nearUpper: 100, nearFore: 20, neck: 8, lean: 6 }), t, 1, 0.4)} facing={1} nearHold={<g transform="translate(0 20)"><rect x={-8} y={0} width={16} height={40} fill={lit("#8a7a4a", L)} /><circle cx={0} cy={-6} r={9} fill="#fff2cc" opacity={lamp} /><Glow x={0} y={0} r={900} color="#ffd080" opacity={0.8 * lamp} /></g>} />,
       }}
       finish={{ temp: 0.0, vignette: 0.9 }}
     />
@@ -210,11 +210,11 @@ export const HatchetHead: React.FC = () => {
   // Close on the handleless head on a cloth; a hand lifts it at 644.6.
   const lift = ramp(t, 3.4, 4.6, EASE.inOut);
   return (
-    <Insert t={t} zoom={2.6 + ramp(t, 0, dur) * 0.3} cloth="#3a3a3c" hand={<CloseHand x={-120 + lift * 60} y={-460 + lift * 120} angle={-40} light={TABLE} sleeve="#242a3a" s={1.6} curl={0.7} />}>
+    <Insert t={t} zoom={2.6 + ramp(t, 0, dur) * 0.3} cloth="#3a3a3c" hand={<CloseHand x={-160 + lift * 80} y={-520 + lift * 160} angle={-40} light={TABLE} sleeve="#242a3a" s={2.2} curl={0.7} />}>
       <g transform={`translate(0 ${-lift * 40}) rotate(${75 + lift * 10}) scale(${1 + lift * 0.1})`}>
-        <Hatchet light={TABLE} s={2.6} handle={0.12} rust={0.3} />
+        <Hatchet light={TABLE} s={4.6} handle={0.12} rust={0.3} />
       </g>
-      <ellipse cx={10} cy={30} rx={90} ry={24} fill="#000" opacity={0.35 * (1 - lift)} />
+      <ellipse cx={10} cy={70} rx={150} ry={36} fill="#000" opacity={0.35 * (1 - lift)} />
     </Insert>
   );
 };
@@ -282,8 +282,8 @@ export const TheoryAbby: React.FC = () => {
       people={{
         guest: (
           <g>
-            <Person x={-880} look={{ ...LIZZIE, top: "#3a5a8a", skirt: "#3a5a8a", pants: "#3a5a8a" }} light={THEORY} pose={idle(BENT, t, 2, 0.4)} facing={1} opacity={0.35} />
-            <Person x={-760} look={LIZZIE} light={THEORY} pose={idle(pose({ nearUpper: 120 + Math.sin(t * 2) * 8, nearFore: 20 }), t, 1, 0.4)} facing={-1} opacity={0.9} nearHold={<Hatchet light={THEORY} s={1.2} handle={1} />} />
+            <Person x={-1060} look={{ ...LIZZIE, top: "#3a5a8a", skirt: "#3a5a8a", pants: "#3a5a8a" }} light={THEORY} pose={idle(BENT, t, 2, 0.4)} facing={-1} opacity={0.35} />
+            <Person x={-800} look={LIZZIE} light={THEORY} pose={idle(pose({ nearUpper: 120 + Math.sin(t * 2) * 8, nearFore: 20 }), t, 1, 0.4)} facing={-1} opacity={0.9} nearHold={<Hatchet light={THEORY} s={1.2} handle={1} />} />
           </g>
         ),
       }}
@@ -306,7 +306,7 @@ export const Cleans: React.FC = () => {
       lamps={{ guest: 1, lizzie: 0.8 }}
       props={{ guestDoorOpen: 0.3 }}
       people={{
-        guest: sit < 1 ? <Person x={-1240} look={LIZZIE} light={THEORY} pose={idle(wash, t, 1, 0.3)} facing={-1} opacity={1 - sit} /> : null,
+        guest: sit < 1 ? <Person x={-1260} look={LIZZIE} light={THEORY} pose={idle(wash, t, 1, 0.3)} facing={-1} opacity={1 - sit} /> : null,
         lizzie: sit > 0 ? <Person x={-500} look={LIZZIE} light={THEORY} pose={seated(t, 1, { neck: 2, lids: 0.9 }, 0.3)} facing={1} opacity={sit} /> : null,
       }}
       finish={{ temp: -0.6, vignette: 0.85 }}
@@ -368,8 +368,8 @@ export const SecondMurder: React.FC = () => {
       lamps={{ guest: 0.6, hall: 1, sitting: 1 }}
       props={{ guestDoorOpen: 0.3 }}
       people={{
-        hall: <Person x={lerp(-1030, -1330, down)} y={lerp(HOUSE.upper - HOUSE.floor, 0, down)} look={LIZZIE} light={THEORY} pose={pose({ lean: 6, nearThigh: 30 + Math.sin(t * 6) * 20, farThigh: 30 - Math.sin(t * 6) * 20, nearKnee: 40, farKnee: 40, nearUpper: 110, nearFore: 20 })} facing={-1} grounded={false} nearHold={<Hatchet light={THEORY} s={1.2} handle={1} />} />,
-        sitting: <Person x={-470} y={-60} look={ANDREW_HOME} light={THEORY} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />,
+        hall: <Person x={lerp(-990, -1330, down)} y={lerp(HOUSE.upper - HOUSE.floor, 0, down)} look={LIZZIE} light={THEORY} pose={pose({ lean: 6, nearThigh: 30 + Math.sin(t * 6) * 20, farThigh: 30 - Math.sin(t * 6) * 20, nearKnee: 40, farKnee: 40, nearUpper: 110, nearFore: 20 })} facing={-1} grounded={false} nearHold={<Hatchet light={THEORY} s={1.2} handle={1} />} />,
+        sitting: <Person x={-470} y={-96} look={ANDREW_HOME} light={THEORY} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />,
       }}
       finish={{ temp: -0.6, vignette: 0.9 }}
     />

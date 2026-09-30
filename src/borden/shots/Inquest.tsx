@@ -208,7 +208,7 @@ export const NotPart: React.FC = () => {
   const into = ramp(t, 0.4, 2.0, EASE.inOut);
   const shut = ramp(t, 2.6, 3.4, EASE.in);
   const key = ramp(t, 4.0, 5.0, EASE.inOut);
-  const c = cam(t, [[0, 0], [dur, 30]], [[0, -60], [dur, -40]], [[0, 2.2], [dur, 2.5]]);
+  const c = cam(t, [[0, 0], [dur, 30]], [[0, -60], [dur, -40]], [[0, 1.4], [dur, 1.6]]);
   return (
     <AbsoluteFill>
       <Stage cam={c} t={t} bg="#0c0906">

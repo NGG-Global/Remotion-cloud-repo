@@ -184,20 +184,21 @@ export const Stairs: React.FC<{ readonly x0: number; readonly x1: number; readon
 /** Front hall: the front door in the end wall, a hat stand, the front stairs. */
 export const FrontHall: React.FC<RoomProps & { readonly x0: number; readonly x1: number; readonly doorOpen?: number; readonly stairsTo?: number; readonly locks?: number }> = ({ x0, x1, light = NEUTRAL, lamp = 0, doorOpen = 0, stairsTo = -560, locks = 0, children, t = 0 }) => {
   const L = (c: string) => lit(c, light);
+  const leaf = 190 * Math.sin(doorOpen * 1.4);
   return (
     <VRoom x0={x0} x1={x1} paper="#9a8a6a" floor="#4a3222" light={light}>
-      {/* the front door, in the end wall: drawn on the back wall at the very end */}
-      <PanelDoor x={x0 + 20} w={190} h={460} open={doorOpen} light={light} beyond="#d8d0b8" color="#3a2a22" />
+      {/* the front door is in the end wall; its leaf swings into the hall when open */}
+      {leaf > 1 ? <rect x={x0} y={-460} width={leaf} height={460} fill={L("#2e2a28")} /> : null}
       {locks > 0
-        ? [0.35, 0.5, 0.65].map((k, i) => (
-            <rect key={i} x={x0 + 170} y={-460 * k} width={26} height={12} rx={3} fill={L("#8a8a80")} opacity={Math.min(1, locks - i)} />
+        ? [0.4, 0.52, 0.64].map((k, i) => (
+            <g key={i} opacity={Math.min(1, locks - i)}>
+              <rect x={x0 + 4} y={-460 * k} width={34} height={12} rx={3} fill={L("#8a8a80")} />
+              <rect x={x0 + 26} y={-460 * k - 3} width={10} height={18} rx={2} fill={L("#5a5a5a")} />
+            </g>
           ))
         : null}
-      {/* hat stand */}
-      <rect x={x0 + 280} y={-420} width={10} height={420} fill={L("#2a1e14")} />
-      <path d={`M${x0 + 255} -420 L${x0 + 315} -420 M${x0 + 285} -420 L${x0 + 260} -380 M${x0 + 285} -420 L${x0 + 310} -380`} stroke={L("#2a1e14")} strokeWidth={6} />
-      <Stairs x0={x0 + 360} x1={x1 - 20} rise={-stairsTo} light={light} />
-      {lamp > 0 ? <OilLamp x={x0 + 330} y={-300} on={lamp} t={t} light={light} s={0.8} /> : null}
+      <Stairs x0={x0 + 70} x1={x1 - 20} rise={-stairsTo} light={light} />
+      {lamp > 0 ? <OilLamp x={x0 + 60} y={-300} on={lamp} t={t} light={light} s={0.8} /> : null}
       {children}
     </VRoom>
   );
@@ -207,9 +208,10 @@ export const FrontHall: React.FC<RoomProps & { readonly x0: number; readonly x1:
 export const SittingRoom: React.FC<RoomProps & { readonly x0: number; readonly x1: number; readonly blind?: number; readonly outside?: string; readonly minutes?: number; readonly view?: React.ReactNode; readonly sofaFacing?: 1 | -1 }> = ({ x0, x1, light = NEUTRAL, lamp = 0, t = 0, blind = 0.35, outside = "#c8d8dc", minutes = 630, view, sofaFacing = 1, children }) => {
   const L = (c: string) => lit(c, light);
   const cx = (x0 + x1) / 2;
+  const mx = x0 + 280;
   return (
     <VRoom x0={x0} x1={x1} paper="#8a6a5a" motif="#7a5a4a" floor="#4a3222" rug="#6a3a34" light={light}>
-      <SashWindow id={`sr${Math.round(x0)}`} x={x1 - 330} y={-480} w={230} h={290} light={light} outside={outside} blind={blind} curtains="#4a3a3a" view={view} />
+      <SashWindow id={`sr${Math.round(x0)}`} x={x1 - 280} y={-480} w={230} h={290} light={light} outside={outside} blind={blind} curtains="#4a3a3a" view={view} />
       <Portrait id={`pa${Math.round(x0)}`} x={x0 + 200} y={-400} w={120} h={150} light={light} oval>
         <circle cx={0} cy={10} r={30} fill={L("#8a7a6a")} />
         <circle cx={0} cy={-18} r={20} fill={L("#d8b898")} />
@@ -219,16 +221,16 @@ export const SittingRoom: React.FC<RoomProps & { readonly x0: number; readonly x
         <circle cx={0} cy={-18} r={20} fill={L("#e0c0a0")} />
       </Portrait>
       {/* fireplace and mantel shelf with the clock */}
-      <rect x={cx - 170} y={-286} width={340} height={286} fill={L("#3a2a22")} />
-      <rect x={cx - 120} y={-230} width={240} height={230} fill={L("#14100c")} />
-      <rect x={cx - 130} y={-240} width={260} height={12} fill={L("#5a4a42")} />
-      <rect x={cx - 190} y={-300} width={380} height={16} fill={L("#4a3020")} />
-      <rect x={cx - 140} y={-286} width={280} height={30} fill={L("#5a4030")} />
-      <MantelClock x={cx} y={-300} minutes={minutes} light={light} s={0.7} />
-      <Sofa x={cx - 40} light={light} facing={sofaFacing} />
-      <ParlourTable x={x1 - 200} light={light} />
-      {lamp > 0 ? <OilLamp x={x1 - 200} y={-160} on={lamp} t={t} light={light} s={0.75} /> : null}
-      <Armchair x={x0 + 170} light={light} facing={1} />
+      <rect x={mx - 170} y={-286} width={340} height={286} fill={L("#3a2a22")} />
+      <rect x={mx - 120} y={-230} width={240} height={230} fill={L("#14100c")} />
+      <rect x={mx - 130} y={-240} width={260} height={12} fill={L("#5a4a42")} />
+      <rect x={mx - 190} y={-300} width={380} height={16} fill={L("#4a3020")} />
+      <rect x={mx - 140} y={-286} width={280} height={30} fill={L("#5a4030")} />
+      <MantelClock x={mx} y={-300} minutes={minutes} light={light} s={0.7} />
+      <Sofa x={cx + 10} w={440} light={light} facing={sofaFacing} />
+      <ParlourTable x={x1 - 110} light={light} />
+      {lamp > 0 ? <OilLamp x={x1 - 110} y={-160} on={lamp} t={t} light={light} s={0.75} /> : null}
+      <Armchair x={x0 + 130} light={light} facing={1} />
       {children}
     </VRoom>
   );
@@ -273,12 +275,13 @@ export const Kitchen: React.FC<RoomProps & { readonly x0: number; readonly x1: n
           <rect x={x0 + 60 + i * 66} y={-436} width={44} height={46} rx={4} fill={L(i % 2 ? "#8a9aa8" : "#c8b890")} />
         </g>
       ))}
-      <Stove x={x0 + 240} light={light} fire={fire} t={t} />
-      <WallCalendar x={x0 + 520} y={-400} light={light} ring={calendarRing} s={0.9} />
-      <PanelDoor x={x1 - 600} w={180} h={440} open={backDoorOpen} light={light} beyond="#d8d0b8" color="#5a4a3a" />
-      <Stairs x0={x1 - 380} x1={x1 - 20} rise={-stairsTo} light={light} banister={false} />
-      {ironing ? <IroningBoard x={x0 + 620} light={light} /> : <DiningTable x={x0 + 620} w={360} light={light} cloth="#d8d0c0" />}
-      {lamp > 0 ? <OilLamp x={x0 + 780} y={-160} on={lamp} t={t} light={light} s={0.7} /> : null}
+      <Stove x={x0 + 180} light={light} fire={fire} t={t} pipeX={-120} />
+      <WallCalendar x={x0 + 330} y={-400} light={light} ring={calendarRing} s={0.9} />
+      {/* the side door is in the end wall; its leaf swings into the kitchen when open */}
+      {backDoorOpen > 0.02 ? <rect x={x1 - 180 * Math.sin(backDoorOpen * 1.4)} y={-450} width={180 * Math.sin(backDoorOpen * 1.4)} height={450} fill={L("#4a4a48")} /> : null}
+      <Stairs x0={x1 - 200} x1={x1 - 20} rise={-stairsTo} light={light} banister={false} />
+      {ironing ? <IroningBoard x={x0 + 470} light={light} /> : <DiningTable x={x0 + 470} w={320} light={light} cloth="#d8d0c0" />}
+      {lamp > 0 ? <OilLamp x={x0 + 600} y={-160} on={lamp} t={t} light={light} s={0.7} /> : null}
       {children}
     </VRoom>
   );
@@ -290,18 +293,18 @@ export const GuestRoom: React.FC<RoomProps & { readonly x0: number; readonly x1:
   return (
     <VRoom x0={x0} x1={x1} paper="#8a9a8a" motif="#7a8a7a" floor="#5a4a38" rug="#5a5a6a" light={light}>
       <SashWindow id={`gr${Math.round(x0)}`} x={x0 + 90} y={-480} w={230} h={290} light={light} outside={outside} blind={blind} curtains="#6a6a5a" />
-      <PanelDoor x={x1 - 220} w={170} h={440} open={doorOpen} light={light} beyond="#1a1410" color="#5a4a3a" hinge="right" />
-      <Bed x={x0 + 300} w={480} light={light} made={made} quilt="#7a6a58" />
-      <Dresser x={x1 - 420} light={light} w={220} />
+      <PanelDoor x={x1 - 190} w={170} h={440} open={doorOpen} light={light} beyond="#1a1410" color="#5a4a3a" hinge="right" />
+      <Bed x={x0 + 140} w={380} light={light} made={made} quilt="#7a6a58" />
+      <Dresser x={x1 - 260} light={light} w={160} />
       {hem > 0 ? (
         <g opacity={hem}>
-          {/* only the hem of a dress and a shoe, beyond the bed */}
-          <path d={`M${x0 + 300 + 420} -20 Q${x0 + 300 + 470} -60 ${x0 + 300 + 540} -20 Z`} fill={L("#4a3a3e")} />
-          <path d={`M${x0 + 300 + 540} -14 l38 -6 l6 12 l-40 6 Z`} fill={L("#1e1712")} />
+          {/* only the hem of a dress and a shoe, between the bed and the bureau */}
+          <path d={`M${x0 + 430} -16 Q${x0 + 480} -60 ${x0 + 560} -14 Z`} fill={L("#4a3a3e")} />
+          <path d={`M${x0 + 556} -10 l36 -6 l6 12 l-38 6 Z`} fill={L("#1e1712")} />
         </g>
       ) : null}
-      <Washstand x={x0 + 120} light={light} />
-      {lamp > 0 ? <OilLamp x={x1 - 420} y={-210} on={lamp} t={t} light={light} s={0.7} /> : null}
+      <Washstand x={x0 + 70} light={light} />
+      {lamp > 0 ? <OilLamp x={x1 - 260} y={-210} on={lamp} t={t} light={light} s={0.7} /> : null}
       {children}
     </VRoom>
   );
@@ -316,13 +319,13 @@ export const LizzieRoom: React.FC<RoomProps & { readonly x0: number; readonly x1
       {/* the door to the parents' room, bolted, with the bureau in front of it */}
       <PanelDoor x={x1 - 230} w={170} h={440} open={0} light={light} color="#5a4a3a" bolt={bolt} hinge="right" />
       <Dresser x={x1 - 150} light={light} w={200} mirror={false} />
-      <Bed x={x0 + 360} w={460} light={light} made={1} quilt="#6a5a6a" facing={1} />
+      <Bed x={x0 + 220} w={340} light={light} made={1} quilt="#6a5a6a" facing={1} />
       {/* small writing desk */}
-      <rect x={x0 + 40} y={-150} width={220} height={12} fill={L("#4a3020")} />
-      <rect x={x0 + 50} y={-138} width={12} height={138} fill={L("#3a2418")} />
-      <rect x={x0 + 238} y={-138} width={12} height={138} fill={L("#3a2418")} />
-      <rect x={x0 + 90} y={-158} width={90} height={6} fill={L("#e8e0d0")} />
-      {lamp > 0 ? <OilLamp x={x0 + 200} y={-150} on={lamp} t={t} light={light} s={0.7} /> : null}
+      <rect x={x0 + 30} y={-150} width={160} height={12} fill={L("#4a3020")} />
+      <rect x={x0 + 40} y={-138} width={12} height={138} fill={L("#3a2418")} />
+      <rect x={x0 + 168} y={-138} width={12} height={138} fill={L("#3a2418")} />
+      <rect x={x0 + 70} y={-158} width={80} height={6} fill={L("#e8e0d0")} />
+      {lamp > 0 ? <OilLamp x={x0 + 150} y={-150} on={lamp} t={t} light={light} s={0.7} /> : null}
       {children}
     </VRoom>
   );
@@ -335,12 +338,11 @@ export const ParentsRoom: React.FC<RoomProps & { readonly x0: number; readonly x
     <VRoom x0={x0} x1={x1} paper="#8a7a6a" motif="#7a6a5a" floor="#5a4a38" rug="#4a4a4a" light={light}>
       <PanelDoor x={x0 + 40} w={170} h={440} open={0} light={light} color="#5a4a3a" bolt={bolt} hinge="left" />
       <SashWindow id={`pr${Math.round(x0)}`} x={x1 - 330} y={-480} w={230} h={290} light={light} outside={outside} blind={blind} curtains="#5a4a3a" />
-      <Bed x={x0 + 240} w={480} light={light} made={1} quilt="#5a5a6a" />
+      <Bed x={x0 + 240} w={400} light={light} made={1} quilt="#5a5a6a" />
       {/* a small iron safe: Andrew's */}
-      <rect x={x1 - 560} y={-160} width={130} height={160} fill={L("#2a2a2e")} />
-      <circle cx={x1 - 495} cy={-80} r={14} fill={L("#8a8a80")} />
-      <Washstand x={x1 - 160} light={light} />
-      {lamp > 0 ? <OilLamp x={x1 - 500} y={-160} on={lamp} t={t} light={light} s={0.7} /> : null}
+      <rect x={x1 - 135} y={-160} width={120} height={160} fill={L("#2a2a2e")} />
+      <circle cx={x1 - 75} cy={-80} r={14} fill={L("#8a8a80")} />
+      {lamp > 0 ? <OilLamp x={x1 - 75} y={-160} on={lamp} t={t} light={light} s={0.7} /> : null}
       {children}
     </VRoom>
   );
@@ -350,7 +352,7 @@ export const ParentsRoom: React.FC<RoomProps & { readonly x0: number; readonly x
 export const BackHall: React.FC<RoomProps & { readonly x0: number; readonly x1: number; readonly stairsTo?: number }> = ({ x0, x1, light = NEUTRAL, lamp = 0, t = 0, stairsTo = -560, children }) => {
   return (
     <VRoom x0={x0} x1={x1} paper="#a89a80" floor="#5a4a38" light={light}>
-      <Stairs x0={x1 - 380} x1={x1 - 20} rise={-stairsTo} light={light} banister={false} />
+      <Stairs x0={x1 - 260} x1={x1 - 20} rise={-stairsTo} light={light} banister={false} />
       {lamp > 0 ? <OilLamp x={x0 + 120} y={-300} on={lamp} t={t} light={light} s={0.6} /> : null}
       {children}
     </VRoom>
@@ -397,9 +399,9 @@ export const Cellar: React.FC<RoomProps & { readonly x0: number; readonly x1: nu
         <circle key={i} cx={x0 + 120 + hash(i) * 340} cy={-hash(i + 3) * 120} r={10 + hash(i + 7) * 12} fill={L("#221e1c")} />
       ))}
       {/* shelf and hooks */}
-      <rect x={x1 - 700} y={-300} width={560} height={14} fill={L("#4a3a2a")} />
-      <rect x={x1 - 700} y={-180} width={560} height={14} fill={L("#4a3a2a")} />
-      <g transform={`translate(${x1 - 680} -300)`}>{tools}</g>
+      <rect x={x1 - 900} y={-300} width={560} height={14} fill={L("#4a3a2a")} />
+      <rect x={x1 - 900} y={-180} width={560} height={14} fill={L("#4a3a2a")} />
+      <g transform={`translate(${x1 - 880} -300)`}>{tools}</g>
       {/* stairs up */}
       <Stairs x0={x0 + w - 60} x1={x0 + w - 420} rise={420} light={light} banister={false} />
       {lamp > 0 ? (

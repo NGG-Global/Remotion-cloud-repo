@@ -557,7 +557,8 @@ export const Courthouse1893: React.FC<{ readonly x: number; readonly light?: Lig
 export const Maplecroft: React.FC<{ readonly x: number; readonly light?: Light; readonly lit?: number }> = ({ x, light = NEUTRAL, lit: lamps = 0 }) => (
   <g>
     <Mansion id="maplecroft" x={x} light={light} color="#c8b070" seed={13} turret lit={lamps} />
-    <text x={x} y={-6} textAnchor="middle" fontFamily={`${TYPE.latin}, serif`} fontWeight={600} fontSize={40} fill={lit("#2a2418", light)} letterSpacing={4}>
+    <rect x={x - 270} y={-850} width={540} height={70} fill={lit("#3a3438", light)} />
+    <text x={x} y={-798} textAnchor="middle" fontFamily={`${TYPE.latin}, serif`} fontWeight={600} fontSize={44} fill={lit("#e8d8a8", light)} letterSpacing={6}>
       MAPLECROFT
     </text>
   </g>

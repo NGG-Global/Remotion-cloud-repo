@@ -22,8 +22,8 @@ export const FamousDetail: React.FC = () => {
   const { t, dur } = useShot();
   // Main Street toward evening; the camera finds the drugstore door.
   const L = LIGHT.afternoon;
-  const c = cam(t, [[0, -2400], [dur, -3000]], [[0, -640], [dur, -420]], [[0, 0.6], [dur, 1.2]]);
-  const w = walker(t, 0, dur + 1, -3900, -3150, undefined, 1);
+  const c = cam(t, [[0, -900], [dur, -1500]], [[0, -640], [dur, -420]], [[0, 0.6], [dur, 1.2]]);
+  const w = walker(t, 0, dur + 1, -2400, -1650, undefined, 1);
   return (
     <AbsoluteFill>
       <Stage cam={c} t={t}>
@@ -97,7 +97,7 @@ export const SoundsBad: React.FC = () => {
         parents: (
           <g>
             <Person x={420} look={ABBY} light={L} pose={seated(t, 1, { lean: 18 + clutch * 6, neck: 14, nearUpper: 50, nearFore: 96, farUpper: 46, farFore: 100, brow: -0.7, lids: 0.6 }, 0.3)} facing={-1} />
-            <Person x={720} look={ANDREW_HOME} light={L} pose={idle(pose({ lean: 22, neck: 18, nearUpper: 60, nearFore: 40, farUpper: 56, farFore: 44, brow: -0.5, lids: 0.5 }), t, 2, 0.5)} facing={1} />
+            <Person x={660} look={ANDREW_HOME} light={L} pose={idle(pose({ lean: 22, neck: 18, nearUpper: 60, nearFore: 40, farUpper: 56, farFore: 44, brow: -0.5, lids: 0.5 }), t, 2, 0.5)} facing={1} />
             <g transform={`translate(560 -180) scale(${1 + shadow * 6})`} opacity={shadow * 0.45}>
               <path d="M-14 0 L14 0 L14 -46 Q14 -54 6 -56 L6 -66 L-6 -66 L-6 -56 Q-14 -54 -14 -46 Z" fill="#000" />
             </g>

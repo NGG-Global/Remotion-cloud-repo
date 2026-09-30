@@ -44,7 +44,7 @@ export const EmmaAway: React.FC = () => {
       cam={c}
       light={L}
       people={{
-        sitting: <Person x={-780} look={EMMA} light={L} pose={seated(t, 4, { neck: 12 }, 0.3)} facing={1} opacity={1 - gone} />,
+        sitting: <Person x={-820} look={EMMA} light={L} pose={seated(t, 4, { neck: 12 }, 0.3)} facing={1} opacity={1 - gone} />,
       }}
       finish={{ temp: 0.3, vignette: 0.7 }}
     />
@@ -134,7 +134,7 @@ export const AbbyUpstairs: React.FC = () => {
   // 224.0 she climbs; 228.1 "she is making up the guest room".
   const climb = ramp(t, 0.2, 2.6, EASE.inOut);
   const inRoom = ramp(t, 2.6, 3.6, EASE.inOut);
-  const stairX = lerp(-1020, -1350, 1 - climb);
+  const stairX = lerp(-990, -1330, 1 - climb);
   const stairY = lerp(0, HOUSE.upper - HOUSE.floor, climb);
   const c = cam(t, [[0, -1150], [2.6, -1150], [3.8, -1000], [dur, -980]], [[0, eye(HOUSE.floor, 200)], [2.6, eye(HOUSE.upper, 200)], [dur, eye(HOUSE.upper, 250)]], [[0, 1.1], [2.6, 1.1], [3.8, 1.35], [dur, 1.45]], EASE.inOut);
   const L = LIGHT.morning;
@@ -147,7 +147,7 @@ export const AbbyUpstairs: React.FC = () => {
       props={{ guestMade: 1 - inRoom * 0.5 + ramp(t, 4.0, dur) * 0.5, guestDoorOpen: 0.9 }}
       people={{
         hall: climb < 1 ? <Person x={stairX} y={stairY} look={ABBY} light={L} pose={climbing ? pose({ lean: 8, nearThigh: 30 + Math.sin(t * 6) * 20, farThigh: 30 - Math.sin(t * 6) * 20, nearKnee: 40, farKnee: 40, nearUpper: 20, nearFore: 40 }) : standing(t, 1)} facing={1} grounded={false} /> : null,
-        guest: climb >= 1 ? <Person x={lerp(-1000, -820, inRoom)} look={ABBY} light={L} pose={inRoom > 0.9 ? bedMaking(t, 2) : idle(pose({}), t, 2, 0.5)} facing={1} /> : null,
+        guest: climb >= 1 ? <Person x={lerp(-880, -1040, inRoom)} look={ABBY} light={L} pose={inRoom > 0.9 ? bedMaking(t, 2) : idle(pose({}), t, 2, 0.5)} facing={-1} /> : null,
       }}
       finish={{ temp: 0.3, vignette: 0.7 }}
     />
@@ -187,7 +187,7 @@ export const LizzieStays: React.FC = () => {
       lamps={{ guest: 0.6 }}
       people={{
         dining: <Person x={100} look={LIZZIE} light={LIGHT.room} pose={standing(t, 4, { turn: 0.2 })} facing={1} />,
-        guest: <Person x={-820} look={ABBY} light={LIGHT.dim} pose={bedMaking(t, 2)} facing={1} />,
+        guest: <Person x={-1060} look={ABBY} light={LIGHT.dim} pose={bedMaking(t, 2)} facing={-1} />,
       }}
       yard={
         <Plane d={-0.6}>

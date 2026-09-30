@@ -163,6 +163,21 @@ imports do not resolve reliably during a render.
 for static layout, but anything that changes every frame (opacity, transform,
 interpolated colour) has to be an inline style.
 
+## Behind the Nightmare: the true-crime episodes
+
+Two illustrated Hebrew-narrated documentaries share one engine (`src/gacy/engine`, `src/gacy/rig`): a multiplane camera, a character rig with forward kinematics, and shots cut into measured pauses of the voice.
+
+| Composition       | Length | Subject                                      | Notes                        |
+| ----------------- | ------ | -------------------------------------------- | ---------------------------- |
+| `GacyDocumentary` | 10:45  | John Wayne Gacy                              | `docs/VIDEO_NOTES.md`        |
+| `LizzieBorden`    | 15:48  | Lizzie Borden and the Fall River murders     | `docs/BORDEN_VIDEO_NOTES.md` |
+
+```bash
+npx remotion render LizzieBorden out/lizzie-borden.mp4
+```
+
+Both are long vector films with grain: a full 1080p render takes several hours on four cores (see the notes for timings and a 720p option). The **Render video** workflow renders either on GitHub's runners and publishes the file as an artifact.
+
 ## The Claude explainer series
 
 | Composition     | Episode | Length | Subject                                                         |

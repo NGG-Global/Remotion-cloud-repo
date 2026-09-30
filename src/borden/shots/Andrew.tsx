@@ -45,7 +45,7 @@ export const AndrewReturns: React.FC = () => {
 export const BridgetOpens: React.FC = () => {
   const { t, dur } = useShot();
   // Inside the hall: Bridget comes to the door and works the locks.
-  const w = walker(t, 0, 1.0, -900, -1180, undefined, 2);
+  const w = walker(t, 0, 1.0, -900, -1250, undefined, 2);
   const locks = 3 - lerp(0, 3, ramp(t, 1.0, 1.9, EASE.linear));
   const c = cam(t, [[0, -1100], [dur, -1180]], [[0, eye(HOUSE.floor, 260)], [dur, eye(HOUSE.floor, 280)]], [[0, 1.6], [dur, 2.0]]);
   const L = LIGHT.room;
@@ -133,7 +133,7 @@ export const Ordinary: React.FC = () => {
       people={{
         sitting: (
           <g>
-            <Person x={-470} y={-60} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />
+            <Person x={-470} y={-96} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />
             <circle cx={fly.x} cy={fly.y} r={3} fill="#1a1510" opacity={0.8} />
           </g>
         ),
@@ -155,7 +155,7 @@ export const DoesntKnow: React.FC = () => {
       lamps={{ guest: 0.12 }}
       props={{ guestDoorOpen: 0.15, guestHem: 0.6, minutes: 642 }}
       people={{
-        sitting: <Person x={-470} y={-60} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />,
+        sitting: <Person x={-470} y={-96} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.1 }), t, 1, 0.25)} facing={1} grounded={false} />,
       }}
       finish={{ temp: 0.1, vignette: 0.85 }}
     />
@@ -223,7 +223,7 @@ export const TheNote: React.FC = () => {
       people={{
         sitting: (
           <g>
-            <Person x={-470} y={-60} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.9, neck: 30 }), t, 1, 0.25)} facing={1} grounded={false} />
+            <Person x={-470} y={-96} look={ANDREW_HOME} light={L} pose={idle(pose({ ...LYING, lids: 0.9, neck: 30 }), t, 1, 0.25)} facing={1} grounded={false} />
             <Person x={-800} look={LIZZIE} light={L} pose={speaking(t, 3, { turn: -0.2 }, 0.8)} facing={1} />
             <g opacity={note * 0.9} transform={`translate(-560 ${-520 - Math.sin(t * 1.5) * 8})`}>
               <Note light={L} s={2.2} />
