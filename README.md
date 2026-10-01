@@ -456,8 +456,13 @@ Nunito) in `src/tiny-tempo/theme.ts`.
 | `TinyTempoTeaser` | 1080×1920 | 1:04   | Vertical teaser cut bar for bar to the home-page theme |
 
 ```bash
-npm run render:hq -- TinyTempoTeaser out/tiny-tempo-teaser.mp4
+npm run render:teaser
 ```
+
+That script passes `--gl=angle`. `remotion.config.ts` selects the SwiftShader
+backend for the documentary's three.js scenes, and on a machine without a GPU
+that backend renders this all-2D composition about four times slower than
+Chrome's default. The output is pixel-identical either way.
 
 ### How the teaser follows the music
 
