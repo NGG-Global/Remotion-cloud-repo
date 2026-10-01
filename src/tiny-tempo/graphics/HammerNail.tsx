@@ -17,6 +17,12 @@ type HammerNailProps = {
   readonly hits: readonly number[];
   readonly poster?: boolean;
   readonly scale?: number;
+  /**
+   * Extra lift added to the pose, in the same 0..1 units as the swing curve.
+   * Lets a scene wind the hammer up slowly through a rest in the music; it
+   * must be back at 0 by the next contact or the poll lands early.
+   */
+  readonly extraLift?: number;
 };
 
 /**
@@ -28,6 +34,7 @@ export const HammerNail: React.FC<HammerNailProps> = ({
   hits,
   poster = false,
   scale = 1,
+  extraLift = 0,
 }) => {
   const { time, durationInFrames, fps } = useClock();
   const pose = hammerAngle(time, hits);
@@ -40,7 +47,7 @@ export const HammerNail: React.FC<HammerNailProps> = ({
   const idle =
     until === null && !Number.isFinite(age) ? Math.sin(time * 1.25) * 0.03 : 0;
   // Contact ~18°, rest ~−21°, windup ~−40° — handle stays in the air.
-  const rot = 14 - (pose + idle) * 42;
+  const rot = 14 - (pose + idle + extraLift) * 42;
   const press = squash(age, 0.16, 0.05);
   const shake = settle(age, 110, 20) * (poster ? 10 : 6);
   const ink = faces(WORKSHOP.ink);

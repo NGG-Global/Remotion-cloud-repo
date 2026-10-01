@@ -165,13 +165,13 @@ interpolated colour) has to be an inline style.
 
 ## The Claude explainer series
 
-| Composition     | Episode | Length | Subject                                                         |
-| --------------- | ------- | ------ | --------------------------------------------------------------- |
-| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it    |
-| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings  |
-| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see |
-| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft |
-| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts |
+| Composition     | Episode | Length | Subject                                                               |
+| --------------- | ------- | ------ | --------------------------------------------------------------------- |
+| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it          |
+| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings        |
+| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see       |
+| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft       |
+| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts       |
 | `ClaudeReach`   | 6       | 3:04   | Pulling from Microsoft 365 by asking, and the Teams-transcript caveat |
 
 ```bash
@@ -433,16 +433,78 @@ Level-end star animation for TinyTempo, authored here so the motion can be
 scrubbed at 60 fps before it is sampled in Phaser. Same `f(t)` pose lives in
 `src/motion/starReveal.ts` and TinyTempo's `src/ui/starReveal.ts`.
 
-| Composition          | Size       | What it shows                                      |
-| -------------------- | ---------- | -------------------------------------------------- |
-| `StarReveal`         | 1920×1080  | Three-star stamp (props: `earned` 0–3)             |
-| `StarRevealPortrait` | 720×1280   | The same beat in the game's portrait frame         |
-| `StarRevealGallery`  | 1920×1080  | 3, 2, 1 and 0 stars in one take                    |
+| Composition          | Size      | What it shows                              |
+| -------------------- | --------- | ------------------------------------------ |
+| `StarReveal`         | 1920×1080 | Three-star stamp (props: `earned` 0–3)     |
+| `StarRevealPortrait` | 720×1280  | The same beat in the game's portrait frame |
+| `StarRevealGallery`  | 1920×1080 | 3, 2, 1 and 0 stars in one take            |
 
 ```bash
 npx remotion render StarReveal out/star-reveal.mp4
 npx remotion still StarReveal out/star-reveal.png --frame=90
 ```
+
+## Tiny Tempo
+
+Two pieces for the game, both drawn from the same act graphics in
+`src/tiny-tempo/graphics` and the game's own palette and faces (Fredoka,
+Nunito) in `src/tiny-tempo/theme.ts`.
+
+| Composition       | Size      | Length | What it is                                             |
+| ----------------- | --------- | ------ | ------------------------------------------------------ |
+| `TinyTempoAd`     | 1920×1080 | 0:24   | Landscape launch ad cut to the 24-second track         |
+| `TinyTempoTeaser` | 1080×1920 | 1:04   | Vertical teaser cut bar for bar to the home-page theme |
+
+```bash
+npm run render:hq -- TinyTempoTeaser out/tiny-tempo-teaser.mp4
+```
+
+### How the teaser follows the music
+
+The home-page theme (`public/audio/tiny-tempo-home.wav`) runs at exactly
+120 BPM with its first downbeat at sample zero, so a beat is 15 frames and a
+bar is 60. `src/tiny-tempo/teaser/format.ts` expresses every cut in bars and
+beats against that grid, and every scene's hit list is the kick pattern of the
+bars it covers, so the hammer, knife and shoe land on the drum part rather
+than near it.
+
+`tools/audio-envelope.py` measured the track: it fits the tempo from spectral
+flux, fixes the downbeat phase on the kick band, prints a bar-by-bar table of
+how hard each quarter note lands, and writes `src/tiny-tempo/teaser/envelope.ts`
+with per-frame loudness at 30 fps. The composition reads that table through
+`useMusic()` for the kick-driven breathing of the frame, the bead glow and the
+vignette, so the picture reacts to the mix without decoding audio at render
+time.
+
+```bash
+pip install numpy scipy
+python3 tools/audio-envelope.py public/audio/tiny-tempo-home.wav src/tiny-tempo/teaser/envelope.ts
+```
+
+Structure, as the track dictates it:
+
+| Bars  | Music                                         | Picture                                         |
+| ----- | --------------------------------------------- | ----------------------------------------------- |
+| 0–1   | Intro stabs                                   | Poster hammer lands every stab                  |
+| 2     | Stop on the downbeat, crash on the "and" of 2 | Wind-up through the silence, title on the crash |
+| 3–7   | Drums alone, a two-bar figure played twice    | Watch the figure, then tap it back              |
+| 8–23  | Full groove, hats on the off-beats            | One act per phrase, cuts on the kick            |
+| 12    | Four-on-the-floor fill                        | Four acts, one per quarter note                 |
+| 20–23 | Same groove, building                         | One act per half bar                            |
+| 24–26 | Second theme                                  | Level map, puck hopping, stars stamping         |
+| 27–29 | Second theme, syncopated bars alternating     | A wall of six acts hitting together             |
+| 30–31 | Drop-out, crash, three closing hits           | Sign, call to action, tempo beads               |
+
+The act graphics are drawn on a 1920×1080 stage. `Landscape.tsx` mounts one at
+native size and scales and pans it so a chosen stage point sits where the
+vertical frame wants it: a close crop that reads as a camera move rather than
+a letterboxed clip. `FRAMING` in `scenes/ActV.tsx` records the focal point of
+each act, checked against stills.
+
+One thing to know: `package.json` lists `**/fonts.ts` under `sideEffects`.
+Each video's fonts module is imported for its side effect only, and without
+that entry the bundler drops the import and the game's faces silently fall
+back to a serif.
 
 ## Cloud rendering
 
