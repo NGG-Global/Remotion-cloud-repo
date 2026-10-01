@@ -128,8 +128,9 @@ const Park: React.FC<{ t: number }> = ({ t }) => {
         <Bunting x0={-200} x1={2200} y={-1100} light={L} />
         <PicnicTable x={-1500} light={L} cloth="#c8483a" />
         <PicnicTable x={1400} light={L} cloth="#e8e2d4" />
+        {/* two guests in frame; the others stand clear of the edges, outside it */}
         {NEIGHBORS.map((n, i) => (
-          <Person key={i} x={-2100 + i * 700 + (i > 2 ? 600 : 0)} look={n} s={0.95} facing={i % 2 ? -1 : 1} light={L} pose={talk(idle(STAND, t, i + 20), t, i)} />
+          <Person key={i} x={[-2300, -1650, -700, 600, 1550, 2200][i]} look={n} s={0.95} facing={i % 2 ? -1 : 1} light={L} pose={talk(idle(STAND, t, i + 20), t, i)} />
         ))}
       </Plane>
       <Plane d={0}>
@@ -460,9 +461,11 @@ export const Morning: React.FC = () => {
   const hasPaper = t > 2.3;
   const neighbor = idle(pose({ farUpper: 34, farFore: 40, turn: 0.2, smile: 0.6, ...(t > 3.4 && t < 4.6 ? wave(t + 1, ramp(t, 3.4, 3.7) - ramp(t, 4.3, 4.6)) : {}) }), t, 12);
   const cam = {
-    x: keys(t, [[0, 1050], [3.3, 1050], [6.3, -140]], EASE.inOut),
-    y: keys(t, [[0, -380], [3.3, -380], [6.3, -470]]),
-    zoom: keys(t, [[0, 0.56], [3.3, 0.56], [6.3, 1.25], [7.35, 1.3]], EASE.inOut),
+    // the wide holds Gacy at the door and the neighbour's hose inside the frame
+    x: keys(t, [[0, 1015], [3.3, 1015], [6.3, -140], [8.2, 60]], EASE.inOut),
+    // He is on the stoop (160 up) until he walks off it, so the frame follows him down.
+    y: keys(t, [[0, -380], [3.3, -380], [6.3, -420], [8.2, -300]]),
+    zoom: keys(t, [[0, 0.46], [3.3, 0.46], [6.3, 1.25], [7.35, 1.3]], EASE.inOut),
   };
   const onStoop = gx < doorX + 250 ? -160 : lerp(-160, 0, clamp((gx - doorX - 250) / 250));
   return (
@@ -541,7 +544,7 @@ export const BackyardParty: React.FC<{ readonly wide?: boolean }> = ({ wide = fa
   const L: Light = { key: "#ffc890", ambient: "#2a1e22", amb: 0.22, desat: 0.05 };
   const cam = wide
     ? { x: keys(t, [[0, -300], [6, 300]]), y: -440, zoom: 0.85 }
-    : { x: keys(t, [[0, -40], [1.8, 120]]), y: -440, zoom: 1.35 };
+    : { x: keys(t, [[0, -40], [1.8, 120]]), y: -290, zoom: 1.35 };
   const laugh = Math.max(0, Math.sin(t * 5)) * 0.5;
   return (
     <AbsoluteFill>
@@ -555,14 +558,14 @@ export const BackyardParty: React.FC<{ readonly wide?: boolean }> = ({ wide = fa
         <GroundStrip near={-9} far={14} color="#4a5a3a" farColor="#3a4a30" light={L} />
         <Plane d={4.5}>
           <PicketFence x0={-4000} x1={4000} h={320} light={L} color="#c8bca8" />
-          <PicnicTable x={-900} light={L} cloth="#d8d0c0" />
+          <PicnicTable x={-600} light={L} cloth="#d8d0c0" />
           {[0, 1].map((i) => (
-            <Person key={i} x={-1180 + i * 560} look={NEIGHBORS[i * 4]} facing={i ? -1 : 1} light={L} pose={talk(idle(pose({ hipDrop: 84, nearThigh: 86, nearKnee: 88, farThigh: 82, farKnee: 84, farUpper: 40, farFore: 80, smile: 0.6 }), t, 50 + i), t, 50 + i, 0.4)} />
+            <Person key={i} x={-880 + i * 560} look={NEIGHBORS[i * 4]} facing={i ? -1 : 1} light={L} pose={talk(idle(pose({ hipDrop: 84, nearThigh: 86, nearKnee: 88, farThigh: 82, farKnee: 84, farUpper: 40, farFore: 80, smile: 0.6 }), t, 50 + i), t, 50 + i, 0.4)} />
           ))}
         </Plane>
         <Plane d={1.4}>
           {[1, 3].map((ni, i) => (
-            <Person key={ni} x={560 + i * 300} look={NEIGHBORS[ni]} facing={i ? -1 : 1} light={L} pose={talk(idle(pose({ farUpper: 30, farFore: 76, smile: 0.8 }), t, ni + 4), t, ni + 4, i === 0 ? 0.8 : 0.3)} farHold={<Cup light={L} />} />
+            <Person key={ni} x={400 + i * 300} look={NEIGHBORS[ni]} facing={i ? -1 : 1} light={L} pose={talk(idle(pose({ farUpper: 30, farFore: 76, smile: 0.8 }), t, ni + 4), t, ni + 4, i === 0 ? 0.8 : 0.3)} farHold={<Cup light={L} />} />
           ))}
         </Plane>
         <Plane d={0}>
@@ -572,7 +575,7 @@ export const BackyardParty: React.FC<{ readonly wide?: boolean }> = ({ wide = fa
           <Person x={250} look={NEIGHBORS[2]} facing={-1} light={L} pose={talk(idle(pose({ farUpper: 30, farFore: 80, smile: 1, mouth: laugh * 0.8 }), t, 9), t, 9, 0.3)} farHold={<Cup light={L} />} />
         </Plane>
         <Plane d={-3}>
-          <Person x={1150} look={NEIGHBORS[5]} facing={-1} light={{ ...L, amb: 0.45 }} pose={idle(pose({ farUpper: 30, farFore: 76, turn: 0.3 }), t, 31)} farHold={<Cup light={L} />} />
+          <Person x={1050} look={NEIGHBORS[5]} facing={-1} light={{ ...L, amb: 0.45 }} pose={idle(pose({ farUpper: 30, farFore: 76, turn: 0.3 }), t, 31)} farHold={<Cup light={L} />} />
         </Plane>
         <Plane d={-5}>
           <Person x={-1350} look={NEIGHBORS[4]} light={{ ...L, amb: 0.85 }} facing={1} pose={idle(pose({ farUpper: 30, farFore: 76 }), t, 30)} farHold={<Cup light={L} />} />
@@ -615,13 +618,14 @@ export const Hall: React.FC = () => {
         <Plane d={0}>
           <Person x={0} look={GACY_SUIT} light={L} pose={talk(idle(pose({ smile: 1, nearUpper: ga.upper, nearFore: ga.fore + pumping }), t, 4), t, 4, 0.7)} />
           <Person x={236} look={DEFENSE} facing={-1} light={L} pose={idle(pose({ smile: 0.8, nearUpper: oa.upper, nearFore: oa.fore - pumping }), t, 5)} />
-          <Person x={-780} look={NEIGHBORS[2]} light={L} pose={idle(pose({ farUpper: 60, farFore: 60 }), t, 9)} nearHold={undefined} farHold={<PressCamera flash={fl} light={L} />} />
+          <Person x={-540} look={NEIGHBORS[2]} light={L} pose={idle(pose({ farUpper: 60, farFore: 60 }), t, 9)} nearHold={undefined} farHold={<PressCamera flash={fl} light={L} />} />
           <Person x={900} look={NEIGHBORS[1]} facing={-1} light={L} pose={idle(pose({ smile: 0.7 }), t, 10)} />
         </Plane>
         <Plane d={-3.6}>
-          {Array.from({ length: 6 }, (_, i) => (
+          {/* the audience: two heads frame the handshake, the rest sit outside the frame */}
+          {[-1250, -190, 210, 1250, -1800, 1800].map((ax, i) => (
             <g key={i}>
-              <Person x={-900 + i * 420} y={60} look={[...NEIGHBORS, ...WORKERS][i]} view="back" light={{ ...L, amb: 0.5 }} pose={pose({ hipDrop: 84, nearThigh: 86, nearKnee: 88, farThigh: 82, farKnee: 84 })} shadow={false} />
+              <Person x={ax} y={20} look={[...NEIGHBORS, ...WORKERS][i]} view="back" light={{ ...L, amb: 0.5 }} pose={pose({ hipDrop: 84, nearThigh: 86, nearKnee: 88, farThigh: 82, farKnee: 84 })} shadow={false} />
             </g>
           ))}
         </Plane>
@@ -675,7 +679,7 @@ export const JobSite: React.FC<{ readonly t: number; readonly light: Light; read
 export const Crew: React.FC = () => {
   const { t } = useShot();
   const L = DAY;
-  const cam = { x: keys(t, [[0, 40], [2.95, 120]]), y: -420, zoom: keys(t, [[0, 1.5], [2.95, 1.68]]) };
+  const cam = { x: keys(t, [[0, 40], [2.95, 120]]), y: -285, zoom: keys(t, [[0, 1.5], [2.95, 1.68]]) };
   const give = ramp(t, 0.3, 0.9) - ramp(t, 1.9, 2.3);
   const g = solve(STAND, GACY_WORK);
   const ga = reachAngles(g.near.shoulder, { x: 150, y: -200 }, g.torsoAngle, g.dims.upper, g.dims.fore);

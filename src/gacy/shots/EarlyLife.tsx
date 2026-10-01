@@ -334,8 +334,8 @@ export const SignsAndMap: React.FC = () => {
   const line = ramp(t, 8.6, 10.4, EASE.inOut);
   const lamp: Light = { ...LAMP, amb: lerp(0.14, 0.34, shadow * (flick < 1 ? 1 : 0.6)) };
   const cam = {
-    x: keys(t, [[0, 0], [4.0, 520], [7.2, 540], [8.4, 2200], [11.1, 2250]], EASE.inOut),
-    y: keys(t, [[0, 0], [4.0, 180], [7.2, 190], [8.4, 80], [11.1, 60]], EASE.inOut),
+    x: keys(t, [[0, 0], [4.0, 520], [7.2, 540], [8.4, 2100], [11.1, 2120]], EASE.inOut),
+    y: keys(t, [[0, 0], [4.0, 180], [7.2, 190], [8.4, -40], [11.1, -60]], EASE.inOut),
     zoom: keys(t, [[0, 1.05], [4.0, 2.6], [7.2, 3.0], [8.4, 1.25], [11.1, 1.38]], EASE.inOut),
   };
   const young: React.ReactNode = (
@@ -375,8 +375,8 @@ export const IowaLife: React.FC = () => {
   const { t } = useShot();
   const L: Light = { key: "#fff2dc", ambient: "#6a6460", amb: 0.06, desat: 0.15 };
   const cam = {
-    x: keys(t, [[0, 1500], [1.9, 60], [4.2, 120], [6.8, 250]], EASE.inOut),
-    y: keys(t, [[0, -2150], [1.9, -440], [4.2, -440], [6.8, -600]], EASE.inOut),
+    x: keys(t, [[0, 1500], [1.9, 40], [4.2, 60], [6.8, 250]], EASE.inOut),
+    y: keys(t, [[0, -2250], [1.9, -280], [4.2, -280], [6.8, -520]], EASE.inOut),
     zoom: keys(t, [[0, 0.95], [1.9, 1.55], [4.2, 1.55], [6.8, 0.55]], EASE.inOut),
   };
   const give = ramp(t, 2.1, 2.8) - ramp(t, 3.4, 3.9);
@@ -400,7 +400,7 @@ export const IowaLife: React.FC = () => {
             inside={
               <>
                 <Person x={-60} look={GACY_MANAGER} light={{ ...L, amb: 0.15 }} pose={talk(idle(pose({ smile: 1, nearUpper: lerp(10, hand.upper, give), nearFore: lerp(10, hand.fore, give) }), t, 4), t, 4, 0.8)} nearHold={give > 0.2 ? <rect x={-16} y={0} width={32} height={40} fill={lit("#c8a870", L)} /> : undefined} />
-                <Person x={-560} look={{ ...WORKERS[1], top: "#e8e0d0", cap: "#c8322a" }} light={{ ...L, amb: 0.2 }} facing={-1} pose={idle(pose({ nearUpper: 40, nearFore: 60, lean: 10 }), t, 11)} />
+                <Person x={-400} look={{ ...WORKERS[1], top: "#e8e0d0", cap: "#c8322a" }} light={{ ...L, amb: 0.2 }} facing={-1} pose={idle(pose({ nearUpper: 40, nearFore: 60, lean: 10 }), t, 11)} />
               </>
             }
           />
@@ -427,7 +427,8 @@ export const Conviction: React.FC = () => {
   const deputy = { ...OFFICER, top: "#8a7a5a", shirt: "#7a6a4a", pants: "#4a4034", cap: "#4a4034" };
   const cam = {
     x: keys(t, [[0, -300], [6.4, 300]]),
-    y: keys(t, [[0, -1900], [2.2, -560], [6.4, -520]], EASE.inOut),
+    // starts high enough that the two men on the steps are below the frame, not sliced by it
+    y: keys(t, [[0, -2200], [2.2, -420], [6.4, -330]], EASE.inOut),
     zoom: keys(t, [[0, 0.42], [2.2, 0.75], [6.4, 0.9]], EASE.inOut),
   };
   return (
@@ -456,7 +457,7 @@ export const Cell: React.FC<{ readonly years?: [number, number] }> = ({ years = 
   const L: Light = { key: "#d8dce2", ambient: "#1a1c22", amb: 0.32, desat: 0.3 };
   const pages = Math.floor(ramp(t, 0.8, dur - 0.6, EASE.inOut) * 20);
   const sun = keys(t, [[0, -900], [dur, 700]], EASE.linear);
-  const cam = { x: keys(t, [[0, -260], [dur, -60]]), y: -420, zoom: keys(t, [[0, 1.2], [dur, 1.35]], EASE.drift) };
+  const cam = { x: keys(t, [[0, -260], [dur, -60]]), y: -300, zoom: keys(t, [[0, 1.2], [dur, 1.35]], EASE.drift) };
   const monthsShown = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
   const year = years[0] + Math.floor(pages / 12);
   return (
@@ -473,7 +474,7 @@ export const Cell: React.FC<{ readonly years?: [number, number] }> = ({ years = 
           <rect x={-880} y={-170} width={16} height={170} fill={lit("#3a3e42", L)} />
           <rect x={-40} y={-170} width={16} height={170} fill={lit("#3a3e42", L)} />
           {/* wall calendar */}
-          <g transform="translate(420 -760)">
+          <g transform="translate(380 -560)">
             <rect x={-110} y={-140} width={220} height={280} fill={lit("#f0ece0", L)} />
             <rect x={-110} y={-140} width={220} height={60} fill={lit("#8a2a24", L)} />
             <text x={0} y={-98} textAnchor="middle" fontFamily="Frank Ruhl Libre, serif" fontSize={34} fill={lit("#f0ece0", L)}>
@@ -508,7 +509,7 @@ export const Release: React.FC = () => {
   const gate = ramp(t, 0.2, 1.4, EASE.inOut);
   const out = walkBetween(t, 1.0, 3.4, 0, 1400);
   const busX = t < 3.6 ? 2200 : lerp(2200, 9000, ramp(t, 3.6, 4.8, EASE.in));
-  const cam = { x: keys(t, [[0, 100], [4.8, 1300]]), y: -520, zoom: keys(t, [[0, 0.95], [4.8, 0.8]]) };
+  const cam = { x: keys(t, [[0, 100], [4.8, 1300]]), y: -360, zoom: keys(t, [[0, 0.95], [4.8, 0.8]]) };
   return (
     <AbsoluteFill>
       <Stage cam={cam} handheld={3} t={t}>
@@ -602,8 +603,9 @@ export const InFront: React.FC = () => {
   const L = DAY;
   const cam = {
     x: keys(t, [[0, -100], [2.2, 150]]),
-    y: keys(t, [[0, -420], [2.2, -900]], EASE.out),
-    zoom: keys(t, [[0, 0.62], [2.2, 0.46]], EASE.out),
+    // rises to the house, but stops with the people on the lawn still whole
+    y: keys(t, [[0, -420], [2.2, -640]], EASE.out),
+    zoom: keys(t, [[0, 0.62], [2.2, 0.5]], EASE.out),
   };
   const people = [
     { look: NEIGHBORS[0], x: -2500, d: -3.5, f: 1 as const },
@@ -612,7 +614,7 @@ export const InFront: React.FC = () => {
     { look: NEIGHBORS[3], x: 2600, d: -8.8, f: -1 as const },
     { look: NEIGHBORS[5], x: 3300, d: -2.5, f: -1 as const },
     { look: NEIGHBORS[2], x: -3300, d: -6, f: 1 as const },
-    { look: NEIGHBORS[4], x: 900, d: -9, f: -1 as const },
+    { look: NEIGHBORS[4], x: 900, d: -7, f: -1 as const },
   ];
   return (
     <AbsoluteFill>

@@ -14,6 +14,9 @@
  * Writes <outDir>/f<frame>.jpg. Pass a bundleDir to reuse the bundle between
  * runs; set REBUNDLE=1 after changing code. LOGS=1 prints the page's console,
  * which is how SVG errors (for example a negative rect height) show up.
+ * INPUT_PROPS='{"framingDebug":true}' passes input props to the composition;
+ * with that flag every character logs where its head lands on screen (see
+ * src/gacy/engine/framing.ts), and `tools/framing-report.mjs` reads the log.
  *
  * remotion.config.ts does not apply to the Node APIs, so its settings
  * (rspack, Tailwind, the SwiftShader GL backend) are repeated here.
@@ -43,7 +46,8 @@ if (!serveUrl || !fs.existsSync(path.join(serveUrl, "index.html")) || process.en
 
 const chromiumOptions = { gl: "swangle" };
 const browser = await openBrowser("chrome", { chromiumOptions });
-const composition = await selectComposition({ serveUrl, id: compId, puppeteerInstance: browser });
+const inputProps = process.env.INPUT_PROPS ? JSON.parse(process.env.INPUT_PROPS) : {};
+const composition = await selectComposition({ serveUrl, id: compId, puppeteerInstance: browser, inputProps });
 const frames = framesStr.split(",").map(Number);
 const concurrency = 4;
 
@@ -61,6 +65,7 @@ const worker = async () => {
       imageFormat: "jpeg",
       jpegQuality: 82,
       puppeteerInstance: browser,
+      inputProps,
       overwrite: true,
       chromiumOptions,
       onBrowserLog: (log) => {

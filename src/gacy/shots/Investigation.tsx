@@ -58,8 +58,8 @@ const Mugshot: React.FC = () => (
 
 export const Station: React.FC = () => {
   const { t, dur } = useShot();
-  const det = walkBetween(t, 1.6, 3.8, 1400, 520);
-  const cam = { x: keys(t, [[0, 0], [dur, -120]]), y: -400, zoom: keys(t, [[0, 1.6], [dur, 2.0]], EASE.drift) };
+  const det = walkBetween(t, 1.6, 3.8, 1400, 240);
+  const cam = { x: keys(t, [[0, 0], [dur, -120]]), y: keys(t, [[0, -290], [dur, -275]]), zoom: keys(t, [[0, 1.6], [dur, 2.0]], EASE.drift) };
   return (
     <AbsoluteFill>
       <Stage cam={cam} handheld={2} t={t}>
@@ -117,7 +117,7 @@ export const NotebookShot: React.FC = () => {
 export const Cabinet: React.FC = () => {
   const { t, dur } = useShot();
   const open = ramp(t, 0.5, 1.3, EASE.out);
-  const cam = { x: keys(t, [[0, 950], [dur, 1020]]), y: -380, zoom: keys(t, [[0, 2.1], [dur, 2.4]], EASE.drift) };
+  const cam = { x: keys(t, [[0, 950], [dur, 1020]]), y: -320, zoom: keys(t, [[0, 2.1], [dur, 2.4]], EASE.drift) };
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t}>
@@ -168,7 +168,7 @@ export const Warrant: React.FC = () => {
   const { t, dur } = useShot();
   const sign = ramp(t, 1.1, 2.3, EASE.linear);
   const seal = ramp(t, 2.6, 2.8, EASE.out);
-  const cam = { x: keys(t, [[0, 0], [dur, 30]]), y: keys(t, [[0, 10], [dur, 40]]), zoom: keys(t, [[0, 2.5], [dur, 3.0]], EASE.drift) };
+  const cam = { x: keys(t, [[0, 0], [dur, 30]]), y: keys(t, [[0, -10], [dur, 5]]), zoom: keys(t, [[0, 2.5], [dur, 3.0]], EASE.drift) };
   return (
     <AbsoluteFill>
       <Stage cam={cam} t={t} bg="#120c08">
@@ -206,7 +206,8 @@ export const SearchHouse: React.FC = () => {
   const drawers = ramp(t, 0.2, 1.8, EASE.inOut);
   const shrug = ramp(t, 0.4, 0.8) * (1 - ramp(t, 1.4, 1.8));
   const crouch = ramp(t, 2.3, 3.0);
-  const cam = { x: keys(t, [[0, 300], [dur, 560]]), y: -320, zoom: keys(t, [[0, 1.45], [dur, 1.65]], EASE.drift) };
+  // From the detective to the officer at the wastebasket, which ends inside the frame.
+  const cam = { x: keys(t, [[0, 260], [dur, 725]]), y: -320, zoom: keys(t, [[0, 1.45], [dur, 1.65]], EASE.drift) };
   return (
     <AbsoluteFill>
       <Stage cam={cam} handheld={3} t={t}>
@@ -405,7 +406,8 @@ export const SmellMoment: React.FC = () => {
   const room: Light = { key: mix("#ffe8c8", "#b8c0c8", quiet * 0.6), ambient: "#1a1612", amb: lerp(0.14, 0.42, quiet), desat: quiet * 0.55 };
   const focus: Light = { key: "#ffe8c8", ambient: "#2a2018", amb: 0.14, desat: 0 };
   const cam = {
-    x: keys(t, [[0, 60], [1.6, 160], [3.4, 230], [5.6, LIVING.register.x - 30], [dur, LIVING.register.x]], EASE.inOut),
+    // at 3.4 the push has left Gacy, arm and cup included, outside the frame
+    x: keys(t, [[0, 60], [1.6, 160], [3.4, 330], [5.6, LIVING.register.x - 30], [dur, LIVING.register.x]], EASE.inOut),
     y: keys(t, [[0, -330], [1.6, -330], [3.4, -330], [5.6, -40], [dur, -10]], EASE.inOut),
     zoom: keys(t, [[0, 1.45], [1.6, 1.6], [3.4, 2.1], [5.6, 3.4], [dur, 3.9]], EASE.inOut),
   };
@@ -447,7 +449,7 @@ export const NeedToReturn: React.FC = () => {
   const { t, dur } = useShot();
   const walkOut = walkBetween(t, 0.2, 2.6, -400, 600);
   const look = ramp(t, 2.8, 3.6);
-  const cam = { x: keys(t, [[0, 400], [dur, 250]]), y: -420, zoom: keys(t, [[0, 0.46], [dur, 0.42]], EASE.drift) };
+  const cam = { x: keys(t, [[0, 440], [dur, 340]]), y: -330, zoom: keys(t, [[0, 0.46], [dur, 0.42]], EASE.drift) };
   const dusk: Light = { key: "#b8c0d8", ambient: "#141a26", amb: 0.36, desat: 0.3 };
   return (
     <AbsoluteFill>

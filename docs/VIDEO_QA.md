@@ -176,9 +176,58 @@ npx remotion render GacyDocumentary out/gacy-documentary-720p.mp4 --scale=0.6666
 | Sync | Cross-correlated with the source MP3 at 0–30 s, 300–330 s and 615–645 s: +42.7 ms in all three windows (correlation 0.981–0.984). The offset is constant across the whole film, so there is no drift. It is the AAC encoding delay described in section 2. |
 | Picture | One frame every 30 s decoded and checked against the shot list. Every frame shows the expected shot. Sampled once per second (mean brightness below 4 of 255), the only near-black frame is the fade up at 0 s. |
 
-## 7. Not covered
+## 7. Framing pass
 
-- **No 1080p render.** The film was rendered in full at 720p (section 6). At 1080p, expect the render to take longer than the 2 h 49 min it took at 720p.
+The 720p render (section 6) showed shots where the subject sat off centre, or where a head, a body or the set itself was cut by the frame edge in a way that looked like a mistake. This pass fixed the framing without a new full render. Every check below used stills.
+
+### Method
+
+- **Measurement.** With the input prop `framingDebug`, every character logs where its head lands on screen: centre, radius and feet, in pixels. People drawn inside a picture (a photo, a TV, a monitor, a poster) are excluded. `tools/framing-report.mjs` reads the log and lists four cases: a head crossing a frame edge; a head above the frame while the body is in it; a head just past a side edge while the shoulders are in it; and a foreground head at an edge (listed separately). Commands are in `docs/VIDEO_NOTES.md`.
+- **Head height.** For each shot, the height of the main head in each of the five stills, as a fraction of frame height. Medium shots of standing people were brought to about 0.35–0.5. Before the pass, many interiors sat at 0.55–0.7 because the camera was aimed too high.
+- **Visual review.** Contact sheets of every changed shot, then of all 100 shots on the final code.
+
+### What was fixed
+
+| Problem | Shots |
+| --- | --- |
+| Camera aimed too high: heads low in the frame, too much empty wall above | `party`, `crew`, `cell`, `release`, `parade`, `mirror`, `photo-op`, `path-diner`, `path-station`, `tells-mom`, `summer-job`, `cabinet`, `court-wide`, `defense`, `prosecution`, `knew-exactly`, `verdict`, `appeals`, `jury-room`, `handshake`, `saw-neighbor` |
+| The room above the crawl space filled 40 % of the frame, and the people standing in it were cut at the chest | `trenches`, `dig-begins`, `hatch`: reframed on the crawl space; the room above now shows only lower legs |
+| Searchers' heads touching the top of the frame; the second searcher cut by the edge | `first-find`, `more-finds`, `all-finds` |
+| The set ran out inside the frame | `mother-arrives`, `few-minutes`, `waiting` (black beyond the pharmacy's front wall: the camera now stays inside the store, and the floor runs under the wall); `search`, `smell-moment`, `station` and the kitchen at the end of `photo-op` showed black above the wall, because the frame was taller than the room. The shared room set now has a ceiling, which covers every interior built on it |
+| A person or a hand sliced by the frame edge in a held frame | `morning` (wide), `party` and `saw-host` (guests, picnic table), `big-party`, `hall` (foreground audience), `iowa` (counter worker), `conviction` (start of the crane), `handcuffs` (the hand now enters from outside the frame), `station` (the detective stopped just outside the frame; he now walks into it), `waiting` (a customer), `search` (an officer), `smell-moment` (Gacy's arm at the edge while the camera holds on the officer), `pogo-film` (guests), `mirror` (his arm at the start of the move: the move now starts with him and his reflection outside the frame, and the reflection's change to Pogo is tied to the camera position, so it still happens while his head hides it), `in-front` (the crane ended with Gacy cut at the knees and a neighbour at the chest; it now stops with both whole), `jury-room`, `court-wide`, `defense`, `prosecution`, `verdict` (front-bench spectators are now placed per shot; the judge in `defense` and the end jurors in `defense` and `prosecution` are clear of the edge; in `defense` the prosecutor's seat, which fell on the frame edge, is left empty) |
+| Subject pushed to one side, or the camera resting on an empty frame | `shift` (the camera paused mid-move on the shelf end with Robert at the edge; it is now one move, ending centred on the counter), `ordinary-house` (ends on the whole house over the crawl space), `search` (ends on the officer at the wastebasket, which is now in frame), `need-to-return`, `signs-map`, `final-archive` |
+| A prop cut by the frame edge | `appeals` and `cell` (the wall calendar), `jury-room` (the clock) |
+| Cards and files not centred | `eight-files`, `names`, `five-remain` (the push now ends on two blank cards, with no neighbouring card cut) |
+| Other | `warrant` (the document re-centred), `ordinary-street` (camera height, and the path of the mother and child), `thirty-three` (silhouette spacing), the kneeling searcher's pose |
+
+### Result
+
+- **Final check:** all 100 shots, five stills each (500 stills), on the final code. Shots changed while the check was running were rendered and reviewed again.
+- **Head height** (the largest head in frame, median over the five stills, on the 72 shots with people): 49 shots at 0.3–0.55 of frame height (0 is the top edge), 7 at 0.2–0.3 or 0.55–0.58, and none in the top fifth of the frame. The 16 with the head lower than 0.58 are wide shots with people in the lower part of the frame under a building or street (`descent`, `in-front`, `chicago-1942`, `big-party`, `pharmacy-night`, `river` and others), or shots with an audience in the foreground (`hall`, `screens`, `theater`).
+- **Frame edges:** the report on the final code lists 24 items. Each was checked on the stills and kept, for one of these reasons:
+  - People enter or leave the frame during a camera move (`driveway`, `iowa`, the start of `mirror`, `ordinary-house`, `station`, `search`, `all-finds`, `court-wide`, `prosecution`).
+  - A head just past the side edge where the stills show nothing of the person in frame; the check assumes an arm might reach in (the first frames of `in-front` and `search`).
+  - The legs of people standing in the room above the crawl space (`trenches`, `smell`, `smell-moment`, `hatch`, `dig-begins`, and the floor in `descent`).
+  - A crowd that runs past the frame edge (`prison-night`, and the lit windows at the bottom of the title in `descent`).
+  - Foreground heads in over-the-shoulder shots (`screens`, `mirror`, `photo-op`).
+- **Browser console:** apart from the framing log itself, nothing was logged while the stills rendered.
+- **Static checks:** `npx tsc` and `npx eslint src/gacy` pass.
+
+### Kept on purpose
+
+- **Wipes.** Foreground objects that cross the lens at a cut (a van, a doorway, a silhouette, a sheet of paper) fill part of the frame for a few frames by design.
+- **Legs in the room above.** In the crawl-space framing, anyone standing in the room above shows only the lower legs. That framing is reused for the police dig.
+- **Motion.** In pans and push-ins, people enter and leave through the frame edges during the move. The checks were applied to the held frames at the start and end of each move.
+- **Over-the-shoulder and close-up framing.** The mirror, the newspaper photo, the court sketch and the close-ups of hands and photos crop on purpose.
+
+### Not re-rendered
+
+`out/gacy-documentary-720p.mp4` (section 6) was rendered before this pass and does not include these fixes. Render again with the commands in `docs/VIDEO_NOTES.md`.
+
+## 8. Not covered
+
+- **No 1080p render.** The film was rendered in full at 720p (section 6), before the framing pass (section 7). At 1080p, expect the render to take longer than the 2 h 49 min it took at 720p.
+- **No full render after the framing pass.** The framing fixes were checked on stills only.
 - **No human viewing.** Pacing, how the voice sits against the picture, and the feel of the transitions need one watch-through by a person.
 - **Display.** Night, crawl-space and prison shots are dark by design. They were judged on stills, not on a calibrated display.
 - **Facts.** The count of unidentified victims (five) and the three names follow the script. Identifications have continued since 2011, so check the current count with the Cook County Sheriff's Office before publishing.

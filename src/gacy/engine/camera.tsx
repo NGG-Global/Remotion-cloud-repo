@@ -35,6 +35,19 @@ const CamCtx = createContext<Cam>({ x: 0, y: -300, zoom: 1 });
 
 export const useCam = (): Cam => useContext(CamCtx);
 
+/**
+ * Depth of the enclosing <Plane>, or null outside one (or inside a picture
+ * within the picture: a photo, a TV screen). Only the framing check reads it.
+ */
+const PlaneDepthCtx = createContext<number | null>(null);
+
+export const usePlaneDepth = (): number | null => useContext(PlaneDepthCtx);
+
+/** Marks content drawn inside a picture (photo, screen, poster) as off-stage. */
+export const OffStage: React.FC<{ readonly children: React.ReactNode }> = ({ children }) => (
+  <PlaneDepthCtx.Provider value={null}>{children}</PlaneDepthCtx.Provider>
+);
+
 /** Scale of a plane `d` metres behind the character plane. 0 when behind the lens. */
 export const planeScale = (cam: Cam, d: number): number => {
   const dist = FOCAL_M / cam.zoom + d;
@@ -109,7 +122,7 @@ export const Plane: React.FC<{
       opacity={opacity}
       transform={`translate(960 ${540 + (cam.shiftY ?? 0)}) scale(${s}) translate(${-cam.x} ${-cam.y})`}
     >
-      {children}
+      <PlaneDepthCtx.Provider value={d}>{children}</PlaneDepthCtx.Provider>
     </g>
   );
 };

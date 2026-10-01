@@ -150,6 +150,10 @@ The draft's code is kept in the tree, unchanged, under `src/gacy/legacy/` for be
 - **Victims.** No victim has a face. Missing-person flyers carry a blank silhouette, the "33" beat is anonymous silhouettes, and the unidentified victims appear only as files with a blank card. A card warms when a name is typed on it.
 - **Violence.** No murder, no body and no execution is shown. The crawl space shows soil, trenches and markers. The execution is a candle vigil outside the prison wall on 10 May 1994.
 
+### Framing pass
+
+The first full render (720p) showed framing faults: subjects off centre; heads, arms and bodies cut by the frame edge in held frames; the room above the crawl space cutting people at the chest; and sets ending inside the frame (the pharmacy's front wall, and black above the wall in interiors taller than the room). 53 shots were reframed, and the shared interior set now has a ceiling. Two home-movie clips near the end (`saw-ordinary`, `saw-employer`) replay changed shots and inherit their fixes. A debug mode now logs where every character's head lands on screen, and `tools/framing-report.mjs` lists the cut heads. The method, the shots changed and the checks are in `docs/VIDEO_QA.md`, section 7. The 720p file rendered before this pass does not include the fixes.
+
 ### Limitations
 
 - **Illustration, not reconstruction.** Sets, floor plans, the hatch position, the police-car livery, the courtroom, the archive, the lab and every face are illustrative. None of them is based on a photograph or a record. The 2011 investigator is a composite character.

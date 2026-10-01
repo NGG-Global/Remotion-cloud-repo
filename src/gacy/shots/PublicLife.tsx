@@ -86,7 +86,7 @@ export const Parade: React.FC = () => {
   const reach2 = reachAngles(pol.near.shoulder, { x: 118, y: -205 }, pol.torsoAngle, pol.dims.upper, pol.dims.fore);
   const cam = {
     x: keys(t, [[0, -1600], [2.2, 200], [dur, 400]], EASE.inOut),
-    y: keys(t, [[0, -560], [dur, -480]]),
+    y: keys(t, [[0, -360], [dur, -270]]),
     zoom: keys(t, [[0, 0.75], [2.2, 1.05], [dur, 1.2]], EASE.inOut),
   };
   const fl = flashAmount(t, 3.1);
@@ -135,17 +135,21 @@ export const BigParty: React.FC = () => <BackyardParty wide />;
 
 // ------------------------------------------------------------ the mirror
 
+/** Camera x at which his head is over the reflection (where the move used to be at 2.2 s). */
+const SWITCH_X = -113;
+
 export const Mirror: React.FC = () => {
   const { t } = useShot();
   const warm: Light = { key: "#ffe0b0", ambient: "#1c140e", amb: 0.14 };
-  // The camera crosses behind him. His head passes over the glass at about
-  // 2.2 s; the reflection finishes becoming Pogo while it is hidden.
+  // The camera crosses behind him, starting with him and his reflection
+  // both outside the frame. The reflection becomes Pogo at the camera position
+  // where his head covers it (SWITCH_X, about 2.4 s), so the change is never seen.
   const cam = {
-    x: keys(t, [[0, -380], [4.6, 460], [6.2, 120], [9.3, 42]], EASE.inOut),
-    y: keys(t, [[0, -300], [4.6, -300], [6.2, -290], [9.3, -242]], EASE.inOut),
+    x: keys(t, [[0, -480], [4.6, 200], [6.2, 110], [9.3, 42]], EASE.inOut),
+    y: keys(t, [[0, -265], [4.6, -265], [6.2, -255], [9.3, -242]], EASE.inOut),
     zoom: keys(t, [[0, 2.3], [4.6, 2.4], [6.2, 2.8], [9.3, 7.2]], EASE.inOut),
   };
-  const full = t > 2.2;
+  const full = cam.x >= SWITCH_X;
   const paint = ramp(t, 0.3, 2.0);
   const seated = pose({ ...SIT, nearUpper: 120, nearFore: 128, farUpper: 40, farFore: 70 });
   return (
@@ -186,7 +190,7 @@ export const PhotoOp: React.FC = () => {
   const inPaper = t > 3.1;
   const cam = inPaper
     ? { x: keys(t, [[3.1, 150], [4.6, 150], [6, 60]]), y: keys(t, [[3.1, -250], [4.6, -250], [6, -300]]), zoom: keys(t, [[3.1, 6.2], [4.6, 6.0], [6, 2.2]], EASE.inOut) }
-    : { x: keys(t, [[0, -200], [3.1, 0]]), y: -470, zoom: keys(t, [[0, 1.2], [3.1, 1.35]]) };
+    : { x: keys(t, [[0, -60], [3.1, 0]]), y: -280, zoom: keys(t, [[0, 1.2], [3.1, 1.35]]) };
   const pogoPose = idle(pose({ smile: 1, nearUpper: 150, nearFore: 30 + Math.sin(t * 7) * 18, turn: -0.5 }), t, 2);
   const turnPage = ramp(t, 4.8, 5.6, EASE.inOut);
   const breakfast: Light = { key: "#fff4e0", ambient: "#4a4038", amb: 0.08 };
@@ -215,8 +219,8 @@ export const PhotoOp: React.FC = () => {
             <Person x={0} look={POGO} light={L} pose={pogoPose} />
             <Person x={220} look={NEIGHBORS[1]} light={L} facing={-1} pose={idle(pose({ smile: 1, turn: -0.4 }), t, 7)} />
           </Plane>
-          <Plane d={-3.2}>
-            <Person x={-800} look={NEIGHBORS[2]} light={{ ...L, amb: 0.5 }} pose={idle(pose({ nearUpper: 70, nearFore: 60, farUpper: 70, farFore: 60, neck: 6 }), t, 8)} farHold={<PressCamera flash={fl} light={L} />} />
+          <Plane d={-1.6}>
+            <Person x={-480} look={NEIGHBORS[2]} light={{ ...L, amb: 0.5 }} pose={idle(pose({ nearUpper: 70, nearFore: 60, farUpper: 70, farFore: 60, neck: 6 }), t, 8)} farHold={<PressCamera flash={fl} light={L} />} />
           </Plane>
         </Stage>
       ) : (
