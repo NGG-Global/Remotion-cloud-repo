@@ -58,7 +58,13 @@ jobs:
         run: |
           set -euo pipefail
           comp="${{ inputs.composition }}"
-          if [ "${{ inputs.quality }}" = "master" ]; then
+          if [ "$comp" = "TinyTempoTeaser" ]; then
+            # The teaser needs Chrome's default GL backend for speed and the
+            # master audio remuxed for exact sync; see the README.
+            outfile="out/${comp}.mp4"
+            npm run render:teaser
+            tools/remux-audio.sh out/tiny-tempo-teaser.mp4 public/audio/tiny-tempo-home.wav "$outfile"
+          elif [ "${{ inputs.quality }}" = "master" ]; then
             outfile="out/${comp}-master.mov"
             npm run render:master -- "$comp" "$outfile"
           else
