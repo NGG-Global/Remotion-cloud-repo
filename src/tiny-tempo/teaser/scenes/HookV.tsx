@@ -32,7 +32,7 @@ export const HookV: React.FC = () => {
   const scale = 1.78 + tight * 0.16;
   const focusX = 1020 + tight * 60;
 
-  const watch = interpolate(time, [3.9, 4.15, 4.95, 5.2], [0, 1, 1, 0], {
+  const watch = interpolate(time, [3.9, 4.15, 5.15, 5.4], [0, 1, 1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -45,12 +45,13 @@ export const HookV: React.FC = () => {
 
       <AbsoluteFill
         style={{
-          alignItems: "center",
-          paddingTop: 300,
+          alignItems: "flex-start",
+          justifyContent: "flex-end",
+          padding: "0 0 190px 84px",
           opacity: watch,
         }}
       >
-        <StampType text="WATCH." size={120} delay={sec(3.95)} />
+        <StampType text="WATCH." size={120} delay={sec(3.95)} align="left" />
       </AbsoluteFill>
 
       {time >= CRASH ? (
