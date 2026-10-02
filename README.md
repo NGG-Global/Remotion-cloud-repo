@@ -457,7 +457,13 @@ Nunito) in `src/tiny-tempo/theme.ts`.
 
 ```bash
 npm run render:teaser
+tools/remux-audio.sh out/tiny-tempo-teaser.mp4 public/audio/tiny-tempo-home.wav out/tiny-tempo-teaser-final.mp4
 ```
+
+The second step swaps the rendered audio for the master. Remotion's mux
+leaves the AAC encoder's priming delay uncompensated, so its audio plays
+about 43 ms late; ffmpeg's muxer writes the edit list that fixes it. The
+script header explains how that was measured.
 
 That script passes `--gl=angle`. `remotion.config.ts` selects the SwiftShader
 backend for the documentary's three.js scenes, and on a machine without a GPU
