@@ -156,6 +156,33 @@ function playState() {
   };
 }
 
+/**
+ * `dashes` in the game's `ui/path.ts` walks a polyline in floating point, and at some
+ * scales the last sliver of a dash is smaller than the precision of the position it is
+ * added to: `along` stops moving and the loop pushes spans until V8 runs out of heap.
+ * The result plaque's threshold chips hit it at this viewport's scale (0.5611), which is
+ * what killed every recording that reached a plaque. Served with a one-line guard; the
+ * game itself is not touched here.
+ */
+async function guardDashes(route) {
+  const response = await route.fetch();
+  const source = await response.text();
+  const guarded = source.replace(
+    /cursor = \(cursor \+ \(end - along\)\) % period;\s*along = end;/,
+    "cursor = (cursor + (end - along)) % period;\n      if (end <= along) break;\n      along = end;",
+  );
+  if (guarded === source)
+    console.warn("  dashes guard: pattern not found in ui/path.ts");
+  await route.fulfill({
+    response,
+    body: guarded,
+    headers: {
+      ...response.headers(),
+      "content-length": String(Buffer.byteLength(guarded)),
+    },
+  });
+}
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function openPage(browser, seed) {
@@ -167,6 +194,7 @@ async function openPage(browser, seed) {
     console.error(`  page error: ${error.message}`),
   );
   await page.addInitScript(virtualAudioClock, seed);
+  await page.route(/\/src\/ui\/path\.ts/, guardDashes);
   await page.clock.install({ time: new Date("2026-10-03T12:00:00Z") });
   return page;
 }
