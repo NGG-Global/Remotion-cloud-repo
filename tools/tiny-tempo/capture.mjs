@@ -304,9 +304,9 @@ class Recorder {
     this.started = Date.now();
   }
   /**
-   * One frame, through the DevTools command itself. Playwright's `page.screenshot` held
-   * on to something per call under the fake clock and took the renderer down with a V8
-   * out-of-memory after about six hundred frames; the raw command does not.
+   * One frame, through the DevTools command itself. It replaced `page.screenshot` while
+   * a renderer crash was being chased; the crash turned out to be the game's `dashes`
+   * stall (see `guardDashes`), so either method should do.
    */
   async snap(path, clip) {
     if (!this.cdp)

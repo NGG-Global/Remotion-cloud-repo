@@ -2,32 +2,28 @@
 
 Three cuts of one edit, built from the game's own footage and its own title theme.
 
-| Composition ID | Frame | Length | For |
-| --- | --- | --- | --- |
-| `TinyTempoTrailer` | 1920×1080, 30 fps | 28.0 s (840 frames) | YouTube, store listing, press |
-| `TinyTempoTrailerVertical` | 1080×1920, 30 fps | 28.0 s (840 frames) | Shorts, Reels, TikTok |
-| `TinyTempoTeaser` | 1080×1920, 30 fps | 8.0 s (240 frames) | Social teasers |
+| Composition ID             | Frame             | Length              | For                           |
+| -------------------------- | ----------------- | ------------------- | ----------------------------- |
+| `TinyTempoTrailer`         | 1920×1080, 30 fps | 28.0 s (840 frames) | YouTube, store listing, press |
+| `TinyTempoTrailerVertical` | 1080×1920, 30 fps | 28.0 s (840 frames) | Shorts, Reels, TikTok         |
+| `TinyTempoTeaser`          | 1080×1920, 30 fps | 8.0 s (240 frames)  | Social teasers                |
 
 ## Status
 
-**The compositions are complete; the gameplay recordings are not yet in the repository.**
-`src/tiny-tempo-trailer/clipData.ts` is a labelled stub, and `public/tiny-tempo/clips/` is
-empty, so rendering any of the three compositions fails until the capture has been run and
-the manifest generated (the two commands under *How the gameplay was recorded*). The
-music, the fonts, the badge and the game's rendered one-shots are in place.
+All three cuts are rendered and reviewed frame by frame. The footage is in
+`public/tiny-tempo/clips/` and `clipData.ts` is generated from it.
 
-In the cloud container the capture crashed Chromium's renderer with a V8 out-of-memory
-after roughly 45–60 s of game time on a page, in three runs — first during level 1's
-plaque, then during the fast-forward of levels 20 and 28. The page's own JS heap, DOM
-counts and renderer RSS stay flat under the same scenario in isolation, and the same level
-runs for 100 s on a real clock without incident, so the cause has not been pinned down; it
-appeared only with three browsers recording at 3× device scale. Things to try on a machine
-with a GPU: `WORKERS=1`, `DSF=2`, and dropping `--use-gl=swiftshader` from the launch
-arguments in `tools/tiny-tempo/capture.mjs` so Chromium uses the host GPU.
+Two faults in this repository were found on the way, and both affect any composition here,
+not only this one.
 
-Until the clips exist, the crops in `src/tiny-tempo-trailer/shots.ts` (`REGION`) and the
-`at` offsets of the menu and map shots are first estimates from a frame of each screen and
-need one review pass against the recordings. Nothing has been rendered or reviewed.
+- **A bare `import "./fonts"` is dropped by the bundler.** `package.json` declares
+  `"sideEffects": ["*.css"]`, so a TypeScript module imported only for what it does on load
+  is tree-shaken out, and every word renders in the browser's fallback serif. The trailer
+  loads its faces through `useTrailerFonts()`, which holds each frame until both are in.
+  `src/tiny-tempo/TinyTempoAd.tsx` still uses the bare import and is affected.
+- **Tailwind's preflight caps every `img` at `max-width: 100%`.** `OffthreadVideo` renders
+  an `img`, so a recording drawn wider than its box — any push-in — was shrunk and left
+  bare paper at the edge. `GameClip` sets `maxWidth: "none"`.
 
 ## Render
 
@@ -42,7 +38,18 @@ npm run render:hq -- TinyTempoTrailer out/tiny-tempo-trailer.mp4
 
 # One frame
 npx remotion still TinyTempoTrailer out/frame.png --frame=600
+
+# Review stills of several frames from one bundle (scale 0.5 unless SCALE is set)
+node tools/tiny-tempo/stills.mjs out/stills TinyTempoTrailer:30,445 TinyTempoTeaser:150
+
+# Delivery loudness: -16 LUFS, true peaks under -1 dBTP; the picture is copied untouched
+node tools/tiny-tempo/master-audio.mjs out/tiny-tempo-trailer.mp4
 ```
+
+The render keeps the title theme at the level it was delivered, about -21.5 LUFS. Platforms
+turn loud uploads down but not quiet ones up, so the delivery files are the `-master.mp4`
+versions: +5.7 dB of gain, with a limiter that takes about 3 dB off the few transients the
+gain pushes over. Each 28 s cut takes about 20 minutes to render on 4 cores.
 
 On a machine without Remotion's own Chrome, `remotion.config.ts` falls back to Playwright's
 headless shell when it is present at the path written there; elsewhere pass
@@ -52,15 +59,15 @@ headless shell when it is present at the path written there; elsewhere pass
 
 Everything on screen is the game or Google's badge; nothing is drawn to look like the game.
 
-| Asset | Origin | In this repository |
-| --- | --- | --- |
-| Music | `HOME_PAGE.wav`, the game's title theme as delivered (48 kHz, 24-bit, 64.000 s seamless loop) | `public/tiny-tempo/audio/home-page.wav` — the same audio at 16-bit, untrimmed |
-| Gameplay | Tiny Tempo's dev build (`TinyTempo` checkout, `main` at b3a44fe), recorded by `tools/tiny-tempo/capture.mjs` | `public/tiny-tempo/clips/*.mp4`, with `*.json` sidecars of the game's own event times |
-| Title screen | The game's `MenuScene`, recorded with its controls hidden | `public/tiny-tempo/clips/menuClean.mp4` |
-| Act tiles (mosaic) | The game's website gallery, `legal/acts/{bongos,popcorn,barber,slushy,bell,doorbell}.mp4` at 4575832, recorded by the game's own `scripts/capture-acts.mjs` (432×532, 8 s, one task each, chrome hidden) | `public/tiny-tempo/clips/tile*.mp4`, byte-identical copies |
-| Fonts | Fredoka and Nunito, the game's faces (OFL, from the game's `public/fonts/`) | `public/fonts/fredoka`, `public/fonts/nunito` |
-| Google Play badge | Google's official `en_badge_web_generic.png` from play.google.com/intl/en_us/badges/ | `public/tiny-tempo/google-play-badge.png`, unmodified |
-| App icon | `assets/icon/tiny-tempo-1024.jpg` from the game | `public/tiny-tempo/icon-1024.jpg` (reference only; not placed in the cut) |
+| Asset              | Origin                                                                                                                                                                                                   | In this repository                                                                    |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Music              | `HOME_PAGE.wav`, the game's title theme as delivered (48 kHz, 24-bit, 64.000 s seamless loop)                                                                                                            | `public/tiny-tempo/audio/home-page.wav` — the same audio at 16-bit, untrimmed         |
+| Gameplay           | Tiny Tempo's dev build (`TinyTempo` checkout, `main` at b3a44fe), recorded by `tools/tiny-tempo/capture.mjs`                                                                                             | `public/tiny-tempo/clips/*.mp4`, with `*.json` sidecars of the game's own event times |
+| Title screen       | The game's `MenuScene`, recorded with its controls hidden                                                                                                                                                | `public/tiny-tempo/clips/menuClean.mp4`                                               |
+| Act tiles (mosaic) | The game's website gallery, `legal/acts/{bongos,popcorn,barber,slushy,bell,doorbell}.mp4` at 4575832, recorded by the game's own `scripts/capture-acts.mjs` (432×532, 8 s, one task each, chrome hidden) | `public/tiny-tempo/clips/tile*.mp4`, byte-identical copies                            |
+| Fonts              | Fredoka and Nunito, the game's faces (OFL, from the game's `public/fonts/`)                                                                                                                              | `public/fonts/fredoka`, `public/fonts/nunito`                                         |
+| Google Play badge  | Google's official `en_badge_web_generic.png` from play.google.com/intl/en_us/badges/                                                                                                                     | `public/tiny-tempo/google-play-badge.png`, unmodified                                 |
+| App icon           | `assets/icon/tiny-tempo-1024.jpg` from the game                                                                                                                                                          | `public/tiny-tempo/icon-1024.jpg` (reference only; not placed in the cut)             |
 
 ### How the gameplay was recorded
 
@@ -77,17 +84,21 @@ clean round. Nothing is composited into the frames.
 Recorded at a 9:16 viewport (404×718 CSS px at 3×, so 1212×2154), where the game's logical
 box is exactly its 720×1280 design box.
 
-| Clip | What it is |
-| --- | --- |
-| `level1` | Level 1, Hammer & nail, 120 BPM: the whole level from the first count-in to its plaque |
-| `level5` | Level 5, Knife & tomato, 120 BPM: the first two tasks |
-| `level9` | Level 9, Scissors & paper: tasks 4–5 at 125–126 BPM, tier 2 |
-| `level19` | Level 19, DJ scratch: tasks 5–6 at 133–136 BPM, eight- and nine-hit phrases |
-| `level28` | Level 28, Bug & shoe (second look): tasks 5–6 at 136–140 BPM, tier 4 |
-| `level20` | Level 20, Trombone, the Pavement area's finale: its last two tasks at 134–138 BPM, then the plaque |
-| `map` | The road at a seeded save (levels 1–19 cleared, 56 stars): the level-20 finale stage |
-| `menu`, `menuClean` | The title screen, with and without its controls |
-| `plaque20` | Level 20's result as a flawless clear: the Area complete plaque, through the debug panel's "Mastery result", which calls the same `showSummary` a played level reaches |
+| Clip                | What it is                                                                                                                                                                                                                                          |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `level1`            | Level 1, Hammer & nail, 120 BPM: the whole level from the first count-in to its plaque                                                                                                                                                              |
+| `level5`            | Level 5, Knife & tomato, 120 BPM: its first three tasks                                                                                                                                                                                             |
+| `level9`            | Level 9, Scissors & paper: task 4 at 125 BPM, then task 5                                                                                                                                                                                           |
+| `level19`           | Level 19, DJ scratch: task 4 at 130 BPM, then task 5 at 133                                                                                                                                                                                         |
+| `level20`           | Level 20, Trombone, the Pavement area's finale: task 4 at 131 BPM, then task 5 at 134                                                                                                                                                               |
+| `level28`           | Level 28, Bug & shoe (second look): task 4 at 132 BPM, nine hits over two bars, then task 5 at 136                                                                                                                                                  |
+| `plaque20`          | Level 20's result as a flawless clear — the Area complete plaque — through the debug panel's "Mastery result", which calls the same `showSummary` a played level reaches; raised after the first demonstration, so the finale's title card has left |
+| `map`               | The road at a seeded save (levels 1–19 cleared, 56 stars): the level-20 finale stage                                                                                                                                                                |
+| `menu`, `menuClean` | The title screen, with and without its controls                                                                                                                                                                                                     |
+
+The recorder starts on the first task it can reach a moment ahead of, which was sometimes a
+task later than asked for; every shot reads the task its recording holds (`first()` in
+`shots.ts`), so the trailers follow what was recorded, not what was requested.
 
 The mosaic uses the website's existing act tiles rather than new recordings: at the size
 a mosaic tile is drawn (about 480 px wide on the 16:9 canvas, 460 on the 9:16) they are
@@ -98,9 +109,24 @@ Regenerate with the game checked out beside this repository:
 ```bash
 cd ../TinyTempo && npm ci && npm i --no-save playwright
 cd ../Remotion-cloud-repo
-TINY_TEMPO=../TinyTempo node tools/tiny-tempo/capture.mjs      # all shots, ~1 h on 4 cores
+TINY_TEMPO=../TinyTempo node tools/tiny-tempo/capture.mjs      # all shots, about 1 h on 4 cores
 node tools/tiny-tempo/manifest.mjs                               # -> src/tiny-tempo-trailer/clipData.ts
 ```
+
+Three things the recorder works around, each of which cost a run to find:
+
+- **The game's `dashes()` can loop for ever at this viewport's scale.** In `ui/path.ts` the
+  last sliver of a dash can fall under the floating-point precision of the position it is
+  added to; `along` stops moving and the loop pushes spans until V8 runs out of heap. The
+  result plaque's threshold chips call it, so every recording that reached a plaque
+  crashed the renderer. The recorder serves `ui/path.ts` with a one-line guard; the game
+  itself is untouched, and the same stall is presumably reachable on a device whose scale
+  lands on the same values. Worth a fix in the game.
+- **Frames go through `Page.captureScreenshot`.** The switch from Playwright's
+  `page.screenshot` was made while chasing the crash above, before its cause was found;
+  `page.screenshot` was never shown to be at fault, and either should work.
+- **A task's plan can appear only a beat ahead of its demonstration**, under half a second
+  at 125 BPM, so the lead a shot waits for is set per shot (level 9's is 0.2 s).
 
 ## The music, and why the cut is where it is
 
@@ -125,19 +151,22 @@ the track, so those shots are short — one or two bars, starting on a downbeat.
 
 ## The edit
 
-| Bars | Wide (16:9) | Vertical (9:16) |
-| --- | --- | --- |
-| 1 | The hammer's demonstration, a 16:9 window on the act | Pushed in on the act and block |
-| 2 | The whole screen: three taps, three Perfects; WATCH. REMEMBER. TAP. strike on beats 2, 4 and the fill's downbeat | The same, words in the paper above the act |
-| 3–5 | One whole loop on the tomato — shown, copied, the slice falls — then the next task starts; a chip says Watch, then Tap | Full screen |
-| 6 | Scissors at 125 BPM | Full screen |
-| 7 | DJ scratch: the turn block fills the frame | Pushed in |
-| 8 | Bug & shoe at 136 BPM, a tempo chip | Full screen |
-| 9 | Six more acts land one per eighth note | 2×3 |
-| 10 | The road: the finale stage, bunting, stars | Full screen |
-| 11 | The finale's last task at 138 BPM; HOW FAR / CAN YOU / KEEP UP? | Words above |
-| 12 | The plaque: medals, Area complete | Full screen |
-| 13–14 | The title screen itself; Available now, the badge, on bar 14 | Badge on the bench |
+| Bars  | Wide (16:9)                                                                                                                                          | Vertical (9:16)                                                                            |
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 1     | The hammer's demonstration, a 16:9 window on the act; WATCH. on beat 2, REMEMBER. on beat 4                                                          | The full screen, words in the paper above the act                                          |
+| 2     | The answer on the full screen, right of centre: three taps, three Perfects; TAP. on the downbeat                                                     | The same shot continuing                                                                   |
+| 3–5   | One whole loop on the tomato at 120 BPM — shown, copied, the slice falls, _Flawless!_ — a chip says Watch, then Tap; cut on the next task's downbeat | Full screen                                                                                |
+| 6     | Scissors & paper at 125 BPM                                                                                                                          | Full screen                                                                                |
+| 7     | DJ scratch at 130 BPM: the turn block fills the frame                                                                                                | Pushed in on deck and block                                                                |
+| 8     | Bug & shoe at 132 BPM, nine hits, a tempo chip                                                                                                       | Full screen                                                                                |
+| 9     | Six more acts land one per eighth note, 3×2                                                                                                          | 2×3                                                                                        |
+| 10    | The road: the level 20 finale stage                                                                                                                  | Full screen                                                                                |
+| 11    | The finale's task at 131 BPM; HOW FAR / CAN YOU / KEEP UP?                                                                                           | Two lines between the bunting and the act                                                  |
+| 12    | The plaque drops, three medals strike, Area complete                                                                                                 | Full screen                                                                                |
+| 13–14 | The title screen as a slab; Available now and the badge on bar 14                                                                                    | The full title screen; the CTA on the bench, above the bottom fifth Shorts and Reels cover |
+
+The teaser is bars 8–11 of the track: the hammer's demonstration under the fill (WATCH.),
+the answer on the drop (TAP.), the bug at 132 BPM (KEEP UP.), then the title and the badge.
 
 Motion comes from the recordings. The trailer adds four things, all from the game's own
 vocabulary: the stamped word (how the game strikes "3, 2, 1, Go!"), the cream chip (its
