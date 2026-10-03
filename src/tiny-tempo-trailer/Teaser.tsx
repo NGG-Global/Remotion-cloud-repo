@@ -10,7 +10,7 @@ import { Stamp } from "./components/Stamp";
 import { bars, beats, fadeOutVolume, FPS, inBars, MUSIC_FILE } from "./music";
 import { CLIPS, demoAt, hitFrames, REGION, responseAt, first } from "./shots";
 import { SPACE, TYPE } from "./theme";
-import "../tiny-tempo/fonts";
+import { useTrailerFonts } from "./fonts";
 
 /**
  * The eight-second 9:16 teaser: four bars from the fill at bar 8 into the drop. The
@@ -55,6 +55,7 @@ const Words: React.FC<{ readonly children: React.ReactNode }> = ({
 );
 
 export const Teaser: React.FC = () => {
+  useTrailerFonts();
   return (
     <AbsoluteFill style={{ backgroundColor: "#eee8d8" }}>
       <Audio

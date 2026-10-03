@@ -20,7 +20,7 @@ import {
   first,
 } from "./shots";
 import { SPACE, TYPE } from "./theme";
-import "../tiny-tempo/fonts";
+import { useTrailerFonts } from "./fonts";
 
 /**
  * The 9:16 launch trailer. Same music, same fourteen bars, same order of ideas as the
@@ -84,6 +84,7 @@ const WordColumn: React.FC<{ readonly children: React.ReactNode }> = ({
 );
 
 export const TrailerVertical: React.FC = () => {
+  useTrailerFonts();
   return (
     <AbsoluteFill style={{ backgroundColor: "#eee8d8" }}>
       <Audio

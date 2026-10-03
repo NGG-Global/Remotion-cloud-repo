@@ -20,7 +20,7 @@ import {
   first,
 } from "./shots";
 import { SPACE, TYPE } from "./theme";
-import "../tiny-tempo/fonts";
+import { useTrailerFonts } from "./fonts";
 
 /**
  * The 16:9 launch trailer: fourteen bars of the title theme from its bar 7 — the two-bar
@@ -94,6 +94,7 @@ const MOSAIC_TILES = [
 ].map((clip) => ({ clip, at: 0 }));
 
 export const Trailer: React.FC = () => {
+  useTrailerFonts();
   return (
     <AbsoluteFill style={{ backgroundColor: "#eee8d8" }}>
       <Audio
