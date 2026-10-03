@@ -79,7 +79,7 @@ export const Teaser: React.FC = () => {
           clip={CLIPS.level1}
           at={demoAt(CLIPS.level1, first(CLIPS.level1))}
           box={FULL}
-          crop={REGION.playTall}
+          crop={REGION.hookTall}
         />
         <Words>
           <Stamp

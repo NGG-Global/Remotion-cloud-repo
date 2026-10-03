@@ -64,16 +64,23 @@ const MOSAIC_TILES = [
   CLIPS.tileDoorbell,
 ].map((clip) => ({ clip, at: 0 }));
 
-const WordColumn: React.FC<{ readonly children: React.ReactNode }> = ({
-  children,
-}) => (
+/**
+ * Between a finale's bunting and its act: the headroom is the bunting's, and the paper
+ * under the block is where Shorts and Reels lay their captions.
+ */
+const UNDER_BUNTING = { top: 322, height: 205 };
+
+const WordColumn: React.FC<{
+  readonly children: React.ReactNode;
+  readonly zone?: { readonly top: number; readonly height: number };
+}> = ({ children, zone = HEADROOM }) => (
   <div
     style={{
       position: "absolute",
       left: G,
       right: G,
-      top: HEADROOM.top,
-      height: HEADROOM.height,
+      top: zone.top,
+      height: zone.height,
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
@@ -115,7 +122,7 @@ export const TrailerVertical: React.FC = () => {
           clip={CLIPS.level1}
           at={demoAt(CLIPS.level1, first(CLIPS.level1))}
           box={FULL}
-          crop={REGION.playTall}
+          crop={REGION.hookTall}
         />
       </Sequence>
       <Sequence
@@ -270,29 +277,21 @@ export const TrailerVertical: React.FC = () => {
           at={responseAt(CLIPS.level20, first(CLIPS.level20))}
           box={FULL}
         />
-        <WordColumn>
-          <div style={{ height: TYPE.stampTall * 0.86 }}>
+        <WordColumn zone={UNDER_BUNTING}>
+          <div style={{ height: TYPE.stampTall * 0.78 }}>
             <Stamp
-              text="HOW FAR"
-              size={TYPE.stampTall * 0.8}
+              text="HOW FAR CAN"
+              size={TYPE.stampTall * 0.72}
               at={0}
               lean={-1}
             />
           </div>
-          <div style={{ height: TYPE.stampTall * 0.86 }}>
+          <div style={{ height: TYPE.stampTall * 0.78 }}>
             <Stamp
-              text="CAN YOU"
-              size={TYPE.stampTall * 0.8}
-              at={beats(0.5)}
-              lean={1}
-            />
-          </div>
-          <div style={{ height: TYPE.stampTall * 0.86 }}>
-            <Stamp
-              text="KEEP UP?"
-              size={TYPE.stampTall * 0.8}
+              text="YOU KEEP UP?"
+              size={TYPE.stampTall * 0.72}
               at={beats(1)}
-              lean={-1}
+              lean={1}
             />
           </div>
         </WordColumn>

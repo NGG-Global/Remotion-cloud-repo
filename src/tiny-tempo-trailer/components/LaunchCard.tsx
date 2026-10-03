@@ -47,7 +47,9 @@ export const LaunchCard: React.FC<LaunchCardProps> = ({
             position: "absolute",
             left: 0,
             right: 0,
-            top: height * 0.735,
+            // On the bench, where the Play block stood, and above the bottom fifth that
+            // Shorts and Reels cover with captions and buttons.
+            top: height * 0.68,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",

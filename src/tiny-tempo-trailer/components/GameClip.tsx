@@ -85,6 +85,10 @@ export const GameClip: React.FC<GameClipProps> = ({
           top,
           width: clip.width * s,
           height: clip.height * s,
+          // Tailwind's preflight caps every img at its container's width, which shrank
+          // any shot pushed in past its own box.
+          maxWidth: "none",
+          maxHeight: "none",
         }}
       />
     </div>

@@ -506,6 +506,12 @@ const PROGRESS = {
 const masteryPlaque = (level) => async (page, origin, dir) => {
   // The preview needs a round under way: it replaces the live one with a flawless result.
   await started(page, origin, level);
+  // A finale's title card is on stage until half a beat before the first demonstration;
+  // a result raised under it would show the two overlapping, which play never does.
+  await new Recorder(page, "wait").skip(
+    (s) => s.plan && s.now >= s.plan.demo + 0.1,
+    20000,
+  );
   const clicked = await page.evaluate(() => {
     const button = [...document.querySelectorAll("button")].find(
       (b) => b.textContent === "Mastery result",
