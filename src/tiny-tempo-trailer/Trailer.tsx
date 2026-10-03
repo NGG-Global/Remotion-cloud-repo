@@ -78,6 +78,12 @@ const SIDE = { left: SPACE.gutterWide, width: PHONE.x - SPACE.gutterWide * 2 };
  * Where the phone stands when the shot carries words: right of centre, so a stamped
  * line as long as "REMEMBER." has the left half of the canvas to itself.
  */
+/**
+ * The hook's words sit in the top-left corner, the one part of the opening shot the
+ * hammer never reaches, at a size that keeps "REMEMBER." left of its head even while
+ * the stamp's landing overshoots.
+ */
+const HOOK_WORD = 104;
 const PHONE_RIGHT = { ...PHONE, x: W - 220 - PHONE.w };
 const WORDS = {
   left: SPACE.gutterWide,
@@ -147,32 +153,20 @@ export const Trailer: React.FC = () => {
           style={{
             position: "absolute",
             left: WORDS.left,
-            top: 0,
-            bottom: 0,
+            top: 90,
             width: WORDS.width,
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
           }}
         >
-          <div style={{ height: TYPE.stampWide * 1.08 }}>
-            <Stamp
-              text="WATCH."
-              size={TYPE.stampWide}
-              at={beats(1)}
-              lean={-1}
-            />
+          <div style={{ height: HOOK_WORD * 1.08 }}>
+            <Stamp text="WATCH." size={HOOK_WORD} at={beats(1)} lean={-1} />
           </div>
-          <div style={{ height: TYPE.stampWide * 1.08 }}>
-            <Stamp
-              text="REMEMBER."
-              size={TYPE.stampWide}
-              at={beats(3)}
-              lean={1}
-            />
+          <div style={{ height: HOOK_WORD * 1.08 }}>
+            <Stamp text="REMEMBER." size={HOOK_WORD} at={beats(3)} lean={1} />
           </div>
-          <div style={{ height: TYPE.stampWide * 1.08 }}>
-            <Stamp text="TAP." size={TYPE.stampWide} at={beats(4)} lean={-1} />
+          <div style={{ height: HOOK_WORD * 1.08 }}>
+            <Stamp text="TAP." size={HOOK_WORD} at={beats(4)} lean={-1} />
           </div>
         </div>
       </Sequence>
