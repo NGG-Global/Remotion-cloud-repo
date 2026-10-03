@@ -100,13 +100,31 @@ function hideDebug() {
     "body > div:not(#game-root), button { display: none !important; }";
   document.head.append(style);
   const game = window.__PHASER_GAME__;
-  const hide = () => {
-    for (const scene of game.scene.getScenes(true))
-      scene.debug?.setVisible(false);
+  // The debug readout re-rasterises its Text every frame in debug mode — a new texture
+  // upload sixty times a second, which the software renderer did not survive for long.
+  // Hidden and frozen, it costs nothing.
+  const freeze = () => {
+    for (const scene of game.scene.getScenes(false)) {
+      if (scene.debug && !scene.debug.__frozen) {
+        scene.debug.setVisible(false);
+        scene.debug.setText = () => scene.debug;
+        scene.debug.__frozen = true;
+      }
+    }
   };
-  for (const scene of game.scene.getScenes(false))
-    scene.events.on("postupdate", hide);
-  game.events.on("postrender", hide);
+  freeze();
+  game.events.on("poststep", freeze);
+}
+
+/**
+ * Turns scene drawing off or on. While a shot is being fast-forwarded to, nothing has to
+ * be drawn: the round controller, the judge and the auto-player all run in `update`.
+ */
+function setDrawing(on) {
+  const game = window.__PHASER_GAME__;
+  const scenes = game.scene;
+  if (!scenes.__render) scenes.__render = scenes.render;
+  scenes.render = on ? scenes.__render : () => {};
 }
 
 function playState() {
@@ -332,15 +350,22 @@ class Recorder {
     }
     return state;
   }
-  /** Advances until `predicate`, in `stepMs` steps, taking no pictures. */
+  /** Advances until `predicate`, in `stepMs` steps, drawing nothing on the way. */
   async skip(predicate, maxMs, stepMs = 50) {
+    await this.page.evaluate(setDrawing, false);
     let state = await this.state();
-    for (let t = 0; t < maxMs && !predicate(state); t += stepMs) {
-      await this.page.clock.runFor(stepMs);
-      state = await this.state();
+    try {
+      for (let t = 0; t < maxMs && !predicate(state); t += stepMs) {
+        await this.page.clock.runFor(stepMs);
+        state = await this.state();
+      }
+    } finally {
+      await this.page.evaluate(setDrawing, true);
+      // One drawn frame, so the canvas is current before anything is shot.
+      await this.page.clock.runFor(17);
     }
     if (!predicate(state)) throw new Error("timed out skipping");
-    return state;
+    return this.state();
   }
   /** Lands exactly `before` seconds ahead of an instant on the game clock. */
   async landBefore(instantOf, before) {
