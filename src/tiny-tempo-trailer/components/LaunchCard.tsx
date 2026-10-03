@@ -34,7 +34,7 @@ export const LaunchCard: React.FC<LaunchCardProps> = ({
   if (layout === "tall") {
     // The whole title screen fills the canvas; the badge sits on the bench where the
     // Play block was, so the eye lands where the thumb would.
-    const badgeW = Math.round(width * 0.52);
+    const badgeW = Math.round(width * 0.46);
     return (
       <>
         <GameClip
@@ -49,7 +49,7 @@ export const LaunchCard: React.FC<LaunchCardProps> = ({
             right: 0,
             // On the bench, where the Play block stood, and above the bottom fifth that
             // Shorts and Reels cover with captions and buttons.
-            top: height * 0.68,
+            top: height * 0.705,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -80,30 +80,25 @@ export const LaunchCard: React.FC<LaunchCardProps> = ({
     );
   }
 
-  // Wide: the sign and the hammer, cut from the title screen above its bench, on the left;
-  // the words and the badge on the right, on the same paper.
+  // Wide: the title screen down to its bench — sign, beads, hammer, nail — standing as
+  // one slab like every other game shot in the cut; the words and the badge to its right.
   const signCrop = {
     x: 0,
     y: 0,
     w: menu.width,
-    h: Math.round(menu.height * 0.62),
+    h: Math.round(menu.height * 0.7),
   };
+  const slabH = height - 120;
   const signBox = {
-    x: Math.round(width * 0.06),
-    y: 0,
-    w: Math.round(width * 0.46),
-    h: height,
+    x: Math.round(width * 0.11),
+    y: 60,
+    w: Math.round((slabH * signCrop.w) / signCrop.h),
+    h: slabH,
   };
   const badgeW = Math.round(width * 0.24);
   return (
     <>
-      <GameClip
-        clip={menu}
-        at={at}
-        box={signBox}
-        crop={signCrop}
-        fit="contain"
-      />
+      <GameClip clip={menu} at={at} box={signBox} crop={signCrop} plate />
       <div
         style={{
           position: "absolute",

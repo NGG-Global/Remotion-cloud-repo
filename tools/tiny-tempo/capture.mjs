@@ -361,6 +361,8 @@ class Recorder {
   async skip(predicate, maxMs, stepMs = 50, realMs = 0) {
     let state = await this.state();
     for (let t = 0; t < maxMs && !predicate(state); t += stepMs) {
+      if (process.env.TRACE && t % 2000 === 0)
+        console.log(`    ${this.id} skip: now=${state.now?.toFixed(2)} task=${state.taskIndex} phase=${state.phase} plan=${state.plan?.id} demo=${state.plan?.demo?.toFixed(2)}`);
       await this.page.clock.runFor(stepMs);
       // Loading and decoding happen in real time, however fast the clock is stepped.
       if (realMs) await sleep(realMs);
@@ -534,7 +536,9 @@ const SHOTS = {
   plaque20: masteryPlaque(20),
   level28: fromTask(28, 3, 14),
   level19: fromTask(19, 3, 12),
-  level9: fromTask(9, 3, 12),
+  // At 122-126 BPM a task's plan appears two beats, under a second, ahead of its
+  // demonstration: a one-second lead would never be reached.
+  level9: fromTask(9, 3, 12, { pre: 0.5 }),
   level5: fromTask(5, 0, 13),
   menu: async (page, origin, dir) => {
     await boot(page, origin, "/?debug");

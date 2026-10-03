@@ -8,7 +8,7 @@ import { LaunchCard } from "./components/LaunchCard";
 import { Paper } from "./components/Paper";
 import { Stamp } from "./components/Stamp";
 import { bars, beats, fadeOutVolume, FPS, inBars, MUSIC_FILE } from "./music";
-import { CLIPS, demoAt, hitFrames, REGION, responseAt, first } from "./shots";
+import { CLIPS, demoAt, first, hitFrames, responseAt } from "./shots";
 import { SPACE, TYPE } from "./theme";
 import { useTrailerFonts } from "./fonts";
 
