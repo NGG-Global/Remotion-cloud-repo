@@ -106,11 +106,11 @@ export const Teaser: React.FC = () => {
       <Sequence
         from={T.hard}
         durationInFrames={T.launch - T.hard}
-        name="136 BPM"
+        name="132 BPM"
       >
         <GameClip
           clip={CLIPS.level28}
-          at={responseAt(CLIPS.level28, 4)}
+          at={responseAt(CLIPS.level28, 3)}
           box={FULL}
         />
         <Words>

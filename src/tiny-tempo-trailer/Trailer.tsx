@@ -10,15 +10,7 @@ import { Mosaic } from "./components/Mosaic";
 import { Paper } from "./components/Paper";
 import { Stamp } from "./components/Stamp";
 import { bars, beats, fadeOutVolume, FPS, inBars, MUSIC_FILE } from "./music";
-import {
-  bpmOf,
-  CLIPS,
-  demoAt,
-  hitFrames,
-  REGION,
-  responseAt,
-  summaryAt,
-} from "./shots";
+import { bpmOf, CLIPS, demoAt, hitFrames, REGION, responseAt } from "./shots";
 import { SPACE, TYPE } from "./theme";
 import "../tiny-tempo/fonts";
 
@@ -214,7 +206,7 @@ export const Trailer: React.FC = () => {
       >
         <GameClip
           clip={CLIPS.level19}
-          at={responseAt(CLIPS.level19, 4)}
+          at={responseAt(CLIPS.level19, 3)}
           box={FULL}
           crop={REGION.blockWide}
         />
@@ -222,11 +214,11 @@ export const Trailer: React.FC = () => {
       <Sequence
         from={T.bug}
         durationInFrames={T.mosaic - T.bug}
-        name="Bug and shoe, 136 BPM"
+        name="Bug and shoe, 132 BPM"
       >
         <GameClip
           clip={CLIPS.level28}
-          at={responseAt(CLIPS.level28, 4)}
+          at={responseAt(CLIPS.level28, 3)}
           box={PHONE}
           plate
         />
@@ -242,7 +234,7 @@ export const Trailer: React.FC = () => {
           }}
         >
           <Chip
-            text={`${bpmOf(CLIPS.level28, 4)} BPM`}
+            text={`${bpmOf(CLIPS.level28, 3)} BPM`}
             at={0}
             tone="ink"
             size={TYPE.chip + 10}
@@ -274,11 +266,11 @@ export const Trailer: React.FC = () => {
       <Sequence
         from={T.finale}
         durationInFrames={T.plaque - T.finale}
-        name="Finale: trombone, 138 BPM"
+        name="Finale: trombone"
       >
         <GameClip
           clip={CLIPS.level20}
-          at={responseAt(CLIPS.level20, 5)}
+          at={responseAt(CLIPS.level20, 2)}
           box={PHONE}
           plate
         />
@@ -326,8 +318,8 @@ export const Trailer: React.FC = () => {
         name="Area complete"
       >
         <GameClip
-          clip={CLIPS.level20}
-          at={summaryAt(CLIPS.level20)}
+          clip={CLIPS.plaque20}
+          at={0.1}
           box={FULL}
           crop={REGION.plaqueWide}
         />

@@ -586,6 +586,16 @@ export const CLIP_DATA = {
     ],
     summaryAt: 20,
   } as ClipData,
+  plaque20: {
+    id: "plaque20",
+    file: "tiny-tempo/clips/plaque20.mp4",
+    width: 1212,
+    height: 2154,
+    frames: 270,
+    seconds: 9,
+    tasks: [],
+    summaryAt: 0,
+  } as ClipData,
   level28: {
     id: "level28",
     file: "tiny-tempo/clips/level28.mp4",

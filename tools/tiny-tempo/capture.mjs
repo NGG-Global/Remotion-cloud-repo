@@ -533,11 +533,36 @@ const PROGRESS = {
   ),
 };
 
+/**
+ * The result plaque of a flawless clear, straight from the debug panel's "Mastery result":
+ * the same `showSummary` a played level reaches, on a fresh page. On a finale level that
+ * is the Area complete plaque.
+ */
+const masteryPlaque = (level) => async (page, origin, dir) => {
+  // The preview needs a round under way: it replaces the live one with a flawless result.
+  await started(page, origin, level);
+  const clicked = await page.evaluate(() => {
+    const button = [...document.querySelectorAll("button")].find(
+      (b) => b.textContent === "Mastery result",
+    );
+    button?.click();
+    return Boolean(button);
+  });
+  if (!clicked) throw new Error("no Mastery result button");
+  const rec = new Recorder(page, dir);
+  await rec.skip((s) => s.summary, 10000, 20, 10);
+  await rec.shoot(9);
+  return rec;
+};
+
 const SHOTS = {
-  level20: fromTask(20, 4, 0, { toSummary: true }),
+  // A page survives about 45 s of game time here before the renderer dies (the cause was
+  // never found; see docs/TINY_TEMPO_TRAILER.md), so every shot is placed inside that.
   level1: wholeLevel(1),
-  level28: fromTask(28, 4, 14),
-  level19: fromTask(19, 4, 12),
+  level20: fromTask(20, 2, 12),
+  plaque20: masteryPlaque(20),
+  level28: fromTask(28, 3, 14),
+  level19: fromTask(19, 3, 12),
   level9: fromTask(9, 3, 12),
   level5: fromTask(5, 0, 13),
   menu: async (page, origin, dir) => {

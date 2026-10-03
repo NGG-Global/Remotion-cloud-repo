@@ -10,15 +10,7 @@ import { Mosaic } from "./components/Mosaic";
 import { Paper } from "./components/Paper";
 import { Stamp } from "./components/Stamp";
 import { bars, beats, fadeOutVolume, FPS, inBars, MUSIC_FILE } from "./music";
-import {
-  bpmOf,
-  CLIPS,
-  demoAt,
-  hitFrames,
-  REGION,
-  responseAt,
-  summaryAt,
-} from "./shots";
+import { bpmOf, CLIPS, demoAt, hitFrames, REGION, responseAt } from "./shots";
 import { SPACE, TYPE } from "./theme";
 import "../tiny-tempo/fonts";
 
@@ -199,7 +191,7 @@ export const TrailerVertical: React.FC = () => {
       >
         <GameClip
           clip={CLIPS.level19}
-          at={responseAt(CLIPS.level19, 4)}
+          at={responseAt(CLIPS.level19, 3)}
           box={FULL}
           crop={REGION.playTall}
         />
@@ -207,11 +199,11 @@ export const TrailerVertical: React.FC = () => {
       <Sequence
         from={T.bug}
         durationInFrames={T.mosaic - T.bug}
-        name="Bug and shoe, 136 BPM"
+        name="Bug and shoe, 132 BPM"
       >
         <GameClip
           clip={CLIPS.level28}
-          at={responseAt(CLIPS.level28, 4)}
+          at={responseAt(CLIPS.level28, 3)}
           box={FULL}
         />
         <div
@@ -225,7 +217,7 @@ export const TrailerVertical: React.FC = () => {
           }}
         >
           <Chip
-            text={`${bpmOf(CLIPS.level28, 4)} BPM`}
+            text={`${bpmOf(CLIPS.level28, 3)} BPM`}
             at={0}
             tone="ink"
             size={TYPE.chip + 14}
@@ -257,11 +249,11 @@ export const TrailerVertical: React.FC = () => {
       <Sequence
         from={T.finale}
         durationInFrames={T.plaque - T.finale}
-        name="Finale: trombone, 138 BPM"
+        name="Finale: trombone"
       >
         <GameClip
           clip={CLIPS.level20}
-          at={responseAt(CLIPS.level20, 5)}
+          at={responseAt(CLIPS.level20, 2)}
           box={FULL}
         />
         <WordColumn>
@@ -296,11 +288,7 @@ export const TrailerVertical: React.FC = () => {
         durationInFrames={T.launch - T.plaque}
         name="Area complete"
       >
-        <GameClip
-          clip={CLIPS.level20}
-          at={summaryAt(CLIPS.level20)}
-          box={FULL}
-        />
+        <GameClip clip={CLIPS.plaque20} at={0.1} box={FULL} />
       </Sequence>
 
       {/* Launch card: the title screen, full, and the badge on its bench. */}
