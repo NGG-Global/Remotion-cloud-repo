@@ -10,7 +10,15 @@ import { Mosaic } from "./components/Mosaic";
 import { Paper } from "./components/Paper";
 import { Stamp } from "./components/Stamp";
 import { bars, beats, fadeOutVolume, FPS, inBars, MUSIC_FILE } from "./music";
-import { bpmOf, CLIPS, demoAt, hitFrames, REGION, responseAt } from "./shots";
+import {
+  bpmOf,
+  CLIPS,
+  demoAt,
+  hitFrames,
+  REGION,
+  responseAt,
+  first,
+} from "./shots";
 import { SPACE, TYPE } from "./theme";
 import "../tiny-tempo/fonts";
 
@@ -87,12 +95,12 @@ export const TrailerVertical: React.FC = () => {
       {/* The hammer on its six beats, the knife on its own: the game's voices, under the music. */}
       <Hits
         src="tiny-tempo/sfx/hammer-hit.wav"
-        at={hitFrames(CLIPS.level1, 0, T.hookAct)}
+        at={hitFrames(CLIPS.level1, first(CLIPS.level1), T.hookAct)}
         volume={0.42}
       />
       <Hits
         src="tiny-tempo/sfx/tomato-action.wav"
-        at={hitFrames(CLIPS.level5, 0, T.teach)}
+        at={hitFrames(CLIPS.level5, first(CLIPS.level5), T.teach)}
         volume={0.34}
       />
 
@@ -104,7 +112,7 @@ export const TrailerVertical: React.FC = () => {
       >
         <GameClip
           clip={CLIPS.level1}
-          at={demoAt(CLIPS.level1, 0)}
+          at={demoAt(CLIPS.level1, first(CLIPS.level1))}
           box={FULL}
           crop={REGION.playTall}
         />
@@ -116,7 +124,7 @@ export const TrailerVertical: React.FC = () => {
       >
         <GameClip
           clip={CLIPS.level1}
-          at={responseAt(CLIPS.level1, 0)}
+          at={responseAt(CLIPS.level1, first(CLIPS.level1))}
           box={FULL}
         />
       </Sequence>
@@ -150,7 +158,11 @@ export const TrailerVertical: React.FC = () => {
         durationInFrames={T.paper - T.teach}
         name="Teach: knife and tomato"
       >
-        <GameClip clip={CLIPS.level5} at={demoAt(CLIPS.level5, 0)} box={FULL} />
+        <GameClip
+          clip={CLIPS.level5}
+          at={demoAt(CLIPS.level5, first(CLIPS.level5))}
+          box={FULL}
+        />
         <div
           style={{
             position: "absolute",
@@ -180,7 +192,7 @@ export const TrailerVertical: React.FC = () => {
       >
         <GameClip
           clip={CLIPS.level9}
-          at={responseAt(CLIPS.level9, 3)}
+          at={responseAt(CLIPS.level9, first(CLIPS.level9))}
           box={FULL}
         />
       </Sequence>
@@ -191,7 +203,7 @@ export const TrailerVertical: React.FC = () => {
       >
         <GameClip
           clip={CLIPS.level19}
-          at={responseAt(CLIPS.level19, 3)}
+          at={responseAt(CLIPS.level19, first(CLIPS.level19))}
           box={FULL}
           crop={REGION.playTall}
         />
@@ -203,7 +215,7 @@ export const TrailerVertical: React.FC = () => {
       >
         <GameClip
           clip={CLIPS.level28}
-          at={responseAt(CLIPS.level28, 3)}
+          at={responseAt(CLIPS.level28, first(CLIPS.level28))}
           box={FULL}
         />
         <div
@@ -217,7 +229,7 @@ export const TrailerVertical: React.FC = () => {
           }}
         >
           <Chip
-            text={`${bpmOf(CLIPS.level28, 3)} BPM`}
+            text={`${bpmOf(CLIPS.level28, first(CLIPS.level28))} BPM`}
             at={0}
             tone="ink"
             size={TYPE.chip + 14}
@@ -254,7 +266,7 @@ export const TrailerVertical: React.FC = () => {
       >
         <GameClip
           clip={CLIPS.level20}
-          at={responseAt(CLIPS.level20, 2)}
+          at={responseAt(CLIPS.level20, first(CLIPS.level20))}
           box={FULL}
         />
         <WordColumn>

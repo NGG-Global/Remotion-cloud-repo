@@ -8,7 +8,7 @@ import { LaunchCard } from "./components/LaunchCard";
 import { Paper } from "./components/Paper";
 import { Stamp } from "./components/Stamp";
 import { bars, beats, fadeOutVolume, FPS, inBars, MUSIC_FILE } from "./music";
-import { CLIPS, demoAt, hitFrames, REGION, responseAt } from "./shots";
+import { CLIPS, demoAt, hitFrames, REGION, responseAt, first } from "./shots";
 import { SPACE, TYPE } from "./theme";
 import "../tiny-tempo/fonts";
 
@@ -65,7 +65,7 @@ export const Teaser: React.FC = () => {
       <Paper />
       <Hits
         src="tiny-tempo/sfx/hammer-hit.wav"
-        at={hitFrames(CLIPS.level1, 0, T.demo)}
+        at={hitFrames(CLIPS.level1, first(CLIPS.level1), T.demo)}
         volume={0.42}
       />
 
@@ -76,7 +76,7 @@ export const Teaser: React.FC = () => {
       >
         <GameClip
           clip={CLIPS.level1}
-          at={demoAt(CLIPS.level1, 0)}
+          at={demoAt(CLIPS.level1, first(CLIPS.level1))}
           box={FULL}
           crop={REGION.playTall}
         />
@@ -96,7 +96,7 @@ export const Teaser: React.FC = () => {
       >
         <GameClip
           clip={CLIPS.level1}
-          at={responseAt(CLIPS.level1, 0)}
+          at={responseAt(CLIPS.level1, first(CLIPS.level1))}
           box={FULL}
         />
         <Words>
@@ -110,7 +110,7 @@ export const Teaser: React.FC = () => {
       >
         <GameClip
           clip={CLIPS.level28}
-          at={responseAt(CLIPS.level28, 3)}
+          at={responseAt(CLIPS.level28, first(CLIPS.level28))}
           box={FULL}
         />
         <Words>

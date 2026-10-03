@@ -4,6 +4,17 @@ import { FPS } from "./music";
 
 export const CLIPS = CLIP_DATA;
 
+/**
+ * The first task a recording holds. The recorder starts on the first task it can reach a
+ * second ahead of, which is sometimes one later than asked for, so every shot reads the
+ * task it got rather than the task that was requested.
+ */
+export const first = (clip: ClipData): number => {
+  const task = clip.tasks[0];
+  if (!task) throw new Error(`${clip.id} has no task in its recording`);
+  return task.task;
+};
+
 const taskOf = (clip: ClipData, index: number): ClipTask => {
   const task = clip.tasks.find((t) => t.task === index);
   if (!task)
