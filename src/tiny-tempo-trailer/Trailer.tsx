@@ -74,6 +74,15 @@ const T = {
 } as const;
 
 const SIDE = { left: SPACE.gutterWide, width: PHONE.x - SPACE.gutterWide * 2 };
+/**
+ * Where the phone stands when the shot carries words: right of centre, so a stamped
+ * line as long as "REMEMBER." has the left half of the canvas to itself.
+ */
+const PHONE_RIGHT = { ...PHONE, x: W - 220 - PHONE.w };
+const WORDS = {
+  left: SPACE.gutterWide,
+  width: PHONE_RIGHT.x - SPACE.gutterWide - 80,
+};
 
 const MOSAIC_TILES = [
   CLIPS.tileBongos,
@@ -128,7 +137,7 @@ export const Trailer: React.FC = () => {
         <GameClip
           clip={CLIPS.level1}
           at={responseAt(CLIPS.level1, first(CLIPS.level1))}
-          box={PHONE}
+          box={PHONE_RIGHT}
           plate
         />
       </Sequence>
@@ -136,10 +145,10 @@ export const Trailer: React.FC = () => {
         <div
           style={{
             position: "absolute",
-            left: SIDE.left,
+            left: WORDS.left,
             top: 0,
             bottom: 0,
-            width: SIDE.width,
+            width: WORDS.width,
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -288,16 +297,16 @@ export const Trailer: React.FC = () => {
         <GameClip
           clip={CLIPS.level20}
           at={responseAt(CLIPS.level20, first(CLIPS.level20))}
-          box={PHONE}
+          box={PHONE_RIGHT}
           plate
         />
         <div
           style={{
             position: "absolute",
-            left: SIDE.left,
+            left: WORDS.left,
             top: 0,
             bottom: 0,
-            width: SIDE.width,
+            width: WORDS.width,
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
