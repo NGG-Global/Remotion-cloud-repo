@@ -336,10 +336,13 @@ class Recorder {
    */
   async snap(path, clip) {
     if (!this.cdp) this.cdp = await this.page.context().newCDPSession(this.page);
+    // The clip is in CSS pixels and `scale` is what gives device pixels back: without
+    // it the command returns the viewport at 1x whatever the device scale factor.
+    const region = clip ?? { x: 0, y: 0, width: VIEW.width, height: VIEW.height };
     const { data } = await this.cdp.send("Page.captureScreenshot", {
       format: "png",
       captureBeyondViewport: false,
-      ...(clip ? { clip: { ...clip, scale: 1 } } : {}),
+      clip: { ...region, scale: DSF },
     });
     writeFileSync(path, Buffer.from(data, "base64"));
   }
@@ -538,8 +541,6 @@ const PROGRESS = {
 };
 
 const SHOTS = {
-  /** Diagnostic: level 28 from its first task for 45 s, to find what a page cannot survive. */
-  probe: fromTask(28, 0, 45),
   level20: fromTask(20, 4, 0, { toSummary: true }),
   level1: wholeLevel(1),
   level28: fromTask(28, 4, 14),
