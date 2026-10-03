@@ -71,7 +71,7 @@ export const REGION = {
   /** A 16:9 window on the act, centred where the hammer meets the nail. */
   actWide: { x: 0, y: 560, w: 1212, h: 682 },
   /** The turn block and the verdict line under it, 16:9. */
-  blockWide: { x: 0, y: 1330, w: 1212, h: 682 },
+  blockWide: { x: 0, y: 1395, w: 1212, h: 682 },
   /** The result: headline, pennants, plaque and the rows under it, Continue left out. */
   plaque: { x: 0, y: 150, w: 1212, h: 1680 },
   /** The finale stage on the map: bunting, puck and plate. */
