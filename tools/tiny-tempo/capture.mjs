@@ -121,17 +121,6 @@ function hideDebug() {
   game.events.on("poststep", freeze);
 }
 
-/**
- * Turns scene drawing off or on. While a shot is being fast-forwarded to, nothing has to
- * be drawn: the round controller, the judge and the auto-player all run in `update`.
- */
-function setDrawing(on) {
-  const game = window.__PHASER_GAME__;
-  const scenes = game.scene;
-  if (!scenes.__render) scenes.__render = scenes.render;
-  scenes.render = on ? scenes.__render : () => {};
-}
-
 function playState() {
   const game = window.__PHASER_GAME__;
   const scene = game?.scene
@@ -335,10 +324,16 @@ class Recorder {
    * out-of-memory after about six hundred frames; the raw command does not.
    */
   async snap(path, clip) {
-    if (!this.cdp) this.cdp = await this.page.context().newCDPSession(this.page);
+    if (!this.cdp)
+      this.cdp = await this.page.context().newCDPSession(this.page);
     // The clip is in CSS pixels and `scale` is what gives device pixels back: without
     // it the command returns the viewport at 1x whatever the device scale factor.
-    const region = clip ?? { x: 0, y: 0, width: VIEW.width, height: VIEW.height };
+    const region = clip ?? {
+      x: 0,
+      y: 0,
+      width: VIEW.width,
+      height: VIEW.height,
+    };
     const { data } = await this.cdp.send("Page.captureScreenshot", {
       format: "png",
       captureBeyondViewport: false,
@@ -372,24 +367,22 @@ class Recorder {
     }
     return state;
   }
-  /** Advances until `predicate`, in `stepMs` steps, drawing nothing on the way. */
+  /**
+   * Advances until `predicate`, in `stepMs` steps, drawing every frame. Skipping the
+   * drawing (a no-op `SceneManager.render`) looked like a free speed-up and crashed the
+   * renderer within a minute of game time; whatever the renderer accumulates while
+   * nothing consumes it, it is cheaper to draw.
+   */
   async skip(predicate, maxMs, stepMs = 50, realMs = 0) {
-    await this.page.evaluate(setDrawing, false);
     let state = await this.state();
-    try {
-      for (let t = 0; t < maxMs && !predicate(state); t += stepMs) {
-        await this.page.clock.runFor(stepMs);
-        // Loading and decoding happen in real time, however fast the clock is stepped.
-        if (realMs) await sleep(realMs);
-        state = await this.state();
-      }
-    } finally {
-      await this.page.evaluate(setDrawing, true);
-      // One drawn frame, so the canvas is current before anything is shot.
-      await this.page.clock.runFor(17);
+    for (let t = 0; t < maxMs && !predicate(state); t += stepMs) {
+      await this.page.clock.runFor(stepMs);
+      // Loading and decoding happen in real time, however fast the clock is stepped.
+      if (realMs) await sleep(realMs);
+      state = await this.state();
     }
     if (!predicate(state)) throw new Error("timed out skipping");
-    return this.state();
+    return state;
   }
   /** Lands exactly `before` seconds ahead of an instant on the game clock. */
   async landBefore(instantOf, before) {
