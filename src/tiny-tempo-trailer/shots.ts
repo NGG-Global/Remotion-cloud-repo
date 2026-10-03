@@ -75,7 +75,7 @@ export const REGION = {
   /** The result: headline, pennants, plaque and the rows under it, Continue left out. */
   plaque: { x: 0, y: 150, w: 1212, h: 1680 },
   /** The finale stage on the map: bunting, puck and plate. */
-  mapStage: { x: 0, y: 900, w: 1212, h: 682 },
+  mapStage: { x: 0, y: 1000, w: 1212, h: 682 },
   /**
    * A website act tile (432 x 532): its card, centred on the act's own tinted field,
    * with a margin of that field round it.
