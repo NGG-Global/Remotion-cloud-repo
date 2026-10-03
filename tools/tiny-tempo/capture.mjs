@@ -70,6 +70,11 @@ function virtualAudioClock(seed) {
       contextTime: this.currentTime,
       performanceTime: performance.now(),
     };
+    // Nothing is heard, so nothing is started: a source the game schedules against the
+    // virtual clock would sit queued in the real context for ever, and a few thousand of
+    // them — six looping stems a level, a voice a beat — brought the renderer down.
+    AudioScheduledSourceNode.prototype.start = function () {};
+    AudioScheduledSourceNode.prototype.stop = function () {};
   };
   localStorage.setItem(
     "small-acts.teach.v1",
