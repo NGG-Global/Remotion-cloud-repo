@@ -203,7 +203,7 @@ async function boot(page, origin, url) {
     await page.clock.runFor(50);
     await sleep(30);
   }
-  await page.evaluate(hideDebug);
+  if (!process.env.NO_HIDE) await page.evaluate(hideDebug);
   return state;
 }
 
@@ -329,6 +329,20 @@ class Recorder {
     this.t0 = null;
     this.started = Date.now();
   }
+  /**
+   * One frame, through the DevTools command itself. Playwright's `page.screenshot` held
+   * on to something per call under the fake clock and took the renderer down with a V8
+   * out-of-memory after about six hundred frames; the raw command does not.
+   */
+  async snap(path, clip) {
+    if (!this.cdp) this.cdp = await this.page.context().newCDPSession(this.page);
+    const { data } = await this.cdp.send("Page.captureScreenshot", {
+      format: "png",
+      captureBeyondViewport: false,
+      ...(clip ? { clip: { ...clip, scale: 1 } } : {}),
+    });
+    writeFileSync(path, Buffer.from(data, "base64"));
+  }
   async state() {
     const state = await this.page.evaluate(playState);
     if (this.t0 !== null && state.plan && !this.seenPlans.has(state.plan.id)) {
@@ -356,12 +370,14 @@ class Recorder {
     return state;
   }
   /** Advances until `predicate`, in `stepMs` steps, drawing nothing on the way. */
-  async skip(predicate, maxMs, stepMs = 50) {
+  async skip(predicate, maxMs, stepMs = 50, realMs = 0) {
     await this.page.evaluate(setDrawing, false);
     let state = await this.state();
     try {
       for (let t = 0; t < maxMs && !predicate(state); t += stepMs) {
         await this.page.clock.runFor(stepMs);
+        // Loading and decoding happen in real time, however fast the clock is stepped.
+        if (realMs) await sleep(realMs);
         state = await this.state();
       }
     } finally {
@@ -396,10 +412,11 @@ class Recorder {
         await this.state();
       }
       if (until && until(state)) return state;
-      await this.page.screenshot({
-        path: join(this.dir, `${String(this.frames).padStart(5, "0")}.png`),
-        ...(clip ? { clip } : {}),
-      });
+      if (process.env.NO_SHOT) continue;
+      await this.snap(
+        join(this.dir, `${String(this.frames).padStart(5, "0")}.png`),
+        clip,
+      );
       if (this.frames % 90 === 0)
         process.stdout.write(
           `    ${this.id}: frame ${this.frames} (${((Date.now() - this.started) / 1000).toFixed(0)} s)\n`,
@@ -442,6 +459,10 @@ const started = async (page, origin, level) => {
   const before = (await page.evaluate(playState)).plan?.id ?? null;
   if (!(await clickReplay(page)))
     throw new Error("no replay panel; is this the dev build with ?debug?");
+  // The round starts once the music has loaded and decoded, which happens in real time:
+  // step the clock gently until the auto-player's plan is in place.
+  const rec = new Recorder(page, "started");
+  await rec.skip((s) => s.plan && s.plan.id !== before, 60000, 50, 40);
   return before;
 };
 
@@ -491,7 +512,7 @@ const actOnly = (level) => async (page, origin, dir) => {
   const rec = new Recorder(page, dir);
   await rec.skip(
     (s) => s.plan && s.plan.id !== before && s.plan.demo - s.now > 0.3,
-    30000,
+    60000,
   );
   await rec.landBefore((s) => s.plan.demo, 0);
   const first = (await rec.state()).plan.demo;
@@ -517,6 +538,8 @@ const PROGRESS = {
 };
 
 const SHOTS = {
+  /** Diagnostic: level 28 from its first task for 45 s, to find what a page cannot survive. */
+  probe: fromTask(28, 0, 45),
   level20: fromTask(20, 4, 0, { toSummary: true }),
   level1: wholeLevel(1),
   level28: fromTask(28, 4, 14),
