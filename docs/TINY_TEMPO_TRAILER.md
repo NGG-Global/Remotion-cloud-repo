@@ -8,6 +8,27 @@ Three cuts of one edit, built from the game's own footage and its own title them
 | `TinyTempoTrailerVertical` | 1080×1920, 30 fps | 28.0 s (840 frames) | Shorts, Reels, TikTok |
 | `TinyTempoTeaser` | 1080×1920, 30 fps | 8.0 s (240 frames) | Social teasers |
 
+## Status
+
+**The compositions are complete; the gameplay recordings are not yet in the repository.**
+`src/tiny-tempo-trailer/clipData.ts` is a labelled stub, and `public/tiny-tempo/clips/` is
+empty, so rendering any of the three compositions fails until the capture has been run and
+the manifest generated (the two commands under *How the gameplay was recorded*). The
+music, the fonts, the badge and the game's rendered one-shots are in place.
+
+In the cloud container the capture crashed Chromium's renderer with a V8 out-of-memory
+after roughly 45–60 s of game time on a page, in three runs — first during level 1's
+plaque, then during the fast-forward of levels 20 and 28. The page's own JS heap, DOM
+counts and renderer RSS stay flat under the same scenario in isolation, and the same level
+runs for 100 s on a real clock without incident, so the cause has not been pinned down; it
+appeared only with three browsers recording at 3× device scale. Things to try on a machine
+with a GPU: `WORKERS=1`, `DSF=2`, and dropping `--use-gl=swiftshader` from the launch
+arguments in `tools/tiny-tempo/capture.mjs` so Chromium uses the host GPU.
+
+Until the clips exist, the crops in `src/tiny-tempo-trailer/shots.ts` (`REGION`) and the
+`at` offsets of the menu and map shots are first estimates from a frame of each screen and
+need one review pass against the recordings. Nothing has been rendered or reviewed.
+
 ## Render
 
 ```bash
