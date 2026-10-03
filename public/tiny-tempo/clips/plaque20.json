@@ -1,0 +1,15 @@
+{
+ "fps": 30,
+ "frames": 270,
+ "seconds": 9,
+ "events": [
+  {
+   "kind": "summary",
+   "at": 0
+  },
+  {
+   "kind": "summary",
+   "at": 0.03300000000000125
+  }
+ ]
+}

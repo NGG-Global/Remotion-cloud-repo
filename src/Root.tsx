@@ -42,8 +42,30 @@ import {
 import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
 import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
 import { RigSheet } from "./gacy/dev/RigSheet";
+import { BORDEN_DURATION, BordenDocumentary } from "./borden/BordenDocumentary";
+import { BordenRigSheet } from "./borden/dev/RigSheet";
+import { BordenSetTest } from "./borden/dev/SetTest";
 import { SetTest } from "./gacy/dev/SetTest";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
+import {
+  Trailer,
+  TRAILER_DURATION,
+  TRAILER_FPS,
+  TRAILER_HEIGHT,
+  TRAILER_WIDTH,
+} from "./tiny-tempo-trailer/Trailer";
+import {
+  TrailerVertical,
+  VERTICAL_DURATION,
+  VERTICAL_HEIGHT,
+  VERTICAL_WIDTH,
+} from "./tiny-tempo-trailer/TrailerVertical";
+import {
+  Teaser,
+  TEASER_DURATION,
+  TEASER_HEIGHT,
+  TEASER_WIDTH,
+} from "./tiny-tempo-trailer/Teaser";
 import { FORMAT, seconds } from "./theme";
 
 /**
@@ -119,6 +141,27 @@ export const RemotionRoot: React.FC = () => {
       />
 
       <Composition
+        id="LizzieBorden"
+        component={BordenDocumentary}
+        durationInFrames={BORDEN_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="BordenSetTest"
+        component={BordenSetTest}
+        durationInFrames={19}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="BordenRigSheet"
+        component={BordenRigSheet}
+        durationInFrames={90}
+        {...FORMAT}
+      />
+
+      <Composition
         id="GacyRigSheet"
         component={RigSheet}
         durationInFrames={90}
@@ -177,6 +220,33 @@ export const RemotionRoot: React.FC = () => {
         component={TinyTempoAd}
         durationInFrames={TINY_TEMPO_AD_DURATION}
         {...FORMAT}
+      />
+
+      <Composition
+        id="TinyTempoTrailer"
+        component={Trailer}
+        durationInFrames={TRAILER_DURATION}
+        fps={TRAILER_FPS}
+        width={TRAILER_WIDTH}
+        height={TRAILER_HEIGHT}
+      />
+
+      <Composition
+        id="TinyTempoTrailerVertical"
+        component={TrailerVertical}
+        durationInFrames={VERTICAL_DURATION}
+        fps={TRAILER_FPS}
+        width={VERTICAL_WIDTH}
+        height={VERTICAL_HEIGHT}
+      />
+
+      <Composition
+        id="TinyTempoTeaser"
+        component={Teaser}
+        durationInFrames={TEASER_DURATION}
+        fps={TRAILER_FPS}
+        width={TEASER_WIDTH}
+        height={TEASER_HEIGHT}
       />
 
       <Composition

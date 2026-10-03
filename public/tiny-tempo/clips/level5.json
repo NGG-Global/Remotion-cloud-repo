@@ -1,0 +1,112 @@
+{
+ "fps": 30,
+ "frames": 390,
+ "seconds": 13,
+ "events": [
+  {
+   "kind": "task",
+   "task": 0,
+   "bpm": 120,
+   "hits": 3,
+   "demo": 1,
+   "response": 3,
+   "end": 5,
+   "targets": [
+    3,
+    3.5,
+    4
+   ],
+   "cues": [
+    {
+     "t": -1,
+     "kind": "count"
+    },
+    {
+     "t": -0.5,
+     "kind": "count"
+    },
+    {
+     "t": 0,
+     "kind": "count"
+    },
+    {
+     "t": 0.5,
+     "kind": "ready"
+    },
+    {
+     "t": 1,
+     "kind": "action"
+    },
+    {
+     "t": 1.5,
+     "kind": "action"
+    },
+    {
+     "t": 2,
+     "kind": "action"
+    }
+   ]
+  },
+  {
+   "kind": "task",
+   "task": 1,
+   "bpm": 120,
+   "hits": 4,
+   "demo": 7,
+   "response": 9,
+   "end": 11.000000000000002,
+   "targets": [
+    9,
+    9.500000000000002,
+    10.000000000000002,
+    10.500000000000002
+   ],
+   "cues": [
+    {
+     "t": 7,
+     "kind": "action"
+    },
+    {
+     "t": 7.5,
+     "kind": "action"
+    },
+    {
+     "t": 8,
+     "kind": "action"
+    },
+    {
+     "t": 8.5,
+     "kind": "action"
+    }
+   ]
+  },
+  {
+   "kind": "task",
+   "task": 2,
+   "bpm": 120,
+   "hits": 3,
+   "demo": 13.000000000000002,
+   "response": 15.000000000000002,
+   "end": 17,
+   "targets": [
+    15.000000000000002,
+    15.500000000000002,
+    16.5
+   ],
+   "cues": [
+    {
+     "t": 13.000000000000002,
+     "kind": "action"
+    },
+    {
+     "t": 13.500000000000002,
+     "kind": "action"
+    },
+    {
+     "t": 14.500000000000002,
+     "kind": "action"
+    }
+   ]
+  }
+ ]
+}

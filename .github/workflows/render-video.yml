@@ -21,6 +21,8 @@ on:
           - ClaudeContext
           - ClaudeFiles
           - ClaudeReach
+          - LizzieBorden
+          - GacyDocumentary
           - TitleCard
           - Explainer
       quality:
@@ -34,7 +36,9 @@ on:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    # The two documentaries are 10–16 minutes of vector animation with grain;
+    # on a 4-core runner a full-length 1080p render takes several hours.
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
 

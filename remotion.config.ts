@@ -8,6 +8,7 @@
  * All options: https://remotion.dev/docs/config
  */
 
+import { existsSync } from "node:fs";
 import { Config } from "@remotion/cli/config";
 import { enableTailwind } from "@remotion/tailwind-v4";
 
@@ -24,3 +25,13 @@ Config.setCodec("h264");
 Config.setChromiumOpenGlRenderer("swangle");
 
 Config.overrideBundlerConfig(enableTailwind);
+
+// A cloud container that ships Playwright's browsers but no Chrome of Remotion's own.
+// The full Chromium there has dropped the old headless mode Remotion drives, so it is the
+// headless shell or nothing; anywhere else this path does not exist and Remotion's own
+// download is used.
+const PLAYWRIGHT_HEADLESS_SHELL =
+  "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell";
+if (existsSync(PLAYWRIGHT_HEADLESS_SHELL)) {
+  Config.setBrowserExecutable(PLAYWRIGHT_HEADLESS_SHELL);
+}
