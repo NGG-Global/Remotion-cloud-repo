@@ -57,6 +57,7 @@ Everything on screen is the game or Google's badge; nothing is drawn to look lik
 | Music | `HOME_PAGE.wav`, the game's title theme as delivered (48 kHz, 24-bit, 64.000 s seamless loop) | `public/tiny-tempo/audio/home-page.wav` — the same audio at 16-bit, untrimmed |
 | Gameplay | Tiny Tempo's dev build (`TinyTempo` checkout, `main` at b3a44fe), recorded by `tools/tiny-tempo/capture.mjs` | `public/tiny-tempo/clips/*.mp4`, with `*.json` sidecars of the game's own event times |
 | Title screen | The game's `MenuScene`, recorded with its controls hidden | `public/tiny-tempo/clips/menuClean.mp4` |
+| Act tiles (mosaic) | The game's website gallery, `legal/acts/{bongos,popcorn,barber,slushy,bell,doorbell}.mp4` at 4575832, recorded by the game's own `scripts/capture-acts.mjs` (432×532, 8 s, one task each, chrome hidden) | `public/tiny-tempo/clips/tile*.mp4`, byte-identical copies |
 | Fonts | Fredoka and Nunito, the game's faces (OFL, from the game's `public/fonts/`) | `public/fonts/fredoka`, `public/fonts/nunito` |
 | Google Play badge | Google's official `en_badge_web_generic.png` from play.google.com/intl/en_us/badges/ | `public/tiny-tempo/google-play-badge.png`, unmodified |
 | App icon | `assets/icon/tiny-tempo-1024.jpg` from the game | `public/tiny-tempo/icon-1024.jpg` (reference only; not placed in the cut) |
@@ -86,7 +87,11 @@ box is exactly its 720×1280 design box.
 | `level20` | Level 20, Trombone, the Pavement area's finale: its last two tasks at 134–138 BPM, then the plaque |
 | `map` | The road at a seeded save (levels 1–19 cleared, 56 stars): the level-20 finale stage |
 | `menu`, `menuClean` | The title screen, with and without its controls |
-| `act*` | One task of an act with the chrome hidden: bongos, popcorn, barber, slushy, hotel bell, doorbell, clap, window, egg |
+| `plaque20` | Level 20's result as a flawless clear: the Area complete plaque, through the debug panel's "Mastery result", which calls the same `showSummary` a played level reaches |
+
+The mosaic uses the website's existing act tiles rather than new recordings: at the size
+a mosaic tile is drawn (about 480 px wide on the 16:9 canvas, 460 on the 9:16) they are
+within 1.1× of native, and the game's own recorder made them.
 
 Regenerate with the game checked out beside this repository:
 

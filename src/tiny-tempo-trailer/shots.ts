@@ -65,6 +65,11 @@ export const REGION = {
   plaque: { x: 0, y: 150, w: 1212, h: 1680 },
   /** The finale stage on the map: bunting, puck and plate. */
   mapStage: { x: 0, y: 900, w: 1212, h: 682 },
+  /**
+   * A website act tile (432 x 532): its card, centred on the act's own tinted field,
+   * with a margin of that field round it.
+   */
+  tile: { x: 0, y: 62, w: 432, h: 340 },
   /** The lower two thirds of the screen, 9:16: the act and the block together. */
   playTall: { x: 106, y: 360, w: 1000, h: 1778 },
 } as const satisfies Record<string, Rect>;

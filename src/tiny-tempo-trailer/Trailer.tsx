@@ -68,12 +68,12 @@ const T = {
 const SIDE = { left: SPACE.gutterWide, width: PHONE.x - SPACE.gutterWide * 2 };
 
 const MOSAIC_TILES = [
-  CLIPS.actBongos,
-  CLIPS.actPopcorn,
-  CLIPS.actBarber,
-  CLIPS.actSlushy,
-  CLIPS.actBell,
-  CLIPS.actDoorbell,
+  CLIPS.tileBongos,
+  CLIPS.tilePopcorn,
+  CLIPS.tileBarber,
+  CLIPS.tileSlushy,
+  CLIPS.tileBell,
+  CLIPS.tileDoorbell,
 ].map((clip) => ({ clip, at: 0 }));
 
 export const Trailer: React.FC = () => {
@@ -257,8 +257,9 @@ export const Trailer: React.FC = () => {
         <Mosaic
           tiles={MOSAIC_TILES}
           cols={3}
-          box={{ x: 120, y: 60, w: W - 240, h: H - 120 }}
-          gap={36}
+          box={{ x: 210, y: 90, w: W - 420, h: H - 180 }}
+          gap={32}
+          crop={REGION.tile}
           every={Math.round(beats(0.5))}
         />
       </Sequence>

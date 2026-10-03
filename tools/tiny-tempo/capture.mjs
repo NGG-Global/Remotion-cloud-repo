@@ -271,49 +271,6 @@ async function tapCss(page, x, y) {
   );
 }
 
-/** Hides everything on the play scene that is not the act's own drawing, every frame. */
-function hideChrome() {
-  const scene = window.__PHASER_GAME__.scene
-    .getScenes(true)
-    .find((active) => active.vignette);
-  const isObject = (value) =>
-    value &&
-    typeof value === "object" &&
-    typeof value.setVisible === "function" &&
-    "displayList" in value;
-  const isScene = (value) =>
-    value && typeof value === "object" && value.sys?.settings !== undefined;
-  const acts = () => {
-    const keep = new Set();
-    const seen = new Set();
-    const walk = (value, depth) => {
-      if (
-        !value ||
-        typeof value !== "object" ||
-        seen.has(value) ||
-        isScene(value) ||
-        depth > 5
-      )
-        return;
-      seen.add(value);
-      if (isObject(value)) {
-        keep.add(value);
-        for (const child of value.list ?? []) walk(child, depth + 1);
-        return;
-      }
-      for (const item of Array.isArray(value) ? value : Object.values(value))
-        walk(item, depth + 1);
-    };
-    walk(scene.vignette, 0);
-    return keep;
-  };
-  scene.events.on("postupdate", () => {
-    const keep = acts();
-    for (const child of scene.children.list)
-      if (!keep.has(child)) child.visible = false;
-  });
-}
-
 /** Hides the menu's controls, leaving the sign and the hammer: the launch card's plate. */
 function hideMenuControls() {
   const scene = window.__PHASER_GAME__.scene.getScene("menu");
@@ -528,26 +485,6 @@ const fromTask =
     return rec;
   };
 
-/** One task of an act with the chrome hidden: the demonstration, the answer and the coda. */
-const actOnly = (level) => async (page, origin, dir) => {
-  const before = await started(page, origin, level);
-  await page.evaluate(hideChrome);
-  await page.clock.runFor(40);
-  const rec = new Recorder(page, dir);
-  await rec.skip(
-    (s) => s.plan && s.plan.id !== before && s.plan.demo - s.now > 0.3,
-    60000,
-  );
-  await rec.landBefore((s) => s.plan.demo, 0);
-  const first = (await rec.state()).plan.demo;
-  await rec.shoot(12, {
-    until: (s) =>
-      s.plan && s.plan.demo > first + 0.1 && s.now >= s.plan.demo - 0.5 / FPS,
-    clip: { x: 0, y: 110, width: VIEW.width, height: 360 },
-  });
-  return rec;
-};
-
 const PROGRESS = {
   unlocked: 20,
   best: Object.fromEntries(
@@ -626,15 +563,6 @@ const SHOTS = {
     },
     { seed: { progress: PROGRESS } },
   ),
-  actBongos: actOnly(23),
-  actPopcorn: actOnly(52),
-  actBarber: actOnly(51),
-  actSlushy: actOnly(24),
-  actBell: actOnly(15),
-  actDoorbell: actOnly(13),
-  actClap: actOnly(21),
-  actWindow: actOnly(2),
-  actEgg: actOnly(10),
 };
 
 async function main() {

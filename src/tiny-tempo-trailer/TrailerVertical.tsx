@@ -48,12 +48,12 @@ const T = {
 const HEADROOM = { top: 190, height: 420 };
 
 const MOSAIC_TILES = [
-  CLIPS.actBongos,
-  CLIPS.actPopcorn,
-  CLIPS.actBarber,
-  CLIPS.actSlushy,
-  CLIPS.actBell,
-  CLIPS.actDoorbell,
+  CLIPS.tileBongos,
+  CLIPS.tilePopcorn,
+  CLIPS.tileBarber,
+  CLIPS.tileSlushy,
+  CLIPS.tileBell,
+  CLIPS.tileDoorbell,
 ].map((clip) => ({ clip, at: 0 }));
 
 const WordColumn: React.FC<{ readonly children: React.ReactNode }> = ({
@@ -233,7 +233,8 @@ export const TrailerVertical: React.FC = () => {
           tiles={MOSAIC_TILES}
           cols={2}
           box={{ x: G, y: 150, w: W - G * 2, h: H - 300 }}
-          gap={30}
+          gap={32}
+          crop={REGION.tile}
           every={Math.round(beats(0.5))}
         />
       </Sequence>
