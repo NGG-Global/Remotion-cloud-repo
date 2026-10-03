@@ -42,6 +42,9 @@ import {
 import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
 import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
 import { RigSheet } from "./gacy/dev/RigSheet";
+import { BORDEN_DURATION, BordenDocumentary } from "./borden/BordenDocumentary";
+import { BordenRigSheet } from "./borden/dev/RigSheet";
+import { BordenSetTest } from "./borden/dev/SetTest";
 import { SetTest } from "./gacy/dev/SetTest";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
 import {
@@ -134,6 +137,27 @@ export const RemotionRoot: React.FC = () => {
         id="GacySetTest"
         component={SetTest}
         durationInFrames={40}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="LizzieBorden"
+        component={BordenDocumentary}
+        durationInFrames={BORDEN_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="BordenSetTest"
+        component={BordenSetTest}
+        durationInFrames={19}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="BordenRigSheet"
+        component={BordenRigSheet}
+        durationInFrames={90}
         {...FORMAT}
       />
 
