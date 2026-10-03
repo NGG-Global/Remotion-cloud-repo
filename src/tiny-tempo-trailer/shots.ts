@@ -81,8 +81,6 @@ export const REGION = {
    * with a margin of that field round it.
    */
   tile: { x: 0, y: 62, w: 432, h: 340 },
-  /** The hook's push-in, 9:16: the whole hammer, handle to head, and the block under it. */
-  hookTall: { x: 212, y: 360, w: 1000, h: 1778 },
   /** The lower two thirds of the screen, 9:16: the act and the block together. */
   playTall: { x: 106, y: 360, w: 1000, h: 1778 },
 } as const satisfies Record<string, Rect>;
