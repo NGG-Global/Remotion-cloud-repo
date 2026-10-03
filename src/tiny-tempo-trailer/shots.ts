@@ -61,8 +61,8 @@ export const REGION = {
   actWide: { x: 0, y: 560, w: 1212, h: 682 },
   /** The turn block and the verdict line under it, 16:9. */
   blockWide: { x: 0, y: 1330, w: 1212, h: 682 },
-  /** The result plaque, which hangs from the top of the screen. */
-  plaqueWide: { x: 0, y: 360, w: 1212, h: 682 },
+  /** The result: headline, pennants, plaque and the rows under it, Continue left out. */
+  plaque: { x: 0, y: 150, w: 1212, h: 1680 },
   /** The finale stage on the map: bunting, puck and plate. */
   mapStage: { x: 0, y: 900, w: 1212, h: 682 },
   /** The lower two thirds of the screen, 9:16: the act and the block together. */

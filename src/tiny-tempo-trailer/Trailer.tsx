@@ -40,6 +40,14 @@ const PHONE = {
   h: PHONE_H,
 };
 const FULL = { x: 0, y: 0, w: W, h: H };
+/** The result standing as one slab, the crop's own aspect, the height of the phone. */
+const PLAQUE_W = Math.round((PHONE_H * 1212) / 1680);
+const PLAQUE = {
+  x: Math.round((W - PLAQUE_W) / 2),
+  y: PHONE.y,
+  w: PLAQUE_W,
+  h: PHONE_H,
+};
 
 /** The cut, in frames from the first bar. */
 const T = {
@@ -320,8 +328,9 @@ export const Trailer: React.FC = () => {
         <GameClip
           clip={CLIPS.plaque20}
           at={0.1}
-          box={FULL}
-          crop={REGION.plaqueWide}
+          box={PLAQUE}
+          crop={REGION.plaque}
+          plate
         />
       </Sequence>
 
