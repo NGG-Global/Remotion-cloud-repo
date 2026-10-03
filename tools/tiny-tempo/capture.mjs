@@ -595,6 +595,9 @@ async function main() {
         "--autoplay-policy=no-user-gesture-required",
         "--use-gl=swiftshader",
         "--enable-unsafe-swiftshader",
+        // The renderer died at V8's default 4 GB heap limit after a minute of game
+        // time; more room is the cheap part of the fix.
+        "--js-flags=--max-old-space-size=12288",
       ],
     });
   const workers = Math.min(Number(process.env.WORKERS ?? 3), jobs.length);
