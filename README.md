@@ -420,6 +420,69 @@ npx remotion still Calibration out/grid.png --props='{"screen":"settings"}'
 npx remotion still RegionCheck out/map.png  --props='{"screen":"settings"}'
 ```
 
+## Back up your photos (vertical)
+
+`BackupYourPhotos` is an 8:10 vertical video (1080x1920, 30 fps) in the kinetic
+typography style, set to a Hebrew monologue addressed to a generation born
+into an analog world and raised in a digital one. Its opening advice is to
+back up your photos, and the whole piece is built as a backup: a folder path
+at the top names the chapter, and a progress bar at the bottom fills across
+the video and completes on the last spoken line.
+
+```bash
+npx remotion render BackupYourPhotos out/backup-your-photos.mp4 --gl=swiftshader --jpeg-quality=95
+npx remotion still BackupYourPhotos out/backup-still.png --frame=1500
+```
+
+Pass `--gl=swiftshader` for this one. The project config selects `swangle`
+because the documentary's three.js scenes need it, but this composition has
+no WebGL and renders about four times faster on SwiftShader in a container
+without a GPU (measured at roughly 5 fps against 1.3 fps on four cores).
+
+Everything lives in `src/backup/`:
+
+| Piece                | What it does                                                          |
+| -------------------- | --------------------------------------------------------------------- |
+| `data/script.ts`     | The voice-over, card by card, with its markup and the scene direction |
+| `data/timing.ts`     | Start and end of every spoken word, measured from the audio           |
+| `data/metrics.ts`    | Glyph advance widths from the font files, for fitting lines           |
+| `timeline.ts`        | Joins script and timings into scenes, cards and words                 |
+| `engine/layout.ts`   | Sizes and places every word before anything moves                     |
+| `engine/Phrase.tsx`  | Animates a card's words on the voice                                  |
+| `engine/Chrome.tsx`  | The folder path and the backup progress bar                           |
+| `pixel/`             | Pixel icons as text grids, and the renderer that draws them           |
+| `arts/`              | One illustration per scene, keyed to the words it illustrates         |
+
+A few decisions worth keeping:
+
+- **Every word lands on the voice.** `tools/backup-align.py` places each card
+  on a Whisper transcript, then force-aligns it on its own stretch of audio
+  with the MMS aligner from torchaudio. Whisper alone pulls the first word
+  after a pause up to half a second early, which is visible when a word is
+  meant to slam in on the syllable. Change a card's text, then re-run the
+  aligner; `timeline.ts` refuses to build if a card's word count no longer
+  matches its timings.
+- **Lines are fitted, not wrapped.** Kinetic type depends on lines that fill
+  the measure. The layout sizes hero words in the condensed display face
+  (Karantina) so their line fills the width, using advance widths read from
+  the font files, so nothing is measured in the DOM mid-render.
+- **Illustrations key off words, not seconds.** An art component asks for
+  `scene.t(cardId, wordIndex)`, so a phone rings on "called" and a drawer
+  closes on "parents" however the narration is re-timed.
+- **Pixel icons are drawn as text.** `pixel/icons.ts` holds each icon as rows
+  of palette letters; `Pixel.tsx` draws one SVG path per colour. A new icon
+  is a few lines of characters. `BackupIconSheet` renders all of them on one
+  sheet for checking.
+
+The script text follows the narration, with one deliberate correction: at
+1:27 the voice says what transcribes as "ממחווה טובה"; in context
+(comparing vacuum cleaners) it is set on screen as "ממחבת טובה" (a good
+frying pan). Confirm against the source script before publishing.
+
+The narration (`public/audio/backup-narration.mp3`) is a 320 kb/s encode of
+the supplied lossless master. Karantina is bundled under the SIL Open Font
+License 1.1 — see `public/fonts/karantina/OFL.txt`.
+
 ## Starter examples
 
 `TitleCard` and `Explainer` are the minimal compositions this project started

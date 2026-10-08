@@ -44,6 +44,8 @@ import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
 import { RigSheet } from "./gacy/dev/RigSheet";
 import { SetTest } from "./gacy/dev/SetTest";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
+import { BACKUP_DURATION, BackupYourPhotos } from "./backup/BackupYourPhotos";
+import { IconSheet } from "./backup/dev/IconSheet";
 import { FORMAT, seconds } from "./theme";
 
 /**
@@ -123,6 +125,24 @@ export const RemotionRoot: React.FC = () => {
         component={RigSheet}
         durationInFrames={90}
         {...FORMAT}
+      />
+
+      <Composition
+        id="BackupYourPhotos"
+        component={BackupYourPhotos}
+        durationInFrames={BACKUP_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+
+      <Composition
+        id="BackupIconSheet"
+        component={IconSheet}
+        durationInFrames={1}
+        fps={30}
+        width={1080}
+        height={1920}
       />
 
       <Composition
