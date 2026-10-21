@@ -24,6 +24,7 @@ on:
           - TitleCard
           - Explainer
           - RIntro
+          - RIntro720
       quality:
         description: "high = H.264 (CRF 16, PNG frames); master = ProRes HQ"
         type: choice

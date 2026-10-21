@@ -97,3 +97,26 @@ export const RIntro: React.FC = () => {
     </AbsoluteFill>
   );
 };
+
+/**
+ * The same video at 720x1280, for a lighter file. The scenes are laid out in
+ * 1080x1920 pixels, so the full composition is drawn at that size and scaled
+ * down by two thirds rather than re-laid out.
+ */
+export const RIntro720: React.FC = () => (
+  <AbsoluteFill style={{ background: R.paper }}>
+    <div
+      style={{
+        width: 1080,
+        height: 1920,
+        transform: "scale(0.6666667)",
+        transformOrigin: "top left",
+        position: "absolute",
+        left: 0,
+        top: 0,
+      }}
+    >
+      <RIntro />
+    </div>
+  </AbsoluteFill>
+);
