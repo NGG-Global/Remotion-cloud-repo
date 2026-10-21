@@ -44,6 +44,8 @@ import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
 import { RigSheet } from "./gacy/dev/RigSheet";
 import { SetTest } from "./gacy/dev/SetTest";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
+import { RIntro, R_INTRO_DURATION } from "./r-intro/RIntro";
+import { PORTRAIT } from "./r-intro/theme";
 import { FORMAT, seconds } from "./theme";
 
 /**
@@ -177,6 +179,13 @@ export const RemotionRoot: React.FC = () => {
         component={TinyTempoAd}
         durationInFrames={TINY_TEMPO_AD_DURATION}
         {...FORMAT}
+      />
+
+      <Composition
+        id="RIntro"
+        component={RIntro}
+        durationInFrames={R_INTRO_DURATION}
+        {...PORTRAIT}
       />
 
       <Composition
