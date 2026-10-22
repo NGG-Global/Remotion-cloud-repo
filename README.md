@@ -444,6 +444,64 @@ npx remotion render StarReveal out/star-reveal.mp4
 npx remotion still StarReveal out/star-reveal.png --frame=90
 ```
 
+## Tiny Tempo ads
+
+Two promotional cuts for the Tiny Tempo rhythm game, both on the game's own
+workshop palette and typefaces (`src/tiny-tempo/theme.ts`, Fredoka and Nunito
+from `public/fonts`) and both cut to the game's score at 120 BPM, so every
+scene change lands on a bar line.
+
+| Composition         | Size      | Length | What it is                                               |
+| ------------------- | --------- | ------ | -------------------------------------------------------- |
+| `TinyTempoAd`       | 1920×1080 | 24 s   | Landscape launch ad; the acts are drawn in React         |
+| `TinyTempoVertical` | 1080×1920 | 28 s   | Vertical cut for Shorts, Reels and TikTok; real gameplay |
+
+```bash
+npm run render:hq -- TinyTempoVertical out/tiny-tempo-vertical.mp4
+```
+
+### The vertical cut is filmed, not drawn
+
+Every shot in `TinyTempoVertical` is the shipped game, captured from its own
+dev server: the hammer level with three Perfects and a flawless coda, nine acts
+in a montage, the result plaque seating three stars, the road flicked back
+through two areas, and a star gate tapped open. The clips are in
+`public/footage/` and two tools reproduce them:
+
+- `tools/tiny-tempo-capture.mjs` runs the game headless with Playwright and
+  screencasts it at 1080×1920. It seeds a save so no lesson, hint or new-rhythm
+  introduction interrupts a level, opens a level through the game's DEV-only
+  `?debug&level=N` route, and presses its "Accurate replay", which taps every
+  target on the beat. Headless Chromium's software WebGL manages about 8 fps,
+  so the capture forces the canvas renderer (`--disable-gpu`), which holds
+  30–60. The screencast's frame timestamps are kept and the clip is resampled
+  to a constant 30 fps; for a level clip, the instant of the plan's first
+  player target is written beside it (`<clip>.json`).
+- `tools/tiny-tempo-trim.mjs` cuts each capture into the shot the ad uses. A
+  level shot is cut relative to that first target, so the composition can put a
+  judged hit exactly on a bar line; each file starts `HANDLE` seconds (0.5)
+  before its in-point, which `src/tiny-tempo/vertical/parts.tsx` skips with
+  `trimBefore`.
+
+```bash
+# In the TinyTempo checkout: npm run dev   (the game on http://localhost:5173/)
+node tools/tiny-tempo-capture.mjs /tmp/tt-captures all
+node tools/tiny-tempo-trim.mjs /tmp/tt-captures public/footage
+```
+
+Two things to know before re-cutting it:
+
+- **The game's fonts load from a side-effect import.** `package.json` lists
+  `**/fonts.ts` under `sideEffects`, because the bundler otherwise drops a bare
+  `import "./fonts"` as dead code and every Fredoka headline silently falls back
+  to a serif. The still looks fine in the Studio, where the font is cached, and
+  wrong in a render.
+- **Shots are landed on beats, so a cut is a time, not a frame count.** The
+  montage's cut list (`MONTAGE_CUTS` in `scenes.tsx`) is in seconds from the
+  montage's start, four one-second acts, four half-second ones and a whole bar
+  for the paper star; a shot's footage starts half a beat before its hit where
+  the card needs time to land, and on the hit where the cut is half a beat.
+
 ## Cloud rendering
 
 `npm run bundle` produces a static bundle that any render service can serve.
