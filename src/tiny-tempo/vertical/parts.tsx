@@ -38,15 +38,17 @@ export const PunchIn: React.FC<{
   const { time } = useClock();
   const scale = 1 + amount * (1 - easeOut(time / 0.3));
   return (
-    <AbsoluteFill style={{ transform: `scale(${scale})` }}>{children}</AbsoluteFill>
+    <AbsoluteFill style={{ transform: `scale(${scale})` }}>
+      {children}
+    </AbsoluteFill>
   );
 };
 
 /** Ink at the top and bottom edges so stamped type reads over any footage. */
-export const Vignette: React.FC<{ readonly top?: number; readonly bottom?: number }> = ({
-  top = 0.32,
-  bottom = 0.22,
-}) => (
+export const Vignette: React.FC<{
+  readonly top?: number;
+  readonly bottom?: number;
+}> = ({ top = 0.32, bottom = 0.22 }) => (
   <AbsoluteFill
     style={{
       pointerEvents: "none",
@@ -67,7 +69,12 @@ type CardProps = {
  * shadow, a spring that overshoots the tilt. Alternating the sign of `tilt`
  * from cut to cut is what keeps a montage from reading as a slideshow.
  */
-export const Card: React.FC<CardProps> = ({ tilt, delay = 0, width = 760, children }) => {
+export const Card: React.FC<CardProps> = ({
+  tilt,
+  delay = 0,
+  width = 760,
+  children,
+}) => {
   const { frame, fps } = useClock();
   const { width: W, height: H } = useVideoConfig();
   const enter = spring({
@@ -76,8 +83,11 @@ export const Card: React.FC<CardProps> = ({ tilt, delay = 0, width = 760, childr
     config: { damping: 12, mass: 0.7, stiffness: 190 },
   });
   const height = (width * H) / W;
+  // Present on its first frame — a cut that starts empty is a hole, not a cut —
+  // and the spring is what the card does after landing: the tilt overshoots and
+  // comes back, the size settles up from a stamp.
   const rot = tilt * 2.6 - tilt * 1.6 * enter;
-  const scale = 0.82 + 0.18 * enter;
+  const scale = 0.9 + 0.1 * enter;
   return (
     <div
       style={{
@@ -93,7 +103,60 @@ export const Card: React.FC<CardProps> = ({ tilt, delay = 0, width = 760, childr
         background: TT.paper,
         transform: `rotate(${rot}deg) scale(${scale})`,
         transformOrigin: "50% 60%",
-        opacity: interpolate(enter, [0, 0.15], [0, 1], { extrapolateRight: "clamp" }),
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
+type BandProps = {
+  readonly y: number;
+  readonly tilt?: number;
+  readonly delay?: number;
+  readonly fill?: string;
+  /** Vertical padding, top and bottom, for a band that has to cover more than its words. */
+  readonly pad?: readonly [number, number];
+  readonly children: React.ReactNode;
+};
+
+/**
+ * A strip of coral tape across the frame, wider than it, for a headline that
+ * has to sit over the game's own words: the footage keeps running underneath
+ * and the band is the one thing on screen that is plainly not the game.
+ */
+export const Band: React.FC<BandProps> = ({
+  y,
+  tilt = -2.5,
+  delay = 0,
+  fill = TT.coral,
+  pad = [34, 42],
+  children,
+}) => {
+  const { frame, fps } = useClock();
+  const { width } = useVideoConfig();
+  const enter = spring({
+    frame: frame - delay,
+    fps,
+    config: { damping: 13, mass: 0.8, stiffness: 170 },
+  });
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: y,
+        left: -120,
+        width: width + 240,
+        padding: `${pad[0]}px 0 ${pad[1]}px`,
+        background: fill,
+        borderTop: `12px solid ${TT.inkDeep}`,
+        borderBottom: `12px solid ${TT.inkDeep}`,
+        boxShadow: `0 18px 0 ${TT.inkDeep}44`,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        transform: `translateY(${interpolate(enter, [0, 1], [-360, 0])}px) rotate(${tilt}deg)`,
+        transformOrigin: "50% 50%",
       }}
     >
       {children}
@@ -147,7 +210,9 @@ export const Sticker: React.FC<StickerProps> = ({
         letterSpacing: "-0.02em",
         whiteSpace: "nowrap",
         transform: `translate(-50%, -50%) rotate(${rotate}deg) scale(${0.4 + 0.6 * enter})`,
-        opacity: interpolate(enter, [0, 0.2], [0, 1], { extrapolateRight: "clamp" }),
+        opacity: interpolate(enter, [0, 0.2], [0, 1], {
+          extrapolateRight: "clamp",
+        }),
       }}
     >
       {text}
@@ -156,7 +221,9 @@ export const Sticker: React.FC<StickerProps> = ({
 };
 
 /** The game's curtain, cut for a portrait frame: paper over coral over ink, sheared. */
-export const Curtain: React.FC<{ readonly progress: number }> = ({ progress }) => {
+export const Curtain: React.FC<{ readonly progress: number }> = ({
+  progress,
+}) => {
   const { width: w, height: h } = useVideoConfig();
   const p = progress;
   if (p <= 0 || p >= 2) return null;
@@ -171,7 +238,13 @@ export const Curtain: React.FC<{ readonly progress: number }> = ({ progress }) =
   };
   return (
     <AbsoluteFill style={{ pointerEvents: "none" }}>
-      <svg width="100%" height="100%" viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="none" aria-hidden>
+      <svg
+        width="100%"
+        height="100%"
+        viewBox={`0 0 ${w} ${h}`}
+        preserveAspectRatio="none"
+        aria-hidden
+      >
         <polygon points={band(30)} fill={shade(TT.ink, -0.2)} />
         <polygon points={band(20)} fill={TT.coral} />
         <polygon points={band(0)} fill={TT.paperLift} />

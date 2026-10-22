@@ -2,12 +2,13 @@ import React from "react";
 import { AbsoluteFill, Img, interpolate, Sequence, staticFile } from "remotion";
 import { seconds } from "../../theme";
 import { useClock } from "../clock";
-import { BeatBeads, HangingSign, PlayBlock } from "../components/chrome";
+import { HangingSign, PlayBlock } from "../components/chrome";
 import { PaperField } from "../components/stage";
 import { BodyCopy, StampType } from "../components/type";
 import { BAR, BEAT, TT } from "../theme";
 import {
   AreaMarquee,
+  Band,
   Card,
   Footage,
   PunchIn,
@@ -36,12 +37,29 @@ export const HookScene: React.FC = () => {
       </PunchIn>
       <Vignette top={0.42} bottom={0.1} />
       <Sequence from={seconds(lineStart)} name={words} layout="none">
-        <AbsoluteFill style={{ alignItems: "center", paddingTop: HEADLINE_TOP }}>
-          <StampType text={words} size={line === 1 ? 168 : 190} fill={fill} />
-        </AbsoluteFill>
+        {line === 2 ? (
+          <Band y={40} pad={[90, 220]}>
+            <StampType text={words} size={176} fill={TT.cream} />
+          </Band>
+        ) : (
+          <AbsoluteFill
+            style={{ alignItems: "center", paddingTop: HEADLINE_TOP }}
+          >
+            <StampType text={words} size={line === 1 ? 168 : 190} fill={fill} />
+          </AbsoluteFill>
+        )}
       </Sequence>
       {line === 1 ? (
-        <Sticker text="Your turn" x={820} y={1230} rotate={6} delay={seconds(BAR + 0.1)} size={48} fill={TT.coral} color={TT.cream} />
+        <Sticker
+          text="Your turn"
+          x={820}
+          y={1230}
+          rotate={6}
+          delay={seconds(BAR + 0.1)}
+          size={48}
+          fill={TT.coral}
+          color={TT.cream}
+        />
       ) : null}
     </AbsoluteFill>
   );
@@ -120,13 +138,19 @@ export const ResultScene: React.FC = () => (
     <PunchIn>
       <Footage shot={SHOTS.result} />
     </PunchIn>
-    <Vignette top={0.3} bottom={0.3} />
-    <AbsoluteFill style={{ alignItems: "center", paddingTop: HEADLINE_TOP - 20 }}>
-      <StampType text="NAIL IT." size={200} fill={TT.brassLit} />
-    </AbsoluteFill>
-    <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 150 }}>
-      <Sticker text="Perfect is ±55 ms." x={540} y={0} rotate={-3} delay={seconds(BAR)} size={50} fill={TT.cream} />
-    </AbsoluteFill>
+    <Vignette top={0.1} bottom={0.3} />
+    <Band y={70} tilt={2}>
+      <StampType text="NAIL IT." size={190} fill={TT.brassLit} />
+    </Band>
+    <Sticker
+      text="Perfect is ±55 ms."
+      x={540}
+      y={1790}
+      rotate={-3}
+      delay={seconds(BAR)}
+      size={50}
+      fill={TT.cream}
+    />
   </AbsoluteFill>
 );
 
@@ -152,14 +176,20 @@ export const RoadScene: React.FC = () => {
       <Vignette top={0.42} bottom={0.3} />
       {gate ? (
         <Sequence from={seconds(BAR)} layout="none">
-          <AbsoluteFill style={{ alignItems: "center", paddingTop: HEADLINE_TOP - 30 }}>
-            <StampType text="EARN STARS." size={136} fill={TT.brassLit} />
-            <div style={{ height: 10 }} />
-            <StampType text="OPEN THE ROAD." size={136} fill={TT.cream} delay={seconds(0.3)} />
-          </AbsoluteFill>
+          <Band y={90} tilt={-2}>
+            <StampType text="EARN STARS." size={128} fill={TT.brassLit} />
+            <StampType
+              text="OPEN THE ROAD."
+              size={128}
+              fill={TT.cream}
+              delay={seconds(0.3)}
+            />
+          </Band>
         </Sequence>
       ) : (
-        <AbsoluteFill style={{ alignItems: "center", paddingTop: HEADLINE_TOP - 30 }}>
+        <AbsoluteFill
+          style={{ alignItems: "center", paddingTop: HEADLINE_TOP - 30 }}
+        >
           <StampType text={"AN ENDLESS\nROAD."} size={170} fill={TT.cream} />
         </AbsoluteFill>
       )}
@@ -171,23 +201,45 @@ export const RoadScene: React.FC = () => {
 /** Bars 12–13. The sign, the tagline, the Play block, and the beat still going. */
 export const OutroScene: React.FC = () => {
   const { time, durationInFrames, fps } = useClock();
-  const fade = interpolate(time, [durationInFrames / fps - 0.6, durationInFrames / fps], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
+  const fade = interpolate(
+    time,
+    [durationInFrames / fps - 0.6, durationInFrames / fps],
+    [0, 1],
+    {
+      extrapolateLeft: "clamp",
+      extrapolateRight: "clamp",
+    },
+  );
   return (
     <PaperField sunX={50} sunY={24}>
       <AbsoluteFill style={{ alignItems: "center", paddingTop: 150 }}>
         <HangingSign width={720} delay={seconds(0.05)} />
       </AbsoluteFill>
-      <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", paddingTop: 300, gap: 34 }}>
-        <StampType text={"The rhythm of\neveryday life."} size={92} fill={TT.ink} stroke={TT.cream} shadow={false} delay={seconds(0.5)} />
+      <AbsoluteFill
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          paddingTop: 230,
+          gap: 34,
+        }}
+      >
+        <StampType
+          text={"The rhythm of\neveryday life."}
+          size={92}
+          fill={TT.ink}
+          stroke={TT.cream}
+          shadow={false}
+          delay={seconds(0.5)}
+        />
         <div style={{ height: 6 }} />
         <PlayBlock delay={seconds(0.9)} width={520} />
-        <BodyCopy text="Watch it. Tap it back." size={44} color={TT.muted} delay={seconds(1.25)} weight={800} />
-        <div style={{ marginTop: 18 }}>
-          <BeatBeads pattern={[true, true, true, true]} time={time % (BEAT * 4)} size={44} />
-        </div>
+        <BodyCopy
+          text="Watch it. Tap it back."
+          size={44}
+          color={TT.muted}
+          delay={seconds(1.25)}
+          weight={800}
+        />
       </AbsoluteFill>
       <Img
         src={staticFile("img/tiny-tempo-icon.jpg")}
@@ -202,11 +254,20 @@ export const OutroScene: React.FC = () => {
           border: `8px solid ${TT.inkDeep}`,
           boxShadow: `0 12px 0 ${TT.inkDeep}33`,
           objectFit: "cover",
-          opacity: interpolate(time, [1.5, 1.9], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+          opacity: interpolate(time, [1.5, 1.9], [0, 1], {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+          }),
           transform: `translateY(${interpolate(time, [1.5, 1.9], [30, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}px)`,
         }}
       />
-      <AbsoluteFill style={{ backgroundColor: TT.paper, opacity: fade, pointerEvents: "none" }} />
+      <AbsoluteFill
+        style={{
+          backgroundColor: TT.paper,
+          opacity: fade,
+          pointerEvents: "none",
+        }}
+      />
     </PaperField>
   );
 };

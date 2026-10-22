@@ -165,13 +165,13 @@ interpolated colour) has to be an inline style.
 
 ## The Claude explainer series
 
-| Composition     | Episode | Length | Subject                                                         |
-| --------------- | ------- | ------ | --------------------------------------------------------------- |
-| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it    |
-| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings  |
-| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see |
-| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft |
-| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts |
+| Composition     | Episode | Length | Subject                                                               |
+| --------------- | ------- | ------ | --------------------------------------------------------------------- |
+| `ClaudeIntro`   | 1       | 3:40   | What Claude is for, which tasks suit it, where not to use it          |
+| `ClaudeSetup`   | 2       | 6:54   | Installing, signing in, the screen, choosing a model, settings        |
+| `ClaudeConnect` | 3       | 4:37   | Connecting to Microsoft 365, and what Claude can and cannot see       |
+| `ClaudeContext` | 4       | 5:05   | Giving Claude context, and treating the first answer as a draft       |
+| `ClaudeFiles`   | 5       | 3:56   | Files in a conversation, and where Chat stops and Cowork starts       |
 | `ClaudeReach`   | 6       | 3:04   | Pulling from Microsoft 365 by asking, and the Teams-transcript caveat |
 
 ```bash
@@ -433,11 +433,11 @@ Level-end star animation for TinyTempo, authored here so the motion can be
 scrubbed at 60 fps before it is sampled in Phaser. Same `f(t)` pose lives in
 `src/motion/starReveal.ts` and TinyTempo's `src/ui/starReveal.ts`.
 
-| Composition          | Size       | What it shows                                      |
-| -------------------- | ---------- | -------------------------------------------------- |
-| `StarReveal`         | 1920×1080  | Three-star stamp (props: `earned` 0–3)             |
-| `StarRevealPortrait` | 720×1280   | The same beat in the game's portrait frame         |
-| `StarRevealGallery`  | 1920×1080  | 3, 2, 1 and 0 stars in one take                    |
+| Composition          | Size      | What it shows                              |
+| -------------------- | --------- | ------------------------------------------ |
+| `StarReveal`         | 1920×1080 | Three-star stamp (props: `earned` 0–3)     |
+| `StarRevealPortrait` | 720×1280  | The same beat in the game's portrait frame |
+| `StarRevealGallery`  | 1920×1080 | 3, 2, 1 and 0 stars in one take            |
 
 ```bash
 npx remotion render StarReveal out/star-reveal.mp4

@@ -49,17 +49,26 @@ export const TinyTempoVertical: React.FC = () => {
         src={staticFile("audio/tiny-tempo.mp3")}
         trimBefore={MUSIC_LEAD_FRAMES}
         volume={(frame) =>
-          interpolate(frame, [fadeFrom, TINY_TEMPO_VERTICAL_DURATION], [0.85, 0], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          })
+          interpolate(
+            frame,
+            [fadeFrom, TINY_TEMPO_VERTICAL_DURATION],
+            [0.85, 0],
+            {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            },
+          )
         }
       />
 
       <Sequence from={AT.hook} durationInFrames={SCENE.hook} name="Hook">
         <HookScene />
       </Sequence>
-      <Sequence from={AT.montage} durationInFrames={SCENE.montage} name="Montage">
+      <Sequence
+        from={AT.montage}
+        durationInFrames={SCENE.montage}
+        name="Montage"
+      >
         <MontageScene />
       </Sequence>
       <Sequence from={AT.result} durationInFrames={SCENE.result} name="Result">
