@@ -1,371 +1,446 @@
 [
   {
-    "from": 4.4,
-    "to": 7.7,
+    "from": 4.34,
+    "to": 6.45,
     "he": "כל דבר מכיל גם את ההיפך שלו...",
     "en": "Everything also contains its own opposite..."
   },
-  { "from": 7.8, "to": 8.7, "he": "ולהיפך", "en": "And vice versa" },
-  { "from": 10.0, "to": 11.2, "he": "אתם קולטים?", "en": "You get it?" },
   {
-    "from": 13.1,
-    "to": 14.4,
+    "from": 7.44,
+    "to": 8.65,
+    "he": "ולהיפך",
+    "en": "And vice versa"
+  },
+  {
+    "from": 9.94,
+    "to": 10.85,
+    "he": "אתם קולטים?",
+    "en": "You get it?"
+  },
+  {
+    "from": 12.94,
+    "to": 14.15,
     "he": "למה אתם לא עונים?",
     "en": "Why aren't you answering?"
   },
   {
-    "from": 16.6,
-    "to": 18.5,
+    "from": 16.44,
+    "to": 18.45,
     "he": "ונוח מכיל בתוכו אי נוחות",
     "en": "And comfort holds discomfort inside it"
   },
   {
-    "from": 18.7,
-    "to": 20.3,
+    "from": 18.64,
+    "to": 20.45,
     "he": "ואומץ מכיל פחדים",
     "en": "And courage holds fears"
   },
   {
-    "from": 20.6,
-    "to": 23.6,
+    "from": 20.54,
+    "to": 23.95,
     "he": "והרצון להיות מחוץ לעדר מתנגש עם הרצון להישאר בו",
     "en": "And the urge to leave the herd collides with the urge to stay in it"
   },
   {
-    "from": 24.9,
-    "to": 26.5,
+    "from": 24.84,
+    "to": 26.45,
     "he": "דוקטור סוס אמר פעם:",
     "en": "Dr. Seuss once said:"
   },
   {
-    "from": 26.5,
-    "to": 28.5,
+    "from": 26.54,
+    "to": 28.25,
     "he": "אם יוצאים, מגיעים למקומות נפלאים",
     "en": "If you go out, you'll get to wonderful places"
   },
-  { "from": 29.1, "to": 30.4, "he": "שזה נכון", "en": "Which is true" },
-  { "from": 31.0, "to": 32.1, "he": "אבל גם לא", "en": "But also not" },
   {
-    "from": 32.9,
-    "to": 35.0,
+    "from": 29.04,
+    "to": 30.15,
+    "he": "שזה נכון",
+    "en": "Which is true"
+  },
+  {
+    "from": 30.84,
+    "to": 31.85,
+    "he": "אבל גם לא",
+    "en": "But also not"
+  },
+  {
+    "from": 32.84,
+    "to": 35.05,
     "he": "כי לפעמים אפשר לצאת למקומות שהם מעפנים",
     "en": "Because sometimes you go out and end up somewhere lousy"
   },
   {
-    "from": 35.6,
-    "to": 37.8,
+    "from": 35.54,
+    "to": 37.05,
     "he": "למשל תחנה מרכזית",
     "en": "The central bus station, for example"
   },
   {
-    "from": 38.4,
-    "to": 41.0,
+    "from": 38.34,
+    "to": 41.09,
     "he": "וכולנו רוצים עמוק בפנים לצאת מאזור הנוחות",
     "en": "And deep down, we all want to leave the comfort zone"
   },
   {
-    "from": 41.4,
-    "to": 44.3,
+    "from": 41.14,
+    "to": 43.85,
     "he": "ולעשות דברים גדולים ומשמעותיים בגלגול הזה",
     "en": "And do big, meaningful things in this lifetime"
   },
   {
-    "from": 44.3,
-    "to": 47.0,
+    "from": 44.14,
+    "to": 46.55,
     "he": "אבל יש הבדל בין הרצוי למצוי",
     "en": "But there's a difference between the ideal and the real"
   },
   {
-    "from": 47.0,
-    "to": 49.7,
+    "from": 46.84,
+    "to": 49.19,
     "he": "אחד מהם הוא שרצוי מתחיל בר'",
     "en": "One of them is that 'ideal' starts with an I"
   },
   {
-    "from": 49.7,
-    "to": 50.8,
+    "from": 49.24,
+    "to": 51.45,
     "he": "ומצוי ב-מ'",
     "en": "And 'real' with an R"
   },
   {
-    "from": 51.6,
-    "to": 53.4,
+    "from": 51.54,
+    "to": 53.85,
     "he": "והסרטון הזה מתחיל להיות מבלבל",
     "en": "And this video is getting confusing"
   },
-  { "from": 54.0, "to": 55.4, "he": "אבל גם ברור", "en": "But also clear" },
   {
-    "from": 56.0,
-    "to": 57.8,
+    "from": 53.94,
+    "to": 55.25,
+    "he": "אבל גם ברור",
+    "en": "But also clear"
+  },
+  {
+    "from": 55.84,
+    "to": 58.05,
     "he": "שכל דבר מכיל גם את ההיפך שלו",
     "en": "That everything also contains its own opposite"
   },
-  { "from": 58.6, "to": 59.9, "he": "ולהיפך", "en": "And vice versa" },
   {
-    "from": 61.0,
-    "to": 62.0,
+    "from": 58.54,
+    "to": 59.65,
+    "he": "ולהיפך",
+    "en": "And vice versa"
+  },
+  {
+    "from": 60.94,
+    "to": 62.25,
     "he": "ואיזור הנוחות",
     "en": "And the comfort zone"
   },
   {
-    "from": 62.8,
-    "to": 63.8,
+    "from": 62.54,
+    "to": 64.05,
     "he": "הוא גם ההיפך שלו",
     "en": "Is also its own opposite"
   },
   {
-    "from": 64.5,
-    "to": 66.0,
+    "from": 64.14,
+    "to": 65.75,
     "he": "כי נוח הופך מהר לשגרה",
     "en": "Because comfort quickly turns into routine"
   },
   {
-    "from": 66.0,
-    "to": 67.4,
+    "from": 65.8,
+    "to": 67.3,
     "he": "ושגרה הופכת לתלות",
     "en": "And routine turns into dependence"
   },
   {
-    "from": 67.4,
-    "to": 68.5,
+    "from": 67.35,
+    "to": 68.52,
     "he": "ותלות הופכת למועקה",
     "en": "And dependence turns into distress"
   },
-  { "from": 68.5, "to": 69.4, "he": "ומועקה...", "en": "And distress..." },
   {
-    "from": 69.9,
-    "to": 71.0,
+    "from": 68.57,
+    "to": 69.88,
+    "he": "ומועקה...",
+    "en": "And distress..."
+  },
+  {
+    "from": 70.12,
+    "to": 71.65,
     "he": "זה ההיפך מנוחות",
     "en": "Is the opposite of comfort"
   },
   {
-    "from": 72.2,
-    "to": 74.2,
+    "from": 72.24,
+    "to": 74.19,
     "he": "ואם תחשבו על האנשים שהצליחו באמת",
     "en": "And if you think of the people who truly succeeded"
   },
   {
-    "from": 74.2,
-    "to": 75.6,
+    "from": 74.24,
+    "to": 75.95,
     "he": "לעשות דברים גדולים וחשובים",
     "en": "In doing big, important things"
   },
-  { "from": 76.2, "to": 77.0, "he": "שייקספיר,", "en": "Shakespeare," },
-  { "from": 77.0, "to": 77.6, "he": "קרל מרקס,", "en": "Karl Marx," },
   {
-    "from": 77.6,
-    "to": 79.0,
+    "from": 76.14,
+    "to": 76.83,
+    "he": "שייקספיר,",
+    "en": "Shakespeare,"
+  },
+  {
+    "from": 76.88,
+    "to": 77.48,
+    "he": "קרל מרקס,",
+    "en": "Karl Marx,"
+  },
+  {
+    "from": 77.44,
+    "to": 78.99,
     "he": "הדר מרקס ובודהה",
     "en": "Hadar Marx and Buddha"
   },
   {
-    "from": 79.3,
-    "to": 81.4,
+    "from": 79.04,
+    "to": 81.05,
     "he": "הם היו חייבים לצאת מהאזור נוחות שלהם",
     "en": "They had to leave their comfort zone"
   },
   {
-    "from": 82.0,
-    "to": 84.4,
+    "from": 81.94,
+    "to": 84.85,
     "he": "והם יצאו אחושילינג והגיעו למקומות נפלאים",
     "en": "And they went all the way out and got to wonderful places"
   },
   {
-    "from": 85.5,
-    "to": 88.6,
+    "from": 85.34,
+    "to": 89.05,
     "he": "הם לא למדו מספרים הם למדו מהתנסויות",
     "en": "They didn't learn from books, they learned from experience"
   },
   {
-    "from": 89.7,
-    "to": 91.7,
+    "from": 89.64,
+    "to": 91.39,
     "he": "אבל הם למדו גם מספרים",
     "en": "But they also learned from books"
   },
   {
-    "from": 91.7,
-    "to": 93.0,
+    "from": 91.44,
+    "to": 93.85,
     "he": "אי אפשר ללמוד רק מהתנסויות",
     "en": "You can't learn from experience alone"
   },
   {
-    "from": 94.7,
-    "to": 95.9,
+    "from": 94.74,
+    "to": 95.83,
     "he": "מישהו אמר פעם",
     "en": "Someone once said"
   },
   {
-    "from": 95.9,
-    "to": 97.1,
+    "from": 95.88,
+    "to": 96.96,
     "he": "אם תחשוב כמו כולם",
     "en": "If you think like everyone else"
   },
   {
-    "from": 97.1,
-    "to": 98.5,
+    "from": 97.01,
+    "to": 98.65,
     "he": "כולם יחשבו כמוך",
     "en": "Everyone will think like you"
   },
   {
-    "from": 99.2,
-    "to": 99.9,
+    "from": 98.84,
+    "to": 100.45,
     "he": "ומי שאמר את זה",
     "en": "And who said that?"
   },
-  { "from": 100.8, "to": 101.7, "he": "זה אני", "en": "That was me" },
   {
-    "from": 103.0,
-    "to": 104.9,
+    "from": 100.84,
+    "to": 101.75,
+    "he": "זה אני",
+    "en": "That was me"
+  },
+  {
+    "from": 102.84,
+    "to": 105.14,
     "he": "ולפעמים איזור הנוחות כל כך משעמם אותי",
     "en": "And sometimes the comfort zone bores me so much"
   },
   {
-    "from": 105.4,
-    "to": 107.2,
+    "from": 105.35,
+    "to": 107.55,
     "he": "שבא לי לא לסיים את המשפט",
     "en": "That I don't feel like finishing the sentence"
   },
   {
-    "from": 108.3,
-    "to": 110.4,
+    "from": 108.14,
+    "to": 110.09,
     "he": "וייחודיות מכילה בתוכה רגילות",
     "en": "And uniqueness holds ordinariness inside it"
   },
   {
-    "from": 110.4,
-    "to": 111.7,
+    "from": 110.14,
+    "to": 111.85,
     "he": "ומספיק להיות רגילים",
     "en": "And enough with being ordinary"
   },
   {
-    "from": 111.7,
-    "to": 113.2,
+    "from": 111.94,
+    "to": 113.45,
     "he": "יש מספיק רגילים",
     "en": "There are enough ordinary people"
   },
   {
-    "from": 114.0,
-    "to": 115.3,
+    "from": 113.74,
+    "to": 115.15,
     "he": "ואל תהיו קקות",
     "en": "And don't be lame"
   },
   {
-    "from": 115.5,
-    "to": 116.8,
+    "from": 115.34,
+    "to": 116.95,
     "he": "יש מספיק קקות",
     "en": "There are enough lame people"
   },
   {
-    "from": 117.4,
-    "to": 119.4,
+    "from": 117.34,
+    "to": 119.45,
     "he": "כמו אלה שמשאירים זבל בטבע",
     "en": "Like the ones who leave trash in nature"
   },
   {
-    "from": 119.4,
-    "to": 122.4,
+    "from": 119.54,
+    "to": 122.16,
     "he": "או אלה שלוחצים באמוק על הכפתור סגירה במעלית",
     "en": "Or the ones who frantically jab the close button in the elevator"
   },
   {
-    "from": 122.4,
-    "to": 123.9,
+    "from": 122.21,
+    "to": 123.79,
     "he": "חכה שנייה נשמה",
     "en": "Hold on a second, sweetheart"
   },
-  { "from": 123.9, "to": 124.9, "he": "היא תיסגר", "en": "It will close" },
-  { "from": 124.9, "to": 125.5, "he": "שנייה", "en": "In a second" },
   {
-    "from": 126.6,
-    "to": 129.2,
+    "from": 123.84,
+    "to": 124.85,
+    "he": "היא תיסגר",
+    "en": "It will close"
+  },
+  {
+    "from": 124.9,
+    "to": 125.5,
+    "he": "שנייה",
+    "en": "In a second"
+  },
+  {
+    "from": 126.54,
+    "to": 128.82,
     "he": "ולמה אתם אומרים לעצמכם שמתישהו תצאו מהנוחות",
     "en": "And why do you tell yourselves you'll leave your comfort someday?"
   },
-  { "from": 129.2, "to": 130.5, "he": "למה לא עכשיו?!", "en": "Why not now?!" },
   {
-    "from": 130.8,
-    "to": 132.1,
+    "from": 128.87,
+    "to": 130.35,
+    "he": "למה לא עכשיו?!",
+    "en": "Why not now?!"
+  },
+  {
+    "from": 130.64,
+    "to": 131.89,
     "he": "למה לחכות לגיל 40 כדי",
     "en": "Why wait until you're 40"
   },
   {
-    "from": 132.1,
-    "to": 133.8,
+    "from": 131.94,
+    "to": 133.59,
     "he": "להתבאס על עצמכם של גיל 20",
     "en": "To be bummed about your 20-year-old self?"
   },
-  { "from": 133.8, "to": 135.3, "he": "זוזו עכשיו!!!", "en": "Move now!!!" },
   {
-    "from": 136.7,
-    "to": 139.0,
+    "from": 133.64,
+    "to": 135.45,
+    "he": "זוזו עכשיו!!!",
+    "en": "Move now!!!"
+  },
+  {
+    "from": 136.54,
+    "to": 138.79,
     "he": "ואני רוצה לשכנע ולהגיד לכם שתבואו",
     "en": "And I'd love to convince you and tell you to come"
   },
   {
-    "from": 139.0,
-    "to": 140.8,
+    "from": 138.84,
+    "to": 140.89,
     "he": "כי מחוץ לאיזור הנוחות יהיה כיף",
     "en": "Because outside the comfort zone it'll be fun"
   },
   {
-    "from": 141.0,
-    "to": 143.0,
+    "from": 140.94,
+    "to": 142.39,
     "he": "אבל אני לא יכול להבטיח דבר כזה",
     "en": "But I can't promise anything like that"
   },
   {
-    "from": 143.0,
-    "to": 145.2,
+    "from": 142.44,
+    "to": 144.71,
     "he": "כי זה מה שיפה מחוץ לאיזור הנוחות",
     "en": "Because that's the beauty outside the comfort zone"
   },
   {
-    "from": 145.2,
-    "to": 146.7,
+    "from": 144.76,
+    "to": 146.65,
     "he": "הוא לא מתעסק בכיף",
     "en": "It's not about fun"
   },
   {
-    "from": 146.7,
-    "to": 150.2,
+    "from": 146.94,
+    "to": 150.85,
     "he": "הוא מסעיר ומפתיע ומרטיט ובעיקר ממלא",
     "en": "It's thrilling, surprising, stirring and above all fulfilling"
   },
   {
-    "from": 151.1,
-    "to": 152.5,
+    "from": 151.04,
+    "to": 152.69,
     "he": "וכשמלאים באמת",
     "en": "And when you're truly fulfilled"
   },
   {
-    "from": 153.0,
-    "to": 154.3,
+    "from": 152.74,
+    "to": 154.25,
     "he": "אז באמת כיף",
     "en": "Then it's really fun"
   },
   {
-    "from": 155.8,
-    "to": 157.2,
+    "from": 155.64,
+    "to": 157.35,
     "he": "איש שהמצאתי אמר פעם",
     "en": "A man I made up once said"
   },
   {
-    "from": 157.8,
-    "to": 159.1,
+    "from": 157.84,
+    "to": 159.35,
     "he": "אם הייתי חווה יותר",
     "en": "If I had experienced more"
   },
   {
-    "from": 159.5,
-    "to": 160.8,
+    "from": 159.64,
+    "to": 161.25,
     "he": "הייתי חווה יותר",
     "en": "I would have experienced more"
   },
   {
-    "from": 162.0,
-    "to": 163.7,
+    "from": 161.94,
+    "to": 163.35,
     "he": "שזה דיי הגיוני",
     "en": "Which is pretty logical"
   },
-  { "from": 163.7, "to": 164.5, "he": "לא?", "en": "Right?" }
+  {
+    "from": 163.54,
+    "to": 164.55,
+    "he": "לא?",
+    "en": "Right?"
+  }
 ]

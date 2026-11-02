@@ -3,28 +3,29 @@
 Re-times the Comfort Zone subtitle cues to the narration.
 
 The cues in src/comfort-zone/data/subtitles.json were read off the burned-in
-Hebrew subtitles, whose timing follows the picture edit rather than the voice.
-This script moves every cue onto the speech:
+Hebrew subtitles, whose timing follows the picture edit and drifts a few
+hundred milliseconds from the voice. This script moves every cue onto the
+speech itself:
 
-  1. The Hebrew cue text is aligned word by word with a whisper.cpp
-     transcript of the narration (banded longest-common-subsequence, tolerant
-     of prefix letters), which gives each cue a start and end measured from
-     the transcript's sentence timings.
-  2. Those boundaries are then snapped to the nearest speech onset / offset
-     found in the audio energy envelope, since whisper's sentence timings are
-     only accurate to a few hundred milliseconds.
+  1. Silero VAD finds the speech segments in the narration (it is robust to
+     the music bed, which defeats energy thresholds; whisper.cpp large-v3
+     hallucinates on this mix, so speech recognition is not used).
+  2. Each speech segment is given to the cue it overlaps most. A cue that owns
+     several segments spans all of them. Several cues sharing one unbroken
+     run of speech keep their relative split and are stretched to the run.
+  3. Cues start a hair before the voice and hold briefly after it, and never
+     overlap the next cue.
 
 Usage:
-  python3 tools/comfort-zone/retime.py <narration.wav (16 kHz mono)> \
-      <transcript.json> [--write]
+  python3 tools/comfort-zone/retime.py <narration.wav (16 kHz mono)> [--write]
 
-Without --write it prints the old and new timings; with it the JSON is updated
-in place (the English text is kept).
+Needs `pip install torch --index-url https://download.pytorch.org/whl/cpu`
+and `pip install silero-vad`. Without --write it only prints the old and new
+timings; with it the JSON is updated in place (the English text is kept).
 """
 import argparse
 import json
 import os
-import re
 import wave
 
 import numpy as np
@@ -32,140 +33,93 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 CUES_PATH = os.path.join(HERE, "..", "..", "src", "comfort-zone", "data", "subtitles.json")
 
-HEB = re.compile(r"[^֐-׿\w\s]")
+LEAD = 0.06  # seconds the cue appears before the voice
+TAIL = 0.25  # seconds it holds after the voice
+GAP = 0.05  # minimum gap between cues
+MIN_DUR = 0.6
+SEARCH = 0.6  # how far from the original window a segment may be claimed
 
 
-def words(s):
-    s = HEB.sub(" ", s).replace("'", "").replace("׳", "").replace("״", "")
-    return [w for w in s.lower().split() if w]
+def speech_segments(wav_path):
+    import torch
+    from silero_vad import get_speech_timestamps, load_silero_vad
 
-
-def similar(a, b):
-    if a == b:
-        return 1.0
-    if len(a) >= 4 and len(b) >= 4 and (a.startswith(b) or b.startswith(a)):
-        return 0.8
-    if len(a) >= 3 and len(b) >= 3 and (a[1:] == b or b[1:] == a or a[1:] == b[1:]):
-        return 0.6  # ו/ה/ב/ש prefix differs
-    return 0.0
-
-
-def align(cue_words, asr_words):
-    """Banded LCS between the two word lists; returns (cue index -> asr index)."""
-    n, m = len(cue_words), len(asr_words)
-    band = max(80, abs(n - m) * 2 + 80)
-    score = np.zeros((n + 1, m + 1), np.float32)
-    back = np.zeros((n + 1, m + 1), np.int8)
-    for i in range(1, n + 1):
-        jc = round(i * m / n)
-        for j in range(max(1, jc - band), min(m, jc + band) + 1):
-            s = similar(cue_words[i - 1], asr_words[j - 1])
-            best, d = score[i - 1, j], 1
-            if score[i, j - 1] > best:
-                best, d = score[i, j - 1], 2
-            if s > 0 and score[i - 1, j - 1] + s > best:
-                best, d = score[i - 1, j - 1] + s, 3
-            score[i, j], back[i, j] = best, d
-    pairs = {}
-    i, j = n, m
-    while i > 0 and j > 0:
-        d = back[i, j]
-        if d == 3:
-            pairs[i - 1] = j - 1
-            i, j = i - 1, j - 1
-        elif d == 2:
-            j -= 1
-        else:
-            i -= 1
-    return pairs
-
-
-def envelope(wav_path, hop=0.01):
     with wave.open(wav_path) as w:
-        sr = w.getframerate()
+        assert w.getframerate() == 16000 and w.getnchannels() == 1, "need 16 kHz mono"
         x = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
-    n = int(sr * hop)
-    frames = len(x) // n
-    e = np.sqrt((x[: frames * n].reshape(frames, n) ** 2).mean(1))
-    # Smooth a little and express relative to the quiet floor.
-    k = np.ones(5) / 5
-    e = np.convolve(e, k, mode="same")
-    floor = np.percentile(e, 20)
-    return e / max(floor, 1e-5), hop
+    model = load_silero_vad()
+    segs = get_speech_timestamps(
+        torch.from_numpy(x.copy()), model, sampling_rate=16000, threshold=0.5,
+        min_speech_duration_ms=150, min_silence_duration_ms=120, speech_pad_ms=30, return_seconds=True,
+    )
+    return [(s["start"], s["end"]) for s in segs]
 
 
-def snap(t, env, hop, want, window=0.35, thr=3.0):
-    """Move t to the nearest speech onset ("start") or offset ("end") within the window."""
-    i = int(round(t / hop))
-    lo, hi = max(1, i - int(window / hop)), min(len(env) - 2, i + int(window / hop))
-    loud = env > thr
-    best, bestd = None, 1e9
-    for k in range(lo, hi + 1):
-        edge = (not loud[k - 1] and loud[k]) if want == "start" else (loud[k - 1] and not loud[k])
-        if edge and abs(k - i) < bestd:
-            best, bestd = k, abs(k - i)
-    return t if best is None else best * hop
+def overlap(a0, a1, b0, b1):
+    return max(0.0, min(a1, b1) - max(a0, b0))
+
+
+def retime(cues, segs):
+    # 1. Which cues does each speech segment belong to? A cue claims a segment
+    #    when the segment lies mostly inside the cue's window, or covers most
+    #    of the cue. Several claimants share one unbroken run of speech and
+    #    split it in proportion to their original timing.
+    pieces = {}  # cue index -> [(t0, t1), ...]
+    for s0, s1 in segs:
+        seg_dur = s1 - s0
+        cands = []
+        for ci, c in enumerate(cues):
+            ov = overlap(s0, s1, c["from"], c["to"])
+            if ov >= 0.6 * seg_dur or ov >= 0.4 * (c["to"] - c["from"]):
+                cands.append(ci)
+        if not cands:
+            continue  # a noise the VAD took for speech, between lines
+        if len(cands) == 1:
+            pieces.setdefault(cands[0], []).append((s0, s1))
+            continue
+        first, last = cues[cands[0]], cues[cands[-1]]
+        span = last["to"] - first["from"]
+        for ci in cands:
+            c = cues[ci]
+            t0 = s0 + (c["from"] - first["from"]) / span * seg_dur
+            t1 = s0 + (c["to"] - first["from"]) / span * seg_dur
+            pieces.setdefault(ci, []).append((t0, t1))
+
+    # 2. Padding, ordering, no overlaps.
+    out = []
+    for ci, c in enumerate(cues):
+        if ci not in pieces:
+            out.append({**c, "note": "no speech found; kept"})
+            continue
+        t0 = min(p[0] for p in pieces[ci])
+        t1 = max(p[1] for p in pieces[ci])
+        out.append({**c, "from": t0 - LEAD, "to": max(t1 + TAIL, t0 + MIN_DUR)})
+    for i in range(len(out) - 1):
+        limit = out[i + 1]["from"] - GAP
+        if out[i]["to"] > limit:
+            out[i]["to"] = max(limit, out[i]["from"] + MIN_DUR)
+    for o in out:
+        o["from"], o["to"] = round(o["from"], 2), round(o["to"], 2)
+    return out
 
 
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("wav")
-    p.add_argument("transcript")
     p.add_argument("--write", action="store_true")
     a = p.parse_args()
 
     cues = json.load(open(CUES_PATH, encoding="utf-8"))
-    raw = json.load(open(a.transcript, encoding="utf-8"))
-    segs = raw if isinstance(raw, list) else [
-        {"from": s["offsets"]["from"] / 1000, "to": s["offsets"]["to"] / 1000, "text": s["text"]} for s in raw["transcription"]
-    ]
-
-    asr = []  # (word, start, end)
-    for s in segs:
-        ws = words(s["text"])
-        if not ws:
-            continue
-        span = max(0.05, s["to"] - s["from"])
-        total = sum(len(w) + 1 for w in ws)
-        acc = 0.0
-        for w in ws:
-            t0 = s["from"] + span * acc / total
-            t1 = s["from"] + span * (acc + len(w) + 1) / total
-            asr.append((w, t0, t1))
-            acc += len(w) + 1
-
-    cue_words, owner = [], []
-    for ci, c in enumerate(cues):
-        for w in words(c["he"]):
-            cue_words.append(w)
-            owner.append(ci)
-    pairs = align(cue_words, [w for w, _, _ in asr])
-
-    env, hop = envelope(a.wav)
-    out = []
-    last_end = 0.0
-    for ci, c in enumerate(cues):
-        idx = [k for k in range(len(cue_words)) if owner[k] == ci]
-        hits = [pairs[k] for k in idx if k in pairs]
-        if not hits:
-            out.append({**c, "note": "no match"})
-            continue
-        first, last = asr[min(hits)], asr[max(hits)]
-        start = snap(first[1], env, hop, "start")
-        end = snap(last[2], env, hop, "end")
-        start = max(start - 0.08, last_end + 0.05)  # a touch early, never overlapping
-        end = max(end + 0.25, start + 0.7)
-        last_end = end
-        out.append({**c, "from": round(start, 2), "to": round(end, 2), "matched": f"{len(hits)}/{len(idx)}"})
-
+    segs = speech_segments(a.wav)
+    out = retime(cues, segs)
     for c, o in zip(cues, out):
-        flag = "" if "note" not in o else "  <-- " + o["note"]
-        print(f"{c['from']:7.2f}-{c['to']:7.2f} -> {o['from']:7.2f}-{o['to']:7.2f}  {o.get('matched', ''):6}  {c['he']}{flag}")
-
+        d0, d1 = o["from"] - c["from"], o["to"] - c["to"]
+        flag = "   <-- " + o["note"] if "note" in o else ""
+        print(f"{c['from']:7.2f}-{c['to']:7.2f} -> {o['from']:7.2f}-{o['to']:7.2f}  ({d0:+.2f} {d1:+.2f})  {c['he']}{flag}")
     if a.write:
-        clean = [{k: v for k, v in o.items() if k in ("from", "to", "he", "en")} for o in out]
-        json.dump(clean, open(CUES_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-        with open(CUES_PATH, "a", encoding="utf-8") as f:
+        clean = [{k: o[k] for k in ("from", "to", "he", "en")} for o in out]
+        with open(CUES_PATH, "w", encoding="utf-8") as f:
+            json.dump(clean, f, ensure_ascii=False, indent=2)
             f.write("\n")
         print(f"wrote {CUES_PATH}")
 
