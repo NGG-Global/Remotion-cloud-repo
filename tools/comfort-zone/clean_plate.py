@@ -47,9 +47,12 @@ FPS = WORDS["fps"]
 # Subtitle band in the master (1920x1080).
 SUB_Y0, SUB_Y1, SUB_X0, SUB_X1 = 950, 1060, 250, 1670
 
+# Frames of clean history kept per drone shot (see the fade-in note below).
+HISTORY = 14
+
 # Drone shots with 3D words: the band of sky the words live in.
 SKY_SHOTS = [
-    {"name": "ideal-real", "frames": [1409, 1548], "band": (60, 230, 1900, 640)},
+    {"name": "ideal-real", "frames": [1409, 1548], "band": (60, 420, 1900, 650)},
     {"name": "names", "frames": [2166, 2377], "band": (60, 270, 1900, 660)},
     {"name": "adjectives", "frames": [4417, 4505], "band": (60, 270, 1900, 660)},
 ]
@@ -190,6 +193,11 @@ def process(args):
             break
         frame = src.copy()
 
+        # 0. Burned-in subtitles, first, so the reference frames below never
+        #    carry them.
+        if any(a <= f <= b for a, b in cue_frames):
+            remove_subtitles(frame)
+
         # 1. Drone shots with 3D words.
         for sky in skies:
             s0, s1 = sky["frames"]
@@ -209,6 +217,7 @@ def process(args):
                     inpaint_region(frame, m, x0 - 40, y0 - 40, x1 + 40, y1 + 40, radius=10)
                 sky["ref"] = frame.copy()
                 sky["prev"] = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY).astype(np.float32)
+                sky["history"] = []  # (clean frame, shift since it) for the slow fade-ins
                 continue
             g = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY).astype(np.float32)
             (dx, dy), _ = cv2.phaseCorrelate(sky["prev"], g, sky["win"])
@@ -220,15 +229,30 @@ def process(args):
             valid = cv2.warpAffine(np.full((h, w), 255, np.uint8), M, (w, h), flags=cv2.INTER_NEAREST, borderValue=0)
             valid = cv2.erode(valid, np.ones((17, 17), np.uint8))
             d = np.abs(frame.astype(np.int16) - refw.astype(np.int16)).max(axis=2)
+            # A word that fades in slowly changes too little from one frame to
+            # the next, so also compare with the clean frame from half a second
+            # ago, shifted by the motion accumulated since.
+            hist = [(fr, (sx + dx, sy + dy)) for fr, (sx, sy) in sky["history"]]
+            if len(hist) >= HISTORY:
+                old, (ox, oy) = hist[0]
+                oldw = cv2.warpAffine(old, np.float32([[1, 0, ox], [0, 1, oy]]), (w, h),
+                                      flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+                d2 = np.abs(frame.astype(np.int16) - oldw.astype(np.int16)).max(axis=2)
+            else:
+                d2 = np.zeros_like(d)
             bx0, by0, bx1, by1 = sky["band"]
             band = np.zeros((h, w), np.uint8)
             band[by0:by1, bx0:bx1] = 1
             # Inside the sky band a low threshold catches the words' soft
             # edges; outside it (hills, fields) only the big fly-out pieces,
             # which differ strongly, are touched.
-            m = ((d > 14) & (band > 0)) | ((d > 24) & (band == 0))
+            # Third net, for words that drift in so faintly that neither
+            # comparison fires: anything in the sky band that is brighter than
+            # its blurred surroundings. Haze and clouds are too soft to trip it.
+            v = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY).astype(np.int16)
+            crisp = (v - cv2.GaussianBlur(v.astype(np.uint8), (0, 0), 25).astype(np.int16) > 9)
+            m = ((np.maximum(d, d2 - 4) > 11) & (band > 0)) | (crisp & (band > 0)) | ((np.maximum(d, d2 - 4) > 24) & (band == 0))
             m = m.astype(np.uint8)
-            m[SUB_Y0:, :] = 0
             m[:16, :] = m[-16:, :] = 0
             m[:, :16] = m[:, -16:] = 0
             m = cv2.morphologyEx(m, cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
@@ -238,22 +262,19 @@ def process(args):
             for i in range(1, n):
                 x, y, cw, ch, area = st[i]
                 inside = band[y:y + ch, x:x + cw].mean() > 0.5
-                if area < (150 if inside else 4000):
+                if area < (40 if inside else 4000):
                     m[lab == i] = 0
             m = cv2.dilate(m, np.ones((9, 9), np.uint8), iterations=2)
             m = m * (valid > 0)
-            feather_fill(frame, refw, m, blur=7)
+            feather_fill(frame, refw, m, blur=15)
             sky["ref"] = frame.copy()
+            sky["history"] = (hist + [(frame.copy(), (0.0, 0.0))])[-HISTORY:]
 
         # 3. Static-camera shots (ribbons, close-up).
         for s in statics:
             s0, s1 = s.cfg["frames"]
             if s0 <= f < s1:
                 s.apply(frame)
-
-        # 4. Burned-in subtitles.
-        if any(a <= f <= b for a, b in cue_frames):
-            remove_subtitles(frame)
 
         if enc:
             enc.stdin.write(frame.tobytes())
