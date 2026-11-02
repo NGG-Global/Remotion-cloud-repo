@@ -97,7 +97,9 @@ def retime(cues, segs):
     for i in range(len(out) - 1):
         limit = out[i + 1]["from"] - GAP
         if out[i]["to"] > limit:
-            out[i]["to"] = max(limit, out[i]["from"] + MIN_DUR)
+            # Short lines spoken back to back: cut the hold, not the next line.
+            out[i]["to"] = max(limit, out[i]["from"] + 0.45)
+            out[i + 1]["from"] = max(out[i + 1]["from"], out[i]["to"] + GAP)
     for o in out:
         o["from"], o["to"] = round(o["from"], 2), round(o["to"], 2)
     return out
