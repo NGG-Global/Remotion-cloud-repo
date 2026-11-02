@@ -20,3 +20,7 @@ out
 
 # Alignment diagnostics written by tools/align-srt.mjs
 *.aligned.json
+
+# Derived clean plate for the English Comfort Zone cut. Regenerate with
+# `npm run plate` (see tools/comfort-zone/clean_plate.py).
+public/video/comfort-zone-clean.mp4

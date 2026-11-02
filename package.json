@@ -19,7 +19,8 @@
     "studio": "remotion studio",
     "transcribe": "node tools/transcribe.mjs",
     "typecheck": "tsc",
-    "upgrade-remotion": "remotion upgrade"
+    "upgrade-remotion": "remotion upgrade",
+    "plate": "python3 tools/comfort-zone/clean_plate.py public/video/comfort-zone-he.mp4 public/video/comfort-zone-clean.mp4"
   },
   "dependencies": {
     "@react-three/fiber": "^9.7.0",

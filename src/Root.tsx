@@ -44,6 +44,12 @@ import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
 import { RigSheet } from "./gacy/dev/RigSheet";
 import { SetTest } from "./gacy/dev/SetTest";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
+import {
+  ComfortZoneEN,
+  COMFORT_ZONE_DURATION,
+  comfortZoneDefaultProps,
+  comfortZoneSchema,
+} from "./comfort-zone/ComfortZoneEN";
 import { FORMAT, seconds } from "./theme";
 
 /**
@@ -122,6 +128,15 @@ export const RemotionRoot: React.FC = () => {
         id="GacyRigSheet"
         component={RigSheet}
         durationInFrames={90}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="ComfortZoneEN"
+        component={ComfortZoneEN}
+        durationInFrames={COMFORT_ZONE_DURATION}
+        schema={comfortZoneSchema}
+        defaultProps={comfortZoneDefaultProps}
         {...FORMAT}
       />
 
