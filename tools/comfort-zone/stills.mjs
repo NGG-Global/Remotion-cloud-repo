@@ -14,16 +14,10 @@ import { fileURLToPath } from "node:url";
 
 const [, , outDir, plate, ...frames] = process.argv;
 if (!outDir || !["clean", "source"].includes(plate) || frames.length === 0) {
-  console.error(
-    "Usage: node tools/comfort-zone/stills.mjs <outDir> <clean|source> <frame> [frame...]",
-  );
+  console.error("Usage: node tools/comfort-zone/stills.mjs <outDir> <clean|source> <frame> [frame...]");
   process.exit(1);
 }
-const root = path.resolve(
-  path.dirname(fileURLToPath(import.meta.url)),
-  "..",
-  "..",
-);
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 fs.mkdirSync(outDir, { recursive: true });
 
 const serveUrl = await bundle({
@@ -32,11 +26,7 @@ const serveUrl = await bundle({
   publicDir: path.join(root, "public"),
 });
 const inputProps = { plate, subtitles: true, words: true };
-const composition = await selectComposition({
-  serveUrl,
-  id: "ComfortZoneEN",
-  inputProps,
-});
+const composition = await selectComposition({ serveUrl, id: "ComfortZoneEN", inputProps });
 for (const f of frames) {
   await renderStill({
     composition,

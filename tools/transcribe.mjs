@@ -58,20 +58,7 @@ await downloadWhisperModel({ folder: whisperPath, model });
 console.log("Converting audio...");
 execFileSync(
   "npx",
-  [
-    "remotion",
-    "ffmpeg",
-    "-i",
-    input,
-    "-ar",
-    "16000",
-    "-ac",
-    "1",
-    "-c:a",
-    "pcm_s16le",
-    wav,
-    "-y",
-  ],
+  ["remotion", "ffmpeg", "-i", input, "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", wav, "-y"],
   { stdio: "ignore" },
 );
 
