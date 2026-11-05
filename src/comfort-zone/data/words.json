@@ -3,7 +3,7 @@
   "words": [
     {
       "id": "ideal",
-      "en": "IDEAL",
+      "en": "WANT",
       "he": "רצוי",
       "shot": [1409, 1548],
       "keys": [
@@ -61,7 +61,7 @@
     },
     {
       "id": "real",
-      "en": "REAL",
+      "en": "IS",
       "he": "מצוי",
       "shot": [1409, 1548],
       "keys": [
@@ -420,7 +420,7 @@
     },
     {
       "id": "stirring",
-      "en": "STIRRING",
+      "en": "ELECTRIFYING",
       "he": "מרטיט",
       "shot": [4417, 4505],
       "keys": [

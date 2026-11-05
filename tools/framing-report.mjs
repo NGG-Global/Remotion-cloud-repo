@@ -28,8 +28,13 @@ const H = 1080;
 const FPS = 30;
 
 const timeline = fs.readFileSync("src/gacy/data/timeline.ts", "utf8");
-const body = timeline.slice(timeline.indexOf("export const SHOTS"), timeline.indexOf("export const END_SECONDS"));
-const shots = [...body.matchAll(/\{ id: "([^"]+)", at: ([\d.]+)/g)].map((m) => ({ id: m[1], at: Number(m[2]) }));
+const body = timeline.slice(
+  timeline.indexOf("export const SHOTS"),
+  timeline.indexOf("export const END_SECONDS"),
+);
+const shots = [...body.matchAll(/\{ id: "([^"]+)", at: ([\d.]+)/g)].map(
+  (m) => ({ id: m[1], at: Number(m[2]) }),
+);
 const shotAt = (frame) => {
   const t = frame / FPS;
   let s = shots[0];
@@ -87,18 +92,35 @@ for (const line of fs.readFileSync(logPath, "utf8").split("\n")) {
   if ((crossesX && inY) || (crossesY && inX)) {
     add(shot, "head cut by frame edge", f, `head at (${hx}, ${hy}) r=${hr}`);
   } else if (hy + hr <= 0 && fy > 0 && hx > 0 && hx < W) {
-    add(shot, "head above frame, body in frame", f, `head y=${hy}, feet y=${fy}`);
-  } else if (inY && ((hx + hr <= 0 && hx + 3 * hr > 0) || (hx - hr >= W && hx - 3 * hr < W))) {
+    add(
+      shot,
+      "head above frame, body in frame",
+      f,
+      `head y=${hy}, feet y=${fy}`,
+    );
+  } else if (
+    inY &&
+    ((hx + hr <= 0 && hx + 3 * hr > 0) || (hx - hr >= W && hx - 3 * hr < W))
+  ) {
     // Just past a side edge: the shoulders and arms are likely still in frame.
-    add(shot, "head beside frame, body in frame", f, `head at (${hx}, ${hy}) r=${hr}`);
+    add(
+      shot,
+      "head beside frame, body in frame",
+      f,
+      `head at (${hx}, ${hy}) r=${hr}`,
+    );
   }
 }
 
-const rows = [...issues.values()].sort((a, b) => [...a.frames][0] - [...b.frames][0]);
+const rows = [...issues.values()].sort(
+  (a, b) => [...a.frames][0] - [...b.frames][0],
+);
 if (!rows.length) {
   console.log("No cut heads found.");
 }
 for (const r of rows) {
   const frames = [...r.frames].sort((a, b) => a - b);
-  console.log(`${r.shot.padEnd(18)} ${r.kind.padEnd(34)} frames ${frames.join(",")}  (${r.detail})`);
+  console.log(
+    `${r.shot.padEnd(18)} ${r.kind.padEnd(34)} frames ${frames.join(",")}  (${r.detail})`,
+  );
 }

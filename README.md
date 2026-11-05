@@ -78,8 +78,13 @@ repository's default branch, so merge it there first.
 one. The Hebrew master sits in `public/video/comfort-zone-he.mp4`; the
 composition plays it back and lays English text over it:
 
-- the burned-in subtitles, retimed from the master and translated
-  (`src/comfort-zone/data/subtitles.json`);
+- English subtitles of the narration (the voice-over is already in English;
+  only the burned-in subtitles were Hebrew). The cue lines live in
+  `src/comfort-zone/data/subtitle-lines.txt`, worded as spoken; `npm run
+subtitles` times them from the narration's word timestamps and writes
+  `subtitles.json`. `python3 tools/comfort-zone/retime.py transcribe
+public/video/comfort-zone-he.mp4` regenerates those timestamps if the audio
+  ever changes;
 - the extruded 3D words that fly through the drone shots ("ideal / real",
   the names, the four adjectives), following tracks measured off the Hebrew
   words (`src/comfort-zone/data/words.json`);

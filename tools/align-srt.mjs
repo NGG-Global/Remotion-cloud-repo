@@ -20,7 +20,9 @@ import fs from "node:fs";
 
 const [srtPath, transcriptPath, beatsPath] = process.argv.slice(2);
 if (!srtPath || !transcriptPath) {
-  console.error("Usage: node tools/align-srt.mjs <srt> <transcript.json> [beats.ts]");
+  console.error(
+    "Usage: node tools/align-srt.mjs <srt> <transcript.json> [beats.ts]",
+  );
   process.exit(1);
 }
 
@@ -48,7 +50,11 @@ for (const block of srt.split(/\n\n+/)) {
   if (lines.length < 3) continue;
   const times = lines[1].match(/(\S+)\s+-->\s+(\S+)/);
   if (!times) continue;
-  cues.push({ from: toSeconds(times[1]), to: toSeconds(times[2]), text: lines.slice(2).join(" ") });
+  cues.push({
+    from: toSeconds(times[1]),
+    to: toSeconds(times[2]),
+    text: lines.slice(2).join(" "),
+  });
 }
 const srtWords = [];
 for (const cue of cues) {
@@ -56,7 +62,10 @@ for (const cue of cues) {
   const chars = words.reduce((a, w) => a + w.length + 1, 0);
   let acc = 0;
   for (const w of words) {
-    srtWords.push({ w, t: cue.from + ((acc + w.length / 2) / chars) * (cue.to - cue.from) });
+    srtWords.push({
+      w,
+      t: cue.from + ((acc + w.length / 2) / chars) * (cue.to - cue.from),
+    });
     acc += w.length + 1;
   }
 }
@@ -67,12 +76,18 @@ for (const cue of cues) {
 const raw = JSON.parse(fs.readFileSync(transcriptPath, "utf8"));
 const transcript = Array.isArray(raw)
   ? raw
-  : raw.transcription.map((seg) => ({ from: seg.offsets.from / 1000, to: seg.offsets.to / 1000, text: seg.text }));
+  : raw.transcription.map((seg) => ({
+      from: seg.offsets.from / 1000,
+      to: seg.offsets.to / 1000,
+      text: seg.text,
+    }));
 const asrWords = [];
 for (const seg of transcript) {
   const words = normalise(seg.text);
   const span = Math.max(0.01, seg.to - seg.from);
-  words.forEach((w, i) => asrWords.push({ w, t: seg.from + (span * (i + 0.5)) / words.length }));
+  words.forEach((w, i) =>
+    asrWords.push({ w, t: seg.from + (span * (i + 0.5)) / words.length }),
+  );
 }
 
 // ---- longest-common-subsequence style alignment (banded DP) ------------------
@@ -80,7 +95,8 @@ const A = srtWords.map((x) => x.w);
 const B = asrWords.map((x) => x.w);
 const similar = (a, b) => {
   if (a === b) return 1;
-  if (a.length >= 4 && b.length >= 4 && (a.startsWith(b) || b.startsWith(a))) return 0.8;
+  if (a.length >= 4 && b.length >= 4 && (a.startsWith(b) || b.startsWith(a)))
+    return 0.8;
   if (a.length >= 5 && b.length >= 5 && a.slice(1) === b.slice(1)) return 0.6; // prefix letter (ו/ה/ב) differs
   return 0;
 };
@@ -117,7 +133,11 @@ let j = m;
 while (i > 0 && j > 0) {
   const dir = back.get(key(i, j));
   if (dir === 3) {
-    anchors.push({ srt: srtWords[i - 1].t, asr: asrWords[j - 1].t, w: A[i - 1] });
+    anchors.push({
+      srt: srtWords[i - 1].t,
+      asr: asrWords[j - 1].t,
+      w: A[i - 1],
+    });
     i--;
     j--;
   } else if (dir === 1 || dir === undefined) i--;
@@ -133,7 +153,9 @@ for (const a of anchors) {
   if (prev && Math.abs(a.asr - a.srt - (prev.asr - prev.srt)) > 4) continue;
   smooth.push(a);
 }
-console.log(`subtitle words ${n}, transcript words ${m}, anchors ${anchors.length}, kept ${smooth.length}`);
+console.log(
+  `subtitle words ${n}, transcript words ${m}, anchors ${anchors.length}, kept ${smooth.length}`,
+);
 
 const mapTime = (t) => {
   if (t <= smooth[0].srt) return t + (smooth[0].asr - smooth[0].srt);
@@ -149,11 +171,16 @@ const mapTime = (t) => {
   return t + (last.asr - last.srt);
 };
 
-fs.writeFileSync(`${srtPath}.aligned.json`, JSON.stringify({ anchors: smooth }, null, 1));
+fs.writeFileSync(
+  `${srtPath}.aligned.json`,
+  JSON.stringify({ anchors: smooth }, null, 1),
+);
 
 // Report the drift at each cue start.
 for (const cue of cues.filter((_, k) => k % 10 === 0)) {
-  console.log(`${cue.from.toFixed(2)} -> ${mapTime(cue.from).toFixed(2)}  (${(mapTime(cue.from) - cue.from).toFixed(2)})  ${cue.text.slice(0, 40)}`);
+  console.log(
+    `${cue.from.toFixed(2)} -> ${mapTime(cue.from).toFixed(2)}  (${(mapTime(cue.from) - cue.from).toFixed(2)})  ${cue.text.slice(0, 40)}`,
+  );
 }
 
 if (beatsPath) {

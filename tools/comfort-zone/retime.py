@@ -1,130 +1,145 @@
 #!/usr/bin/env python3
 """
-Re-times the Comfort Zone subtitle cues to the narration.
+Builds the English subtitles of ComfortZoneEN from the narration itself.
 
-The cues in src/comfort-zone/data/subtitles.json were read off the burned-in
-Hebrew subtitles, whose timing follows the picture edit and drifts a few
-hundred milliseconds from the voice. This script moves every cue onto the
-speech itself:
+The film's voice-over is in English; only the burned-in subtitles were
+Hebrew. So the cues are the spoken words, timed from the audio:
 
-  1. Silero VAD finds the speech segments in the narration (it is robust to
-     the music bed, which defeats energy thresholds; whisper.cpp large-v3
-     hallucinates on this mix, so speech recognition is not used).
-  2. Each speech segment is given to the cue it overlaps most. A cue that owns
-     several segments spans all of them. Several cues sharing one unbroken
-     run of speech keep their relative split and are stretched to the run.
-  3. Cues start a hair before the voice and hold briefly after it, and never
-     overlap the next cue.
+  transcribe  Runs faster-whisper (large-v3, English, word timestamps) and
+              Silero VAD on the master's audio and stores the results in
+              src/comfort-zone/data/narration.words.json and
+              narration.speech.json. Only needed if the audio changes.
+              Needs: pip install faster-whisper silero-vad
+                     pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+  build       Reads the cue lines in src/comfort-zone/data/subtitle-lines.txt
+              (one cue per line, worded as spoken), walks them along the
+              transcript word by word, and writes subtitles.json with each
+              cue's timing. No ML dependencies.
 
 Usage:
-  python3 tools/comfort-zone/retime.py <narration.wav (16 kHz mono)> [--write]
-
-Needs `pip install torch --index-url https://download.pytorch.org/whl/cpu`
-and `pip install silero-vad`. Without --write it only prints the old and new
-timings; with it the JSON is updated in place (the English text is kept).
+  python3 tools/comfort-zone/retime.py transcribe public/video/comfort-zone-he.mp4
+  python3 tools/comfort-zone/retime.py build
 """
-import argparse
 import json
 import os
+import re
+import subprocess
+import sys
+import tempfile
 import wave
 
-import numpy as np
-
 HERE = os.path.dirname(os.path.abspath(__file__))
-CUES_PATH = os.path.join(HERE, "..", "..", "src", "comfort-zone", "data", "subtitles.json")
+DATA = os.path.join(HERE, "..", "..", "src", "comfort-zone", "data")
+WORDS = os.path.join(DATA, "narration.words.json")
+SPEECH = os.path.join(DATA, "narration.speech.json")
+LINES = os.path.join(DATA, "subtitle-lines.txt")
+OUT = os.path.join(DATA, "subtitles.json")
 
-LEAD = 0.06  # seconds the cue appears before the voice
-TAIL = 0.25  # seconds it holds after the voice
-GAP = 0.05  # minimum gap between cues
-MIN_DUR = 0.6
-SEARCH = 0.6  # how far from the original window a segment may be claimed
+LEAD = 0.05  # cue appears this long before the first word
+TAIL = 0.15  # and holds at least this long after the last one
+HOLD = 0.6  # extra hold allowed when the next cue is far away
+MIN_DUR = 0.8  # shortest cue, room permitting
+GAP = 0.04  # never closer than this to the next cue
+SNAP = 0.6  # how far a boundary in silence may move to the speech edge
 
 
-def speech_segments(wav_path):
+def load_audio(path):
+    with tempfile.TemporaryDirectory() as tmp:
+        wav = os.path.join(tmp, "a.wav")
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", path, "-vn", "-ac", "1", "-ar", "16000",
+                        "-c:a", "pcm_s16le", wav], check=True)
+        import numpy as np
+
+        with wave.open(wav) as w:
+            return np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
+
+
+def transcribe(media):
     import torch
+    from faster_whisper import WhisperModel
     from silero_vad import get_speech_timestamps, load_silero_vad
 
-    with wave.open(wav_path) as w:
-        assert w.getframerate() == 16000 and w.getnchannels() == 1, "need 16 kHz mono"
-        x = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
-    model = load_silero_vad()
-    segs = get_speech_timestamps(
-        torch.from_numpy(x.copy()), model, sampling_rate=16000, threshold=0.5,
-        min_speech_duration_ms=150, min_silence_duration_ms=120, speech_pad_ms=30, return_seconds=True,
-    )
-    return [(s["start"], s["end"]) for s in segs]
+    x = load_audio(media)
+    model = WhisperModel("large-v3", device="cpu", compute_type="int8")
+    segs, _ = model.transcribe(x, language="en", word_timestamps=True, beam_size=5, vad_filter=True,
+                               vad_parameters={"min_silence_duration_ms": 200}, condition_on_previous_text=False)
+    words = [{"w": w.word.strip(), "start": round(w.start, 2), "end": round(w.end, 2), "p": round(w.probability, 2)}
+             for s in segs for w in s.words]
+    with open(WORDS, "w") as f:
+        json.dump(words, f, indent=0)
+    speech = get_speech_timestamps(torch.from_numpy(x.copy()), load_silero_vad(), sampling_rate=16000,
+                                   threshold=0.5, min_speech_duration_ms=150, min_silence_duration_ms=120,
+                                   speech_pad_ms=30, return_seconds=True)
+    with open(SPEECH, "w") as f:
+        json.dump([[round(s["start"], 2), round(s["end"], 2)] for s in speech], f)
+    print(f"{len(words)} words, {len(speech)} speech runs")
 
 
-def overlap(a0, a1, b0, b1):
-    return max(0.0, min(a1, b1) - max(a0, b0))
+def norm(w):
+    return re.sub(r"[^a-z0-9']", "", w.lower())
 
 
-def retime(cues, segs):
-    # 1. Which cues does each speech segment belong to? A cue claims a segment
-    #    when the segment lies mostly inside the cue's window, or covers most
-    #    of the cue. Several claimants share one unbroken run of speech and
-    #    split it in proportion to their original timing.
-    pieces = {}  # cue index -> [(t0, t1), ...]
-    for s0, s1 in segs:
-        seg_dur = s1 - s0
-        cands = []
-        for ci, c in enumerate(cues):
-            ov = overlap(s0, s1, c["from"], c["to"])
-            if ov >= 0.6 * seg_dur or ov >= 0.4 * (c["to"] - c["from"]):
-                cands.append(ci)
-        if not cands:
-            continue  # a noise the VAD took for speech, between lines
-        if len(cands) == 1:
-            pieces.setdefault(cands[0], []).append((s0, s1))
-            continue
-        first, last = cues[cands[0]], cues[cands[-1]]
-        span = last["to"] - first["from"]
-        for ci in cands:
-            c = cues[ci]
-            t0 = s0 + (c["from"] - first["from"]) / span * seg_dur
-            t1 = s0 + (c["to"] - first["from"]) / span * seg_dur
-            pieces.setdefault(ci, []).append((t0, t1))
+def build():
+    words = json.load(open(WORDS))
+    # whisper repeats the last word of a window at the start of the next one,
+    # with near-zero confidence: drop those echoes.
+    words = [w for i, w in enumerate(words)
+             if not (i and w["p"] < 0.2 and norm(w["w"]) == norm(words[i - 1]["w"]))]
+    speech = json.load(open(SPEECH))
+    # whisper also lets a word swallow the pause after it ("is" running on
+    # into the silence before "me"): clip each word to the speech inside it.
+    for w in words:
+        pieces = [(max(a, w["start"]), min(b, w["end"])) for a, b in speech if b > w["start"] and a < w["end"]]
+        if pieces and w["end"] - w["start"] > 0.4:
+            w["start"], w["end"] = pieces[0][0], pieces[-1][1]
+    lines = [l.strip() for l in open(LINES, encoding="utf-8") if l.strip() and not l.startswith("#")]
 
-    # 2. Padding, ordering, no overlaps.
-    out = []
-    for ci, c in enumerate(cues):
-        if ci not in pieces:
-            out.append({**c, "note": "no speech found; kept"})
-            continue
-        t0 = min(p[0] for p in pieces[ci])
-        t1 = max(p[1] for p in pieces[ci])
-        out.append({**c, "from": t0 - LEAD, "to": max(t1 + TAIL, t0 + MIN_DUR)})
-    for i in range(len(out) - 1):
-        limit = out[i + 1]["from"] - GAP
-        if out[i]["to"] > limit:
-            # Short lines spoken back to back: cut the hold, not the next line.
-            out[i]["to"] = max(limit, out[i]["from"] + 0.45)
-            out[i + 1]["from"] = max(out[i + 1]["from"], out[i]["to"] + GAP)
-    for o in out:
-        o["from"], o["to"] = round(o["from"], 2), round(o["to"], 2)
-    return out
+    def in_speech(t):
+        return any(a <= t <= b for a, b in speech)
 
+    cues, k = [], 0
+    for line in lines:
+        n = len(line.split())
+        span = words[k:k + n]
+        if len(span) < n:
+            sys.exit(f"ran out of transcript words at: {line}")
+        said = " ".join(w["w"] for w in span)
+        same = sum(norm(a) == norm(b["w"]) for a, b in zip(line.split(), span))
+        if same < max(1, n - 2):
+            sys.exit(f"line does not match the speech:\n  line:   {line}\n  speech: {said}")
+        t0, t1 = span[0]["start"], span[-1]["end"]
+        # Word edges that fall in silence move to the edge of the speech.
+        if not in_speech(t0):
+            nxt = [a for a, _ in speech if t0 < a <= t0 + SNAP]
+            t0 = nxt[0] if nxt else t0
+        if not in_speech(t1):
+            prv = [b for _, b in speech if t1 - SNAP <= b < t1]
+            t1 = prv[-1] if prv else t1
+        cues.append({"from": t0 - LEAD, "to": t1 + TAIL, "voice_end": t1, "en": line,
+                     "said": said if same < n else None})
+        k += n
+    if k != len(words):
+        sys.exit(f"{len(words) - k} transcript words left over after the last line")
 
-def main():
-    p = argparse.ArgumentParser()
-    p.add_argument("wav")
-    p.add_argument("--write", action="store_true")
-    a = p.parse_args()
-
-    cues = json.load(open(CUES_PATH, encoding="utf-8"))
-    segs = speech_segments(a.wav)
-    out = retime(cues, segs)
-    for c, o in zip(cues, out):
-        d0, d1 = o["from"] - c["from"], o["to"] - c["to"]
-        flag = "   <-- " + o["note"] if "note" in o else ""
-        print(f"{c['from']:7.2f}-{c['to']:7.2f} -> {o['from']:7.2f}-{o['to']:7.2f}  ({d0:+.2f} {d1:+.2f})  {c['he']}{flag}")
-    if a.write:
-        clean = [{k: o[k] for k in ("from", "to", "he", "en")} for o in out]
-        with open(CUES_PATH, "w", encoding="utf-8") as f:
-            json.dump(clean, f, ensure_ascii=False, indent=2)
-            f.write("\n")
-        print(f"wrote {CUES_PATH}")
+    for i, c in enumerate(cues):
+        nxt = cues[i + 1]["from"] if i + 1 < len(cues) else c["to"] + 2
+        c["to"] = min(max(c["to"], c["from"] + MIN_DUR, c["voice_end"] + HOLD), nxt - GAP)
+        c["to"] = max(c["to"], c["voice_end"] + 0.05) if c["voice_end"] + 0.05 < nxt else c["to"]
+    out = [{"from": round(c["from"], 2), "to": round(c["to"], 2), "en": c["en"]} for c in cues]
+    with open(OUT, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    for c in cues:
+        note = f"   (heard: {c['said']})" if c["said"] else ""
+        print(f"{c['from']:7.2f} {c['to']:7.2f}  {c['en']}{note}")
+    print(f"wrote {len(out)} cues to {os.path.relpath(OUT)}")
 
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) >= 3 and sys.argv[1] == "transcribe":
+        transcribe(sys.argv[2])
+    elif len(sys.argv) == 2 and sys.argv[1] == "build":
+        build()
+    else:
+        sys.exit(__doc__)

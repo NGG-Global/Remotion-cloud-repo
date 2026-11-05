@@ -22,20 +22,30 @@
  * (rspack, Tailwind, the SwiftShader GL backend) are repeated here.
  */
 import { bundle } from "@remotion/bundler";
-import { openBrowser, renderStill, selectComposition } from "@remotion/renderer";
+import {
+  openBrowser,
+  renderStill,
+  selectComposition,
+} from "@remotion/renderer";
 import { enableTailwind } from "@remotion/tailwind-v4";
 import fs from "node:fs";
 import path from "node:path";
 
 const [compId, outDir, scaleStr, framesStr, bundleDir] = process.argv.slice(2);
 if (!compId || !outDir || !scaleStr || !framesStr) {
-  console.error("usage: node tools/stills.mjs <compositionId> <outDir> <scale> <frame,frame,...> [bundleDir]");
+  console.error(
+    "usage: node tools/stills.mjs <compositionId> <outDir> <scale> <frame,frame,...> [bundleDir]",
+  );
   process.exit(1);
 }
 fs.mkdirSync(outDir, { recursive: true });
 
 let serveUrl = bundleDir;
-if (!serveUrl || !fs.existsSync(path.join(serveUrl, "index.html")) || process.env.REBUNDLE) {
+if (
+  !serveUrl ||
+  !fs.existsSync(path.join(serveUrl, "index.html")) ||
+  process.env.REBUNDLE
+) {
   serveUrl = await bundle({
     entryPoint: path.resolve("src/index.ts"),
     outDir: bundleDir ? path.resolve(bundleDir) : undefined,
@@ -46,8 +56,15 @@ if (!serveUrl || !fs.existsSync(path.join(serveUrl, "index.html")) || process.en
 
 const chromiumOptions = { gl: "swangle" };
 const browser = await openBrowser("chrome", { chromiumOptions });
-const inputProps = process.env.INPUT_PROPS ? JSON.parse(process.env.INPUT_PROPS) : {};
-const composition = await selectComposition({ serveUrl, id: compId, puppeteerInstance: browser, inputProps });
+const inputProps = process.env.INPUT_PROPS
+  ? JSON.parse(process.env.INPUT_PROPS)
+  : {};
+const composition = await selectComposition({
+  serveUrl,
+  id: compId,
+  puppeteerInstance: browser,
+  inputProps,
+});
 const frames = framesStr.split(",").map(Number);
 const concurrency = 4;
 

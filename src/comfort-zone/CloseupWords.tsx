@@ -26,7 +26,7 @@ const label = {
 } as const;
 
 /**
- * The close-up in the armchair: "and who said that... was me". In the master
+ * The close-up in the armchair: "the person who said that... is me". In the master
  * the sentence arches over the man's head and slides out to the left, two
  * stray thoughts drift off the top right, and the answer sweeps in from the
  * right and up to the top left corner.
@@ -38,7 +38,7 @@ export const CloseupWords: React.FC = () => {
   }
   const t = frame / data.fps - T0; // seconds into the shot
 
-  // "And who said that": right end starts at the head and the whole arch
+  // "Who said that": right end starts at the head and the whole arch
   // moves left at the speed measured off the Hebrew (about 690 px/s).
   const whoX = 350 - 690 * t;
   const whoVisible = t < 1.6;
@@ -51,7 +51,7 @@ export const CloseupWords: React.FC = () => {
   const pizzaT = t - 0.5;
   const pizzaVisible = pizzaT >= 0 && pizzaT < 1.2;
 
-  // "That was me": enters beside the head at 2.05 s, grows and sweeps to the
+  // "Is me": enters beside the head at 2.05 s, grows and sweeps to the
   // top left corner, gone by 3.75 s.
   const meT = interpolate(t, [2.05, 3.75], [0, 1], {
     extrapolateLeft: "clamp",
@@ -79,7 +79,7 @@ export const CloseupWords: React.FC = () => {
             <g transform={`translate(${whoX} 250)`}>
               <text {...label} fontSize={78}>
                 <textPath href="#who-arch" startOffset={0}>
-                  AND WHO SAID THAT
+                  WHO SAID THAT
                 </textPath>
               </text>
             </g>
@@ -125,7 +125,7 @@ export const CloseupWords: React.FC = () => {
                 textAnchor="middle"
                 dominantBaseline="central"
               >
-                THAT WAS ME
+                IS ME
               </text>
             </g>
           </Glow>

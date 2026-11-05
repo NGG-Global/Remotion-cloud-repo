@@ -5,8 +5,9 @@ import cues from "./data/subtitles.json";
 import type { Cue } from "./data/types";
 
 /**
- * English subtitles, set where the Hebrew ones were burned in: centred,
- * white, with a soft dark shadow, on the same cue timings.
+ * English subtitles of the narration, set where the Hebrew ones were burned
+ * in: centred, white, with a soft dark shadow. The cues are the spoken words,
+ * timed from the audio (tools/comfort-zone/retime.py).
  */
 export const Subtitles: React.FC = () => {
   const frame = useCurrentFrame();

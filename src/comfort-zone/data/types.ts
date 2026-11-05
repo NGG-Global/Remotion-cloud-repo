@@ -1,8 +1,7 @@
-/** One burned-in subtitle cue of the Hebrew master, with its English line. */
+/** One English subtitle cue: the narration's words and when they are spoken. */
 export type Cue = {
   readonly from: number;
   readonly to: number;
-  readonly he: string;
   readonly en: string;
 };
 

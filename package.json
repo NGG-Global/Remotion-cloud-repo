@@ -20,7 +20,8 @@
     "transcribe": "node tools/transcribe.mjs",
     "typecheck": "tsc",
     "upgrade-remotion": "remotion upgrade",
-    "plate": "python3 tools/comfort-zone/clean_plate.py public/video/comfort-zone-he.mp4 public/video/comfort-zone-clean.mp4"
+    "plate": "python3 tools/comfort-zone/clean_plate.py public/video/comfort-zone-he.mp4 public/video/comfort-zone-clean.mp4",
+    "subtitles": "python3 tools/comfort-zone/retime.py build"
   },
   "dependencies": {
     "@react-three/fiber": "^9.7.0",

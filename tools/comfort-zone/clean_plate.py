@@ -41,7 +41,8 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 WORDS = json.load(open(os.path.join(ROOT, "src/comfort-zone/data/words.json"), encoding="utf-8"))
-CUES = json.load(open(os.path.join(ROOT, "src/comfort-zone/data/subtitles.json"), encoding="utf-8"))
+# Where the Hebrew subtitles are burned into the master (not the English cues).
+CUES = json.load(open(os.path.join(ROOT, "src/comfort-zone/data/burned-in-he.json"), encoding="utf-8"))
 FPS = WORDS["fps"]
 
 # Subtitle band in the master (1920x1080).

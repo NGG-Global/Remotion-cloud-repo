@@ -1,0 +1,79 @@
+# English subtitles for ComfortZoneEN, one cue per line, as spoken.
+# Timing comes from the narration's word timestamps
+# (narration.words.json); run `npm run subtitles` after editing.
+# A line must contain the same number of words as the speech it covers.
+Everything also contains its opposite,
+and vice versa.
+You did it?
+Why aren't you answering?
+And comfort contains discomfort,
+and courage contains fears,
+and the urge to break away from the herd
+clashes with the urge to stay in it.
+Dr. Seuss once said,
+"Oh, the places you'll go!"
+Which is true,
+but also not,
+because sometimes the places you go suck,
+like the central bus station.
+And deep down, all of us want to leave our comfort zone
+and do big, meaningful things in this lifetime.
+But there's a gap between what we want and what is.
+For one thing, what we want starts with a W,
+and what is starts with an I.
+And this video is starting to get confusing,
+yet also clear,
+that everything also contains its opposite,
+and vice versa.
+And the comfort zone is also its own opposite,
+because comfort quickly becomes routine,
+and routine turns into dependency,
+and dependency turns into dread,
+and dread is the opposite of comfort.
+And if you think about the people who truly managed
+to do big, important things,
+Shakespeare,
+Karl Marx,
+Hadar Marx and Buddha,
+they had to leave their comfort zone.
+And they went all out, and went to wonderful places.
+They didn't learn from books.
+They learned from experience.
+Though they also learned from books.
+You can't just learn from experience.
+Someone once said,
+"If you think like everyone else,
+everyone will think like you."
+And the person who said that
+is me.
+And sometimes my comfort zone bores me so much
+that I feel like not finishing this sen—
+And uniqueness contains ordinariness,
+and enough with being ordinary.
+There's enough ordinary.
+And don't be jerks.
+There are enough jerks.
+Like the ones who leave trash in nature.
+Or frantically smash the close door button in the elevator.
+Relax, sweetheart.
+It'll close in a second.
+And why do you tell yourselves
+that someday you'll leave your comfort?
+Why not now?
+Why wait until 40
+to beat yourself up about who you were at 20?
+Move now!
+And I want to convince you and say come on,
+because outside the comfort zone will be fun,
+except I can't promise that,
+because that's the beauty of being outside your comfort zone.
+It's not about fun.
+It's thrilling, surprising, electrifying,
+and above all deeply fulfilling.
+And when you're truly fulfilled,
+that's when it's really fun.
+A guy I made up once said,
+"If I experience more,
+I would experience more."
+Which actually makes sense,
+doesn't it?
