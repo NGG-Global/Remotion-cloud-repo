@@ -67,4 +67,35 @@ result is identical to rendering with the new gains) and then normalising.
 
 ## 4. Render
 
-See section 5 once the delivery render is complete.
+Rendered muted from one bundle in four chunks (`--gl=angle --crf=18`),
+each checked by sampling 14 frames before the next step:
+
+| Frames | Render time |
+| --- | --- |
+| 0–7899 | 26.0 min |
+| 7900–15799 | 23.7 min |
+| 15800–23699 | 15.8 min |
+| 23700–31590 | 22.2 min |
+
+One fix after the render: the reveal portrait (`portrait-smile.jpg`) had a
+white strip along its top edge, from the source photograph. The photo was
+cropped and only that shot, frames 3438–3554, was re-rendered.
+
+The delivery file was assembled with ffmpeg in one encode: the four chunks
+with the corrected shot spliced in, libx264 CRF 18 (preset medium), and the
+normalised soundtrack as AAC 192 kb/s.
+
+| Check on `out/munzer-documentary-1080p.mp4` | Result |
+| --- | --- |
+| Streams | H.264 1920×1080 30 fps, 31,591 frames, 1053.033 s; AAC 48 kHz, 1053.033 s |
+| Size, bitrate | 400,151,074 bytes, 3.04 Mb/s |
+| Splice points | Each frame on either side of the six joins compared with its source frame: mean absolute difference 0.15–0.39 (out of 255; encode noise). No frame dropped or duplicated. |
+| Sync | Same 12 probes as section 3: +25.0 ms in every piece, correlation 0.980–0.993. The ffmpeg AAC encode adds no delay (the 43 ms seen with Remotion's own AAC does not occur here). |
+| Loudness | −14.0 LUFS integrated, sample peak −1.2 dBFS |
+| Decode | Full decode with ffmpeg: no errors |
+| SHA-256 | `f3bd9ca850ea56120dbbf9f00a9f3c0189594dc507e27cb40b22031cdb482744` |
+
+About the 25 ms: the narration MP3 starts at 0.025 s (encoder priming). The
+word timings were measured on a decode that drops that offset, so every
+graphic keyed to a word lands 25 ms (three quarters of a frame) before the
+word is heard. That is below what can be seen, and it is constant.
