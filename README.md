@@ -442,6 +442,21 @@ from. They are not part of the series; they are kept because they demonstrate
 two features the explainer does not use — Zod-schema props editable in the
 Studio, and `<TransitionSeries>`.
 
+## מאחורי הסיוט: Andreas Münzer
+
+`MunzerDocumentary` (17:33, 1920×1080, 30 fps) cuts the Hebrew narration in
+`public/munzer/narration.mp3` to archive competition footage (1988–1996),
+magazine photographs and drawn medical and story graphics.
+
+```bash
+npx remotion render MunzerDocumentary out/munzer.mp4 --gl=angle --crf=18
+node tools/munzer-ledger.mjs   # checks no piece of archive is used twice
+```
+
+Production notes, the sync-exact render recipe and the picture rules are in
+`docs/MUNZER_NOTES.md`; the transcript is `docs/MUNZER_TRANSCRIPT.md`; the
+provenance of every archive file is `public/munzer/SOURCES.md`.
+
 ## Star reveal
 
 Level-end star animation for TinyTempo, authored here so the motion can be
