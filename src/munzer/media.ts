@@ -25,7 +25,7 @@ export const CLIPS = {
   o94: { file: "o94.mp4", w: 840, h: 480, dur: 144.6, safe: [0, 0.1, 1, 0.85] },
   /** Arnold Classic 1995, ESPN broadcast with commentary. */
   a95: { file: "a95.mp4", w: 844, h: 478, dur: 156.6, safe: [0.01, 0.08, 0.81, 0.87] },
-  /** Arnold Classic 1996, posing routine: his last competition. */
+  /** Arnold Classic 1996 (early March), posing routine, days before his death. */
   a96: { file: "a96.mp4", w: 636, h: 480, dur: 141.3, safe: [0, 0.08, 1, 0.92] },
   /** Arnold Schwarzenegger, Mr. Olympia 1970 compilation. */
   ar70: { file: "ar70.mp4", w: 848, h: 480, dur: 366.6, safe: [0.1, 0.09, 0.93, 1] },
