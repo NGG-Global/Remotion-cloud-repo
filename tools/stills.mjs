@@ -44,7 +44,7 @@ if (!serveUrl || !fs.existsSync(path.join(serveUrl, "index.html")) || process.en
   });
 }
 
-const chromiumOptions = { gl: "swangle" };
+const chromiumOptions = { gl: process.env.GL ?? "swangle" };
 const browser = await openBrowser("chrome", { chromiumOptions });
 const inputProps = process.env.INPUT_PROPS ? JSON.parse(process.env.INPUT_PROPS) : {};
 const composition = await selectComposition({ serveUrl, id: compId, puppeteerInstance: browser, inputProps });

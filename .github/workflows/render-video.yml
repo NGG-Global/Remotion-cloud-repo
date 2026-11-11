@@ -21,6 +21,7 @@ on:
           - ClaudeContext
           - ClaudeFiles
           - ClaudeReach
+          - MunzerDocumentary
           - TitleCard
           - Explainer
       quality:
@@ -34,7 +35,9 @@ on:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    # A full documentary (MunzerDocumentary, 17.5 min) renders for several hours
+    # on a hosted runner; GitHub stops any job at 6 hours.
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
 
@@ -56,12 +59,18 @@ jobs:
         run: |
           set -euo pipefail
           comp="${{ inputs.composition }}"
+          # The documentary uses no WebGL and renders about twice as fast on
+          # the ANGLE software backend.
+          extra=""
+          if [ "$comp" = "MunzerDocumentary" ]; then
+            extra="--gl=angle"
+          fi
           if [ "${{ inputs.quality }}" = "master" ]; then
             outfile="out/${comp}-master.mov"
-            npm run render:master -- "$comp" "$outfile"
+            npm run render:master -- "$comp" "$outfile" $extra
           else
             outfile="out/${comp}.mp4"
-            npm run render:hq -- "$comp" "$outfile"
+            npm run render:hq -- "$comp" "$outfile" $extra
           fi
           echo "outfile=$outfile" >> "$GITHUB_OUTPUT"
 

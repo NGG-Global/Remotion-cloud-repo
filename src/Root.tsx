@@ -41,6 +41,8 @@ import {
 } from "./compositions/StarReveal";
 import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
 import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
+import { MUNZER_DURATION, MunzerDocumentary } from "./munzer/MunzerDocumentary";
+import { KitSheet } from "./munzer/dev/KitSheet";
 import { RigSheet } from "./gacy/dev/RigSheet";
 import { SetTest } from "./gacy/dev/SetTest";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
@@ -108,6 +110,20 @@ export const RemotionRoot: React.FC = () => {
         id="GacyDocumentary"
         component={GacyDocumentary}
         durationInFrames={GACY_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="MunzerDocumentary"
+        component={MunzerDocumentary}
+        durationInFrames={MUNZER_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="MunzerKitSheet"
+        component={KitSheet}
+        durationInFrames={1}
         {...FORMAT}
       />
 
