@@ -33,7 +33,7 @@ YouTube was not used: it refuses downloads from this cloud environment.
 
 | File | Source |
 | --- | --- |
-| `portrait-smile.jpg` | https://fitnessvolt.com/apis/bodybuilding/public/images/athletes/8202-andreas-munzer.jpg |
+| `portrait-smile.jpg` | https://fitnessvolt.com/apis/bodybuilding/public/images/athletes/8202-andreas-munzer.jpg (white top edge cropped off) |
 | `legpress-bw.jpg` | https://generationiron.com/wp-content/uploads/2022/11/munzer-legs.jpg |
 | `backstage-15.jpg` | https://generationiron.com/wp-content/uploads/2022/11/munzer-pose.jpg |
 | `side-chest-stage.jpg` | https://generationiron.com/wp-content/uploads/2022/11/munzer.jpg |

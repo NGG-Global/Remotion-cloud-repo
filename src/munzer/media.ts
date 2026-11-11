@@ -37,7 +37,7 @@ export const clipSrc = (id: ClipId): string =>
   staticFile(`munzer/clips/${CLIPS[id].file}`);
 
 export const PHOTOS = {
-  "portrait-smile": { w: 500, h: 500 },
+  "portrait-smile": { w: 486, h: 486 },
   "legpress-bw": { w: 588, h: 834 },
   "backstage-15": { w: 2263, h: 1200 },
   "side-chest-stage": { w: 590, h: 838 },
