@@ -8,6 +8,7 @@ cut to archive footage, photographs and Remotion graphics.
 | Composition ID | `MunzerDocumentary` |
 | Narration | `public/munzer/narration.mp3` (the upload, unchanged; 17:05.8) |
 | Transcript | `docs/MUNZER_TRANSCRIPT.md` |
+| QA record | `docs/MUNZER_QA.md` |
 | Archive sources | `public/munzer/SOURCES.md` |
 | Format | 1920×1080, 30 fps |
 | Length | 1053.0 s (17:33): the narration plus 27.2 s of inserts |
@@ -29,7 +30,11 @@ whose AAC encoder signals its priming:
 ```bash
 npx remotion render MunzerDocumentary out/munzer-video.mp4 --gl=angle --crf=18 --muted
 npx remotion render MunzerDocumentary out/munzer-audio.wav --codec=wav
-ffmpeg -i out/munzer-video.mp4 -i out/munzer-audio.wav -map 0:v -map 1:a \
+# Loudness for YouTube: -14 LUFS, true peak -1.5 dBTP (measure first, then
+# pass the measured values; see docs/MUNZER_QA.md for the numbers used).
+ffmpeg -i out/munzer-audio.wav -af loudnorm=I=-14:TP=-1.5:LRA=11:print_format=json -f null -
+ffmpeg -i out/munzer-audio.wav -af "loudnorm=I=-14:TP=-1.5:LRA=11:measured_I=...:measured_TP=...:measured_LRA=...:measured_thresh=...:offset=...:linear=true,aresample=48000" out/munzer-audio-final.wav
+ffmpeg -i out/munzer-video.mp4 -i out/munzer-audio-final.wav -map 0:v -map 1:a \
   -c:v copy -c:a aac -b:a 192k -movflags +faststart out/munzer-final.mp4
 ```
 

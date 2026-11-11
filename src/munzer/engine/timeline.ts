@@ -16,6 +16,11 @@ import type { ClipId } from "../media";
  * later shot with the voice and nothing can drift out of sync.
  */
 
+/*
+ * Sound-bite gains bring each archive passage to about -21 LUFS, just under
+ * the narration (-19.9 LUFS, measured with ffmpeg ebur128): raw, the 1988
+ * club MC measures -9.8 LUFS and the 1995 broadcast -12 to -14.
+ */
 export type Insert = {
   readonly id: string;
   /** Narration time at which the voice pauses for this insert. */
@@ -37,7 +42,7 @@ export const NARRATION_END = 1025.83;
 export const INSERTS: readonly Insert[] = [
   // ESPN, Arnold Classic 1995: "Andreas Munzer, from Germany."
   // Voice silence 111.48-112.21.
-  { id: "I1", at: 111.8, dur: 2.8, sound: { clip: "a95", from: 9.4 } },
+  { id: "I1", at: 111.8, dur: 2.8, sound: { clip: "a95", from: 9.4, gain: 0.43 } },
   // The 1996 stage breathes for a moment before "no one in the audience".
   // Voice silence 138.73-139.15.
   { id: "I2", at: 138.95, dur: 1.7, sound: { clip: "a96", from: 123.7, gain: 0.55 } },
@@ -45,10 +50,10 @@ export const INSERTS: readonly Insert[] = [
   { id: "TITLE", at: 156.4, dur: 5.4 },
   // MC, Austria 1988: "...the great hope for the future, after Arnold
   // Schwarzenegger surely Austria's greatest talent." Silence 220.59-221.79.
-  { id: "I4", at: 221.1, dur: 6.7, sound: { clip: "am88", from: 226.72 } },
+  { id: "I4", at: 221.1, dur: 6.7, sound: { clip: "am88", from: 226.72, gain: 0.28 } },
   // ESPN, 1995: "There's no body fat there. I'm absolutely convinced he must
   // have less than 6% body fat." Silence 298.77-299.87.
-  { id: "I5", at: 299.3, dur: 6.4, sound: { clip: "a95", from: 110.02 } },
+  { id: "I5", at: 299.3, dur: 6.4, sound: { clip: "a95", from: 110.02, gain: 0.37 } },
   // End card holds after the last word.
   { id: "END", at: NARRATION_END, dur: 4.2 },
 ];
