@@ -31,6 +31,8 @@ export type HairStyle =
   | "curly"
   | "afro"
   | "ponytail"
+  /** 1890s: hair swept up into a bun at the back. */
+  | "bun"
   | "cap"
   | "none";
 
@@ -62,6 +64,14 @@ export type Look = {
   readonly cap?: string;
   readonly clown?: boolean;
   readonly age?: number;
+  /** Chin whiskers without a moustache, or a full beard. */
+  readonly beard?: "chin" | "full";
+  /** Period headwear, drawn on the head. */
+  readonly hat?: "bowler" | "top" | "straw" | "bonnet" | "helmet";
+  /** Extra width at the hem of a long skirt or coat (units per side). */
+  readonly hem?: number;
+  /** A front apron over a dress, colour. */
+  readonly apron?: string;
 };
 
 export type View = "3q" | "front" | "back";
@@ -319,6 +329,9 @@ const Hair: React.FC<{
       if (style === "ponytail") {
         return <path d="M-6 6 C-12 20 -8 40 0 50 C8 40 12 20 6 6 Z" fill={color} />;
       }
+      if (style === "bun") {
+        return <circle cx={0} cy={4} r={12} fill={color} />;
+      }
       return null;
     }
     if (style === "receding") {
@@ -379,6 +392,8 @@ const Hair: React.FC<{
         return <ellipse cx={-6} cy={-12} rx={36} ry={32} fill={color} />;
       case "ponytail":
         return <path d="M-22 -6 C-40 0 -40 30 -30 44 C-26 30 -22 14 -16 4 Z" fill={color} />;
+      case "bun":
+        return <circle cx={-24} cy={-6} r={12} fill={color} />;
       default:
         return null;
     }
@@ -435,6 +450,10 @@ const Hair: React.FC<{
         return (
           <path d="M20 -16 C14 -36 -22 -38 -27 -10 C-28 2 -26 10 -22 14 L-14 10 C-15 -2 -10 -10 -2 -13 C8 -15 16 -12 23 -10 C24 -12 22 -14 20 -16 Z" fill={color} />
         );
+      case "bun":
+        return (
+          <path d="M20 -16 C14 -36 -22 -38 -27 -10 C-28 -2 -26 4 -22 8 L-16 6 C-16 -4 -10 -12 -2 -14 C8 -16 16 -12 23 -10 C24 -12 22 -14 20 -16 Z" fill={color} />
+        );
       default:
         return null;
     }
@@ -446,11 +465,66 @@ const Hair: React.FC<{
     case "long":
     case "bob":
       return <path d="M23 -10 C16 -2 6 -4 -2 -8 C6 -18 18 -18 23 -10 Z" fill={color} />;
+    case "bun":
+      return <path d="M22 -12 C16 -6 8 -8 0 -10 C6 -18 16 -19 22 -12 Z" fill={color} />;
     case "gacy":
       return <path d="M19 -14 C14 -8 8 -9 2 -11 C8 -17 14 -18 19 -14 Z" fill={color} />;
     default:
       return null;
   }
+};
+
+/**
+ * Period headwear in head-local space (skull centre near (0, -6), radius
+ * about 24). Drawn last, so it sits over the hair.
+ */
+const Hat: React.FC<{ kind: NonNullable<Look["hat"]>; view: View; paint: Paint; color: string }> = ({ kind, view, paint, color }) => {
+  const c = paint(color);
+  const sh = paint(darken(color, 0.25));
+  const side = view === "3q";
+  if (kind === "bowler") {
+    return (
+      <g>
+        <path d={side ? "M-32 -14 Q0 -8 40 -14 L38 -9 Q0 -3 -34 -9 Z" : "M-38 -13 L38 -13 L36 -8 L-36 -8 Z"} fill={sh} />
+        <path d="M-24 -14 C-26 -46 24 -46 24 -14 Z" fill={c} />
+        <rect x={-24} y={-22} width={48} height={4} fill={sh} />
+      </g>
+    );
+  }
+  if (kind === "top") {
+    return (
+      <g>
+        <path d={side ? "M-30 -14 Q0 -9 38 -14 L36 -9 Q0 -4 -32 -9 Z" : "M-36 -13 L36 -13 L34 -8 L-34 -8 Z"} fill={sh} />
+        <path d="M-22 -14 L-24 -62 Q0 -66 24 -62 L22 -14 Z" fill={c} />
+        <rect x={-23} y={-24} width={46} height={5} fill={sh} />
+      </g>
+    );
+  }
+  if (kind === "straw") {
+    return (
+      <g>
+        <path d={side ? "M-40 -14 Q0 -6 48 -14 L46 -9 Q0 -1 -42 -9 Z" : "M-46 -13 L46 -13 L44 -7 L-44 -7 Z"} fill={sh} />
+        <path d="M-24 -14 L-24 -36 Q0 -40 24 -36 L24 -14 Z" fill={c} />
+        <rect x={-24} y={-24} width={48} height={5} fill={paint("#3a2a2a")} />
+      </g>
+    );
+  }
+  if (kind === "helmet") {
+    return (
+      <g>
+        <path d="M-25 -12 C-26 -50 24 -50 25 -12 L20 -12 C18 -38 -18 -38 -20 -12 Z" fill={c} />
+        <path d="M-27 -10 Q0 -2 30 -12 L30 -7 Q0 3 -28 -5 Z" fill={sh} />
+        <path d="M-2 -46 L2 -46 L1 -54 L-1 -54 Z" fill={sh} />
+      </g>
+    );
+  }
+  // bonnet: a soft cap hugging the back of the head with a brim at the front
+  return (
+    <g>
+      <path d={side ? "M-30 -4 C-34 -40 22 -44 26 -14 L22 -12 C14 -32 -20 -30 -24 -2 Z" : "M-28 -6 C-30 -42 30 -42 28 -6 L24 -6 C22 -32 -22 -32 -24 -6 Z"} fill={c} />
+      <path d={side ? "M22 -16 L36 -12 L34 -4 L20 -8 Z" : "M-26 -10 L26 -10 L26 -4 L-26 -4 Z"} fill={sh} />
+    </g>
+  );
 };
 
 const Face: React.FC<{
@@ -539,6 +613,27 @@ const Face: React.FC<{
           d={`M${mouthX - 7} ${mouthY - 3} Q${mouthX} ${mouthY - 8} ${mouthX + 7} ${mouthY - 3} Q${mouthX} ${mouthY - 1} ${mouthX - 7} ${mouthY - 3} Z`}
           fill={brow}
         />
+      ) : null}
+      {look.beard ? (
+        look.beard === "chin" ? (
+          <path
+            d={
+              view === "front"
+                ? `M-16 ${mouthY - 2} C-18 ${mouthY + 22} -8 ${mouthY + 40} 0 ${mouthY + 44} C8 ${mouthY + 40} 18 ${mouthY + 22} 16 ${mouthY - 2} C12 ${mouthY + 6} -12 ${mouthY + 6} -16 ${mouthY - 2} Z`
+                : `M${mouthX - 16} ${mouthY - 8} C${mouthX - 20} ${mouthY + 16} ${mouthX - 10} ${mouthY + 36} ${mouthX + 2} ${mouthY + 42} C${mouthX + 14} ${mouthY + 36} ${mouthX + 20} ${mouthY + 18} ${mouthX + 16} ${mouthY + 2} C${mouthX + 10} ${mouthY + 8} ${mouthX - 8} ${mouthY + 6} ${mouthX - 16} ${mouthY - 8} Z`
+            }
+            fill={brow}
+          />
+        ) : (
+          <path
+            d={
+              view === "front"
+                ? `M-22 -2 C-24 18 -14 36 0 38 C14 36 24 18 22 -2 C18 10 10 ${mouthY - 6} 0 ${mouthY - 6} C-10 ${mouthY - 6} -18 10 -22 -2 Z`
+                : `M${mouthX - 22} -4 C${mouthX - 24} 16 ${mouthX - 12} 34 ${mouthX + 2} 38 C${mouthX + 16} 34 ${mouthX + 22} 16 ${mouthX + 18} -2 C${mouthX + 12} 8 ${mouthX + 4} ${mouthY - 6} ${mouthX - 6} ${mouthY - 6} C${mouthX - 14} ${mouthY - 6} ${mouthX - 18} 8 ${mouthX - 22} -4 Z`
+            }
+            fill={brow}
+          />
+        )
       ) : null}
       {/* mouth */}
       {clown ? (
@@ -766,23 +861,31 @@ export const Person: React.FC<PersonProps> = ({
     </g>
   );
 
+  const hemLen = coat > 0 ? coat : 70;
+  const flare = look.hem ?? 0;
   const coatSkirt =
     coat > 0 || look.skirt ? (
       <g transform={`translate(${f(j.hip.x)} ${f(j.hip.y)}) rotate(${f(pose.pelvis)})`}>
         <path
           d={
             front
-              ? `M${-hw - 2} -20 L${hw + 2} -20 L${hw + 8} ${coat > 0 ? coat : 70} L${-hw - 8} ${coat > 0 ? coat : 70} Z`
-              : `M${-hw * 0.98} -20 L${hw * 0.76 + b * 0.3} -20 L${hw * 0.86 + 6} ${coat > 0 ? coat : 70} L${-hw - 6} ${coat > 0 ? coat : 70} Z`
+              ? `M${-hw - 2} -20 L${hw + 2} -20 L${hw + 8 + flare} ${hemLen} L${-hw - 8 - flare} ${hemLen} Z`
+              : `M${-hw * 0.98} -20 L${hw * 0.76 + b * 0.3} -20 L${hw * 0.86 + 6 + flare} ${hemLen} L${-hw - 6 - flare} ${hemLen} Z`
           }
           fill={paint(look.skirt ?? top)}
           stroke={stroke}
           strokeWidth={sw}
         />
         <path
-          d={front ? `M${-hw - 2} -20 L${-hw * 0.3} -20 L${-hw * 0.3} ${coat > 0 ? coat : 70} L${-hw - 8} ${coat > 0 ? coat : 70} Z` : `M${-hw * 0.98} -20 L${-hw * 0.2} -20 L${-hw * 0.1} ${coat > 0 ? coat : 70} L${-hw - 6} ${coat > 0 ? coat : 70} Z`}
+          d={front ? `M${-hw - 2} -20 L${-hw * 0.3} -20 L${-hw * 0.3 - flare * 0.3} ${hemLen} L${-hw - 8 - flare} ${hemLen} Z` : `M${-hw * 0.98} -20 L${-hw * 0.2} -20 L${-hw * 0.1 - flare * 0.3} ${hemLen} L${-hw - 6 - flare} ${hemLen} Z`}
           fill={paint(darken(look.skirt ?? top, shadeK))}
         />
+        {look.apron && !sil ? (
+          <path
+            d={front ? `M${-hw * 0.7} -16 L${hw * 0.7} -16 L${hw * 0.8 + flare * 0.6} ${hemLen - 16} L${-hw * 0.8 - flare * 0.6} ${hemLen - 16} Z` : `M${-hw * 0.3} -16 L${hw * 0.7 + b * 0.3} -16 L${hw * 0.8 + flare * 0.7} ${hemLen - 16} L${-hw * 0.2} ${hemLen - 16} Z`}
+            fill={paint(look.apron)}
+          />
+        ) : null}
       </g>
     ) : null;
 
@@ -829,6 +932,7 @@ export const Person: React.FC<PersonProps> = ({
           <path d={view === "3q" ? "M6 -15 L38 -11 L36 -7 L4 -10 Z" : "M-20 -13 L20 -13 L22 -7 L-22 -7 Z"} fill={paint(darken(look.cap, 0.25))} />
         </g>
       ) : null}
+      {look.hat ? <Hat kind={look.hat} view={view} paint={paint} color={look.hat === "straw" ? "#d9c48a" : look.hat === "bonnet" ? (look.top ?? "#3a3a3a") : "#1e1a18"} /> : null}
     </g>
   );
 

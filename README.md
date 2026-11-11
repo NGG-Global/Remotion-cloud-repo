@@ -163,6 +163,21 @@ imports do not resolve reliably during a render.
 for static layout, but anything that changes every frame (opacity, transform,
 interpolated colour) has to be an inline style.
 
+## Behind the Nightmare: the true-crime episodes
+
+Two illustrated Hebrew-narrated documentaries share one engine (`src/gacy/engine`, `src/gacy/rig`): a multiplane camera, a character rig with forward kinematics, and shots cut into measured pauses of the voice.
+
+| Composition       | Length | Subject                                      | Notes                        |
+| ----------------- | ------ | -------------------------------------------- | ---------------------------- |
+| `GacyDocumentary` | 10:45  | John Wayne Gacy                              | `docs/VIDEO_NOTES.md`        |
+| `LizzieBorden`    | 15:48  | Lizzie Borden and the Fall River murders     | `docs/BORDEN_VIDEO_NOTES.md` |
+
+```bash
+npx remotion render LizzieBorden out/lizzie-borden.mp4
+```
+
+Both are long vector films with grain: a full 1080p render takes several hours on four cores (see the notes for timings and a 720p option). The **Render video** workflow renders either on GitHub's runners and publishes the file as an artifact.
+
 ## The Claude explainer series
 
 | Composition     | Episode | Length | Subject                                                         |
@@ -426,6 +441,21 @@ npx remotion still RegionCheck out/map.png  --props='{"screen":"settings"}'
 from. They are not part of the series; they are kept because they demonstrate
 two features the explainer does not use — Zod-schema props editable in the
 Studio, and `<TransitionSeries>`.
+
+## מאחורי הסיוט: Andreas Münzer
+
+`MunzerDocumentary` (17:33, 1920×1080, 30 fps) cuts the Hebrew narration in
+`public/munzer/narration.mp3` to archive competition footage (1988–1996),
+magazine photographs and drawn medical and story graphics.
+
+```bash
+npx remotion render MunzerDocumentary out/munzer.mp4 --gl=angle --crf=18
+node tools/munzer-ledger.mjs   # checks no piece of archive is used twice
+```
+
+Production notes, the sync-exact render recipe and the picture rules are in
+`docs/MUNZER_NOTES.md`; the transcript is `docs/MUNZER_TRANSCRIPT.md`; the
+provenance of every archive file is `public/munzer/SOURCES.md`.
 
 ## Star reveal
 
