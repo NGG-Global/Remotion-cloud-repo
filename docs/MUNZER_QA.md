@@ -67,8 +67,8 @@ result is identical to rendering with the new gains) and then normalising.
 
 ## 4. Render
 
-Rendered muted from one bundle in four chunks (`--gl=angle --crf=18`),
-each checked by sampling 14 frames before the next step:
+Rendered muted from one bundle in four chunks (`--gl=angle --crf=18`);
+the first three were spot-checked (14–15 sampled frames each) as they finished:
 
 | Frames | Render time |
 | --- | --- |
@@ -89,7 +89,7 @@ normalised soundtrack as AAC 192 kb/s.
 | --- | --- |
 | Streams | H.264 1920×1080 30 fps, 31,591 frames, 1053.033 s; AAC 48 kHz, 1053.033 s |
 | Size, bitrate | 400,151,074 bytes, 3.04 Mb/s |
-| Splice points | Each frame on either side of the six joins compared with its source frame: mean absolute difference 0.15–0.39 (out of 255; encode noise). No frame dropped or duplicated. |
+| Splice points | Each frame on either side of the five joins, and the last frame, compared with its source frame: mean absolute difference 0.15–0.39 (out of 255; encode noise). No frame dropped or duplicated. |
 | Sync | Same 12 probes as section 3: +25.0 ms in every piece, correlation 0.980–0.993. The ffmpeg AAC encode adds no delay (the 43 ms seen with Remotion's own AAC does not occur here). |
 | Loudness | −14.0 LUFS integrated, sample peak −1.2 dBFS |
 | Decode | Full decode with ffmpeg: no errors |
