@@ -71,6 +71,8 @@ Measured in the 4-core cloud container: 20 to 23 minutes per 7800-frame chunk (a
 
 Measured on the WAV: each insert sits 2 to 4 dB (RMS) under the narration around it, and the narration lines up with the transcript to within 25 ms (the MP3's own start offset, under one frame).
 
+Delivery files (in `out/`, which is git-ignored): `alcatraz-behind-the-nightmare-1080p.mp4` (CRF 20, 462 MiB), `alcatraz-behind-the-nightmare-1080p-web.mp4` (two-pass 2.75 Mbit/s video, 364 MiB, made to fit a 400 MiB upload limit) and `alcatraz-behind-the-nightmare-720p.mp4` (161 MiB). All three: 31172 frames, 17:19, -14.0 LUFS integrated.
+
 Stills for review (one bundle, one browser):
 
 ```bash
