@@ -1,0 +1,470 @@
+{
+ "_comment": "Source manifest for the Alcatraz documentary. `tools/alcatraz-prep.mjs` cuts every clip and normalises every still listed here into public/alcatraz. `in`/`out` are seconds in the source file; `crop` is the picture area of the source (w, h, x, y) with letterbox, pillarbox and film edge removed; `fy` is where a 16:9 window sits vertically inside a 4:3 picture (0 top, 1 bottom). `full` clips keep the whole 4:3 frame: they are the archival inserts that play with their own sound.",
+ "sources": {
+  "un1962": {
+   "file": "video/un1962_escape.mp4",
+   "title": "Universal Newsreel Vol. 35, Release 49 (June 14, 1962): Three Convicts Escape Alcatraz",
+   "url": "https://archive.org/details/200-un-v35-r49_2Mbps",
+   "credit": "Universal Newsreel / U.S. National Archives (FedFlix)"
+  },
+  "un1963": {
+   "file": "video/un1963_closing.mp4",
+   "title": "Universal Newsreel Vol. 36, Release 26 (March 25, 1963): Last Prisoners Leave Alcatraz",
+   "url": "https://archive.org/details/un-un-v36-r26",
+   "credit": "Universal Newsreel / U.S. National Archives (FedFlix)"
+  },
+  "revolt": {
+   "file": "video/nara_revolt_1946.mp4",
+   "title": "Prisoners Revolt Alcatraz (Universal Newsreel outtakes, 1946)",
+   "url": "https://catalog.archives.gov/id/353748028",
+   "credit": "Universal Newsreel / U.S. National Archives"
+  },
+  "attempt": {
+   "file": "video/nara_attempted_escape.mp4",
+   "title": "Attempted Alcatraz Escape (Universal Newsreel outtakes, 1946)",
+   "url": "https://catalog.archives.gov/id/353748030",
+   "credit": "Universal Newsreel / U.S. National Archives"
+  },
+  "prel1938": {
+   "file": "video/prelinger1938.m4v",
+   "title": "[Alcatraz Prison Scenes & Tom Mooney Rally] (c. 1938)",
+   "url": "https://archive.org/details/0795_Alcatraz_Prison_Scenes_Tom_Mooney_Rally_10_01_04_00",
+   "credit": "Prelinger Archives"
+  },
+  "capone1932": {
+   "file": "video/capone1932.mp4",
+   "title": "Al Capone turns himself in (Hearst Metrotone News, May 1932)",
+   "url": "https://archive.org/details/AlCaponeTurnsHimselfInNewsreelClip",
+   "credit": "Hearst Metrotone News via Internet Archive (Public Domain Mark)"
+  },
+  "gangster": {
+   "file": "video/gangster1961.mov",
+   "title": "How To Succeed As A Gangster (c. 1961), Prohibition newsreel footage",
+   "url": "https://archive.org/details/42624howtosucceedasagangstervwr",
+   "credit": "PeriscopeFilm via Internet Archive (CC BY-NC-ND 4.0)"
+  },
+  "heli": {
+   "file": "video/heli_bay.mp4",
+   "title": "Helicopter over the Bay",
+   "url": "https://archive.org/details/casacsh_002344",
+   "credit": "California Revealed / Center for Sacramento History via Internet Archive"
+  },
+  "b24": {
+   "file": "video/b24_over_alcatraz.mov",
+   "title": "B-24 'Witchcraft' flies over Alcatraz",
+   "url": "https://archive.org/details/Flickr-5952833184",
+   "credit": "Greg Bishop via Flickr / Internet Archive (CC BY-NC-SA 2.0)"
+  },
+  "fbi": {
+   "file": "video/fbi_masks.mp4",
+   "title": "FBI scans the deteriorating masks from the 1962 Alcatraz escape",
+   "url": "https://archive.org/details/fbi-scans-the-deteriorating-masks-from-the-1962-alcatraz-escape",
+   "credit": "FBI via Internet Archive (Public Domain Mark)"
+  }
+ },
+ "crops": {
+  "un1962": [
+   1440,
+   1080,
+   240,
+   0
+  ],
+  "un1963": [
+   1440,
+   1078,
+   238,
+   0
+  ],
+  "revolt": [
+   698,
+   524,
+   8,
+   2
+  ],
+  "attempt": [
+   672,
+   504,
+   12,
+   18
+  ],
+  "prel1938": [
+   632,
+   474,
+   4,
+   0
+  ],
+  "capone1932": [
+   632,
+   474,
+   4,
+   2
+  ],
+  "gangster": [
+   716,
+   537,
+   122,
+   0
+  ],
+  "heli": [
+   704,
+   528,
+   9,
+   6
+  ],
+  "b24": [
+   1920,
+   1080,
+   0,
+   0
+  ],
+  "fbi": [
+   1920,
+   1080,
+   0,
+   0
+  ]
+ },
+ "clips": [
+  {
+   "id": "ins-flee",
+   "src": "un1962",
+   "in": 105.4,
+   "out": 114.1,
+   "full": true
+  },
+  {
+   "id": "ins-capone",
+   "src": "capone1932",
+   "in": 3.6,
+   "out": 22.3,
+   "full": true
+  },
+  {
+   "id": "ins-dummies",
+   "src": "un1962",
+   "in": 162.6,
+   "out": 173.35,
+   "full": true
+  },
+  {
+   "id": "ins-manhunt",
+   "src": "un1962",
+   "in": 189.15,
+   "out": 199.3,
+   "full": true
+  },
+  {
+   "id": "ins-closes",
+   "src": "un1963",
+   "in": 18.6,
+   "out": 32.2,
+   "full": true
+  },
+  {
+   "id": "ins-last27",
+   "src": "un1963",
+   "in": 41.9,
+   "out": 51.85,
+   "full": true
+  },
+  {
+   "id": "p38-mugshots",
+   "src": "prel1938",
+   "in": 22.6,
+   "out": 29.2,
+   "fy": 0.45
+  },
+  {
+   "id": "p38-island-near",
+   "src": "prel1938",
+   "in": 77.2,
+   "out": 82.6,
+   "fy": 0.62
+  },
+  {
+   "id": "p38-island-smoke",
+   "src": "prel1938",
+   "in": 83.6,
+   "out": 88.4,
+   "fy": 0.6
+  },
+  {
+   "id": "p38-island-far",
+   "src": "prel1938",
+   "in": 129.2,
+   "out": 135.4,
+   "fy": 0.55
+  },
+  {
+   "id": "p38-island-close",
+   "src": "prel1938",
+   "in": 139.2,
+   "out": 145.6,
+   "fy": 0.6
+  },
+  {
+   "id": "p38-cameramen",
+   "src": "prel1938",
+   "in": 110.0,
+   "out": 117.0,
+   "fy": 0.5
+  },
+  {
+   "id": "p38-water",
+   "src": "prel1938",
+   "in": 121.2,
+   "out": 124.6,
+   "fy": 0.5
+  },
+  {
+   "id": "p38-water-far",
+   "src": "prel1938",
+   "in": 125.2,
+   "out": 128.8,
+   "fy": 0.5
+  },
+  {
+   "id": "p38-coxe",
+   "src": "prel1938",
+   "in": 167.6,
+   "out": 174.4,
+   "fy": 0.5
+  },
+  {
+   "id": "p38-ferry",
+   "src": "prel1938",
+   "in": 189.0,
+   "out": 197.0,
+   "fy": 0.55
+  },
+  {
+   "id": "u62-rocks",
+   "src": "un1962",
+   "in": 120.0,
+   "out": 123.5,
+   "fy": 0.5
+  },
+  {
+   "id": "u62-officials",
+   "src": "un1962",
+   "in": 136.3,
+   "out": 142.6,
+   "fy": 0.4
+  },
+  {
+   "id": "u62-hands-mugs",
+   "src": "un1962",
+   "in": 143.2,
+   "out": 148.7,
+   "fy": 0.45
+  },
+  {
+   "id": "u62-hole",
+   "src": "un1962",
+   "in": 174.1,
+   "out": 177.9,
+   "fy": 0.45
+  },
+  {
+   "id": "u62-roofvent",
+   "src": "un1962",
+   "in": 183.4,
+   "out": 187.4,
+   "fy": 0.4
+  },
+  {
+   "id": "u62-shore",
+   "src": "un1962",
+   "in": 199.8,
+   "out": 203.7,
+   "fy": 0.5
+  },
+  {
+   "id": "u62-island",
+   "src": "un1962",
+   "in": 204.0,
+   "out": 207.9,
+   "fy": 0.55
+  },
+  {
+   "id": "u63-corridor",
+   "src": "un1963",
+   "in": 32.0,
+   "out": 35.3,
+   "fy": 0.45
+  },
+  {
+   "id": "u63-sink",
+   "src": "un1963",
+   "in": 38.6,
+   "out": 41.7,
+   "fy": 0.5
+  },
+  {
+   "id": "u63-tower",
+   "src": "un1963",
+   "in": 60.0,
+   "out": 63.5,
+   "fy": 0.3
+  },
+  {
+   "id": "u63-guard",
+   "src": "un1963",
+   "in": 66.0,
+   "out": 69.6,
+   "fy": 0.35
+  },
+  {
+   "id": "u63-boat",
+   "src": "un1963",
+   "in": 69.8,
+   "out": 75.0,
+   "fy": 0.55
+  },
+  {
+   "id": "u63-island",
+   "src": "un1963",
+   "in": 75.0,
+   "out": 79.7,
+   "fy": 0.55
+  },
+  {
+   "id": "rev-aerial",
+   "src": "revolt",
+   "in": 10.0,
+   "out": 17.0,
+   "fy": 0.3
+  },
+  {
+   "id": "rev-cellhouse",
+   "src": "revolt",
+   "in": 75.6,
+   "out": 80.4,
+   "fy": 0.15
+  },
+  {
+   "id": "rev-marines",
+   "src": "revolt",
+   "in": 266.4,
+   "out": 275.6,
+   "fy": 0.1
+  },
+  {
+   "id": "rev-island-boats",
+   "src": "revolt",
+   "in": 204.0,
+   "out": 210.8,
+   "fy": 0.3
+  },
+  {
+   "id": "att-island",
+   "src": "attempt",
+   "in": 18.0,
+   "out": 23.4,
+   "fy": 0.25
+  },
+  {
+   "id": "att-smoke-a",
+   "src": "attempt",
+   "in": 66.0,
+   "out": 70.2,
+   "fy": 0.25
+  },
+  {
+   "id": "att-smoke-b",
+   "src": "attempt",
+   "in": 72.0,
+   "out": 76.8,
+   "fy": 0.25
+  },
+  {
+   "id": "att-smoke-c",
+   "src": "attempt",
+   "in": 96.0,
+   "out": 99.2,
+   "fy": 0.25
+  },
+  {
+   "id": "att-onlookers",
+   "src": "attempt",
+   "in": 241.0,
+   "out": 247.4,
+   "fy": 0.2
+  },
+  {
+   "id": "gang-liquor",
+   "src": "gangster",
+   "in": 15.8,
+   "out": 22.4,
+   "fy": 0.25
+  },
+  {
+   "id": "heli-alcatraz",
+   "src": "heli",
+   "in": 88.0,
+   "out": 93.2,
+   "fy": 0.55
+  },
+  {
+   "id": "heli-skyline",
+   "src": "heli",
+   "in": 229.0,
+   "out": 232.6,
+   "fy": 0.55
+  },
+  {
+   "id": "heli-gg",
+   "src": "heli",
+   "in": 205.0,
+   "out": 208.6,
+   "fy": 0.5
+  },
+  {
+   "id": "heli-gg-marin",
+   "src": "heli",
+   "in": 211.0,
+   "out": 218.4,
+   "fy": 0.5
+  },
+  {
+   "id": "b24-aerial",
+   "src": "b24",
+   "in": 0.6,
+   "out": 8.4
+  },
+  {
+   "id": "fbi-masks",
+   "src": "fbi",
+   "in": 0.2,
+   "out": 7.4
+  },
+  {
+   "id": "p38-island-mid",
+   "src": "prel1938",
+   "in": 90.2,
+   "out": 100.8,
+   "fy": 0.6
+  },
+  {
+   "id": "heli-waterfront",
+   "src": "heli",
+   "in": 234.4,
+   "out": 241.2,
+   "fy": 0.5
+  },
+  {
+   "id": "att-island-close",
+   "src": "attempt",
+   "in": 105.0,
+   "out": 114.2,
+   "fy": 0.25
+  },
+  {
+   "id": "rev-buildings",
+   "src": "revolt",
+   "in": 153.0,
+   "out": 165.0,
+   "fy": 0.15
+  }
+ ]
+}

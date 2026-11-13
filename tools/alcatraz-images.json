@@ -1,0 +1,479 @@
+{
+ "_comment": "Stills for the Alcatraz documentary. `src` is relative to the raw directory given to tools/alcatraz-images.mjs. Every entry names the record it was downloaded from.",
+ "images": {
+  "esc-mugshots-1962": {
+   "src": "loc_jpg/loc-1962-three-escapees.jpg",
+   "title": "Official Alcatraz Federal Prison photos of the three men reported to have escaped, June 1962",
+   "url": "https://www.loc.gov/item/2004670167/",
+   "credit": "New York World-Telegram & Sun collection, Library of Congress"
+  },
+  "esc-cell-views-1962": {
+   "src": "loc_jpg/loc-1962-cell-dummy-hole.jpg",
+   "title": "Two views of a cell in Cell Block B: the dummy head on the pillow, and the hole in the wall, 1962",
+   "url": "https://www.loc.gov/item/2004670168/",
+   "credit": "New York World-Telegram & Sun collection, Library of Congress"
+  },
+  "battle-ships-1946": {
+   "src": "loc_jpg/loc-1946-ships-aid-prison.jpg",
+   "title": "Ships called to aid island prison, 1946",
+   "url": "https://www.loc.gov/item/2002712921/",
+   "credit": "Library of Congress"
+  },
+  "johnston-1935": {
+   "src": "loc_jpg/loc-1935-james-johnston.jpg",
+   "title": "James A. Johnston, 1935",
+   "url": "https://www.loc.gov/item/2001695433/",
+   "credit": "New York World-Telegram & Sun collection, Library of Congress"
+  },
+  "island-govprison-1934": {
+   "src": "loc_jpg/loc-1934-government-prison.jpg",
+   "title": "Alcatraz Island, government prison, 1934",
+   "url": "https://www.loc.gov/item/98511032/",
+   "credit": "Library of Congress"
+  },
+  "aerial-spence-1938": {
+   "src": "loc_jpg/loc-1938-alcatraz.jpg",
+   "title": "Alcatraz, 1938 (Spence Air Photos)",
+   "url": "https://www.loc.gov/item/2001695056/",
+   "credit": "Library of Congress"
+  },
+  "aerial-city-1938": {
+   "src": "loc_jpg/loc-1938-alcatraz-bay.jpg",
+   "title": "Alcatraz, San Francisco Bay, Calif., 1938",
+   "url": "https://www.loc.gov/item/90710379/",
+   "credit": "Library of Congress"
+  },
+  "island-diagram-1956": {
+   "src": "loc_jpg/loc-1956-federal-prison-one.jpg",
+   "title": "Federal prison number one (labelled view of Alcatraz), 1956",
+   "url": "https://www.loc.gov/item/2004670169/",
+   "credit": "New York World-Telegram & Sun collection, Library of Congress"
+  },
+  "milprison-1920-a": {
+   "src": "loc_jpg/loc-1920-military-prison-1.jpg",
+   "title": "Alcatraz Island in San Francisco Bay. Military prison, Alcatraz Island I, c. 1920",
+   "url": "https://www.loc.gov/item/2019675659/",
+   "credit": "Library of Congress",
+   "crop": [
+    518,
+    344,
+    9,
+    6
+   ]
+  },
+  "milprison-1920-b": {
+   "src": "loc_jpg/loc-1920-military-prison-2.jpg",
+   "title": "Alcatraz Island in San Francisco Bay. Military prison, Alcatraz Island II, c. 1920",
+   "url": "https://www.loc.gov/item/2019675660/",
+   "credit": "Library of Congress",
+   "crop": [
+    518,
+    344,
+    9,
+    6
+   ]
+  },
+  "hs-aerial-a": {
+   "src": "loc_jpg/loc-highsmith-aerial-12761.jpg",
+   "title": "Aerial view of Alcatraz Island (Carol M. Highsmith)",
+   "url": "https://www.loc.gov/item/2011630955/",
+   "credit": "Carol M. Highsmith Archive, Library of Congress"
+  },
+  "hs-aerial-b": {
+   "src": "loc_jpg/loc-highsmith-aerial-14712.jpg",
+   "title": "Aerial view of Alcatraz Island (Carol M. Highsmith)",
+   "url": "https://www.loc.gov/item/2011632906/",
+   "credit": "Carol M. Highsmith Archive, Library of Congress"
+  },
+  "hs-cellhouse": {
+   "src": "loc_jpg/loc-highsmith-guard-balcony.jpg",
+   "title": "Former prison guard standing on balcony, inside Alcatraz Penitentiary (Carol M. Highsmith)",
+   "url": "https://www.loc.gov/item/2011630943/",
+   "credit": "Carol M. Highsmith Archive, Library of Congress"
+  },
+  "hs-derelict": {
+   "src": "loc_jpg/loc-highsmith-derelict.jpg",
+   "title": "Derelict building on Alcatraz Island (Carol M. Highsmith)",
+   "url": "https://www.loc.gov/item/2011631797/",
+   "credit": "Carol M. Highsmith Archive, Library of Congress"
+  },
+  "hs-hilltop": {
+   "src": "loc_jpg/loc-highsmith-hilltop.jpg",
+   "title": "Hill-top view of Alcatraz (Carol M. Highsmith)",
+   "url": "https://www.loc.gov/item/2011632123/",
+   "credit": "Carol M. Highsmith Archive, Library of Congress"
+  },
+  "hs-island-ferry": {
+   "src": "loc_jpg/loc-highsmith-view-14872.jpg",
+   "title": "View of Alcatraz Island (Carol M. Highsmith)",
+   "url": "https://www.loc.gov/item/2011633066/",
+   "credit": "Carol M. Highsmith Archive, Library of Congress"
+  },
+  "hs-island-13781": {
+   "src": "loc_jpg/loc-highsmith-13781.jpg",
+   "title": "Alcatraz Island, San Francisco Bay (Carol M. Highsmith)",
+   "url": "https://www.loc.gov/item/2011631975/",
+   "credit": "Carol M. Highsmith Archive, Library of Congress"
+  },
+  "hs-aerial-sf": {
+   "src": "loc_jpg/loc-highsmith-aerial-sf-17886.jpg",
+   "title": "Aerial view of San Francisco with a focus on Alcatraz Island (Carol M. Highsmith)",
+   "url": "https://www.loc.gov/item/2011636080/",
+   "credit": "Carol M. Highsmith Archive, Library of Congress"
+  },
+  "ferry-2020": {
+   "src": "loc_jpg/loc-ferry-2020.jpg",
+   "title": "Alcatraz ferry, San Francisco, California, 2020",
+   "url": "https://www.loc.gov/item/2023696307/",
+   "credit": "Library of Congress"
+  },
+  "capone-1928": {
+   "src": "loc_jpg/loc-capone-1928.jpg",
+   "title": "Al Capone, 1928",
+   "url": "https://www.loc.gov/item/2020630351/",
+   "credit": "Library of Congress"
+  },
+  "capone-standing-1928": {
+   "src": "loc_jpg/loc-capone-fulllength-1928.jpg",
+   "title": "Al Capone, full-length portrait, 1928",
+   "url": "https://www.loc.gov/item/99472807/",
+   "credit": "New York World-Telegram & Sun collection, Library of Congress"
+  },
+  "capone-jury-1931": {
+   "src": "loc_jpg/loc-capone-jury-1931.jpg",
+   "title": "The jury selected for the income tax evasion trial of Al Capone, 1931",
+   "url": "https://www.loc.gov/item/99472816/",
+   "credit": "New York World-Telegram & Sun collection, Library of Congress"
+  },
+  "capone-mugshots-1931": {
+   "src": "loc_jpg/loc-capone-mugshots-1931.jpg",
+   "title": "Two mug shots of Al Capone, 1931",
+   "url": "https://www.loc.gov/item/99404690/",
+   "credit": "New York World-Telegram & Sun collection, Library of Congress"
+  },
+  "capone-stege-1930": {
+   "src": "loc_jpg/loc-capone-stege-1930.jpg",
+   "title": "Al Capone and Chicago Chief of Detectives John Stege, 1930",
+   "url": "https://www.loc.gov/item/2016650588/",
+   "credit": "Library of Congress"
+  },
+  "capone-indicted-1931": {
+   "src": "loc_jpg/loc-capone-indicted-1931.jpg",
+   "title": "Capone indicted as U.S. tax evader, 1931",
+   "url": "https://www.loc.gov/item/2009631533/",
+   "credit": "New York World-Telegram & Sun collection, Library of Congress"
+  },
+  "habs-general": {
+   "src": "loc_jpg/habs-alcatraz-general.jpg",
+   "title": "Alcatraz, San Francisco Bay (HABS CA-2140)",
+   "url": "https://www.loc.gov/item/ca0622/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-broadway": {
+   "src": "loc_jpg/habs-broadway.jpg",
+   "title": "View looking south between cell blocks C and B, 'Broadway' (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-cellblock-a": {
+   "src": "loc_jpg/habs-cellblock-a.jpg",
+   "title": "Cell block A, looking southwest (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-cells-c": {
+   "src": "loc_jpg/habs-cells-149-151.jpg",
+   "title": "Detail showing cells 149 and 151 in cell block C (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-d-block": {
+   "src": "loc_jpg/habs-d-block.jpg",
+   "title": "Cell block D, isolation cells (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-d-openers": {
+   "src": "loc_jpg/habs-d-door-openers.jpg",
+   "title": "Detail of electric door openers of cell block D (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-dining": {
+   "src": "loc_jpg/habs-dining-room.jpg",
+   "title": "View in prisoner dining room (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-door-levers": {
+   "src": "loc_jpg/habs-door-levers.jpg",
+   "title": "Detail showing door, opening levers and handles, cell block C (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-east-side": {
+   "src": "loc_jpg/habs-east-side-lower.jpg",
+   "title": "General view looking up to east side from lower level of island (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-guard-house": {
+   "src": "loc_jpg/habs-guard-house-ne.jpg",
+   "title": "Guard house, northeast corner of yard (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-guard-station": {
+   "src": "loc_jpg/habs-guard-station-view.jpg",
+   "title": "View looking south from third level guard station (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-guard-tower": {
+   "src": "loc_jpg/habs-guard-tower-color.jpg",
+   "title": "Alcatraz, Guard Tower (HABS)",
+   "url": "https://www.loc.gov/item/ca1522/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-industries": {
+   "src": "loc_jpg/habs-industries.jpg",
+   "title": "Alcatraz, Industries Building (HABS)",
+   "url": "https://www.loc.gov/item/ca1511/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-rec-yard": {
+   "src": "loc_jpg/habs-rec-yard.jpg",
+   "title": "General view of recreation yard, from southwest (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-yard-stairs": {
+   "src": "loc_jpg/habs-rec-yard-stairs.jpg",
+   "title": "Recreation yard from top of stairs (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-roof": {
+   "src": "loc_jpg/habs-roof-detail.jpg",
+   "title": "Detail of roof, looking south toward lighthouse (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-sally-port": {
+   "src": "loc_jpg/habs-sally-port-color.jpg",
+   "title": "Alcatraz, Sally Port (HABS)",
+   "url": "https://www.loc.gov/item/ca1518/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-spiral-stair": {
+   "src": "loc_jpg/habs-spiral-stair.jpg",
+   "title": "Southeast corner of cell block A with spiral stairway (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-typical-cell": {
+   "src": "loc_jpg/habs-typical-cell.jpg",
+   "title": "Typical cell in cell block C (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "habs-visitor": {
+   "src": "loc_jpg/habs-visitor-portals.jpg",
+   "title": "View showing visitor portals (HABS)",
+   "url": "https://www.loc.gov/item/ca1498/",
+   "credit": "Historic American Buildings Survey, Library of Congress"
+  },
+  "nara-dining-1934": {
+   "src": "loc_jpg/nara-cellhouse-checkin-1.jpg",
+   "title": "Following noon meal, inmates are checked back into cellhouse (Bureau of Prisons)",
+   "url": "https://catalog.archives.gov/id/280956858",
+   "credit": "U.S. National Archives (RG 129-G)"
+  },
+  "nara-culinary": {
+   "src": "loc_jpg/nara-culinary-eat-1.jpg",
+   "title": "After count is secure, culinary employees can eat (Bureau of Prisons)",
+   "url": "https://catalog.archives.gov/id/280956861",
+   "credit": "U.S. National Archives (RG 129-G)"
+  },
+  "nara-aerial-1934": {
+   "src": "loc_jpg/nara-aerial-1934.jpg",
+   "title": "California - Alcatraz Island, 1934",
+   "url": "https://catalog.archives.gov/id/23935533",
+   "credit": "U.S. National Archives (RG 18-AA)"
+  },
+  "nara-aerial-color": {
+   "src": "loc_jpg/nara-aerial-dn-st.jpg",
+   "title": "An aerial view of Alcatraz Island",
+   "url": "https://catalog.archives.gov/id/6410397",
+   "credit": "U.S. National Archives (RG 330)"
+  },
+  "nara-dblock-plan": {
+   "src": "loc_jpg/nara-dblock-plan.jpg",
+   "title": "Plan for the Modernization of Alcatraz Prison Cell Block D",
+   "url": "https://catalog.archives.gov/id/596298",
+   "credit": "U.S. National Archives (RG 121)"
+  },
+  "nara-sketch-sw": {
+   "src": "loc_jpg/nara-sketch-sw.jpg",
+   "title": "Sketch of Alcatraz from SW",
+   "url": "https://catalog.archives.gov/id/77415644",
+   "credit": "U.S. National Archives (RG 26)"
+  },
+  "nara-lightstation-se": {
+   "src": "loc_jpg/nara-lg-63-1.jpg",
+   "title": "CA - Alcatraz Light Station, view from the S.E.",
+   "url": "https://catalog.archives.gov/id/45708567",
+   "credit": "U.S. National Archives (RG 26-LG)"
+  },
+  "nara-island-far": {
+   "src": "loc_jpg/nara-lg-63-5.jpg",
+   "title": "CA - Alcatraz",
+   "url": "https://catalog.archives.gov/id/45708573",
+   "credit": "U.S. National Archives (RG 26-LG)"
+  },
+  "nara-lighthouse": {
+   "src": "loc_jpg/nara-lg-63-14.jpg",
+   "title": "CA - Alcatraz Light Station",
+   "url": "https://catalog.archives.gov/id/45708595",
+   "credit": "U.S. National Archives (RG 26-LG)"
+  },
+  "nara-garrison": {
+   "src": "loc_jpg/nara-group-at-alcatraz.jpg",
+   "title": "Group at Alcatraz (U.S. Army Signal Corps)",
+   "url": "https://catalog.archives.gov/id/329592447",
+   "credit": "U.S. National Archives (RG 111-SC)"
+  },
+  "wn-capone": {
+   "src": "loc_jpg/wn-capone-85.jpg",
+   "title": "CAPONE, Alphonse - Alcatraz Number 85 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236736566",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-lucas": {
+   "src": "loc_jpg/wn-lucas-224.jpg",
+   "title": "LUCAS, James C. - Alcatraz Number 224 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236734998",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-limerick": {
+   "src": "loc_jpg/wn-limerick-263.jpg",
+   "title": "LIMERICK, Thomas R. - Alcatraz Number 263 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236735090",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-franklin": {
+   "src": "loc_jpg/wn-franklin-335.jpg",
+   "title": "FRANKLIN, Rufus W. - Alcatraz Number 335 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236735244",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-coy": {
+   "src": "loc_jpg/wn-coy-415.jpg",
+   "title": "COY, Bernard P. - Alcatraz Number 415 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236735451",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-cretzer": {
+   "src": "loc_jpg/wn-cretzer-548.jpg",
+   "title": "CRETZER, Joseph P. - Alcatraz Number 548 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236735810",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-shockley": {
+   "src": "loc_jpg/wn-shockley-462.jpg",
+   "title": "SHOCKLEY, Samuel R. - Alcatraz Number 462 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236735583",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-thompson": {
+   "src": "loc_jpg/wn-thompson-729.jpg",
+   "title": "THOMPSON, Miran E. - Alcatraz Number 729 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236736293",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-carnes": {
+   "src": "loc_jpg/wn-carnes-714.jpg",
+   "title": "CARNES, Clarence V. - Alcatraz Number 714 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236736248",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-morris": {
+   "src": "loc_jpg/wn-morris-1441.jpg",
+   "title": "MORRIS, Frank Lee - Alcatraz Number 1441 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236734680",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-john-anglin": {
+   "src": "loc_jpg/wn-janglin-1476.jpg",
+   "title": "ANGLIN, John William - Alcatraz Number 1476 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236734722",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-clarence-anglin": {
+   "src": "loc_jpg/wn-canglin-1485.jpg",
+   "title": "ANGLIN, (Alfred) Clarence - Alcatraz Number 1485 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236734734",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-scott": {
+   "src": "loc_jpg/wn-scott-1403.jpg",
+   "title": "SCOTT, John Paul - Alcatraz Number 1403 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236734634",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "wn-parker": {
+   "src": "loc_jpg/wn-parker-1413.jpg",
+   "title": "PARKER, Darl Dee - Alcatraz Number 1413 - Warden's Notebook",
+   "url": "https://catalog.archives.gov/id/236734646",
+   "credit": "U.S. National Archives (RG 129)"
+  },
+  "nps-hopi-a": {
+   "src": "dl/nps/hopi1a.jpg",
+   "title": "Hopi prisoners on Alcatraz, 1895",
+   "url": "https://www.nps.gov/alca/learn/historyculture/people.htm",
+   "credit": "National Park Service, Golden Gate NRA Park Archives"
+  },
+  "nps-hopi-b": {
+   "src": "dl/nps/hopi2a.jpg",
+   "title": "Hopi prisoners on Alcatraz, 1895",
+   "url": "https://www.nps.gov/alca/learn/historyculture/the-post-on-alcatraces.htm",
+   "credit": "National Park Service, Golden Gate NRA Park Archives"
+  },
+  "nps-hopi-c": {
+   "src": "dl/nps/hopi3a.jpg",
+   "title": "Hopi prisoners on Alcatraz, 1895",
+   "url": "https://www.nps.gov/alca/learn/historyculture/people.htm",
+   "credit": "National Park Service, Golden Gate NRA Park Archives"
+  },
+  "nps-citadel": {
+   "src": "dl/nps/Citadel-2.JPG",
+   "title": "The Citadel, Alcatraz military post",
+   "url": "https://www.nps.gov/alca/learn/historyculture/stories.htm",
+   "credit": "National Park Service, Golden Gate NRA Park Archives"
+  },
+  "nps-guard-tower": {
+   "src": "dl/nps/Guard-in-Tower.jpg",
+   "title": "Guard in tower, U.S. Penitentiary Alcatraz",
+   "url": "https://www.nps.gov/alca/learn/historyculture/stories.htm",
+   "credit": "National Park Service, Golden Gate NRA Park Archives"
+  },
+  "nps-military-aerial": {
+   "src": "dl/nps/ALCATRAZ_AERIAL_Late_Military_Era.jpg",
+   "title": "Aerial photo of the new military prison on Alcatraz",
+   "url": "https://www.nps.gov/alca/learn/historyculture/the-post-on-alcatraces.htm",
+   "credit": "National Park Service, Golden Gate NRA Park Archives"
+  },
+  "nps-dummy-head": {
+   "src": "dl/nps/Head-350x.jpg",
+   "title": "Dummy head from the June 1962 escape (Alcatraz museum collection)",
+   "url": "https://www.nps.gov/alca/learn/historyculture/collections.htm",
+   "credit": "National Park Service, Golden Gate NRA Park Archives"
+  },
+  "nps-broadway": {
+   "src": "dl/nps/Broadway.jpg",
+   "title": "Broadway, Alcatraz cellhouse",
+   "url": "https://www.nps.gov/alca/learn/historyculture/us-penitentiary-alcatraz.htm",
+   "credit": "National Park Service, Golden Gate NRA"
+  }
+ }
+}

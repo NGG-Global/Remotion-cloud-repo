@@ -444,6 +444,23 @@ npx remotion render StarReveal out/star-reveal.mp4
 npx remotion still StarReveal out/star-reveal.png --frame=90
 ```
 
+## Behind the Nightmare: Alcatraz
+
+`AlcatrazDocumentary` (1920x1080, 30 fps, 17:19) is a Hebrew-narrated
+documentary cut to `public/alcatraz/audio/narration.mp3`, built from archival
+film and photographs (U.S. National Archives, Library of Congress, National
+Park Service, Prelinger Archives) with drawn maps, plans and timelines where no
+picture exists. Six newsreel inserts play with their own sound and Hebrew
+subtitles; no clip or still is used twice, and the composition refuses to load
+if one is.
+
+```bash
+npx remotion render AlcatrazDocumentary out/alcatraz.mp4 --gl=swiftshader
+```
+
+How it is cut, rendered and checked: `docs/ALCATRAZ_NOTES.md`. Credits and
+record links for every picture: `public/alcatraz/SOURCES.md`.
+
 ## Cloud rendering
 
 `npm run bundle` produces a static bundle that any render service can serve.
