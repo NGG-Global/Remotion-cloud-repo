@@ -59,7 +59,17 @@ Rendering is about twice as fast with SwiftShader than with the project-wide `sw
 npx remotion render AlcatrazDocumentary out/alcatraz.mp4 --gl=swiftshader --concurrency=4
 ```
 
-In the 4-core cloud container this takes about 0.23 s per frame, so about two hours for the film. The delivered file was rendered as four muted video chunks plus a WAV of the mix, then joined and encoded with ffmpeg (loudness normalised for YouTube to -14 LUFS).
+The delivered file was rendered as four muted video chunks plus a WAV of the mix, then joined and encoded with ffmpeg:
+
+```bash
+npx remotion render AlcatrazDocumentary chunk0.mp4 --frames=0-7799 --muted --gl=swiftshader --concurrency=4 --crf=17 --jpeg-quality=92
+# ... chunks 7800-15599, 15600-23399, 23400-31171
+npx remotion render AlcatrazDocumentary audio.wav --codec=wav --timeout=240000 --gl=swiftshader
+```
+
+Measured in the 4-core cloud container: 20 to 23 minutes per 7800-frame chunk (about 0.16 s a frame, 87 minutes for the film) and 18 minutes for the audio. The audio-only render still opens every clip, and with the default 30-second timeout it failed on the first one; `--timeout=240000` fixed it. The chunks join with `ffmpeg -f concat -c copy` (31172 frames checked), and the WAV is normalised for YouTube to -14 LUFS / -1.5 dBTP with a two-pass `loudnorm` before the final H.264/AAC encode.
+
+Measured on the WAV: each insert sits 2 to 4 dB (RMS) under the narration around it, and the narration lines up with the transcript to within 25 ms (the MP3's own start offset, under one frame).
 
 Stills for review (one bundle, one browser):
 
