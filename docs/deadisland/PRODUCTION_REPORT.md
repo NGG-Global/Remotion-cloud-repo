@@ -11,10 +11,10 @@
 | Size | about 2.64 GB |
 | Watermark / subtitles | none / none |
 
-Delivery in chat: the chat upload limit is 500 MiB per file and the master is 2,519 MiB, so it was delivered two ways:
+Delivery in chat: the chat upload limit is about 400 MiB per file and the master is 2,519 MiB, so it was delivered two ways:
 a lossless eight-part split of the master (`out/deadisland/master-parts/`, rejoined with one FFmpeg command, see
 `JOIN-README.txt`), and a complete single-file H.265 version sized to fit under the limit
-(`out/deadisland/Dead-Island-Behind-the-Nightmare-1080p-hevc.mp4`, about 2.2 Mb/s picture; visibly more compressed than the
+(`out/deadisland/Dead-Island-Behind-the-Nightmare-1080p-hevc.mp4`, 381 MiB, about 1.8 Mb/s picture; visibly more compressed than the
 master in busy gameplay, so the master is the file to upload to YouTube).
 
 1080p rather than 4K: most of the authentic sources are 720p or 1080p (several are 540p or lower), so a 4K master would only
