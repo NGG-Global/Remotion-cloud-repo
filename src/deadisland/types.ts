@@ -30,6 +30,8 @@ export type Shot = {
   readonly freeze?: boolean;
   /** Level of the source's own sound under the narration (0–1). Default 0: silent. */
   readonly nat?: number;
+  /** Deliberate callback to footage already used elsewhere in the film. */
+  readonly reuse?: boolean;
   /** What the shot shows. */
   readonly subject: string;
   /** Chapter of the narration this shot belongs to. */
@@ -44,6 +46,16 @@ export type Label = {
   readonly sub?: string;
 };
 
+/** Continuous source sound laid under several shots (e.g. a trailer's own soundtrack). */
+export type Bed = {
+  readonly id: string;
+  readonly at: number;
+  readonly src: string;
+  readonly in: number;
+  readonly dur: number;
+  readonly volume: number;
+};
+
 export type Timeline = {
   readonly fps: number;
   readonly width: number;
@@ -53,4 +65,5 @@ export type Timeline = {
   readonly tail: number;
   readonly shots: readonly Shot[];
   readonly labels: readonly Label[];
+  readonly beds: readonly Bed[];
 };

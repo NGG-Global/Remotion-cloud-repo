@@ -57,6 +57,15 @@ def cut(job):
     open(out + ".key", "w").write(key)
     return s["id"], "cut"
 
+def beds():
+    """Continuous source sound beds (e.g. the 2011 trailer's own soundtrack), with 1.5 s fades."""
+    os.makedirs("public/deadisland/audio/beds", exist_ok=True)
+    for b in TL.get("beds", []):
+        out = f"public/deadisland/audio/beds/{b['id']}.m4a"
+        d = b["dur"]
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(b["in"]), "-t", str(d), "-i", raw(b["src"]), "-vn",
+                        "-af", f"afade=t=in:d=1.5,afade=t=out:st={d - 2.5}:d=2.5", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", out], check=True)
+
 def registry(jobs):
     os.makedirs("docs/deadisland", exist_ok=True)
     count = {}
@@ -78,9 +87,9 @@ def check(jobs):
         if d <= 0: print("ORDER", s["id"]); bad += 1
         if d < 1.0: print("SHORT SHOT", s["id"], f"{d:.2f}s"); bad += 1
         a, b = s["in"], s["in"] + d * s.get("speed", 1)
-        for (oa, ob, oid) in spans.get(s["src"], []):
-            if a < ob and oa < b: print(f"REUSE {s['id']} overlaps {oid} in {s['src']} ({max(a,oa):.1f}-{min(b,ob):.1f})"); bad += 1
-        spans.setdefault(s["src"], []).append((a, b, s["id"]))
+        for (oa, ob, oid, ore) in spans.get(s["src"], []):
+            if a < ob and oa < b and not s.get("reuse") and not ore: print(f"REUSE {s['id']} overlaps {oid} in {s['src']} ({max(a,oa):.1f}-{min(b,ob):.1f})"); bad += 1
+        spans.setdefault(s["src"], []).append((a, b, s["id"], bool(s.get("reuse"))))
     ids = [s["id"] for s, _, _ in jobs]
     if len(set(ids)) != len(ids): print("DUPLICATE IDS"); bad += 1
     print(f"{len(jobs)} shots, {bad} problems")
@@ -91,9 +100,10 @@ if __name__ == "__main__":
     bad = check(jobs)
     if "--check" in sys.argv: sys.exit(1 if bad else 0)
     os.makedirs(OUT, exist_ok=True)
-    with ThreadPoolExecutor(3) as ex:
+    with ThreadPoolExecutor(4) as ex:
         for i, st in ex.map(cut, jobs):
             if st != "kept": print(i, st, flush=True)
+    beds()
     registry(jobs)
     keep = {s["id"] for s, _, _ in jobs}
     for p in glob.glob(f"{OUT}/*.mp4"):

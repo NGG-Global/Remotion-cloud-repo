@@ -1,7 +1,5169 @@
-{"fps":30,"width":1920,"height":1080,"narration":14,"tail":2,
- "shots":[
-  {"id":"t001","at":0,"src":"di1_de_launch","in":18.2,"subject":"test resort","chapter":"test","transition":"fadeFromBlack","transitionDur":1},
-  {"id":"t002","at":5,"src":"di1_cinematic","in":30,"subject":"test trailer","chapter":"test","transition":"dissolve","transitionDur":0.6},
-  {"id":"t003","at":10,"src":"di1_e3trailer","in":40,"subject":"test sd","chapter":"test","nat":0.1}
+{
+ "fps": 30,
+ "width": 1920,
+ "height": 1080,
+ "narration": 1668.88,
+ "tail": 3.2,
+ "shots": [
+  {
+   "at": 0.0,
+   "src": "di1_tragedy",
+   "in": 11.5,
+   "subject": "'Greetings from Banoi' postcard, push-in to the island vista",
+   "transition": "fadeFromBlack",
+   "transitionDur": 1.2,
+   "id": "di1tragedy_001150",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 5.6,
+   "src": "di1_de_launch",
+   "in": 19.1,
+   "subject": "Royal Palms hotel, pool terrace, parasols and loungers at dawn",
+   "id": "di1delaunch_001910",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 10.1,
+   "src": "di1_de_facts",
+   "in": 13.6,
+   "subject": "Beach bar welcome sign above the pool",
+   "speed": 0.9,
+   "id": "di1defacts_001360",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 11.8,
+   "src": "di1_launch",
+   "in": 15.6,
+   "subject": "First person: door opens from the dark room onto the bright balcony and sea",
+   "id": "di1launch_001560",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 15.4,
+   "src": "di1_de_launch",
+   "in": 25.6,
+   "subject": "Silhouette at the balcony rail over the sea",
+   "speed": 0.8,
+   "id": "di1delaunch_002560",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 17.1,
+   "src": "di1_de_facts",
+   "in": 2.15,
+   "subject": "Blue bay and mountains framed by palms",
+   "speed": 0.9,
+   "id": "di1defacts_000215",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 19.6,
+   "src": "di1_de_announce",
+   "in": 31.8,
+   "subject": "Hotel facade over the pool, strong sun",
+   "speed": 0.65,
+   "id": "di1deannounce_003180",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 22.5,
+   "src": "di1_de_launch",
+   "in": 4.2,
+   "subject": "The night pool party, drunk first-person view",
+   "id": "di1delaunch_000420",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 26.6,
+   "src": "di1_fight",
+   "in": 25.0,
+   "subject": "Hotel corridor: panicking guests run past",
+   "id": "di1fight_002500",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 30.6,
+   "src": "di1_de_facts",
+   "in": 21.6,
+   "subject": "Tourists flee along the promenade as zombies grab at them",
+   "id": "di1defacts_002160",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 36.9,
+   "src": "di1_tragedy",
+   "in": 68.2,
+   "subject": "Blood-covered zombie on the hillside road",
+   "id": "di1tragedy_006820",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 38.6,
+   "src": "di1_tragedy",
+   "in": 72.0,
+   "subject": "Two zombies stagger along the palm-lined beach",
+   "id": "di1tragedy_007200",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 40.2,
+   "src": "di1_de_announce",
+   "in": 72.0,
+   "subject": "A zombie staggers along the bungalow walkway",
+   "speed": 0.8,
+   "id": "di1deannounce_007200",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 42.1,
+   "src": "di1_de_announce",
+   "in": 46.0,
+   "subject": "First person, down on the sand as zombies run in along the waterline",
+   "id": "di1deannounce_004600",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 44.5,
+   "src": "di1_de_announce",
+   "in": 37.8,
+   "subject": "Zombies feeding on a body on the beach",
+   "id": "di1deannounce_003780",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 46.5,
+   "src": "di1_de_announce",
+   "in": 61.0,
+   "subject": "A zombie walks up under a parasol and grabs the player",
+   "id": "di1deannounce_006100",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 49.0,
+   "src": "di1_e3trailer",
+   "in": 146.6,
+   "subject": "Emblem: hanged man beneath a palm at sunset",
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di1e3trailer_014660",
+   "chapter": "Cold open"
+  },
+  {
+   "at": 55.5,
+   "src": "di1_launch",
+   "in": 4.5,
+   "subject": "Establishing: stilt bungalows, Moresby bridge",
+   "id": "di1launch_000450",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 59.2,
+   "src": "di1_tragedy",
+   "in": 61.7,
+   "subject": "The emptied island: market alley, surfboards on an empty beach",
+   "id": "di1tragedy_006170",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 63.1,
+   "src": "di1_de_facts",
+   "in": 15.4,
+   "subject": "A mauled body under a parasol; a zombie by the pool",
+   "id": "di1defacts_001540",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 66.9,
+   "src": "di1_de_launch",
+   "in": 34.6,
+   "subject": "Silhouetted zombie on a sunlit street",
+   "id": "di1delaunch_003460",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 69.6,
+   "src": "di1_cinematic",
+   "in": 19.0,
+   "subject": "2011 trailer: the girl's eye, slow pull back",
+   "transition": "dissolve",
+   "transitionDur": 0.8,
+   "id": "di1cinematic_001900",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 80.3,
+   "src": "di1_first15",
+   "in": 780.5,
+   "subject": "Dead Island gameplay: zombies swarm a pickup on the beach",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_078050",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 83.2,
+   "src": "di2_e3_2014",
+   "in": 184.0,
+   "subject": "Dead Island 2 logo card, 2014 (shown again in the E3 chapter)",
+   "reuse": true,
+   "id": "di2e32014_018400",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 86.2,
+   "src": "di2_yager_gdc",
+   "in": 10.7,
+   "subject": "Yager logo slide",
+   "crop": [
+    0.295,
+    0.145,
+    0.7,
+    0.705
+   ],
+   "id": "di2yagergdc_001070",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 88.6,
+   "src": "di2_yager_sunshine",
+   "in": 12.9,
+   "subject": "Yager build, 2014: a sunny street",
+   "id": "di2yagersunshine_001290",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 91.2,
+   "src": "di2_e3_2014",
+   "in": 134.0,
+   "subject": "E3 2014 trailer: zombies run along the burning boardwalk",
+   "id": "di2e32014_013400",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 95.2,
+   "src": "di2_flesh_gi",
+   "in": 144.5,
+   "subject": "Dead Island 2 (2023): charred zombies advance up a drive and are cut down",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_014450",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 102.0,
+   "src": "di1_fight",
+   "in": 86.9,
+   "subject": "Emblem: hanged man beneath a palm at sunset",
+   "id": "di1fight_008690",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 106.1,
+   "src": "di1_walkthrough",
+   "in": 11.2,
+   "subject": "A pickup pulls up among thatched huts at the lifeguard station",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_001120",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 107.6,
+   "src": "di1_quicklook",
+   "in": 541.0,
+   "subject": "Machete fight",
+   "id": "di1quicklook_054100",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 110.0,
+   "src": "di2_yager_pgw",
+   "in": 16.6,
+   "subject": "Paris Games Week 2014: a performer as the zombie jogger at the Dead Island 2 stand",
+   "crop": [
+    0.11,
+    0.11,
+    0.89,
+    0.89
+   ],
+   "speed": 0.8,
+   "id": "di2yagerpgw_001660",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 112.2,
+   "src": "di2_gamescom_4k",
+   "in": 142.4,
+   "subject": "Gamescom 2022 trailer: Jacob walks out into a street of zombies; the camera cranes up",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_014240",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 120.0,
+   "src": "di1_tragedy",
+   "in": 57.2,
+   "subject": "Holiday snapshots: a woman on the beach, a diver, a couple",
+   "id": "di1tragedy_005720",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 122.9,
+   "src": "di1_cinematic",
+   "in": 168.05,
+   "subject": "2011 trailer coda: the mother arrives at the hotel",
+   "id": "di1cinematic_016805",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 124.0,
+   "src": "di1_cinematic",
+   "in": 174.5,
+   "subject": "2011 trailer coda: the father sets the camera timer for the family photo",
+   "id": "di1cinematic_017450",
+   "chapter": "Introduction"
+  },
+  {
+   "at": 127.6,
+   "src": "di1_cinematic",
+   "in": 4.7,
+   "subject": "Deep Silver logo opening the 2011 trailer",
+   "transition": "dissolve",
+   "transitionDur": 0.5,
+   "id": "di1cinematic_000470",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 130.7,
+   "src": "di1_cinematic",
+   "in": 160.75,
+   "subject": "Dead Island logo from the 2011 trailer",
+   "id": "di1cinematic_016075",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 134.0,
+   "src": "di1_de_launch",
+   "in": 73.8,
+   "subject": "An Infected charges; zombies silhouetted against a red sunset",
+   "id": "di1delaunch_007380",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 136.9,
+   "src": "di1_de_launch",
+   "in": 79.2,
+   "subject": "Zombie lunging, zombies clawing at a survivor",
+   "id": "di1delaunch_007920",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 139.2,
+   "src": "di1_e3trailer",
+   "in": 96.8,
+   "subject": "Zombies shamble along the beach boardwalk",
+   "id": "di1e3trailer_009680",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 141.0,
+   "src": "ctx_l4d_intro",
+   "in": 164.7,
+   "subject": "Left 4 Dead: the horde sprinting down a night street",
+   "id": "ctxl4dintro_016470",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 142.7,
+   "src": "ctx_re5",
+   "in": 48.7,
+   "subject": "Resident Evil 5: Majini attackers",
+   "crop": [
+    0.128,
+    0.128,
+    0.744,
+    0.744
+   ],
+   "id": "ctxre5_004870",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 143.95,
+   "src": "ctx_dr2",
+   "in": 70.0,
+   "subject": "Dead Rising 2: Chuck mows through zombies",
+   "id": "ctxdr2_007000",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 145.3,
+   "src": "ctx_dr2",
+   "in": 89.9,
+   "subject": "Dead Rising 2: zombie crowds on the Strip",
+   "id": "ctxdr2_008990",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 148.7,
+   "src": "di1_de_facts",
+   "in": 39.7,
+   "subject": "A blade is thrown at approaching zombies on the beach and hits one",
+   "id": "di1defacts_003970",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 152.1,
+   "src": "di1_de_announce",
+   "in": 76.1,
+   "subject": "Zombies advancing on the beach by the bar",
+   "speed": 0.75,
+   "id": "di1deannounce_007610",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 155.0,
+   "src": "ctx_dr2",
+   "in": 44.6,
+   "subject": "Dead Rising 2: Chuck Greene with a combo weapon",
+   "id": "ctxdr2_004460",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 157.6,
+   "src": "ctx_re5",
+   "in": 44.4,
+   "subject": "Resident Evil 5: Chris and Sheva raise their pistols",
+   "crop": [
+    0.128,
+    0.128,
+    0.744,
+    0.744
+   ],
+   "id": "ctxre5_004440",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 159.4,
+   "src": "ctx_l4d_intro",
+   "in": 95.0,
+   "subject": "Left 4 Dead: survivors firing, muzzle flashes",
+   "id": "ctxl4dintro_009500",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 160.6,
+   "src": "ctx_l4d_intro",
+   "in": 25.1,
+   "subject": "Left 4 Dead: Bill's weathered face",
+   "id": "ctxl4dintro_002510",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 163.6,
+   "src": "di1_cinematic",
+   "in": 29.75,
+   "subject": "2011 trailer: the girl lies motionless on the grass outside the hotel",
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di1cinematic_002975",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 169.4,
+   "src": "di1_cinematic",
+   "in": 37.5,
+   "subject": "2011 trailer: time runs backwards, a burning man walks in reverse",
+   "id": "di1cinematic_003750",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 173.3,
+   "src": "di1_cinematic",
+   "in": 42.4,
+   "subject": "2011 trailer: her body lifts off the grass and rises past the hotel",
+   "id": "di1cinematic_004240",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 178.0,
+   "src": "di1_cinematic",
+   "in": 52.5,
+   "subject": "2011 trailer: the window glass reassembles around her",
+   "id": "di1cinematic_005250",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 182.4,
+   "src": "di1_cinematic",
+   "in": 135.5,
+   "subject": "2011 trailer: the father shuts the door, the mother holds the girl",
+   "id": "di1cinematic_013550",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 187.6,
+   "src": "di1_cinematic",
+   "in": 98.7,
+   "subject": "2011 trailer: the father swings the fire axe",
+   "id": "di1cinematic_009870",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 190.4,
+   "src": "di1_cinematic",
+   "in": 109.1,
+   "subject": "2011 trailer: the axe, the father's face",
+   "id": "di1cinematic_010910",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 194.5,
+   "src": "di1_cinematic",
+   "in": 148.3,
+   "subject": "2011 trailer: father and daughter reach for each other in the corridor",
+   "id": "di1cinematic_014830",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 199.0,
+   "src": "di1_cinematic",
+   "in": 140.9,
+   "subject": "2011 trailer (forward): the father carries the girl through the corridor",
+   "speed": 0.75,
+   "id": "di1cinematic_014090",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 203.4,
+   "src": "di1_cinematic",
+   "in": 129.4,
+   "subject": "2011 trailer: the mother lays the wounded girl on the bed",
+   "id": "di1cinematic_012940",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 206.7,
+   "src": "di1_cinematic",
+   "in": 79.4,
+   "subject": "2011 trailer: the girl and her father, the mother recoils",
+   "speed": 0.8,
+   "id": "di1cinematic_007940",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 211.4,
+   "src": "di1_cinematic",
+   "in": 152.9,
+   "subject": "2011 trailer: their hands meet and drift apart",
+   "id": "di1cinematic_015290",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 216.0,
+   "src": "di1_tragedy",
+   "in": 42.1,
+   "subject": "Tourists' holiday snapshots: a couple, a mother and child",
+   "id": "di1tragedy_004210",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 218.5,
+   "src": "di1_cinematic",
+   "in": 178.2,
+   "subject": "2011 trailer coda: the family waves at the camera",
+   "id": "di1cinematic_017820",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 221.6,
+   "src": "di1_cinematic",
+   "in": 172.1,
+   "subject": "2011 trailer coda: the girl at the balcony, the pool far below",
+   "speed": 0.6,
+   "id": "di1cinematic_017210",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 223.9,
+   "src": "di1_cinematic",
+   "in": 75.5,
+   "subject": "2011 trailer: the mother with a knife",
+   "id": "di1cinematic_007550",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 226.6,
+   "src": "di1_cinematic",
+   "in": 83.8,
+   "subject": "2011 trailer: wide of the hotel room",
+   "speed": 0.85,
+   "id": "di1cinematic_008380",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 229.3,
+   "src": "di1_cinematic",
+   "in": 57.4,
+   "subject": "2011 trailer: the girl flies back in through the window",
+   "id": "di1cinematic_005740",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 233.5,
+   "src": "di1_cinematic",
+   "in": 67.0,
+   "subject": "2011 trailer: zombies rush the parents",
+   "id": "di1cinematic_006700",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 236.7,
+   "src": "di1_cinematic",
+   "in": 114.6,
+   "subject": "2011 trailer: the bellhop zombie at the door",
+   "id": "di1cinematic_011460",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 238.8,
+   "src": "di1_cinematic",
+   "in": 117.7,
+   "subject": "2011 trailer: the father holds the door",
+   "id": "di1cinematic_011770",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 242.0,
+   "src": "di1_cinematic",
+   "in": 122.7,
+   "subject": "2011 trailer: an arm comes through the door",
+   "id": "di1cinematic_012270",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 244.9,
+   "src": "di1_cinematic",
+   "in": 87.5,
+   "subject": "2011 trailer: the mother backs away in horror",
+   "id": "di1cinematic_008750",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 247.2,
+   "src": "di1_cinematic",
+   "in": 90.0,
+   "subject": "2011 trailer: the girl on the bed, the axe",
+   "id": "di1cinematic_009000",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 250.5,
+   "src": "di1_cinematic",
+   "in": 47.2,
+   "subject": "2011 trailer: the girl rises towards the window",
+   "id": "di1cinematic_004720",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 253.9,
+   "src": "di1_tragedy",
+   "in": 74.6,
+   "subject": "Emblem: hanged man beneath a palm at sunset",
+   "speed": 0.8,
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di1tragedy_007460",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 262.5,
+   "src": "di1_fight",
+   "in": 13.7,
+   "subject": "Establishing: Moresby street, plane wreck in the jungle, the lighthouse",
+   "id": "di1fight_001370",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 268.6,
+   "src": "di1_cinematic",
+   "in": 63.1,
+   "subject": "2011 trailer: the father staggers among the zombies",
+   "speed": 0.73,
+   "id": "di1cinematic_006310",
+   "chapter": "The 2011 trailer"
+  },
+  {
+   "at": 272.3,
+   "src": "di1_cinematic",
+   "in": 106.8,
+   "subject": "2011 trailer: the father braces the door",
+   "speed": 0.9,
+   "id": "di1cinematic_010680",
+   "chapter": "The game behind the trailer"
+  },
+  {
+   "at": 274.5,
+   "src": "di1_cinematic",
+   "in": 144.4,
+   "subject": "2011 trailer: corridor, a zombie lunges; the father shields the girl",
+   "id": "di1cinematic_014440",
+   "chapter": "The game behind the trailer"
+  },
+  {
+   "at": 278.2,
+   "src": "di1_e3trailer",
+   "in": 89.9,
+   "subject": "The game: first person, leaving the hotel room into the silent corridor",
+   "id": "di1e3trailer_008990",
+   "chapter": "The game behind the trailer"
+  },
+  {
+   "at": 282.9,
+   "src": "di1_first15",
+   "in": 630.3,
+   "subject": "Gameplay: walking onto the resort beach with a paddle, HUD visible",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_063030",
+   "chapter": "The game behind the trailer"
+  },
+  {
+   "at": 289.7,
+   "src": "di1_quicklook",
+   "in": 244.0,
+   "subject": "Gameplay: Sam B fights a walker with a nailed bat",
+   "id": "di1quicklook_024400",
+   "chapter": "The game behind the trailer"
+  },
+  {
+   "at": 294.1,
+   "src": "di1_quicklook",
+   "in": 88.5,
+   "subject": "Quest log: main and side quests",
+   "id": "di1quicklook_008850",
+   "chapter": "The game behind the trailer"
+  },
+  {
+   "at": 295.6,
+   "src": "di1_quicklook",
+   "in": 106.5,
+   "subject": "Inventory: improvised weapons with condition and stats",
+   "id": "di1quicklook_010650",
+   "chapter": "The game behind the trailer"
+  },
+  {
+   "at": 298.0,
+   "src": "di1_quicklook",
+   "in": 259.5,
+   "subject": "A zombie in swim shorts staggers at the player",
+   "id": "di1quicklook_025950",
+   "chapter": "The game behind the trailer"
+  },
+  {
+   "at": 299.4,
+   "src": "di1_first15",
+   "in": 401.2,
+   "subject": "Beating zombies with a wooden paddle on the beach",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_040120",
+   "chapter": "The game behind the trailer"
+  },
+  {
+   "at": 308.9,
+   "src": "di1_walkthrough",
+   "in": 62.2,
+   "subject": "From the lifeguard tower deck: the whole resort bay",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_006220",
+   "chapter": "The game behind the trailer"
+  },
+  {
+   "at": 316.0,
+   "src": "di1_cinematic",
+   "in": 10.45,
+   "subject": "Techland logo",
+   "speed": 0.84,
+   "id": "di1cinematic_001045",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 319.7,
+   "src": "di1_quicklook",
+   "in": 63.5,
+   "subject": "In-game map of Banoi",
+   "id": "di1quicklook_006350",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 322.5,
+   "src": "di1_launch",
+   "in": 8.35,
+   "subject": "Establishing shots of Banoi",
+   "id": "di1launch_000835",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 325.7,
+   "src": "di1_de_launch",
+   "in": 8.8,
+   "subject": "The opening party: Sam B performs on stage",
+   "id": "di1delaunch_000880",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 328.4,
+   "src": "di1_first15",
+   "in": 17.2,
+   "subject": "Waking in the dark hotel suite after the party",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_001720",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 332.9,
+   "src": "di1_quicklook",
+   "in": 1330.5,
+   "subject": "Character select: Sam B",
+   "id": "di1quicklook_133050",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 336.4,
+   "src": "di1_quicklook",
+   "in": 1326.0,
+   "subject": "Character select: Xian Mei",
+   "id": "di1quicklook_132600",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 339.0,
+   "src": "di1_de_announce",
+   "in": 54.6,
+   "subject": "Xian Mei in a bungalow doorway",
+   "id": "di1deannounce_005460",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 341.0,
+   "src": "di1_quicklook",
+   "in": 1321.4,
+   "subject": "Character select: Logan",
+   "speed": 0.73,
+   "id": "di1quicklook_132140",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 344.0,
+   "src": "di1_quicklook",
+   "in": 1324.0,
+   "subject": "Character select: Purna",
+   "speed": 0.7,
+   "id": "di1quicklook_132400",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 346.3,
+   "src": "di1_de_launch",
+   "in": 27.2,
+   "subject": "Purna in the hotel lobby",
+   "speed": 0.6,
+   "id": "di1delaunch_002720",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 348.0,
+   "src": "di1_fight",
+   "in": 38.5,
+   "subject": "The four heroes by a car on a jungle road",
+   "id": "di1fight_003850",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 350.4,
+   "src": "di1_de_launch",
+   "in": 48.5,
+   "subject": "The four playable characters in close-up",
+   "id": "di1delaunch_004850",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 353.0,
+   "src": "di1_walkthrough",
+   "in": 218.0,
+   "subject": "A zombie grabs the player face to face and is thrown off",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_021800",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 361.6,
+   "src": "di1_first15",
+   "in": 512.4,
+   "subject": "Sinamoi, the head lifeguard, gives a quest",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_051240",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 365.4,
+   "src": "di1_first15",
+   "in": 554.8,
+   "subject": "Quest sheet: 'Passport to Life'",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_055480",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 368.4,
+   "src": "di1_quicklook",
+   "in": 606.0,
+   "subject": "Carrying a supply crate in first person",
+   "id": "di1quicklook_060600",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 372.0,
+   "src": "di1_de_announce",
+   "in": 34.0,
+   "subject": "High wide of the resort beach: parasols, pier, lagoon",
+   "speed": 0.75,
+   "id": "di1deannounce_003400",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 374.4,
+   "src": "di1_first15",
+   "in": 719.3,
+   "subject": "Wide view across the beach: palms, sand, thatched bar",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_071930",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 377.3,
+   "src": "di1_psnow",
+   "in": 1247.0,
+   "subject": "Abandoned resort pool: floating mats, blood on the paving",
+   "crop": [
+    0.0,
+    0.21,
+    0.76,
+    0.76
+   ],
+   "id": "di1psnow_124700",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 379.0,
+   "src": "di1_psnow",
+   "in": 1503.2,
+   "subject": "Sun loungers tipped over beside a parasol",
+   "crop": [
+    0.0,
+    0.21,
+    0.76,
+    0.76
+   ],
+   "id": "di1psnow_150320",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 380.7,
+   "src": "di1_first15",
+   "in": 57.0,
+   "subject": "Hotel corridor full of abandoned luggage",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_005700",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 382.6,
+   "src": "di1_walkthrough",
+   "in": 190.0,
+   "subject": "Garden path between bungalows, a beach ball on the lawn; a zombie in a bikini approaches",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_019000",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 389.9,
+   "src": "di1_de_launch",
+   "in": 97.3,
+   "subject": "Resort combat: blade slash among palms, burning huts",
+   "id": "di1delaunch_009730",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 393.6,
+   "src": "ctx_re5",
+   "in": 50.0,
+   "subject": "Resident Evil 5: a dark compound",
+   "crop": [
+    0.128,
+    0.128,
+    0.744,
+    0.744
+   ],
+   "id": "ctxre5_005000",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 397.0,
+   "src": "ctx_l4d_intro",
+   "in": 157.9,
+   "subject": "Left 4 Dead: a dark city street",
+   "id": "ctxl4dintro_015790",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 398.6,
+   "src": "ctx_re5",
+   "in": 55.3,
+   "subject": "Resident Evil 5: a mob closes in",
+   "crop": [
+    0.128,
+    0.128,
+    0.744,
+    0.744
+   ],
+   "id": "ctxre5_005530",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 400.6,
+   "src": "ctx_l4d_intro",
+   "in": 209.2,
+   "subject": "Left 4 Dead: night street",
+   "id": "ctxl4dintro_020920",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 402.5,
+   "src": "di1_walkthrough",
+   "in": 445.0,
+   "subject": "Quiet cove: fishing boats on turquoise water",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_044500",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 407.6,
+   "src": "di1_e3trailer",
+   "in": 42.0,
+   "subject": "The hotel at night, signpost 'Palms Hotel / Paradise'",
+   "id": "di1e3trailer_004200",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 409.9,
+   "src": "di1_launch",
+   "in": 44.7,
+   "subject": "The hotel facade as a helicopter trails smoke overhead",
+   "speed": 0.6,
+   "id": "di1launch_004470",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 412.0,
+   "src": "di1_walkthrough",
+   "in": 510.2,
+   "subject": "Moresby in heavy rain: an armoured truck drives through the littered street",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_051020",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 419.0,
+   "src": "di1_quicklook",
+   "in": 1542.3,
+   "subject": "Moresby street: litter, a wrecked car, corpses",
+   "id": "di1quicklook_154230",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 423.5,
+   "src": "di1_quicklook",
+   "in": 2269.5,
+   "subject": "Inside the Moresby church: survivors sheltering",
+   "id": "di1quicklook_226950",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 426.3,
+   "src": "di1_quicklook",
+   "in": 2290.0,
+   "subject": "Church: tables of bottled water and supplies",
+   "id": "di1quicklook_229000",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 429.5,
+   "src": "di1_fight",
+   "in": 77.1,
+   "subject": "Gunfight in a rainy Moresby street",
+   "id": "di1fight_007710",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 433.0,
+   "src": "di1_fight",
+   "in": 49.0,
+   "subject": "Armed men in a shanty yard; a survivor mobbed",
+   "id": "di1fight_004900",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 436.4,
+   "src": "di1_walkthrough",
+   "in": 402.2,
+   "subject": "Walking through the jungle",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_040220",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 439.3,
+   "src": "di1_ryder_quicklook",
+   "in": 1486.0,
+   "subject": "A dark military facility hall with wall maps",
+   "id": "di1ryderquicklook_148600",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 440.6,
+   "src": "di1_ryder_trailer",
+   "in": 67.5,
+   "subject": "Prison corridor and bars",
+   "id": "di1rydertrailer_006750",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 442.3,
+   "src": "di1_fight",
+   "in": 53.8,
+   "subject": "Rainy Moresby, a misty bamboo jungle, silhouettes over a corpse",
+   "speed": 0.94,
+   "id": "di1fight_005380",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 445.5,
+   "src": "di1_de_announce",
+   "in": 14.7,
+   "subject": "A dark control room with a wall of monitors",
+   "id": "di1deannounce_001470",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 450.5,
+   "src": "di1_first15",
+   "in": 476.4,
+   "subject": "The control room: surveillance monitors",
+   "crop": [
+    0.0,
+    0.17,
+    0.83,
+    0.83
+   ],
+   "id": "di1first15_047640",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 458.6,
+   "src": "di1_walkthrough",
+   "in": 538.8,
+   "subject": "A Ram, a huge straitjacketed infected, slams against an iron gate",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_053880",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 462.9,
+   "src": "di1_de_announce",
+   "in": 63.6,
+   "subject": "Zombies crowd the beach",
+   "id": "di1deannounce_006360",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 465.5,
+   "src": "di1_first15",
+   "in": 281.6,
+   "subject": "Infected sprint down the hotel corridor",
+   "crop": [
+    0.0,
+    0.17,
+    0.83,
+    0.83
+   ],
+   "id": "di1first15_028160",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 467.5,
+   "src": "di1_first15",
+   "in": 668.3,
+   "subject": "A zombie grabs the player face to face",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_066830",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 470.6,
+   "src": "di1_ryder_trailer",
+   "in": 18.6,
+   "subject": "Colonel Ryder White in profile",
+   "id": "di1rydertrailer_001860",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 472.7,
+   "src": "di1_ryder_quicklook",
+   "in": 80.0,
+   "subject": "Ryder White: character portrait",
+   "id": "di1ryderquicklook_008000",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 476.5,
+   "src": "di1_ryder_quicklook",
+   "in": 162.0,
+   "subject": "Ryder White seated in uniform",
+   "crop": [
+    0.07,
+    0.0,
+    0.86,
+    0.86
+   ],
+   "id": "di1ryderquicklook_016200",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 479.6,
+   "src": "di1_ryder_quicklook",
+   "in": 171.0,
+   "subject": "Two photographs on the desk: Ryder and his wife",
+   "id": "di1ryderquicklook_017100",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 481.6,
+   "src": "di1_ryder_trailer",
+   "in": 64.6,
+   "subject": "The photo of Ryder's wife",
+   "speed": 0.65,
+   "id": "di1rydertrailer_006460",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 483.6,
+   "src": "di1_de_launch",
+   "in": 45.4,
+   "subject": "Ryder White in the lab beside a woman strapped to a gurney",
+   "speed": 0.9,
+   "id": "di1delaunch_004540",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 485.6,
+   "src": "di1_ryder_quicklook",
+   "in": 212.0,
+   "subject": "Ryder White in the helicopter cabin",
+   "crop": [
+    0.07,
+    0.0,
+    0.86,
+    0.86
+   ],
+   "id": "di1ryderquicklook_021200",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 488.5,
+   "src": "di1_ryder_trailer",
+   "in": 57.6,
+   "subject": "Ryder White walks down a Moresby street at dusk; the burning town",
+   "speed": 0.7,
+   "id": "di1rydertrailer_005760",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 494.2,
+   "src": "di1_ryder_quicklook",
+   "in": 174.3,
+   "subject": "Extreme close-up of Ryder White",
+   "speed": 0.55,
+   "crop": [
+    0.07,
+    0.0,
+    0.86,
+    0.86
+   ],
+   "id": "di1ryderquicklook_017430",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 496.9,
+   "src": "di1_de_launch",
+   "in": 39.6,
+   "subject": "A helicopter banks against a pink sky",
+   "id": "di1delaunch_003960",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 498.7,
+   "src": "di1_ryder_quicklook",
+   "in": 204.5,
+   "subject": "Aerial view over Banoi's jungle mountains",
+   "id": "di1ryderquicklook_020450",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 503.0,
+   "src": "di1_ryder_quicklook",
+   "in": 139.0,
+   "subject": "A dark interrogation room, an officer in shadow",
+   "crop": [
+    0.075,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "id": "di1ryderquicklook_013900",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 509.3,
+   "src": "di1_ryder_quicklook",
+   "in": 239.5,
+   "subject": "Helicopters over the jungle ridge, smoke over Moresby",
+   "id": "di1ryderquicklook_023950",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 512.0,
+   "src": "di1_ryder_quicklook",
+   "in": 250.4,
+   "subject": "Moresby's slum rooftops from the air",
+   "id": "di1ryderquicklook_025040",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 514.7,
+   "src": "rip_cinematic",
+   "in": 34.5,
+   "subject": "Storm clouds rolling over the sea",
+   "speed": 0.83,
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "ripcinematic_003450",
+   "chapter": "Banoi"
+  },
+  {
+   "at": 518.3,
+   "src": "di1_quicklook",
+   "in": 426.5,
+   "subject": "Sam B circles a Thug and lands hits with a nailed bat",
+   "id": "di1quicklook_042650",
+   "chapter": "Combat"
+  },
+  {
+   "at": 524.8,
+   "src": "di1_walkthrough",
+   "in": 113.0,
+   "subject": "Beating a zombie down with a nail-studded bat",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_011300",
+   "chapter": "Combat"
+  },
+  {
+   "at": 529.4,
+   "src": "di1_walkthrough",
+   "in": 148.0,
+   "subject": "Nailed bat",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_014800",
+   "chapter": "Combat"
+  },
+  {
+   "at": 530.7,
+   "src": "di1_quicklook",
+   "in": 1280.0,
+   "subject": "A red crowbar in hand",
+   "id": "di1quicklook_128000",
+   "chapter": "Combat"
+  },
+  {
+   "at": 531.8,
+   "src": "di1_walkthrough",
+   "in": 566.0,
+   "subject": "Machete fight in the church yard",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_056600",
+   "chapter": "Combat"
+  },
+  {
+   "at": 533.1,
+   "src": "di1_first15",
+   "in": 767.5,
+   "subject": "Paddle fight beside a pickup on the beach",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_076750",
+   "chapter": "Combat"
+  },
+  {
+   "at": 536.9,
+   "src": "di1_first15",
+   "in": 842.8,
+   "subject": "Kicking a zombie down on the sand",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_084280",
+   "chapter": "Combat"
+  },
+  {
+   "at": 539.8,
+   "src": "di1_first15",
+   "in": 759.4,
+   "subject": "Hint: 'Your weapon is badly damaged. Find a workbench to repair it.'",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_075940",
+   "chapter": "Combat"
+  },
+  {
+   "at": 543.0,
+   "src": "di1_quicklook",
+   "in": 2086.0,
+   "subject": "Workbench: repair and upgrade tabs",
+   "id": "di1quicklook_208600",
+   "chapter": "Combat"
+  },
+  {
+   "at": 544.8,
+   "src": "di1_quicklook",
+   "in": 2095.0,
+   "subject": "Workbench: blueprint list of weapon mods",
+   "id": "di1quicklook_209500",
+   "chapter": "Combat"
+  },
+  {
+   "at": 547.6,
+   "src": "di1_walkthrough",
+   "in": 590.4,
+   "subject": "Shock machete: electric arcs over a Thug",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_059040",
+   "chapter": "Combat"
+  },
+  {
+   "at": 549.1,
+   "src": "di1_quicklook",
+   "in": 1690.5,
+   "subject": "A fireball; a burning zombie staggers at the player",
+   "id": "di1quicklook_169050",
+   "chapter": "Combat"
+  },
+  {
+   "at": 550.5,
+   "src": "di1_quicklook",
+   "in": 2233.0,
+   "subject": "Skill tree at level 23",
+   "id": "di1quicklook_223300",
+   "chapter": "Combat"
+  },
+  {
+   "at": 553.6,
+   "src": "di1_walkthrough",
+   "in": 342.0,
+   "subject": "Quest sheet: 'Knockin' on Heaven's Door'",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_034200",
+   "chapter": "Combat"
+  },
+  {
+   "at": 555.2,
+   "src": "di1_fight",
+   "in": 62.5,
+   "subject": "Co-op on the beach and in the jungle",
+   "id": "di1fight_006250",
+   "chapter": "Combat"
+  },
+  {
+   "at": 558.8,
+   "src": "di1_fight",
+   "in": 58.5,
+   "subject": "Co-op melee: a group of players beating zombies",
+   "id": "di1fight_005850",
+   "chapter": "Combat"
+  },
+  {
+   "at": 561.2,
+   "src": "di1_walkthrough",
+   "in": 600.2,
+   "subject": "Weapon wheel: 'Shock Machete', explosive knives",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_060020",
+   "chapter": "Combat"
+  },
+  {
+   "at": 563.5,
+   "src": "di1_quicklook",
+   "in": 1117.0,
+   "subject": "A Thug advances in a dark warehouse, lit by a flashlight",
+   "id": "di1quicklook_111700",
+   "chapter": "Combat"
+  },
+  {
+   "at": 567.4,
+   "src": "di1_first15",
+   "in": 821.0,
+   "subject": "Fist fight beside the pickup; a pile of bodies on the sand",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_082100",
+   "chapter": "Combat"
+  },
+  {
+   "at": 570.6,
+   "src": "di1_quicklook",
+   "in": 270.5,
+   "subject": "A zombie beaten down in the grass; a severed arm",
+   "id": "di1quicklook_027050",
+   "chapter": "Combat"
+  },
+  {
+   "at": 573.2,
+   "src": "di1_quicklook",
+   "in": 808.0,
+   "subject": "Quest log: a list of side quests",
+   "id": "di1quicklook_080800",
+   "chapter": "Combat"
+  },
+  {
+   "at": 575.0,
+   "src": "di1_first15",
+   "in": 599.0,
+   "subject": "Side-quest dialogue with a seated survivor",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_059900",
+   "chapter": "Combat"
+  },
+  {
+   "at": 578.2,
+   "src": "di1_quicklook",
+   "in": 1205.0,
+   "subject": "Flashlight fight with the Thug",
+   "id": "di1quicklook_120500",
+   "chapter": "Combat"
+  },
+  {
+   "at": 581.1,
+   "src": "di1_quicklook",
+   "in": 501.5,
+   "subject": "A huge zombie lumbers at Sam B, is beaten and collapses",
+   "id": "di1quicklook_050150",
+   "chapter": "Combat"
+  },
+  {
+   "at": 587.9,
+   "src": "di1_walkthrough",
+   "in": 258.0,
+   "subject": "Driving the pickup into zombies; the windshield cracks",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_025800",
+   "chapter": "Combat"
+  },
+  {
+   "at": 591.6,
+   "src": "rip_launch",
+   "in": 9.5,
+   "subject": "Riptide: a jungle stream, a wrecked resort entrance",
+   "transition": "dissolve",
+   "transitionDur": 0.5,
+   "id": "riplaunch_000950",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 595.5,
+   "src": "rip_launch",
+   "in": 27.2,
+   "subject": "Riptide: flooded jungle ruins",
+   "id": "riplaunch_002720",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 598.9,
+   "src": "rip_quicklook",
+   "in": 921.0,
+   "subject": "Riptide gameplay: the path up from the beach on Palanai",
+   "id": "ripquicklook_092100",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 602.3,
+   "src": "di1_de_launch",
+   "in": 68.4,
+   "subject": "Riptide: a helicopter lands on the military ship; the heroes are held by soldiers",
+   "id": "di1delaunch_006840",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 606.5,
+   "src": "rip_launch",
+   "in": 20.4,
+   "subject": "Riptide: a figure on the deck of the military ship at sunset",
+   "speed": 0.7,
+   "id": "riplaunch_002040",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 610.5,
+   "src": "rip_launch",
+   "in": 33.5,
+   "subject": "Riptide: the warship from above on a pink sea",
+   "speed": 0.5,
+   "id": "riplaunch_003350",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 613.3,
+   "src": "rip_launch",
+   "in": 36.5,
+   "subject": "Riptide: the storm, the ship lists",
+   "speed": 0.7,
+   "id": "riplaunch_003650",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 616.6,
+   "src": "rip_launch",
+   "in": 30.9,
+   "subject": "Riptide: a body washed up in the shallows at dawn",
+   "id": "riplaunch_003090",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 619.0,
+   "src": "rip_launch",
+   "in": 39.3,
+   "subject": "Riptide: the grounded warship seen from the rocky shore of Palanai",
+   "id": "riplaunch_003930",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 621.0,
+   "src": "rip_quicklook",
+   "in": 935.0,
+   "subject": "Riptide gameplay: a beach with a body, a jetty to the survivors' camp",
+   "id": "ripquicklook_093500",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 626.3,
+   "src": "rip_quicklook",
+   "in": 166.0,
+   "subject": "Riptide gameplay: kick and bat in the market square",
+   "id": "ripquicklook_016600",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 629.4,
+   "src": "rip_quicklook",
+   "in": 281.0,
+   "subject": "Riptide gameplay: fighting with a long staff",
+   "id": "ripquicklook_028100",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 631.0,
+   "src": "rip_prealpha",
+   "in": 397.0,
+   "subject": "Riptide hub defence: a mounted minigun fires through the arch",
+   "crop": [
+    0.07,
+    0.0,
+    0.93,
+    0.93
+   ],
+   "id": "ripprealpha_039700",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 635.6,
+   "src": "rip_prealpha",
+   "in": 213.0,
+   "subject": "Riptide: boat ride through the flooded jungle",
+   "crop": [
+    0.07,
+    0.0,
+    0.93,
+    0.93
+   ],
+   "id": "ripprealpha_021300",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 641.6,
+   "src": "rip_quicklook",
+   "in": 228.0,
+   "subject": "Riptide gameplay: repeated bat blows on a zombie by the market stalls",
+   "id": "ripquicklook_022800",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 647.0,
+   "src": "rip_quicklook",
+   "in": 137.0,
+   "subject": "Riptide gameplay: melee in Henderson's market square",
+   "id": "ripquicklook_013700",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 651.0,
+   "src": "rip_cinematic",
+   "in": 43.5,
+   "subject": "Riptide CGI trailer: a couple in a yacht cabin",
+   "id": "ripcinematic_004350",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 655.6,
+   "src": "rip_launch",
+   "in": 51.6,
+   "subject": "Riptide: survivors in a cinema",
+   "id": "riplaunch_005160",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 658.3,
+   "src": "rip_quicklook",
+   "in": 714.5,
+   "subject": "Riptide: dialogue with a survivor",
+   "crop": [
+    0.075,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "id": "ripquicklook_071450",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 663.5,
+   "src": "rip_quicklook",
+   "in": 1118.5,
+   "subject": "Riptide: dialogue with a man in a hut",
+   "crop": [
+    0.075,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "id": "ripquicklook_111850",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 666.5,
+   "src": "rip_launch",
+   "in": 59.4,
+   "subject": "Riptide: survivors fight through a horde on a stone bridge",
+   "id": "riplaunch_005940",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 670.8,
+   "src": "rip_boat",
+   "in": 154.0,
+   "subject": "Riptide gameplay: climbing into the boat and pulling away",
+   "crop": [
+    0.0,
+    0.0,
+    0.92,
+    0.92
+   ],
+   "id": "ripboat_015400",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 674.8,
+   "src": "rip_boat",
+   "in": 85.0,
+   "subject": "Riptide gameplay: a boat on a brown flooded river in the rain",
+   "crop": [
+    0.0,
+    0.0,
+    0.92,
+    0.92
+   ],
+   "id": "ripboat_008500",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 678.9,
+   "src": "rip_boat",
+   "in": 179.0,
+   "subject": "Riptide gameplay: the boat arrives at a sandy bank",
+   "crop": [
+    0.0,
+    0.0,
+    0.92,
+    0.92
+   ],
+   "id": "ripboat_017900",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 683.4,
+   "src": "rip_cinematic",
+   "in": 103.0,
+   "subject": "Riptide CGI trailer: zombies climb over the hull of a beached yacht",
+   "id": "ripcinematic_010300",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 687.4,
+   "src": "rip_cinematic",
+   "in": 52.0,
+   "subject": "Riptide CGI trailer: the woman's face",
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "ripcinematic_005200",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 691.6,
+   "src": "rip_cinematic",
+   "in": 60.5,
+   "subject": "Riptide CGI trailer: the couple, sunset through the cabin window",
+   "id": "ripcinematic_006050",
+   "chapter": "Riptide"
+  },
+  {
+   "at": 697.5,
+   "src": "di1_walkthrough",
+   "in": 270.5,
+   "subject": "Dead Island: driving away along the coast with a cracked windshield",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di1walkthrough_027050",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 706.6,
+   "src": "di1_e3interview",
+   "in": 28.6,
+   "subject": "E3 2011: Vincent Kummer, Brand Manager, Deep Silver",
+   "crop": [
+    0.0,
+    0.1,
+    0.9,
+    0.9
+   ],
+   "id": "di1e3interview_002860",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 709.8,
+   "src": "di1_e3interview",
+   "in": 40.4,
+   "subject": "E3 2011: Deep Silver's brand manager",
+   "crop": [
+    0.0,
+    0.1,
+    0.9,
+    0.9
+   ],
+   "id": "di1e3interview_004040",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 713.6,
+   "src": "di1_de_announce",
+   "in": 20.65,
+   "subject": "The hotel behind a beach bar whose sign carries the Techland logo",
+   "speed": 0.52,
+   "id": "di1deannounce_002065",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 716.9,
+   "src": "di1_de_announce",
+   "in": 4.2,
+   "subject": "A beach deck branded with the Deep Silver logo",
+   "speed": 0.56,
+   "id": "di1deannounce_000420",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 720.6,
+   "src": "dl_walkthrough",
+   "in": 25.0,
+   "subject": "Dying Light: a cargo plane low over Harran",
+   "id": "dlwalkthrough_002500",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 727.0,
+   "src": "dl_launch",
+   "in": 19.4,
+   "subject": "Dying Light: a bridge crowded with zombies",
+   "id": "dllaunch_001940",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 729.9,
+   "src": "dl_walkthrough",
+   "in": 63.0,
+   "subject": "Dying Light: daytime melee in an overgrown yard",
+   "id": "dlwalkthrough_006300",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 733.4,
+   "src": "dl_walkthrough",
+   "in": 42.0,
+   "subject": "Dying Light: parkour across slum rooftops",
+   "id": "dlwalkthrough_004200",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 739.6,
+   "src": "dl_walkthrough",
+   "in": 84.5,
+   "subject": "Dying Light: first-person melee with a baseball bat",
+   "id": "dlwalkthrough_008450",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 745.4,
+   "src": "dl_walkthrough",
+   "in": 114.0,
+   "subject": "Dying Light: climbing a pole and jumping to a roof",
+   "id": "dlwalkthrough_011400",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 748.5,
+   "src": "dl_walkthrough",
+   "in": 409.5,
+   "subject": "Dying Light: the sun sets over Harran",
+   "id": "dlwalkthrough_040950",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 751.8,
+   "src": "dl_launch",
+   "in": 72.6,
+   "subject": "Dying Light: a Volatile in the dark",
+   "id": "dllaunch_007260",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 754.6,
+   "src": "dl_night",
+   "in": 512.5,
+   "subject": "Dying Light: night chase, a light trap goes off",
+   "id": "dlnight_051250",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 758.6,
+   "src": "dl_night",
+   "in": 250.5,
+   "subject": "Dying Light: crossing rooftops as the light fades",
+   "id": "dlnight_025050",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 761.4,
+   "src": "dl_launch",
+   "in": 38.7,
+   "subject": "Dying Light: on a tower crane high above the city",
+   "id": "dllaunch_003870",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 765.6,
+   "src": "dl_launch",
+   "in": 27.9,
+   "subject": "Dying Light: the bay and city from the air",
+   "id": "dllaunch_002790",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 769.2,
+   "src": "dl_launch",
+   "in": 48.3,
+   "subject": "Dying Light: a flying kick against the sun",
+   "id": "dllaunch_004830",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 771.5,
+   "src": "di1_de_facts",
+   "in": 79.3,
+   "subject": "Dead Island: a shotgun blast in a Moresby street",
+   "id": "di1defacts_007930",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 773.7,
+   "src": "di1_e3interview",
+   "in": 56.2,
+   "subject": "E3 2011: Deep Silver's brand manager",
+   "crop": [
+    0.0,
+    0.1,
+    0.9,
+    0.9
+   ],
+   "id": "di1e3interview_005620",
+   "chapter": "Techland and Dying Light"
+  },
+  {
+   "at": 779.2,
+   "src": "esc_unraveled",
+   "in": 3.4,
+   "subject": "Escape Dead Island: a crate on the sea, a yacht",
+   "id": "escunraveled_000340",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 782.6,
+   "src": "esc_quicklook",
+   "in": 1221.0,
+   "subject": "Escape Dead Island: Cliff Calo on the beach",
+   "id": "escquicklook_122100",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 785.8,
+   "src": "esc_quicklook",
+   "in": 857.0,
+   "subject": "Escape Dead Island: a cel-shaded bay through palm trunks",
+   "id": "escquicklook_085700",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 789.7,
+   "src": "esc_quicklook",
+   "in": 1386.0,
+   "subject": "Escape Dead Island: Cliff runs along the beach past containers",
+   "id": "escquicklook_138600",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 792.5,
+   "src": "esc_quicklook",
+   "in": 1370.5,
+   "subject": "Escape Dead Island: the camera viewfinder",
+   "id": "escquicklook_137050",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 795.3,
+   "src": "esc_quicklook",
+   "in": 2420.0,
+   "subject": "Escape Dead Island: shipping containers fall out of the sky",
+   "id": "escquicklook_242000",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 799.2,
+   "src": "esc_launch",
+   "in": 24.15,
+   "subject": "Escape Dead Island: red sky, black silhouettes",
+   "id": "esclaunch_002415",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 802.3,
+   "src": "esc_announce",
+   "in": 45.6,
+   "subject": "Escape Dead Island: the frame breaks into fragments",
+   "id": "escannounce_004560",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 804.7,
+   "src": "epi_crossroads",
+   "in": 10.5,
+   "subject": "Dead Island: Epidemic: a horde crosses a bridge, top-down",
+   "id": "epicrossroads_001050",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 808.0,
+   "src": "epi_gameplay",
+   "in": 36.5,
+   "subject": "Dead Island: Epidemic: a team fight seen from above",
+   "id": "epigameplay_003650",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 810.7,
+   "src": "epi_gameplay",
+   "in": 120.7,
+   "subject": "Dead Island: Epidemic: ability rings and explosions",
+   "id": "epigameplay_012070",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 813.1,
+   "src": "retro_longplay",
+   "in": 28.0,
+   "subject": "Dead Island Retro Revenge: side-scrolling lane brawler",
+   "id": "retrolongplay_002800",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 820.0,
+   "src": "esc_quicklook",
+   "in": 1507.5,
+   "subject": "Escape Dead Island: comic-book cutscene panels",
+   "id": "escquicklook_150750",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 822.3,
+   "src": "di1_de_launch",
+   "in": 110.4,
+   "subject": "Dead Island: axe, pier, cove",
+   "id": "di1delaunch_011040",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 825.3,
+   "src": "di2_yager_sunshine",
+   "in": 65.7,
+   "subject": "2014 Dead Island 2 logo card",
+   "id": "di2yagersunshine_006570",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 827.5,
+   "src": "di1_de_announce",
+   "in": 80.1,
+   "subject": "Dead Island: first-person melee around the resort",
+   "id": "di1deannounce_008010",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 832.9,
+   "src": "di2_e3_2014",
+   "in": 10.0,
+   "subject": "E3 2014 trailer: running shoes, laces being tied",
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di2e32014_001000",
+   "chapter": "Spin-offs"
+  },
+  {
+   "at": 838.9,
+   "src": "di2_e3_2014",
+   "in": 16.4,
+   "subject": "E3 2014 trailer: the jogger gets ready",
+   "id": "di2e32014_001640",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 846.5,
+   "src": "di2_e3_2014",
+   "in": 24.2,
+   "subject": "E3 2014 trailer: 'Living the Dream' tattoo",
+   "id": "di2e32014_002420",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 849.2,
+   "src": "di2_e3_2014",
+   "in": 40.0,
+   "subject": "E3 2014 trailer: he sets off jogging, earbuds in",
+   "id": "di2e32014_004000",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 852.6,
+   "src": "di2_e3_2014",
+   "in": 47.5,
+   "subject": "E3 2014 trailer: jogging towards camera, smiling in the sun",
+   "id": "di2e32014_004750",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 858.2,
+   "src": "di2_e3_2014",
+   "in": 58.0,
+   "subject": "E3 2014 trailer: behind him a roller-skater is pulled down",
+   "id": "di2e32014_005800",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 860.5,
+   "src": "di2_e3_2014",
+   "in": 85.5,
+   "subject": "E3 2014 trailer: a limousine crashes through a stall behind him",
+   "id": "di2e32014_008550",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 862.0,
+   "src": "di2_e3_2014",
+   "in": 73.0,
+   "subject": "E3 2014 trailer: people flee, bystanders are tackled by zombies",
+   "id": "di2e32014_007300",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 865.1,
+   "src": "di2_e3_2014",
+   "in": 63.0,
+   "subject": "E3 2014 trailer: he jogs on happily, smoke rising behind him",
+   "id": "di2e32014_006300",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 868.7,
+   "src": "di2_e3_2014",
+   "in": 100.5,
+   "subject": "E3 2014 trailer: his expression changes",
+   "id": "di2e32014_010050",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 871.6,
+   "src": "di2_e3_2014",
+   "in": 104.9,
+   "subject": "E3 2014 trailer: his forearm greys",
+   "id": "di2e32014_010490",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 873.5,
+   "src": "di2_e3_2014",
+   "in": 107.5,
+   "subject": "E3 2014 trailer: the tattoo on rotting skin",
+   "id": "di2e32014_010750",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 875.0,
+   "src": "di2_e3_2014",
+   "in": 117.0,
+   "subject": "E3 2014 trailer: blood-streaked legs still running",
+   "id": "di2e32014_011700",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 876.4,
+   "src": "di2_e3_2014",
+   "in": 122.0,
+   "subject": "E3 2014 trailer: the milky eye; the jogger is now a zombie",
+   "id": "di2e32014_012200",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 879.5,
+   "src": "di2_e3_2014",
+   "in": 129.0,
+   "subject": "E3 2014 trailer: a horde runs along the boardwalk",
+   "id": "di2e32014_012900",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 884.4,
+   "src": "di2_e3_2014",
+   "in": 138.5,
+   "subject": "E3 2014 trailer: the zombie jogger shuffles on",
+   "id": "di2e32014_013850",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 888.3,
+   "src": "di2_e3_2014",
+   "in": 183.7,
+   "subject": "E3 2014 trailer: Dead Island 2 logo card with Deep Silver and Yager logos",
+   "id": "di2e32014_018370",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 894.5,
+   "src": "di2_yager_sunshine",
+   "in": 9.3,
+   "subject": "Yager build, 2014: suburban houses under the Hollywood sign",
+   "speed": 0.85,
+   "id": "di2yagersunshine_000930",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 898.5,
+   "src": "di2_e3_2014",
+   "in": 173.6,
+   "subject": "E3 2014 trailer: billboard 'Get the body you deserve'",
+   "id": "di2e32014_017360",
+   "chapter": "E3 2014"
+  },
+  {
+   "at": 905.3,
+   "src": "di2_yager_gdc",
+   "in": 0.9,
+   "subject": "GDC Europe 2014: title slide of Yager's talk on Dead Island 2",
+   "crop": [
+    0.295,
+    0.145,
+    0.7,
+    0.705
+   ],
+   "id": "di2yagergdc_000090",
+   "chapter": "Yager"
+  },
+  {
+   "at": 910.0,
+   "src": "di2_yager_gdc",
+   "in": 15.5,
+   "subject": "GDC Europe 2014 slide: Spec Ops: The Line key art",
+   "crop": [
+    0.295,
+    0.145,
+    0.7,
+    0.705
+   ],
+   "id": "di2yagergdc_001550",
+   "chapter": "Yager"
+  },
+  {
+   "at": 912.8,
+   "src": "ctx_specops",
+   "in": 16.7,
+   "subject": "Spec Ops: The Line: firefight in the sand-buried city",
+   "id": "ctxspecops_001670",
+   "chapter": "Yager"
+  },
+  {
+   "at": 915.4,
+   "src": "ctx_specops",
+   "in": 41.2,
+   "subject": "Spec Ops: The Line: a microphone, a soldier's face in the dark",
+   "id": "ctxspecops_004120",
+   "chapter": "Yager"
+  },
+  {
+   "at": 918.2,
+   "src": "di2_yager_gdc",
+   "in": 23.0,
+   "subject": "GDC Europe 2014 slide: the Yager team in Berlin",
+   "crop": [
+    0.295,
+    0.145,
+    0.7,
+    0.705
+   ],
+   "id": "di2yagergdc_002300",
+   "chapter": "Yager"
+  },
+  {
+   "at": 922.0,
+   "src": "ctx_specops",
+   "in": 34.7,
+   "subject": "Spec Ops: The Line: a shattered tower",
+   "id": "ctxspecops_003470",
+   "chapter": "Yager"
+  },
+  {
+   "at": 924.2,
+   "src": "ctx_specops",
+   "in": 38.9,
+   "subject": "Spec Ops: The Line: burning sandstorm",
+   "id": "ctxspecops_003890",
+   "chapter": "Yager"
+  },
+  {
+   "at": 926.0,
+   "src": "di2_yager_sunshine",
+   "in": 38.2,
+   "subject": "Yager build, 2014: first-person combat in sunny residential streets",
+   "id": "di2yagersunshine_003820",
+   "chapter": "Yager"
+  },
+  {
+   "at": 934.2,
+   "src": "di2_yager_gdc",
+   "in": 346.5,
+   "subject": "Yager-era screenshot: a zombie in an 'I'm with stupid' T-shirt",
+   "crop": [
+    0.295,
+    0.145,
+    0.7,
+    0.705
+   ],
+   "id": "di2yagergdc_034650",
+   "chapter": "Yager"
+  },
+  {
+   "at": 937.8,
+   "src": "di2_yager_gdc",
+   "in": 333.5,
+   "subject": "Yager-era screenshot: zombies on a hillside road under the Hollywood sign",
+   "crop": [
+    0.295,
+    0.145,
+    0.7,
+    0.705
+   ],
+   "id": "di2yagergdc_033350",
+   "chapter": "Yager"
+  },
+  {
+   "at": 941.0,
+   "src": "di2_yager_gdc",
+   "in": 401.0,
+   "subject": "GDC Europe 2014: Yager's design director Jörg Friedrich on stage",
+   "id": "di2yagergdc_040100",
+   "chapter": "Yager"
+  },
+  {
+   "at": 945.2,
+   "src": "di2_yager_sunshine",
+   "in": 69.2,
+   "subject": "Yager build release card: 'Spring 2015'",
+   "freeze": true,
+   "id": "di2yagersunshine_006920",
+   "chapter": "Yager"
+  },
+  {
+   "at": 950.2,
+   "src": "di2_yager_pgw",
+   "in": 12.6,
+   "subject": "Paris Games Week 2014: the Dead Island 2 stand",
+   "crop": [
+    0.11,
+    0.11,
+    0.89,
+    0.89
+   ],
+   "speed": 0.95,
+   "id": "di2yagerpgw_001260",
+   "chapter": "Yager"
+  },
+  {
+   "at": 954.1,
+   "src": "di2_yager_gdc",
+   "in": 318.4,
+   "subject": "Yager-era screenshot: a survivor kicks a zombie",
+   "crop": [
+    0.295,
+    0.145,
+    0.7,
+    0.705
+   ],
+   "id": "di2yagergdc_031840",
+   "chapter": "Yager"
+  },
+  {
+   "at": 959.7,
+   "src": "di2_yager_sunshine",
+   "in": 24.8,
+   "subject": "Yager build, 2014: melee in a suburban street",
+   "id": "di2yagersunshine_002480",
+   "chapter": "Yager"
+  },
+  {
+   "at": 962.1,
+   "src": "di2_yager_sunshine",
+   "in": 32.4,
+   "subject": "Yager build, 2014: fire and ice weapon effects",
+   "id": "di2yagersunshine_003240",
+   "chapter": "Yager"
+  },
+  {
+   "at": 965.2,
+   "src": "di2_yager_sunshine",
+   "in": 56.5,
+   "subject": "Yager build, 2014: explosions, co-op brawl in the street",
+   "id": "di2yagersunshine_005650",
+   "chapter": "Yager"
+  },
+  {
+   "at": 969.4,
+   "src": "di2_yager_pgw",
+   "in": 27.0,
+   "subject": "Paris Games Week 2014: visitors play the Dead Island 2 demo",
+   "crop": [
+    0.11,
+    0.11,
+    0.89,
+    0.89
+   ],
+   "id": "di2yagerpgw_002700",
+   "chapter": "Yager"
+  },
+  {
+   "at": 976.6,
+   "src": "di2_yager_sunshine",
+   "in": 61.0,
+   "subject": "Yager build, 2014: the player lifts a zombie by the throat",
+   "id": "di2yagersunshine_006100",
+   "chapter": "Yager"
+  },
+  {
+   "at": 980.5,
+   "src": "di2_whatchanged",
+   "in": 54.5,
+   "subject": "Sumo Digital logo",
+   "freeze": true,
+   "id": "di2whatchanged_005450",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 985.9,
+   "src": "ctx_sonic",
+   "in": 55.45,
+   "subject": "Sonic & All-Stars Racing Transformed (Sumo Digital)",
+   "id": "ctxsonic_005545",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 991.6,
+   "src": "ctx_sonic",
+   "in": 86.05,
+   "subject": "Sonic & All-Stars Racing Transformed: Sonic at the wheel",
+   "id": "ctxsonic_008605",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 994.3,
+   "src": "ctx_sonic",
+   "in": 41.5,
+   "subject": "Sonic & All-Stars Racing Transformed: racing",
+   "id": "ctxsonic_004150",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 998.2,
+   "src": "di2_e3_2014",
+   "in": 156.8,
+   "subject": "E3 2014 trailer epilogue: the jogger's severed head on the road",
+   "id": "di2e32014_015680",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1001.3,
+   "src": "di1_tragedy",
+   "in": 29.2,
+   "subject": "Dead Island: graffiti 'God forgive us'; a beach hut painted 'Need help'",
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di1tragedy_002920",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1005.1,
+   "src": "di1_launch",
+   "in": 64.7,
+   "subject": "Emblem: hanged man beneath a palm at sunset",
+   "id": "di1launch_006470",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1008.3,
+   "src": "di2_yager_gdc",
+   "in": 271.0,
+   "subject": "2014 Dead Island 2 key art",
+   "crop": [
+    0.295,
+    0.145,
+    0.7,
+    0.705
+   ],
+   "speed": 0.75,
+   "id": "di2yagergdc_027100",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1011.5,
+   "src": "di2_e3_2014",
+   "in": 160.2,
+   "subject": "E3 2014 trailer epilogue: the head, a sneaker, a music player",
+   "id": "di2e32014_016020",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1017.4,
+   "src": "di2_whatchanged",
+   "in": 52.45,
+   "subject": "Studio logos: Yager, Sumo Digital, Dambuster Studios",
+   "speed": 0.65,
+   "reuse": true,
+   "id": "di2whatchanged_005245",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1025.4,
+   "src": "ctx_homefront",
+   "in": 13.95,
+   "subject": "Homefront: The Revolution (Dambuster Studios)",
+   "id": "ctxhomefront_001395",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1031.8,
+   "src": "di2_flesh_gi",
+   "in": 22.6,
+   "subject": "Dambuster developers Aaron Ridge and Dan Evans-Lawes (Game Informer interview)",
+   "id": "di2fleshgi_002260",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1036.0,
+   "src": "di2_gameplay_dec22",
+   "in": 13.5,
+   "subject": "Dambuster build: tilt down to a palm-lined boulevard, a lone zombie",
+   "id": "di2gameplaydec22_001350",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1042.0,
+   "src": "di2_gameplay_dec22",
+   "in": 24.7,
+   "subject": "Dambuster build: the pier at sunset, a hotel on a palm boulevard",
+   "id": "di2gameplaydec22_002470",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1046.5,
+   "src": "di2_e3_2014",
+   "in": 89.6,
+   "subject": "E3 2014 trailer: a helicopter spins out of control and hits a building",
+   "id": "di2e32014_008960",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1054.9,
+   "src": "di2_gameplay_dec22",
+   "in": 78.8,
+   "subject": "Dambuster build: a dark, red-lit underground space",
+   "id": "di2gameplaydec22_007880",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1059.3,
+   "src": "di2_gameplay_2022",
+   "in": 23.2,
+   "subject": "Dambuster build: the pier at night, Ferris wheel glowing red",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "id": "di2gameplay2022_002320",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1061.0,
+   "src": "di2_yager_sunshine",
+   "in": 20.7,
+   "subject": "Yager build, 2014: a zombie under the Hollywood sign",
+   "id": "di2yagersunshine_002070",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1063.1,
+   "src": "di2_yager_pgw",
+   "in": 22.7,
+   "subject": "Paris Games Week 2014: visitors at the Dead Island 2 poster",
+   "crop": [
+    0.11,
+    0.11,
+    0.89,
+    0.89
+   ],
+   "id": "di2yagerpgw_002270",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1065.0,
+   "src": "di2_yager_gdc",
+   "in": 358.35,
+   "subject": "Yager-era screenshot: a zombie in front of a wrecked car in a suburban driveway",
+   "crop": [
+    0.295,
+    0.145,
+    0.7,
+    0.705
+   ],
+   "speed": 0.7,
+   "id": "di2yagergdc_035835",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1067.6,
+   "src": "di2_yager_gdc",
+   "in": 1453.2,
+   "subject": "GDC Europe 2014: the Yager talk ends",
+   "id": "di2yagergdc_145320",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1070.0,
+   "src": "di2_gameplay_dec22",
+   "in": 37.8,
+   "subject": "Dambuster build: a zombie police officer slams against a glass door",
+   "id": "di2gameplaydec22_003780",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1072.4,
+   "src": "di2_flesh_gi",
+   "in": 104.6,
+   "subject": "Dambuster build: a zombie on a staircase is hit and keeps coming",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_010460",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1077.9,
+   "src": "di2_gameplay_dec22",
+   "in": 106.3,
+   "subject": "Dambuster build: a graffiti wall, a heap of dead zombies at its base",
+   "id": "di2gameplaydec22_010630",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1080.4,
+   "src": "di2_gameplay_dec22",
+   "in": 217.8,
+   "subject": "Dambuster build: Los Angeles under a blood-red sunset",
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di2gameplaydec22_021780",
+   "chapter": "Sumo Digital and the silent years"
+  },
+  {
+   "at": 1084.9,
+   "src": "di2_gamescom_4k",
+   "in": 2.35,
+   "subject": "Gamescom 2022 trailer: morning after a party in a Los Angeles mansion",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di2gamescom4k_000235",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1091.5,
+   "src": "di2_gamescom_4k",
+   "in": 85.9,
+   "subject": "Gamescom 2022 trailer: Jacob in a looted liquor store",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_008590",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1098.2,
+   "src": "di2_gamescom_4k",
+   "in": 9.45,
+   "subject": "Gamescom 2022 trailer: Jacob jolts awake",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_000945",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1100.6,
+   "src": "di2_gamescom_4k",
+   "in": 14.5,
+   "subject": "Gamescom 2022 trailer: he sits up in the wrecked living room",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_001450",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1102.2,
+   "src": "di2_gamescom_4k",
+   "in": 28.6,
+   "subject": "Gamescom 2022 trailer: at the bathroom mirror",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_002860",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1104.2,
+   "src": "di2_gamescom_4k",
+   "in": 53.3,
+   "subject": "Gamescom 2022 trailer: he strolls down the drive and bats a zombie without breaking stride",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_005330",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1108.4,
+   "src": "di2_gamescom_4k",
+   "in": 59.95,
+   "subject": "Gamescom 2022 trailer: beach-front tableau, Ferris wheel, zombies feeding",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_005995",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1111.5,
+   "src": "di1_cinematic",
+   "in": 31.0,
+   "subject": "2011 trailer: the girl on the grass (callback)",
+   "reuse": true,
+   "id": "di1cinematic_003100",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1114.3,
+   "src": "di1_cinematic",
+   "in": 95.5,
+   "subject": "2011 trailer: the father and the axe",
+   "speed": 0.8,
+   "id": "di1cinematic_009550",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1116.4,
+   "src": "di2_gamescom_4k",
+   "in": 108.8,
+   "subject": "Gamescom 2022 trailer: Jacob grins",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_010880",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1118.8,
+   "src": "di2_gamescom_4k",
+   "in": 95.5,
+   "subject": "Gamescom 2022 trailer: a legless zombie crawls; he stamps on it",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_009550",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1122.6,
+   "src": "di2_gamescom_4k",
+   "in": 67.4,
+   "subject": "Gamescom 2022 trailer: he clubs zombies in a red-lit street",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_006740",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1128.7,
+   "src": "di2_gameplay_2022",
+   "in": 54.75,
+   "subject": "Dambuster build: first-person melee montage",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "speed": 0.93,
+   "id": "di2gameplay2022_005475",
+   "chapter": "Gamescom 2022"
+  },
+  {
+   "at": 1133.5,
+   "src": "di2_gameplay_2022",
+   "in": 9.95,
+   "subject": "HELL-A: the pier at sunset, hillside villas, a white modern mansion",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "id": "di2gameplay2022_000995",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1139.3,
+   "src": "di2_gameplay_2022",
+   "in": 15.85,
+   "subject": "HELL-A: Venice Boardwalk sign, beach path, a shark statue",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "id": "di2gameplay2022_001585",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1143.4,
+   "src": "di2_gamescom_4k",
+   "in": 161.2,
+   "subject": "End card: 'See you in HELL-A'",
+   "id": "di2gamescom4k_016120",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1148.0,
+   "src": "di2_gameplay_dec22",
+   "in": 61.8,
+   "subject": "A bloated zombie in a deck chair; a zombie in a bikini charges",
+   "id": "di2gameplaydec22_006180",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1150.5,
+   "src": "di2_gameplay_dec22",
+   "in": 52.15,
+   "subject": "A mansion with an infinity pool, a palm boulevard",
+   "id": "di2gameplaydec22_005215",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1152.6,
+   "src": "di2_gameplay_dec22",
+   "in": 84.9,
+   "subject": "A film-studio backlot",
+   "id": "di2gameplaydec22_008490",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1153.9,
+   "src": "di2_gameplay_dec22",
+   "in": 190.2,
+   "subject": "A zombie in a swimsuit on the beach",
+   "id": "di2gameplaydec22_019020",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1154.9,
+   "src": "di2_flesh_gi",
+   "in": 175.0,
+   "subject": "Formal garden of a Bel-Air estate",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_017500",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1156.0,
+   "src": "di2_gameplay_dec22",
+   "in": 44.3,
+   "subject": "Survivors in a modern house, one holding up his phone",
+   "id": "di2gameplaydec22_004430",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1159.9,
+   "src": "di2_flesh_gi",
+   "in": 663.0,
+   "subject": "A pool-party zombie on a sunny terrace",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_066300",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1161.6,
+   "src": "di2_gameplay_dec22",
+   "in": 33.2,
+   "subject": "Zombies everywhere: feeding in a villa street, pressed against a fence",
+   "id": "di2gameplaydec22_003320",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1165.6,
+   "src": "di2_flesh_gi",
+   "in": 28.1,
+   "subject": "FLESH: deep cuts open across a zombie's face and chest",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_002810",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1171.2,
+   "src": "di2_flesh_gi",
+   "in": 52.3,
+   "subject": "FLESH demonstration: cloth tears, skin splits",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_005230",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1176.6,
+   "src": "di2_flesh_gi",
+   "in": 83.1,
+   "subject": "FLESH demonstration: layers of skin, fat and muscle",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_008310",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1182.3,
+   "src": "di2_flesh_gi",
+   "in": 99.5,
+   "subject": "FLESH demonstration: an open wound, ribs exposed",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_009950",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1184.6,
+   "src": "di2_gameplay_dec22",
+   "in": 119.8,
+   "subject": "Brutal combat: a jaw hangs off, a head crushed",
+   "id": "di2gameplaydec22_011980",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1189.4,
+   "src": "di2_flesh_gi",
+   "in": 387.0,
+   "subject": "Caustic damage: flesh dissolves in an acid cloud",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_038700",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1193.0,
+   "src": "di2_flesh_gi",
+   "in": 222.0,
+   "subject": "Electrified weapon in a drained pool",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_022200",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1197.0,
+   "src": "di2_flesh_gi",
+   "in": 455.5,
+   "subject": "A jerrycan explodes; burning zombies, skin charring",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_045550",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1201.2,
+   "src": "di2_flesh_gi",
+   "in": 635.0,
+   "subject": "Night pool: close combat, a bloodied face in close-up",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_063500",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1205.5,
+   "src": "di2_gamescom_4k",
+   "in": 44.6,
+   "subject": "Gamescom 2022 trailer: Jacob, sunglasses, a nail-studded bat",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_004460",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1208.0,
+   "src": "di2_gameplay_dec22",
+   "in": 91.95,
+   "subject": "Humour: a man with a drink beside a cook; a zombie in sunglasses",
+   "id": "di2gameplaydec22_009195",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1212.7,
+   "src": "di2_flesh_gi",
+   "in": 125.9,
+   "subject": "A zombie throws its arms up and collapses",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_012590",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1214.3,
+   "src": "di2_gameplay_2022",
+   "in": 85.4,
+   "subject": "Cutscene: an elderly man in a purple suit with a long gun",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "id": "di2gameplay2022_008540",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1217.5,
+   "src": "di2_gameplay_2022",
+   "in": 47.4,
+   "subject": "Cutscene: a woman in a white jacket in an expensive living room",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "id": "di2gameplay2022_004740",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1221.0,
+   "src": "di2_flesh_gi",
+   "in": 259.0,
+   "subject": "Golden-hour pool terrace: a crowd of zombies",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_025900",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1225.0,
+   "src": "di2_cutscenes",
+   "in": 21.0,
+   "subject": "Dead Island 2 opening: a civilian is scanned at the evacuation checkpoint",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_002100",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1227.7,
+   "src": "di2_cutscenes",
+   "in": 52.0,
+   "subject": "Soldiers process civilians at the checkpoint in the rain",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_005200",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1230.9,
+   "src": "di2_cutscenes",
+   "in": 127.0,
+   "subject": "Aboard the evacuation plane: the passengers",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_012700",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1233.7,
+   "src": "di2_cutscenes",
+   "in": 166.0,
+   "subject": "After the crash: survivors against the burning wreckage",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_016600",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1236.0,
+   "src": "di2_cutscenes",
+   "in": 741.0,
+   "subject": "The bite: the player's forearm",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_074100",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1240.3,
+   "src": "di2_cutscenes",
+   "in": 8381.0,
+   "subject": "Konradt explains the Autophage",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_838100",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1246.0,
+   "src": "di2_cutscenes",
+   "in": 8331.0,
+   "subject": "Pale gaunt figures stand over the camera",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_833100",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1249.9,
+   "src": "di2_gameplay_dec22",
+   "in": 163.4,
+   "subject": "Fury mode: the player's own hands, blackened and clawed",
+   "speed": 0.93,
+   "id": "di2gameplaydec22_016340",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1256.5,
+   "src": "di2_cutscenes",
+   "in": 9881.0,
+   "subject": "Containment room: a young woman kneels facing the doctor",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_988100",
+   "chapter": "Dead Island 2: design"
+  },
+  {
+   "at": 1261.2,
+   "src": "di2_gamescom_4k",
+   "in": 155.1,
+   "subject": "Gamescom 2022 trailer: crane up to the Los Angeles skyline at sunset",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di2gamescom4k_015510",
+   "chapter": "Release"
+  },
+  {
+   "at": 1265.6,
+   "src": "di2_cutscenes",
+   "in": 10507.0,
+   "subject": "Dead Island 2 final shots: the horde on the red carpet; a Walk of Fame star",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_1050700",
+   "chapter": "Release"
+  },
+  {
+   "at": 1270.0,
+   "src": "di2_gameplay_dec22",
+   "in": 139.6,
+   "subject": "Combat montage",
+   "id": "di2gameplaydec22_013960",
+   "chapter": "Release"
+  },
+  {
+   "at": 1274.0,
+   "src": "di2_gameplay_dec22",
+   "in": 180.8,
+   "subject": "Zombie types",
+   "id": "di2gameplaydec22_018080",
+   "chapter": "Release"
+  },
+  {
+   "at": 1279.4,
+   "src": "di2_gameplay_dec22",
+   "in": 200.4,
+   "subject": "Zombie close-ups",
+   "id": "di2gameplaydec22_020040",
+   "chapter": "Release"
+  },
+  {
+   "at": 1284.4,
+   "src": "di2_flesh_gi",
+   "in": 317.7,
+   "subject": "Hilltop terrace: zombies electrocuted",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_031770",
+   "chapter": "Release"
+  },
+  {
+   "at": 1287.4,
+   "src": "di2_gameplay_2022",
+   "in": 61.55,
+   "subject": "Elemental damage: explosion, electricity",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "id": "di2gameplay2022_006155",
+   "chapter": "Release"
+  },
+  {
+   "at": 1291.0,
+   "src": "di2_flesh_gi",
+   "in": 533.5,
+   "subject": "A zombie ablaze walks across a mansion lawn at night",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_053350",
+   "chapter": "Release"
+  },
+  {
+   "at": 1294.5,
+   "src": "di2_flesh_gi",
+   "in": 545.7,
+   "subject": "Red-carpet corridor: melee under red light",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_054570",
+   "chapter": "Release"
+  },
+  {
+   "at": 1297.6,
+   "src": "di2_gameplay_dec22",
+   "in": 86.3,
+   "subject": "A beach-front plaza, the boardwalk",
+   "id": "di2gameplaydec22_008630",
+   "chapter": "Release"
+  },
+  {
+   "at": 1301.4,
+   "src": "di2_flesh_gi",
+   "in": 448.4,
+   "subject": "A dusk street blocked by a crashed fire engine",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_044840",
+   "chapter": "Release"
+  },
+  {
+   "at": 1303.8,
+   "src": "di2_gameplay_2022",
+   "in": 41.85,
+   "subject": "FLESH gore montage",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "id": "di2gameplay2022_004185",
+   "chapter": "Release"
+  },
+  {
+   "at": 1308.2,
+   "src": "di2_flesh_gi",
+   "in": 14.1,
+   "subject": "Purple-lit wedding ballroom",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_001410",
+   "chapter": "Release"
+  },
+  {
+   "at": 1311.8,
+   "src": "di2_gameplay_dec22",
+   "in": 30.6,
+   "subject": "Blood runs down mansion steps; 'The Halperin Hotel' sign",
+   "id": "di2gameplaydec22_003060",
+   "chapter": "Release"
+  },
+  {
+   "at": 1314.0,
+   "src": "di2_cutscenes",
+   "in": 10286.0,
+   "subject": "Dead Island 2 gameplay: Hollywood Boulevard, a red carpet down the street",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_1028600",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1318.0,
+   "src": "di2_ultimate",
+   "in": 50.0,
+   "subject": "Haus: a cliff-top modernist house at sunset; a masked figure in a red-lit room",
+   "id": "di2ultimate_005000",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1321.8,
+   "src": "haus_stream",
+   "in": 553.5,
+   "subject": "Haus: arrival, sunset over the coastal road",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_055350",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1325.5,
+   "src": "haus_stream",
+   "in": 573.0,
+   "subject": "Haus: the compound's perimeter wall and gate",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_057300",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1328.5,
+   "src": "haus_stream",
+   "in": 632.5,
+   "subject": "Haus: the Malibu cliff and ocean",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_063250",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1331.9,
+   "src": "haus_stream",
+   "in": 701.0,
+   "subject": "Haus: the villa's wood-panelled lobby",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_070100",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1334.8,
+   "src": "haus_stream",
+   "in": 1012.5,
+   "subject": "Haus: a room with a glowing red circular portal",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_101250",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1336.6,
+   "src": "di2_ultimate",
+   "in": 55.65,
+   "subject": "Haus: a figure crawls across a tiled floor in cold blue light",
+   "speed": 0.9,
+   "id": "di2ultimate_005565",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1338.0,
+   "src": "haus_stream",
+   "in": 746.0,
+   "subject": "Haus: the red hall, white-clad figures seated on plinths",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_074600",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1343.3,
+   "src": "haus_stream",
+   "in": 735.0,
+   "subject": "Haus: a towering many-armed draped figure in the great hall",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_073500",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1349.3,
+   "src": "haus_stream",
+   "in": 941.0,
+   "subject": "Haus: three seated white figures around the maze floor",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_094100",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1353.3,
+   "src": "haus_stream",
+   "in": 862.0,
+   "subject": "Haus: a seated cultist in a white suit speaks",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_086200",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1357.6,
+   "src": "haus_stream",
+   "in": 9062.0,
+   "subject": "Haus: the circular machine with capsule pods",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_906200",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1361.5,
+   "src": "haus_stream",
+   "in": 3082.0,
+   "subject": "Haus: a pit ringed by old television sets",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_308200",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1365.0,
+   "src": "haus_stream",
+   "in": 1036.0,
+   "subject": "Haus: a suburban street under a glass dome",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_103600",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1369.0,
+   "src": "haus_stream",
+   "in": 1060.0,
+   "subject": "Haus: the picture floods red with a glitch effect",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_106000",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1371.2,
+   "src": "haus_stream",
+   "in": 2522.0,
+   "subject": "Haus: white house walls split by red tendrils",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_252200",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1373.3,
+   "src": "sola_launch",
+   "in": 7.75,
+   "subject": "SoLA: the festival grounds",
+   "crop": [
+    0.12,
+    0.12,
+    0.76,
+    0.76
+   ],
+   "id": "solalaunch_000775",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1378.0,
+   "src": "sola_launch",
+   "in": 16.55,
+   "subject": "SoLA: stages, murals, a rainbow gateway",
+   "crop": [
+    0.12,
+    0.12,
+    0.76,
+    0.76
+   ],
+   "id": "solalaunch_001655",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1381.0,
+   "src": "di2_ultimate",
+   "in": 59.95,
+   "subject": "SoLA: the festival site in a green valley",
+   "id": "di2ultimate_005995",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1382.8,
+   "src": "sola_launch",
+   "in": 21.2,
+   "subject": "SoLA: the Beat, kaleidoscopic pulses, loudspeaker stacks",
+   "crop": [
+    0.12,
+    0.12,
+    0.76,
+    0.76
+   ],
+   "id": "solalaunch_002120",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1387.4,
+   "src": "sola_launch",
+   "in": 35.35,
+   "subject": "SoLA: speakers thump; zombies sway across the lawn",
+   "crop": [
+    0.12,
+    0.12,
+    0.76,
+    0.76
+   ],
+   "id": "solalaunch_003535",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1390.7,
+   "src": "sola_launch",
+   "in": 57.7,
+   "subject": "SoLA: a glowing golden disc emblem",
+   "crop": [
+    0.12,
+    0.12,
+    0.76,
+    0.76
+   ],
+   "id": "solalaunch_005770",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1392.6,
+   "src": "sola_launch",
+   "in": 61.35,
+   "subject": "SoLA: the golden disc pulses with lightning",
+   "crop": [
+    0.12,
+    0.12,
+    0.76,
+    0.76
+   ],
+   "id": "solalaunch_006135",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1397.2,
+   "src": "sola_launch",
+   "in": 28.4,
+   "subject": "SoLA: a blood-drenched woman in a wide-brimmed hat",
+   "crop": [
+    0.12,
+    0.12,
+    0.76,
+    0.76
+   ],
+   "id": "solalaunch_002840",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1399.6,
+   "src": "sola_launch",
+   "in": 53.0,
+   "subject": "SoLA: the main stage in red light",
+   "crop": [
+    0.12,
+    0.12,
+    0.76,
+    0.76
+   ],
+   "id": "solalaunch_005300",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1402.5,
+   "src": "di2_cutscenes",
+   "in": 10463.0,
+   "subject": "Dead Island 2 epilogue: a man watched through a rifle scope",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_1046300",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1409.4,
+   "src": "di2_cutscenes",
+   "in": 8473.5,
+   "subject": "Konradt and two companions in the dark hall",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_847350",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1412.5,
+   "src": "haus_stream",
+   "in": 9109.0,
+   "subject": "Haus: a black-and-white vision",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_910900",
+   "chapter": "Haus and SoLA"
+  },
+  {
+   "at": 1415.2,
+   "src": "di1_walkthrough",
+   "in": 318.3,
+   "subject": "Dead Island: the lighthouse fortification, sea and mountains",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di1walkthrough_031830",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1419.3,
+   "src": "di1_de_launch",
+   "in": 105.5,
+   "subject": "Dead Island: a zombie on the white beach",
+   "id": "di1delaunch_010550",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1421.1,
+   "src": "rip_launch",
+   "in": 42.6,
+   "subject": "Riptide: the 'Paradise' sign over the survivors' camp",
+   "id": "riplaunch_004260",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1423.0,
+   "src": "di2_gameplay_dec22",
+   "in": 128.6,
+   "subject": "Dead Island 2: zombies in a turquoise pool with a flamingo float",
+   "id": "di2gameplaydec22_012860",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1424.9,
+   "src": "di1_cinematic",
+   "in": 37.5,
+   "subject": "2011 trailer: the girl on the grass (callback)",
+   "reuse": true,
+   "id": "di1cinematic_003750_2",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1427.6,
+   "src": "di1_cinematic",
+   "in": 166.15,
+   "subject": "2011 trailer coda: the girl, alive, on a sunny beach",
+   "speed": 0.5,
+   "id": "di1cinematic_016615",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1429.6,
+   "src": "di1_cinematic",
+   "in": 170.15,
+   "subject": "2011 trailer coda: the father carries suitcases into the room",
+   "speed": 0.55,
+   "id": "di1cinematic_017015",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1431.6,
+   "src": "di1_first15",
+   "in": 733.5,
+   "subject": "Dead Island: walking through palms to the beach bar",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_073350",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1434.0,
+   "src": "di1_de_launch",
+   "in": 116.0,
+   "subject": "Dead Island: blood among the palms; a Thug on the sand",
+   "id": "di1delaunch_011600",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1436.2,
+   "src": "rip_quicklook",
+   "in": 1035.0,
+   "subject": "Riptide: the survival camp, huts and lanterns",
+   "id": "ripquicklook_103500",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1439.0,
+   "src": "rip_quicklook",
+   "in": 947.0,
+   "subject": "Riptide: zombies attack the camp",
+   "id": "ripquicklook_094700",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1442.0,
+   "src": "di2_flesh_gi",
+   "in": 177.2,
+   "subject": "Dead Island 2: a formal garden in Bel-Air",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_017720",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1446.5,
+   "src": "di2_gameplay_dec22",
+   "in": 54.4,
+   "subject": "Dead Island 2: Los Angeles environments",
+   "id": "di2gameplaydec22_005440",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1449.0,
+   "src": "di2_gameplay_2022",
+   "in": 30.3,
+   "subject": "Dead Island 2: a zombie lunges and pins the player",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "id": "di2gameplay2022_003030",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1451.7,
+   "src": "haus_stream",
+   "in": 821.0,
+   "subject": "Haus: a cult member in a blood-stained white suit and mask",
+   "crop": [
+    0.28,
+    0.08,
+    0.72,
+    0.72
+   ],
+   "id": "hausstream_082100",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1458.0,
+   "src": "di1_first15",
+   "in": 140.4,
+   "subject": "Dead Island: Sam B at the hotel balcony rail, looking over the bay",
+   "crop": [
+    0.0,
+    0.17,
+    0.83,
+    0.83
+   ],
+   "id": "di1first15_014040",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1462.2,
+   "src": "di1_tragedy",
+   "in": 50.0,
+   "subject": "Holiday snapshots",
+   "id": "di1tragedy_005000",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1463.3,
+   "src": "di2_gameplay_dec22",
+   "in": 70.2,
+   "subject": "Dead Island 2: a lounge with a white grand piano",
+   "id": "di2gameplaydec22_007020",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1464.9,
+   "src": "di1_e3trailer",
+   "in": 58.6,
+   "subject": "Dead Island: the dance floor under lasers",
+   "id": "di1e3trailer_005860",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1466.0,
+   "src": "di2_gameplay_2022",
+   "in": 52.9,
+   "subject": "Dead Island 2: a man in sunglasses and gold chains",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "id": "di2gameplay2022_005290",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1467.0,
+   "src": "di2_gameplay_dec22",
+   "in": 157.2,
+   "subject": "Dead Island 2: a burning zombie is blown apart",
+   "speed": 0.8,
+   "id": "di2gameplaydec22_015720",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1469.9,
+   "src": "di2_cutscenes",
+   "in": 169.0,
+   "subject": "Dead Island 2: survivors against burning wreckage",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_016900",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1474.5,
+   "src": "di2_flesh_gi",
+   "in": 660.3,
+   "subject": "Dead Island 2: a zombie floats face-down under water",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_066030",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1476.8,
+   "src": "di2_flesh_gi",
+   "in": 264.0,
+   "subject": "Dead Island 2: zombies on a golden-hour pool terrace",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_026400",
+   "chapter": "The recurring idea"
+  },
+  {
+   "at": 1480.4,
+   "src": "di1_cinematic",
+   "in": 19.0,
+   "subject": "2011 trailer: the girl's eye (callback)",
+   "reuse": true,
+   "transition": "dissolve",
+   "transitionDur": 0.8,
+   "id": "di1cinematic_001900_2",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1483.5,
+   "src": "di1_cinematic",
+   "in": 42.4,
+   "subject": "2011 trailer: her body rises past the hotel (callback)",
+   "reuse": true,
+   "id": "di1cinematic_004240_2",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1487.3,
+   "src": "di1_cinematic",
+   "in": 129.4,
+   "subject": "2011 trailer: the mother lays the girl on the bed (callback)",
+   "reuse": true,
+   "id": "di1cinematic_012940_2",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1490.0,
+   "src": "di1_walkthrough",
+   "in": 70.0,
+   "subject": "Dead Island: the resort bay from the lifeguard tower",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_007000",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1493.2,
+   "src": "di1_cinematic",
+   "in": 160.75,
+   "subject": "Dead Island logo from the 2011 trailer (callback)",
+   "reuse": true,
+   "id": "di1cinematic_016075_2",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1495.1,
+   "src": "di1_quicklook",
+   "in": 187.5,
+   "subject": "Dead Island: driving the coastal road",
+   "id": "di1quicklook_018750",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1497.3,
+   "src": "rip_quicklook",
+   "in": 319.5,
+   "subject": "Riptide: zombies attack in the square",
+   "id": "ripquicklook_031950",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1499.2,
+   "src": "esc_announce",
+   "in": 62.3,
+   "subject": "Escape Dead Island: a container hangs in the sky",
+   "id": "escannounce_006230",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1501.3,
+   "src": "di2_e3_2014",
+   "in": 143.0,
+   "subject": "E3 2014 trailer: the zombie jogger and the van",
+   "id": "di2e32014_014300",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1504.5,
+   "src": "di2_gamescom_4k",
+   "in": 123.2,
+   "subject": "Gamescom 2022 trailer: the living room drenched in blood at sunset",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_012320",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1508.0,
+   "src": "di2_cutscenes",
+   "in": 819.5,
+   "subject": "Dead Island 2: 'Bel-Air' over a mansion",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_081950",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1510.9,
+   "src": "di2_cutscenes",
+   "in": 801.0,
+   "subject": "Dead Island 2: palms against the sky, a long shadow",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_080100",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1513.9,
+   "src": "di2_gameplay_2022",
+   "in": 73.5,
+   "subject": "Dead Island 2: a zombie in a hazmat suit; a runner",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "speed": 0.82,
+   "id": "di2gameplay2022_007350",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1517.3,
+   "src": "di1_walkthrough",
+   "in": 372.8,
+   "subject": "Dead Island: zombies in tall grass",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_037280",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1520.4,
+   "src": "di2_cutscenes",
+   "in": 5026.0,
+   "subject": "Dead Island 2: a zombie clown feeds on a body",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_502600",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1523.8,
+   "src": "di1_first15",
+   "in": 263.5,
+   "subject": "Dead Island: running down the hotel corridor from the infected",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_026350",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1528.9,
+   "src": "di2_cutscenes",
+   "in": 746.0,
+   "subject": "Dead Island 2: the bitten forearm",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_074600",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1534.2,
+   "src": "di2_e3_2014",
+   "in": 109.6,
+   "subject": "E3 2014 trailer: the jogger's body decays, a clouded eye",
+   "id": "di2e32014_010960",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1539.4,
+   "src": "di1_cinematic",
+   "in": 59.5,
+   "subject": "2011 trailer: the girl turns on her father (callback)",
+   "reuse": true,
+   "speed": 0.62,
+   "id": "di1cinematic_005950",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1542.8,
+   "src": "di1_psnow",
+   "in": 1252.0,
+   "subject": "Dead Island: the abandoned pool, mats floating",
+   "crop": [
+    0.0,
+    0.21,
+    0.76,
+    0.76
+   ],
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di1psnow_125200",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1547.5,
+   "src": "di1_psnow",
+   "in": 1295.0,
+   "subject": "Dead Island: the pool, floating loungers, the thatched bar",
+   "crop": [
+    0.0,
+    0.21,
+    0.76,
+    0.76
+   ],
+   "id": "di1psnow_129500",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1549.6,
+   "src": "di1_de_announce",
+   "in": 31.8,
+   "subject": "Dead Island: the hotel (callback)",
+   "reuse": true,
+   "speed": 0.75,
+   "id": "di1deannounce_003180_2",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1551.2,
+   "src": "di1_psnow",
+   "in": 149.6,
+   "subject": "Dead Island: the open-air nightclub from the opening",
+   "crop": [
+    0.0,
+    0.21,
+    0.76,
+    0.76
+   ],
+   "id": "di1psnow_014960",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1553.5,
+   "src": "di1_tragedy",
+   "in": 50.9,
+   "subject": "Holiday snapshots of the island's tourists",
+   "speed": 0.7,
+   "reuse": true,
+   "id": "di1tragedy_005090",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1557.8,
+   "src": "di1_cinematic",
+   "in": 174.5,
+   "subject": "2011 trailer coda: the family photo (callback)",
+   "reuse": true,
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di1cinematic_017450_2",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1563.3,
+   "src": "di1_cinematic",
+   "in": 152.9,
+   "subject": "2011 trailer: their hands drift apart (callback)",
+   "reuse": true,
+   "id": "di1cinematic_015290_2",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1567.4,
+   "src": "di2_gameplay_dec22",
+   "in": 143.7,
+   "subject": "Dead Island 2: combat",
+   "id": "di2gameplaydec22_014370",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1570.9,
+   "src": "sola_launch",
+   "in": 31.0,
+   "subject": "SoLA: combat among the festival tents",
+   "crop": [
+    0.12,
+    0.12,
+    0.76,
+    0.76
+   ],
+   "id": "solalaunch_003100",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1575.2,
+   "src": "di2_flesh_gi",
+   "in": 621.2,
+   "subject": "Dead Island 2: a night pool with a pink flamingo float",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_062120",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1583.5,
+   "src": "di2_flesh_gi",
+   "in": 321.0,
+   "subject": "Dead Island 2: bright blue arcs through a zombie at close range",
+   "crop": [
+    0.06,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "di2fleshgi_032100",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1589.2,
+   "src": "di2_gamescom_4k",
+   "in": 81.5,
+   "subject": "Gamescom 2022 trailer: Jacob tips his sunglasses down",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_008150",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1590.6,
+   "src": "di1_cinematic",
+   "in": 135.5,
+   "subject": "2011 trailer: the father shuts the door, the mother holds the girl (callback)",
+   "reuse": true,
+   "speed": 0.93,
+   "id": "di1cinematic_013550_2",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1596.2,
+   "src": "di1_first15",
+   "in": 36.8,
+   "subject": "Dead Island: a hotel room, bloody handprints, two dead guests",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_003680",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1599.0,
+   "src": "di1_psnow",
+   "in": 1403.2,
+   "subject": "Dead Island: a man in a blood-red pool pleads about his wife",
+   "crop": [
+    0.0,
+    0.21,
+    0.76,
+    0.76
+   ],
+   "id": "di1psnow_140320",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1604.2,
+   "src": "esc_unraveled",
+   "in": 45.15,
+   "subject": "Escape Dead Island: Cliff staggers, the picture distorts",
+   "id": "escunraveled_004515",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1608.9,
+   "src": "di1_cinematic",
+   "in": 52.5,
+   "subject": "2011 trailer: the glass reassembles (callback)",
+   "reuse": true,
+   "speed": 0.75,
+   "id": "di1cinematic_005250_2",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1614.9,
+   "src": "di1_quicklook",
+   "in": 4.6,
+   "subject": "Dead Island: the bay from the lighthouse",
+   "id": "di1quicklook_000460",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1619.1,
+   "src": "di1_walkthrough",
+   "in": 99.5,
+   "subject": "Dead Island: leaving the station with a nailed bat",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_009950",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1620.9,
+   "src": "rip_prealpha",
+   "in": 36.2,
+   "subject": "Riptide: walking a beach with an axe",
+   "crop": [
+    0.07,
+    0.0,
+    0.93,
+    0.93
+   ],
+   "id": "ripprealpha_003620",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1622.6,
+   "src": "di2_gameplay_2022",
+   "in": 66.95,
+   "subject": "Dead Island 2: the beach beside the pier at dusk",
+   "crop": [
+    0.122,
+    0.122,
+    0.756,
+    0.756
+   ],
+   "id": "di2gameplay2022_006695",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1624.9,
+   "src": "di1_cinematic",
+   "in": 178.2,
+   "subject": "2011 trailer coda: the family waves (callback)",
+   "reuse": true,
+   "id": "di1cinematic_017820_2",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1627.5,
+   "src": "di1_de_announce",
+   "in": 56.7,
+   "subject": "Dead Island: an electrified blade in a shower of sparks",
+   "id": "di1deannounce_005670",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1629.4,
+   "src": "di2_yager_gdc",
+   "in": 286.2,
+   "subject": "GDC Europe 2014: 'Seamless Multiplayer in Dead Island 2'",
+   "crop": [
+    0.295,
+    0.145,
+    0.7,
+    0.705
+   ],
+   "id": "di2yagergdc_028620",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1632.0,
+   "src": "di2_gamescom_4k",
+   "in": 134.3,
+   "subject": "Gamescom 2022 trailer: Jacob walks to the door at dusk",
+   "crop": [
+    0.0,
+    0.128,
+    1.0,
+    0.744
+   ],
+   "id": "di2gamescom4k_013430",
+   "chapter": "Reflection"
+  },
+  {
+   "at": 1635.3,
+   "src": "di1_walkthrough",
+   "in": 451.0,
+   "subject": "Dead Island: a quiet cove",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "transition": "dissolve",
+   "transitionDur": 0.6,
+   "id": "di1walkthrough_045100",
+   "chapter": "Outro"
+  },
+  {
+   "at": 1639.4,
+   "src": "di1_quicklook",
+   "in": 143.0,
+   "subject": "Dead Island: out of the lighthouse tunnel to the coast road",
+   "id": "di1quicklook_014300",
+   "chapter": "Outro"
+  },
+  {
+   "at": 1641.2,
+   "src": "rip_boat",
+   "in": 166.0,
+   "subject": "Riptide: a boat on the jungle river",
+   "crop": [
+    0.0,
+    0.0,
+    0.92,
+    0.92
+   ],
+   "id": "ripboat_016600",
+   "chapter": "Outro"
+  },
+  {
+   "at": 1643.0,
+   "src": "sola_launch",
+   "in": 46.65,
+   "subject": "SoLA: a run through the festival",
+   "crop": [
+    0.12,
+    0.12,
+    0.76,
+    0.76
+   ],
+   "id": "solalaunch_004665",
+   "chapter": "Outro"
+  },
+  {
+   "at": 1644.8,
+   "src": "di2_cutscenes",
+   "in": 10341.0,
+   "subject": "Dead Island 2 ending: Emma Jaunt and Sam B by the helicopter",
+   "crop": [
+    0.09,
+    0.0,
+    0.82,
+    0.82
+   ],
+   "id": "di2cutscenes_1034100",
+   "chapter": "Outro"
+  },
+  {
+   "at": 1648.4,
+   "src": "di1_walkthrough",
+   "in": 385.0,
+   "subject": "Dead Island: finishing downed zombies in the grass",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1walkthrough_038500",
+   "chapter": "Outro"
+  },
+  {
+   "at": 1653.6,
+   "src": "di1_de_launch",
+   "in": 19.1,
+   "subject": "Dead Island: the resort at dawn (callback)",
+   "reuse": true,
+   "id": "di1delaunch_001910_2",
+   "chapter": "Outro"
+  },
+  {
+   "at": 1658.2,
+   "src": "di1_e3trailer",
+   "in": 65.0,
+   "subject": "Dead Island: the hotel bathroom, a body on the floor",
+   "id": "di1e3trailer_006500",
+   "chapter": "Outro"
+  },
+  {
+   "at": 1662.0,
+   "src": "di1_tragedy",
+   "in": 11.5,
+   "subject": "'Greetings from Banoi' postcard (callback)",
+   "reuse": true,
+   "id": "di1tragedy_001150_2",
+   "chapter": "Outro"
+  },
+  {
+   "at": 1666.2,
+   "src": "di1_e3trailer",
+   "in": 146.6,
+   "subject": "Emblem: hanged man beneath a palm at sunset (callback)",
+   "reuse": true,
+   "transition": "dissolve",
+   "transitionDur": 0.8,
+   "id": "di1e3trailer_014660_2",
+   "chapter": "Outro"
+  }
  ],
- "labels":[{"at":5.5,"dur":4,"line":"פברואר 2011","sub":"Dead Island · טריילר ההכרזה"}]}
+ "labels": [
+  {
+   "at": 56.2,
+   "dur": 4.5,
+   "line": "Dead Island",
+   "sub": "2011 · Techland / Deep Silver"
+  },
+  {
+   "at": 102.4,
+   "dur": 3.4,
+   "line": "מאחורי הסיוט",
+   "sub": "Dead Island"
+  },
+  {
+   "at": 128.0,
+   "dur": 5.5,
+   "line": "פברואר 2011",
+   "sub": "טריילר ההכרזה של Dead Island"
+  },
+  {
+   "at": 141.1,
+   "dur": 1.5,
+   "line": "Left 4 Dead"
+  },
+  {
+   "at": 142.8,
+   "dur": 1.1,
+   "line": "Resident Evil 5"
+  },
+  {
+   "at": 144.05,
+   "dur": 1.2,
+   "line": "Dead Rising 2"
+  },
+  {
+   "at": 224.3,
+   "dur": 5.0,
+   "line": "Axis Animation · סקוטלנד",
+   "sub": "במאי: Stuart Aitken"
+  },
+  {
+   "at": 255.5,
+   "dur": 5.5,
+   "line": "ספטמבר 2011",
+   "sub": "Lionsgate רוכשת אופציה לעיבוד קולנועי"
+  },
+  {
+   "at": 412.6,
+   "dur": 4.5,
+   "line": "מורסבי",
+   "sub": "העיר הראשית של באנוי"
+  },
+  {
+   "at": 471.0,
+   "dur": 5.0,
+   "line": "קולונל ריידר וייט",
+   "sub": "Dead Island · 2011"
+  },
+  {
+   "at": 592.2,
+   "dur": 4.5,
+   "line": "Dead Island: Riptide",
+   "sub": "2013"
+  },
+  {
+   "at": 619.2,
+   "dur": 4.0,
+   "line": "פלאנאי"
+  },
+  {
+   "at": 727.3,
+   "dur": 5.0,
+   "line": "Dying Light",
+   "sub": "Techland · 2015"
+  },
+  {
+   "at": 782.9,
+   "dur": 4.5,
+   "line": "Escape Dead Island",
+   "sub": "2014"
+  },
+  {
+   "at": 805.0,
+   "dur": 4.5,
+   "line": "Dead Island: Epidemic",
+   "sub": "2014"
+  },
+  {
+   "at": 813.4,
+   "dur": 4.5,
+   "line": "Dead Island: Retro Revenge",
+   "sub": "2016"
+  },
+  {
+   "at": 839.3,
+   "dur": 5.5,
+   "line": "יוני 2014 · E3",
+   "sub": "טריילר ההכרזה של Dead Island 2"
+  },
+  {
+   "at": 894.9,
+   "dur": 4.0,
+   "line": "גרסת Yager",
+   "sub": "קדם-אלפא · 2014"
+  },
+  {
+   "at": 905.8,
+   "dur": 5.0,
+   "line": "Yager Development · ברלין",
+   "sub": "הרצאת האולפן ב־GDC Europe 2014"
+  },
+  {
+   "at": 913.1,
+   "dur": 4.5,
+   "line": "Spec Ops: The Line",
+   "sub": "Yager · 2012"
+  },
+  {
+   "at": 926.6,
+   "dur": 5.0,
+   "line": "Dead Island 2 · גרסת Yager",
+   "sub": "קדם-אלפא · 2014"
+  },
+  {
+   "at": 945.8,
+   "dur": 4.2,
+   "line": "יולי 2015",
+   "sub": "Deep Silver נפרדת מ־Yager"
+  },
+  {
+   "at": 970.0,
+   "dur": 5.5,
+   "line": "Yager Productions GmbH",
+   "sub": "הליכי חדלות פירעון · 2015"
+  },
+  {
+   "at": 981.1,
+   "dur": 4.5,
+   "line": "מרץ 2016",
+   "sub": "הפיתוח עובר ל־Sumo Digital, שפילד"
+  },
+  {
+   "at": 986.4,
+   "dur": 4.5,
+   "line": "Sonic & All-Stars Racing Transformed",
+   "sub": "Sumo Digital · 2012"
+  },
+  {
+   "at": 1022.3,
+   "dur": 4.5,
+   "line": "אוגוסט 2019",
+   "sub": "הפיתוח עובר ל־Dambuster Studios, נוטינגהאם"
+  },
+  {
+   "at": 1025.9,
+   "dur": 4.5,
+   "line": "Homefront: The Revolution",
+   "sub": "Dambuster Studios · 2016"
+  },
+  {
+   "at": 1042.4,
+   "dur": 5.0,
+   "line": "Dambuster Studios",
+   "sub": "גרסה חדשה · בפיתוח מ־2018"
+  },
+  {
+   "at": 1085.5,
+   "dur": 5.5,
+   "line": "אוגוסט 2022 · Gamescom",
+   "sub": "Dead Island 2 חוזר"
+  },
+  {
+   "at": 1169.2,
+   "dur": 6.0,
+   "line": "FLESH",
+   "sub": "Fully Locational Evisceration System for Humanoids"
+  },
+  {
+   "at": 1261.8,
+   "dur": 5.5,
+   "line": "21 באפריל 2023",
+   "sub": "Dead Island 2 יוצא"
+  },
+  {
+   "at": 1318.5,
+   "dur": 5.0,
+   "line": "Haus",
+   "sub": "הרחבה ראשונה · נובמבר 2023"
+  },
+  {
+   "at": 1373.8,
+   "dur": 5.0,
+   "line": "SoLA",
+   "sub": "הרחבה שנייה · אפריל 2024"
+  },
+  {
+   "at": 1636.0,
+   "dur": 3.6,
+   "line": "לילה לבן",
+   "sub": "מאחורי הסיוט"
+  }
+ ],
+ "beds": [
+  {
+   "at": 163.0,
+   "src": "di1_cinematic",
+   "in": 24.0,
+   "dur": 61.5,
+   "volume": 0.16,
+   "id": "bed_di1_cinematic_24"
+  }
+ ]
+}

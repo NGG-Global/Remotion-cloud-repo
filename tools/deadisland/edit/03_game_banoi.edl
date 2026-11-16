@@ -1,0 +1,100 @@
+# ---- The game behind the trailer (4:32–5:16)
+278.2 | di1_e3trailer   | 89.9  | The game: first person, leaving the hotel room into the silent corridor
+282.9 | di1_first15     | 630.3 | Gameplay: walking onto the resort beach with a paddle, HUD visible | crop=0,0.06,0.94,0.94
+289.7 | di1_quicklook   | 244.0 | Gameplay: Sam B fights a walker with a nailed bat
+294.1 | di1_quicklook   | 88.5  | Quest log: main and side quests
+295.6 | di1_quicklook   | 106.5 | Inventory: improvised weapons with condition and stats
+298.0 | di1_quicklook   | 259.5 | A zombie in swim shorts staggers at the player
+299.4 | di1_first15     | 401.2 | Beating zombies with a wooden paddle on the beach | crop=0,0.06,0.94,0.94
+308.9 | di1_walkthrough | 62.2  | From the lifeguard tower deck: the whole resort bay | crop=0,0.06,0.94,0.94
+# ---- Banoi (5:16–8:38)
+316.0 | di1_cinematic   | 10.45 | Techland logo | x0.84
+319.7 | di1_quicklook   | 63.5  | In-game map of Banoi
+322.5 | di1_launch      | 8.35  | Establishing shots of Banoi
+325.7 | di1_de_launch   | 8.8   | The opening party: Sam B performs on stage
+328.4 | di1_first15     | 17.2  | Waking in the dark hotel suite after the party | crop=0,0.06,0.94,0.94
+332.9 | di1_quicklook   | 1330.5 | Character select: Sam B
+336.4 | di1_quicklook   | 1326.0 | Character select: Xian Mei
+339.0 | di1_de_announce | 54.6  | Xian Mei in a bungalow doorway
+341.0 | di1_quicklook   | 1321.4 | Character select: Logan | x0.73
+344.0 | di1_quicklook   | 1324.0 | Character select: Purna | x0.7
+346.3 | di1_de_launch   | 27.2  | Purna in the hotel lobby | x0.6
+348.0 | di1_fight       | 38.5  | The four heroes by a car on a jungle road
+350.4 | di1_de_launch   | 48.5  | The four playable characters in close-up
+353.0 | di1_walkthrough | 218.0 | A zombie grabs the player face to face and is thrown off | crop=0,0.06,0.94,0.94
+361.6 | di1_first15     | 512.4 | Sinamoi, the head lifeguard, gives a quest | crop=0,0.06,0.94,0.94
+365.4 | di1_first15     | 554.8 | Quest sheet: 'Passport to Life' | crop=0,0.06,0.94,0.94
+368.4 | di1_quicklook   | 606.0 | Carrying a supply crate in first person
+372.0 | di1_de_announce | 34.0  | High wide of the resort beach: parasols, pier, lagoon | x0.75
+374.4 | di1_first15     | 719.3 | Wide view across the beach: palms, sand, thatched bar | crop=0,0.06,0.94,0.94
+377.3 | di1_psnow       | 1247.0 | Abandoned resort pool: floating mats, blood on the paving | crop=0,0.21,0.76,0.76
+379.0 | di1_psnow       | 1503.2 | Sun loungers tipped over beside a parasol | crop=0,0.21,0.76,0.76
+380.7 | di1_first15     | 57.0  | Hotel corridor full of abandoned luggage | crop=0,0.06,0.94,0.94
+382.6 | di1_walkthrough | 190.0 | Garden path between bungalows, a beach ball on the lawn; a zombie in a bikini approaches | crop=0,0.06,0.94,0.94
+389.9 | di1_de_launch   | 97.3  | Resort combat: blade slash among palms, burning huts
+393.6 | ctx_re5         | 50.0  | Resident Evil 5: a dark compound | crop=0.128,0.128,0.744,0.744
+397.0 | ctx_l4d_intro   | 157.9 | Left 4 Dead: a dark city street
+398.6 | ctx_re5         | 55.3  | Resident Evil 5: a mob closes in | crop=0.128,0.128,0.744,0.744
+400.6 | ctx_l4d_intro   | 209.2 | Left 4 Dead: night street
+402.5 | di1_walkthrough | 445.0 | Quiet cove: fishing boats on turquoise water | crop=0,0.06,0.94,0.94
+407.6 | di1_e3trailer   | 42.0  | The hotel at night, signpost 'Palms Hotel / Paradise'
+409.9 | di1_launch      | 44.7  | The hotel facade as a helicopter trails smoke overhead | x0.6
+412.0 | di1_walkthrough | 510.2 | Moresby in heavy rain: an armoured truck drives through the littered street | crop=0,0.06,0.94,0.94
+L | 412.6 | 4.5 | מורסבי | העיר הראשית של באנוי
+419.0 | di1_quicklook   | 1542.3 | Moresby street: litter, a wrecked car, corpses
+423.5 | di1_quicklook   | 2269.5 | Inside the Moresby church: survivors sheltering
+426.3 | di1_quicklook   | 2290.0 | Church: tables of bottled water and supplies
+429.5 | di1_fight       | 77.1  | Gunfight in a rainy Moresby street
+433.0 | di1_fight       | 49.0  | Armed men in a shanty yard; a survivor mobbed
+436.4 | di1_walkthrough | 402.2 | Walking through the jungle | crop=0,0.06,0.94,0.94
+439.3 | di1_ryder_quicklook | 1486.0 | A dark military facility hall with wall maps
+440.6 | di1_ryder_trailer | 67.5 | Prison corridor and bars
+442.3 | di1_fight       | 53.8  | Rainy Moresby, a misty bamboo jungle, silhouettes over a corpse | x0.94
+445.5 | di1_de_announce | 14.7  | A dark control room with a wall of monitors
+450.5 | di1_first15     | 476.4 | The control room: surveillance monitors | crop=0,0.17,0.83,0.83
+458.6 | di1_walkthrough | 538.8 | A Ram, a huge straitjacketed infected, slams against an iron gate | crop=0,0.06,0.94,0.94
+462.9 | di1_de_announce | 63.6  | Zombies crowd the beach
+465.5 | di1_first15     | 281.6 | Infected sprint down the hotel corridor | crop=0,0.17,0.83,0.83
+467.5 | di1_first15     | 668.3 | A zombie grabs the player face to face | crop=0,0.06,0.94,0.94
+470.6 | di1_ryder_trailer | 18.6 | Colonel Ryder White in profile
+L | 471.0 | 5.0 | קולונל ריידר וייט | Dead Island · 2011
+472.7 | di1_ryder_quicklook | 80.0 | Ryder White: character portrait
+476.5 | di1_ryder_quicklook | 162.0 | Ryder White seated in uniform | crop=0.07,0,0.86,0.86
+479.6 | di1_ryder_quicklook | 171.0 | Two photographs on the desk: Ryder and his wife
+481.6 | di1_ryder_trailer | 64.6 | The photo of Ryder's wife | x0.65
+483.6 | di1_de_launch   | 45.4  | Ryder White in the lab beside a woman strapped to a gurney | x0.9
+485.6 | di1_ryder_quicklook | 212.0 | Ryder White in the helicopter cabin | crop=0.07,0,0.86,0.86
+488.5 | di1_ryder_trailer | 57.6 | Ryder White walks down a Moresby street at dusk; the burning town | x0.7
+494.2 | di1_ryder_quicklook | 174.3 | Extreme close-up of Ryder White | x0.55 crop=0.07,0,0.86,0.86
+496.9 | di1_de_launch   | 39.6  | A helicopter banks against a pink sky
+498.7 | di1_ryder_quicklook | 204.5 | Aerial view over Banoi's jungle mountains
+503.0 | di1_ryder_quicklook | 139.0 | A dark interrogation room, an officer in shadow | crop=0.075,0,0.85,0.85
+509.3 | di1_ryder_quicklook | 239.5 | Helicopters over the jungle ridge, smoke over Moresby
+512.0 | di1_ryder_quicklook | 250.4 | Moresby's slum rooftops from the air
+514.7 | rip_cinematic   | 34.5  | Storm clouds rolling over the sea | x0.83 dis0.6
+# ---- Combat (8:38–9:51)
+518.3 | di1_quicklook   | 426.5 | Sam B circles a Thug and lands hits with a nailed bat
+524.8 | di1_walkthrough | 113.0 | Beating a zombie down with a nail-studded bat | crop=0,0.06,0.94,0.94
+529.4 | di1_walkthrough | 148.0 | Nailed bat | crop=0,0.06,0.94,0.94
+530.7 | di1_quicklook   | 1280.0 | A red crowbar in hand
+531.8 | di1_walkthrough | 566.0 | Machete fight in the church yard | crop=0,0.06,0.94,0.94
+533.1 | di1_first15     | 767.5 | Paddle fight beside a pickup on the beach | crop=0,0.06,0.94,0.94
+536.9 | di1_first15     | 842.8 | Kicking a zombie down on the sand | crop=0,0.06,0.94,0.94
+539.8 | di1_first15     | 759.4 | Hint: 'Your weapon is badly damaged. Find a workbench to repair it.' | crop=0,0.06,0.94,0.94
+543.0 | di1_quicklook   | 2086.0 | Workbench: repair and upgrade tabs
+544.8 | di1_quicklook   | 2095.0 | Workbench: blueprint list of weapon mods
+547.6 | di1_walkthrough | 590.4 | Shock machete: electric arcs over a Thug | crop=0,0.06,0.94,0.94
+549.1 | di1_quicklook   | 1690.5 | A fireball; a burning zombie staggers at the player
+550.5 | di1_quicklook   | 2233.0 | Skill tree at level 23
+553.6 | di1_walkthrough | 342.0 | Quest sheet: 'Knockin' on Heaven's Door' | crop=0,0.06,0.94,0.94
+555.2 | di1_fight       | 62.5  | Co-op on the beach and in the jungle
+558.8 | di1_fight       | 58.5  | Co-op melee: a group of players beating zombies
+561.2 | di1_walkthrough | 600.2 | Weapon wheel: 'Shock Machete', explosive knives | crop=0,0.06,0.94,0.94
+563.5 | di1_quicklook   | 1117.0 | A Thug advances in a dark warehouse, lit by a flashlight
+567.4 | di1_first15     | 821.0 | Fist fight beside the pickup; a pile of bodies on the sand | crop=0,0.06,0.94,0.94
+570.6 | di1_quicklook   | 270.5 | A zombie beaten down in the grass; a severed arm
+573.2 | di1_quicklook   | 808.0 | Quest log: a list of side quests
+575.0 | di1_first15     | 599.0 | Side-quest dialogue with a seated survivor | crop=0,0.06,0.94,0.94
+578.2 | di1_quicklook   | 1205.0 | Flashlight fight with the Thug
+581.1 | di1_quicklook   | 501.5 | A huge zombie lumbers at Sam B, is beaten and collapses
+587.9 | di1_walkthrough | 258.0 | Driving the pickup into zombies; the windshield cracks | crop=0,0.06,0.94,0.94

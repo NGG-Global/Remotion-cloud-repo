@@ -346,15 +346,6 @@
   "url": "https://archive.org/download/youtube-jTnoSqGKbbE/jTnoSqGKbbE.mp4"
  },
  {
-  "id": "di2_yager_rev3",
-  "title": "Rev3Games: Dead Island 2 Gameplay Details (Gamescom 2014, Yager build)",
-  "kind": "gameplay",
-  "era": "Dead Island 2, Yager era (2014)",
-  "rights": "Rev3Games / Deep Silver",
-  "page": "https://archive.org/details/Rev3Games_Originals_543",
-  "url": "https://archive.org/download/Rev3Games_Originals_543/"
- },
- {
   "id": "di2_yager_handson",
   "title": "Hands-On with Dead Island 2 (E3 2014)",
   "kind": "gameplay",
@@ -608,36 +599,6 @@
   "via": "yt-dlp"
  },
  {
-  "id": "haus_trailer",
-  "title": "Dead Island 2 Haus Story Expansion Official Launch Trailer",
-  "kind": "trailer",
-  "era": "Dead Island 2: Haus (2023)",
-  "rights": "Deep Silver via GRYOnline",
-  "page": "https://www.dailymotion.com/video/x8pbmxi",
-  "url": "https://www.dailymotion.com/video/x8pbmxi",
-  "via": "yt-dlp"
- },
- {
-  "id": "haus_gameplay",
-  "title": "Dead Island 2 Haus DLC gameplay (3DJuegos)",
-  "kind": "gameplay",
-  "era": "Dead Island 2: Haus (2023)",
-  "rights": "Deep Silver press footage via 3DJuegos",
-  "page": "https://www.dailymotion.com/video/x8oritx",
-  "url": "https://www.dailymotion.com/video/x8oritx",
-  "via": "yt-dlp"
- },
- {
-  "id": "di2_yager_ign",
-  "title": "Dead Island 2 First Gameplay, IGN Live Gamescom 2014 (Yager build)",
-  "kind": "gameplay",
-  "era": "Dead Island 2, Yager era (2014)",
-  "rights": "IGN / Deep Silver",
-  "page": "https://www.dailymotion.com/video/x23twlc",
-  "url": "https://www.dailymotion.com/video/x23twlc",
-  "via": "yt-dlp"
- },
- {
   "id": "di2_yager_sunshine",
   "title": "Dead Island 2 'Sunshine & Slaughter' Gamescom 2014 Trailer (Yager build)",
   "kind": "trailer",
@@ -675,26 +636,6 @@
   "rights": "player recording (lonesomelunatic)",
   "page": "https://www.dailymotion.com/video/x8nbuda",
   "url": "https://www.dailymotion.com/video/x8nbuda",
-  "via": "yt-dlp"
- },
- {
-  "id": "di1_de_part18",
-  "title": "Dead Island Definitive Edition part 18 (no commentary)",
-  "kind": "gameplay",
-  "era": "Dead Island Definitive Edition (2016)",
-  "rights": "player recording (lonesomelunatic)",
-  "page": "https://www.dailymotion.com/video/x8o1wzs",
-  "url": "https://www.dailymotion.com/video/x8o1wzs",
-  "via": "yt-dlp"
- },
- {
-  "id": "rip_morgan",
-  "title": "Dead Island: Riptide John Morgan character trailer",
-  "kind": "trailer",
-  "era": "Riptide (2013)",
-  "rights": "Deep Silver via Vandal",
-  "page": "https://www.dailymotion.com/video/x72pfz5",
-  "url": "https://www.dailymotion.com/video/x72pfz5",
   "via": "yt-dlp"
  },
  {
@@ -755,16 +696,6 @@
   "rights": "player recording (ScienceGaming)",
   "page": "https://www.dailymotion.com/video/x8y5cw6",
   "url": "https://www.dailymotion.com/video/x8y5cw6",
-  "via": "yt-dlp"
- },
- {
-  "id": "haus_walk22",
-  "title": "Dead Island 2 Haus walkthrough part 22",
-  "kind": "gameplay",
-  "era": "Dead Island 2: Haus (2023)",
-  "rights": "player recording (ScienceGaming)",
-  "page": "https://www.dailymotion.com/video/x8y7h64",
-  "url": "https://www.dailymotion.com/video/x8y7h64",
   "via": "yt-dlp"
  },
  {

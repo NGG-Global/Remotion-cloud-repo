@@ -14,9 +14,10 @@ rng = np.random.default_rng(2011)
 def note(n): return 440.0 * 2 ** ((n - 69) / 12)
 
 # (start_second, mood)
-MOODS = [(0, "calm"), (19, "dread"), (55, "investigate"), (127, "piano"), (272, "investigate"), (316, "calm"), (412, "dread"),
-         (518, "investigate"), (591, "dread"), (697, "investigate"), (860, "dread"), (1100, "investigate"), (1250, "calm"),
-         (1400, "dread"), (1560, "piano")]
+MOODS = [(0, "calm"), (19.6, "dread"), (55.5, "investigate"), (120, "piano"), (127.6, "investigate"), (158, "silence"), (226, "investigate"),
+         (316, "calm"), (412, "dread"), (445, "investigate"), (591.6, "dread"), (626, "investigate"), (679, "dread"), (697.5, "investigate"),
+         (941, "dread"), (1001, "piano"), (1032, "investigate"), (1055, "dread"), (1085, "investigate"), (1261, "calm"), (1314, "dread"),
+         (1415, "piano"), (1567, "calm"), (1590, "piano"), (1635, "calm")]
 if len(sys.argv) > 3:
     import json
     MOODS = [tuple(m) for m in json.load(open(sys.argv[3]))]
@@ -58,7 +59,7 @@ def render(total):
         end = bounds[k + 1][0]
         if start >= total: break
         t, c = start, 0
-        while t < end:
+        while t < end and mood != "silence":
             chord = CHORDS[mood][c % 4]
             seg = pad([note(m) for m in chord], BAR + 5.0, 0.5 if mood != "dread" else 0.15) * LEVEL[mood] * 0.05
             i = int(t * SR); mix[:, i:i + seg.shape[1]] += seg

@@ -1,0 +1,82 @@
+# ---- Cold open (0:00–0:55): the imagined holiday, then the screams
+0.0   | di1_tragedy     | 11.5  | 'Greetings from Banoi' postcard, push-in to the island vista | fb1.2
+5.6   | di1_de_launch   | 19.1  | Royal Palms hotel, pool terrace, parasols and loungers at dawn
+10.1  | di1_de_facts    | 13.6  | Beach bar welcome sign above the pool | x0.9
+11.8  | di1_launch      | 15.6  | First person: door opens from the dark room onto the bright balcony and sea
+15.4  | di1_de_launch   | 25.6  | Silhouette at the balcony rail over the sea | x0.8
+17.1  | di1_de_facts    | 2.15  | Blue bay and mountains framed by palms | x0.9
+19.6  | di1_de_announce | 31.8  | Hotel facade over the pool, strong sun | x0.65
+22.5  | di1_de_launch   | 4.2   | The night pool party, drunk first-person view
+26.6  | di1_fight       | 25.0  | Hotel corridor: panicking guests run past
+30.6  | di1_de_facts    | 21.6  | Tourists flee along the promenade as zombies grab at them
+36.9  | di1_tragedy     | 68.2  | Blood-covered zombie on the hillside road
+38.6  | di1_tragedy     | 72.0  | Two zombies stagger along the palm-lined beach
+40.2  | di1_de_announce | 72.0  | A zombie staggers along the bungalow walkway | x0.8
+42.1  | di1_de_announce | 46.0  | First person, down on the sand as zombies run in along the waterline
+44.5  | di1_de_announce | 37.8  | Zombies feeding on a body on the beach
+46.5  | di1_de_announce | 61.0  | A zombie walks up under a parasol and grabs the player
+49.0  | di1_e3trailer   | 146.6 | Emblem: hanged man beneath a palm at sunset | dis0.6
+# ---- Introduction (0:55–2:07)
+55.5  | di1_launch      | 4.5   | Establishing: stilt bungalows, Moresby bridge
+L | 56.2 | 4.5 | Dead Island | 2011 · Techland / Deep Silver
+59.2  | di1_tragedy     | 61.7  | The emptied island: market alley, surfboards on an empty beach
+63.1  | di1_de_facts    | 15.4  | A mauled body under a parasol; a zombie by the pool
+66.9  | di1_de_launch   | 34.6  | Silhouetted zombie on a sunlit street
+69.6  | di1_cinematic   | 19.0  | 2011 trailer: the girl's eye, slow pull back | dis0.8
+# 80.3–120: filled in 02_intro.edl
+120.0 | di1_tragedy     | 57.2  | Holiday snapshots: a woman on the beach, a diver, a couple
+122.9 | di1_cinematic   | 168.05 | 2011 trailer coda: the mother arrives at the hotel
+124.0 | di1_cinematic   | 174.5 | 2011 trailer coda: the father sets the camera timer for the family photo
+# ---- The 2011 trailer (2:07–4:32)
+127.6 | di1_cinematic   | 4.7   | Deep Silver logo opening the 2011 trailer | dis0.5
+L | 128.0 | 5.5 | פברואר 2011 | טריילר ההכרזה של Dead Island
+130.7 | di1_cinematic   | 160.75 | Dead Island logo from the 2011 trailer
+134.0 | di1_de_launch   | 73.8  | An Infected charges; zombies silhouetted against a red sunset
+136.9 | di1_de_launch   | 79.2  | Zombie lunging, zombies clawing at a survivor
+139.2 | di1_e3trailer   | 96.8  | Zombies shamble along the beach boardwalk
+141.0 | ctx_l4d_intro   | 164.7 | Left 4 Dead: the horde sprinting down a night street
+L | 141.1 | 1.5 | Left 4 Dead
+142.7 | ctx_re5         | 48.7  | Resident Evil 5: Majini attackers | crop=0.128,0.128,0.744,0.744
+L | 142.8 | 1.1 | Resident Evil 5
+143.95 | ctx_dr2        | 70.0  | Dead Rising 2: Chuck mows through zombies
+L | 144.05 | 1.2 | Dead Rising 2
+145.3 | ctx_dr2         | 89.9  | Dead Rising 2: zombie crowds on the Strip
+148.7 | di1_de_facts    | 39.7  | A blade is thrown at approaching zombies on the beach and hits one
+152.1 | di1_de_announce | 76.1  | Zombies advancing on the beach by the bar | x0.75
+155.0 | ctx_dr2         | 44.6  | Dead Rising 2: Chuck Greene with a combo weapon
+157.6 | ctx_re5         | 44.4  | Resident Evil 5: Chris and Sheva raise their pistols | crop=0.128,0.128,0.744,0.744
+159.4 | ctx_l4d_intro   | 95.0  | Left 4 Dead: survivors firing, muzzle flashes
+160.6 | ctx_l4d_intro   | 25.1  | Left 4 Dead: Bill's weathered face
+163.6 | di1_cinematic   | 29.75 | 2011 trailer: the girl lies motionless on the grass outside the hotel | dis0.6
+B | 163.0 | di1_cinematic | 24.0 | 61.5 | 0.16
+169.4 | di1_cinematic   | 37.5  | 2011 trailer: time runs backwards, a burning man walks in reverse
+173.3 | di1_cinematic   | 42.4  | 2011 trailer: her body lifts off the grass and rises past the hotel
+178.0 | di1_cinematic   | 52.5  | 2011 trailer: the window glass reassembles around her
+182.4 | di1_cinematic   | 135.5 | 2011 trailer: the father shuts the door, the mother holds the girl
+187.6 | di1_cinematic   | 98.7  | 2011 trailer: the father swings the fire axe
+190.4 | di1_cinematic   | 109.1 | 2011 trailer: the axe, the father's face
+194.5 | di1_cinematic   | 148.3 | 2011 trailer: father and daughter reach for each other in the corridor
+199.0 | di1_cinematic   | 140.9 | 2011 trailer (forward): the father carries the girl through the corridor | x0.75
+203.4 | di1_cinematic   | 129.4 | 2011 trailer: the mother lays the wounded girl on the bed
+206.7 | di1_cinematic   | 79.4  | 2011 trailer: the girl and her father, the mother recoils | x0.8
+211.4 | di1_cinematic   | 152.9 | 2011 trailer: their hands meet and drift apart
+216.0 | di1_tragedy     | 42.1  | Tourists' holiday snapshots: a couple, a mother and child
+218.5 | di1_cinematic   | 178.2 | 2011 trailer coda: the family waves at the camera
+221.6 | di1_cinematic   | 172.1 | 2011 trailer coda: the girl at the balcony, the pool far below | x0.6
+223.9 | di1_cinematic   | 75.5  | 2011 trailer: the mother with a knife
+L | 224.3 | 5.0 | Axis Animation · סקוטלנד | במאי: Stuart Aitken
+226.6 | di1_cinematic   | 83.8  | 2011 trailer: wide of the hotel room | x0.85
+229.3 | di1_cinematic   | 57.4  | 2011 trailer: the girl flies back in through the window
+233.5 | di1_cinematic   | 67.0  | 2011 trailer: zombies rush the parents
+236.7 | di1_cinematic   | 114.6 | 2011 trailer: the bellhop zombie at the door
+238.8 | di1_cinematic   | 117.7 | 2011 trailer: the father holds the door
+242.0 | di1_cinematic   | 122.7 | 2011 trailer: an arm comes through the door
+244.9 | di1_cinematic   | 87.5  | 2011 trailer: the mother backs away in horror
+247.2 | di1_cinematic   | 90.0  | 2011 trailer: the girl on the bed, the axe
+250.5 | di1_cinematic   | 47.2  | 2011 trailer: the girl rises towards the window
+253.9 | di1_tragedy     | 74.6  | Emblem: hanged man beneath a palm at sunset | x0.8 dis0.6
+L | 255.5 | 5.5 | ספטמבר 2011 | Lionsgate רוכשת אופציה לעיבוד קולנועי
+262.5 | di1_fight       | 13.7  | Establishing: Moresby street, plane wreck in the jungle, the lighthouse
+268.6 | di1_cinematic   | 63.1  | 2011 trailer: the father staggers among the zombies | x0.73
+272.3 | di1_cinematic   | 106.8 | 2011 trailer: the father braces the door | x0.9
+274.5 | di1_cinematic   | 144.4 | 2011 trailer: corridor, a zombie lunges; the father shields the girl

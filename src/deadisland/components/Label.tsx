@@ -38,7 +38,7 @@ export const Label: React.FC<{ readonly line: string; readonly sub?: string }> =
           style={{
             fontFamily: TYPE.sans,
             fontWeight: 500,
-            fontSize: 34,
+            fontSize: 40,
             letterSpacing: 0.3,
             color: "#f4f1ea",
             direction: dir(line),
@@ -52,7 +52,7 @@ export const Label: React.FC<{ readonly line: string; readonly sub?: string }> =
             style={{
               fontFamily: TYPE.sans,
               fontWeight: 400,
-              fontSize: 24,
+              fontSize: 27,
               color: "rgba(244,241,234,0.82)",
               direction: dir(sub),
               textAlign: "left",

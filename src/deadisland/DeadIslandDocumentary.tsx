@@ -101,6 +101,12 @@ export const DeadIslandDocumentary: React.FC = () => {
         </Sequence>
       ))}
 
+      {TIMELINE.beds.map((bed) => (
+        <Sequence key={bed.id} from={f(bed.at)} durationInFrames={f(bed.dur)} name={`bed · ${bed.src}`}>
+          <Audio src={staticFile(`deadisland/audio/beds/${bed.id}.m4a`)} volume={bed.volume} />
+        </Sequence>
+      ))}
+
       <Audio src={staticFile("deadisland/audio/music-bed.m4a")} volume={MUSIC_LEVEL} />
       <Audio src={staticFile("deadisland/audio/narration.mp3")} />
     </AbsoluteFill>
