@@ -14,11 +14,14 @@ Illustrated motion comic over the Hebrew narration `basement_full.mp3` (18:57).
 
 ```bash
 npx remotion render BasementComic out/basement-motion-comic-720p.mp4 \
+  --config=remotion.basement.config.ts \
   --crf=22 --x264-preset=medium --concurrency=4 --jpeg-quality=90 \
   --audio-codec=aac --audio-bitrate=192k
 ```
 
-On the 4-core cloud container this ran at roughly 7 frames per second.
+Use the dedicated config: the default remotion.config.ts forces SwiftShader GL
+(needed only by the three.js documentary), which made this 2D film about 3.5x
+slower to render in a 4-core container.
 
 ## How it is built
 
