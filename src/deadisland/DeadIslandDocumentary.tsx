@@ -17,7 +17,9 @@ export const TIMELINE = timelineJson as unknown as Timeline;
 export const DI_FPS = TIMELINE.fps;
 export const DI_WIDTH = TIMELINE.width;
 export const DI_HEIGHT = TIMELINE.height;
-export const DI_DURATION = Math.round((TIMELINE.narration + TIMELINE.tail) * DI_FPS);
+export const DI_DURATION = Math.round(
+  (TIMELINE.narration + TIMELINE.tail) * DI_FPS,
+);
 
 const f = (seconds: number) => Math.round(seconds * DI_FPS);
 
@@ -49,6 +51,36 @@ const ShotLayer: React.FC<{ readonly shot: Shot; readonly fadeIn: number }> = ({
   );
 };
 
+/**
+ * Everything audible: the untouched narration, the score bed and any source-sound beds.
+ * Also registered on its own as `DeadIslandSound`, so the sound can be rendered without the picture.
+ */
+export const Soundtrack: React.FC = () => {
+  return (
+    <>
+      {TIMELINE.beds.map((bed) => (
+        <Sequence
+          key={bed.id}
+          from={f(bed.at)}
+          durationInFrames={f(bed.dur)}
+          name={`bed · ${bed.src}`}
+        >
+          <Audio
+            src={staticFile(`deadisland/audio/beds/${bed.id}.m4a`)}
+            volume={() => bed.volume}
+          />
+        </Sequence>
+      ))}
+
+      <Audio
+        src={staticFile("deadisland/audio/music-bed.m4a")}
+        volume={MUSIC_LEVEL}
+      />
+      <Audio src={staticFile("deadisland/audio/narration.mp3")} />
+    </>
+  );
+};
+
 export const DeadIslandDocumentary: React.FC = () => {
   const frame = useCurrentFrame();
   const { shots, labels } = TIMELINE;
@@ -67,9 +99,12 @@ export const DeadIslandDocumentary: React.FC = () => {
           const end = next ? f(next.at) : DI_DURATION;
           // A shot that is dissolved out of keeps playing under the incoming shot.
           const overlap =
-            next && next.transition === "dissolve" ? f(next.transitionDur ?? 0.5) : 0;
+            next && next.transition === "dissolve"
+              ? f(next.transitionDur ?? 0.5)
+              : 0;
           const fadeIn =
-            shot.transition === "dissolve" || shot.transition === "fadeFromBlack"
+            shot.transition === "dissolve" ||
+            shot.transition === "fadeFromBlack"
               ? f(shot.transitionDur ?? 0.5)
               : 0;
           return (
@@ -101,14 +136,7 @@ export const DeadIslandDocumentary: React.FC = () => {
         </Sequence>
       ))}
 
-      {TIMELINE.beds.map((bed) => (
-        <Sequence key={bed.id} from={f(bed.at)} durationInFrames={f(bed.dur)} name={`bed · ${bed.src}`}>
-          <Audio src={staticFile(`deadisland/audio/beds/${bed.id}.m4a`)} volume={() => bed.volume} />
-        </Sequence>
-      ))}
-
-      <Audio src={staticFile("deadisland/audio/music-bed.m4a")} volume={MUSIC_LEVEL} />
-      <Audio src={staticFile("deadisland/audio/narration.mp3")} />
+      <Soundtrack />
     </AbsoluteFill>
   );
 };

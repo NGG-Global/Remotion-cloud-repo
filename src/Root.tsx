@@ -46,6 +46,7 @@ import {
   DI_FPS,
   DI_HEIGHT,
   DI_WIDTH,
+  Soundtrack,
 } from "./deadisland/DeadIslandDocumentary";
 import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
 import { RigSheet } from "./gacy/dev/RigSheet";
@@ -114,6 +115,15 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="DeadIslandDocumentary"
         component={DeadIslandDocumentary}
+        durationInFrames={DI_DURATION}
+        fps={DI_FPS}
+        width={DI_WIDTH}
+        height={DI_HEIGHT}
+      />
+
+      <Composition
+        id="DeadIslandSound"
+        component={Soundtrack}
         durationInFrames={DI_DURATION}
         fps={DI_FPS}
         width={DI_WIDTH}
