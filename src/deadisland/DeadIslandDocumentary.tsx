@@ -22,7 +22,7 @@ export const DI_DURATION = Math.round((TIMELINE.narration + TIMELINE.tail) * DI_
 const f = (seconds: number) => Math.round(seconds * DI_FPS);
 
 /** Levels. The narration is untouched; everything else sits well beneath it. */
-const MUSIC_LEVEL = 0.5;
+const MUSIC_LEVEL = 0.8;
 
 const ShotLayer: React.FC<{ readonly shot: Shot; readonly fadeIn: number }> = ({
   shot,
