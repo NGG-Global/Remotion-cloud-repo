@@ -11,7 +11,7 @@ Each chapter file in tools/deadisland/edit/ holds lines of the form
   nat=0.1         level of the source's own sound
   freeze          hold the first frame
   reuse           this shot deliberately repeats footage used elsewhere (callback)
-Label lines:  L | at | duration | line | sub
+Label lines:  L | at | duration | line | sub | tone      (tone 'dark' for a label over a white card)
 Bed lines:    B | at | source id | source in | duration | level     (continuous source sound under several shots)
 
 Usage: python3 tools/deadisland/build_timeline.py
@@ -31,7 +31,7 @@ for f in sorted(glob.glob("tools/deadisland/edit/*.edl")):
         p = [x.strip() for x in line.split("|")]
         try:
             if p[0] == "L":
-                labels.append({"at": float(p[1]), "dur": float(p[2]), "line": p[3], **({"sub": p[4]} if len(p) > 4 and p[4] else {})}); continue
+                labels.append({"at": float(p[1]), "dur": float(p[2]), "line": p[3], **({"sub": p[4]} if len(p) > 4 and p[4] else {}), **({"tone": p[5]} if len(p) > 5 and p[5] else {})}); continue
             if p[0] == "B":
                 beds.append({"at": float(p[1]), "src": p[2], "in": float(p[3]), "dur": float(p[4]), "volume": float(p[5])}); continue
             s = {"at": float(p[0]), "src": p[1], "in": float(p[2]), "subject": p[3]}

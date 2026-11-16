@@ -1,15 +1,23 @@
 import React from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import {
+  AbsoluteFill,
+  interpolate,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
 import { TYPE } from "../fonts";
 
 /**
  * The only on-screen type in the film: a small identification in the lower
  * corner (a year, a studio, a development version). It fades; it never moves.
  */
-export const Label: React.FC<{ readonly line: string; readonly sub?: string }> = ({
-  line,
-  sub,
-}) => {
+export const Label: React.FC<{
+  readonly line: string;
+  readonly sub?: string;
+  /** "dark" sets dark type, for labels that sit on a white card. */
+  readonly tone?: "light" | "dark";
+}> = ({ line, sub, tone = "light" }) => {
+  const dark = tone === "dark";
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const opacity = interpolate(
@@ -30,8 +38,12 @@ export const Label: React.FC<{ readonly line: string; readonly sub?: string }> =
           flexDirection: "column",
           gap: 6,
           paddingLeft: 18,
-          borderLeft: "2px solid rgba(255,255,255,0.75)",
-          textShadow: "0 1px 12px rgba(0,0,0,0.85), 0 0 2px rgba(0,0,0,0.9)",
+          borderLeft: dark
+            ? "2px solid rgba(20,20,20,0.75)"
+            : "2px solid rgba(255,255,255,0.75)",
+          textShadow: dark
+            ? "none"
+            : "0 1px 12px rgba(0,0,0,0.85), 0 0 2px rgba(0,0,0,0.9)",
         }}
       >
         <div
@@ -40,7 +52,7 @@ export const Label: React.FC<{ readonly line: string; readonly sub?: string }> =
             fontWeight: 500,
             fontSize: 40,
             letterSpacing: 0.3,
-            color: "#f4f1ea",
+            color: dark ? "#161616" : "#f4f1ea",
             direction: dir(line),
             textAlign: "left",
           }}
@@ -53,7 +65,7 @@ export const Label: React.FC<{ readonly line: string; readonly sub?: string }> =
               fontFamily: TYPE.sans,
               fontWeight: 400,
               fontSize: 27,
-              color: "rgba(244,241,234,0.82)",
+              color: dark ? "rgba(22,22,22,0.8)" : "rgba(244,241,234,0.82)",
               direction: dir(sub),
               textAlign: "left",
             }}

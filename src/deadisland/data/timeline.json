@@ -5098,7 +5098,8 @@
    "at": 945.8,
    "dur": 4.2,
    "line": "יולי 2015",
-   "sub": "Deep Silver נפרדת מ־Yager"
+   "sub": "Deep Silver נפרדת מ־Yager",
+   "tone": "dark"
   },
   {
    "at": 970.0,
@@ -5110,7 +5111,8 @@
    "at": 981.1,
    "dur": 4.5,
    "line": "מרץ 2016",
-   "sub": "הפיתוח עובר ל־Sumo Digital, שפילד"
+   "sub": "הפיתוח עובר ל־Sumo Digital, שפילד",
+   "tone": "dark"
   },
   {
    "at": 986.4,
@@ -5122,7 +5124,8 @@
    "at": 1022.3,
    "dur": 4.5,
    "line": "אוגוסט 2019",
-   "sub": "הפיתוח עובר ל־Dambuster Studios, נוטינגהאם"
+   "sub": "הפיתוח עובר ל־Dambuster Studios, נוטינגהאם",
+   "tone": "dark"
   },
   {
    "at": 1025.9,

@@ -132,7 +132,7 @@ export const DeadIslandDocumentary: React.FC = () => {
           durationInFrames={f(label.dur)}
           name={`label · ${label.line}`}
         >
-          <Label line={label.line} sub={label.sub} />
+          <Label line={label.line} sub={label.sub} tone={label.tone} />
         </Sequence>
       ))}
 

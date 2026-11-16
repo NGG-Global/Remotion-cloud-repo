@@ -44,6 +44,8 @@ export type Label = {
   readonly dur: number;
   readonly line: string;
   readonly sub?: string;
+  /** Dark type, for a label over a white card. */
+  readonly tone?: "light" | "dark";
 };
 
 /** Continuous source sound laid under several shots (e.g. a trailer's own soundtrack). */
