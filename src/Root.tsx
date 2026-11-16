@@ -41,6 +41,7 @@ import {
 } from "./compositions/StarReveal";
 import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
 import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
+import { BASEMENT_FRAMES, BasementComic } from "./basement/BasementComic";
 import { RigSheet } from "./gacy/dev/RigSheet";
 import { SetTest } from "./gacy/dev/SetTest";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
@@ -104,6 +105,14 @@ export const RemotionRoot: React.FC = () => {
         {...FORMAT}
       />
 
+      <Composition
+        id="BasementComic"
+        component={BasementComic}
+        durationInFrames={BASEMENT_FRAMES}
+        fps={24}
+        width={1280}
+        height={720}
+      />
       <Composition
         id="GacyDocumentary"
         component={GacyDocumentary}

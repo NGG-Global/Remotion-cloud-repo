@@ -1,0 +1,717 @@
+{
+ "back-climb": {
+  "file": "back-climb.png",
+  "w": 1600,
+  "h": 900
+ },
+ "back-rock": {
+  "file": "back-rock.png",
+  "w": 1600,
+  "h": 900
+ },
+ "back-sneak": {
+  "file": "back-sneak.png",
+  "w": 1600,
+  "h": 900
+ },
+ "backyard": {
+  "file": "backyard.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "backyard-broken": {
+  "file": "backyard-broken.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "bag": {
+  "file": "bag.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "bdoor": {
+  "file": "bdoor.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "bdoor-broken": {
+  "file": "bdoor-broken.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "bdoor-kick": {
+  "file": "bdoor-kick.png",
+  "w": 1600,
+  "h": 900
+ },
+ "blood-floor": {
+  "file": "blood-floor.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "bottle": {
+  "file": "bottle.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "car-chris": {
+  "file": "car-chris.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-chris-fist": {
+  "file": "car-chris-fist.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-frame": {
+  "file": "car-frame.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-tom": {
+  "file": "car-tom.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-tom-down": {
+  "file": "car-tom-down.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-tyler-bump": {
+  "file": "car-tyler-bump.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-tyler-drive": {
+  "file": "car-tyler-drive.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-tyler-turn": {
+  "file": "car-tyler-turn.png",
+  "w": 1600,
+  "h": 900
+ },
+ "carview-dusk": {
+  "file": "carview-dusk.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "carview-house": {
+  "file": "carview-house.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "carview-night": {
+  "file": "carview-night.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "ch-comb": {
+  "file": "ch-comb.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-cook": {
+  "file": "ch-cook.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-drag": {
+  "file": "ch-drag.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-enter": {
+  "file": "ch-enter.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-haul": {
+  "file": "ch-haul.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-leave": {
+  "file": "ch-leave.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-next": {
+  "file": "ch-next.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-offer": {
+  "file": "ch-offer.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-point": {
+  "file": "ch-point.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-rope": {
+  "file": "ch-rope.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-run": {
+  "file": "ch-run.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-stand": {
+  "file": "ch-stand.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-stunned": {
+  "file": "ch-stunned.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-tackle1": {
+  "file": "ch-tackle1.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-tackle2": {
+  "file": "ch-tackle2.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-tackle3": {
+  "file": "ch-tackle3.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-tomdown": {
+  "file": "ch-tomdown.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "chamber-dark": {
+  "file": "chamber-dark.jpg",
+  "w": 3000,
+  "h": 1000
+ },
+ "chamber-fire": {
+  "file": "chamber-fire.jpg",
+  "w": 3000,
+  "h": 1000
+ },
+ "chamber-lamp": {
+  "file": "chamber-lamp.jpg",
+  "w": 3000,
+  "h": 1000
+ },
+ "chamber-reveal": {
+  "file": "chamber-reveal.jpg",
+  "w": 3000,
+  "h": 1000
+ },
+ "civic": {
+  "file": "civic.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-cast": {
+  "file": "coin-cast.png",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-ceil": {
+  "file": "coin-ceil.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-dark": {
+  "file": "coin-dark.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-lit": {
+  "file": "coin-lit.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-shout": {
+  "file": "coin-shout.png",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-tyler": {
+  "file": "coin-tyler.png",
+  "w": 1600,
+  "h": 900
+ },
+ "coins": {
+  "file": "coins.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "coins-hand": {
+  "file": "coins-hand.png",
+  "w": 1600,
+  "h": 900
+ },
+ "comb-down": {
+  "file": "comb-down.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "comb-up": {
+  "file": "comb-up.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "corr-down": {
+  "file": "corr-down.png",
+  "w": 1600,
+  "h": 900
+ },
+ "corr-kick": {
+  "file": "corr-kick.png",
+  "w": 1600,
+  "h": 900
+ },
+ "corr-kick2": {
+  "file": "corr-kick2.png",
+  "w": 1600,
+  "h": 900
+ },
+ "corr-shoulder": {
+  "file": "corr-shoulder.png",
+  "w": 1600,
+  "h": 900
+ },
+ "corridor-dark": {
+  "file": "corridor-dark.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "corridor-lit": {
+  "file": "corridor-lit.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "corridor-open": {
+  "file": "corridor-open.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "door-boys": {
+  "file": "door-boys.png",
+  "w": 1600,
+  "h": 900
+ },
+ "door-g": {
+  "file": "door-g.png",
+  "w": 1600,
+  "h": 900
+ },
+ "door-plate": {
+  "file": "door-plate.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "door-tom-shoved": {
+  "file": "door-tom-shoved.png",
+  "w": 1600,
+  "h": 900
+ },
+ "door-tyler": {
+  "file": "door-tyler.png",
+  "w": 1600,
+  "h": 900
+ },
+ "exec": {
+  "file": "exec.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "field-bench": {
+  "file": "field-bench.png",
+  "w": 2200,
+  "h": 900
+ },
+ "field-bg": {
+  "file": "field-bg.jpg",
+  "w": 2200,
+  "h": 900
+ },
+ "final": {
+  "file": "final.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "freezer": {
+  "file": "freezer.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-approach": {
+  "file": "g-approach.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-approach-fire": {
+  "file": "g-approach-fire.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-hand": {
+  "file": "g-hand.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-hand-head": {
+  "file": "g-hand-head.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-low": {
+  "file": "g-low.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-low-fire": {
+  "file": "g-low-fire.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-shoot": {
+  "file": "g-shoot.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "gf-cast": {
+  "file": "gf-cast.png",
+  "w": 1600,
+  "h": 900
+ },
+ "gf-dark": {
+  "file": "gf-dark.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "gf-lit": {
+  "file": "gf-lit.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "gf-split": {
+  "file": "gf-split.png",
+  "w": 1600,
+  "h": 900
+ },
+ "gun": {
+  "file": "gun.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "handle": {
+  "file": "handle.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "house-bg": {
+  "file": "house-bg.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "house-car": {
+  "file": "house-car.png",
+  "w": 1600,
+  "h": 900
+ },
+ "house-gang": {
+  "file": "house-gang.png",
+  "w": 1600,
+  "h": 900
+ },
+ "house-police": {
+  "file": "house-police.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "im-closed": {
+  "file": "im-closed.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "im-g": {
+  "file": "im-g.png",
+  "w": 1600,
+  "h": 900
+ },
+ "im-g-half": {
+  "file": "im-g-half.png",
+  "w": 1600,
+  "h": 900
+ },
+ "im-half": {
+  "file": "im-half.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "im-near": {
+  "file": "im-near.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "im-open": {
+  "file": "im-open.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "im-push": {
+  "file": "im-push.png",
+  "w": 1600,
+  "h": 900
+ },
+ "inst-corr": {
+  "file": "inst-corr.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "inst-narr": {
+  "file": "inst-narr.png",
+  "w": 1600,
+  "h": 900
+ },
+ "inst-room": {
+  "file": "inst-room.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "inst-walk": {
+  "file": "inst-walk.png",
+  "w": 1600,
+  "h": 900
+ },
+ "kitchen-bg": {
+  "file": "kitchen-bg.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "kitchen-boy": {
+  "file": "kitchen-boy.png",
+  "w": 1600,
+  "h": 900
+ },
+ "kitchen-dad": {
+  "file": "kitchen-dad.png",
+  "w": 1600,
+  "h": 900
+ },
+ "knob": {
+  "file": "knob.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "knob-lifted": {
+  "file": "knob-lifted.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "laptop": {
+  "file": "laptop.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "legs": {
+  "file": "legs.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "living-bg": {
+  "file": "living-bg.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "living-couch": {
+  "file": "living-couch.png",
+  "w": 1600,
+  "h": 900
+ },
+ "painting-fire": {
+  "file": "painting-fire.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "painting-oil": {
+  "file": "painting-oil.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "photos": {
+  "file": "photos.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "photos-dark": {
+  "file": "photos-dark.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "road-car": {
+  "file": "road-car.png",
+  "w": 1600,
+  "h": 900
+ },
+ "road-night": {
+  "file": "road-night.jpg",
+  "w": 2600,
+  "h": 900
+ },
+ "roster": {
+  "file": "roster.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "school-bg": {
+  "file": "school-bg.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "school-gang": {
+  "file": "school-gang.png",
+  "w": 1600,
+  "h": 900
+ },
+ "splatter": {
+  "file": "splatter.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "stain": {
+  "file": "stain.png",
+  "w": 1600,
+  "h": 900
+ },
+ "stairs-cast": {
+  "file": "stairs-cast.png",
+  "w": 1600,
+  "h": 900
+ },
+ "stairs-down": {
+  "file": "stairs-down.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "stairs-down-dark": {
+  "file": "stairs-down-dark.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "stairs-exit": {
+  "file": "stairs-exit.png",
+  "w": 1600,
+  "h": 900
+ },
+ "stairs-up": {
+  "file": "stairs-up.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "store-bg": {
+  "file": "store-bg.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "store-cast": {
+  "file": "store-cast.png",
+  "w": 1600,
+  "h": 900
+ },
+ "tom-cry": {
+  "file": "tom-cry.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "tools": {
+  "file": "tools.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "town-bg": {
+  "file": "town-bg.jpg",
+  "w": 2000,
+  "h": 900
+ },
+ "town-gang": {
+  "file": "town-gang.png",
+  "w": 2000,
+  "h": 900
+ },
+ "town-narr": {
+  "file": "town-narr.png",
+  "w": 2000,
+  "h": 900
+ },
+ "tyler-car": {
+  "file": "tyler-car.png",
+  "w": 1600,
+  "h": 900
+ },
+ "tyler-dusk": {
+  "file": "tyler-dusk.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "tyler-night": {
+  "file": "tyler-night.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "vat-hot": {
+  "file": "vat-hot.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "vat-off": {
+  "file": "vat-off.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "vat-on": {
+  "file": "vat-on.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "vathand-claw": {
+  "file": "vathand-claw.png",
+  "w": 1600,
+  "h": 900
+ },
+ "vathand-fist": {
+  "file": "vathand-fist.png",
+  "w": 1600,
+  "h": 900
+ },
+ "vathand-limp": {
+  "file": "vathand-limp.png",
+  "w": 1600,
+  "h": 900
+ },
+ "wall-enter": {
+  "file": "wall-enter.png",
+  "w": 1600,
+  "h": 900
+ },
+ "wall-open": {
+  "file": "wall-open.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "wallet": {
+  "file": "wallet.jpg",
+  "w": 1600,
+  "h": 900
+ }
+}

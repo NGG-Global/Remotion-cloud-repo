@@ -1,0 +1,860 @@
+{
+ "house-bg": {
+  "hash": "7bd2cb2cd57367e1",
+  "file": "house-bg.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "house-car": {
+  "hash": "f3324d0b4934ed3d",
+  "file": "house-car.png",
+  "w": 1600,
+  "h": 900
+ },
+ "corridor-lit": {
+  "hash": "400d52751fc12eb2",
+  "file": "corridor-lit.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "corridor-dark": {
+  "hash": "3fc1bc5693214d26",
+  "file": "corridor-dark.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "kitchen-bg": {
+  "hash": "ceaf9b020379daca",
+  "file": "kitchen-bg.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "kitchen-dad": {
+  "hash": "7696d59cf0e34128",
+  "file": "kitchen-dad.png",
+  "w": 1600,
+  "h": 900
+ },
+ "kitchen-boy": {
+  "hash": "13cd31616aa74193",
+  "file": "kitchen-boy.png",
+  "w": 1600,
+  "h": 900
+ },
+ "town-bg": {
+  "hash": "d70b2b6a05b69f16",
+  "file": "town-bg.jpg",
+  "w": 2000,
+  "h": 900
+ },
+ "town-gang": {
+  "hash": "09842109f55227f3",
+  "file": "town-gang.png",
+  "w": 2000,
+  "h": 900
+ },
+ "town-narr": {
+  "hash": "dcaa63e13d88cce0",
+  "file": "town-narr.png",
+  "w": 2000,
+  "h": 900
+ },
+ "school-bg": {
+  "hash": "e67e7d891c0df8b5",
+  "file": "school-bg.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "school-gang": {
+  "hash": "cb65dc791f1789fb",
+  "file": "school-gang.png",
+  "w": 1600,
+  "h": 900
+ },
+ "field-bg": {
+  "hash": "6439cac327f7ad3a",
+  "file": "field-bg.jpg",
+  "w": 2200,
+  "h": 900
+ },
+ "field-bench": {
+  "hash": "44e6933f558a5853",
+  "file": "field-bench.png",
+  "w": 2200,
+  "h": 900
+ },
+ "roster": {
+  "hash": "58c6caf9573a7ea7",
+  "file": "roster.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "tyler-dusk": {
+  "hash": "1955c3da456697cb",
+  "file": "tyler-dusk.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "tyler-night": {
+  "hash": "daa9f8efbd5911f0",
+  "file": "tyler-night.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "tyler-car": {
+  "hash": "11fac136aba51fad",
+  "file": "tyler-car.png",
+  "w": 1600,
+  "h": 900
+ },
+ "wallet": {
+  "hash": "ecaaa0324ae7c5ea",
+  "file": "wallet.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "carview-dusk": {
+  "hash": "2508152546e12cb8",
+  "file": "carview-dusk.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "carview-night": {
+  "hash": "1a9f6c686b28af4b",
+  "file": "carview-night.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "carview-house": {
+  "hash": "a26b42b760210b56",
+  "file": "carview-house.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "car-frame": {
+  "hash": "81e8b70579f9943e",
+  "file": "car-frame.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-tyler-drive": {
+  "hash": "ddb15350f94a8a1a",
+  "file": "car-tyler-drive.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-chris": {
+  "hash": "3b7213b126ddad72",
+  "file": "car-chris.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-chris-fist": {
+  "hash": "a6158b4170613ac2",
+  "file": "car-chris-fist.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-tyler-turn": {
+  "hash": "7acbaacdc371983f",
+  "file": "car-tyler-turn.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-tyler-bump": {
+  "hash": "7f1ec9cc33208519",
+  "file": "car-tyler-bump.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-tom": {
+  "hash": "141cd451d8648765",
+  "file": "car-tom.png",
+  "w": 1600,
+  "h": 900
+ },
+ "car-tom-down": {
+  "hash": "ff523d204e509cfc",
+  "file": "car-tom-down.png",
+  "w": 1600,
+  "h": 900
+ },
+ "bottle": {
+  "hash": "e9eada505b06b087",
+  "file": "bottle.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "bag": {
+  "hash": "0823fc5865d181e0",
+  "file": "bag.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "civic": {
+  "hash": "0d83aae795b80a9a",
+  "file": "civic.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "store-bg": {
+  "hash": "67e7ef50868b447a",
+  "file": "store-bg.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "store-cast": {
+  "hash": "b80d971f5966c4de",
+  "file": "store-cast.png",
+  "w": 1600,
+  "h": 900
+ },
+ "laptop": {
+  "hash": "d342be23c2563669",
+  "file": "laptop.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "living-bg": {
+  "hash": "fc9462b729af0655",
+  "file": "living-bg.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "living-couch": {
+  "hash": "b1aaaf2a7c401996",
+  "file": "living-couch.png",
+  "w": 1600,
+  "h": 900
+ },
+ "road-night": {
+  "hash": "616679ccb7e25750",
+  "file": "road-night.jpg",
+  "w": 2600,
+  "h": 900
+ },
+ "road-car": {
+  "hash": "20aa70eebbab7145",
+  "file": "road-car.png",
+  "w": 1600,
+  "h": 900
+ },
+ "house-police": {
+  "hash": "a6f3dbe50487f24b",
+  "file": "house-police.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "house-gang": {
+  "hash": "f4ef13f957892b07",
+  "file": "house-gang.png",
+  "w": 1600,
+  "h": 900
+ },
+ "backyard": {
+  "hash": "f0d6e64937fa4bc7",
+  "file": "backyard.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "backyard-broken": {
+  "hash": "eb019eeb868db538",
+  "file": "backyard-broken.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "back-rock": {
+  "hash": "8788a01085b24031",
+  "file": "back-rock.png",
+  "w": 1600,
+  "h": 900
+ },
+ "back-sneak": {
+  "hash": "e208c367669e2f6d",
+  "file": "back-sneak.png",
+  "w": 1600,
+  "h": 900
+ },
+ "back-climb": {
+  "hash": "e4978a234664dd06",
+  "file": "back-climb.png",
+  "w": 1600,
+  "h": 900
+ },
+ "gf-lit": {
+  "hash": "689502aac592ddea",
+  "file": "gf-lit.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "gf-dark": {
+  "hash": "0ce51ea1c821a549",
+  "file": "gf-dark.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "gf-cast": {
+  "hash": "9d6d56688fbcc010",
+  "file": "gf-cast.png",
+  "w": 1600,
+  "h": 900
+ },
+ "gf-split": {
+  "hash": "ade8f34c366d3bbb",
+  "file": "gf-split.png",
+  "w": 1600,
+  "h": 900
+ },
+ "bdoor": {
+  "hash": "d0f4360f42b2fdb7",
+  "file": "bdoor.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "bdoor-broken": {
+  "hash": "a80f0bc6cbef3b7d",
+  "file": "bdoor-broken.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "bdoor-kick": {
+  "hash": "2f5571f52dfc721c",
+  "file": "bdoor-kick.png",
+  "w": 1600,
+  "h": 900
+ },
+ "stairs-down": {
+  "hash": "0b16425113ea05ac",
+  "file": "stairs-down.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "stairs-down-dark": {
+  "hash": "2b535f99b356f6dd",
+  "file": "stairs-down-dark.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "stairs-cast": {
+  "hash": "b5fd4d6a278f0c5e",
+  "file": "stairs-cast.png",
+  "w": 1600,
+  "h": 900
+ },
+ "stairs-up": {
+  "hash": "c015b744ddcc9158",
+  "file": "stairs-up.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "stairs-exit": {
+  "hash": "78d1c9a048e8526f",
+  "file": "stairs-exit.png",
+  "w": 1600,
+  "h": 900
+ },
+ "corridor-open": {
+  "hash": "c6c95481e0af8bf9",
+  "file": "corridor-open.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "corr-kick": {
+  "hash": "8674404ac53aeb60",
+  "file": "corr-kick.png",
+  "w": 1600,
+  "h": 900
+ },
+ "corr-kick2": {
+  "hash": "4dac98ecf08ac046",
+  "file": "corr-kick2.png",
+  "w": 1600,
+  "h": 900
+ },
+ "corr-shoulder": {
+  "hash": "52741e490b37774a",
+  "file": "corr-shoulder.png",
+  "w": 1600,
+  "h": 900
+ },
+ "corr-down": {
+  "hash": "ea6475604e1d2aec",
+  "file": "corr-down.png",
+  "w": 1600,
+  "h": 900
+ },
+ "handle": {
+  "hash": "c25240aaf91ef8b6",
+  "file": "handle.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-dark": {
+  "hash": "0d42dd0b8077f9f5",
+  "file": "coin-dark.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-lit": {
+  "hash": "84785707d41c2d49",
+  "file": "coin-lit.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-ceil": {
+  "hash": "d2cf46d7baeb670f",
+  "file": "coin-ceil.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-cast": {
+  "hash": "263858637327887b",
+  "file": "coin-cast.png",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-tyler": {
+  "hash": "9a2de8036fc67e58",
+  "file": "coin-tyler.png",
+  "w": 1600,
+  "h": 900
+ },
+ "coin-shout": {
+  "hash": "723c64110b9ce03f",
+  "file": "coin-shout.png",
+  "w": 1600,
+  "h": 900
+ },
+ "coins": {
+  "hash": "406f86f407fa9093",
+  "file": "coins.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "coins-hand": {
+  "hash": "1f73e85350449a95",
+  "file": "coins-hand.png",
+  "w": 1600,
+  "h": 900
+ },
+ "painting-oil": {
+  "hash": "0c2a6b9e3b0edaa7",
+  "file": "painting-oil.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "painting-fire": {
+  "hash": "c60b8dea92de93c1",
+  "file": "painting-fire.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "photos": {
+  "hash": "e9a3c695ebd76872",
+  "file": "photos.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "photos-dark": {
+  "hash": "42b4c87c6067024e",
+  "file": "photos-dark.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "door-plate": {
+  "hash": "e889d765142a51de",
+  "file": "door-plate.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "door-g": {
+  "hash": "8b21e9b973578d2e",
+  "file": "door-g.png",
+  "w": 1600,
+  "h": 900
+ },
+ "door-boys": {
+  "hash": "0533438ddea70623",
+  "file": "door-boys.png",
+  "w": 1600,
+  "h": 900
+ },
+ "door-tyler": {
+  "hash": "7932e5aa62a9fa20",
+  "file": "door-tyler.png",
+  "w": 1600,
+  "h": 900
+ },
+ "door-tom-shoved": {
+  "hash": "619e55849d9908da",
+  "file": "door-tom-shoved.png",
+  "w": 1600,
+  "h": 900
+ },
+ "blood-floor": {
+  "hash": "bd42067a4dfe5ec7",
+  "file": "blood-floor.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-hand": {
+  "hash": "f5a961d0b7f0159a",
+  "file": "g-hand.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-hand-head": {
+  "hash": "476eab8f1340d680",
+  "file": "g-hand-head.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "tom-cry": {
+  "hash": "b53a64bd8a54a10f",
+  "file": "tom-cry.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "gun": {
+  "hash": "d2d35f471e159d5d",
+  "file": "gun.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "exec": {
+  "hash": "20a6f2aadfcb6ae1",
+  "file": "exec.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "splatter": {
+  "hash": "9dd089d87ebde449",
+  "file": "splatter.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-low": {
+  "hash": "ab2dae84888812c6",
+  "file": "g-low.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-low-fire": {
+  "hash": "765df5e7d567d75a",
+  "file": "g-low-fire.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "knob": {
+  "hash": "c59045b6aab24053",
+  "file": "knob.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "knob-lifted": {
+  "hash": "e352322e206c1006",
+  "file": "knob-lifted.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "wall-open": {
+  "hash": "3e66f2aec036cb18",
+  "file": "wall-open.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "wall-enter": {
+  "hash": "823143250aa66024",
+  "file": "wall-enter.png",
+  "w": 1600,
+  "h": 900
+ },
+ "chamber-lamp": {
+  "hash": "50c767e0ea693fd1",
+  "file": "chamber-lamp.jpg",
+  "w": 3000,
+  "h": 1000
+ },
+ "chamber-fire": {
+  "hash": "d63c8a042d597e54",
+  "file": "chamber-fire.jpg",
+  "w": 3000,
+  "h": 1000
+ },
+ "chamber-dark": {
+  "hash": "c8c80e48bce5c706",
+  "file": "chamber-dark.jpg",
+  "w": 3000,
+  "h": 1000
+ },
+ "chamber-reveal": {
+  "hash": "83e3fd2b57d815cb",
+  "file": "chamber-reveal.jpg",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-enter": {
+  "hash": "39849e8d0824afc8",
+  "file": "ch-enter.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-stand": {
+  "hash": "6b72c0e9ac19bf36",
+  "file": "ch-stand.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-comb": {
+  "hash": "57e8d4731e8b497e",
+  "file": "ch-comb.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-point": {
+  "hash": "335315bab9344eba",
+  "file": "ch-point.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-rope": {
+  "hash": "2a08763b71b723a2",
+  "file": "ch-rope.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-offer": {
+  "hash": "3fc62b1daf307c72",
+  "file": "ch-offer.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-stunned": {
+  "hash": "167930ce44355fc3",
+  "file": "ch-stunned.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-drag": {
+  "hash": "1aa36f02f3d8f5cd",
+  "file": "ch-drag.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-cook": {
+  "hash": "02bb0f689b97acea",
+  "file": "ch-cook.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-next": {
+  "hash": "b87e50cba1b0345c",
+  "file": "ch-next.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-run": {
+  "hash": "4452d477260b7703",
+  "file": "ch-run.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-tomdown": {
+  "hash": "cb1dbc476f8f86e5",
+  "file": "ch-tomdown.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-haul": {
+  "hash": "cac3a8919b5469f9",
+  "file": "ch-haul.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-tackle1": {
+  "hash": "66445fdfbc88dd82",
+  "file": "ch-tackle1.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-tackle2": {
+  "hash": "1f8cd07b332d8dde",
+  "file": "ch-tackle2.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-tackle3": {
+  "hash": "4ebc2b761dcc9fb2",
+  "file": "ch-tackle3.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "ch-leave": {
+  "hash": "039d92578589b3ec",
+  "file": "ch-leave.png",
+  "w": 3000,
+  "h": 1000
+ },
+ "tools": {
+  "hash": "a3a610ff3cd747a4",
+  "file": "tools.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "comb-up": {
+  "hash": "cc37f33c16620845",
+  "file": "comb-up.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "comb-down": {
+  "hash": "decc722cce1f049c",
+  "file": "comb-down.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "legs": {
+  "hash": "463a9eb0973794f9",
+  "file": "legs.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "stain": {
+  "hash": "7255d1f428dd46ae",
+  "file": "stain.png",
+  "w": 1600,
+  "h": 900
+ },
+ "vat-off": {
+  "hash": "d522d88dc25c1175",
+  "file": "vat-off.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "vat-on": {
+  "hash": "2c407a362f31a9c4",
+  "file": "vat-on.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "vat-hot": {
+  "hash": "1471a973af54b1e6",
+  "file": "vat-hot.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "vathand-fist": {
+  "hash": "b3af1e821549937f",
+  "file": "vathand-fist.png",
+  "w": 1600,
+  "h": 900
+ },
+ "vathand-claw": {
+  "hash": "11371e5c073a3c53",
+  "file": "vathand-claw.png",
+  "w": 1600,
+  "h": 900
+ },
+ "vathand-limp": {
+  "hash": "f37d731376990282",
+  "file": "vathand-limp.png",
+  "w": 1600,
+  "h": 900
+ },
+ "g-approach": {
+  "hash": "83378bd3e1438e12",
+  "file": "g-approach.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-approach-fire": {
+  "hash": "055ae12ffd5091eb",
+  "file": "g-approach-fire.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "g-shoot": {
+  "hash": "08c59b8ea1f43b74",
+  "file": "g-shoot.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "im-open": {
+  "hash": "f4f48d0171f6d351",
+  "file": "im-open.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "im-half": {
+  "hash": "6de756c8049f835c",
+  "file": "im-half.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "im-near": {
+  "hash": "a1f7f3222fbdcdcb",
+  "file": "im-near.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "im-closed": {
+  "hash": "c683eb7b99022053",
+  "file": "im-closed.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "im-g": {
+  "hash": "80c4abc2fc2f2c99",
+  "file": "im-g.png",
+  "w": 1600,
+  "h": 900
+ },
+ "im-g-half": {
+  "hash": "c9a5212784b2e6aa",
+  "file": "im-g-half.png",
+  "w": 1600,
+  "h": 900
+ },
+ "im-push": {
+  "hash": "7de841b4d82a1186",
+  "file": "im-push.png",
+  "w": 1600,
+  "h": 900
+ },
+ "freezer": {
+  "hash": "54c2f46e44c2d9c5",
+  "file": "freezer.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "inst-room": {
+  "hash": "cbf37863b00aa173",
+  "file": "inst-room.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "inst-narr": {
+  "hash": "bf9eae017794618b",
+  "file": "inst-narr.png",
+  "w": 1600,
+  "h": 900
+ },
+ "inst-corr": {
+  "hash": "305fd2f0a49efe1e",
+  "file": "inst-corr.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ "inst-walk": {
+  "hash": "efad88ef79a8ee61",
+  "file": "inst-walk.png",
+  "w": 1600,
+  "h": 900
+ },
+ "final": {
+  "hash": "e71a1da06f1555be",
+  "file": "final.jpg",
+  "w": 1600,
+  "h": 900
+ }
+}
