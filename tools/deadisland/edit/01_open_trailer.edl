@@ -6,7 +6,7 @@
 15.4  | di1_de_launch   | 25.6  | Silhouette at the balcony rail over the sea | x0.8
 17.1  | di1_de_facts    | 2.15  | Blue bay and mountains framed by palms | x0.9
 19.6  | di1_de_announce | 31.8  | Hotel facade over the pool, strong sun | x0.65
-22.5  | di1_de_launch   | 4.2   | The night pool party, drunk first-person view
+22.5  | di1_de_launch   | 4.5   | The night pool party, drunk first-person view
 26.6  | di1_fight       | 25.0  | Hotel corridor: panicking guests run past
 30.6  | di1_de_facts    | 21.6  | Tourists flee along the promenade as zombies grab at them
 36.9  | di1_tragedy     | 68.2  | Blood-covered zombie on the hillside road
@@ -20,7 +20,7 @@
 55.5  | di1_launch      | 4.5   | Establishing: stilt bungalows, Moresby bridge
 L | 56.2 | 4.5 | Dead Island | 2011 · Techland / Deep Silver
 59.2  | di1_tragedy     | 61.7  | The emptied island: market alley, surfboards on an empty beach
-63.1  | di1_de_facts    | 15.4  | A mauled body under a parasol; a zombie by the pool
+63.1  | di1_de_facts    | 15.4  | A mauled body under a parasol; a zombie by the pool | x0.86
 66.9  | di1_de_launch   | 34.6  | Silhouetted zombie on a sunlit street
 69.6  | di1_cinematic   | 19.0  | 2011 trailer: the girl's eye, slow pull back | dis0.8
 # 80.3–120: filled in 02_intro.edl
@@ -28,7 +28,7 @@ L | 56.2 | 4.5 | Dead Island | 2011 · Techland / Deep Silver
 122.9 | di1_cinematic   | 168.05 | 2011 trailer coda: the mother arrives at the hotel
 124.0 | di1_cinematic   | 174.5 | 2011 trailer coda: the father sets the camera timer for the family photo
 # ---- The 2011 trailer (2:07–4:32)
-127.6 | di1_cinematic   | 4.7   | Deep Silver logo opening the 2011 trailer | dis0.5
+127.6 | di1_cinematic   | 5.6   | Deep Silver logo opening the 2011 trailer | dis0.5
 L | 128.0 | 5.5 | פברואר 2011 | טריילר ההכרזה של Dead Island
 130.7 | di1_cinematic   | 160.75 | Dead Island logo from the 2011 trailer
 134.0 | di1_de_launch   | 73.8  | An Infected charges; zombies silhouetted against a red sunset

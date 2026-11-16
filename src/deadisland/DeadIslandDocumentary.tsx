@@ -3,11 +3,11 @@ import {
   AbsoluteFill,
   Audio,
   interpolate,
-  OffthreadVideo,
   Sequence,
   staticFile,
   useCurrentFrame,
 } from "remotion";
+import { Video } from "@remotion/media";
 import { Label } from "./components/Label";
 import timelineJson from "./data/timeline.json";
 import "./fonts";
@@ -39,7 +39,7 @@ const ShotLayer: React.FC<{ readonly shot: Shot; readonly fadeIn: number }> = ({
   const nat = shot.nat ?? 0;
   return (
     <AbsoluteFill style={{ opacity }}>
-      <OffthreadVideo
+      <Video
         src={staticFile(`deadisland/clips/${shot.id}.mp4`)}
         muted={nat === 0}
         volume={nat}
@@ -103,7 +103,7 @@ export const DeadIslandDocumentary: React.FC = () => {
 
       {TIMELINE.beds.map((bed) => (
         <Sequence key={bed.id} from={f(bed.at)} durationInFrames={f(bed.dur)} name={`bed · ${bed.src}`}>
-          <Audio src={staticFile(`deadisland/audio/beds/${bed.id}.m4a`)} volume={bed.volume} />
+          <Audio src={staticFile(`deadisland/audio/beds/${bed.id}.m4a`)} volume={() => bed.volume} />
         </Sequence>
       ))}
 

@@ -27,13 +27,13 @@ L | 1373.8 | 5.0 | SoLA | הרחבה שנייה · אפריל 2024
 1392.6 | sola_launch    | 61.35 | SoLA: the golden disc pulses with lightning | crop=0.12,0.12,0.76,0.76
 1397.2 | sola_launch    | 28.4  | SoLA: a blood-drenched woman in a wide-brimmed hat | crop=0.12,0.12,0.76,0.76
 1399.6 | sola_launch    | 53.0  | SoLA: the main stage in red light | crop=0.12,0.12,0.76,0.76
-1402.5 | di2_cutscenes  | 10463.0 | Dead Island 2 epilogue: a man watched through a rifle scope | crop=0.09,0,0.82,0.82
+1402.5 | di2_cutscenes  | 10463.0 | Dead Island 2 cutscene: a grey-haired woman in the dark | crop=0.09,0,0.82,0.82
 1409.4 | di2_cutscenes  | 8473.5 | Konradt and two companions in the dark hall | crop=0.09,0,0.82,0.82
 1412.5 | haus_stream    | 9109.0 | Haus: a black-and-white vision | crop=0.28,0.08,0.72,0.72
 # ---- The recurring idea (23:35–24:40)
 1415.2 | di1_walkthrough | 318.3 | Dead Island: the lighthouse fortification, sea and mountains | crop=0,0.06,0.94,0.94 dis0.6
 1419.3 | di1_de_launch  | 105.5 | Dead Island: a zombie on the white beach
-1421.1 | rip_launch     | 42.6  | Riptide: the 'Paradise' sign over the survivors' camp
+1421.1 | rip_launch     | 42.6  | Riptide: a jungle stream on the beach; a survivor
 1423.0 | di2_gameplay_dec22 | 128.6 | Dead Island 2: zombies in a turquoise pool with a flamingo float
 1424.9 | di1_cinematic  | 37.5  | 2011 trailer: the girl on the grass (callback) | reuse
 1427.6 | di1_cinematic  | 166.15 | 2011 trailer coda: the girl, alive, on a sunny beach | x0.5
@@ -67,7 +67,7 @@ L | 1373.8 | 5.0 | SoLA | הרחבה שנייה · אפריל 2024
 1501.3 | di2_e3_2014    | 143.0 | E3 2014 trailer: the zombie jogger and the van
 1504.5 | di2_gamescom_4k | 123.2 | Gamescom 2022 trailer: the living room drenched in blood at sunset | crop=0,0.128,1,0.744
 1508.0 | di2_cutscenes  | 819.5 | Dead Island 2: 'Bel-Air' over a mansion | crop=0.09,0,0.82,0.82
-1510.9 | di2_cutscenes  | 801.0 | Dead Island 2: palms against the sky, a long shadow | crop=0.09,0,0.82,0.82
+1510.9 | di2_flesh_interview | 17.5 | Dead Island 2: a deserted beach at sunset, lifeguard tower and pier
 1513.9 | di2_gameplay_2022 | 73.5 | Dead Island 2: a zombie in a hazmat suit; a runner | crop=0.122,0.122,0.756,0.756 x0.82
 1517.3 | di1_walkthrough | 372.8 | Dead Island: zombies in tall grass | crop=0,0.06,0.94,0.94
 1520.4 | di2_cutscenes  | 5026.0 | Dead Island 2: a zombie clown feeds on a body | crop=0.09,0,0.82,0.82
@@ -75,11 +75,11 @@ L | 1373.8 | 5.0 | SoLA | הרחבה שנייה · אפריל 2024
 1528.9 | di2_cutscenes  | 746.0 | Dead Island 2: the bitten forearm | crop=0.09,0,0.82,0.82
 1534.2 | di2_e3_2014    | 109.6 | E3 2014 trailer: the jogger's body decays, a clouded eye
 1539.4 | di1_cinematic  | 59.5  | 2011 trailer: the girl turns on her father (callback) | reuse x0.62
-1542.8 | di1_psnow      | 1252.0 | Dead Island: the abandoned pool, mats floating | crop=0,0.21,0.76,0.76 dis0.6
+1542.8 | di1_psnow      | 1256.0 | Dead Island: the abandoned pool | crop=0,0.21,0.76,0.76 dis0.6
 1547.5 | di1_psnow      | 1295.0 | Dead Island: the pool, floating loungers, the thatched bar | crop=0,0.21,0.76,0.76
 1549.6 | di1_de_announce | 31.8 | Dead Island: the hotel (callback) | reuse x0.75
 1551.2 | di1_psnow      | 149.6 | Dead Island: the open-air nightclub from the opening | crop=0,0.21,0.76,0.76
-1553.5 | di1_tragedy    | 50.9  | Holiday snapshots of the island's tourists | x0.7 reuse
+1553.5 | di1_tragedy    | 57.3  | Holiday snapshots of the island's tourists (callback) | x0.68 reuse
 1557.8 | di1_cinematic  | 174.5 | 2011 trailer coda: the family photo (callback) | reuse dis0.6
 1563.3 | di1_cinematic  | 152.9 | 2011 trailer: their hands drift apart (callback) | reuse
 1567.4 | di2_gameplay_dec22 | 143.7 | Dead Island 2: combat
@@ -94,11 +94,11 @@ L | 1373.8 | 5.0 | SoLA | הרחבה שנייה · אפריל 2024
 1608.9 | di1_cinematic  | 52.5  | 2011 trailer: the glass reassembles (callback) | reuse x0.75
 1614.9 | di1_quicklook  | 4.6   | Dead Island: the bay from the lighthouse
 1619.1 | di1_walkthrough | 99.5 | Dead Island: leaving the station with a nailed bat | crop=0,0.06,0.94,0.94
-1620.9 | rip_prealpha   | 36.2  | Riptide: walking a beach with an axe | crop=0.07,0,0.93,0.93
+1620.9 | rip_prealpha   | 36.2  | Riptide: walking a beach with an axe | crop=0.1,0,0.88,0.88
 1622.6 | di2_gameplay_2022 | 66.95 | Dead Island 2: the beach beside the pier at dusk | crop=0.122,0.122,0.756,0.756
 1624.9 | di1_cinematic  | 178.2 | 2011 trailer coda: the family waves (callback) | reuse
 1627.5 | di1_de_announce | 56.7 | Dead Island: an electrified blade in a shower of sparks
-1629.4 | di2_yager_gdc  | 286.2 | GDC Europe 2014: 'Seamless Multiplayer in Dead Island 2' | crop=0.295,0.145,0.7,0.705
+1629.4 | di2_e3_2014    | 160.5 | E3 2014 trailer epilogue: the jogger's severed head (callback) | reuse
 1632.0 | di2_gamescom_4k | 134.3 | Gamescom 2022 trailer: Jacob walks to the door at dusk | crop=0,0.128,1,0.744
 # ---- Outro (27:15–27:52)
 1635.3 | di1_walkthrough | 451.0 | Dead Island: a quiet cove | crop=0,0.06,0.94,0.94 dis0.6

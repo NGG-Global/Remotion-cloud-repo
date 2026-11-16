@@ -1,29 +1,29 @@
 # ---- Riptide (9:51–11:37)
 591.6 | rip_launch      | 9.5   | Riptide: a jungle stream, a wrecked resort entrance | dis0.5
 L | 592.2 | 4.5 | Dead Island: Riptide | 2013
-595.5 | rip_launch      | 27.2  | Riptide: flooded jungle ruins
+595.5 | rip_prealpha    | 82.2  | Riptide: a jungle path down to a flooded lagoon | crop=0.1,0,0.88,0.88
 598.9 | rip_quicklook   | 921.0 | Riptide gameplay: the path up from the beach on Palanai
 602.3 | di1_de_launch   | 68.4  | Riptide: a helicopter lands on the military ship; the heroes are held by soldiers
 606.5 | rip_launch      | 20.4  | Riptide: a figure on the deck of the military ship at sunset | x0.7
 610.5 | rip_launch      | 33.5  | Riptide: the warship from above on a pink sea | x0.5
 613.3 | rip_launch      | 36.5  | Riptide: the storm, the ship lists | x0.7
 616.6 | rip_launch      | 30.9  | Riptide: a body washed up in the shallows at dawn
-619.0 | rip_launch      | 39.3  | Riptide: the grounded warship seen from the rocky shore of Palanai
+619.0 | rip_launch      | 39.3  | Riptide: the grounded warship seen from the rocky shore of Palanai | x0.52
 L | 619.2 | 4.0 | פלאנאי
 621.0 | rip_quicklook   | 935.0 | Riptide gameplay: a beach with a body, a jetty to the survivors' camp
 626.3 | rip_quicklook   | 166.0 | Riptide gameplay: kick and bat in the market square
 629.4 | rip_quicklook   | 281.0 | Riptide gameplay: fighting with a long staff
-631.0 | rip_prealpha    | 397.0 | Riptide hub defence: a mounted minigun fires through the arch | crop=0.07,0,0.93,0.93
-635.6 | rip_prealpha    | 213.0 | Riptide: boat ride through the flooded jungle | crop=0.07,0,0.93,0.93
+631.0 | rip_prealpha    | 397.0 | Riptide hub defence: a mounted minigun fires through the arch | crop=0.1,0,0.88,0.88
+635.6 | rip_prealpha    | 213.0 | Riptide: boat ride through the flooded jungle | crop=0.1,0,0.88,0.88
 641.6 | rip_quicklook   | 228.0 | Riptide gameplay: repeated bat blows on a zombie by the market stalls
 647.0 | rip_quicklook   | 137.0 | Riptide gameplay: melee in Henderson's market square
 651.0 | rip_cinematic   | 43.5  | Riptide CGI trailer: a couple in a yacht cabin
-655.6 | rip_launch      | 51.6  | Riptide: survivors in a cinema
+655.6 | rip_launch      | 51.6  | Riptide: survivors in a cinema | x0.76
 658.3 | rip_quicklook   | 714.5 | Riptide: dialogue with a survivor | crop=0.075,0,0.85,0.85
 663.5 | rip_quicklook   | 1118.5 | Riptide: dialogue with a man in a hut | crop=0.075,0,0.85,0.85
 666.5 | rip_launch      | 59.4  | Riptide: survivors fight through a horde on a stone bridge
 670.8 | rip_boat        | 154.0 | Riptide gameplay: climbing into the boat and pulling away | crop=0,0,0.92,0.92
-674.8 | rip_boat        | 85.0  | Riptide gameplay: a boat on a brown flooded river in the rain | crop=0,0,0.92,0.92
+674.8 | rip_boat        | 85.0  | Riptide gameplay: a boat on a brown flooded river in the rain | crop=0.04,0,0.88,0.88
 678.9 | rip_boat        | 179.0 | Riptide gameplay: the boat arrives at a sandy bank | crop=0,0,0.92,0.92
 683.4 | rip_cinematic   | 103.0 | Riptide CGI trailer: zombies climb over the hull of a beached yacht
 687.4 | rip_cinematic   | 52.0  | Riptide CGI trailer: the woman's face | dis0.6
@@ -34,19 +34,19 @@ L | 619.2 | 4.0 | פלאנאי
 709.8 | di1_e3interview | 40.4  | E3 2011: Deep Silver's brand manager | crop=0,0.1,0.9,0.9
 713.6 | di1_de_announce | 20.65 | The hotel behind a beach bar whose sign carries the Techland logo | x0.52
 716.9 | di1_de_announce | 4.2   | A beach deck branded with the Deep Silver logo | x0.56
-720.6 | dl_walkthrough  | 25.0  | Dying Light: a cargo plane low over Harran
-727.0 | dl_launch       | 19.4  | Dying Light: a bridge crowded with zombies
+720.6 | dl_walkthrough  | 26.5  | Dying Light: a cargo plane low over Harran
+727.0 | dl_walkthrough  | 234.0 | Dying Light: a road bridge packed with zombies beside a burning bus
 L | 727.3 | 5.0 | Dying Light | Techland · 2015
 729.9 | dl_walkthrough  | 63.0  | Dying Light: daytime melee in an overgrown yard
 733.4 | dl_walkthrough  | 42.0  | Dying Light: parkour across slum rooftops
 739.6 | dl_walkthrough  | 84.5  | Dying Light: first-person melee with a baseball bat
 745.4 | dl_walkthrough  | 114.0 | Dying Light: climbing a pole and jumping to a roof
 748.5 | dl_walkthrough  | 409.5 | Dying Light: the sun sets over Harran
-751.8 | dl_launch       | 72.6  | Dying Light: a Volatile in the dark
+751.8 | dl_launch       | 74.6  | Dying Light: a Volatile in the dark
 754.6 | dl_night        | 512.5 | Dying Light: night chase, a light trap goes off
 758.6 | dl_night        | 250.5 | Dying Light: crossing rooftops as the light fades
 761.4 | dl_launch       | 38.7  | Dying Light: on a tower crane high above the city
-765.6 | dl_launch       | 27.9  | Dying Light: the bay and city from the air
+765.6 | dl_launch       | 27.9  | Dying Light: the bay and city from the air | x0.58
 769.2 | dl_launch       | 48.3  | Dying Light: a flying kick against the sun
 771.5 | di1_de_facts    | 79.3  | Dead Island: a shotgun blast in a Moresby street
 773.7 | di1_e3interview | 56.2  | E3 2011: Deep Silver's brand manager | crop=0,0.1,0.9,0.9
@@ -55,7 +55,7 @@ L | 727.3 | 5.0 | Dying Light | Techland · 2015
 782.6 | esc_quicklook   | 1221.0 | Escape Dead Island: Cliff Calo on the beach
 L | 782.9 | 4.5 | Escape Dead Island | 2014
 785.8 | esc_quicklook   | 857.0 | Escape Dead Island: a cel-shaded bay through palm trunks
-789.7 | esc_quicklook   | 1386.0 | Escape Dead Island: Cliff runs along the beach past containers
+789.7 | esc_quicklook   | 1388.0 | Escape Dead Island: Cliff runs along the beach past containers
 792.5 | esc_quicklook   | 1370.5 | Escape Dead Island: the camera viewfinder
 795.3 | esc_quicklook   | 2420.0 | Escape Dead Island: shipping containers fall out of the sky
 799.2 | esc_launch      | 24.15 | Escape Dead Island: red sky, black silhouettes
@@ -88,7 +88,7 @@ L | 839.3 | 5.5 | יוני 2014 · E3 | טריילר ההכרזה של Dead Isla
 876.4 | di2_e3_2014     | 122.0 | E3 2014 trailer: the milky eye; the jogger is now a zombie
 879.5 | di2_e3_2014     | 129.0 | E3 2014 trailer: a horde runs along the boardwalk
 884.4 | di2_e3_2014     | 138.5 | E3 2014 trailer: the zombie jogger shuffles on
-888.3 | di2_e3_2014     | 183.7 | E3 2014 trailer: Dead Island 2 logo card with Deep Silver and Yager logos
+888.3 | di2_e3_2014     | 184.1 | E3 2014 trailer: Dead Island 2 logo card with Deep Silver and Yager logos
 894.5 | di2_yager_sunshine | 9.3 | Yager build, 2014: suburban houses under the Hollywood sign | x0.85
 L | 894.9 | 4.0 | גרסת Yager | קדם-אלפא · 2014
 898.5 | di2_e3_2014     | 173.6 | E3 2014 trailer: billboard 'Get the body you deserve'

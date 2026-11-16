@@ -70,9 +70,9 @@
   {
    "at": 22.5,
    "src": "di1_de_launch",
-   "in": 4.2,
+   "in": 4.5,
    "subject": "The night pool party, drunk first-person view",
-   "id": "di1delaunch_000420",
+   "id": "di1delaunch_000450",
    "chapter": "Cold open"
   },
   {
@@ -171,6 +171,7 @@
    "src": "di1_de_facts",
    "in": 15.4,
    "subject": "A mauled body under a parasol; a zombie by the pool",
+   "speed": 0.86,
    "id": "di1defacts_001540",
    "chapter": "Introduction"
   },
@@ -221,10 +222,10 @@
    "in": 10.7,
    "subject": "Yager logo slide",
    "crop": [
-    0.295,
-    0.145,
-    0.7,
-    0.705
+    0.3,
+    0.15,
+    0.685,
+    0.685
    ],
    "id": "di2yagergdc_001070",
    "chapter": "Introduction"
@@ -345,11 +346,11 @@
   {
    "at": 127.6,
    "src": "di1_cinematic",
-   "in": 4.7,
+   "in": 5.6,
    "subject": "Deep Silver logo opening the 2011 trailer",
    "transition": "dissolve",
    "transitionDur": 0.5,
-   "id": "di1cinematic_000470",
+   "id": "di1cinematic_000560",
    "chapter": "The 2011 trailer"
   },
   {
@@ -730,10 +731,16 @@
   },
   {
    "at": 278.2,
-   "src": "di1_e3trailer",
-   "in": 89.9,
-   "subject": "The game: first person, leaving the hotel room into the silent corridor",
-   "id": "di1e3trailer_008990",
+   "src": "di1_first15",
+   "in": 29.4,
+   "subject": "The game: first person, out of the hotel room into the corridor, quest text on screen",
+   "crop": [
+    0.0,
+    0.06,
+    0.94,
+    0.94
+   ],
+   "id": "di1first15_002940",
    "chapter": "The game behind the trailer"
   },
   {
@@ -813,10 +820,10 @@
   {
    "at": 316.0,
    "src": "di1_cinematic",
-   "in": 10.45,
+   "in": 10.6,
    "subject": "Techland logo",
-   "speed": 0.84,
-   "id": "di1cinematic_001045",
+   "speed": 0.72,
+   "id": "di1cinematic_001060",
    "chapter": "Banoi"
   },
   {
@@ -846,7 +853,7 @@
   {
    "at": 328.4,
    "src": "di1_first15",
-   "in": 17.2,
+   "in": 20.0,
    "subject": "Waking in the dark hotel suite after the party",
    "crop": [
     0.0,
@@ -854,7 +861,7 @@
     0.94,
     0.94
    ],
-   "id": "di1first15_001720",
+   "id": "di1first15_002000",
    "chapter": "Banoi"
   },
   {
@@ -893,10 +900,10 @@
   {
    "at": 344.0,
    "src": "di1_quicklook",
-   "in": 1324.0,
+   "in": 1323.9,
    "subject": "Character select: Purna",
    "speed": 0.7,
-   "id": "di1quicklook_132400",
+   "id": "di1quicklook_132390",
    "chapter": "Banoi"
   },
   {
@@ -986,7 +993,7 @@
   {
    "at": 374.4,
    "src": "di1_first15",
-   "in": 719.3,
+   "in": 720.4,
    "subject": "Wide view across the beach: palms, sand, thatched bar",
    "crop": [
     0.0,
@@ -994,21 +1001,21 @@
     0.94,
     0.94
    ],
-   "id": "di1first15_071930",
+   "id": "di1first15_072040",
    "chapter": "Banoi"
   },
   {
    "at": 377.3,
    "src": "di1_psnow",
-   "in": 1247.0,
-   "subject": "Abandoned resort pool: floating mats, blood on the paving",
+   "in": 1250.0,
+   "subject": "Abandoned resort pool: floating mats",
    "crop": [
     0.0,
     0.21,
     0.76,
     0.76
    ],
-   "id": "di1psnow_124700",
+   "id": "di1psnow_125000",
    "chapter": "Banoi"
   },
   {
@@ -1123,7 +1130,8 @@
    "at": 407.6,
    "src": "di1_e3trailer",
    "in": 42.0,
-   "subject": "The hotel at night, signpost 'Palms Hotel / Paradise'",
+   "subject": "The resort hotel at night",
+   "speed": 0.56,
    "id": "di1e3trailer_004200",
    "chapter": "Banoi"
   },
@@ -1179,6 +1187,7 @@
    "src": "di1_fight",
    "in": 77.1,
    "subject": "Gunfight in a rainy Moresby street",
+   "speed": 0.7,
    "id": "di1fight_007710",
    "chapter": "Banoi"
   },
@@ -1206,18 +1215,20 @@
   },
   {
    "at": 439.3,
-   "src": "di1_ryder_quicklook",
-   "in": 1486.0,
-   "subject": "A dark military facility hall with wall maps",
-   "id": "di1ryderquicklook_148600",
+   "src": "di1_ryder_trailer",
+   "in": 69.25,
+   "subject": "A man in a lab coat at a computer",
+   "speed": 0.5,
+   "id": "di1rydertrailer_006925",
    "chapter": "Banoi"
   },
   {
    "at": 440.6,
    "src": "di1_ryder_trailer",
-   "in": 67.5,
-   "subject": "Prison corridor and bars",
-   "id": "di1rydertrailer_006750",
+   "in": 67.3,
+   "subject": "Ryder White at a door; prison bars",
+   "speed": 0.9,
+   "id": "di1rydertrailer_006730",
    "chapter": "Banoi"
   },
   {
@@ -1234,6 +1245,7 @@
    "src": "di1_de_announce",
    "in": 14.7,
    "subject": "A dark control room with a wall of monitors",
+   "speed": 0.9,
    "id": "di1deannounce_001470",
    "chapter": "Banoi"
   },
@@ -1438,6 +1450,12 @@
    "src": "di1_ryder_quicklook",
    "in": 250.4,
    "subject": "Moresby's slum rooftops from the air",
+   "crop": [
+    0.075,
+    0.0,
+    0.85,
+    0.85
+   ],
    "id": "di1ryderquicklook_025040",
    "chapter": "Banoi"
   },
@@ -1463,7 +1481,7 @@
   {
    "at": 524.8,
    "src": "di1_walkthrough",
-   "in": 113.0,
+   "in": 119.5,
    "subject": "Beating a zombie down with a nail-studded bat",
    "crop": [
     0.0,
@@ -1471,7 +1489,7 @@
     0.94,
     0.94
    ],
-   "id": "di1walkthrough_011300",
+   "id": "di1walkthrough_011950",
    "chapter": "Combat"
   },
   {
@@ -1540,16 +1558,16 @@
   },
   {
    "at": 539.8,
-   "src": "di1_first15",
-   "in": 759.4,
-   "subject": "Hint: 'Your weapon is badly damaged. Find a workbench to repair it.'",
+   "src": "di1_psnow",
+   "in": 1340.6,
+   "subject": "Hint: 'Your weapon is badly damaged and will soon be useless'",
    "crop": [
     0.0,
-    0.06,
-    0.94,
-    0.94
+    0.21,
+    0.76,
+    0.76
    ],
-   "id": "di1first15_075940",
+   "id": "di1psnow_134060",
    "chapter": "Combat"
   },
   {
@@ -1615,9 +1633,9 @@
   {
    "at": 555.2,
    "src": "di1_fight",
-   "in": 62.5,
+   "in": 64.95,
    "subject": "Co-op on the beach and in the jungle",
-   "id": "di1fight_006250",
+   "id": "di1fight_006495",
    "chapter": "Combat"
   },
   {
@@ -1736,10 +1754,16 @@
   },
   {
    "at": 595.5,
-   "src": "rip_launch",
-   "in": 27.2,
-   "subject": "Riptide: flooded jungle ruins",
-   "id": "riplaunch_002720",
+   "src": "rip_prealpha",
+   "in": 82.2,
+   "subject": "Riptide: a jungle path down to a flooded lagoon",
+   "crop": [
+    0.1,
+    0.0,
+    0.88,
+    0.88
+   ],
+   "id": "ripprealpha_008220",
    "chapter": "Riptide"
   },
   {
@@ -1798,6 +1822,7 @@
    "src": "rip_launch",
    "in": 39.3,
    "subject": "Riptide: the grounded warship seen from the rocky shore of Palanai",
+   "speed": 0.52,
    "id": "riplaunch_003930",
    "chapter": "Riptide"
   },
@@ -1831,10 +1856,10 @@
    "in": 397.0,
    "subject": "Riptide hub defence: a mounted minigun fires through the arch",
    "crop": [
-    0.07,
+    0.1,
     0.0,
-    0.93,
-    0.93
+    0.88,
+    0.88
    ],
    "id": "ripprealpha_039700",
    "chapter": "Riptide"
@@ -1845,10 +1870,10 @@
    "in": 213.0,
    "subject": "Riptide: boat ride through the flooded jungle",
    "crop": [
-    0.07,
+    0.1,
     0.0,
-    0.93,
-    0.93
+    0.88,
+    0.88
    ],
    "id": "ripprealpha_021300",
    "chapter": "Riptide"
@@ -1882,6 +1907,7 @@
    "src": "rip_launch",
    "in": 51.6,
    "subject": "Riptide: survivors in a cinema",
+   "speed": 0.76,
    "id": "riplaunch_005160",
    "chapter": "Riptide"
   },
@@ -1941,10 +1967,10 @@
    "in": 85.0,
    "subject": "Riptide gameplay: a boat on a brown flooded river in the rain",
    "crop": [
+    0.04,
     0.0,
-    0.0,
-    0.92,
-    0.92
+    0.88,
+    0.88
    ],
    "id": "ripboat_008500",
    "chapter": "Riptide"
@@ -2054,17 +2080,17 @@
   {
    "at": 720.6,
    "src": "dl_walkthrough",
-   "in": 25.0,
+   "in": 26.5,
    "subject": "Dying Light: a cargo plane low over Harran",
-   "id": "dlwalkthrough_002500",
+   "id": "dlwalkthrough_002650",
    "chapter": "Techland and Dying Light"
   },
   {
    "at": 727.0,
-   "src": "dl_launch",
-   "in": 19.4,
-   "subject": "Dying Light: a bridge crowded with zombies",
-   "id": "dllaunch_001940",
+   "src": "dl_walkthrough",
+   "in": 234.0,
+   "subject": "Dying Light: a road bridge packed with zombies beside a burning bus",
+   "id": "dlwalkthrough_023400",
    "chapter": "Techland and Dying Light"
   },
   {
@@ -2110,9 +2136,9 @@
   {
    "at": 751.8,
    "src": "dl_launch",
-   "in": 72.6,
+   "in": 74.6,
    "subject": "Dying Light: a Volatile in the dark",
-   "id": "dllaunch_007260",
+   "id": "dllaunch_007460",
    "chapter": "Techland and Dying Light"
   },
   {
@@ -2144,6 +2170,7 @@
    "src": "dl_launch",
    "in": 27.9,
    "subject": "Dying Light: the bay and city from the air",
+   "speed": 0.58,
    "id": "dllaunch_002790",
    "chapter": "Techland and Dying Light"
   },
@@ -2204,9 +2231,9 @@
   {
    "at": 789.7,
    "src": "esc_quicklook",
-   "in": 1386.0,
+   "in": 1388.0,
    "subject": "Escape Dead Island: Cliff runs along the beach past containers",
-   "id": "escquicklook_138600",
+   "id": "escquicklook_138800",
    "chapter": "Spin-offs"
   },
   {
@@ -2438,9 +2465,9 @@
   {
    "at": 888.3,
    "src": "di2_e3_2014",
-   "in": 183.7,
+   "in": 184.1,
    "subject": "E3 2014 trailer: Dead Island 2 logo card with Deep Silver and Yager logos",
-   "id": "di2e32014_018370",
+   "id": "di2e32014_018410",
    "chapter": "E3 2014"
   },
   {
@@ -2463,15 +2490,15 @@
   {
    "at": 905.3,
    "src": "di2_yager_gdc",
-   "in": 0.9,
+   "in": 2.6,
    "subject": "GDC Europe 2014: title slide of Yager's talk on Dead Island 2",
    "crop": [
-    0.295,
-    0.145,
-    0.7,
-    0.705
+    0.3,
+    0.15,
+    0.685,
+    0.685
    ],
-   "id": "di2yagergdc_000090",
+   "id": "di2yagergdc_000260",
    "chapter": "Yager"
   },
   {
@@ -2480,10 +2507,10 @@
    "in": 15.5,
    "subject": "GDC Europe 2014 slide: Spec Ops: The Line key art",
    "crop": [
-    0.295,
-    0.145,
-    0.7,
-    0.705
+    0.3,
+    0.15,
+    0.685,
+    0.685
    ],
    "id": "di2yagergdc_001550",
    "chapter": "Yager"
@@ -2510,10 +2537,10 @@
    "in": 23.0,
    "subject": "GDC Europe 2014 slide: the Yager team in Berlin",
    "crop": [
-    0.295,
-    0.145,
-    0.7,
-    0.705
+    0.3,
+    0.15,
+    0.685,
+    0.685
    ],
    "id": "di2yagergdc_002300",
    "chapter": "Yager"
@@ -2548,10 +2575,10 @@
    "in": 346.5,
    "subject": "Yager-era screenshot: a zombie in an 'I'm with stupid' T-shirt",
    "crop": [
-    0.295,
-    0.145,
-    0.7,
-    0.705
+    0.3,
+    0.15,
+    0.685,
+    0.685
    ],
    "id": "di2yagergdc_034650",
    "chapter": "Yager"
@@ -2562,10 +2589,10 @@
    "in": 333.5,
    "subject": "Yager-era screenshot: zombies on a hillside road under the Hollywood sign",
    "crop": [
-    0.295,
-    0.145,
-    0.7,
-    0.705
+    0.3,
+    0.15,
+    0.685,
+    0.685
    ],
    "id": "di2yagergdc_033350",
    "chapter": "Yager"
@@ -2608,10 +2635,10 @@
    "in": 318.4,
    "subject": "Yager-era screenshot: a survivor kicks a zombie",
    "crop": [
-    0.295,
-    0.145,
-    0.7,
-    0.705
+    0.3,
+    0.15,
+    0.685,
+    0.685
    ],
    "id": "di2yagergdc_031840",
    "chapter": "Yager"
@@ -2698,9 +2725,9 @@
   {
    "at": 998.2,
    "src": "di2_e3_2014",
-   "in": 156.8,
+   "in": 157.0,
    "subject": "E3 2014 trailer epilogue: the jogger's severed head on the road",
-   "id": "di2e32014_015680",
+   "id": "di2e32014_015700",
    "chapter": "Sumo Digital and the silent years"
   },
   {
@@ -2724,16 +2751,16 @@
   {
    "at": 1008.3,
    "src": "di2_yager_gdc",
-   "in": 271.0,
+   "in": 271.1,
    "subject": "2014 Dead Island 2 key art",
    "crop": [
-    0.295,
-    0.145,
-    0.7,
-    0.705
+    0.3,
+    0.15,
+    0.685,
+    0.685
    ],
-   "speed": 0.75,
-   "id": "di2yagergdc_027100",
+   "speed": 0.68,
+   "id": "di2yagergdc_027110",
    "chapter": "Sumo Digital and the silent years"
   },
   {
@@ -2844,12 +2871,12 @@
    "in": 358.35,
    "subject": "Yager-era screenshot: a zombie in front of a wrecked car in a suburban driveway",
    "crop": [
-    0.295,
-    0.145,
-    0.7,
-    0.705
+    0.3,
+    0.15,
+    0.685,
+    0.685
    ],
-   "speed": 0.7,
+   "speed": 0.6,
    "id": "di2yagergdc_035835",
    "chapter": "Sumo Digital and the silent years"
   },
@@ -2886,9 +2913,9 @@
   {
    "at": 1077.9,
    "src": "di2_gameplay_dec22",
-   "in": 106.3,
+   "in": 108.5,
    "subject": "Dambuster build: a graffiti wall, a heap of dead zombies at its base",
-   "id": "di2gameplaydec22_010630",
+   "id": "di2gameplaydec22_010850",
    "chapter": "Sumo Digital and the silent years"
   },
   {
@@ -3004,10 +3031,10 @@
   {
    "at": 1111.5,
    "src": "di1_cinematic",
-   "in": 31.0,
+   "in": 30.4,
    "subject": "2011 trailer: the girl on the grass (callback)",
    "reuse": true,
-   "id": "di1cinematic_003100",
+   "id": "di1cinematic_003040",
    "chapter": "Gamescom 2022"
   },
   {
@@ -3106,10 +3133,10 @@
   },
   {
    "at": 1143.4,
-   "src": "di2_gamescom_4k",
-   "in": 161.2,
+   "src": "di2_gameplay_2022",
+   "in": 104.2,
    "subject": "End card: 'See you in HELL-A'",
-   "id": "di2gamescom4k_016120",
+   "id": "di2gameplay2022_010420",
    "chapter": "Dead Island 2: design"
   },
   {
@@ -3161,9 +3188,10 @@
   {
    "at": 1156.0,
    "src": "di2_gameplay_dec22",
-   "in": 44.3,
+   "in": 44.35,
    "subject": "Survivors in a modern house, one holding up his phone",
-   "id": "di2gameplaydec22_004430",
+   "speed": 0.85,
+   "id": "di2gameplaydec22_004435",
    "chapter": "Dead Island 2: design"
   },
   {
@@ -4026,7 +4054,7 @@
    "at": 1402.5,
    "src": "di2_cutscenes",
    "in": 10463.0,
-   "subject": "Dead Island 2 epilogue: a man watched through a rifle scope",
+   "subject": "Dead Island 2 cutscene: a grey-haired woman in the dark",
    "crop": [
     0.09,
     0.0,
@@ -4092,7 +4120,7 @@
    "at": 1421.1,
    "src": "rip_launch",
    "in": 42.6,
-   "subject": "Riptide: the 'Paradise' sign over the survivors' camp",
+   "subject": "Riptide: a jungle stream on the beach; a survivor",
    "id": "riplaunch_004260",
    "chapter": "The recurring idea"
   },
@@ -4436,16 +4464,10 @@
   },
   {
    "at": 1510.9,
-   "src": "di2_cutscenes",
-   "in": 801.0,
-   "subject": "Dead Island 2: palms against the sky, a long shadow",
-   "crop": [
-    0.09,
-    0.0,
-    0.82,
-    0.82
-   ],
-   "id": "di2cutscenes_080100",
+   "src": "di2_flesh_interview",
+   "in": 17.5,
+   "subject": "Dead Island 2: a deserted beach at sunset, lifeguard tower and pier",
+   "id": "di2fleshinterview_001750",
    "chapter": "Reflection"
   },
   {
@@ -4540,8 +4562,8 @@
   {
    "at": 1542.8,
    "src": "di1_psnow",
-   "in": 1252.0,
-   "subject": "Dead Island: the abandoned pool, mats floating",
+   "in": 1256.0,
+   "subject": "Dead Island: the abandoned pool",
    "crop": [
     0.0,
     0.21,
@@ -4550,7 +4572,7 @@
    ],
    "transition": "dissolve",
    "transitionDur": 0.6,
-   "id": "di1psnow_125200",
+   "id": "di1psnow_125600",
    "chapter": "Reflection"
   },
   {
@@ -4594,11 +4616,11 @@
   {
    "at": 1553.5,
    "src": "di1_tragedy",
-   "in": 50.9,
-   "subject": "Holiday snapshots of the island's tourists",
-   "speed": 0.7,
+   "in": 57.3,
+   "subject": "Holiday snapshots of the island's tourists (callback)",
+   "speed": 0.68,
    "reuse": true,
-   "id": "di1tragedy_005090",
+   "id": "di1tragedy_005730",
    "chapter": "Reflection"
   },
   {
@@ -4769,10 +4791,10 @@
    "in": 36.2,
    "subject": "Riptide: walking a beach with an axe",
    "crop": [
-    0.07,
+    0.1,
     0.0,
-    0.93,
-    0.93
+    0.88,
+    0.88
    ],
    "id": "ripprealpha_003620",
    "chapter": "Reflection"
@@ -4810,16 +4832,11 @@
   },
   {
    "at": 1629.4,
-   "src": "di2_yager_gdc",
-   "in": 286.2,
-   "subject": "GDC Europe 2014: 'Seamless Multiplayer in Dead Island 2'",
-   "crop": [
-    0.295,
-    0.145,
-    0.7,
-    0.705
-   ],
-   "id": "di2yagergdc_028620",
+   "src": "di2_e3_2014",
+   "in": 160.5,
+   "subject": "E3 2014 trailer epilogue: the jogger's severed head (callback)",
+   "reuse": true,
+   "id": "di2e32014_016050",
    "chapter": "Reflection"
   },
   {
