@@ -1,0 +1,4 @@
+shot,timeline_start,timeline_end,duration,source_id,source_file,source_url,source_in,source_out,speed,subject,chapter,shots_from_this_source
+t001,0.00,5.00,5.00,di1_de_launch,di1_de_launch.mp4,https://store.steampowered.com/app/383150/,18.20,23.20,1,test resort,test,1
+t002,5.00,10.00,5.00,di1_cinematic,di1_cinematic.mp4,https://archive.org/details/youtube-IhO8wQXZXKw,30.00,35.00,1,test trailer,test,1
+t003,10.00,16.00,6.00,di1_e3trailer,di1_e3trailer.flv,https://archive.org/details/g4tv.com-video53275-flvhd,40.00,46.00,1,test sd,test,1

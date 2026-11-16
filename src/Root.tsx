@@ -40,6 +40,13 @@ import {
   starRevealSchema,
 } from "./compositions/StarReveal";
 import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
+import {
+  DeadIslandDocumentary,
+  DI_DURATION,
+  DI_FPS,
+  DI_HEIGHT,
+  DI_WIDTH,
+} from "./deadisland/DeadIslandDocumentary";
 import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
 import { RigSheet } from "./gacy/dev/RigSheet";
 import { SetTest } from "./gacy/dev/SetTest";
@@ -102,6 +109,15 @@ export const RemotionRoot: React.FC = () => {
         component={JackTheRipper}
         durationInFrames={JACK_THE_RIPPER_DURATION}
         {...FORMAT}
+      />
+
+      <Composition
+        id="DeadIslandDocumentary"
+        component={DeadIslandDocumentary}
+        durationInFrames={DI_DURATION}
+        fps={DI_FPS}
+        width={DI_WIDTH}
+        height={DI_HEIGHT}
       />
 
       <Composition

@@ -20,3 +20,7 @@ out
 
 # Alignment diagnostics written by tools/align-srt.mjs
 *.aligned.json
+
+# Dead Island documentary: downloaded source footage and derived clips (large; see docs/deadisland/SOURCES.md)
+media/
+public/deadisland/clips/

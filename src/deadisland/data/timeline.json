@@ -1,0 +1,7 @@
+{"fps":30,"width":1920,"height":1080,"narration":14,"tail":2,
+ "shots":[
+  {"id":"t001","at":0,"src":"di1_de_launch","in":18.2,"subject":"test resort","chapter":"test","transition":"fadeFromBlack","transitionDur":1},
+  {"id":"t002","at":5,"src":"di1_cinematic","in":30,"subject":"test trailer","chapter":"test","transition":"dissolve","transitionDur":0.6},
+  {"id":"t003","at":10,"src":"di1_e3trailer","in":40,"subject":"test sd","chapter":"test","nat":0.1}
+ ],
+ "labels":[{"at":5.5,"dur":4,"line":"פברואר 2011","sub":"Dead Island · טריילר ההכרזה"}]}
