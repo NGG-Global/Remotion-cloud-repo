@@ -1,1 +1,41 @@
-{}
+{
+  "origins-001": {
+    "file": "dpa/clips/origins-001-c457bd15db.mp4"
+  },
+  "origins-001b": {
+    "file": "dpa/clips/origins-001b-470a569fd4.mp4"
+  },
+  "origins-001c": {
+    "file": "dpa/clips/origins-001c-415878b840.mp4"
+  },
+  "origins-001d": {
+    "file": "dpa/clips/origins-001d-a27bc4b510.mp4"
+  },
+  "origins-002": {
+    "file": "dpa/clips/origins-002-1f0bf6701b.mp4"
+  },
+  "origins-002b": {
+    "file": "dpa/clips/origins-002b-309f196700.mp4"
+  },
+  "origins-003": {
+    "file": "dpa/clips/origins-003-9236d382e1.mp4"
+  },
+  "origins-003b": {
+    "file": "dpa/clips/origins-003b-e3086d1d54.mp4"
+  },
+  "origins-003c": {
+    "file": "dpa/clips/origins-003c-c99e79c940.mp4"
+  },
+  "themes-019": {
+    "file": "dpa/clips/themes-019-e03dd9cf50.mp4"
+  },
+  "themes-020": {
+    "file": "dpa/clips/themes-020-b793b2fe8b.mp4"
+  },
+  "themes-020b": {
+    "file": "dpa/clips/themes-020b-ab19fc7221.mp4"
+  },
+  "themes-020c": {
+    "file": "dpa/clips/themes-020c-3b84cdd6b4.mp4"
+  }
+}

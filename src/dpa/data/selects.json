@@ -1,0 +1,157 @@
+{
+ "beats": {
+  "origins-001": [
+   {
+    "src": "ud_04",
+    "a": 38.2,
+    "b": 41.4,
+    "note": "Until Dawn: aerial of the snowbound forest",
+    "crop": {
+     "zoom": 1.32,
+     "x": 0.5,
+     "y": 0
+    }
+   },
+   {
+    "src": "ud_04",
+    "a": 41.8,
+    "b": 44.8,
+    "note": "Until Dawn: headlights on the mountain road",
+    "crop": {
+     "zoom": 1.32,
+     "x": 0.5,
+     "y": 0
+    }
+   },
+   {
+    "src": "ud_04",
+    "a": 375.2,
+    "b": 379.4,
+    "note": "Until Dawn: the cabin in the snow at night",
+    "crop": {
+     "zoom": 1.32,
+     "x": 0.5,
+     "y": 0
+    }
+   },
+   {
+    "src": "ud_04",
+    "a": 380.3,
+    "b": 384.3,
+    "note": "Until Dawn: approaching the cabin",
+    "crop": {
+     "zoom": 1.32,
+     "x": 0.5,
+     "y": 0
+    }
+   }
+  ],
+  "origins-002": [
+   {
+    "src": "ud_04",
+    "a": 63.1,
+    "b": 66.8,
+    "note": "Until Dawn: the cable car against the mountain",
+    "crop": {
+     "zoom": 1.32,
+     "x": 0.5,
+     "y": 0
+    }
+   },
+   {
+    "src": "ud_04",
+    "a": 18.05,
+    "b": 19.85,
+    "note": "Until Dawn: the friends together in the snow",
+    "crop": {
+     "zoom": 1.32,
+     "x": 0.5,
+     "y": 0
+    }
+   }
+  ],
+  "origins-003": [
+   {
+    "src": "ud_04",
+    "a": 53.0,
+    "b": 55.9,
+    "note": "Until Dawn: Sam, close",
+    "crop": {
+     "zoom": 1.32,
+     "x": 0.5,
+     "y": 0
+    }
+   },
+   {
+    "src": "ud_04",
+    "a": 365.3,
+    "b": 369.8,
+    "note": "Until Dawn: Mike by the window, uneasy",
+    "crop": {
+     "zoom": 1.32,
+     "x": 0.5,
+     "y": 0
+    }
+   },
+   {
+    "src": "ud_04",
+    "a": 456.2,
+    "b": 459.6,
+    "note": "Until Dawn: Jessica, close",
+    "crop": {
+     "zoom": 1.32,
+     "x": 0.5,
+     "y": 0
+    }
+   }
+  ],
+  "themes-019": [
+   {
+    "src": "d8020_prologue",
+    "a": 107.6,
+    "b": 116.5,
+    "note": "Directive 8020: the Cassiopeia's hull against the stars",
+    "crop": {
+     "zoom": 1.5,
+     "x": 0.5,
+     "y": 0.42
+    }
+   }
+  ],
+  "themes-020": [
+   {
+    "src": "d8020_prologue",
+    "a": 588.2,
+    "b": 592.6,
+    "note": "Directive 8020: crewman, frightened",
+    "crop": {
+     "zoom": 1.5,
+     "x": 0.5,
+     "y": 0.42
+    }
+   },
+   {
+    "src": "d8020_prologue",
+    "a": 570.6,
+    "b": 575.4,
+    "note": "Directive 8020: struggle in the corridor",
+    "crop": {
+     "zoom": 1.5,
+     "x": 0.5,
+     "y": 0.42
+    }
+   },
+   {
+    "src": "d8020_prologue",
+    "a": 598.0,
+    "b": 602.3,
+    "note": "Directive 8020: dark corridor",
+    "crop": {
+     "zoom": 1.5,
+     "x": 0.5,
+     "y": 0.42
+    }
+   }
+  ]
+ }
+}

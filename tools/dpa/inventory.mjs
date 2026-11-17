@@ -1,7 +1,8 @@
 /**
  * Builds the footage inventory for the Dark Pictures documentary.
  *
- *   node tools/dpa/inventory.mjs [--every 5] [--no-scenes]
+ *   node tools/dpa/inventory.mjs [--every 5] [--no-scenes] [--only proxy]
+ *                                [--tile 6x6] [--thumb 320x180]
  *
  * For every video under footage/dpa it records resolution, frame rate,
  * duration and codecs, writes timestamped contact sheets for choosing shots,
@@ -19,6 +20,13 @@ import { exec, FOOTAGE_DIR, pool, probe, readJson, writeJson } from "./lib.mjs";
 const args = process.argv.slice(2);
 const every = Number(args[args.indexOf("--every") + 1]) || 5;
 const withScenes = !args.includes("--no-scenes");
+const value = (name, fallback) =>
+  args.includes(name) ? args[args.indexOf(name) + 1] : fallback;
+/** Restrict the run to one sub-directory of footage/dpa. */
+const only = value("--only", null);
+const tile = value("--tile", "6x6");
+const thumb = value("--thumb", "320x180").replace("x", ":");
+const perSheet = tile.split("x").reduce((a, b) => a * Number(b), 1);
 
 const INVENTORY = path.join(FOOTAGE_DIR, "inventory.json");
 const SHEETS = path.join(FOOTAGE_DIR, "sheets");
@@ -41,13 +49,13 @@ if (!fs.existsSync(FOOTAGE_DIR)) {
 
 const previous = fs.existsSync(INVENTORY) ? readJson(INVENTORY) : {};
 const inventory = {};
-const files = walk(FOOTAGE_DIR).sort();
+const files = walk(only ? path.join(FOOTAGE_DIR, only) : FOOTAGE_DIR).sort();
 console.log(`${files.length} source file(s)`);
 
 await pool(files, 2, async (file) => {
   const rel = path.relative(FOOTAGE_DIR, file);
   const stat = fs.statSync(file);
-  const stamp = `${stat.size}:${Math.round(stat.mtimeMs)}:${every}:${withScenes}`;
+  const stamp = `${stat.size}:${Math.round(stat.mtimeMs)}:${every}:${withScenes}:${tile}:${thumb}`;
   if (previous[rel]?.stamp === stamp) {
     inventory[rel] = previous[rel];
     return;
@@ -61,7 +69,7 @@ await pool(files, 2, async (file) => {
 
   // 6x6 thumbnails per sheet, each stamped with its source time.
   const label = fs.existsSync(FONT)
-    ? `,drawtext=fontfile=${FONT}:text='%{pts\\:hms}':x=6:y=6:fontsize=20:` +
+    ? `,drawtext=fontfile=${FONT}:text='%{pts\\:hms}':x=6:y=6:fontsize=${thumb.startsWith("320") ? 20 : 15}:` +
       `fontcolor=white:box=1:boxcolor=black@0.6`
     : "";
   await exec(
@@ -75,7 +83,7 @@ await pool(files, 2, async (file) => {
       file,
       "-an",
       "-vf",
-      `fps=1/${every},scale=320:180:force_original_aspect_ratio=decrease,pad=320:180:-1:-1${label},tile=6x6`,
+      `fps=1/${every},scale=${thumb}:force_original_aspect_ratio=increase,crop=${thumb}${label},tile=${tile}`,
       "-fps_mode",
       "vfr",
       "-q:v",
@@ -113,7 +121,7 @@ await pool(files, 2, async (file) => {
     stamp,
     ...info,
     sheets: path.relative(FOOTAGE_DIR, sheetDir),
-    sheetSpanSeconds: every * 36,
+    sheetSpanSeconds: every * perSheet,
     cuts,
   };
   console.log(
@@ -122,5 +130,10 @@ await pool(files, 2, async (file) => {
   );
 });
 
-writeJson(INVENTORY, Object.fromEntries(Object.entries(inventory).sort()));
+writeJson(
+  INVENTORY,
+  Object.fromEntries(
+    Object.entries({ ...(only ? previous : {}), ...inventory }).sort(),
+  ),
+);
 console.log(`Wrote ${path.relative(process.cwd(), INVENTORY)}`);

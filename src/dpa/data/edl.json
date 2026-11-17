@@ -14,9 +14,9 @@
       "topic": "Cold open: an abandoned ship in mid-ocean, footsteps in the corridor, someone approaching",
       "narration": "אתם נמצאים על ספינה נטושה, באמצע האוקיינוס. אתם שומעים צעדים במסדרון. מישהו מתקרב אליכם.",
       "need": "The derelict ship at sea, then a dark rusted corridor from a character's point of view; flashlight beam, slow advance. Fades up from black on the first word",
+      "transition": "fade",
       "source": null,
-      "in": null,
-      "transition": "fade"
+      "in": null
     },
     {
       "id": "cold-open-002",
@@ -27,9 +27,9 @@
       "topic": "You turn and see a friend you watched die ten minutes ago",
       "narration": "אתם מסתובבים ורואים את אחד החברים שלכם. רק שיש בעיה אחת קטנה. אתם ראיתם אותו מת לפני עשר דקות.",
       "need": "A character turns; a familiar figure steps out of the dark at the end of the corridor. No face that gives away who survives",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "cold-open-003",
@@ -40,9 +40,9 @@
       "topic": "Run, fight, or trust your eyes",
       "narration": "עכשיו אתם צריכים לקבל החלטה. לברוח, להילחם, או לסמוך על מה שהעיניים שלכם רואות.",
       "need": "Close-up of a frightened character with a weapon half-raised, hesitating. Cinematic angle with no choice prompt on screen",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "cold-open-004",
@@ -53,9 +53,9 @@
       "topic": "Three seconds to decide. Good luck",
       "narration": "אה, ויש לכם בערך שלוש שניות להחליט. בהצלחה עם זה.",
       "need": "Tight close-up on the eyes, figure closing in; cut away before the outcome",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "intro-001",
@@ -66,9 +66,9 @@
       "topic": "This is the experience The Dark Pictures Anthology sets out to create",
       "narration": "זאת בדיוק החוויה שסדרת משחקי האימה The Dark Pictures Anthology מנסה ליצור.",
       "need": "Strong atmospheric establishing image, a ship or shoreline at night. No logo or title card",
+      "transition": "fade",
       "source": null,
-      "in": null,
-      "transition": "fade"
+      "in": null
     },
     {
       "id": "intro-002",
@@ -79,9 +79,9 @@
       "topic": "No protected hero, no promise the good win, no promise you will understand",
       "narration": "סדרה שבה אין גיבור ראשי שמוגן מפני המוות, אין הבטחה שהטובים ינצחו, ואפילו אין הבטחה שתבינו מה לעזאזל קורה סביבכם,",
       "need": "Three reaction close-ups from three different games: Fliss (MOM), Andrew (LH), Rachel (HOA)",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "intro-003",
@@ -92,9 +92,9 @@
       "topic": "Any character can die; the sensible choice may be the fatal one",
       "narration": "כי במשחקים האלה כל דמות יכולה למות. ולפעמים, ההחלטה שנראית הכי הגיונית בעולם היא בדיוק זאת שתהרוג אותה.",
       "need": "A character commits to an action in a tense scene; cut on the moment it goes wrong, without showing a named death",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "intro-004",
@@ -105,9 +105,9 @@
       "topic": "What makes the series interesting is the stories it tells",
       "narration": "אבל הסיבה שהסדרה הזאת מעניינת כל כך היא לא רק הבחירות, אלא הסיפורים שהיא מספרת.",
       "need": "Slow atmospheric bridge: open sea at dusk or drifting fog",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "intro-005",
@@ -118,9 +118,9 @@
       "topic": "A ghost ship hiding a military experiment",
       "narration": "ספינת רפאים שמסתירה ניסוי צבאי,",
       "need": "Exterior of the Ourang Medan at night in heavy sea",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "intro-006",
@@ -131,9 +131,9 @@
       "topic": "An abandoned town where the past will not stay buried",
       "narration": "עיירה נטושה שבה העבר מסרב להישאר קבור,",
       "need": "Fog-bound main street of Little Hope, empty",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "intro-007",
@@ -144,9 +144,9 @@
       "topic": "An ancient temple beneath Iraq",
       "narration": "מקדש עתיק מתחת לאדמת עיראק שמסתיר משהו שאפילו ההיסטוריה לא הצליחה להסביר,",
       "need": "Wide of the buried Akkadian temple interior, torch or flare light. No creature in frame",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "intro-008",
@@ -157,9 +157,9 @@
       "topic": "A hotel built to kill its guests",
       "narration": "ומלון שנבנה במטרה אחת, להרוג את האורחים שלו.",
       "need": "Exterior of the island hotel under an overcast sky",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "intro-009",
@@ -170,9 +170,9 @@
       "topic": "Four different stories, four ways to frighten us",
       "narration": "ארבעה סיפורים שונים לחלוטין, ארבע דרכים שונות לגרום לנו לפחד,",
       "need": "Four quick shots, one per game in release order, about a second each",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "intro-010",
@@ -183,48 +183,198 @@
       "topic": "One mysterious man present whenever someone dies",
       "narration": "ואיש מסתורי אחד שנמצא שם בכל פעם שמישהו מת.",
       "need": "The Curator from behind or in silhouette among the shelves. Face withheld until he is named",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "origins-001",
       "start": 78.4667,
+      "end": 80.8333,
+      "chapter": "origins",
+      "game": "Until Dawn",
+      "topic": "2015 and Until Dawn, a horror game that plays like a film",
+      "narration": "אבל לפני שנכיר אותו, אנחנו צריכים לחזור לשנת 2015. בשנה הזאת, יצא משחק בשם Until Dawn, משחק אימה שהרגיש כמו סרט שבו אתם מחליטים מה יקרה.",
+      "need": "Until Dawn: Blackwood lodge exterior in snow. Not on the supplied footage list; needs Until Dawn material or a decision to cover with library shots",
+      "transition": "dissolve",
+      "picture": "Until Dawn: aerial of the snowbound forest",
+      "source": "selects/ud_04_00012.mkv",
+      "in": 29.562,
+      "part": "ud_04",
+      "partIn": 38.62,
+      "crop": {
+        "zoom": 1.32,
+        "x": 0.5,
+        "y": 0
+      }
+    },
+    {
+      "id": "origins-001b",
+      "start": 80.8333,
+      "end": 83.1,
+      "chapter": "origins",
+      "game": "Until Dawn",
+      "topic": "2015 and Until Dawn, a horror game that plays like a film",
+      "narration": "אבל לפני שנכיר אותו, אנחנו צריכים לחזור לשנת 2015. בשנה הזאת, יצא משחק בשם Until Dawn, משחק אימה שהרגיש כמו סרט שבו אתם מחליטים מה יקרה.",
+      "need": "Until Dawn: Blackwood lodge exterior in snow. Not on the supplied footage list; needs Until Dawn material or a decision to cover with library shots",
+      "transition": "cut",
+      "picture": "Until Dawn: headlights on the mountain road",
+      "source": "selects/ud_04_00012.mkv",
+      "in": 33.112,
+      "part": "ud_04",
+      "partIn": 42.17,
+      "crop": {
+        "zoom": 1.32,
+        "x": 0.5,
+        "y": 0
+      }
+    },
+    {
+      "id": "origins-001c",
+      "start": 83.1,
+      "end": 86.2,
+      "chapter": "origins",
+      "game": "Until Dawn",
+      "topic": "2015 and Until Dawn, a horror game that plays like a film",
+      "narration": "אבל לפני שנכיר אותו, אנחנו צריכים לחזור לשנת 2015. בשנה הזאת, יצא משחק בשם Until Dawn, משחק אימה שהרגיש כמו סרט שבו אתם מחליטים מה יקרה.",
+      "need": "Until Dawn: Blackwood lodge exterior in snow. Not on the supplied footage list; needs Until Dawn material or a decision to cover with library shots",
+      "transition": "cut",
+      "picture": "Until Dawn: the cabin in the snow at night",
+      "source": "selects/ud_04_00359.mkv",
+      "in": 18.347,
+      "part": "ud_04",
+      "partIn": 375.75,
+      "crop": {
+        "zoom": 1.32,
+        "x": 0.5,
+        "y": 0
+      }
+    },
+    {
+      "id": "origins-001d",
+      "start": 86.2,
       "end": 89.2,
       "chapter": "origins",
       "game": "Until Dawn",
       "topic": "2015 and Until Dawn, a horror game that plays like a film",
       "narration": "אבל לפני שנכיר אותו, אנחנו צריכים לחזור לשנת 2015. בשנה הזאת, יצא משחק בשם Until Dawn, משחק אימה שהרגיש כמו סרט שבו אתם מחליטים מה יקרה.",
       "need": "Until Dawn: Blackwood lodge exterior in snow. Not on the supplied footage list; needs Until Dawn material or a decision to cover with library shots",
-      "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "transition": "cut",
+      "picture": "Until Dawn: approaching the cabin",
+      "source": "selects/ud_04_00359.mkv",
+      "in": 23.397,
+      "part": "ud_04",
+      "partIn": 380.8,
+      "crop": {
+        "zoom": 1.32,
+        "x": 0.5,
+        "y": 0
+      }
     },
     {
       "id": "origins-002",
       "start": 89.2,
+      "end": 92.6,
+      "chapter": "origins",
+      "game": "Until Dawn",
+      "topic": "Eight friends at a remote mountain lodge, and they are not alone",
+      "narration": "שמונה צעירים מגיעים לבקתה מבודדת בהרים, ומהר מאוד מגלים שהם לא לבד.",
+      "need": "Until Dawn: the group arriving, cable car and lodge interior",
+      "transition": "cut",
+      "picture": "Until Dawn: the cable car against the mountain",
+      "source": "selects/ud_04_00012.mkv",
+      "in": 54.195,
+      "part": "ud_04",
+      "partIn": 63.25,
+      "crop": {
+        "zoom": 1.32,
+        "x": 0.5,
+        "y": 0
+      }
+    },
+    {
+      "id": "origins-002b",
+      "start": 92.6,
       "end": 94.2333,
       "chapter": "origins",
       "game": "Until Dawn",
       "topic": "Eight friends at a remote mountain lodge, and they are not alone",
       "narration": "שמונה צעירים מגיעים לבקתה מבודדת בהרים, ומהר מאוד מגלים שהם לא לבד.",
       "need": "Until Dawn: the group arriving, cable car and lodge interior",
-      "source": null,
-      "in": null,
-      "transition": "cut"
+      "transition": "cut",
+      "picture": "Until Dawn: the friends together in the snow",
+      "source": "selects/ud_04_00012.mkv",
+      "in": 9.078,
+      "part": "ud_04",
+      "partIn": 18.13,
+      "crop": {
+        "zoom": 1.32,
+        "x": 0.5,
+        "y": 0
+      }
     },
     {
       "id": "origins-003",
       "start": 94.2333,
+      "end": 96.2,
+      "chapter": "origins",
+      "game": "Until Dawn",
+      "topic": "Interactive horror in which the player's choices change the story",
+      "narration": "המשחק הפך את הרעיון של סרט אימה אינטראקטיבי לחוויה שבה הבחירות של השחקן באמת מסוגלות לשנות את הסיפור.",
+      "need": "Until Dawn: a character at a tense moment, cinematic angle without interface",
+      "transition": "cut",
+      "picture": "Until Dawn: Sam, close",
+      "source": "selects/ud_04_00012.mkv",
+      "in": 44.412,
+      "part": "ud_04",
+      "partIn": 53.47,
+      "crop": {
+        "zoom": 1.32,
+        "x": 0.5,
+        "y": 0
+      }
+    },
+    {
+      "id": "origins-003b",
+      "start": 96.2,
+      "end": 99.3,
+      "chapter": "origins",
+      "game": "Until Dawn",
+      "topic": "Interactive horror in which the player's choices change the story",
+      "narration": "המשחק הפך את הרעיון של סרט אימה אינטראקטיבי לחוויה שבה הבחירות של השחקן באמת מסוגלות לשנות את הסיפור.",
+      "need": "Until Dawn: a character at a tense moment, cinematic angle without interface",
+      "transition": "cut",
+      "picture": "Until Dawn: Mike by the window, uneasy",
+      "source": "selects/ud_04_00359.mkv",
+      "in": 8.597,
+      "part": "ud_04",
+      "partIn": 366,
+      "crop": {
+        "zoom": 1.32,
+        "x": 0.5,
+        "y": 0
+      }
+    },
+    {
+      "id": "origins-003c",
+      "start": 99.3,
       "end": 101.6333,
       "chapter": "origins",
       "game": "Until Dawn",
       "topic": "Interactive horror in which the player's choices change the story",
       "narration": "המשחק הפך את הרעיון של סרט אימה אינטראקטיבי לחוויה שבה הבחירות של השחקן באמת מסוגלות לשנות את הסיפור.",
       "need": "Until Dawn: a character at a tense moment, cinematic angle without interface",
-      "source": null,
-      "in": null,
-      "transition": "cut"
+      "transition": "cut",
+      "picture": "Until Dawn: Jessica, close",
+      "source": "selects/ud_04_00450.mkv",
+      "in": 9.24,
+      "part": "ud_04",
+      "partIn": 456.73,
+      "crop": {
+        "zoom": 1.32,
+        "x": 0.5,
+        "y": 0
+      }
     },
     {
       "id": "origins-004",
@@ -235,9 +385,9 @@
       "topic": "Supermassive Games sees the potential and tries something other than a sequel",
       "narration": "המפתחת, Supermassive Games, הבינה שיש כאן פוטנציאל, אבל במקום ליצור רק המשך ישיר, היא החליטה לנסות משהו אחר.",
       "need": "The library shelves, slow move along rows of books. The Curator not yet in frame",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "origins-005",
@@ -248,9 +398,9 @@
       "topic": "Each game a standalone horror film: new cast, new setting, new kind of horror",
       "narration": "מה אם כל משחק יהיה סרט אימה עצמאי, עם דמויות חדשות, סביבה חדשה, ואפילו סוג אחר של אימה?",
       "need": "Four group shots: the divers on the boat (MOM), the bus passengers (LH), the marines (HOA), the film crew (DIM)",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "origins-006",
@@ -261,9 +411,9 @@
       "topic": "The anthology is born: 2019, then a game a year for four years",
       "narration": "ככה נולדה The Dark Pictures Anthology. המשחק הראשון יצא בשנת 2019, ובמשך ארבע שנים יצא משחק חדש בכל שנה.",
       "need": "Opening establishing shot of each game in release order",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "origins-007",
@@ -274,9 +424,9 @@
       "topic": "One thing connects them all: The Curator",
       "narration": "אבל היה דבר אחד שחיבר בין כולם, The Curator.",
       "need": "First clear look at The Curator, turning to the viewer",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-intro-001",
@@ -287,9 +437,9 @@
       "topic": "A man in a suit welcomes us to a vast library",
       "narration": "אדם לבוש בחליפה שמקבל את פנינו בספרייה עצומה.",
       "need": "Wide of the repository with The Curator greeting the viewer",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-intro-002",
@@ -300,9 +450,9 @@
       "topic": "Countless books, each the story of people in the wrong place at the wrong time",
       "narration": "סביבו נמצאים אין-ספור ספרים, וכל ספר מכיל סיפור. סיפור על אנשים שהגיעו למקום הלא-נכון בזמן הלא-נכון.",
       "need": "Shelves, spines, a book being opened on the desk",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-intro-003",
@@ -313,9 +463,9 @@
       "topic": "Polite, sometimes a hint, sometimes a joke, and he seems to know who will die",
       "narration": "הוא מדבר אלינו בנימוס, לפעמים מציע רמז, לפעמים מתבדח על ההחלטות שלנו, ולפעמים נראה שהוא יודע בדיוק מי עומד למות.",
       "need": "Medium and close shots of him speaking; a knowing half-smile",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-intro-004",
@@ -326,9 +476,9 @@
       "topic": "He cannot simply intervene. There are rules",
       "narration": "אבל הוא לא יכול פשוט להתערב, יש חוקים, ואנחנו לא ממש יודעים מי קבע אותם.",
       "need": "He stops himself mid-gesture, looks away, returns to writing",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-intro-005",
@@ -339,9 +489,9 @@
       "topic": "He knows too much, and death interests him personally",
       "narration": "הוא לא בדיוק מספר סיפורים רגיל, הוא יודע יותר מדי, מופיע במקומות שבהם הוא לא אמור להיות, ונראה שהמוות עצמו מעניין אותו באופן אישי.",
       "need": "Close on his eyes and hands; candlelight. Hold the in-game cameos for the later chapter",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-intro-006",
@@ -352,9 +502,9 @@
       "topic": "Who is he? First we open the first book",
       "narration": "אז מי הוא באמת? את השאלה הזאת נשאיר לרגע בצד, כי כדי להבין את העולם שלו צריך קודם לפתוח את הספר הראשון,",
       "need": "He lifts a volume from the shelf and opens it",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-intro-007",
@@ -365,9 +515,9 @@
       "topic": "A ship lost at sea with everyone aboard dead. At least, that is how it begins",
       "narration": "ספינה שנעלמה בלב האוקיינוס, וכל מי שהיה עליה מת. לפחות ככה הסיפור מתחיל.",
       "need": "Storm at sea, the freighter's silhouette emerging through rain",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "man-of-medan-001",
@@ -378,9 +528,9 @@
       "topic": "1947: a distress call from a ship named Ourang Medan",
       "narration": "בשנת 1947, לפי אגדה ימית מפורסמת, התקבלה קריאת מצוקה מספינה בשם אורנג מדן.",
       "need": "1947 prologue: the freighter being loaded in harbour, then under way at night",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "man-of-medan-002",
@@ -391,9 +541,9 @@
       "topic": "The message: crew dead, captain dead, then the signal is lost",
       "narration": "ההודעה הייתה מוזרה במיוחד. אנשי הצוות מתים, הקפטן מת, וכנראה שגם כל השאר. ואז, אחרי כמה מילים אחרונות, הקשר נותק.",
       "need": "Prologue: radio room, crewmen collapsing, corridor lights failing",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-003",
@@ -404,9 +554,9 @@
       "topic": "The rescue party finds bodies everywhere, faces frozen in terror",
       "narration": "כשצוות חילוץ הגיע לספינה, הוא גילה מחזה מזעזע. גופות היו פזורות בכל מקום, ולפי הגרסאות המפורסמות של הסיפור, על פניהן של חלק מהגופות הייתה הבעת אימה.",
       "need": "Prologue aftermath: dead crew at their stations, close on a terrified face",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-004",
@@ -417,9 +567,9 @@
       "topic": "No sign of a struggle; soon after, the ship burns and explodes",
       "narration": "אבל לא נמצאו סימנים ברורים למאבק. זמן קצר לאחר מכן, הספינה עלתה באש והתפוצצה.",
       "need": "Storm and lightning over the ship. The game shows no explosion, so stay on storm and fire-lit shots",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-005",
@@ -430,9 +580,9 @@
       "topic": "Nobody has ever proved the ship existed, yet the legend endured",
       "narration": "יש רק בעיה אחת עם הסיפור הזה. אף אחד לא הצליח להוכיח שהספינה באמת הייתה קיימת. אין תיעוד ימי אמין שמאשר את האירוע כפי שהוא מסופר. ובכל זאת, האגדה המשיכה להסתובב במשך עשרות שנים.",
       "need": "Present day: the derelict hull adrift in fog, slow and wide",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "man-of-medan-006",
@@ -443,9 +593,9 @@
       "topic": "The starting point of the first game, Man of Medan",
       "narration": "וזאת בדיוק נקודת המוצא של המשחק הראשון בסדרה, Man of Medan.",
       "need": "Present-day opening: the Duke of Milan dive boat on bright open sea",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-007",
@@ -456,9 +606,9 @@
       "topic": "A group of friends on a diving holiday",
       "narration": "הסיפור מתחיל עם חבורה של צעירים שיוצאים לחופשת צלילה.",
       "need": "The five together on deck",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-008",
@@ -469,9 +619,9 @@
       "topic": "Alex and his brother Brad",
       "narration": "אלכס, אחיו בראד,",
       "need": "Close-ups: Alex, then Brad",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-009",
@@ -482,9 +632,9 @@
       "topic": "Julia, her brother Conrad, and Fliss, the boat's captain",
       "narration": "בת הזוג שלו ג'וליה, אחיה קונרד ופליס, הקפטנית של הסירה.",
       "need": "Close-ups: Julia, Conrad, Fliss at the helm",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-010",
@@ -495,9 +645,9 @@
       "topic": "The plan: dive a Second World War plane wreck",
       "narration": "התוכנית פשוטה, לצלול אל שרידים של מטוס ממלחמת העולם השנייה, ליהנות מהים ואולי לחזור הביתה עם כמה תמונות.",
       "need": "Underwater: the divers descending to the aircraft wreck",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-011",
@@ -508,9 +658,9 @@
       "topic": "In horror films a remote holiday always works out fine",
       "narration": "כי כידוע, בסרטי אימה, כשחבורה של צעירים יוצאת לחופשה במקום מבודד, הכל בדרך כלל מסתדר מצוין.",
       "need": "Evening on deck, drinks, laughter; a boat watching from a distance",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-012",
@@ -521,9 +671,9 @@
       "topic": "Pirates seize the boat, find clues to an old hoard and take the group with them",
       "narration": "אלא שבמהלך המסע הם נתקלים בקבוצה של פיראטים. הפיראטים משתלטים על הסירה, וכשהם מגלים רמזים למטמון ישן, הם מחליטים לקחת את החבורה איתם.",
       "need": "Night boarding: Olson, Junior and Danny, hostages tied up below deck",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-013",
@@ -534,9 +684,9 @@
       "topic": "The destination: a huge abandoned military ship",
       "narration": "היעד? ספינה צבאית ענקית ונטושה שצפה בלב האוקיינוס. כבר מהרגע הראשון ברור שמשהו לא בסדר.",
       "need": "Arrival at the Ourang Medan in the storm, the hull towering over the boat",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-014",
@@ -547,9 +697,9 @@
       "topic": "Rusted rooms, old corpses everywhere",
       "narration": "החדרים חלודים, יש גופות ישנות בכל מקום.",
       "need": "Interior: corroded corridors, mummified bodies",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-015",
@@ -560,9 +710,9 @@
       "topic": "Figures that are not there, voices, corpses that rise, friends as monsters",
       "narration": "ואז מתחילים הדברים המוזרים באמת. אנשים רואים דמויות שאינן קיימות, שומעים קולות, נתקלים בגופות שקמות לתחייה, ולפעמים רואים את החברים שלהם בתור מפלצות.",
       "need": "Short hallucination beats: the girl in the corridor, a body sitting up, a distorted figure",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-016",
@@ -573,9 +723,9 @@
       "topic": "The pirates lose their grip: one is chased by figures, another is sure the ship wants him dead",
       "narration": "הפיראטים, שבתחילת הסיפור נראו כמו הסכנה המרכזית, מתחילים לאבד שליטה. אחד מהם רואה דמויות מפחידות שרודפות אחריו. אחר משתכנע שיש משהו על הספינה שרוצה להרוג אותו,",
       "need": "Junior and Danny panicking in the dark; Olson losing control",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-017",
@@ -586,9 +736,9 @@
       "topic": "As players we do not know whom to believe",
       "narration": "ואנחנו, בתור שחקנים, לא יודעים למי להאמין.",
       "need": "A character turning in the dark, flashlight sweeping an empty room",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-018",
@@ -599,9 +749,9 @@
       "topic": "Every character sees something different: a monster to one, an ordinary person to another",
       "narration": "ואז מגיע אחד הרעיונות המעניינים ביותר במשחק. כי כל דמות רואה משהו אחר. אדם אחד יכול לראות מולו מפלצת, בזמן שאדם אחר רואה בדיוק באותו מקום בן אדם רגיל. וזה הופך כל מפגש למסוכן.",
       "need": "The matched scene shown from both sides, monster first, then the same framing with a person",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-019",
@@ -612,9 +762,9 @@
       "topic": "Armed, charged by a creature, instinct says attack. What if it is your friend?",
       "narration": "כי כשאתם מחזיקים נשק ורואים מולכם יצור מפחיד שרץ לעבריכם, האינסטינקט שלכם הוא לתקוף. אבל מה אם המפלצת הזאת היא בעצם החבר שלכם?",
       "need": "Character with a weapon facing a charging figure; hold on the moment before the blow",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-020",
@@ -625,9 +775,9 @@
       "topic": "Military documents, a secret cargo, and something called Manchurian Gold",
       "narration": "ככל שמתקדמים בסיפור, מתחילים למצוא מסמכים צבאיים, רישומים על מטען סודי ומידע על חומר שנקרא Manchurian gold.",
       "need": "Hands on manifests and crates in the hold. Use the in-world props, not the collectible reading screen",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-021",
@@ -638,9 +788,9 @@
       "topic": "Not gold: a military chemical agent that causes severe hallucinations, leaking from its containers",
       "narration": "למרות השם, לא מדובר בזהב, אלא בחומר כימי צבאי שגורם להזיות קשות. החומר הובל על הספינה ובמהלך המסע השתחרר ממקלעי האחסון שלו.",
       "need": "Cargo hold: ruptured canisters, mist spreading along the deck",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-022",
@@ -651,9 +801,9 @@
       "topic": "The crew saw things, turned on each other, and the ship became a floating graveyard",
       "narration": "אנשי הצוות החלו לראות דברים שלא היו שם. הם נבהלו, תקפו זה את זה, ובסופו של דבר הספינה הפכה לבית קברות צף.",
       "need": "1947 prologue: soldiers hallucinating and firing; bodies in the corridors",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "man-of-medan-023",
@@ -664,9 +814,9 @@
       "topic": "The ghosts and monsters were never there, at least not as the characters saw them",
       "narration": "כל הרוחות, כל המפלצות, כל הדברים האל-טבעיים שראינו, הם לא באמת היו שם, או לפחות לא בצורה שבה הדמויות ראו אותם.",
       "need": "A hallucination resolving into what was really in the room",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-024",
@@ -677,9 +827,9 @@
       "topic": "The real danger: frightened people who cannot tell reality from what their mind produces",
       "narration": "והמשמעות של זה מפחידה הרבה יותר. כי הסכנה האמיתית לא הייתה מפלצת שמסתתרת על הספינה, אלא אנשים מבוהלים שלא מסוגלים להבחין בין המציאות לבין מה שהמוח שלהם מייצר.",
       "need": "Two characters aiming at each other, both terrified",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-025",
@@ -690,9 +840,9 @@
       "topic": "The game teaches us to fear, then punishes us for obeying it",
       "narration": "זה גם מה שהופך את הבחירות במשחק למעניינות. המשחק מלמד אותנו לפחד, ואז מעניש אותנו אם אנחנו נותנים לפחד לנהל אותנו.",
       "need": "Close on a hesitating face; a weapon lowered",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-026",
@@ -703,9 +853,9 @@
       "topic": "Attack everything and you kill your friends; run blindly and you hit a trap",
       "narration": "אם נתקוף כל דבר שנראה מאיים, אנחנו עלולים להרוג את החברים שלנו. אם נברח בלי לחשוב, אנחנו עלולים להיכנס למלכודת.",
       "need": "A character sprinting through corridors, a door slamming shut",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-027",
@@ -716,9 +866,9 @@
       "topic": "Ignore the clues and you miss the only way off the ship",
       "narration": "ואם נתעלם מרמזים חשובים, אנחנו עלולים להחמיץ את הדרך היחידה לצאת מהספינה.",
       "need": "Finding the part needed to restart the boat; the escape route",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-028",
@@ -729,9 +879,9 @@
       "topic": "Calling for help is no guarantee: the military has secrets it wants buried",
       "narration": "אפילו האפשרות להזעיק עזרה אינה בהכרח פתרון בטוח. כי אם נחשוף בפני הצבא מידע מסוים על מיקום הספינה, אנחנו עלולים לגלות שיש סודות שהצבא מעדיף להשאיר קבורים.",
       "need": "Radio room call; military helicopters arriving over the ship",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-029",
@@ -742,9 +892,9 @@
       "topic": "Not a perfect game: thin characters, strings of jump scares",
       "narration": "Man of Medan הוא לא משחק מושלם. חלק מהדמויות שלו לא מפותחות מספיק, ויש בו רגעים שמרגישים כמו אוסף של הפחדות פתאומיות.",
       "need": "Neutral group scene on the ship; one sudden scare",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "man-of-medan-030",
@@ -755,9 +905,9 @@
       "topic": "Its central idea is brilliant: our own senses become the enemy",
       "narration": "אבל הרעיון המרכזי שלו מבריק. הוא לוקח את אחד הדברים שאנחנו סומכים עליהם יותר מכל, החושים שלנו, והופך אותם לאויב.",
       "need": "Close on an eye or a face staring at something unseen; the ship receding in fog",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-001",
@@ -768,9 +918,9 @@
       "topic": "The next game goes further: not only what we see, but what we remember",
       "narration": "אבל במשחק הבא, סופר-מאסיב גיימס החליטה ללכת רחוק יותר. כי הפעם, לא רק מה שאנחנו רואים עומד בספק, אלא גם מה שאנחנו זוכרים.",
       "need": "Night road in fog, headlights; slow",
+      "transition": "fade",
       "source": null,
-      "in": null,
-      "transition": "fade"
+      "in": null
     },
     {
       "id": "little-hope-002",
@@ -781,9 +931,9 @@
       "topic": "The 1970s, a small American town, a family about to lose everything",
       "narration": "בשנות ה-70, בעיירה אמריקאית קטנה, משפחה אחת עומדת לאבד הכול.",
       "need": "1972 prologue: the Clarke house at night, the family indoors",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "little-hope-003",
@@ -794,9 +944,9 @@
       "topic": "The house catches fire, the flames spread, the children run, the parents are trapped",
       "narration": "הבית שלהם עולה באש. הלהבות מתפשטות במהירות. הילדים מנסים לברוח. ההורים לכודים.",
       "need": "The fire sequence, cut fast",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-004",
@@ -807,9 +957,9 @@
       "topic": "Anthony has to watch from outside as the people closest to him die",
       "narration": "ואנתוני, אחד מבני המשפחה, נאלץ לצפות מבחוץ בזמן שהאנשים הקרובים אליו ביותר מתים בזה אחר זה.",
       "need": "Young Anthony on the lawn, the house burning behind him",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-005",
@@ -820,9 +970,9 @@
       "topic": "For Anthony it never ends, not that night and not decades later",
       "narration": "זה אירוע שאמור להסתיים תוך כמה דקות, אבל עבור אנתוני הוא לא באמת מסתיים. לא באותו לילה, ולא עשרות שנים אחר כך.",
       "need": "Slow push on Anthony's face lit by the fire; embers",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-006",
@@ -833,9 +983,9 @@
       "topic": "The second game, Little Hope: an optimistic name for a place where everything wants you dead",
       "narration": "המשחק השני בסדרה נקרא Little Hope, תקווה קטנה. שם די אופטימי למקום שבו כמעט כל דבר שמופיע על המסך רוצה להרוג אתכם.",
       "need": "The empty town in fog. Avoid the town sign if a clean alternative exists",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-007",
@@ -846,9 +996,9 @@
       "topic": "Years later a bus carrying four students and their professor passes the abandoned town",
       "narration": "הסיפור המרכזי מתרחש שנים אחרי השרפה. אוטובוס שמסיע לכאורה ארבעה סטודנטים ואת המרצה שלהם עובר ליד העיירה הנטושה Little Hope.",
       "need": "The bus on the night road; passengers inside",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-008",
@@ -859,9 +1009,9 @@
       "topic": "The driver swerves to avoid a figure on the road and the bus overturns",
       "narration": "הנהג מבחין בדמות על הכביש, מנסה להתחמק ממנה, והאוטובוס מתהפך.",
       "need": "The girl in the road, the crash. Cut fast",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-009",
@@ -872,9 +1022,9 @@
       "topic": "Trapped in thick fog; every way out leads back to the same place",
       "narration": "כשהנוסעים מתעוררים, הם מגלים שהם לכודים באזור שמוקף בערפל סמיך. כל ניסיון לצאת מהעיירה מוביל אותם בחזרה לאותו מקום, כאילו משהו מסרב לתת להם לעזוב.",
       "need": "Crash site, the fog wall, walking in and emerging where they started",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-010",
@@ -885,9 +1035,9 @@
       "topic": "They begin to see people from the past",
       "narration": "ואז הם מתחילים לראות אנשים מהעבר.",
       "need": "The first pull into a 1692 vision",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-011",
@@ -898,9 +1048,9 @@
       "topic": "1692: fear of witches, trials in the town",
       "narration": "המשחק מחזיר אותנו שוב ושוב לשנת 1692, תקופה שבה פחד ממכשפות היה מסוגל להפוך חשד קטן לגזר דין מוות. בעיירה מתנהלים משפטים נגד אנשים שמואשמים בחישוף,",
       "need": "Colonial Little Hope, the meeting house, a trial in session",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "little-hope-012",
@@ -911,9 +1061,9 @@
       "topic": "The people of the past look exactly like them",
       "narration": "והדמויות שלנו מגלות דבר מטריד במיוחד. האנשים מהעבר נראים בדיוק כמוהם. אותם פנים, אותן מערכות יחסים ואותם מתחים.",
       "need": "A present-day character face to face with a 1692 double",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-013",
@@ -924,9 +1074,9 @@
       "topic": "Angela's double is accused; John's is involved; others resemble Taylor and Daniel",
       "narration": "אישה שנראית כמו אנג'לה מואשמת בחישוף. אדם שנראה כמו ג'ון מעורב באירועים. ודמויות נוספות מהעבר נראות כמו טיילור ודניאל.",
       "need": "Amy accused, Joseph in the dock, Tabitha and Dennis",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-014",
@@ -937,9 +1087,9 @@
       "topic": "Monstrous creatures, and not random ones",
       "narration": "ככל שהחבורה מתקדמת בעיירה, הם נתקלים ביצורים מפלצתיים. אבל אלה לא מפלצות אקראיות.",
       "need": "A demon emerging from the fog",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-015",
@@ -950,9 +1100,9 @@
       "topic": "Each creature mirrors a death from the trials: the hanged",
       "narration": "כל יצור משקף צורת מוות מסוימת ממשפטי המכשפות. מי שהוצא להורג בתלייה חוזר בדמות יצור מעוות שנושא את סימני החבל.",
       "need": "The 1692 hanging, then the demon that carries its marks",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-016",
@@ -963,9 +1113,9 @@
       "topic": "The burned",
       "narration": "מי שנשרף מופיע כיצור מפויח,",
       "need": "The charred demon",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-017",
@@ -976,9 +1126,9 @@
       "topic": "The drowned, dragging others to the water, as if the town punishes them again and again",
       "narration": "ומי שהוטבע חוזר בתור גופה רקובה שמנסה לגרור אחרים אל המים, כאילו העיירה מענישה שוב ושוב את אותם אנשים מאות שנים אחרי מותם.",
       "need": "The drowned demon at the water's edge",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-018",
@@ -989,9 +1139,9 @@
       "topic": "A supernatural explanation: reincarnation, a curse, a wrong to be righted",
       "narration": "המשחק מתחיל להציע הסבר על-טבעי. אולי מדובר בגלגול נשמות, אולי קללה עתיקה, ואולי הדמויות נאלצות לתקן עוול שהתרחש לפני מאות שנים.",
       "need": "The group talking it through; church and graveyard atmosphere",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-019",
@@ -1002,9 +1152,9 @@
       "topic": "But why does everyone resemble the family from the fire, where is the driver, why the hints about one troubled man",
       "narration": "אבל ככל שאנחנו מתקדמים, משהו לא מסתדר. למה כל הדמויות נראות כמו אנשים מהמשפחה שמתה בשריפה? למה הנהג של האוטובוס כמעט לא מופיע? ולמה אנחנו מקבלים שוב ושוב רמזים על אדם אחד שמתקשה להתמודד עם עברו?",
       "need": "Intercut the 1972 family with the present-day cast; the driver's empty seat. Do not show the reveal yet",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-020",
@@ -1015,9 +1165,9 @@
       "topic": "The twist: the group we followed was never there",
       "narration": "ואז מגיע הטוויסט. החבורה שאנחנו מלווים לאורך כל המשחק בכלל לא נמצאת שם.",
       "need": "Ending: Andrew alone on the road, the others gone. Slow",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-021",
@@ -1028,9 +1178,9 @@
       "topic": "John, Angela, Daniel and Taylor were never passengers; they exist in the driver's mind",
       "narration": "ג'ון, אנג'לה, דניאל וטיילר, אינם נוסעים אמיתיים באוטובוס. הם דמויות שנוצרו בתודעתו של הנהג,",
       "need": "The diner: the companions fading out one by one",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-022",
@@ -1041,9 +1191,9 @@
       "topic": "The driver is Anthony, sole survivor of the fire, living the story as Andrew",
       "narration": "והנהג הזה הוא אנת'ני, האדם היחיד ששרד את השרפה המשפחתית עשרות שנים קודם לכן. כיום הוא משתמש בשם אנדרו בתוך הסיפור שהוא חווה.",
       "need": "The older Anthony, the bus driver, revealed",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-023",
@@ -1054,9 +1204,9 @@
       "topic": "The companions mirror his dead family: father, mother, brother and sister",
       "narration": "הדמויות שמלוות אותו הן השתקפויות של בני משפחתו שמתו. המרצה ג'ון מזכיר את אביו, אנג'לה מזכירה את אמו, דניאל וטיילר מזכירים את אחיו ואחותו.",
       "need": "Matched pairs, present-day face then 1972 face: John and James, Angela and Anne, Daniel and Dennis, Taylor and Tanya",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-024",
@@ -1067,9 +1217,9 @@
       "topic": "Mary is tied to the memory of his little sister Megan",
       "narration": "והילדה המסתורית מהעבר, מרי, קשורה לזיכרון של אחותו הקטנה, מגן.",
       "need": "Mary in 1692, then Megan in 1972",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-025",
@@ -1080,9 +1230,9 @@
       "topic": "The whole journey is one man facing decades of guilt, fighting his memories",
       "narration": "במילים אחרות, כל המסע בעיירה הוא ניסיון של אדם אחד להתמודד עם אשמה שלא עזבה אותו במשך עשרות שנים. הוא לא באמת נלחם במפלצות עתיקות, הוא נלחם בזיכרונות שלו. הוא חוזר שוב ושוב לאירוע שהרס את חייו ומנסה למצוא הסבר.",
       "need": "Old Anthony at the burnt ruin of the house; the fire in flashback",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "little-hope-026",
@@ -1093,9 +1243,9 @@
       "topic": "Someone to blame, so that he can stop blaming himself",
       "narration": "מישהו שאפשר להאשים. מישהו שהיה יכול למנוע את האסון. ואולי, אם הוא ימצא את האדם הנכון להאשים, הוא סוף-סוף יוכל להפסיק להאשים את עצמו.",
       "need": "Megan by the stove with her doll; Anthony's face",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-027",
@@ -1106,9 +1256,9 @@
       "topic": "Mary appears responsible for accusations that kill innocent people",
       "narration": "וזה מה שהופך את דמותה של מרי לחשובה כל כך. במהלך משפטי המכשפות, היא נראית כאילו היא אחראית להאשמות שמובילות למותם של אנשים חפים מפשע.",
       "need": "Mary testifying at the trial",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-028",
@@ -1119,9 +1269,9 @@
       "topic": "She is under the influence of Reverend Carver, who exploits the town's fear",
       "narration": "אבל ככל שחוקרים את הסיפור, מתברר שהיא עצמה נתונה להשפעתו של הכומר קארוור, שמנצל את הפחדים של אנשי העיירה.",
       "need": "Reverend Carver with Mary, quietly directing her",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-029",
@@ -1132,9 +1282,9 @@
       "topic": "Blame the girl or name the man behind her: will Anthony go on blaming his sister",
       "narration": "הבחירה אם להאשים את הילדה או לזהות את האדם שמפעיל עליה לחץ, הופכת לסמל מרכזי בסיפור. האם אנתוני ימשיך לראות באחותו הקטנה את האחראית לאסון, או שיצליח לקבל תמונה מורכבת יותר של מה שקרה?",
       "need": "The final trial; Andrew speaking up; cut to Megan",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-030",
@@ -1145,9 +1295,9 @@
       "topic": "Several endings: a measure of peace, or still captive to guilt",
       "narration": "המשחק מציע כמה סיומים. בחלקם, אנתוני מצליח להגיע למידה מסוימת של השלמה. באחרים, הוא נותר שבוי באשמה, והסיפור יכול להסתיים באופן טראגי.",
       "need": "Good ending: Anthony at the diner, calm. For the bleak ending use the arrest, not the gun",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-031",
@@ -1158,9 +1308,9 @@
       "topic": "The monsters are only the form our fear chooses to take",
       "narration": "אבל לא משנה איזה סוף נקבל, הרעיון המרכזי נשאר זהה. לפעמים, המפלצות שאנחנו רואים הן לא הדבר שמפחיד אותנו באמת, הן רק הצורה שהפחד שלנו בוחר ללבוש.",
       "need": "A demon dissolving into fog; Anthony walking away",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-032",
@@ -1171,9 +1321,9 @@
       "topic": "A divisive twist: after hours of running, the monsters were not real",
       "narration": "עכשיו, אפשר בהחלט להתווכח על הטוויסט הזה. יש שחקנים שהרגישו שהוא הופך את כל ההרפתקה לחסרת משמעות. אחרי שעות של בריחה ממפלצות, המשחק בעצם אומר לנו שהן לא היו אמיתיות. וזאת כבר הפעם השנייה בסדרה שבה מתברר שהאימה האל-טבעית היא לא בדיוק מה שחשבנו.",
       "need": "Chase footage through the town, demons in pursuit",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-033",
@@ -1184,9 +1334,9 @@
       "topic": "Joke: before a third game I would ask for a blood test",
       "narration": "בשלב הזה, אם מישהו היה מציע לי להשתתף במשחק השלישי, הייתי מבקש קודם בדיקת דם. רק לוודא שלא שאפתי איזה חומר מוזר.",
       "need": "Callback pair using new footage: the mist in the hold (MOM), the fog (LH)",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "little-hope-034",
@@ -1197,9 +1347,9 @@
       "topic": "Supermassive changes course: this time the monsters are entirely real, and hungry",
       "narration": "אבל סופרמאסיב גיימס הבינה שהיא צריכה לשנות כיוון, ובמשחק הבא היא החליטה להפסיק לשחק עם השאלה אם המפלצות אמיתיות. כי הפעם המפלצות אמיתיות לחלוטין, והן רעבות.",
       "need": "Darkness, a shape moving, a screech. Glimpse only; cut to black on the last word",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-001",
@@ -1210,9 +1360,9 @@
       "topic": "Thousands of years ago in Mesopotamia: the Akkadian Empire",
       "narration": "לפני אלפי שנים, באזור מסופוטמיה, התקיימה האימפריה האכדית, אחת האימפריות הגדולות והמשפיעות בעולם העתיק.",
       "need": "2231 BC prologue: Akkad, the temple exterior, soldiers",
+      "transition": "fade",
       "source": null,
-      "in": null,
-      "transition": "fade"
+      "in": null
     },
     {
       "id": "house-of-ashes-002",
@@ -1223,9 +1373,9 @@
       "topic": "In the reign of Naram-Sin something terrible happens",
       "narration": "אבל לפי הסיפור שמציג המשחק, בתקופת המלך נארם סין, משהו נורא מתרחש.",
       "need": "Naram-Sin in the temple",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-003",
@@ -1236,9 +1386,9 @@
       "topic": "The temple becomes a place of death and the kingdom begins to fall",
       "narration": "מקדש עצום הופך למקום של מוות. אנשים נעלמים, יצורים מוזרים תוקפים את מי שנכנס אליו, והממלכה מתחילה להתפורר.",
       "need": "Prologue: the eclipse, soldiers dragged into the dark. Creatures in glimpses only",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-004",
@@ -1249,9 +1399,9 @@
       "topic": "2003: the invasion of Iraq, and soldiers about to learn the real danger",
       "narration": "אלפי שנים לאחר מכן, בשנת 2003, הצבא האמריקאי פולש לעיראק, ובאמצע המלחמה קבוצה קטנה של חיילים עומדת לגלות שהסכנה הגדולה ביותר באזור לא קשורה בכלל לסדאם חוסיין.",
       "need": "Helicopters over the desert; the forward base",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "house-of-ashes-005",
@@ -1262,9 +1412,9 @@
       "topic": "House of Ashes opens on a US operation hunting a chemical weapons site",
       "narration": "המשחק השלישי, House of Ashes, מתחיל במהלך מבצע צבאי אמריקאי. צוות של חיילים יוצא לחקור אתר שבו על פי מידע מודיעיני אמור להימצא מתקן נשק כימי.",
       "need": "Briefing room, then the helicopters setting down at the village",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-006",
@@ -1275,9 +1425,9 @@
       "topic": "Eric, the officer leading the mission",
       "narration": "בין אנשי הצוות נמצאים אריק, קצין שמוביל את המשימה,",
       "need": "Eric King, close",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-007",
@@ -1288,9 +1438,9 @@
       "topic": "Rachel, his wife, the marriage in crisis",
       "narration": "רייצ'ל, אשתו, שהיחסים ביניהם במשבר,",
       "need": "Rachel King; a look between her and Eric",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-008",
@@ -1301,9 +1451,9 @@
       "topic": "Nick, in a secret relationship with Rachel",
       "narration": "ניק, חייל שנמצא במערכת יחסים סודית עם רייצ'ל,",
       "need": "Nick Kay; Nick and Rachel together",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-009",
@@ -1314,9 +1464,9 @@
       "topic": "Jason, a hard soldier with fixed views of the enemy",
       "narration": "וג'ייסון, חייל קשוח עם דעות מאוד ברורות על האויב שמולו.",
       "need": "Jason Kolchek",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-010",
@@ -1327,9 +1477,9 @@
       "topic": "Salim, an Iraqi soldier who only wants to go home to his son",
       "narration": "במקביל, אנחנו מכירים גם את סלים, חייל עיראקי שבניגוד לאחרים לא ממש מעוניין להיות שם. הוא בעיקר רוצה לחזור הביתה לבן שלו.",
       "need": "Salim at home with Zain, then in uniform",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-011",
@@ -1340,9 +1490,9 @@
       "topic": "Firefight; the ground gives way; soldiers fall into caverns and ancient ruins",
       "narration": "במהלך עימות בין הכוחות האמריקאים לעיראקים, הקרקע קורסת. החיילים נופלים אל מערכת עצומה של מערות וחורבות עתיקות.",
       "need": "The village firefight and the collapse. Cut fast",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-012",
@@ -1353,9 +1503,9 @@
       "topic": "Underground, cut off, no clear way back",
       "narration": "הם מוצאים את עצמם מתחת לאדמה, מנותקים מהעולם, וללא דרך ברורה לחזור לפני השטח.",
       "need": "Waking in the dark cavern; flares",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-013",
@@ -1366,9 +1516,9 @@
       "topic": "They are not alone: something alive moves in the dark",
       "narration": "אבל הם לא לבד. משהו חי שם. משהו שנע בחושך.",
       "need": "Black tunnel, movement at the edge of the light",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-014",
@@ -1379,9 +1529,9 @@
       "topic": "It climbs walls, flies, and tears a man apart in seconds",
       "narration": "משהו שמסוגל לטפס על קירות, לעוף, ולקרוע בן אדם לגזרים בתוך שניות.",
       "need": "Creature attack in short glimpses. Cut fast",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-015",
@@ -1392,9 +1542,9 @@
       "topic": "Bodies, signs of struggle, the remains of an archaeological expedition",
       "narration": "בהתחלה, החיילים לא מבינים מה תוקף אותם. הם מוצאים גופות, סימנים למאבקים, ושרידים של משלחת ארכאולוגית שהגיעה למקום עשרות שנים קודם לכן.",
       "need": "The 1940s camp: tents, crates, equipment under dust",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-016",
@@ -1405,9 +1555,9 @@
       "topic": "Randolph Hodgson's expedition explored the temple in the 1940s and learned too late",
       "narration": "המשלחת הזאת, בראשות רנדולף הרג'סון, חקרה את המקדש בשנות ה-40, וגם היא גילתה מאוחר מדי מה מסתתר בתוכו.",
       "need": "Hodgson's journals and photographs as props in the scene",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-017",
@@ -1418,9 +1568,9 @@
       "topic": "The creatures are sensitive to light",
       "narration": "ככל שהמשחק מתקדם, אנחנו מגלים שהיצורים רגישים לאור. אור חזק מסוגל לפגוע בהם.",
       "need": "UV lamp or sunlight burning a creature",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-018",
@@ -1431,9 +1581,9 @@
       "topic": "They hunt by sense in the dark and infect humans with a parasite",
       "narration": "הם משתמשים בחושיהם כדי לאתר טרף בחושך, והם מסוגלים להדביק בני אדם בטפיל שמשנה את גופם. אדם שנדבק עלול להפוך בהדרגה ליצור מסוכן בעצמו.",
       "need": "A creature hunting by sound; an infected body changing",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-019",
@@ -1444,9 +1594,9 @@
       "topic": "A standard vampire tale, but under the Iraqi desert with rifles and flashlights",
       "narration": "עד כאן זה נשמע כמו סיפור ערפדים די סטנדרטי, רק שבמקום טירה ברומניה אנחנו נמצאים מתחת למדבר העיראקי, ובמקום צלב ושום יש לנו נשק אוטומטי ופנסים. מודרניזציה.",
       "need": "Marines firing with weapon lights in the temple halls",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-020",
@@ -1457,9 +1607,9 @@
       "topic": "The revelation: not demons, not vampires, but extraterrestrial",
       "narration": "אבל אז מגיע הגילוי שמשנה לחלוטין את הסיפור. היצורים האלה אינם שדים. הם אפילו לא ערפדים במובן המסורתי, הם יצורים ממקור חוצני.",
       "need": "Descent into the deeper, non-human structure; cocoons. Slow",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-021",
@@ -1470,9 +1620,9 @@
       "topic": "Millions of years ago a craft carrying bat-like beings crashed; the parasite turned them",
       "narration": "לפני מיליוני שנים, כלי טייס שהוביל יצורים דמויי הטלפים התרסק על כדור הארץ. היצורים נשאו טפיל שהפך אותם למפלצות שאנחנו פוגשים במשחק, והחללית שלהם נותרה קבורה עמוק מתחת לאדמה.",
       "need": "The vision sequence: the craft, the crash, the species",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "house-of-ashes-022",
@@ -1483,9 +1633,9 @@
       "topic": "For millennia people explained them with what they believed: demons, curses, the gods' anger",
       "narration": "במשך אלפי שנים, בני אדם שנתקלו ביצורים ניסו להסביר אותם באמצעות האמונות שהכירו. שדים, קללות, עונש מהאלים. אבל האמת הייתה מוזרה הרבה יותר.",
       "need": "Akkadian reliefs and demon statues in torchlight",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-023",
@@ -1496,9 +1646,9 @@
       "topic": "It starts as a war story, then introduces a threat that makes the conflict meaningless",
       "narration": "עופו, House of Ashes, עושה משהו מעניין. הוא מתחיל בתור סיפור מלחמה, אמריקאים נגד עיראקים, שני צדדים שמשוכנעים שהם יודעים בדיוק מי האויב שלהם. ואז הוא מכניס לתמונה איום שהופך את כל הסכסוך הזה לחסר משמעות.",
       "need": "Americans and Iraqis aiming at each other; a creature breaks it up",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-024",
@@ -1509,9 +1659,9 @@
       "topic": "The monsters do not care whose side you are on. Everyone is food",
       "narration": "כי למפלצות לא אכפת מאיזה צד אתם, הן לא יודעות מה זה אמריקאי או עיראקי. מבחינתן, כולם פשוט אוכל.",
       "need": "A creature taking soldiers from both sides",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-025",
@@ -1522,9 +1672,9 @@
       "topic": "Jason and Salim: at first Jason sees only the enemy",
       "narration": "והדבר הזה בולט במיוחד במערכת היחסים בין ג'ייסון לסלים. בתחילת המשחק, ג'ייסון רואה בחיילים העיראקים אויבים. הוא רגיל לחשוב על המלחמה במונחים של אנחנו והם.",
       "need": "Their first meeting at gunpoint",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-026",
@@ -1535,9 +1685,9 @@
       "topic": "Forced to cooperate, they learn to trust each other",
       "narration": "אבל כשהוא וסלים נאלצים לשתף פעולה כדי לשרוד, משהו משתנה. הם לומדים לסמוך זה על זה, מגלים שיש להם הרבה יותר במשותף ממה שחשבו, ומבינים שהאדם שעומד מולם הוא לא רק מדים ודגל.",
       "need": "Jason and Salim fighting side by side; one hauling the other up",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-027",
@@ -1548,9 +1698,9 @@
       "topic": "Salim the father, Jason looking for meaning: the strongest thread in the game",
       "narration": "סלים הוא אבא שרוצה לחזור לבן שלו, וג'ייסון הוא אדם שמנסה למצוא משמעות בתוך מלחמה שהוא כבר לא לגמרי מבין. הקשר ביניהם הופך לאחד החלקים החזקים ביותר במשחק.",
       "need": "A quiet exchange between the two",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-028",
@@ -1561,9 +1711,9 @@
       "topic": "The game asks whether we can change how we see other people",
       "narration": "וזה לא מקרי, כי בניגוד לשני המשחקים הקודמים, House of Ashes לא מסתפק בשאלה אם אנחנו יכולים לסמוך על החושים או על הזיכרונות שלנו. הוא שואל אם אנחנו מסוגלים לשנות את הדרך שבה אנחנו רואים אנשים אחרים.",
       "need": "The two walking on together through the ruins",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-029",
@@ -1574,9 +1724,9 @@
       "topic": "It is still a horror game",
       "narration": "אבל אל תטעו, זה עדיין משחק אימה. והוא בהחלט לא מתכוון לתת לנו לצאת משם בקלות.",
       "need": "A creature lunging from the dark",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-030",
@@ -1587,9 +1737,9 @@
       "topic": "Deeper in: ammunition running out, wounds mounting, attacks continuing",
       "narration": "ככל שהחיילים מתקדמים במערות, המצב נעשה גרוע יותר, התחמושת אוזלת, הפציעות מצטברות, והיצורים ממשיכים לתקוף.",
       "need": "Combat montage. Cut fast",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-031",
@@ -1600,9 +1750,9 @@
       "topic": "The missing became part of the parasite's life cycle; every infected person is a threat",
       "narration": "הם מגלים שחלק מהאנשים שנעלמו במקדש לא פשוט נהרגו. הם הפכו לחלק ממחזור החיים של הטפיל. והמשמעות ברורה, כל אדם שנדבק הוא לא רק קורבן, הוא גם סכנה לכל מי שנמצא סביבו.",
       "need": "Cocooned humans; a turned soldier",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-032",
@@ -1613,9 +1763,9 @@
       "topic": "Rachel may be infected: save her or kill her before she turns",
       "narration": "במהלך המשחק, רייצ'ל עלולה להידבק, והחבורה נאלצת להתמודד עם החלטה איומה, האם לנסות להציל אותה או להרוג אותה לפני שהיא הופכת למפלצת.",
       "need": "Infected Rachel; the others arguing over her, weapon drawn",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-033",
@@ -1626,9 +1776,9 @@
       "topic": "No clear right answer: cruelty can protect, refusing to give up can save",
       "narration": "הבחירה הזאת ממחישה את אחד המאפיינים החשובים ביותר של הסדרה. אין כאן תמיד תשובה נכונה וברורה. לפעמים החלטה שנראית אכזרית היא ניסיון להגן על אחרים, ולפעמים דווקא הסירוב לוותר על אדם יכול להוביל להצלתו.",
       "need": "Faces during the decision; Rachel in the cocoon",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-034",
@@ -1639,9 +1789,9 @@
       "topic": "The source: the alien ship buried deep under the temple",
       "narration": "בסופו של דבר, הניצולים מגלים את מקורה של האימה. הם מגיעים אל החללית החוצנית, הקבורה עמוק מתחת למקדש. הם מבינים שהיצורים חיו שם במשך תקופה בלתי נתפסת,",
       "need": "The vast interior of the ship. Wide and slow",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-035",
@@ -1652,9 +1802,9 @@
       "topic": "Destroy the nest: a dangerous plan that needs enemies to work together",
       "narration": "ושכדי לעצור אותם, הם צריכים להשמיד את המקום שבו הם מקננים. התוכנית מסוכנת, הזמן אוזל, והדרך היחידה לצאת בחיים מחייבת את החיילים לשתף פעולה, גם אם לפני כמה שעות הם ניסו להרוג זה את זה.",
       "need": "Setting the charges in the hive; Americans and Salim covering each other",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-036",
@@ -1665,9 +1815,9 @@
       "topic": "Back to the surface. For a moment the nightmare seems over",
       "narration": "אחרי סדרה של עימותים, החבורה מצליחה להגיע בחזרה לפני השטח. לרגע נדמה שהסיוט הסתיים.",
       "need": "Climbing out into daylight",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-037",
@@ -1678,9 +1828,9 @@
       "topic": "Sun, open air, no more caves, no more dark",
       "narration": "השמש זורחת, האוויר פתוח, אין יותר מערות, אין יותר חושך.",
       "need": "Desert light, the farmhouse",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-038",
@@ -1691,9 +1841,9 @@
       "topic": "Then a solar eclipse, and the creatures follow them out",
       "narration": "ואז מגיע ליקוי חמה, והיצורים יוצאים בעקבותיהם.",
       "need": "The eclipse darkening the sky; creatures emerging",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-039",
@@ -1704,9 +1854,9 @@
       "topic": "Joke: the universe still finds a way to ruin your day",
       "narration": "כי מסתבר שגם אחרי שנמלטתם ממקדש מלא במפלצות חוצניות, היקום עדיין מסוגל למצוא דרך להרוס לכם את היום.",
       "need": "The survivors looking up at the eclipse",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-040",
@@ -1717,9 +1867,9 @@
       "topic": "The last stand in a hut on the surface, holding out until the eclipse ends",
       "narration": "הקרב האחרון מתרחש בבקתה על פני השטח. הניצולים צריכים להחזיק מעמד עד שהליקוי יסתיים.",
       "need": "The farmhouse siege. Cut fast",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-041",
@@ -1730,9 +1880,9 @@
       "topic": "The sun returns and the creatures retreat or burn",
       "narration": "ואז, כשהשמש חוזרת, היצורים נאלצים לסגת, או נחשפים לאור הקטלני עבורם.",
       "need": "The eclipse ending; creatures burning in the light",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-042",
@@ -1743,9 +1893,9 @@
       "topic": "With the right choices all five can survive; otherwise far fewer",
       "narration": "אם הצלחנו לקבל את ההחלטות הנכונות, כל חמש הדמויות המרכזיות יכולות לשרוד. אבל אם טעינו בדרך, הסיום יכול להיות הרבה פחות אופטימי.",
       "need": "Survivors together at the end; the extraction",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-043",
@@ -1756,9 +1906,9 @@
       "topic": "Widely seen as one of the strongest entries: horror, science fiction, action, human drama",
       "narration": "האוס אוף אשז נחשב בעיני רבים לאחד המשחקים החזקים בעונה הראשונה, והסיבה היא לא רק המפלצות. המשחק מצליח לשלב בין אימה, מדע בדיוני, פעולה ודרמה אנושית.",
       "need": "Four short highlights, one per quality named",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-044",
@@ -1769,9 +1919,9 @@
       "topic": "After two illusions, a physical threat that has to be fought",
       "narration": "הוא גם משנה את הציפיות שהסדרה בנתה. אחרי שני משחקים שבהם חלק גדול מהאימה התגלה כאשליה, הפעם אנחנו מקבלים איום פיזי וממשי. אי אפשר פשוט להבין שהמפלצות אינן קיימות, צריך להילחם בהן.",
       "need": "Creature in close view; soldiers returning fire",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-045",
@@ -1782,9 +1932,9 @@
       "topic": "Every assumption was too small; the war above looks absurd beside something millions of years old",
       "narration": "אבל יש כאן גם רעיון רחב יותר. הדמויות נכנסות למערות כשהן בטוחות שהן מבינות את העולם. מי האויב, מה המשימה, מה מסוכן ומה נכון לעשות. ואז הן מגלות שכל ההנחות שלהן היו קטנות מדי. המלחמה שעל פני השטח נראית פתאום כמעט מגוחכת מול משהו שקיים כבר מיליוני שנים.",
       "need": "The scale of the ship against the soldiers",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "house-of-ashes-046",
@@ -1795,9 +1945,9 @@
       "topic": "Sometimes the only way to survive is to stop seeing the other man as an enemy",
       "narration": "ולפעמים, הדרך היחידה לשרוד היא להפסיק לראות באדם שמולך אויב.",
       "need": "Jason and Salim parting",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-001",
@@ -1808,9 +1958,9 @@
       "topic": "The series seemed to have a formula; the fourth game throws it away",
       "narration": "אחרי House of Ashes, היה נדמה שהסדרה מצאה נוסחה חדשה. מפלצות אמיתיות, סכנה מוחשית, סיפור גדול מהחיים. אבל במשחק הרביעי, סופרמאסיב גיימס החליטה לקחת את כל זה ולזרוק לפח.",
       "need": "Grey water and mist, the island and lighthouse in the distance",
+      "transition": "fade",
       "source": null,
-      "in": null,
-      "transition": "fade"
+      "in": null
     },
     {
       "id": "devil-in-me-002",
@@ -1821,9 +1971,9 @@
       "topic": "No aliens, no parasites, no ghosts, no curse. Just one man, and that is enough",
       "narration": "כי הפעם אין יצורים חוצניים. אין טפילים, אין רוחות, ואין קללה עתיקה. יש רק בן אדם אחד. וזה מספיק.",
       "need": "A still figure in silhouette at the end of a corridor. Mask not yet clear",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-003",
@@ -1834,9 +1984,9 @@
       "topic": "Chicago, 1893: the World's Fair, a city full of visitors",
       "narration": "בשנת 1893, העיר שיקגו אירחה יריד עולמי ענק. מיוני מבקרים הגיעו לעיר. הרחובות היו מלאים באנשים. מלונות התמלאו בתיירים.",
       "need": "1893 prologue: the hotel exterior, the newlyweds arriving",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "devil-in-me-004",
@@ -1847,9 +1997,9 @@
       "topic": "H. H. Holmes: fraudster, swindler, murderer",
       "narration": "ובאותה תקופה פעל בעיר אדם בשם H.H. Holmes. אדם שהפך עם השנים לאחת הדמויות הידועות ביותר בהיסטוריה של הפשע האמריקאי. הורמס היה רמאי, נוחל ורוצח.",
       "need": "Holmes at the front desk, welcoming guests",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-005",
@@ -1860,9 +2010,9 @@
       "topic": "Linked to several killings, convicted of the murder of Benjamin Pitezel",
       "narration": "הוא נקשר למספר מקרי רצח, ובסופו של דבר הורשע ברצח של אדם בשם בנג'מין פיטסו.",
       "need": "Holmes with Jeff and Marie in the prologue",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-006",
@@ -1873,9 +2023,9 @@
       "topic": "The Murder Castle: secret rooms, hidden passages, devices built to trap and kill",
       "narration": "אבל הסיפור שלו הפך מפורסם במיוחד בגלל בניין שזכה לכינוי Murder Castle – טירת הרצח. לפי האגדה שהתפתחה סביבו, הבניין הכיל חדרים סודיים, מעברים נסתרים ומתקנים שנועדו ללכוד ולהרוג אורחים.",
       "need": "Prologue: a concealed passage, a peephole, the sealed room",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-007",
@@ -1886,9 +2036,9 @@
       "topic": "Much of the story was inflated by the press of the day, but the legend outlived Holmes",
       "narration": "חשוב לציין שחלק גדול מהסיפורים על המבנה נופח בעיתונות של התקופה, ולא כל הפרטים המפורסמים עליו נתמכים בראיות היסטוריות. אבל האגדה הייתה כל כך מצמררת, שהיא המשיכה לחיות הרבה אחרי מותו של הולמס.",
       "need": "Period interiors, slow; a portrait of Holmes",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-008",
@@ -1899,9 +2049,9 @@
       "topic": "What if someone rebuilt the castle, to use it for its reputed purpose",
       "narration": "ומה אם מישהו היה מחליט לבנות את הטירה הזאת מחדש? לא כמוזיאון, לא כאטרקציה, אלא כדי להשתמש בה בדיוק למטרה שמייחסים למקור.",
       "need": "Dissolve from the 1893 hotel to the modern replica on the island",
+      "transition": "dissolve",
       "source": null,
-      "in": null,
-      "transition": "dissolve"
+      "in": null
     },
     {
       "id": "devil-in-me-009",
@@ -1912,9 +2062,9 @@
       "topic": "The Devil in Me, fourth and final game of the first season",
       "narration": "זה הרעיון שעומד מאחורי The Devil in Me, המשחק הרביעי והאחרון בעונה הראשונה של The Dark Pictures Anthology.",
       "need": "Present-day opening",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-010",
@@ -1925,9 +2075,9 @@
       "topic": "A small crew producing a true-crime documentary series",
       "narration": "הסיפור עוקב אחרי צוות קטן שמפיק סדרת סרטים תיעודיים על פשעים אמיתיים.",
       "need": "The Lonnit Entertainment crew at work on a shoot",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-011",
@@ -1938,9 +2088,9 @@
       "topic": "Charlie, producer and director",
       "narration": "צ'רלי הוא המפיק והבמאי,",
       "need": "Charlie Lonnit",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-012",
@@ -1951,9 +2101,9 @@
       "topic": "Kate, the presenter",
       "narration": "קייט היא המגישה,",
       "need": "Kate Wilder",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-013",
@@ -1964,9 +2114,9 @@
       "topic": "Mark, the cameraman",
       "narration": "מרק הוא הצלם,",
       "need": "Mark Nestor with his camera",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-014",
@@ -1977,9 +2127,9 @@
       "topic": "Jamie, lighting and technical",
       "narration": "ג'יימי אחראית על התאורה והטכנולוגיה,",
       "need": "Jamie Tiergan",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-015",
@@ -1990,9 +2140,9 @@
       "topic": "Erin, sound",
       "narration": "וארן היא אשת הסאונד.",
       "need": "Erin Keenan with the boom microphone",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-016",
@@ -2003,9 +2153,9 @@
       "topic": "A struggling production: tight budget, friction, a bleak outlook",
       "narration": "הצוות מתקשה להצליח. התקציב מוגבל, יש מתחים בין אנשי ההפקה, והעתיד של התוכנית שלהם נראה די עגום.",
       "need": "The crew arguing",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-017",
@@ -2016,9 +2166,9 @@
       "topic": "Charlie takes a call from a man named Granthem Du'Met",
       "narration": "ואז, צ'ארלי מקבל שיחת טלפון מאדם בשם גרנתם דומט.",
       "need": "Charlie on the phone",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-018",
@@ -2029,9 +2179,9 @@
       "topic": "He claims to own an exact replica of Holmes's hotel and invites them to an isolated island",
       "narration": "האיש טוען שהוא מחזיק ברפליקה מדויקת של המלון המזוהה עם HH Holmes, והוא מזמין את הצוות להגיע לאי מבודד כדי לצלם שם פרק.",
       "need": "The crossing to the island; the car waiting",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-019",
@@ -2042,9 +2192,9 @@
       "topic": "Joke: I would check for mobile signal, or at least the Google reviews",
       "narration": "עכשיו, אני לא יודע מה איתכם, אבל כשאדם זר מזמין אותי לאי מבודד כדי לבקר במלון שמבוסס על בית של רוצח סדרתי, אני בדרך כלל בודק קודם אם יש שם קליטה סלולרית, או לפחות ביקורות בגוגל.",
       "need": "The crew on the boat in the fog; a phone with no signal held up",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-020",
@@ -2055,9 +2205,9 @@
       "topic": "The crew arrives; the hotel is impressive",
       "narration": "הצוות מגיע לאי. המלון מרשים,",
       "need": "The hotel revealed from the drive",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-021",
@@ -2068,9 +2218,9 @@
       "topic": "Period rooms, long corridors, antiques and mechanical contrivances",
       "narration": "החדרים מעוצבים בסגנון תקופתי, יש מסדרונות ארוכים, חפצים עתיקים ומנגנונים מכניים שמדמים את הסיפורים על טירת הרצח.",
       "need": "Lobby, corridor, the animatronic figures",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-022",
@@ -2081,9 +2231,9 @@
       "topic": "Something is wrong: an odd host, locked rooms, dead telephones",
       "narration": "אבל מהר מאוד מתברר שמשהו לא בסדר. המארח מתנהג בצורה מוזרה. חלק מהחדרים נעולים, הטלפונים לא עובדים,",
       "need": "Du'Met at a distance; a locked door; a dead handset",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-023",
@@ -2094,9 +2244,9 @@
       "topic": "The hotel was not built to look like a trap. It is one",
       "narration": "והצוות מגלה שהמלון לא תוכנן רק כדי להיראות כמו מלכודת, הוא באמת מלכודת.",
       "need": "A wall sliding shut behind a character",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-024",
@@ -2107,9 +2257,9 @@
       "topic": "Walls move, doors lock, rooms change shape, and someone is watching",
       "narration": "הקירות זזים, דלתות ננעלות, חדרים משנים את המבנה שלהם, ומישהו צופה ד'כל מה שהם עושים.",
       "need": "Moving walls; a bank of surveillance monitors",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-025",
@@ -2120,9 +2270,9 @@
       "topic": "The hotel itself becomes the enemy, built to separate people",
       "narration": "אחד הדברים המצמררים במשחק הוא שהמלון עצמו הופך לאויב, לא רק האדם שמסתובב בתוכו. המסדרונות גנויים כך שאפשר להפריד בין אנשים.",
       "need": "Shifting corridors splitting the group",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-026",
@@ -2133,9 +2283,9 @@
       "topic": "Rooms that force a choice, cameras that let the killer watch the fear",
       "narration": "החדרים מכילים מנגנונים שנועדו להכריח את הקורבנות לבחור, והמצלמות נאפשרות לרוצח לצפות בפחד שלהם.",
       "need": "The control room; a hidden camera lens",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-027",
@@ -2146,9 +2296,9 @@
       "topic": "He wants to control the experience, to leave them no way out",
       "narration": "הוא לא רק רוצה להרוג, הוא רוצה לשלוט בחוויה. הוא רוצה שהקורבנות ירגישו שאין להם שום דרך לברוח.",
       "need": "The killer in front of the monitors",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-028",
@@ -2159,9 +2309,9 @@
       "topic": "A trap with two people on either side of a moving glass wall",
       "narration": "בשלב מסוים, הדמויות עלולות להיתקל במלכודת שבה שני אנשים נמצאים משני צדדיו של קיר זכוכית נע. כדי להציל אדם אחד, צריך לסכן אדם אחר.",
       "need": "The glass-wall trap",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-029",
@@ -2172,9 +2322,9 @@
       "topic": "Another: a room built to suffocate whoever is inside",
       "narration": "במלכודת אחרת, מישהו נלכד בחדר שנועד לחנוק אותו, וההחלטות שלנו קובעות אם נמצא דרך להציל אותו בזמן.",
       "need": "The suffocation chamber",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-030",
@@ -2185,9 +2335,9 @@
       "topic": "The traps turn relationships into weapons, and he wants to watch",
       "narration": "אלה לא סתם מלכודות, הן נועדו להפוך את מערכות היחסים בין הדמויות לכלי נשק. כי הרוצח יודע שאנשים מסוגלים לעשות דברים איומים כשהם מפחדים, והוא רוצה לראות אותם עושים את זה.",
       "need": "Faces during the choice; the killer observing",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-031",
@@ -2198,9 +2348,9 @@
       "topic": "The host is part of an elaborate deception: false identities, lured visitors",
       "narration": "ככל שהצוות חוקר את המלון, הוא מגלה שהמארח המסתורי הוא חלק מהונאה מורכבת. הרוצח משתמש בזהויות שונות, מפתה אנשים להגיע לאי ומפעיל מערכת שלמה שנועדה להמשיך את מעשה הרצח שלו.",
       "need": "The workshop: masks, mannequins, the Du'Met figure",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-032",
@@ -2211,9 +2361,9 @@
       "topic": "Clues point to Hector Munday, a former FBI agent whose case became an obsession",
       "narration": "רמזים שנמצאים במלון מצביעים על אדם בשם הקטור מאנדיי, סוכן לשעבר של הבולשת הפדרלית שהיה מעורב בחקירת רוצח סדרתי. הקשר שלו לעולם הפשע הפך בהדרגה לאובססיה.",
       "need": "Files and clippings as props in the scene",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-033",
@@ -2224,9 +2374,9 @@
       "topic": "Instead of investigating killers, he began to imitate them",
       "narration": "במקום להסתפק בחקירת רוצחים, הוא התחיל לחקות אותם.",
       "need": "Munday flashback scenes",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-034",
@@ -2237,9 +2387,9 @@
       "topic": "The killer sees himself as the heir to H. H. Holmes",
       "narration": "וכאן מגיע אחד הרעיונות המעניינים ביותר במשחק. הרוצח לא חושב על עצמו בתור אדם רגיל. הוא רואה בעצמו ממשיך דרכו של H.H.H.H.H.H.הורמס.",
       "need": "The killer in the Holmes mask and hat, full view",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-035",
@@ -2250,9 +2400,9 @@
       "topic": "Murder as art: recreate the legend and surpass the original",
       "narration": "הוא לא רק רוצה להרוג אנשים, הוא רוצה להפוך את הרצח לאמנות, לשחזר את האגדה, ואולי אפילו להתעלות על המקור.",
       "need": "The animatronic tableaux",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-036",
@@ -2263,9 +2413,9 @@
       "topic": "No supernatural power, not an alien, not a demon",
       "narration": "וזה מה שהופך אותו לדמות מפחידה במיוחד. כי הוא לא צריך כוח על-טבעי, הוא לא צריך להיות חייזר, הוא לא צריך להיות שד.",
       "need": "The killer walking steadily toward the camera",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-037",
@@ -2276,9 +2426,9 @@
       "topic": "Money, time, technical skill and a disturbing amount of creativity",
       "narration": "הוא צריך כסף, זמן, ידע טכני ומידה מטרידה מאוד של יצירתיות.",
       "need": "Gears, pistons, the mechanisms behind the walls",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-038",
@@ -2289,9 +2439,9 @@
       "topic": "Joke: he would have made an excellent escape-room designer",
       "narration": "בקיצור, האיש הזה היה יכול להיות מעצב חדרי בריחה ממש מוצלח, אם הוא רק היה בוחר מקצוע קצת פחות פלילי.",
       "need": "Wide of an elaborate trap room",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-039",
@@ -2302,9 +2452,9 @@
       "topic": "The survivors try to leave the island; he has no intention of allowing it",
       "narration": "לקראת סוף The Devil In Me, הניצולים מנסים לברוח מהאי. הם מגלים שהרוצח לא מתכוון לתת להם לעזוב.",
       "need": "Running through the woods toward the lighthouse and dock",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-040",
@@ -2315,9 +2465,9 @@
       "topic": "He keeps coming, reappears, survives severe injuries",
       "narration": "גם כשהם מצליחים להתחמק מהמלכודות שלו, הוא ממשיך לרדוף אחריהם. הוא מופיע שוב ושוב, שורד פגיעות קשות, ולפעמים נראה כמעט בלתי אפשרי לעצור אותו.",
       "need": "The chase; the killer rising after a blow. Cut fast",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-041",
@@ -2328,9 +2478,9 @@
       "topic": "The final confrontation, on a boat",
       "narration": "העימות האחרון מתרחש על סירה. הדמויות נאבקות ברוצח בזמן שהסירה הופכת לזירת קרב קטנה וצפופה.",
       "need": "The fight on the boat",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-042",
@@ -2341,9 +2491,9 @@
       "topic": "Depending on our choices some die and some escape",
       "narration": "בהתאם להחלטות שקיבלנו, חלק מהדמויות עשויות למות. אחרות עשויות להצליח לברוח.",
       "need": "Aftermath on the water",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-043",
@@ -2354,9 +2504,9 @@
       "topic": "He falls into the water. Is he really dead?",
       "narration": "אבל גם אם הרוצח נופל למים ונראה שהסיפור הסתיים, המשחק משאיר אותנו עם שאלה מטרידה. האם הוא באמת מת?",
       "need": "The killer going under; the still surface",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-044",
@@ -2367,9 +2517,9 @@
       "topic": "The ending hints it will start again: more people, another invitation",
       "narration": "כי בסיום אנחנו מקבלים רמז לכך שהסיוט עומד להתחיל מחדש. עוד אנשים, עוד הזמנה, עוד הזדמנות עבור הרוצח להמשיך את המשחק שלו.",
       "need": "Epilogue: a new family arriving on the island",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "devil-in-me-045",
@@ -2380,9 +2530,9 @@
       "topic": "A fitting close: no strange science, no trauma, no aliens, only a man who chose this",
       "narration": "וזה סיום מתאים במיוחד לעונה הראשונה. כי בניגוד לשלושת המשחקים הקודמים, הפעם אין הסבר מדעי מוזר, אין טראומה שמייצרת מפלצות ואין יצורים חוצניים. יש אדם שבחר להפוך את החיים של אחרים לסיוט.",
       "need": "Close on the mask; hold",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-001",
@@ -2393,9 +2543,9 @@
       "topic": "After four games, back to the figure who waited for us throughout",
       "narration": "אבל עכשיו, אחרי ארבעה משחקים, הגיע הזמן לחזור לדמות שחיכתה לנו לאורך כל הדרך, The Curator.",
       "need": "The library; The Curator at his desk",
+      "transition": "fade",
       "source": null,
-      "in": null,
-      "transition": "fade"
+      "in": null
     },
     {
       "id": "curator-002",
@@ -2406,9 +2556,9 @@
       "topic": "In every game we return to his library: questions, reactions, hints",
       "narration": "בכל אחד מהמשחקים אנחנו חוזרים אל הספרייה שלו. הוא שואל אותנו שאלות, מגיב להחלטות שלנו, ולפעמים מציע רמזים לגבי מה שעומד לקרות.",
       "need": "Interlude scenes from the later games, so nothing from the opening chapter repeats",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-003",
@@ -2419,9 +2569,9 @@
       "topic": "Unsurprised by death, sometimes amused, sometimes disappointed when we save someone",
       "narration": "אבל יש משהו מוזר באופן שבו הוא מתייחס לסיפורים. הוא לא נראה מופתע כשהדמויות מתות. לפעמים הוא כמעט משועשע, ולפעמים נדמה שהוא מאוכזב מכך שהצלחנו להציל מישהו.",
       "need": "Reaction close-ups: amused, then disappointed",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-004",
@@ -2432,9 +2582,9 @@
       "topic": "He is not only in the library: a suited figure in the background of certain scenes",
       "narration": "והוא גם לא נשאר רק בספרייה, אם מסתכלים היטב, אפשר לזהות אותו ברקע של סצנות מסוימות במשחקים. דמות לבושה בחליפה, עומדת במרחק, מתבוננת, במיוחד ברגעים שקשורים למוות.",
       "need": "His in-game cameos, at least two games",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-005",
@@ -2445,9 +2595,9 @@
       "topic": "He does not intervene. He is simply there",
       "narration": "הוא לא מתערב, לא מנסה להציל אף אחד, פשוט נמצא שם.",
       "need": "Another cameo, static, held",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-006",
@@ -2458,9 +2608,9 @@
       "topic": "One theory: The Curator is a representation of Death",
       "narration": "המשחקים מעולם לא סיפקו הסבר חד-משמעי לזהותו, אבל יש תיאוריה מעניינת במיוחד. The Curator עשוי להיות ייצוג של המוות עצמו.",
       "need": "The Curator half in shadow, candle or clock in frame",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-007",
@@ -2471,9 +2621,9 @@
       "topic": "Not a reaper with a scythe: a being who records human fates while we decide",
       "narration": "לא בהכרח מלאך המוות עם גלימה וחרמש, אלא מעין ישות שתפקידה לתעד את גורלם של בני האדם. הוא לא מחליט במקומנו, הוא רק מציג את האפשרויות, ואנחנו אלה שקובעים מי יחיה ומי ימות.",
       "need": "Writing in the book with a pen",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-008",
@@ -2484,9 +2634,9 @@
       "topic": "The rules that bind him, and the hint that someone oversees him too",
       "narration": "הרעיון הזה מתחזק בגלל הדרך שבה הוא מדבר על החוקים שמגבילים אותו. הוא רומז שיש דברים שאסור לו לעשות, שיש גבול למידע שהוא יכול לחשוף, ושמישהו, או משהו, מפקח גם עליו.",
       "need": "He breaks off, glances upward or over his shoulder",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-009",
@@ -2497,9 +2647,9 @@
       "topic": "The Devil in Me: he hesitates, looks to the library doors, tears a page from a book",
       "narration": "ב-The Devil in Me אנחנו אפילו רואים רגע שבו נדמה שהוא עומד לקבל החלטה חריגה. הוא מהסס, מסתכל לעבר דלתות הספרייה, ולבסוף קורע דף מתוך ספר, כאילו הוא מנסה לשנות משהו בסיפור שכבר נכתב.",
       "need": "That exact scene from The Devil in Me, kept whole",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-010",
@@ -2510,9 +2660,9 @@
       "topic": "Why? To help, to break the rules, or to see what happens",
       "narration": "אבל למה? האם הוא מנסה לעזור לנו? האם הוא פועל בניגוד לחוקים? או שאולי הוא פשוט נהנה לראות מה יקרה כשמשנים את גורלו של אדם?",
       "need": "His face afterwards, the torn page in his hand",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "curator-011",
@@ -2523,9 +2673,9 @@
       "topic": "One of the few mysteries that carries from game to game",
       "narration": "אין לנו תשובה ודאית, וזה כנראה מכוון, כי The Curator הוא אחת התעלומות הבודדות שנמשכות ממשחק למשחק. הוא מזכיר לנו שגם אם הבנו את הסיפור של הספינה, העיירה, המקדש או המלון, עדיין יש משהו גדול יותר שאנחנו לא מבינים.",
       "need": "Slow pull back through the library",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-001",
@@ -2536,9 +2686,9 @@
       "topic": "What connects the four games? On the surface, almost nothing",
       "narration": "וזה מביא אותנו לשאלה מעניינת. מה בעצם מחבר בין ארבעת המשחקים האלה? על פני השטח? כמעט שום דבר.",
       "need": "Four books on the desk, or four establishing shots not used earlier",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-002",
@@ -2549,9 +2699,9 @@
       "topic": "Man of Medan: hallucination",
       "narration": "Man of Medan עוסק בהזיות.",
       "need": "A hallucination moment",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-003",
@@ -2562,9 +2712,9 @@
       "topic": "Little Hope: trauma and guilt",
       "narration": "Little Hope עוסק בטראומה ובאשמה.",
       "need": "Anthony",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-004",
@@ -2575,9 +2725,9 @@
       "topic": "House of Ashes: alien monsters and cooperation between enemies",
       "narration": "House of Ashes עוסק במפלצות חוצניות ובשיתוף פעולה בין אויבים.",
       "need": "Jason and Salim against a creature",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-005",
@@ -2588,9 +2738,9 @@
       "topic": "The Devil in Me: a serial killer",
       "narration": "The Devil and Me עוסק ברוצח סדרתי.",
       "need": "The killer",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-006",
@@ -2601,9 +2751,9 @@
       "topic": "Beneath the differences, one idea: fear changes how we decide",
       "narration": "אבל מתחת לכל ההבדלים האלה מסתתר רעיון אחד. הפחד משנה את הדרך שבה אנחנו מקבלים החלטות.",
       "need": "A frightened face at the point of choosing",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-007",
@@ -2614,9 +2764,9 @@
       "topic": "Man of Medan: whether to trust our senses",
       "narration": "ב-Man of Medan אנחנו צריכים להחליט אם לסמוך על החושים שלנו.",
       "need": "A character staring at something that may not be there",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-008",
@@ -2627,9 +2777,9 @@
       "topic": "Little Hope: how the past distorts the present",
       "narration": "ב-Little Hope אנחנו צריכים להתמודד עם הדרך שבה העבר מעוות את ההווה.",
       "need": "A present-day character watching a 1692 scene",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-009",
@@ -2640,9 +2790,9 @@
       "topic": "House of Ashes: whether to go on seeing others as enemies",
       "narration": "ב-House of Ashes אנחנו נאלצים לבחור אם להמשיך לראות באנשים אחרים אויבים.",
       "need": "An American and an Iraqi lowering their weapons",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-010",
@@ -2653,9 +2803,9 @@
       "topic": "The Devil in Me: how far we will go to save ourselves and those around us",
       "narration": "וב-The Devil in Me אנחנו צריכים להחליט כמה רחוק נהיה מוכנים ללכת כדי להציל את עצמנו ואת האנשים שסביבנו.",
       "need": "A character at a trap control",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-011",
@@ -2666,9 +2816,9 @@
       "topic": "Never enough information, and still we have to choose",
       "narration": "כל משחק מציב אותנו במצב שבו אין לנו מספיק מידע. אנחנו לא יודעים מי מסוכן, לא יודעים מה אמיתי, לא יודעים איזו החלטה תציל אותנו. ובכל זאת, אנחנו חייבים לבחור.",
       "need": "Four moments of hesitation, one per game",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-012",
@@ -2679,9 +2829,9 @@
       "topic": "The series makes us take responsibility for the story",
       "narration": "וזה אולי הדבר שהסדרה עושה הכי טוב. היא לא רק מספרת לנו סיפור אימה, היא גורמת לנו לקחת עליו אחריות.",
       "need": "A character grieving over someone lost. Not graphic",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-013",
@@ -2692,9 +2842,9 @@
       "topic": "In an ordinary horror film we shout at the screen: why go in, why open the door, why not run",
       "narration": "כי בסרט אימה רגיל, כשדמות עושה משהו מטומטם, אנחנו יכולים לצעוק על המסך. למה נכנסת לשם? למה פתחת את הדלת? למה לא ברחת?",
       "need": "Three quick matched shots: stepping into a dark room, a hand on a door, a figure frozen",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-014",
@@ -2705,9 +2855,9 @@
       "topic": "Here we are the ones who open the door, and learn minutes later what it cost",
       "narration": "אבל ב-The Dark Pictures Anthology, לפעמים אנחנו אלה שבוחרים לפתוח את הדלת. אנחנו אלה שמחליטים להיכנס לחדר החשוך, ואנחנו אלה שמגלים, כמה דקות מאוחר יותר, שההחלטה הזאת עלתה למישהו בחיים.",
       "need": "A door opened; the consequence",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-015",
@@ -2718,9 +2868,9 @@
       "topic": "Suddenly it is harder to laugh at horror-film characters",
       "narration": "ופתאום הרבה יותר קשה לצחוק על הדמויות בסרטי אימה.",
       "need": "Survivors in the aftermath",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-016",
@@ -2731,9 +2881,9 @@
       "topic": "The series has its faults: twists, characters, choices that feel arbitrary",
       "narration": "כמובן, הסדרה לא חפה מבעיות. לא כל הטוויסטים עובדים, לא כל הדמויות מעניינות באותה מידה, ולפעמים הבחירות מרגישות קצת שרירותיות.",
       "need": "Quiet exploration footage without interface",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-017",
@@ -2744,9 +2894,9 @@
       "topic": "A trivial event can kill a character much later, which is exactly the feeling intended",
       "narration": "יש גם מקרים שבהם אירוע קטן שנראה חסר חשיבות לחלוטין מוביל למוות של דמות הרבה יותר מאוחר, וזה יכול להיות מתסכל. אבל מצד שני, זאת בדיוק התחושה שהמשחקים מנסים לייצר. ההבנה שלא תמיד אפשר לדעת מה תהיה התוצאה של הבחירות שלנו.",
       "need": "A small action, then its late consequence",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-018",
@@ -2757,9 +2907,9 @@
       "topic": "Season one is complete, but the series was not meant to end there",
       "narration": "אחרי ארבעה משחקים, העונה הראשונה של The Dark Pictures Anthology הגיעה לסיומה. אבל הסדרה לא נועדה להסתיים שם.",
       "need": "The Curator closing a book and reaching for the next",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-019",
@@ -2770,22 +2920,80 @@
       "topic": "The next announced game, Directive 8020: science-fiction horror in space",
       "narration": "המשחק הבא שהוכרז, Directive 820, לוקח את האנתולוגיה לכיוון של אימת מדע בדיוני בחלל.",
       "need": "Directive 8020: the ship Cassiopeia. Not on the supplied footage list",
-      "source": null,
-      "in": null,
-      "transition": "cut"
+      "transition": "cut",
+      "source": "selects/d8020_prologue_00102.mkv",
+      "in": 6.9,
+      "part": "d8020_prologue",
+      "partIn": 108.5,
+      "crop": {
+        "zoom": 1.5,
+        "x": 0.5,
+        "y": 0.42
+      },
+      "picture": "Directive 8020: the Cassiopeia's hull against the stars"
     },
     {
       "id": "themes-020",
       "start": 1863.9667,
+      "end": 1867.9333,
+      "chapter": "themes",
+      "game": "Directive 8020",
+      "topic": "Far from ghost ships and murder hotels, the same question: what will you do when a life depends on your decision",
+      "narration": "הרחק מספינות רפאים, עיירות נטושות ומלונות רצח. אבל עם אותה שאלה שמלווה את הסדרה מההתחלה, מה תעשו כשהחיים של מישהו אחר יהיו תלויים בהחלטה שלכם?",
+      "need": "Directive 8020: crew under threat",
+      "transition": "cut",
+      "source": "selects/d8020_prologue_00565.mkv",
+      "in": 23.817,
+      "part": "d8020_prologue",
+      "partIn": 588.42,
+      "crop": {
+        "zoom": 1.5,
+        "x": 0.5,
+        "y": 0.42
+      },
+      "picture": "Directive 8020: crewman, frightened"
+    },
+    {
+      "id": "themes-020b",
+      "start": 1867.9333,
+      "end": 1872.2667,
+      "chapter": "themes",
+      "game": "Directive 8020",
+      "topic": "Far from ghost ships and murder hotels, the same question: what will you do when a life depends on your decision",
+      "narration": "הרחק מספינות רפאים, עיירות נטושות ומלונות רצח. אבל עם אותה שאלה שמלווה את הסדרה מההתחלה, מה תעשו כשהחיים של מישהו אחר יהיו תלויים בהחלטה שלכם?",
+      "need": "Directive 8020: crew under threat",
+      "transition": "cut",
+      "source": "selects/d8020_prologue_00565.mkv",
+      "in": 6.233,
+      "part": "d8020_prologue",
+      "partIn": 570.83,
+      "crop": {
+        "zoom": 1.5,
+        "x": 0.5,
+        "y": 0.42
+      },
+      "picture": "Directive 8020: struggle in the corridor"
+    },
+    {
+      "id": "themes-020c",
+      "start": 1872.2667,
       "end": 1876.1,
       "chapter": "themes",
       "game": "Directive 8020",
       "topic": "Far from ghost ships and murder hotels, the same question: what will you do when a life depends on your decision",
       "narration": "הרחק מספינות רפאים, עיירות נטושות ומלונות רצח. אבל עם אותה שאלה שמלווה את הסדרה מההתחלה, מה תעשו כשהחיים של מישהו אחר יהיו תלויים בהחלטה שלכם?",
       "need": "Directive 8020: crew under threat",
-      "source": null,
-      "in": null,
-      "transition": "cut"
+      "transition": "cut",
+      "source": "selects/d8020_prologue_00565.mkv",
+      "in": 33.633,
+      "part": "d8020_prologue",
+      "partIn": 598.23,
+      "crop": {
+        "zoom": 1.5,
+        "x": 0.5,
+        "y": 0.42
+      },
+      "picture": "Directive 8020: dark corridor"
     },
     {
       "id": "themes-021",
@@ -2796,9 +3004,9 @@
       "topic": "Why The Curator remains so intriguing",
       "narration": "ואולי זאת גם הסיבה ש-The Curator ממשיך להיות כל כך מסקרן, כי בכל פעם שאנחנו חוזרים לספרייה שלו, הוא מזכיר לנו משהו פשוט.",
       "need": "The Curator at the desk",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-022",
@@ -2809,9 +3017,9 @@
       "topic": "The story is ready, the characters are in place, the danger waits. The ending is not yet written",
       "narration": "הסיפור כבר מוכן, הדמויות כבר נמצאות במקומן, הסכנה כבר מחכה. אבל הסוף? הסוף עדיין לא נכתב.",
       "need": "The open book, a blank page, the pen above it",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "themes-023",
@@ -2822,9 +3030,9 @@
       "topic": "He only watches. We decide who dies",
       "narration": "ואולי, אם נחשוב על זה רגע, The Curator הוא לא באמת הדמות שצריכה להפחיד אותנו, כי הוא רק צופה בסיפורים. הוא לא זה שמחליט מי ימות. אנחנו כן.",
       "need": "He looks straight at the viewer; hold",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "outro-001",
@@ -2835,9 +3043,9 @@
       "topic": "Sign-off: subscribe and comment",
       "narration": "אם אהבתם את הסיפור, אל תשכחו להירשם לערוץ לילה לבן ולספר לי בתגובות איזה מארבעת המשחקים הכי עניין אתכם.",
       "need": "Library ambience, candles, shelves. No on-screen text",
+      "transition": "fade",
       "source": null,
-      "in": null,
-      "transition": "fade"
+      "in": null
     },
     {
       "id": "outro-002",
@@ -2848,9 +3056,9 @@
       "topic": "If you had to survive one of them yourself, which would you choose",
       "narration": "והכי חשוב, אם הייתם צריכים לבחור רק משחק אחד שבו תיאלצו לשרוד בעצמכם, באיזה מהם הייתם בוחרים?",
       "need": "The four books side by side",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "outro-003",
@@ -2861,9 +3069,9 @@
       "topic": "The ghost ship",
       "narration": "ספינת הרפאים?",
       "need": "The Ourang Medan, an angle not used before",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "outro-004",
@@ -2874,9 +3082,9 @@
       "topic": "The cursed town",
       "narration": "העיירה המקוללת?",
       "need": "Little Hope in fog, an angle not used before",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "outro-005",
@@ -2887,9 +3095,9 @@
       "topic": "The temple under the ground",
       "narration": "המקדש שמתחת לאדמה?",
       "need": "The temple, an angle not used before",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "outro-006",
@@ -2900,9 +3108,9 @@
       "topic": "The murder hotel",
       "narration": "או מלון הרצח?",
       "need": "The hotel, an angle not used before",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "outro-007",
@@ -2913,9 +3121,9 @@
       "topic": "Joke: at the hotel there is at least a chance of breakfast",
       "narration": "אני אישית הייתי בוחר במלון. לפחות שם יש סיכוי לקבל ארוחת בוקר.",
       "need": "The hotel dining room, table laid",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     },
     {
       "id": "outro-008",
@@ -2926,9 +3134,9 @@
       "topic": "Good night, if you can sleep",
       "narration": "נתראה בסיפור הבא, ולילה טוב, אם תצליחו להירדם.",
       "need": "The Curator closes the book; the light goes down to black",
+      "transition": "cut",
       "source": null,
-      "in": null,
-      "transition": "cut"
+      "in": null
     }
   ]
 }

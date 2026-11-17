@@ -72,10 +72,14 @@ for (const chapter of chapters) {
   );
   for (const shot of chapter.shots) {
     const length = seconds(shot);
+    // Shots cut from a playthrough part are listed by part and part time,
+    // which is how the footage was chosen; the fetched file is derived.
     const source =
       shot.source === null
         ? "pending"
-        : `\`${shot.source}\` ${timecode(shot.in)} to ${timecode(shot.in + length)}`;
+        : shot.part
+          ? `\`${shot.part}\` ${timecode(shot.partIn)} to ${timecode(shot.partIn + length)}${shot.picture ? `: ${cell(shot.picture)}` : ""}`
+          : `\`${shot.source}\` ${timecode(shot.in)} to ${timecode(shot.in + length)}`;
     lines.push(
       `| ${shot.id} | ${timecode(shot.from / edl.fps)} | ${timecode(shot.to / edl.fps)} | ${length.toFixed(1)} s | ${cell(shot.game)} | ${cell(shot.topic)} | ${cell(shot.need)} | ${source} | ${shot.transition} |`,
     );
