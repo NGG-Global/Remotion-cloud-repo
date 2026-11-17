@@ -13,6 +13,7 @@ no titles, captions or graphics. Output is 1280x720, 30 fps, H.264 with AAC.
 | Remotion composition `DarkPictures`                              | Done                                                           |
 | Selection, fetch, clip preparation, segmented render, QA tooling | Done                                                           |
 | Picture quality                                                  | 49 shots from 1080p footage, 533 from 288p proxies (see below) |
+| Final film (`out/dpa/`, not in git: 380 MB)                      | Rendered and passed QA on 2026-11-17: 58,117 frames, 32:17     |
 | Hebrew script PDF                                                | Not received; the transcript stands in for it                  |
 
 ## Footage: sources and licensing
