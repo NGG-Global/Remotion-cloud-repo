@@ -5,83 +5,106 @@ no titles, captions or graphics. Output is 1280x720, 30 fps, H.264 with AAC.
 
 ## Status
 
-| Item                                                             | State                                                                                           |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Narration (`public/audio/dpa-narration.mp3`, 32:17.21)           | In place, unmodified                                                                            |
-| Timed transcript (`src/dpa/data/transcript.json`, 689 sentences) | Done                                                                                            |
-| Edit decision list (`src/dpa/data/edl.json`, `docs/DPA_EDL.md`)  | Timing, topic, required picture and transition set for all 225 beats; source and in/out pending |
-| Remotion composition `DarkPictures`                              | Done                                                                                            |
-| Inventory, clip preparation, segmented render, QA tooling        | Done, verified on synthetic test footage                                                        |
-| Hebrew script PDF                                                | Not received                                                                                    |
-| Game footage                                                     | Not received. This is what the final render is waiting on                                       |
-| Final MP4                                                        | Not rendered                                                                                    |
+| Item                                                             | State                                                          |
+| ---------------------------------------------------------------- | -------------------------------------------------------------- |
+| Narration (`public/audio/dpa-narration.mp3`, 32:17.21)           | In place, unmodified                                           |
+| Timed transcript (`src/dpa/data/transcript.json`, 689 sentences) | Done                                                           |
+| Edit decision list (`src/dpa/data/edl.json`, `docs/DPA_EDL.md`)  | Complete: 225 beats cut into 582 shots, every shot sourced     |
+| Remotion composition `DarkPictures`                              | Done                                                           |
+| Selection, fetch, clip preparation, segmented render, QA tooling | Done                                                           |
+| Picture quality                                                  | 49 shots from 1080p footage, 533 from 288p proxies (see below) |
+| Hebrew script PDF                                                | Not received; the transcript stands in for it                  |
 
 ## Footage: sources and licensing
 
-No footage is in the repository and none has been downloaded.
+The publisher of the film confirmed that rights for the footage are handled and
+authorised downloading gameplay from the internet. That clearance is theirs to
+hold; nothing here verifies it independently.
 
-- The four games and The Curator are, to my knowledge, the intellectual
-  property of Supermassive Games, with the first season published by Bandai
-  Namco Entertainment. Until Dawn (27 seconds of narration) is a Sony
-  Interactive Entertainment title. Directive 8020 (19 seconds) is a later
-  Supermassive title. These attributions should be confirmed before publishing.
-- I searched for a published video or content-creator policy from Supermassive
-  Games and from Bandai Namco that would permit reuse of their trailers or of
-  gameplay recordings in a third-party video. I did not find one. The only
-  Bandai Namco page located covers its sponsored creator programme, not general
-  reuse. I do not have a verified source that grants permission.
-- Official trailers on YouTube carry the standard YouTube licence, which does
-  not grant reuse, and downloading them is outside YouTube's terms of service.
-  They also carry burned-in logos, ratings and press quotes, which conflicts
-  with the no-text rule, and they do not contain most of the specific story
-  scenes the narration describes.
-- The route with the least exposure is gameplay captured from owned copies of
-  the games, with subtitles and interface switched off, and with the publisher's
-  position on monetised commentary videos confirmed in writing or accepted as a
-  known risk by whoever publishes the film. That decision belongs to the
-  publisher of the video, not to this pipeline.
+- All footage comes from one uploader's playthrough series on Dailymotion,
+  recorded without commentary overlays or a facecam: Man of Medan (11 of 12
+  parts available), Little Hope (13 of 14), House of Ashes (13 of 16) and The
+  Devil in Me (18 of 18), all "Curator's Cut" runs. `src/dpa/data/parts.tsv`
+  lists each part and its video id.
+- Until Dawn (23 seconds) comes from the same uploader's Until Dawn series.
+  Directive 8020 (19 seconds) comes from a published 13-minute prologue
+  gameplay video, which carries a "work in progress" watermark that the crop
+  removes.
+- YouTube refused downloads from the cloud machine with a sign-in challenge,
+  and Odysee answered 401; neither was worked around. The Internet Archive had
+  clean footage for only one of the four games.
+- The games and The Curator are, to my knowledge, the property of Supermassive
+  Games, the first season published by Bandai Namco Entertainment; Until Dawn
+  is a Sony Interactive Entertainment title. I found no published policy from
+  either company permitting reuse, so the publisher's own clearance is what
+  the film rests on.
 
-## Footage required
+## Picture quality
 
-`docs/DPA_EDL.md` lists every beat with the picture it needs. In total:
+Shots were chosen on 288p proxies of every part. The host offered the matching
+1080p streams at first and then stopped offering them to the cloud machine
+altogether, so only 49 shots were fetched at 1080p before the fetch was
+stopped. The other 533 shots are cut from the proxies and are visibly soft at
+720p. They are marked `"quality": "proxy"` in the EDL.
 
-| Game                                                                  | Screen time to cover |
-| --------------------------------------------------------------------- | -------------------: |
-| House of Ashes                                                        |                 7:44 |
-| The Devil in Me                                                       |                 6:44 |
-| Little Hope                                                           |                 5:31 |
-| Man of Medan                                                          |                 5:09 |
-| The Curator (library scenes from all four games, plus in-game cameos) |                 3:55 |
-| Mixed montage across the four games                                   |                 2:32 |
-| Until Dawn                                                            |                 0:23 |
-| Directive 8020                                                        |                 0:19 |
+To upgrade them once the 1080p streams are reachable again, from this machine
+or another:
 
-Full story playthroughs with subtitles and interface off cover nearly all of
-it. Recordings should include each game's prologue, the Curator interludes and
-the endings. Source files of 1080p or 720p at any frame rate are fine.
+```bash
+node tools/dpa/fetch-selects.mjs --jobs 2   # only fetches what is missing
+node tools/dpa/apply-selects.mjs            # repoints shots at the 1080p files
+npm run dpa:prep && npm run dpa:render && npm run dpa:qa
+```
+
+Timing, shot choice and crops do not change; only the affected segments are
+re-rendered.
+
+## Where the footage does not match the narration exactly
+
+The recordings are single playthroughs, so some described moments were never
+captured. The closest true footage is used instead. The main cases:
+
+- Man of Medan: no military helicopters (neither recorded ending includes
+  them); documents appear mostly on the collectible reading screen, so in-world
+  crates and a manifest on a table are used; the "girl in the corridor"
+  hallucination is absent.
+- Little Hope: the 1692 hanging and the hanged demon are absent (possibly in
+  the missing part); the arrest ending was not recorded, so the bleak ending is
+  represented by Andrew alone at the ruin, before any weapon appears.
+- House of Ashes: Salim's son never appears on screen; Rachel is not cocooned
+  in this run; three survivors reach the surface, not five.
+- The Devil in Me: no shot of the killer going under water; the epilogue shows
+  the new family at home, not arriving on the island.
+- The Curator's in-game cameos could not be located on contact sheets, so that
+  passage uses him seen at a distance in his library.
+
+Each selection agent's full list is kept with its working notes; the EDL
+records what is on screen for every shot.
+
+## Crops
+
+Three of the games are recorded letterboxed with subtitles on. Every shot is
+punched in to remove both: 1.32x for Man of Medan and Little Hope, 1.45x for
+House of Ashes (subtitles sit inside the picture), 1.25x for The Devil in Me.
+No game audio is used; the soundtrack is the narration alone.
 
 ## Working with footage
 
 ```bash
-# 1. Put source videos under footage/dpa/ (git-ignored), then index them.
-npm run dpa:inventory      # metadata, contact sheets, source cut points
-
-# 2. Assign footage: set "source" and "in" on shots in src/dpa/data/edl.json.
-#    Split a long beat into several shots by adding entries; keep them contiguous.
-
-# 3. Trim and normalise only what the edit uses. Cached per shot.
-npm run dpa:prep
-
-# 4. Check a passage, then render the film. Segments are cached.
-npm run dpa:render -- --from 440 --to 520
-npm run dpa:render
-
-# 5. Automated checks on the delivery file.
-npm run dpa:qa
+npm run dpa:inventory -- --only proxy --every 12 --tile 8x8 --thumb 240x135
+                                   # contact sheets and cut points for proxies
+node tools/dpa/strip.mjs proxy/<part>.mp4 <from> <to> out.jpg   # close look
+# Edit src/dpa/data/selects.json: beat id -> ranges of part footage
+node tools/dpa/fetch-selects.mjs   # full-quality footage for the chosen ranges
+node tools/dpa/apply-selects.mjs   # cut the beats into timed shots
+npm run dpa:prep                   # trim and normalise, cached per shot
+npm run dpa:render -- --from 440 --to 520    # check a passage
+npm run dpa:render                 # the film; segments are cached
+npm run dpa:qa                     # automated checks on the delivery file
 ```
 
-`npm run dpa:edl` rebuilds the EDL from `tools/dpa/plan.txt` and refreshes
-`docs/DPA_EDL.md`; footage already assigned to an unchanged beat is kept.
+`footage/` and `public/dpa/clips/` are not in the repository. On a fresh
+machine the proxies are re-downloaded from the ids in `parts.tsv`.
 
 ## Technical notes
 
