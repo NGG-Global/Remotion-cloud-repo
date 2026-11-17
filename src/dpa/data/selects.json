@@ -1,4011 +1,4016 @@
 {
- "beats": {
-  "cold-open-001": [
-   {
-    "src": "mom_10",
-    "a": 1277.3,
-    "b": 1280.6,
-    "note": "The freighter alone on a flat grey sea, distant, haze on the horizon"
-   },
-   {
-    "src": "mom_08",
-    "a": 784.3,
-    "b": 789.5,
-    "note": "Point of view creeping down a dark rusted corridor, one lamp at the far end"
-   }
-  ],
-  "cold-open-002": [
-   {
-    "src": "mom_08",
-    "a": 791.7,
-    "b": 797.5,
-    "note": "Fliss and Brad look round; cut to Fliss in the foreground turning as a dark figure stands in the corridor behind her (cut at 793.37)"
-   },
-   {
-    "src": "mom_10",
-    "a": 797.5,
-    "b": 803.4,
-    "note": "A lone figure silhouetted at the far end of a black corridor"
-   }
-  ],
-  "cold-open-003": [
-   {
-    "src": "mom_07",
-    "a": 1382.6,
-    "b": 1390.7,
-    "note": "Fliss in the hold, a length of pipe half raised, wary, not striking"
-   }
-  ],
-  "cold-open-004": [
-   {
-    "src": "mom_07",
-    "a": 250.4,
-    "b": 256.4,
-    "note": "Slow push in on Fliss until her eyes fill the frame"
-   },
-   {
-    "src": "mom_10",
-    "a": 945.0,
-    "b": 950.9,
-    "note": "Low angle past her legs: a dark figure advancing through the mist in the corridor"
-   }
-  ],
-  "intro-005": [
-   {
-    "src": "mom_01",
-    "a": 1051.1,
-    "b": 1055.0,
-    "note": "1947 freighter far off in heavy night sea, single light through the murk"
-   }
-  ],
-  "curator-intro-007": [
-   {
-    "src": "mom_01",
-    "a": 1106.6,
-    "b": 1112.8,
-    "note": "Freighter silhouette with one lamp in the storm, wide, rain and swell"
-   },
-   {
-    "src": "mom_01",
-    "a": 426.9,
-    "b": 429.9,
-    "note": "Freighter riding heavy sea at night, lightning forks behind it"
-   }
-  ],
-  "man-of-medan-001": [
-   {
-    "src": "mom_01",
-    "a": 310.5,
-    "b": 315.8,
-    "note": "Camera lifts from the lantern-lit harbour to the freighter under a storm sky"
-   },
-   {
-    "src": "mom_01",
-    "a": 324.0,
-    "b": 329.5,
-    "note": "Crate hoisted by crane on the night dock, freighter behind"
-   },
-   {
-    "src": "mom_01",
-    "a": 415.0,
-    "b": 421.0,
-    "note": "Freighter deck under way at night, lightning in the clouds ahead"
-   }
-  ],
-  "man-of-medan-002": [
-   {
-    "src": "mom_01",
-    "a": 1056.1,
-    "b": 1060.6,
-    "note": "Radio room: operator's hand tapping the morse key"
-   },
-   {
-    "src": "mom_01",
-    "a": 1062.4,
-    "b": 1066.5,
-    "note": "Radio operator at his set, sending"
-   },
-   {
-    "src": "mom_01",
-    "a": 1068.5,
-    "b": 1071.5,
-    "note": "Soldier running down a dim corridor"
-   },
-   {
-    "src": "mom_01",
-    "a": 1073.5,
-    "b": 1080.2,
-    "note": "Radio room goes dark and flickers, operator looks round"
-   }
-  ],
-  "man-of-medan-003": [
-   {
-    "src": "mom_01",
-    "a": 770.0,
-    "b": 776.0,
-    "note": "Two soldiers in a corridor, a dead comrade's head in the foreground"
-   },
-   {
-    "src": "mom_01",
-    "a": 795.0,
-    "b": 800.5,
-    "note": "Dead soldier on the deck plates, mouth open, hands clawed"
-   },
-   {
-    "src": "mom_01",
-    "a": 981.3,
-    "b": 985.2,
-    "note": "Soldier steps through a hatch, a dead man's face in the foreground"
-   },
-   {
-    "src": "mom_01",
-    "a": 986.3,
-    "b": 990.8,
-    "note": "Close on the dead man's face, eyes wide, frozen"
-   }
-  ],
-  "man-of-medan-004": [
-   {
-    "src": "mom_01",
-    "a": 434.9,
-    "b": 439.5,
-    "note": "Ship's superstructure in silhouette, lightning strikes, sparks shower"
-   },
-   {
-    "src": "mom_01",
-    "a": 1096.5,
-    "b": 1100.3,
-    "note": "High angle on the rain-lashed deck and swinging lifeboat"
-   }
-  ],
-  "man-of-medan-005": [
-   {
-    "src": "mom_12",
-    "a": 2875.6,
-    "b": 2879.3,
-    "note": "The freighter far off on a flat grey sea under haze, slow wide"
-   },
-   {
-    "src": "mom_08",
-    "a": 1755.6,
-    "b": 1760.2,
-    "note": "Rusted superstructure and deck through rain and mist, slow wide"
-   },
-   {
-    "src": "mom_12",
-    "a": 2917.58,
-    "b": 2920.54,
-    "note": "Daylight: the corroded hull rising from still water, the dive boat tiny beside it"
-   },
-   {
-    "src": "mom_12",
-    "a": 2936.4,
-    "b": 2941.9,
-    "note": "Wide grey sea at first light, the hull's edge at right, the dive boat a speck toward the low sun"
-   }
-  ],
-  "man-of-medan-006": [
-   {
-    "src": "mom_02",
-    "a": 427.7,
-    "b": 430.9,
-    "note": "Aerial: the Duke of Milan alone on bright open sea"
-   },
-   {
-    "src": "mom_02",
-    "a": 929.0,
-    "b": 935.0,
-    "note": "Dive boat from astern under a blue sky, wake spreading"
-   }
-  ],
-  "man-of-medan-007": [
-   {
-    "src": "mom_03",
-    "a": 1142.2,
-    "b": 1147.4,
-    "note": "All five on the stern deck at dusk around a lantern, sea behind"
-   }
-  ],
-  "man-of-medan-008": [
-   {
-    "src": "mom_02",
-    "a": 192.2,
-    "b": 196.2,
-    "note": "Alex on the dock against the sea, then Brad by the boat (cut at 193.98)"
-   }
-  ],
-  "man-of-medan-009": [
-   {
-    "src": "mom_02",
-    "a": 574.5,
-    "b": 580.3,
-    "note": "Close on Julia in her dive vest, sea behind"
-   },
-   {
-    "src": "mom_02",
-    "a": 381.2,
-    "b": 386.0,
-    "note": "Close on Conrad in the wheelhouse, grinning"
-   },
-   {
-    "src": "mom_02",
-    "a": 522.5,
-    "b": 527.1,
-    "note": "Fliss at the helm, one hand on the frame, talking over her shoulder"
-   }
-  ],
-  "man-of-medan-010": [
-   {
-    "src": "mom_02",
-    "a": 1110.0,
-    "b": 1116.0,
-    "note": "Two divers sinking through blue water, torches on"
-   },
-   {
-    "src": "mom_02",
-    "a": 1127.5,
-    "b": 1134.5,
-    "note": "The bomber wreck on the seabed, divers swimming down to it"
-   }
-  ],
-  "man-of-medan-011": [
-   {
-    "src": "mom_03",
-    "a": 995.0,
-    "b": 1001.0,
-    "note": "Dive boat at night, the group moving about the lit deck"
-   },
-   {
-    "src": "mom_03",
-    "a": 1178.7,
-    "b": 1184.3,
-    "note": "Conrad holding court on deck, beer in hand"
-   },
-   {
-    "src": "mom_03",
-    "a": 1192.6,
-    "b": 1196.6,
-    "note": "Julia and Fliss clink beer bottles"
-   },
-   {
-    "src": "mom_03",
-    "a": 506.2,
-    "b": 509.4,
-    "note": "Sunset: the dive boat far off on the horizon as a speedboat slides into frame"
-   }
-  ],
-  "man-of-medan-012": [
-   {
-    "src": "mom_04",
-    "a": 126.0,
-    "b": 130.3,
-    "note": "Cabin door handle slowly turning in the dark"
-   },
-   {
-    "src": "mom_04",
-    "a": 131.4,
-    "b": 135.5,
-    "note": "Hooded intruder silhouetted in the doorway with a torch"
-   },
-   {
-    "src": "mom_04",
-    "a": 190.5,
-    "b": 196.5,
-    "note": "Olson steps down into the cabin and looks over his captives"
-   },
-   {
-    "src": "mom_04",
-    "a": 212.5,
-    "b": 217.0,
-    "note": "Fliss and Brad bound on the cabin floor"
-   }
-  ],
-  "man-of-medan-013": [
-   {
-    "src": "mom_04",
-    "a": 982.3,
-    "b": 987.2,
-    "note": "Dive boat, lights blazing, pitching through the storm"
-   },
-   {
-    "src": "mom_05",
-    "a": 110.6,
-    "b": 113.6,
-    "note": "High wide: the boat dwarfed alongside the freighter's hull in the rain"
-   },
-   {
-    "src": "mom_05",
-    "a": 114.6,
-    "b": 117.7,
-    "note": "Looking up the wet riveted hull plates"
-   }
-  ],
-  "man-of-medan-014": [
-   {
-    "src": "mom_06",
-    "a": 748.1,
-    "b": 753.6,
-    "note": "Fliss's torch sweeps a rust-eaten corridor, a mummified body slumped by the wall"
-   }
-  ],
-  "man-of-medan-015": [
-   {
-    "src": "mom_12",
-    "a": 1272.3,
-    "b": 1277.5,
-    "note": "Olson's corpse lifts its head off the deck and pushes itself up toward camera"
-   },
-   {
-    "src": "mom_06",
-    "a": 773.1,
-    "b": 777.8,
-    "note": "Underwater: a corpse drags Fliss down, its face at her shoulder"
-   },
-   {
-    "src": "mom_06",
-    "a": 790.8,
-    "b": 794.3,
-    "note": "Dead hands reach for Fliss as she swings her torch"
-   },
-   {
-    "src": "mom_06",
-    "a": 811.0,
-    "b": 814.8,
-    "note": "Fliss turns to Brad and his face is a rotting mask"
-   }
-  ],
-  "man-of-medan-016": [
-   {
-    "src": "mom_06",
-    "a": 411.0,
-    "b": 418.4,
-    "note": "Danny from behind, staring into the dark, slowly drawing his pistol"
-   },
-   {
-    "src": "mom_06",
-    "a": 425.6,
-    "b": 429.0,
-    "note": "Close on Danny under his cap, eyes darting, panicked"
-   },
-   {
-    "src": "mom_10",
-    "a": 321.1,
-    "b": 327.5,
-    "note": "Olson backlit in a corridor doorway, hammer hanging from his hand"
-   },
-   {
-    "src": "mom_10",
-    "a": 932.6,
-    "b": 936.1,
-    "note": "Olson slumped against a bulkhead clutching his chest, gasping"
-   }
-  ],
-  "man-of-medan-017": [
-   {
-    "src": "mom_06",
-    "a": 494.2,
-    "b": 499.5,
-    "note": "Fliss turns in a pitch-dark corridor, her torch beam swinging across empty bulkheads"
-   }
-  ],
-  "man-of-medan-018": [
-   {
-    "src": "mom_12",
-    "a": 1059.7,
-    "b": 1065.2,
-    "note": "Over Brad's shoulder a figure stands far off in the hold; rotting boots step forward (cut at 1061.54)"
-   },
-   {
-    "src": "mom_12",
-    "a": 1066.5,
-    "b": 1069.6,
-    "note": "What Brad sees: a dead soldier lurching at him, arm outstretched"
-   },
-   {
-    "src": "mom_07",
-    "a": 1368.95,
-    "b": 1376.4,
-    "note": "The same encounter in the other playthrough: it is Fliss standing there; Brad and Fliss face each other (game cuts)"
-   }
-  ],
-  "man-of-medan-019": [
-   {
-    "src": "mom_12",
-    "a": 1018.0,
-    "b": 1022.8,
-    "note": "Brad's hand closes on a heavy spanner lying on the deck"
-   },
-   {
-    "src": "mom_12",
-    "a": 1070.7,
-    "b": 1075.3,
-    "note": "Brad backs away from the dead soldier and raises the spanner (game cuts)"
-   },
-   {
-    "src": "mom_12",
-    "a": 1076.5,
-    "b": 1079.9,
-    "note": "The creature a step away; close on Brad's face, spanner up, not yet swinging"
-   }
-  ],
-  "man-of-medan-020": [
-   {
-    "src": "mom_08",
-    "a": 878.56,
-    "b": 881.52,
-    "note": "Over Fliss's shoulder: the cargo manifest lying on a table under her torch (short, 3 s)"
-   },
-   {
-    "src": "mom_07",
-    "a": 434.6,
-    "b": 438.8,
-    "note": "Fliss sets the ship's cargo manual down on a drum beside a rusted chain"
-   },
-   {
-    "src": "mom_07",
-    "a": 268.3,
-    "b": 273.5,
-    "note": "Fliss lifts a crate lid in the hold: sacks crusted with yellow-green chemical"
-   },
-   {
-    "src": "mom_01",
-    "a": 349.0,
-    "b": 356.0,
-    "note": "1947: the skull-stencilled crates stacked in the hold, camera pulling back"
-   }
-  ],
-  "man-of-medan-021": [
-   {
-    "src": "mom_01",
-    "a": 451.0,
-    "b": 457.5,
-    "note": "1947 hold: stacked crates stencilled with skulls, yellow vapour seeping from them"
-   },
-   {
-    "src": "mom_01",
-    "a": 458.8,
-    "b": 466.0,
-    "note": "1947 hold from above: mist creeping across the deck between the cargo cases"
-   },
-   {
-    "src": "mom_10",
-    "a": 897.0,
-    "b": 905.0,
-    "note": "Present day: thick green-yellow mist rolling low along the deck"
-   }
-  ],
-  "man-of-medan-022": [
-   {
-    "src": "mom_01",
-    "a": 949.0,
-    "b": 956.5,
-    "note": "Armed soldier backs away as dark figures come at him out of the orange haze"
-   },
-   {
-    "src": "mom_01",
-    "a": 1007.0,
-    "b": 1010.8,
-    "note": "Figure in a conical hat seen from behind in the hold"
-   },
-   {
-    "src": "mom_01",
-    "a": 968.8,
-    "b": 972.1,
-    "note": "Soldier's body sprawled on the red deck"
-   }
-  ],
-  "man-of-medan-023": [
-   {
-    "src": "mom_08",
-    "a": 801.6,
-    "b": 809.0,
-    "note": "The dark figure walks up; Fliss and Brad stare; it is Conrad, palms raised (game cuts)"
-   },
-   {
-    "src": "mom_12",
-    "a": 1341.0,
-    "b": 1348.2,
-    "note": "Brad braced with his torch; cut to Conrad stepping into the light, hands up"
-   }
-  ],
-  "man-of-medan-024": [
-   {
-    "src": "mom_10",
-    "a": 454.0,
-    "b": 460.0,
-    "note": "Pistol barrel in the foreground levelled at Julia's head, Brad frozen beyond it"
-   },
-   {
-    "src": "mom_10",
-    "a": 484.8,
-    "b": 488.9,
-    "note": "Junior aiming straight down the lens, wild-eyed"
-   },
-   {
-    "src": "mom_10",
-    "a": 492.0,
-    "b": 498.3,
-    "note": "Julia with her hands up against the bulkhead, terrified"
-   },
-   {
-    "src": "mom_10",
-    "a": 525.4,
-    "b": 529.2,
-    "note": "Brad backed against the wall, hands raised"
-   }
-  ],
-  "man-of-medan-025": [
-   {
-    "src": "mom_10",
-    "a": 520.3,
-    "b": 524.3,
-    "note": "Close on Junior's face, sweating, unsure"
-   },
-   {
-    "src": "mom_10",
-    "a": 605.5,
-    "b": 609.6,
-    "note": "Julia in close profile, one hand raised, pleading"
-   },
-   {
-    "src": "mom_10",
-    "a": 610.9,
-    "b": 615.2,
-    "note": "Junior with the pistol lowered, wavering"
-   }
-  ],
-  "man-of-medan-026": [
-   {
-    "src": "mom_12",
-    "a": 1425.0,
-    "b": 1431.0,
-    "note": "Brad bolts down a stairway and along a rusted corridor (game cuts)"
-   },
-   {
-    "src": "mom_10",
-    "a": 952.0,
-    "b": 958.0,
-    "note": "Fliss running along the outer gangway at night, sea to one side"
-   },
-   {
-    "src": "mom_12",
-    "a": 1356.0,
-    "b": 1360.1,
-    "note": "Close on a bulkhead door's locking wheel spinning shut"
-   }
-  ],
-  "man-of-medan-027": [
-   {
-    "src": "mom_05",
-    "a": 1680.2,
-    "b": 1685.1,
-    "note": "Fliss crouches in the hold; close on the distributor cap lying on the deck"
-   },
-   {
-    "src": "mom_10",
-    "a": 1311.0,
-    "b": 1318.2,
-    "note": "Fliss sets the distributor cap down on the boat's engine hatch, open sea behind"
-   },
-   {
-    "src": "mom_10",
-    "a": 1334.6,
-    "b": 1340.6,
-    "note": "The dive boat pulls away from the freighter's hull in a cloud of exhaust"
-   }
-  ],
-  "man-of-medan-028": [
-   {
-    "src": "mom_12",
-    "a": 1908.2,
-    "b": 1912.5,
-    "note": "Radio room: Julia at the old set from behind, then Brad, Alex and Julia bent over it (cut at 1910.02)"
-   },
-   {
-    "src": "mom_12",
-    "a": 1920.0,
-    "b": 1924.8,
-    "note": "Close on a hand turning the radio's tuning dial"
-   },
-   {
-    "src": "mom_12",
-    "a": 1935.7,
-    "b": 1939.3,
-    "note": "Julia's face close, listening hard to the receiver"
-   },
-   {
-    "src": "mom_01",
-    "a": 49.6,
-    "b": 54.8,
-    "note": "1947: soldiers carry a flag-draped coffin aboard, standing in for the military's buried secrets"
-   }
-  ],
-  "man-of-medan-029": [
-   {
-    "src": "mom_05",
-    "a": 199.0,
-    "b": 206.0,
-    "note": "Captives and pirates file along a gangway through the cavernous hold by torchlight, wide"
-   },
-   {
-    "src": "mom_12",
-    "a": 984.5,
-    "b": 989.0,
-    "note": "Torch beam on a locker door; a screaming dead face fills the frame"
-   }
-  ],
-  "man-of-medan-030": [
-   {
-    "src": "mom_07",
-    "a": 244.8,
-    "b": 249.3,
-    "note": "Fliss at the rail, medium close, staring out at the dark sea"
-   },
-   {
-    "src": "mom_01",
-    "a": 1101.4,
-    "b": 1105.5,
-    "note": "Extreme close on the radio operator's eyes, wide with terror at something off screen"
-   },
-   {
-    "src": "mom_12",
-    "a": 2929.2,
-    "b": 2935.2,
-    "note": "The dive boat pulls away and the rusted hull slides out of frame over grey water"
-   }
-  ],
-  "themes-002": [
-   {
-    "src": "mom_12",
-    "a": 1279.5,
-    "b": 1283.0,
-    "note": "The dead Olson on his feet, a grey distorted figure in the gloom"
-   }
-  ],
-  "themes-007": [
-   {
-    "src": "mom_10",
-    "a": 939.0,
-    "b": 943.9,
-    "note": "Fliss in a corridor, staring ahead at something off screen, frightened"
-   }
-  ],
-  "outro-003": [
-   {
-    "src": "mom_08",
-    "a": 1727.8,
-    "b": 1730.4,
-    "note": "The freighter's deck and cranes in driving rain, wide (the whole shot is 2.6 s; the beat needs 1.4 s)"
-   }
-  ],
-  "intro-006": [
-   {
-    "src": "lh_09",
-    "a": 1252.5,
-    "b": 1258.7,
-    "note": "Empty fog-bound street with fence and lamp post, after the burning figure has faded out"
-   }
-  ],
-  "little-hope-001": [
-   {
-    "src": "lh_01",
-    "a": 89.2,
-    "b": 92.7,
-    "note": "Driver's-eye view of the night road in headlights, road sign passing"
-   },
-   {
-    "src": "lh_01",
-    "a": 205.2,
-    "b": 210.9,
-    "note": "Bus headlights glimpsed through trees, passing in fog"
-   },
-   {
-    "src": "lh_01",
-    "a": 219.9,
-    "b": 223.7,
-    "note": "Road ahead in the headlights, fence and warning sign"
-   }
-  ],
-  "little-hope-002": [
-   {
-    "src": "lh_01",
-    "a": 291.6,
-    "b": 299.8,
-    "note": "Clarke house exterior at night in snow, camera tilting up to the lit windows"
-   },
-   {
-    "src": "lh_01",
-    "a": 475.4,
-    "b": 481.3,
-    "note": "Anthony and Tanya in the hallway of the house"
-   }
-  ],
-  "little-hope-003": [
-   {
-    "src": "lh_01",
-    "a": 995.9,
-    "b": 999.1,
-    "note": "Fire seen through the kitchen window"
-   },
-   {
-    "src": "lh_01",
-    "a": 1000.5,
-    "b": 1004.5,
-    "note": "Flames spreading across the kitchen floor"
-   },
-   {
-    "src": "lh_01",
-    "a": 1045.3,
-    "b": 1048.5,
-    "note": "Tanya on the balcony above the flames"
-   },
-   {
-    "src": "lh_01",
-    "a": 1049.6,
-    "b": 1053.7,
-    "note": "Dennis in the smoke-filled room"
-   },
-   {
-    "src": "lh_01",
-    "a": 1092.8,
-    "b": 1095.9,
-    "note": "James trapped inside, fire around him"
-   }
-  ],
-  "little-hope-004": [
-   {
-    "src": "lh_01",
-    "a": 1138.3,
-    "b": 1145.5,
-    "note": "Anthony in silhouette before the burning porch, then wide from behind as he faces the burning house (one game cut at 1141.56)"
-   },
-   {
-    "src": "lh_01",
-    "a": 1081.5,
-    "b": 1085.4,
-    "note": "The fire through the window, Anthony at the house unable to get in"
-   },
-   {
-    "src": "lh_01",
-    "a": 1066.4,
-    "b": 1069.3,
-    "note": "Anthony small in the snow, seen from the balcony"
-   }
-  ],
-  "little-hope-005": [
-   {
-    "src": "lh_01",
-    "a": 1223.4,
-    "b": 1229.9,
-    "note": "Anthony's face lit by the fire, looking up, embers behind him"
-   },
-   {
-    "src": "lh_01",
-    "a": 1146.6,
-    "b": 1150.4,
-    "note": "Anthony in the snow shouting toward the house, embers in the air"
-   },
-   {
-    "src": "lh_01",
-    "a": 1233.1,
-    "b": 1236.7,
-    "note": "Anthony clutching the locket to his chest, then on his knees in the snow as a neighbour reaches him (one game cut)"
-   }
-  ],
-  "little-hope-006": [
-   {
-    "src": "lh_04",
-    "a": 104.3,
-    "b": 110.8,
-    "note": "Street lamp glowing in thick fog, camera tilting down to the road with distant silhouettes"
-   },
-   {
-    "src": "lh_02",
-    "a": 870.2,
-    "b": 877.5,
-    "note": "Empty road swallowed by the fog wall"
-   }
-  ],
-  "little-hope-007": [
-   {
-    "src": "lh_01",
-    "a": 65.0,
-    "b": 72.3,
-    "note": "Aerial of the bus, headlights on, on the night road"
-   },
-   {
-    "src": "lh_01",
-    "a": 93.8,
-    "b": 98.0,
-    "note": "Bus headlights approaching along the foggy road"
-   },
-   {
-    "src": "lh_01",
-    "a": 104.6,
-    "b": 107.6,
-    "note": "Bus approaches and passes the camera"
-   },
-   {
-    "src": "lh_01",
-    "a": 226.8,
-    "b": 229.9,
-    "note": "Inside the bus from behind the driver, a passenger in silhouette against the windscreen"
-   }
-  ],
-  "little-hope-008": [
-   {
-    "src": "lh_04",
-    "a": 552.6,
-    "b": 556.1,
-    "note": "The girl standing in the road under the street lamps (stand-in, see misses)"
-   },
-   {
-    "src": "lh_01",
-    "a": 254.95,
-    "b": 258.0,
-    "note": "Swerve seen from behind the driver, the bus tips and slides on its side (game cuts)"
-   },
-   {
-    "src": "lh_01",
-    "a": 262.2,
-    "b": 265.0,
-    "note": "Overturned bus, wheel still spinning, steam"
-   }
-  ],
-  "little-hope-009": [
-   {
-    "src": "lh_02",
-    "a": 298.1,
-    "b": 305.3,
-    "note": "Crash site: the overturned bus seen from behind, wide"
-   },
-   {
-    "src": "lh_02",
-    "a": 800.2,
-    "b": 806.4,
-    "note": "Taylor walks into the fog wall and vanishes"
-   },
-   {
-    "src": "lh_02",
-    "a": 863.7,
-    "b": 869.0,
-    "note": "The group walks into the fog"
-   },
-   {
-    "src": "lh_02",
-    "a": 878.6,
-    "b": 886.0,
-    "note": "The group emerges from the fog where they started, backs to camera"
-   }
-  ],
-  "little-hope-010": [
-   {
-    "src": "lh_03",
-    "a": 1168.4,
-    "b": 1175.6,
-    "note": "The girl standing in the dark woods, a white flash and grabbing hands, Andrew and Angela land in 1692 (the game's own rapid flash cuts)"
-   }
-  ],
-  "little-hope-011": [
-   {
-    "src": "lh_05",
-    "a": 1549.3,
-    "b": 1558.2,
-    "note": "Wide of the meeting house with Mary at the centre, then Mary with the court around her (one game cut)"
-   },
-   {
-    "src": "lh_05",
-    "a": 1592.1,
-    "b": 1600.1,
-    "note": "Reverend Carver walks the floor before the townspeople"
-   },
-   {
-    "src": "lh_05",
-    "a": 1748.8,
-    "b": 1754.3,
-    "note": "The judge in his hat presiding"
-   }
-  ],
-  "little-hope-012": [
-   {
-    "src": "lh_04",
-    "a": 702.4,
-    "b": 705.7,
-    "note": "Amy, Angela's 1692 double, close"
-   },
-   {
-    "src": "lh_04",
-    "a": 706.8,
-    "b": 714.5,
-    "note": "Angela staring at her double, John behind her"
-   },
-   {
-    "src": "lh_09",
-    "a": 251.6,
-    "b": 258.7,
-    "note": "Daniel face to face with David, his 1692 double, in the church"
-   }
-  ],
-  "little-hope-013": [
-   {
-    "src": "lh_05",
-    "a": 1625.2,
-    "b": 1629.5,
-    "note": "Amy accused in the meeting house, close"
-   },
-   {
-    "src": "lh_05",
-    "a": 1648.9,
-    "b": 1654.8,
-    "note": "Joseph, John's double, before the court with Amy in the foreground"
-   },
-   {
-    "src": "lh_08",
-    "a": 390.2,
-    "b": 395.8,
-    "note": "Tabitha, Taylor's double"
-   },
-   {
-    "src": "lh_09",
-    "a": 506.2,
-    "b": 511.9,
-    "note": "David, Daniel's double"
-   }
-  ],
-  "little-hope-014": [
-   {
-    "src": "lh_09",
-    "a": 1193.8,
-    "b": 1198.9,
-    "note": "Andrew in silhouette; in the fog beyond him the burned demon holds Taylor"
-   },
-   {
-    "src": "lh_08",
-    "a": 1598.5,
-    "b": 1601.3,
-    "note": "Daniel scrambles up; a demon stands in the fog behind him"
-   },
-   {
-    "src": "lh_14",
-    "a": 1886.6,
-    "b": 1890.3,
-    "note": "Demon crawling in the foreground before the ruined house"
-   }
-  ],
-  "little-hope-015": [
-   {
-    "src": "lh_07",
-    "a": 1245.3,
-    "b": 1250.7,
-    "note": "Hanged effigies in the museum, lit by torchlight (stand-in for the hanging, see misses)"
-   },
-   {
-    "src": "lh_14",
-    "a": 201.0,
-    "b": 203.5,
-    "note": "Demon in chains crawling"
-   },
-   {
-    "src": "lh_14",
-    "a": 568.3,
-    "b": 570.9,
-    "note": "Demon crawling toward Daniel"
-   }
-  ],
-  "little-hope-016": [
-   {
-    "src": "lh_08",
-    "a": 1593.5,
-    "b": 1597.4,
-    "note": "Charred arm and hand of the burned demon reaching, close"
-   }
-  ],
-  "little-hope-017": [
-   {
-    "src": "lh_14",
-    "a": 134.95,
-    "b": 138.1,
-    "note": "Dark water under the bridge, ripples as something rises"
-   },
-   {
-    "src": "lh_14",
-    "a": 147.8,
-    "b": 151.7,
-    "note": "The drowned demon on the wet ground, then wide with the demon in the foreground and three figures in the light (one game cut)"
-   },
-   {
-    "src": "lh_14",
-    "a": 221.6,
-    "b": 226.8,
-    "note": "The demon crawling in chains at the water's edge, then sinking back into the dark (one game cut at 222.8)"
-   }
-  ],
-  "little-hope-018": [
-   {
-    "src": "lh_14",
-    "a": 247.5,
-    "b": 254.1,
-    "note": "John, Angela and Andrew talking at the picket fence"
-   },
-   {
-    "src": "lh_09",
-    "a": 179.9,
-    "b": 185.6,
-    "note": "Church interior, cross on the altar, shaft of light"
-   },
-   {
-    "src": "lh_02",
-    "a": 109.1,
-    "b": 116.7,
-    "note": "Graveyard in the fog: a stone cross with a crow, mourners under umbrellas behind"
-   }
-  ],
-  "little-hope-019": [
-   {
-    "src": "lh_01",
-    "a": 526.3,
-    "b": 530.3,
-    "note": "1972: Anthony, Tanya and Dennis in the hall"
-   },
-   {
-    "src": "lh_02",
-    "a": 1300.9,
-    "b": 1306.6,
-    "note": "Present day: the five walking toward camera"
-   },
-   {
-    "src": "lh_01",
-    "a": 319.5,
-    "b": 322.8,
-    "note": "1972: James and Anne in the bedroom"
-   },
-   {
-    "src": "lh_04",
-    "a": 532.8,
-    "b": 538.7,
-    "note": "Present day: the five standing on the road, wide"
-   },
-   {
-    "src": "lh_01",
-    "a": 215.5,
-    "b": 218.8,
-    "note": "The driver's hands on the wheel, no face"
-   }
-  ],
-  "little-hope-020": [
-   {
-    "src": "lh_12",
-    "a": 1053.4,
-    "b": 1062.3,
-    "note": "Andrew outside the diner, turning and looking around, alone"
-   }
-  ],
-  "little-hope-021": [
-   {
-    "src": "lh_12",
-    "a": 1047.5,
-    "b": 1052.3,
-    "note": "John in profile against the dawn light, the last of them"
-   },
-   {
-    "src": "lh_12",
-    "a": 1041.9,
-    "b": 1046.4,
-    "note": "Wide of the diner, two small figures beside it"
-   },
-   {
-    "src": "lh_12",
-    "a": 1063.6,
-    "b": 1070.6,
-    "note": "The same wide of the diner, nobody there"
-   }
-  ],
-  "little-hope-022": [
-   {
-    "src": "lh_12",
-    "a": 1071.7,
-    "b": 1074.8,
-    "note": "The back of an older man's head, diner lights behind"
-   },
-   {
-    "src": "lh_12",
-    "a": 1075.9,
-    "b": 1083.4,
-    "note": "Camera moves round him: the bus company patch on his sleeve, then his profile"
-   },
-   {
-    "src": "lh_12",
-    "a": 1084.5,
-    "b": 1092.3,
-    "note": "The older Anthony's face revealed outside the diner"
-   }
-  ],
-  "little-hope-023": [
-   {
-    "src": "lh_14",
-    "a": 276.9,
-    "b": 280.4,
-    "note": "John, close"
-   },
-   {
-    "src": "lh_01",
-    "a": 323.9,
-    "b": 327.5,
-    "note": "James, close"
-   },
-   {
-    "src": "lh_14",
-    "a": 266.4,
-    "b": 269.8,
-    "note": "Angela, close"
-   },
-   {
-    "src": "lh_01",
-    "a": 315.9,
-    "b": 318.4,
-    "note": "Anne at the bookshelves"
-   },
-   {
-    "src": "lh_14",
-    "a": 602.0,
-    "b": 604.8,
-    "note": "Daniel, close, John behind him"
-   },
-   {
-    "src": "lh_01",
-    "a": 517.2,
-    "b": 520.6,
-    "note": "Dennis with his records"
-   },
-   {
-    "src": "lh_07",
-    "a": 878.0,
-    "b": 881.2,
-    "note": "Taylor in profile"
-   },
-   {
-    "src": "lh_01",
-    "a": 502.2,
-    "b": 505.6,
-    "note": "Tanya, close"
-   }
-  ],
-  "little-hope-024": [
-   {
-    "src": "lh_03",
-    "a": 1231.0,
-    "b": 1236.1,
-    "note": "Mary in 1692, close"
-   },
-   {
-    "src": "lh_01",
-    "a": 310.7,
-    "b": 314.8,
-    "note": "Megan in 1972, close"
-   }
-  ],
-  "little-hope-025": [
-   {
-    "src": "lh_14",
-    "a": 2387.2,
-    "b": 2392.6,
-    "note": "The burnt ruin of the house at dawn, wide"
-   },
-   {
-    "src": "lh_14",
-    "a": 2393.6,
-    "b": 2401.5,
-    "note": "Andrew sitting on the porch of the ruin, slow push in"
-   },
-   {
-    "src": "lh_01",
-    "a": 1023.7,
-    "b": 1029.5,
-    "note": "Flashback: fire spreading through the living room"
-   },
-   {
-    "src": "lh_14",
-    "a": 2522.6,
-    "b": 2526.6,
-    "note": "The older Anthony at the ruin, head bowed"
-   },
-   {
-    "src": "lh_01",
-    "a": 1018.6,
-    "b": 1022.2,
-    "note": "Flashback: the kitchen ablaze"
-   }
-  ],
-  "little-hope-026": [
-   {
-    "src": "lh_01",
-    "a": 965.1,
-    "b": 972.0,
-    "note": "Megan in silhouette walking into the kitchen to the stove"
-   },
-   {
-    "src": "lh_01",
-    "a": 984.8,
-    "b": 989.9,
-    "note": "Gas flame in the foreground, the doll on the stove catches fire"
-   },
-   {
-    "src": "lh_14",
-    "a": 2527.7,
-    "b": 2532.3,
-    "note": "The older Anthony, head bowed, Megan standing beside him"
-   }
-  ],
-  "little-hope-027": [
-   {
-    "src": "lh_12",
-    "a": 660.4,
-    "b": 668.4,
-    "note": "Mary standing before the judges in the court"
-   },
-   {
-    "src": "lh_12",
-    "a": 725.9,
-    "b": 731.2,
-    "note": "Mary close, giving her testimony"
-   },
-   {
-    "src": "lh_05",
-    "a": 1571.1,
-    "b": 1574.0,
-    "note": "Mary close at the first trial"
-   }
-  ],
-  "little-hope-028": [
-   {
-    "src": "lh_04",
-    "a": 1879.4,
-    "b": 1887.4,
-    "note": "Carver with a candle, taking the poppet from the barrel"
-   },
-   {
-    "src": "lh_04",
-    "a": 1890.6,
-    "b": 1895.7,
-    "note": "Mary looking up at Carver, who stands over her"
-   },
-   {
-    "src": "lh_04",
-    "a": 1922.7,
-    "b": 1930.9,
-    "note": "Mary answering him, close"
-   }
-  ],
-  "little-hope-029": [
-   {
-    "src": "lh_12",
-    "a": 646.8,
-    "b": 654.1,
-    "note": "The final trial: wide of the court, then high angle as Carver takes the floor (one game cut)"
-   },
-   {
-    "src": "lh_12",
-    "a": 762.3,
-    "b": 769.5,
-    "note": "Abraham, Andrew's double, pointing and speaking out"
-   },
-   {
-    "src": "lh_12",
-    "a": 789.2,
-    "b": 796.2,
-    "note": "Andrew at Abraham's shoulder, speaking up"
-   },
-   {
-    "src": "lh_01",
-    "a": 975.3,
-    "b": 979.1,
-    "note": "Megan close by the stove, her shadow on the wall"
-   }
-  ],
-  "little-hope-030": [
-   {
-    "src": "lh_12",
-    "a": 1230.6,
-    "b": 1239.5,
-    "note": "Good ending: the older Anthony's face in daylight, calm"
-   },
-   {
-    "src": "lh_14",
-    "a": 2368.4,
-    "b": 2376.4,
-    "note": "Bleak ending: Andrew kneeling alone at the steps of the ruin, camera pulling back (arrest not in the recording, see misses)"
-   }
-  ],
-  "little-hope-031": [
-   {
-    "src": "lh_09",
-    "a": 1242.1,
-    "b": 1250.0,
-    "note": "The burning figure walks away and dissolves into the fog"
-   },
-   {
-    "src": "lh_12",
-    "a": 1181.8,
-    "b": 1188.3,
-    "note": "High angle: Anthony walking away alone under a single lamp"
-   }
-  ],
-  "little-hope-032": [
-   {
-    "src": "lh_14",
-    "a": 547.3,
-    "b": 551.7,
-    "note": "Daniel and John running"
-   },
-   {
-    "src": "lh_08",
-    "a": 1489.2,
-    "b": 1496.7,
-    "note": "Daniel and Taylor look back; the demon's legs in the foreground walking toward them; Daniel pulls Taylor away (game cuts)"
-   },
-   {
-    "src": "lh_08",
-    "a": 1533.3,
-    "b": 1540.0,
-    "note": "The demon walks past the truck the pair are hiding behind"
-   },
-   {
-    "src": "lh_08",
-    "a": 1547.3,
-    "b": 1555.7,
-    "note": "The demon by the barrels, the pair hiding, then running (game cuts)"
-   }
-  ],
-  "themes-003": [
-   {
-    "src": "lh_01",
-    "a": 132.2,
-    "b": 137.6,
-    "note": "The older Anthony at the wheel, close on his face"
-   }
-  ],
-  "themes-008": [
-   {
-    "src": "lh_05",
-    "a": 1544.6,
-    "b": 1548.2,
-    "note": "Andrew and John standing in the meeting house, watching"
-   },
-   {
-    "src": "lh_04",
-    "a": 1872.9,
-    "b": 1878.3,
-    "note": "Daniel, Taylor and Angela watching Carver, his back in the foreground"
-   }
-  ],
-  "outro-004": [
-   {
-    "src": "lh_08",
-    "a": 1150.0,
-    "b": 1154.0,
-    "note": "The foggy main street under an orange street lamp, two small figures walking away"
-   }
-  ],
-  "intro-007": [
-   {
-    "src": "hoa_01",
-    "a": 1784.4,
-    "b": 1790.0,
-    "note": "Wide of the temple interior, pool and fire bowls (prologue)"
-   },
-   {
-    "src": "hoa_04",
-    "a": 702.2,
-    "b": 706.8,
-    "note": "Wide ruined temple hall, Salim walking through with a light"
-   }
-  ],
-  "little-hope-034": [
-   {
-    "src": "hoa_05",
-    "a": 1080.2,
-    "b": 1086.4,
-    "note": "Clawed feet walk past in the dark"
-   },
-   {
-    "src": "hoa_12",
-    "a": 1502.1,
-    "b": 1506.8,
-    "note": "Creature silhouette in foreground, watching"
-   },
-   {
-    "src": "hoa_12",
-    "a": 1521.2,
-    "b": 1528.6,
-    "note": "Creature claw close in foreground, figures far off"
-   }
-  ],
-  "house-of-ashes-001": [
-   {
-    "src": "hoa_01",
-    "a": 356.1,
-    "b": 362.9,
-    "note": "Colossal statue face above the city of Akkad"
-   },
-   {
-    "src": "hoa_01",
-    "a": 366.0,
-    "b": 372.8,
-    "note": "Tilt down the statue to a line of Akkadian soldiers with shields"
-   },
-   {
-    "src": "hoa_01",
-    "a": 384.8,
-    "b": 390.3,
-    "note": "Tilt down a colossal statue to the temple exterior, soldier in foreground"
-   }
-  ],
-  "house-of-ashes-002": [
-   {
-    "src": "hoa_01",
-    "a": 327.3,
-    "b": 333.3,
-    "note": "Naram-Sin seated on his throne"
-   },
-   {
-    "src": "hoa_01",
-    "a": 1794.6,
-    "b": 1797.6,
-    "note": "Gold-masked king enthroned in the temple"
-   }
-  ],
-  "house-of-ashes-003": [
-   {
-    "src": "hoa_01",
-    "a": 1802.9,
-    "b": 1808.3,
-    "note": "Eclipse seen through temple columns, then creature-eye view of soldiers running"
-   },
-   {
-    "src": "hoa_01",
-    "a": 1810.8,
-    "b": 1819.8,
-    "note": "Creature-eye view of soldiers at the door, then a soldier bars it"
-   }
-  ],
-  "house-of-ashes-004": [
-   {
-    "src": "hoa_03",
-    "a": 570.2,
-    "b": 575.6,
-    "note": "Desert wide with helicopter"
-   },
-   {
-    "src": "hoa_03",
-    "a": 784.5,
-    "b": 789.0,
-    "note": "Helicopters over the valley, wide"
-   },
-   {
-    "src": "hoa_03",
-    "a": 768.8,
-    "b": 773.1,
-    "note": "Helicopters seen from a truck window"
-   },
-   {
-    "src": "hoa_02",
-    "a": 407.6,
-    "b": 411.4,
-    "note": "Wide of the palace hall used as forward base"
-   }
-  ],
-  "house-of-ashes-005": [
-   {
-    "src": "hoa_02",
-    "a": 600.3,
-    "b": 605.5,
-    "note": "Overhead of the briefing room, then the map screen"
-   },
-   {
-    "src": "hoa_02",
-    "a": 608.2,
-    "b": 611.6,
-    "note": "Eric briefing at the map"
-   },
-   {
-    "src": "hoa_03",
-    "a": 792.2,
-    "b": 797.6,
-    "note": "Helicopters landing in the valley"
-   }
-  ],
-  "house-of-ashes-006": [
-   {
-    "src": "hoa_02",
-    "a": 530.3,
-    "b": 536.5,
-    "note": "Eric King, close"
-   }
-  ],
-  "house-of-ashes-007": [
-   {
-    "src": "hoa_02",
-    "a": 835.1,
-    "b": 839.5,
-    "note": "Eric and Rachel two-shot at the screen"
-   }
-  ],
-  "house-of-ashes-008": [
-   {
-    "src": "hoa_02",
-    "a": 128.0,
-    "b": 134.0,
-    "note": "Nick Kay close, holding Rachel"
-   }
-  ],
-  "house-of-ashes-009": [
-   {
-    "src": "hoa_03",
-    "a": 1315.5,
-    "b": 1321.5,
-    "note": "Jason Kolchek close, in the village"
-   }
-  ],
-  "house-of-ashes-010": [
-   {
-    "src": "hoa_03",
-    "a": 110.6,
-    "b": 116.4,
-    "note": "Salim crosses the courtyard to his house carrying a gift"
-   },
-   {
-    "src": "hoa_03",
-    "a": 551.0,
-    "b": 557.0,
-    "note": "Salim inside his house"
-   },
-   {
-    "src": "hoa_03",
-    "a": 562.5,
-    "b": 566.7,
-    "note": "Salim in uniform with rifle, beside his commander"
-   }
-  ],
-  "house-of-ashes-011": [
-   {
-    "src": "hoa_03",
-    "a": 1063.9,
-    "b": 1067.5,
-    "note": "Helicopter hit"
-   },
-   {
-    "src": "hoa_03",
-    "a": 1088.9,
-    "b": 1092.4,
-    "note": "Iraqi soldiers firing"
-   },
-   {
-    "src": "hoa_03",
-    "a": 1140.9,
-    "b": 1144.2,
-    "note": "Marine firing amid explosions"
-   },
-   {
-    "src": "hoa_03",
-    "a": 1357.7,
-    "b": 1361.2,
-    "note": "Ground cracks, Eric runs"
-   },
-   {
-    "src": "hoa_03",
-    "a": 1362.3,
-    "b": 1366.3,
-    "note": "Soldiers fall into the opening ground"
-   }
-  ],
-  "house-of-ashes-012": [
-   {
-    "src": "hoa_04",
-    "a": 101.2,
-    "b": 104.5,
-    "note": "Jason wakes in the cavern"
-   },
-   {
-    "src": "hoa_04",
-    "a": 108.2,
-    "b": 113.3,
-    "note": "Wide cavern, shaft of light, Jason small"
-   },
-   {
-    "src": "hoa_04",
-    "a": 820.3,
-    "b": 823.3,
-    "note": "Red flare lit in the dark"
-   }
-  ],
-  "house-of-ashes-013": [
-   {
-    "src": "hoa_04",
-    "a": 153.4,
-    "b": 160.0,
-    "note": "Jason's flashlight probing a black tunnel"
-   }
-  ],
-  "house-of-ashes-014": [
-   {
-    "src": "hoa_05",
-    "a": 1030.4,
-    "b": 1033.3,
-    "note": "Creature silhouette on beams, marine aims"
-   },
-   {
-    "src": "hoa_05",
-    "a": 1034.6,
-    "b": 1038.9,
-    "note": "Creature silhouette climbing, then with marines in foreground"
-   },
-   {
-    "src": "hoa_10",
-    "a": 755.1,
-    "b": 758.7,
-    "note": "Winged creature in the temple hall"
-   },
-   {
-    "src": "hoa_10",
-    "a": 601.6,
-    "b": 604.2,
-    "note": "Claw smashes through a wall slit"
-   }
-  ],
-  "house-of-ashes-015": [
-   {
-    "src": "hoa_05",
-    "a": 991.2,
-    "b": 1000.2,
-    "note": "1940s camp: lamp and tent, radio crate, then wide of the camp under lamps"
-   },
-   {
-    "src": "hoa_05",
-    "a": 1338.5,
-    "b": 1344.5,
-    "note": "High angle of the camp, relief panel and lamp"
-   },
-   {
-    "src": "hoa_05",
-    "a": 1360.2,
-    "b": 1363.2,
-    "note": "Tent with tables"
-   }
-  ],
-  "house-of-ashes-016": [
-   {
-    "src": "hoa_05",
-    "a": 569.9,
-    "b": 575.8,
-    "note": "Hand holding the expedition group photograph over desk papers"
-   },
-   {
-    "src": "hoa_05",
-    "a": 495.6,
-    "b": 499.5,
-    "note": "Black and white journal film: ruins and excavators"
-   },
-   {
-    "src": "hoa_15",
-    "a": 1162.2,
-    "b": 1168.2,
-    "note": "Journal page: handwriting and portrait of an expedition member"
-   }
-  ],
-  "house-of-ashes-017": [
-   {
-    "src": "hoa_10",
-    "a": 1393.0,
-    "b": 1396.3,
-    "note": "Eric raises the UV wand; turned soldier recoils in purple light"
-   },
-   {
-    "src": "hoa_10",
-    "a": 1480.2,
-    "b": 1484.8,
-    "note": "UV wand swung in the dark, purple glow"
-   }
-  ],
-  "house-of-ashes-018": [
-   {
-    "src": "hoa_04",
-    "a": 910.1,
-    "b": 913.7,
-    "note": "Creature point of view, tracking Salim through the ruin"
-   },
-   {
-    "src": "hoa_12",
-    "a": 384.0,
-    "b": 388.8,
-    "note": "Turned soldier listening; a survivor hides behind a sarcophagus"
-   },
-   {
-    "src": "hoa_10",
-    "a": 1305.6,
-    "b": 1308.3,
-    "note": "Turned ancient soldier, face close"
-   },
-   {
-    "src": "hoa_14",
-    "a": 588.2,
-    "b": 591.3,
-    "note": "Turned ancient soldier raises a spear"
-   }
-  ],
-  "house-of-ashes-019": [
-   {
-    "src": "hoa_10",
-    "a": 695.6,
-    "b": 700.4,
-    "note": "Jason with rifle and weapon light; marine aims"
-   },
-   {
-    "src": "hoa_10",
-    "a": 725.2,
-    "b": 729.2,
-    "note": "Light beams in the dark hall; marine fires"
-   },
-   {
-    "src": "hoa_10",
-    "a": 742.5,
-    "b": 745.6,
-    "note": "Machine gun tracers"
-   },
-   {
-    "src": "hoa_10",
-    "a": 159.6,
-    "b": 163.4,
-    "note": "Marine firing from cover, muzzle flash"
-   }
-  ],
-  "house-of-ashes-020": [
-   {
-    "src": "hoa_11",
-    "a": 1437.0,
-    "b": 1445.6,
-    "note": "Green glowing chasm seen from the ledge, two small figures"
-   },
-   {
-    "src": "hoa_11",
-    "a": 1515.2,
-    "b": 1519.9,
-    "note": "Cage platform descending on chains in the green shaft"
-   },
-   {
-    "src": "hoa_11",
-    "a": 1547.6,
-    "b": 1552.0,
-    "note": "Cage descends far into the green glow"
-   },
-   {
-    "src": "hoa_12",
-    "a": 741.2,
-    "b": 745.8,
-    "note": "Dark green cocoon, close (Back prompt in bottom-right corner, inside cropped area)"
-   }
-  ],
-  "house-of-ashes-021": [
-   {
-    "src": "hoa_13",
-    "a": 1384.2,
-    "b": 1391.6,
-    "note": "Vision: Rachel in starfield, burning craft streaks in"
-   },
-   {
-    "src": "hoa_13",
-    "a": 1392.8,
-    "b": 1399.8,
-    "note": "Vision: craft descends toward Earth"
-   },
-   {
-    "src": "hoa_13",
-    "a": 1292.3,
-    "b": 1298.3,
-    "note": "Skeletal alien figure in teal light"
-   }
-  ],
-  "house-of-ashes-022": [
-   {
-    "src": "hoa_01",
-    "a": 1052.0,
-    "b": 1060.0,
-    "note": "Fire bowl and carved winged-figure relief in torchlight, slow push"
-   },
-   {
-    "src": "hoa_01",
-    "a": 790.0,
-    "b": 796.0,
-    "note": "Stepped relief panel of figures and cuneiform by torchlight (prompt in bottom-right corner, inside cropped area)"
-   },
-   {
-    "src": "hoa_10",
-    "a": 116.3,
-    "b": 119.8,
-    "note": "Wide of the temple hall with lamassu statue"
-   }
-  ],
-  "house-of-ashes-023": [
-   {
-    "src": "hoa_10",
-    "a": 912.1,
-    "b": 916.8,
-    "note": "Nick aims rifle, Salim aims pistol behind him"
-   },
-   {
-    "src": "hoa_10",
-    "a": 937.9,
-    "b": 942.0,
-    "note": "Dar aims AK; Rachel and Eric aim pistols"
-   },
-   {
-    "src": "hoa_10",
-    "a": 959.4,
-    "b": 963.8,
-    "note": "Jason aims rifle close"
-   },
-   {
-    "src": "hoa_10",
-    "a": 703.6,
-    "b": 707.7,
-    "note": "Creature bursts through the gate into the light"
-   }
-  ],
-  "house-of-ashes-024": [
-   {
-    "src": "hoa_05",
-    "a": 1050.6,
-    "b": 1056.0,
-    "note": "Creature carries a marine off; silhouette dragging a body"
-   },
-   {
-    "src": "hoa_10",
-    "a": 1358.9,
-    "b": 1362.0,
-    "note": "Creature swoops on an Iraqi soldier firing"
-   },
-   {
-    "src": "hoa_10",
-    "a": 1364.2,
-    "b": 1367.3,
-    "note": "Winged creature crouched over a body in the tomb"
-   }
-  ],
-  "house-of-ashes-025": [
-   {
-    "src": "hoa_11",
-    "a": 130.6,
-    "b": 136.1,
-    "note": "Jason advances down corridor with weapon light"
-   },
-   {
-    "src": "hoa_11",
-    "a": 137.1,
-    "b": 141.5,
-    "note": "Salim raises his hands"
-   },
-   {
-    "src": "hoa_11",
-    "a": 142.6,
-    "b": 147.4,
-    "note": "Salim's silhouette with Jason beyond, then Jason aims rifle close"
-   }
-  ],
-  "house-of-ashes-026": [
-   {
-    "src": "hoa_11",
-    "a": 403.0,
-    "b": 411.3,
-    "note": "Jason with weapon light and Salim with bar side by side; Salim levers the gate"
-   },
-   {
-    "src": "hoa_14",
-    "a": 543.2,
-    "b": 550.3,
-    "note": "Jason aims, Salim runs in and swings his bar at a winged creature"
-   },
-   {
-    "src": "hoa_14",
-    "a": 871.2,
-    "b": 877.0,
-    "note": "On the giant stone hand, Jason hauls Salim up"
-   }
-  ],
-  "house-of-ashes-027": [
-   {
-    "src": "hoa_11",
-    "a": 801.2,
-    "b": 805.2,
-    "note": "Jason and Salim two-shot at the relief wall"
-   },
-   {
-    "src": "hoa_11",
-    "a": 806.2,
-    "b": 814.2,
-    "note": "Salim close, telling Jason a story"
-   },
-   {
-    "src": "hoa_11",
-    "a": 815.4,
-    "b": 819.6,
-    "note": "Salim close, then the two-shot as Jason listens"
-   }
-  ],
-  "house-of-ashes-028": [
-   {
-    "src": "hoa_11",
-    "a": 939.1,
-    "b": 943.8,
-    "note": "Jason and Salim walk a corridor together, from behind"
-   },
-   {
-    "src": "hoa_11",
-    "a": 847.0,
-    "b": 850.3,
-    "note": "The two walk to the gate, wide"
-   },
-   {
-    "src": "hoa_12",
-    "a": 1404.2,
-    "b": 1409.8,
-    "note": "Boots on alien ground, then the two walk toward camera"
-   },
-   {
-    "src": "hoa_12",
-    "a": 1415.1,
-    "b": 1420.9,
-    "note": "The two walking on, small, then from behind"
-   }
-  ],
-  "house-of-ashes-029": [
-   {
-    "src": "hoa_11",
-    "a": 865.2,
-    "b": 869.6,
-    "note": "Creature silhouette crawls onto a ledge in the dark"
-   },
-   {
-    "src": "hoa_11",
-    "a": 883.9,
-    "b": 887.0,
-    "note": "Creature rears, claws spread"
-   }
-  ],
-  "house-of-ashes-030": [
-   {
-    "src": "hoa_10",
-    "a": 238.2,
-    "b": 241.2,
-    "note": "Nick aims and fires"
-   },
-   {
-    "src": "hoa_10",
-    "a": 1332.6,
-    "b": 1335.5,
-    "note": "Salim turns as a creature hits a soldier behind him"
-   },
-   {
-    "src": "hoa_10",
-    "a": 782.0,
-    "b": 785.7,
-    "note": "Creatures in the fire of an explosion"
-   },
-   {
-    "src": "hoa_10",
-    "a": 188.6,
-    "b": 191.0,
-    "note": "Muzzle flash behind a column"
-   }
-  ],
-  "house-of-ashes-031": [
-   {
-    "src": "hoa_12",
-    "a": 1671.0,
-    "b": 1678.8,
-    "note": "Cocooned human face inside gold cocoon"
-   },
-   {
-    "src": "hoa_12",
-    "a": 1694.2,
-    "b": 1698.1,
-    "note": "Cocooned man's eye opens"
-   },
-   {
-    "src": "hoa_14",
-    "a": 576.4,
-    "b": 582.1,
-    "note": "Turned ancient soldier walks through firelight"
-   }
-  ],
-  "house-of-ashes-032": [
-   {
-    "src": "hoa_13",
-    "a": 1103.6,
-    "b": 1107.8,
-    "note": "Infected Rachel, Jason beside her"
-   },
-   {
-    "src": "hoa_13",
-    "a": 1115.6,
-    "b": 1123.0,
-    "note": "Wide: Rachel trembling, Jason standing off"
-   }
-  ],
-  "house-of-ashes-033": [
-   {
-    "src": "hoa_13",
-    "a": 1351.3,
-    "b": 1355.0,
-    "note": "Nick close, anguished"
-   },
-   {
-    "src": "hoa_13",
-    "a": 1358.1,
-    "b": 1362.8,
-    "note": "Rachel clutching her head"
-   },
-   {
-    "src": "hoa_13",
-    "a": 1337.6,
-    "b": 1341.8,
-    "note": "The group seen past Rachel's arm"
-   },
-   {
-    "src": "hoa_12",
-    "a": 1718.2,
-    "b": 1725.4,
-    "note": "Cocoon membrane, then the face of the cocooned man"
-   }
-  ],
-  "house-of-ashes-034": [
-   {
-    "src": "hoa_12",
-    "a": 994.5,
-    "b": 1002.5,
-    "note": "Slow pan across the vast blue interior"
-   },
-   {
-    "src": "hoa_12",
-    "a": 1009.0,
-    "b": 1017.0,
-    "note": "Slow pan across the alien structure"
-   }
-  ],
-  "house-of-ashes-035": [
-   {
-    "src": "hoa_14",
-    "a": 189.2,
-    "b": 194.8,
-    "note": "Nick, Salim and Jason kneel, planning"
-   },
-   {
-    "src": "hoa_14",
-    "a": 304.7,
-    "b": 308.0,
-    "note": "Wide of the hive, Nick small with flashlight"
-   },
-   {
-    "src": "hoa_14",
-    "a": 325.0,
-    "b": 328.2,
-    "note": "Nick crouched planting a charge"
-   },
-   {
-    "src": "hoa_14",
-    "a": 331.6,
-    "b": 336.1,
-    "note": "Nick at the trunk, planting"
-   }
-  ],
-  "house-of-ashes-036": [
-   {
-    "src": "hoa_14",
-    "a": 901.6,
-    "b": 910.6,
-    "note": "Marine and Jason crawl out into daylight; Jason pulls Salim up"
-   },
-   {
-    "src": "hoa_14",
-    "a": 913.1,
-    "b": 917.9,
-    "note": "Nick smiles at the sun; survivors stand under it"
-   }
-  ],
-  "house-of-ashes-037": [
-   {
-    "src": "hoa_14",
-    "a": 887.3,
-    "b": 891.8,
-    "note": "White sun in open sky"
-   },
-   {
-    "src": "hoa_14",
-    "a": 985.3,
-    "b": 991.0,
-    "note": "Wide: survivors in the village in daylight, farmhouse"
-   }
-  ],
-  "house-of-ashes-038": [
-   {
-    "src": "hoa_14",
-    "a": 1007.2,
-    "b": 1011.3,
-    "note": "Eclipse crescent"
-   },
-   {
-    "src": "hoa_14",
-    "a": 1017.6,
-    "b": 1022.9,
-    "note": "Eclipse ring; creature flies across it"
-   }
-  ],
-  "house-of-ashes-039": [
-   {
-    "src": "hoa_14",
-    "a": 992.2,
-    "b": 997.5,
-    "note": "Nick from behind looks at the sun"
-   },
-   {
-    "src": "hoa_14",
-    "a": 1012.4,
-    "b": 1016.5,
-    "note": "Salim looks up as the sky darkens"
-   }
-  ],
-  "house-of-ashes-040": [
-   {
-    "src": "hoa_14",
-    "a": 1136.7,
-    "b": 1139.4,
-    "note": "Farmhouse exterior, creatures crawling toward it"
-   },
-   {
-    "src": "hoa_14",
-    "a": 1159.6,
-    "b": 1163.4,
-    "note": "Turned soldier with spear against Salim, red flare light"
-   },
-   {
-    "src": "hoa_14",
-    "a": 1225.7,
-    "b": 1229.6,
-    "note": "Creature at the window; Jason with flare"
-   },
-   {
-    "src": "hoa_14",
-    "a": 1232.4,
-    "b": 1235.9,
-    "note": "Salim with flare; creature roaring"
-   }
-  ],
-  "house-of-ashes-041": [
-   {
-    "src": "hoa_14",
-    "a": 1353.6,
-    "b": 1356.8,
-    "note": "Eclipse ends, sun flares out"
-   },
-   {
-    "src": "hoa_14",
-    "a": 1360.4,
-    "b": 1365.9,
-    "note": "Creatures burning in the light"
-   }
-  ],
-  "house-of-ashes-042": [
-   {
-    "src": "hoa_14",
-    "a": 1411.5,
-    "b": 1417.6,
-    "note": "Nick outside with arriving soldiers"
-   },
-   {
-    "src": "hoa_14",
-    "a": 1438.7,
-    "b": 1444.6,
-    "note": "Soldier escorts Salim"
-   },
-   {
-    "src": "hoa_14",
-    "a": 1470.9,
-    "b": 1474.3,
-    "note": "Helicopters fly off over the mountains"
-   },
-   {
-    "src": "hoa_14",
-    "a": 1477.7,
-    "b": 1483.2,
-    "note": "Helicopters fly into the sun"
-   }
-  ],
-  "house-of-ashes-043": [
-   {
-    "src": "hoa_04",
-    "a": 942.3,
-    "b": 946.7,
-    "note": "Horror: Salim frightened on the ground"
-   },
-   {
-    "src": "hoa_13",
-    "a": 1132.6,
-    "b": 1135.7,
-    "note": "Science fiction: wide alien hall with consoles"
-   },
-   {
-    "src": "hoa_14",
-    "a": 391.3,
-    "b": 394.9,
-    "note": "Action: the hive explodes"
-   },
-   {
-    "src": "hoa_12",
-    "a": 1082.0,
-    "b": 1087.0,
-    "note": "Human drama: Salim close, head down"
-   }
-  ],
-  "house-of-ashes-044": [
-   {
-    "src": "hoa_14",
-    "a": 1237.0,
-    "b": 1243.2,
-    "note": "Salim fires; creature close with wings spread"
-   },
-   {
-    "src": "hoa_14",
-    "a": 452.2,
-    "b": 456.8,
-    "note": "Creature looms in foreground, fire behind"
-   },
-   {
-    "src": "hoa_14",
-    "a": 1113.7,
-    "b": 1117.9,
-    "note": "Nick aims rifle"
-   },
-   {
-    "src": "hoa_10",
-    "a": 249.3,
-    "b": 252.4,
-    "note": "Nick aims rifle, close"
-   }
-  ],
-  "house-of-ashes-045": [
-   {
-    "src": "hoa_12",
-    "a": 1494.0,
-    "b": 1497.9,
-    "note": "Two silhouettes in the vast teal cavern, then two tiny figures atop a vessel"
-   },
-   {
-    "src": "hoa_12",
-    "a": 1455.1,
-    "b": 1459.0,
-    "note": "Two silhouettes look out at the vast interior"
-   },
-   {
-    "src": "hoa_12",
-    "a": 1507.9,
-    "b": 1512.8,
-    "note": "Wide vast cavern, two tiny figures"
-   },
-   {
-    "src": "hoa_13",
-    "a": 1277.0,
-    "b": 1284.8,
-    "note": "Group of five small before the alien spire"
-   },
-   {
-    "src": "hoa_12",
-    "a": 1460.2,
-    "b": 1465.3,
-    "note": "View through an oval opening onto the vast interior"
-   }
-  ],
-  "house-of-ashes-046": [
-   {
-    "src": "hoa_14",
-    "a": 980.7,
-    "b": 984.2,
-    "note": "Jason in daylight"
-   },
-   {
-    "src": "hoa_14",
-    "a": 1000.5,
-    "b": 1006.0,
-    "note": "Salim close, then walks away from the marines"
-   }
-  ],
-  "themes-004": [
-   {
-    "src": "hoa_11",
-    "a": 921.0,
-    "b": 924.3,
-    "note": "High angle: Salim and Jason against winged creature"
-   },
-   {
-    "src": "hoa_11",
-    "a": 927.0,
-    "b": 930.8,
-    "note": "The two stand over the dead creature"
-   }
-  ],
-  "themes-009": [
-   {
-    "src": "hoa_10",
-    "a": 951.0,
-    "b": 955.8,
-    "note": "Salim open-handed, lowering his pistol"
-   },
-   {
-    "src": "hoa_10",
-    "a": 968.8,
-    "b": 972.5,
-    "note": "Eric holds his pistol up and away"
-   }
-  ],
-  "outro-005": [
-   {
-    "src": "hoa_01",
-    "a": 1823.2,
-    "b": 1828.1,
-    "note": "Wide temple hall, stepped altar and candles, a soldier runs"
-   }
-  ],
-  "intro-008": [
-   {
-    "src": "dim_03",
-    "a": 1313.0,
-    "b": 1318.4,
-    "note": "Island hotel exterior under overcast sky, slow move across the tower"
-   }
-  ],
-  "devil-in-me-001": [
-   {
-    "src": "dim_02",
-    "a": 1497.5,
-    "b": 1500.2,
-    "note": "Grey water and mist with the island cliffs beyond (2.7 s, ends before a fade)"
-   },
-   {
-    "src": "dim_02",
-    "a": 1466.4,
-    "b": 1474.8,
-    "note": "Misty lake and island from the lookout, Mark and Charlie in foreground"
-   },
-   {
-    "src": "dim_02",
-    "a": 1581.3,
-    "b": 1589.3,
-    "note": "Fog over the water seen through the ferry railings"
-   }
-  ],
-  "devil-in-me-002": [
-   {
-    "src": "dim_10",
-    "a": 1733.5,
-    "b": 1737.0,
-    "note": "Red-lit corridor, still silhouette of a man in a hat in the lit doorway at the end"
-   },
-   {
-    "src": "dim_18",
-    "a": 2521.8,
-    "b": 2525.4,
-    "note": "Night mist, a lone still figure standing far off"
-   },
-   {
-    "src": "dim_14",
-    "a": 1524.0,
-    "b": 1529.4,
-    "note": "Dark silhouette walks away into a teal-lit doorway"
-   }
-  ],
-  "devil-in-me-003": [
-   {
-    "src": "dim_01",
-    "a": 21.1,
-    "b": 23.3,
-    "note": "1893: World's Fair Hotel exterior, brick facade (2.2 s only; quote text appears after)"
-   },
-   {
-    "src": "dim_01",
-    "a": 74.2,
-    "b": 78.8,
-    "note": "Tilt up from the cobbles to Jeff and Marie, the newlyweds, on the street"
-   },
-   {
-    "src": "dim_01",
-    "a": 97.1,
-    "b": 105.5,
-    "note": "The couple walk up to the hotel entrance, from behind"
-   }
-  ],
-  "devil-in-me-004": [
-   {
-    "src": "dim_01",
-    "a": 196.9,
-    "b": 205.5,
-    "note": "H. H. Holmes behind the front desk, medium"
-   },
-   {
-    "src": "dim_01",
-    "a": 211.1,
-    "b": 216.8,
-    "note": "Holmes close, welcoming"
-   }
-  ],
-  "devil-in-me-005": [
-   {
-    "src": "dim_01",
-    "a": 298.8,
-    "b": 304.5,
-    "note": "Over the couple's shoulders to Holmes at the desk"
-   },
-   {
-    "src": "dim_01",
-    "a": 218.1,
-    "b": 221.3,
-    "note": "Holmes under the RECEPTION sign with Jeff and Marie"
-   }
-  ],
-  "devil-in-me-006": [
-   {
-    "src": "dim_01",
-    "a": 586.2,
-    "b": 591.3,
-    "note": "Holmes opens the room door for the couple"
-   },
-   {
-    "src": "dim_01",
-    "a": 868.9,
-    "b": 873.8,
-    "note": "View down through a concealed hatch at Jeff below"
-   },
-   {
-    "src": "dim_01",
-    "a": 923.6,
-    "b": 926.6,
-    "note": "Jeff runs down the corridor"
-   },
-   {
-    "src": "dim_01",
-    "a": 931.9,
-    "b": 938.1,
-    "note": "Jeff pounds on the sealed door, wide corridor"
-   }
-  ],
-  "devil-in-me-007": [
-   {
-    "src": "dim_01",
-    "a": 146.0,
-    "b": 155.0,
-    "note": "1893 lobby wide through the pillars, slow"
-   },
-   {
-    "src": "dim_01",
-    "a": 1051.6,
-    "b": 1060.4,
-    "note": "Holmes at the jewellery counter, desk lamp in foreground, slow"
-   },
-   {
-    "src": "dim_01",
-    "a": 1080.0,
-    "b": 1087.7,
-    "note": "Holmes front-on, portrait-like"
-   }
-  ],
-  "devil-in-me-008": [
-   {
-    "src": "dim_01",
-    "a": 156.6,
-    "b": 162.6,
-    "note": "1893 hotel lobby, the couple at the desk, slow track past a skull in foreground"
-   },
-   {
-    "src": "dim_03",
-    "a": 1405.2,
-    "b": 1411.2,
-    "note": "Present-day replica lobby, the crew walking in"
-   }
-  ],
-  "devil-in-me-009": [
-   {
-    "src": "dim_01",
-    "a": 1520.0,
-    "b": 1527.0,
-    "note": "Present day: Kate presenting on the courtroom set"
-   },
-   {
-    "src": "dim_01",
-    "a": 1578.4,
-    "b": 1583.8,
-    "note": "The take playing back on the edit monitor"
-   }
-  ],
-  "devil-in-me-010": [
-   {
-    "src": "dim_02",
-    "a": 1736.3,
-    "b": 1740.6,
-    "note": "Mark behind the camera, then the crew shooting: reflector, director, presenter"
-   },
-   {
-    "src": "dim_01",
-    "a": 1539.2,
-    "b": 1544.7,
-    "note": "Kate with the Holmes actor on the courtroom set"
-   }
-  ],
-  "devil-in-me-011": [
-   {
-    "src": "dim_02",
-    "a": 1716.8,
-    "b": 1720.6,
-    "note": "Charlie Lonnit close, cap and glasses"
-   }
-  ],
-  "devil-in-me-012": [
-   {
-    "src": "dim_01",
-    "a": 1549.0,
-    "b": 1553.0,
-    "note": "Kate Wilder close, presenting to camera"
-   }
-  ],
-  "devil-in-me-013": [
-   {
-    "src": "dim_02",
-    "a": 1488.8,
-    "b": 1491.8,
-    "note": "Mark with the camera to his eye, Charlie pointing beside him"
-   }
-  ],
-  "devil-in-me-014": [
-   {
-    "src": "dim_03",
-    "a": 1185.8,
-    "b": 1189.4,
-    "note": "Jamie Tiergan close"
-   }
-  ],
-  "devil-in-me-015": [
-   {
-    "src": "dim_02",
-    "a": 1726.25,
-    "b": 1729.4,
-    "note": "Whip-pan lands on Erin in headphones with the sound recorder beside Mark's camera (clean from 1727.0)"
-   }
-  ],
-  "devil-in-me-016": [
-   {
-    "src": "dim_07",
-    "a": 121.7,
-    "b": 127.2,
-    "note": "Charlie, hands raised, trying to calm the crew"
-   },
-   {
-    "src": "dim_07",
-    "a": 195.5,
-    "b": 202.0,
-    "note": "Kate, arms crossed, facing Charlie; Kate close and angry"
-   }
-  ],
-  "devil-in-me-017": [
-   {
-    "src": "dim_01",
-    "a": 1605.3,
-    "b": 1613.5,
-    "note": "Charlie on the phone, close"
-   }
-  ],
-  "devil-in-me-018": [
-   {
-    "src": "dim_02",
-    "a": 214.5,
-    "b": 221.9,
-    "note": "The limousine waiting by the misty lake, seen through trees"
-   },
-   {
-    "src": "dim_02",
-    "a": 1503.0,
-    "b": 1506.7,
-    "note": "The ferry barge on the foggy water"
-   }
-  ],
-  "devil-in-me-019": [
-   {
-    "src": "dim_02",
-    "a": 1576.8,
-    "b": 1580.2,
-    "note": "The ferry on the water with the crew aboard, wide"
-   },
-   {
-    "src": "dim_02",
-    "a": 1594.0,
-    "b": 1600.4,
-    "note": "The crew leaning on the ferry rail"
-   },
-   {
-    "src": "dim_02",
-    "a": 1601.4,
-    "b": 1607.4,
-    "note": "The host at the wheel from behind, crew through the window"
-   }
-  ],
-  "devil-in-me-020": [
-   {
-    "src": "dim_03",
-    "a": 1327.4,
-    "b": 1331.8,
-    "note": "Hotel front, the crew walking up the drive"
-   }
-  ],
-  "devil-in-me-021": [
-   {
-    "src": "dim_03",
-    "a": 1433.2,
-    "b": 1438.2,
-    "note": "Lobby wide, lamp in foreground"
-   },
-   {
-    "src": "dim_04",
-    "a": 1020.0,
-    "b": 1025.0,
-    "note": "Charlie walking a long hotel corridor"
-   },
-   {
-    "src": "dim_06",
-    "a": 962.0,
-    "b": 968.0,
-    "note": "Row of animatronic figures on the dark stage"
-   }
-  ],
-  "devil-in-me-022": [
-   {
-    "src": "dim_02",
-    "a": 1652.87,
-    "b": 1655.87,
-    "note": "The host by the iron gate, arms spread in welcome"
-   },
-   {
-    "src": "dim_03",
-    "a": 1340.5,
-    "b": 1345.0,
-    "note": "Rack focus to a PRIVATE PROPERTY KEEP OUT sign"
-   },
-   {
-    "src": "dim_03",
-    "a": 1346.2,
-    "b": 1350.0,
-    "note": "Someone watching the crew from an upper window"
-   }
-  ],
-  "devil-in-me-023": [
-   {
-    "src": "dim_09",
-    "a": 1636.1,
-    "b": 1639.3,
-    "note": "The wall slides shut; Kate's hands on it"
-   },
-   {
-    "src": "dim_09",
-    "a": 1641.6,
-    "b": 1644.6,
-    "note": "Kate watches the panel close"
-   },
-   {
-    "src": "dim_09",
-    "a": 1645.7,
-    "b": 1649.3,
-    "note": "A gloved finger presses a red button; Kate and Erin push at the closed wall"
-   }
-  ],
-  "devil-in-me-024": [
-   {
-    "src": "dim_09",
-    "a": 1650.5,
-    "b": 1657.7,
-    "note": "Walls closing in on Jamie; top-down of the shrinking room"
-   },
-   {
-    "src": "dim_12",
-    "a": 1328.7,
-    "b": 1331.8,
-    "note": "Surveillance monitor showing a hotel room"
-   }
-  ],
-  "devil-in-me-025": [
-   {
-    "src": "dim_09",
-    "a": 1622.3,
-    "b": 1627.9,
-    "note": "The four in the corridor as the walls start to move"
-   },
-   {
-    "src": "dim_09",
-    "a": 1629.0,
-    "b": 1635.0,
-    "note": "The group pulled apart as a wall moves between them"
-   },
-   {
-    "src": "dim_09",
-    "a": 1658.9,
-    "b": 1665.1,
-    "note": "Jamie alone in the changed corridor"
-   }
-  ],
-  "devil-in-me-026": [
-   {
-    "src": "dim_12",
-    "a": 419.4,
-    "b": 423.8,
-    "note": "Control desk and monitors, Jamie approaching"
-   },
-   {
-    "src": "dim_06",
-    "a": 1464.9,
-    "b": 1468.6,
-    "note": "Fisheye surveillance view of the group in a corridor"
-   },
-   {
-    "src": "dim_12",
-    "a": 1320.6,
-    "b": 1326.6,
-    "note": "Kate at the console in the control room"
-   }
-  ],
-  "devil-in-me-027": [
-   {
-    "src": "dim_14",
-    "a": 1322.0,
-    "b": 1330.5,
-    "note": "Bank of monitors in the dark lair"
-   },
-   {
-    "src": "dim_14",
-    "a": 1415.3,
-    "b": 1421.0,
-    "note": "The man in the bowler hat from behind, looking out"
-   }
-  ],
-  "devil-in-me-028": [
-   {
-    "src": "dim_12",
-    "a": 1580.9,
-    "b": 1588.3,
-    "note": "Kate in the tiled chamber as the wall slides"
-   },
-   {
-    "src": "dim_12",
-    "a": 1594.9,
-    "b": 1599.8,
-    "note": "Wide: Kate and Jamie on either side of the glass wall"
-   },
-   {
-    "src": "dim_12",
-    "a": 1612.9,
-    "b": 1618.8,
-    "note": "Jamie from behind, Kate through the glass; hand on the glass"
-   }
-  ],
-  "devil-in-me-029": [
-   {
-    "src": "dim_09",
-    "a": 1296.4,
-    "b": 1304.4,
-    "note": "Pan from Erin in chamber B across the gauges to Kate in chamber A"
-   },
-   {
-    "src": "dim_09",
-    "a": 1340.9,
-    "b": 1345.9,
-    "note": "Erin gasping inside the chamber"
-   }
-  ],
-  "devil-in-me-030": [
-   {
-    "src": "dim_12",
-    "a": 1650.6,
-    "b": 1656.0,
-    "note": "Kate close, shouting through the glass"
-   },
-   {
-    "src": "dim_12",
-    "a": 1661.5,
-    "b": 1666.6,
-    "note": "Jamie close, deciding"
-   },
-   {
-    "src": "dim_09",
-    "a": 1393.8,
-    "b": 1398.5,
-    "note": "Erin pleading at the chamber window"
-   },
-   {
-    "src": "dim_12",
-    "a": 1556.9,
-    "b": 1561.7,
-    "note": "The killer in the bowler hat from behind, watching them"
-   }
-  ],
-  "devil-in-me-031": [
-   {
-    "src": "dim_10",
-    "a": 419.3,
-    "b": 426.0,
-    "note": "Workshop wide: figure on the table under a ring of lamps"
-   },
-   {
-    "src": "dim_10",
-    "a": 430.2,
-    "b": 436.2,
-    "note": "Animatronic face in extreme close-up, wire in the nose"
-   },
-   {
-    "src": "dim_12",
-    "a": 1026.0,
-    "b": 1033.0,
-    "note": "Costume design sheet for the Du'Met figure on the pinboard"
-   }
-  ],
-  "devil-in-me-032": [
-   {
-    "src": "dim_10",
-    "a": 968.1,
-    "b": 976.5,
-    "note": "Hand holding a CONFIDENTIAL file over the desk"
-   },
-   {
-    "src": "dim_07",
-    "a": 1020.0,
-    "b": 1028.5,
-    "note": "Hands holding a newspaper clipping about a serial killer"
-   }
-  ],
-  "devil-in-me-033": [
-   {
-    "src": "dim_15",
-    "a": 1100.0,
-    "b": 1106.5,
-    "note": "Stylised evidence-room montage from Munday's case (typed text fragments in the top-left corner)"
-   }
-  ],
-  "devil-in-me-034": [
-   {
-    "src": "dim_16",
-    "a": 400.8,
-    "b": 404.1,
-    "note": "The killer's Holmes mask and bowler hat, close, lit by fire"
-   },
-   {
-    "src": "dim_18",
-    "a": 4072.4,
-    "b": 4078.4,
-    "note": "The masked killer standing in hat and apron, teal light"
-   },
-   {
-    "src": "dim_18",
-    "a": 3362.4,
-    "b": 3367.7,
-    "note": "Full figure from behind walking down a lit corridor"
-   }
-  ],
-  "devil-in-me-035": [
-   {
-    "src": "dim_08",
-    "a": 797.8,
-    "b": 805.5,
-    "note": "Mannequins dressed as the crew seated at the candle-lit table"
-   },
-   {
-    "src": "dim_06",
-    "a": 1231.2,
-    "b": 1239.0,
-    "note": "Animatronic in boater and striped vest, others behind"
-   }
-  ],
-  "devil-in-me-036": [
-   {
-    "src": "dim_18",
-    "a": 2246.3,
-    "b": 2250.7,
-    "note": "The killer in silhouette walking toward camera down the hedge lane"
-   },
-   {
-    "src": "dim_15",
-    "a": 916.8,
-    "b": 921.3,
-    "note": "The killer, masked, walking steadily toward camera"
-   },
-   {
-    "src": "dim_14",
-    "a": 1411.2,
-    "b": 1414.2,
-    "note": "His shoes stepping into a lit doorway"
-   }
-  ],
-  "devil-in-me-037": [
-   {
-    "src": "dim_11",
-    "a": 1154.7,
-    "b": 1157.8,
-    "note": "Shredder teeth turning"
-   },
-   {
-    "src": "dim_09",
-    "a": 1352.3,
-    "b": 1357.0,
-    "note": "Control lever and pressure gauges"
-   },
-   {
-    "src": "dim_12",
-    "a": 389.9,
-    "b": 395.9,
-    "note": "Looking up the machinery shaft, cables and walkways"
-   }
-  ],
-  "devil-in-me-038": [
-   {
-    "src": "dim_12",
-    "a": 374.0,
-    "b": 381.0,
-    "note": "Rotating shot of the multi-level steel structure behind the walls"
-   },
-   {
-    "src": "dim_12",
-    "a": 400.9,
-    "b": 406.5,
-    "note": "The machinery hub, wide"
-   }
-  ],
-  "devil-in-me-039": [
-   {
-    "src": "dim_15",
-    "a": 939.5,
-    "b": 945.5,
-    "note": "Survivors running through the dark woods"
-   },
-   {
-    "src": "dim_15",
-    "a": 1645.0,
-    "b": 1649.8,
-    "note": "The lighthouse lamp sweeping its beam at night"
-   }
-  ],
-  "devil-in-me-040": [
-   {
-    "src": "dim_16",
-    "a": 412.1,
-    "b": 415.5,
-    "note": "Survivors run along the dock"
-   },
-   {
-    "src": "dim_16",
-    "a": 452.9,
-    "b": 455.8,
-    "note": "Kate looks up; the killer walks down the dock toward the boat"
-   },
-   {
-    "src": "dim_16",
-    "a": 542.8,
-    "b": 546.8,
-    "note": "He steps aboard and raises the axe"
-   },
-   {
-    "src": "dim_16",
-    "a": 555.0,
-    "b": 557.2,
-    "note": "Jamie smashes a gas tank into him"
-   },
-   {
-    "src": "dim_16",
-    "a": 600.5,
-    "b": 603.9,
-    "note": "Mark gets up and grapples with him"
-   },
-   {
-    "src": "dim_16",
-    "a": 619.9,
-    "b": 622.8,
-    "note": "The killer rises again, fist raised"
-   }
-  ],
-  "devil-in-me-041": [
-   {
-    "src": "dim_16",
-    "a": 524.6,
-    "b": 530.3,
-    "note": "The killer climbs aboard and stands with the axe"
-   },
-   {
-    "src": "dim_16",
-    "a": 584.6,
-    "b": 589.8,
-    "note": "Mark fights him for the axe; a hand tears at the mask"
-   }
-  ],
-  "devil-in-me-042": [
-   {
-    "src": "dim_16",
-    "a": 689.4,
-    "b": 693.6,
-    "note": "Wreck burning on the dark water by the rocks"
-   },
-   {
-    "src": "dim_16",
-    "a": 766.0,
-    "b": 774.6,
-    "note": "Three survivors sitting on the sea wall at misty sunrise"
-   }
-  ],
-  "devil-in-me-043": [
-   {
-    "src": "dim_16",
-    "a": 699.9,
-    "b": 703.0,
-    "note": "Dissolve to the killer's white mask floating in the dark water"
-   },
-   {
-    "src": "dim_16",
-    "a": 465.6,
-    "b": 468.8,
-    "note": "Still dark water at night"
-   },
-   {
-    "src": "dim_16",
-    "a": 853.6,
-    "b": 857.3,
-    "note": "The still lake at sunrise through the reeds"
-   }
-  ],
-  "devil-in-me-044": [
-   {
-    "src": "dim_16",
-    "a": 1143.0,
-    "b": 1146.1,
-    "note": "A new family at home, the daughter comes in with a laptop"
-   },
-   {
-    "src": "dim_16",
-    "a": 1151.6,
-    "b": 1155.5,
-    "note": "The daughter announces the prize trip"
-   },
-   {
-    "src": "dim_16",
-    "a": 1164.6,
-    "b": 1173.0,
-    "note": "Laptop screen: CONGRATULATIONS over a photo of the hotel, slow zoom"
-   }
-  ],
-  "devil-in-me-045": [
-   {
-    "src": "dim_16",
-    "a": 1072.4,
-    "b": 1080.4,
-    "note": "The killer's mask lying on the beach at sunrise, static"
-   },
-   {
-    "src": "dim_16",
-    "a": 1081.4,
-    "b": 1090.4,
-    "note": "Same shot continues, hold"
-   }
-  ],
-  "themes-005": [
-   {
-    "src": "dim_18",
-    "a": 4237.0,
-    "b": 4241.0,
-    "note": "The masked killer at work in hat and apron"
-   }
-  ],
-  "themes-010": [
-   {
-    "src": "dim_12",
-    "a": 1672.1,
-    "b": 1678.6,
-    "note": "Jamie's hand goes to the red button, Kate behind the glass; she presses"
-   },
-   {
-    "src": "dim_09",
-    "a": 1428.8,
-    "b": 1433.7,
-    "note": "Kate struggling in the chamber, then Mark turns the control valve"
-   }
-  ],
-  "outro-006": [
-   {
-    "src": "dim_03",
-    "a": 1319.5,
-    "b": 1323.5,
-    "note": "The hotel's corner bay from below, later part of the exterior move"
-   }
-  ],
-  "outro-007": [
-   {
-    "src": "dim_05",
-    "a": 1744.3,
-    "b": 1748.5,
-    "note": "The dining room, candle-lit table laid, the crew seated"
-   },
-   {
-    "src": "dim_08",
-    "a": 792.9,
-    "b": 796.6,
-    "note": "Wide of the dining room, table laid under the chandelier, mannequins seated"
-   }
-  ],
-  "origins-001": [
-   {
-    "src": "ud_04",
-    "a": 38.2,
-    "b": 41.4,
-    "note": "Until Dawn: aerial of the snowbound forest",
-    "crop": {
-     "zoom": 1.32,
-     "x": 0.5,
-     "y": 0
-    }
-   },
-   {
-    "src": "ud_04",
-    "a": 41.8,
-    "b": 44.8,
-    "note": "Until Dawn: headlights on the mountain road",
-    "crop": {
-     "zoom": 1.32,
-     "x": 0.5,
-     "y": 0
-    }
-   },
-   {
-    "src": "ud_04",
-    "a": 375.2,
-    "b": 379.4,
-    "note": "Until Dawn: the cabin in the snow at night",
-    "crop": {
-     "zoom": 1.32,
-     "x": 0.5,
-     "y": 0
-    }
-   },
-   {
-    "src": "ud_04",
-    "a": 380.3,
-    "b": 384.3,
-    "note": "Until Dawn: approaching the cabin",
-    "crop": {
-     "zoom": 1.32,
-     "x": 0.5,
-     "y": 0
-    }
-   }
-  ],
-  "origins-002": [
-   {
-    "src": "ud_04",
-    "a": 63.1,
-    "b": 66.8,
-    "note": "Until Dawn: the cable car against the mountain",
-    "crop": {
-     "zoom": 1.32,
-     "x": 0.5,
-     "y": 0
-    }
-   },
-   {
-    "src": "ud_04",
-    "a": 18.05,
-    "b": 19.85,
-    "note": "Until Dawn: the friends together in the snow",
-    "crop": {
-     "zoom": 1.32,
-     "x": 0.5,
-     "y": 0
-    }
-   }
-  ],
-  "origins-003": [
-   {
-    "src": "ud_04",
-    "a": 53.0,
-    "b": 55.9,
-    "note": "Until Dawn: Sam, close",
-    "crop": {
-     "zoom": 1.32,
-     "x": 0.5,
-     "y": 0
-    }
-   },
-   {
-    "src": "ud_04",
-    "a": 365.3,
-    "b": 369.8,
-    "note": "Until Dawn: Mike by the window, uneasy",
-    "crop": {
-     "zoom": 1.32,
-     "x": 0.5,
-     "y": 0
-    }
-   },
-   {
-    "src": "ud_04",
-    "a": 456.2,
-    "b": 459.6,
-    "note": "Until Dawn: Jessica, close",
-    "crop": {
-     "zoom": 1.32,
-     "x": 0.5,
-     "y": 0
-    }
-   }
-  ],
-  "themes-019": [
-   {
-    "src": "d8020_prologue",
-    "a": 107.6,
-    "b": 116.5,
-    "note": "Directive 8020: the Cassiopeia's hull against the stars",
-    "crop": {
-     "zoom": 1.5,
-     "x": 0.5,
-     "y": 0.42
-    }
-   }
-  ],
-  "themes-020": [
-   {
-    "src": "d8020_prologue",
-    "a": 588.2,
-    "b": 592.6,
-    "note": "Directive 8020: crewman, frightened",
-    "crop": {
-     "zoom": 1.5,
-     "x": 0.5,
-     "y": 0.42
-    }
-   },
-   {
-    "src": "d8020_prologue",
-    "a": 570.6,
-    "b": 575.4,
-    "note": "Directive 8020: struggle in the corridor",
-    "crop": {
-     "zoom": 1.5,
-     "x": 0.5,
-     "y": 0.42
-    }
-   },
-   {
-    "src": "d8020_prologue",
-    "a": 598.0,
-    "b": 602.3,
-    "note": "Directive 8020: dark corridor",
-    "crop": {
-     "zoom": 1.5,
-     "x": 0.5,
-     "y": 0.42
-    }
-   }
-  ],
-  "intro-010": [
-   {
-    "src": "lh_03",
-    "a": 1348.5,
-    "b": 1355.2,
-    "note": "Wide from behind, standing in the library"
-   }
-  ],
-  "origins-004": [
-   {
-    "src": "mom_01",
-    "a": 1294.7,
-    "b": 1298.9,
-    "note": "First scene: camera drifts off him across the dark shelves to a framed painting"
-   },
-   {
-    "src": "mom_04",
-    "a": 1131.9,
-    "b": 1136.0,
-    "note": "Third scene: close on his hand running along a row of book spines"
-   }
-  ],
-  "origins-007": [
-   {
-    "src": "mom_04",
-    "a": 1160.0,
-    "b": 1166.0,
-    "note": "Third scene: close over his shoulder at the shelves, he turns and speaks to the viewer"
-   }
-  ],
-  "curator-intro-001": [
-   {
-    "src": "mom_01",
-    "a": 1255.9,
-    "b": 1261.5,
-    "note": "First scene, wide: he looks up from the book and greets the viewer"
-   }
-  ],
-  "curator-intro-002": [
-   {
-    "src": "mom_04",
-    "a": 1152.5,
-    "b": 1158.5,
-    "note": "Third scene: from behind at the shelves, sliding a book out"
-   },
-   {
-    "src": "mom_04",
-    "a": 1186.4,
-    "b": 1190.0,
-    "note": "Third scene: close on his hands opening the book (short, 3.6 s)"
-   }
-  ],
-  "curator-intro-003": [
-   {
-    "src": "mom_01",
-    "a": 1279.2,
-    "b": 1286.9,
-    "note": "First scene: close on his face as he speaks to the viewer"
-   },
-   {
-    "src": "mom_03",
-    "a": 806.3,
-    "b": 810.6,
-    "note": "Second scene: close on his face, a thin smile"
-   }
-  ],
-  "curator-intro-004": [
-   {
-    "src": "mom_01",
-    "a": 1247.2,
-    "b": 1254.8,
-    "note": "First scene, wide: the Curator at his candlelit desk, head down, writing in the book"
-   }
-  ],
-  "curator-intro-005": [
-   {
-    "src": "mom_01",
-    "a": 1262.6,
-    "b": 1269.4,
-    "note": "First scene, wide: talking, glancing down at the open book, skull and candle on the desk"
-   },
-   {
-    "src": "mom_01",
-    "a": 1288.0,
-    "b": 1293.6,
-    "note": "First scene, wide: seated at the desk, hands on the open book"
-   }
-  ],
-  "curator-intro-006": [
-   {
-    "src": "mom_04",
-    "a": 1172.2,
-    "b": 1178.0,
-    "note": "Third scene: medium at the shelves, reaching for another book"
-   },
-   {
-    "src": "mom_04",
-    "a": 1179.0,
-    "b": 1185.3,
-    "note": "Third scene: takes a book down, opens it and looks up at the viewer"
-   }
-  ],
-  "curator-001": [
-   {
-    "src": "dim_01",
-    "a": 1251.0,
-    "b": 1257.5,
-    "note": "Wide of the library, The Curator by the tall window"
-   },
-   {
-    "src": "dim_01",
-    "a": 1281.5,
-    "b": 1289.5,
-    "note": "Sits at the desk by candlelight, open book in front of him"
-   }
-  ],
-  "curator-002": [
-   {
-    "src": "lh_01",
-    "a": 1499.4,
-    "b": 1507.4,
-    "note": "Seated, facing the viewer, gesturing"
-   },
-   {
-    "src": "lh_03",
-    "a": 1362.4,
-    "b": 1370.4,
-    "note": "Medium, holding a folder toward the viewer"
-   }
-  ],
-  "curator-003": [
-   {
-    "src": "lh_03",
-    "a": 1376.8,
-    "b": 1385.0,
-    "note": "Close on his face, hand to his chin"
-   },
-   {
-    "src": "dim_01",
-    "a": 1318.0,
-    "b": 1326.0,
-    "note": "Close on his face, looking at the viewer"
-   }
-  ],
-  "curator-004": [
-   {
-    "src": "dim_16",
-    "a": 899.7,
-    "b": 908.0,
-    "note": "Exterior of the library window at night, The Curator at his desk inside"
-   },
-   {
-    "src": "dim_08",
-    "a": 1569.5,
-    "b": 1577.5,
-    "note": "Walks through the dark library in profile"
-   }
-  ],
-  "curator-005": [
-   {
-    "src": "dim_08",
-    "a": 1559.6,
-    "b": 1567.6,
-    "note": "Standing at the fireplace looking into the fire"
-   }
-  ],
-  "curator-006": [
-   {
-    "src": "lh_01",
-    "a": 1376.8,
-    "b": 1382.9,
-    "note": "Standing by the window with candles"
-   },
-   {
-    "src": "lh_01",
-    "a": 1435.0,
-    "b": 1440.1,
-    "note": "At the shelves with the candelabra"
-   }
-  ],
-  "curator-007": [
-   {
-    "src": "mom_08",
-    "a": 1787.6,
-    "b": 1795.0,
-    "note": "Fourth scene, wide: writing in the book"
-   },
-   {
-    "src": "mom_03",
-    "a": 749.0,
-    "b": 756.0,
-    "note": "Second scene, wide: writing at the desk, shaft of light across the shelves"
-   },
-   {
-    "src": "mom_08",
-    "a": 1803.6,
-    "b": 1810.5,
-    "note": "Fourth scene, wide: reading the open book, head down"
-   }
-  ],
-  "curator-008": [
-   {
-    "src": "lh_01",
-    "a": 1609.0,
-    "b": 1617.0,
-    "note": "Close on his face, bookshelves behind"
-   },
-   {
-    "src": "mom_08",
-    "a": 1821.2,
-    "b": 1828.0,
-    "note": "Fourth scene, wide: leans forward on the desk, talking"
-   },
-   {
-    "src": "lh_03",
-    "a": 1456.5,
-    "b": 1463.5,
-    "note": "Close on his face"
-   }
-  ],
-  "curator-009": [
-   {
-    "src": "dim_16",
-    "a": 924.4,
-    "b": 929.9,
-    "note": "At the desk looking down at the book; he hesitates"
-   },
-   {
-    "src": "dim_16",
-    "a": 930.0,
-    "b": 934.3,
-    "note": "He tears a page out of the book"
-   },
-   {
-    "src": "dim_16",
-    "a": 934.5,
-    "b": 939.0,
-    "note": "From behind: tears a page - slides the torn page aside and glances over his shoulder"
-   },
-   {
-    "src": "dim_16",
-    "a": 939.2,
-    "b": 944.4,
-    "note": "Turns in the chair and looks toward the library doors (tears a page scene)"
-   }
-  ],
-  "curator-010": [
-   {
-    "src": "dim_16",
-    "a": 944.6,
-    "b": 950.0,
-    "note": "The library doors, then the dark library wide (tears a page scene)"
-   },
-   {
-    "src": "dim_16",
-    "a": 956.5,
-    "b": 964.4,
-    "note": "Close: turns back from the doors and looks down (end of tears a page scene)"
-   }
-  ],
-  "curator-011": [
-   {
-    "src": "lh_01",
-    "a": 1481.0,
-    "b": 1489.9,
-    "note": "Wide of the library, walks to the armchair and sits"
-   },
-   {
-    "src": "mom_04",
-    "a": 1126.9,
-    "b": 1130.9,
-    "note": "Third scene: walks away from camera toward the tall shelves, light shafts across the library"
-   },
-   {
-    "src": "dim_16",
-    "a": 950.1,
-    "b": 956.3,
-    "note": "Dark library and the door handles, close (tears a page scene)"
-   },
-   {
-    "src": "mom_08",
-    "a": 1767.8,
-    "b": 1771.3,
-    "note": "Fourth scene: wide of the whole library, light rays through dust, desk and globe at right (short, 3.5 s)"
-   }
-  ],
-  "themes-018": [
-   {
-    "src": "mom_04",
-    "a": 1121.2,
-    "b": 1125.8,
-    "note": "Third scene: he closes the book and gets up from the desk"
-   },
-   {
-    "src": "mom_04",
-    "a": 1137.0,
-    "b": 1141.4,
-    "note": "Third scene: at the shelves choosing a volume, glancing back"
-   }
-  ],
-  "themes-021": [
-   {
-    "src": "mom_08",
-    "a": 1837.0,
-    "b": 1843.0,
-    "note": "Fourth scene, wide: talking, hands resting on the book"
-   },
-   {
-    "src": "mom_08",
-    "a": 1796.2,
-    "b": 1802.5,
-    "note": "Fourth scene, wide: looks up and opens his hands to the viewer"
-   }
-  ],
-  "themes-022": [
-   {
-    "src": "dim_16",
-    "a": 911.0,
-    "b": 919.5,
-    "note": "Writing in the book: names struck through with the quill"
-   },
-   {
-    "src": "lh_01",
-    "a": 1536.0,
-    "b": 1544.0,
-    "note": "Seated with the book on his lap, slow push"
-   }
-  ],
-  "themes-023": [
-   {
-    "src": "dim_01",
-    "a": 1296.0,
-    "b": 1304.0,
-    "note": "At the desk, hands clasped, looking at the viewer"
-   },
-   {
-    "src": "lh_01",
-    "a": 1518.6,
-    "b": 1526.3,
-    "note": "Close on his face"
-   },
-   {
-    "src": "lh_01",
-    "a": 1530.0,
-    "b": 1534.8,
-    "note": "Extreme close on his face"
-   }
-  ],
-  "outro-001": [
-   {
-    "src": "dim_01",
-    "a": 1362.5,
-    "b": 1367.5,
-    "note": "Wide of the desk with globe, skull and candle"
-   },
-   {
-    "src": "dim_01",
-    "a": 1215.0,
-    "b": 1222.0,
-    "note": "Skull on the desk, then The Curator standing in the library"
-   }
-  ],
-  "outro-008": [
-   {
-    "src": "lh_01",
-    "a": 1406.2,
-    "b": 1413.5,
-    "note": "Medium, closing the book"
-   }
-  ],
-  "intro-001": [
-   {
-    "src": "mom_04",
-    "a": 835.4,
-    "b": 839.6,
-    "note": "The dive boat ploughing through the night storm toward camera, lightning"
-   },
-   {
-    "src": "dim_16",
-    "a": 481.6,
-    "b": 486.0,
-    "note": "The lighthouse and its beam over the water at night"
-   }
-  ],
-  "intro-002": [
-   {
-    "src": "mom_06",
-    "a": 405.2,
-    "b": 410.0,
-    "note": "Danny turns sharply in a corridor, Fliss watching behind him"
-   },
-   {
-    "src": "lh_03",
-    "a": 1180.5,
-    "b": 1186.2,
-    "note": "Andrew on the ground, looking up"
-   },
-   {
-    "src": "hoa_04",
-    "a": 114.4,
-    "b": 119.8,
-    "note": "Jason close, dazed after the fall"
-   },
-   {
-    "src": "dim_06",
-    "a": 405.6,
-    "b": 410.4,
-    "note": "Erin frightened, then listening at a door"
-   }
-  ],
-  "intro-003": [
-   {
-    "src": "lh_08",
-    "a": 360.2,
-    "b": 365.1,
-    "note": "A hand sliding the bolt of a door"
-   },
-   {
-    "src": "dim_13",
-    "a": 1280.7,
-    "b": 1288.7,
-    "note": "A hand pressing buttons on a red-lit control panel"
-   }
-  ],
-  "intro-004": [
-   {
-    "src": "mom_10",
-    "a": 1464.6,
-    "b": 1471.0,
-    "note": "High wide: the dive boat alone on a grey open sea, shrinking into the distance (ending footage, no faces)"
-   }
-  ],
-  "intro-009": [
-   {
-    "src": "mom_10",
-    "a": 1341.8,
-    "b": 1346.2,
-    "note": "Daylight: the freighter's rusted hull at frame right as the dive boat heads out toward a low sun"
-   },
-   {
-    "src": "lh_01",
-    "a": 195.9,
-    "b": 200.5,
-    "note": "Covered bridge and police car in the fog, wide"
-   },
-   {
-    "src": "hoa_01",
-    "a": 617.0,
-    "b": 625.0,
-    "note": "Prologue: dark stairway rising to a torch-lit doorway"
-   },
-   {
-    "src": "dim_03",
-    "a": 1153.5,
-    "b": 1161.5,
-    "note": "Pan along the wooden bridge as the host and crew cross, then wide of the bridge over the ravine"
-   }
-  ],
-  "origins-005": [
-   {
-    "src": "mom_03",
-    "a": 1007.1,
-    "b": 1011.7,
-    "note": "All five together on deck at dusk"
-   },
-   {
-    "src": "lh_03",
-    "a": 1283.5,
-    "b": 1287.5,
-    "note": "The whole group of five facing camera in the forest"
-   },
-   {
-    "src": "hoa_05",
-    "a": 1116.5,
-    "b": 1122.5,
-    "note": "Two marines run out of a cave tunnel, wide"
-   },
-   {
-    "src": "dim_01",
-    "a": 1655.0,
-    "b": 1661.0,
-    "note": "The five crew standing in a row on the street"
-   }
-  ],
-  "origins-006": [
-   {
-    "src": "mom_02",
-    "a": 937.0,
-    "b": 943.0,
-    "note": "Dive boat from astern on bright open sea, continuous wide"
-   },
-   {
-    "src": "lh_01",
-    "a": 99.1,
-    "b": 103.5,
-    "note": "Aerial top-down of the bus on the night road"
-   },
-   {
-    "src": "hoa_03",
-    "a": 756.3,
-    "b": 760.8,
-    "note": "Mountain landscape in daylight"
-   },
-   {
-    "src": "dim_02",
-    "a": 206.5,
-    "b": 213.0,
-    "note": "Misty autumn woods on the island, static"
-   }
-  ],
-  "little-hope-033": [
-   {
-    "src": "mom_05",
-    "a": 312.0,
-    "b": 318.0,
-    "note": "A lone figure with a torch standing in a mist-filled corridor, facing camera"
-   },
-   {
-    "src": "lh_04",
-    "a": 216.5,
-    "b": 224.5,
-    "note": "The group on the foggy road under street lamps"
-   }
-  ],
-  "themes-001": [
-   {
-    "src": "mom_10",
-    "a": 959.5,
-    "b": 966.5,
-    "note": "Night exterior: Fliss small on the freighter's outer gangway under deck lamps, open sea at left"
-   },
-   {
-    "src": "lh_02",
-    "a": 1221.7,
-    "b": 1229.7,
-    "note": "Bar exterior seen through foliage, the group approaching"
-   },
-   {
-    "src": "hoa_11",
-    "a": 1322.3,
-    "b": 1329.7,
-    "note": "Wide blue cavern, tiny figure with flashlight"
-   },
-   {
-    "src": "dim_03",
-    "a": 1228.8,
-    "b": 1232.8,
-    "note": "Wide: wooden bridge over the ravine in mist, figures crossing"
-   }
-  ],
-  "themes-006": [
-   {
-    "src": "lh_08",
-    "a": 1451.6,
-    "b": 1456.2,
-    "note": "Taylor with her hands to her face, frightened"
-   },
-   {
-    "src": "dim_16",
-    "a": 792.8,
-    "b": 800.1,
-    "note": "Kate close at sunrise, shaken"
-   }
-  ],
-  "themes-011": [
-   {
-    "src": "mom_12",
-    "a": 977.7,
-    "b": 982.0,
-    "note": "Brad from behind walking a corridor lined with rusted lockers"
-   },
-   {
-    "src": "lh_08",
-    "a": 1462.4,
-    "b": 1466.9,
-    "note": "Taylor listening, Daniel's shoulder in the foreground"
-   },
-   {
-    "src": "hoa_11",
-    "a": 945.0,
-    "b": 950.8,
-    "note": "Silhouette steps into a candle-lit chamber"
-   },
-   {
-    "src": "dim_04",
-    "a": 972.5,
-    "b": 979.0,
-    "note": "Charlie walking a dim hotel corridor, quiet exploration"
-   },
-   {
-    "src": "lh_07",
-    "a": 908.0,
-    "b": 916.0,
-    "note": "Taylor and Daniel hiding, frightened, close"
-   }
-  ],
-  "themes-012": [
-   {
-    "src": "dim_13",
-    "a": 584.8,
-    "b": 591.1,
-    "note": "Kate holding Charlie's cap, grieving"
-   },
-   {
-    "src": "lh_02",
-    "a": 137.6,
-    "b": 145.6,
-    "note": "Funeral umbrellas seen from above, a crow (grief)"
-   }
-  ],
-  "themes-013": [
-   {
-    "src": "mom_10",
-    "a": 782.0,
-    "b": 789.0,
-    "note": "Two figures from behind stepping into a black corridor, a single lamp far ahead"
-   },
-   {
-    "src": "dim_16",
-    "a": 226.5,
-    "b": 234.5,
-    "note": "Lit house porch at night, a figure at the door"
-   },
-   {
-    "src": "lh_07",
-    "a": 890.0,
-    "b": 898.0,
-    "note": "Daniel hiding behind a tree, a candle in the distance"
-   }
-  ],
-  "themes-014": [
-   {
-    "src": "dim_10",
-    "a": 618.2,
-    "b": 623.8,
-    "note": "Mark steps into a spot-lit alcove of the workshop"
-   },
-   {
-    "src": "lh_14",
-    "a": 1819.0,
-    "b": 1825.0,
-    "note": "John stepping through the dark burnt house"
-   },
-   {
-    "src": "mom_12",
-    "a": 1005.6,
-    "b": 1009.8,
-    "note": "Brad looks up at a mummified soldier hanging in the hold (aftermath, not graphic)"
-   },
-   {
-    "src": "dim_13",
-    "a": 591.4,
-    "b": 599.3,
-    "note": "Survivors as silhouettes among lamps in the fog, wide"
-   }
-  ],
-  "themes-015": [
-   {
-    "src": "dim_16",
-    "a": 860.0,
-    "b": 868.0,
-    "note": "Survivors on the shore at sunrise as police arrive"
-   }
-  ],
-  "themes-016": [
-   {
-    "src": "mom_06",
-    "a": 484.5,
-    "b": 492.5,
-    "note": "Quiet exploration: Fliss from behind walking a dark corridor by torchlight"
-   },
-   {
-    "src": "lh_03",
-    "a": 876.5,
-    "b": 884.5,
-    "note": "Andrew walking the foggy road with a torch, quiet exploration"
-   }
-  ],
-  "themes-017": [
-   {
-    "src": "dim_08",
-    "a": 403.5,
-    "b": 411.5,
-    "note": "Jamie exploring the lounge among seated mannequins"
-   },
-   {
-    "src": "mom_07",
-    "a": 308.2,
-    "b": 316.0,
-    "note": "Wide of the cargo hold, Fliss small among the crates with her torch"
-   },
-   {
-    "src": "lh_03",
-    "a": 968.3,
-    "b": 976.3,
-    "note": "From under a porch, two figures with torches on the foggy road"
-   },
-   {
-    "src": "dim_03",
-    "a": 1476.6,
-    "b": 1484.6,
-    "note": "Black-gloved hands on a rocking chair"
-   }
-  ],
-  "outro-002": [
-   {
-    "src": "mom_08",
-    "a": 1853.2,
-    "b": 1860.0,
-    "note": "Fourth scene, wide: shuffling a deck of cards at the desk"
-   },
-   {
-    "src": "mom_08",
-    "a": 1861.0,
-    "b": 1868.0,
-    "note": "Fourth scene, wide: still shuffling, watching the viewer"
-   }
-  ]
- }
+  "beats": {
+    "cold-open-001": [
+      {
+        "src": "mom_10",
+        "a": 1277.3,
+        "b": 1280.6,
+        "note": "The freighter alone on a flat grey sea, distant, haze on the horizon"
+      },
+      {
+        "src": "mom_08",
+        "a": 784.3,
+        "b": 789.5,
+        "note": "Point of view creeping down a dark rusted corridor, one lamp at the far end"
+      }
+    ],
+    "cold-open-002": [
+      {
+        "src": "mom_08",
+        "a": 791.7,
+        "b": 797.5,
+        "note": "Fliss and Brad look round; cut to Fliss in the foreground turning as a dark figure stands in the corridor behind her (cut at 793.37)"
+      },
+      {
+        "src": "mom_10",
+        "a": 797.5,
+        "b": 803.4,
+        "note": "A lone figure silhouetted at the far end of a black corridor"
+      }
+    ],
+    "cold-open-003": [
+      {
+        "src": "mom_07",
+        "a": 1382.6,
+        "b": 1390.7,
+        "note": "Fliss in the hold, a length of pipe half raised, wary, not striking"
+      }
+    ],
+    "cold-open-004": [
+      {
+        "src": "mom_07",
+        "a": 250.4,
+        "b": 256.4,
+        "note": "Slow push in on Fliss until her eyes fill the frame"
+      },
+      {
+        "src": "mom_10",
+        "a": 945,
+        "b": 950.9,
+        "note": "Low angle past her legs: a dark figure advancing through the mist in the corridor"
+      }
+    ],
+    "intro-005": [
+      {
+        "src": "mom_01",
+        "a": 1051.1,
+        "b": 1055,
+        "note": "1947 freighter far off in heavy night sea, single light through the murk"
+      }
+    ],
+    "curator-intro-007": [
+      {
+        "src": "mom_01",
+        "a": 1106.6,
+        "b": 1112.8,
+        "note": "Freighter silhouette with one lamp in the storm, wide, rain and swell"
+      },
+      {
+        "src": "mom_01",
+        "a": 426.9,
+        "b": 429.9,
+        "note": "Freighter riding heavy sea at night, lightning forks behind it"
+      }
+    ],
+    "man-of-medan-001": [
+      {
+        "src": "mom_01",
+        "a": 310.5,
+        "b": 315.8,
+        "note": "Camera lifts from the lantern-lit harbour to the freighter under a storm sky"
+      },
+      {
+        "src": "mom_01",
+        "a": 324,
+        "b": 329.5,
+        "note": "Crate hoisted by crane on the night dock, freighter behind"
+      },
+      {
+        "src": "mom_01",
+        "a": 415,
+        "b": 421,
+        "note": "Freighter deck under way at night, lightning in the clouds ahead"
+      }
+    ],
+    "man-of-medan-002": [
+      {
+        "src": "mom_01",
+        "a": 1056.1,
+        "b": 1060.6,
+        "note": "Radio room: operator's hand tapping the morse key"
+      },
+      {
+        "src": "mom_01",
+        "a": 1062.4,
+        "b": 1066.5,
+        "note": "Radio operator at his set, sending"
+      },
+      {
+        "src": "mom_01",
+        "a": 1068.5,
+        "b": 1071.5,
+        "note": "Soldier running down a dim corridor"
+      },
+      {
+        "src": "mom_01",
+        "a": 1073.5,
+        "b": 1080.2,
+        "note": "Radio room goes dark and flickers, operator looks round"
+      }
+    ],
+    "man-of-medan-003": [
+      {
+        "src": "mom_01",
+        "a": 770,
+        "b": 776,
+        "note": "Two soldiers in a corridor, a dead comrade's head in the foreground"
+      },
+      {
+        "src": "mom_01",
+        "a": 795,
+        "b": 800.5,
+        "note": "Dead soldier on the deck plates, mouth open, hands clawed"
+      },
+      {
+        "src": "mom_01",
+        "a": 981.3,
+        "b": 985.2,
+        "note": "Soldier steps through a hatch, a dead man's face in the foreground"
+      },
+      {
+        "src": "mom_01",
+        "a": 986.3,
+        "b": 990.8,
+        "note": "Close on the dead man's face, eyes wide, frozen"
+      }
+    ],
+    "man-of-medan-004": [
+      {
+        "src": "mom_01",
+        "a": 434.9,
+        "b": 439.5,
+        "note": "Ship's superstructure in silhouette, lightning strikes, sparks shower"
+      },
+      {
+        "src": "mom_01",
+        "a": 1096.5,
+        "b": 1100.3,
+        "note": "High angle on the rain-lashed deck and swinging lifeboat"
+      }
+    ],
+    "man-of-medan-005": [
+      {
+        "src": "mom_12",
+        "a": 2875.6,
+        "b": 2879.3,
+        "note": "The freighter far off on a flat grey sea under haze, slow wide"
+      },
+      {
+        "src": "mom_08",
+        "a": 1755.6,
+        "b": 1760.2,
+        "note": "Rusted superstructure and deck through rain and mist, slow wide"
+      },
+      {
+        "src": "mom_12",
+        "a": 2917.58,
+        "b": 2920.54,
+        "note": "Daylight: the corroded hull rising from still water, the dive boat tiny beside it"
+      },
+      {
+        "src": "mom_12",
+        "a": 2936.4,
+        "b": 2941.9,
+        "note": "Wide grey sea at first light, the hull's edge at right, the dive boat a speck toward the low sun"
+      }
+    ],
+    "man-of-medan-006": [
+      {
+        "src": "mom_02",
+        "a": 427.7,
+        "b": 430.9,
+        "note": "Aerial: the Duke of Milan alone on bright open sea"
+      },
+      {
+        "src": "mom_02",
+        "a": 929,
+        "b": 935,
+        "note": "Dive boat from astern under a blue sky, wake spreading"
+      }
+    ],
+    "man-of-medan-007": [
+      {
+        "src": "mom_03",
+        "a": 1142.2,
+        "b": 1147.4,
+        "note": "All five on the stern deck at dusk around a lantern, sea behind"
+      }
+    ],
+    "man-of-medan-008": [
+      {
+        "src": "mom_02",
+        "a": 192.2,
+        "b": 196.2,
+        "note": "Alex on the dock against the sea, then Brad by the boat (cut at 193.98)"
+      }
+    ],
+    "man-of-medan-009": [
+      {
+        "src": "mom_02",
+        "a": 574.5,
+        "b": 580.3,
+        "note": "Close on Julia in her dive vest, sea behind"
+      },
+      {
+        "src": "mom_02",
+        "a": 381.2,
+        "b": 386,
+        "note": "Close on Conrad in the wheelhouse, grinning"
+      },
+      {
+        "src": "mom_02",
+        "a": 522.5,
+        "b": 527.1,
+        "note": "Fliss at the helm, one hand on the frame, talking over her shoulder"
+      }
+    ],
+    "man-of-medan-010": [
+      {
+        "src": "mom_02",
+        "a": 1110,
+        "b": 1116,
+        "note": "Two divers sinking through blue water, torches on"
+      },
+      {
+        "src": "mom_02",
+        "a": 1127.5,
+        "b": 1134.5,
+        "note": "The bomber wreck on the seabed, divers swimming down to it"
+      }
+    ],
+    "man-of-medan-011": [
+      {
+        "src": "mom_03",
+        "a": 995,
+        "b": 1001,
+        "note": "Dive boat at night, the group moving about the lit deck"
+      },
+      {
+        "src": "mom_03",
+        "a": 1178.7,
+        "b": 1184.3,
+        "note": "Conrad holding court on deck, beer in hand"
+      },
+      {
+        "src": "mom_03",
+        "a": 1192.6,
+        "b": 1196.6,
+        "note": "Julia and Fliss clink beer bottles"
+      },
+      {
+        "src": "mom_03",
+        "a": 506.2,
+        "b": 509.4,
+        "note": "Sunset: the dive boat far off on the horizon as a speedboat slides into frame"
+      }
+    ],
+    "man-of-medan-012": [
+      {
+        "src": "mom_04",
+        "a": 126,
+        "b": 130.3,
+        "note": "Cabin door handle slowly turning in the dark"
+      },
+      {
+        "src": "mom_04",
+        "a": 131.4,
+        "b": 135.5,
+        "note": "Hooded intruder silhouetted in the doorway with a torch"
+      },
+      {
+        "src": "mom_04",
+        "a": 190.5,
+        "b": 196.5,
+        "note": "Olson steps down into the cabin and looks over his captives"
+      },
+      {
+        "src": "mom_04",
+        "a": 212.5,
+        "b": 217,
+        "note": "Fliss and Brad bound on the cabin floor"
+      }
+    ],
+    "man-of-medan-013": [
+      {
+        "src": "mom_04",
+        "a": 982.3,
+        "b": 987.2,
+        "note": "Dive boat, lights blazing, pitching through the storm"
+      },
+      {
+        "src": "mom_05",
+        "a": 110.6,
+        "b": 113.6,
+        "note": "High wide: the boat dwarfed alongside the freighter's hull in the rain"
+      },
+      {
+        "src": "mom_05",
+        "a": 114.6,
+        "b": 117.7,
+        "note": "Looking up the wet riveted hull plates"
+      }
+    ],
+    "man-of-medan-014": [
+      {
+        "src": "mom_06",
+        "a": 748.1,
+        "b": 753.6,
+        "note": "Fliss's torch sweeps a rust-eaten corridor, a mummified body slumped by the wall"
+      }
+    ],
+    "man-of-medan-015": [
+      {
+        "src": "mom_12",
+        "a": 1272.3,
+        "b": 1277.5,
+        "note": "Olson's corpse lifts its head off the deck and pushes itself up toward camera"
+      },
+      {
+        "src": "mom_06",
+        "a": 773.1,
+        "b": 777.8,
+        "note": "Underwater: a corpse drags Fliss down, its face at her shoulder"
+      },
+      {
+        "src": "mom_06",
+        "a": 790.8,
+        "b": 794.3,
+        "note": "Dead hands reach for Fliss as she swings her torch"
+      },
+      {
+        "src": "mom_06",
+        "a": 811,
+        "b": 814.8,
+        "note": "Fliss turns to Brad and his face is a rotting mask"
+      }
+    ],
+    "man-of-medan-016": [
+      {
+        "src": "mom_06",
+        "a": 411,
+        "b": 418.4,
+        "note": "Danny from behind, staring into the dark, slowly drawing his pistol"
+      },
+      {
+        "src": "mom_06",
+        "a": 425.6,
+        "b": 429,
+        "note": "Close on Danny under his cap, eyes darting, panicked"
+      },
+      {
+        "src": "mom_10",
+        "a": 321.1,
+        "b": 327.5,
+        "note": "Olson backlit in a corridor doorway, hammer hanging from his hand"
+      },
+      {
+        "src": "mom_10",
+        "a": 932.6,
+        "b": 936.1,
+        "note": "Olson slumped against a bulkhead clutching his chest, gasping"
+      }
+    ],
+    "man-of-medan-017": [
+      {
+        "src": "mom_06",
+        "a": 494.2,
+        "b": 499.5,
+        "note": "Fliss turns in a pitch-dark corridor, her torch beam swinging across empty bulkheads"
+      }
+    ],
+    "man-of-medan-018": [
+      {
+        "src": "mom_12",
+        "a": 1059.7,
+        "b": 1065.2,
+        "note": "Over Brad's shoulder a figure stands far off in the hold; rotting boots step forward (cut at 1061.54)"
+      },
+      {
+        "src": "mom_12",
+        "a": 1066.5,
+        "b": 1069.6,
+        "note": "What Brad sees: a dead soldier lurching at him, arm outstretched"
+      },
+      {
+        "src": "mom_07",
+        "a": 1368.95,
+        "b": 1376.4,
+        "note": "The same encounter in the other playthrough: it is Fliss standing there; Brad and Fliss face each other (game cuts)"
+      }
+    ],
+    "man-of-medan-019": [
+      {
+        "src": "mom_12",
+        "a": 1018,
+        "b": 1022.8,
+        "note": "Brad's hand closes on a heavy spanner lying on the deck"
+      },
+      {
+        "src": "mom_12",
+        "a": 1070.7,
+        "b": 1075.3,
+        "note": "Brad backs away from the dead soldier and raises the spanner (game cuts)"
+      },
+      {
+        "src": "mom_12",
+        "a": 1076.5,
+        "b": 1079.9,
+        "note": "The creature a step away; close on Brad's face, spanner up, not yet swinging"
+      }
+    ],
+    "man-of-medan-020": [
+      {
+        "src": "mom_08",
+        "a": 878.56,
+        "b": 881.52,
+        "note": "Over Fliss's shoulder: the cargo manifest lying on a table under her torch (short, 3 s)"
+      },
+      {
+        "src": "mom_07",
+        "a": 434.6,
+        "b": 438.8,
+        "note": "Fliss sets the ship's cargo manual down on a drum beside a rusted chain"
+      },
+      {
+        "src": "mom_07",
+        "a": 268.3,
+        "b": 273.5,
+        "note": "Fliss lifts a crate lid in the hold: sacks crusted with yellow-green chemical"
+      },
+      {
+        "src": "mom_01",
+        "a": 349,
+        "b": 356,
+        "note": "1947: the skull-stencilled crates stacked in the hold, camera pulling back"
+      }
+    ],
+    "man-of-medan-021": [
+      {
+        "src": "mom_01",
+        "a": 451,
+        "b": 457.5,
+        "note": "1947 hold: stacked crates stencilled with skulls, yellow vapour seeping from them"
+      },
+      {
+        "src": "mom_01",
+        "a": 458.8,
+        "b": 466,
+        "note": "1947 hold from above: mist creeping across the deck between the cargo cases"
+      },
+      {
+        "src": "mom_10",
+        "a": 897,
+        "b": 905,
+        "note": "Present day: thick green-yellow mist rolling low along the deck"
+      }
+    ],
+    "man-of-medan-022": [
+      {
+        "src": "mom_01",
+        "a": 949,
+        "b": 956.5,
+        "note": "Armed soldier backs away as dark figures come at him out of the orange haze"
+      },
+      {
+        "src": "mom_01",
+        "a": 1007,
+        "b": 1010.8,
+        "note": "Figure in a conical hat seen from behind in the hold"
+      },
+      {
+        "src": "mom_01",
+        "a": 968.8,
+        "b": 972.1,
+        "note": "Soldier's body sprawled on the red deck"
+      }
+    ],
+    "man-of-medan-023": [
+      {
+        "src": "mom_08",
+        "a": 801.6,
+        "b": 809,
+        "note": "The dark figure walks up; Fliss and Brad stare; it is Conrad, palms raised (game cuts)"
+      },
+      {
+        "src": "mom_12",
+        "a": 1341,
+        "b": 1348.2,
+        "note": "Brad braced with his torch; cut to Conrad stepping into the light, hands up"
+      }
+    ],
+    "man-of-medan-024": [
+      {
+        "src": "mom_10",
+        "a": 454,
+        "b": 460,
+        "note": "Pistol barrel in the foreground levelled at Julia's head, Brad frozen beyond it"
+      },
+      {
+        "src": "mom_10",
+        "a": 484.8,
+        "b": 488.9,
+        "note": "Junior aiming straight down the lens, wild-eyed"
+      },
+      {
+        "src": "mom_10",
+        "a": 492,
+        "b": 498.3,
+        "note": "Julia with her hands up against the bulkhead, terrified"
+      },
+      {
+        "src": "mom_10",
+        "a": 525.4,
+        "b": 529.2,
+        "note": "Brad backed against the wall, hands raised"
+      }
+    ],
+    "man-of-medan-025": [
+      {
+        "src": "mom_10",
+        "a": 520.3,
+        "b": 524.3,
+        "note": "Close on Junior's face, sweating, unsure"
+      },
+      {
+        "src": "mom_10",
+        "a": 605.5,
+        "b": 609.6,
+        "note": "Julia in close profile, one hand raised, pleading"
+      },
+      {
+        "src": "mom_10",
+        "a": 610.9,
+        "b": 615.2,
+        "note": "Junior with the pistol lowered, wavering"
+      }
+    ],
+    "man-of-medan-026": [
+      {
+        "src": "mom_12",
+        "a": 1425,
+        "b": 1431,
+        "note": "Brad bolts down a stairway and along a rusted corridor (game cuts)"
+      },
+      {
+        "src": "mom_10",
+        "a": 952,
+        "b": 958,
+        "note": "Fliss running along the outer gangway at night, sea to one side"
+      },
+      {
+        "src": "mom_12",
+        "a": 1356,
+        "b": 1360.1,
+        "note": "Close on a bulkhead door's locking wheel spinning shut"
+      }
+    ],
+    "man-of-medan-027": [
+      {
+        "src": "mom_05",
+        "a": 1680.2,
+        "b": 1685.1,
+        "note": "Fliss crouches in the hold; close on the distributor cap lying on the deck"
+      },
+      {
+        "src": "mom_10",
+        "a": 1311,
+        "b": 1318.2,
+        "note": "Fliss sets the distributor cap down on the boat's engine hatch, open sea behind"
+      },
+      {
+        "src": "mom_10",
+        "a": 1334.6,
+        "b": 1340.6,
+        "note": "The dive boat pulls away from the freighter's hull in a cloud of exhaust"
+      }
+    ],
+    "man-of-medan-028": [
+      {
+        "src": "mom_12",
+        "a": 1908.2,
+        "b": 1912.5,
+        "note": "Radio room: Julia at the old set from behind, then Brad, Alex and Julia bent over it (cut at 1910.02)"
+      },
+      {
+        "src": "mom_12",
+        "a": 1920,
+        "b": 1924.8,
+        "note": "Close on a hand turning the radio's tuning dial"
+      },
+      {
+        "src": "mom_12",
+        "a": 1935.7,
+        "b": 1939.3,
+        "note": "Julia's face close, listening hard to the receiver"
+      },
+      {
+        "src": "mom_01",
+        "a": 49.6,
+        "b": 54.8,
+        "note": "1947: soldiers carry a flag-draped coffin aboard, standing in for the military's buried secrets"
+      }
+    ],
+    "man-of-medan-029": [
+      {
+        "src": "mom_05",
+        "a": 199,
+        "b": 206,
+        "note": "Captives and pirates file along a gangway through the cavernous hold by torchlight, wide"
+      },
+      {
+        "src": "mom_12",
+        "a": 984.5,
+        "b": 989,
+        "note": "Torch beam on a locker door; a screaming dead face fills the frame"
+      }
+    ],
+    "man-of-medan-030": [
+      {
+        "src": "mom_07",
+        "a": 244.8,
+        "b": 249.3,
+        "note": "Fliss at the rail, medium close, staring out at the dark sea"
+      },
+      {
+        "src": "mom_01",
+        "a": 1101.4,
+        "b": 1105.5,
+        "note": "Extreme close on the radio operator's eyes, wide with terror at something off screen"
+      },
+      {
+        "src": "mom_12",
+        "a": 2929.2,
+        "b": 2935.2,
+        "note": "The dive boat pulls away and the rusted hull slides out of frame over grey water"
+      }
+    ],
+    "themes-002": [
+      {
+        "src": "mom_12",
+        "a": 1279.5,
+        "b": 1283,
+        "note": "The dead Olson on his feet, a grey distorted figure in the gloom"
+      }
+    ],
+    "themes-007": [
+      {
+        "src": "mom_10",
+        "a": 939,
+        "b": 943.9,
+        "note": "Fliss in a corridor, staring ahead at something off screen, frightened"
+      }
+    ],
+    "outro-003": [
+      {
+        "src": "mom_08",
+        "a": 1727.8,
+        "b": 1730.4,
+        "note": "The freighter's deck and cranes in driving rain, wide (the whole shot is 2.6 s; the beat needs 1.4 s)"
+      }
+    ],
+    "intro-006": [
+      {
+        "src": "lh_09",
+        "a": 1252.5,
+        "b": 1258.7,
+        "note": "Empty fog-bound street with fence and lamp post, after the burning figure has faded out"
+      }
+    ],
+    "little-hope-001": [
+      {
+        "src": "lh_01",
+        "a": 89.2,
+        "b": 92.7,
+        "note": "Driver's-eye view of the night road in headlights, road sign passing"
+      },
+      {
+        "src": "lh_01",
+        "a": 205.2,
+        "b": 210.9,
+        "note": "Bus headlights glimpsed through trees, passing in fog"
+      },
+      {
+        "src": "lh_01",
+        "a": 219.9,
+        "b": 223.7,
+        "note": "Road ahead in the headlights, fence and warning sign"
+      }
+    ],
+    "little-hope-002": [
+      {
+        "src": "lh_01",
+        "a": 291.6,
+        "b": 299.8,
+        "note": "Clarke house exterior at night in snow, camera tilting up to the lit windows"
+      },
+      {
+        "src": "lh_01",
+        "a": 475.4,
+        "b": 481.3,
+        "note": "Anthony and Tanya in the hallway of the house"
+      }
+    ],
+    "little-hope-003": [
+      {
+        "src": "lh_01",
+        "a": 995.9,
+        "b": 999.1,
+        "note": "Fire seen through the kitchen window"
+      },
+      {
+        "src": "lh_01",
+        "a": 1000.5,
+        "b": 1004.5,
+        "note": "Flames spreading across the kitchen floor"
+      },
+      {
+        "src": "lh_01",
+        "a": 1045.3,
+        "b": 1048.5,
+        "note": "Tanya on the balcony above the flames"
+      },
+      {
+        "src": "lh_01",
+        "a": 1049.6,
+        "b": 1053.7,
+        "note": "Dennis in the smoke-filled room"
+      },
+      {
+        "src": "lh_01",
+        "a": 1092.8,
+        "b": 1095.9,
+        "note": "James trapped inside, fire around him"
+      }
+    ],
+    "little-hope-004": [
+      {
+        "src": "lh_01",
+        "a": 1138.3,
+        "b": 1145.5,
+        "note": "Anthony in silhouette before the burning porch, then wide from behind as he faces the burning house (one game cut at 1141.56)"
+      },
+      {
+        "src": "lh_01",
+        "a": 1081.5,
+        "b": 1085.4,
+        "note": "The fire through the window, Anthony at the house unable to get in"
+      },
+      {
+        "src": "lh_01",
+        "a": 1066.4,
+        "b": 1069.3,
+        "note": "Anthony small in the snow, seen from the balcony"
+      }
+    ],
+    "little-hope-005": [
+      {
+        "src": "lh_01",
+        "a": 1223.4,
+        "b": 1229.9,
+        "note": "Anthony's face lit by the fire, looking up, embers behind him"
+      },
+      {
+        "src": "lh_01",
+        "a": 1146.6,
+        "b": 1150.4,
+        "note": "Anthony in the snow shouting toward the house, embers in the air"
+      },
+      {
+        "src": "lh_01",
+        "a": 1233.1,
+        "b": 1236.7,
+        "note": "Anthony clutching the locket to his chest, then on his knees in the snow as a neighbour reaches him (one game cut)"
+      }
+    ],
+    "little-hope-006": [
+      {
+        "src": "lh_04",
+        "a": 104.3,
+        "b": 110.8,
+        "note": "Street lamp glowing in thick fog, camera tilting down to the road with distant silhouettes"
+      },
+      {
+        "src": "lh_02",
+        "a": 870.2,
+        "b": 877.5,
+        "note": "Empty road swallowed by the fog wall"
+      }
+    ],
+    "little-hope-007": [
+      {
+        "src": "lh_01",
+        "a": 65,
+        "b": 72.3,
+        "note": "Aerial of the bus, headlights on, on the night road"
+      },
+      {
+        "src": "lh_01",
+        "a": 93.8,
+        "b": 98,
+        "note": "Bus headlights approaching along the foggy road"
+      },
+      {
+        "src": "lh_01",
+        "a": 104.6,
+        "b": 107.6,
+        "note": "Bus approaches and passes the camera"
+      },
+      {
+        "src": "lh_01",
+        "a": 226.8,
+        "b": 229.9,
+        "note": "Inside the bus from behind the driver, a passenger in silhouette against the windscreen"
+      }
+    ],
+    "little-hope-008": [
+      {
+        "src": "lh_04",
+        "a": 552.6,
+        "b": 556.1,
+        "note": "The girl standing in the road under the street lamps (stand-in, see misses)"
+      },
+      {
+        "src": "lh_01",
+        "a": 254.95,
+        "b": 258,
+        "note": "Swerve seen from behind the driver, the bus tips and slides on its side (game cuts)"
+      },
+      {
+        "src": "lh_01",
+        "a": 262.2,
+        "b": 265,
+        "note": "Overturned bus, wheel still spinning, steam"
+      }
+    ],
+    "little-hope-009": [
+      {
+        "src": "lh_02",
+        "a": 298.1,
+        "b": 305.3,
+        "note": "Crash site: the overturned bus seen from behind, wide"
+      },
+      {
+        "src": "lh_02",
+        "a": 800.2,
+        "b": 806.4,
+        "note": "Taylor walks into the fog wall and vanishes"
+      },
+      {
+        "src": "lh_02",
+        "a": 863.7,
+        "b": 869,
+        "note": "The group walks into the fog"
+      },
+      {
+        "src": "lh_02",
+        "a": 878.6,
+        "b": 886,
+        "note": "The group emerges from the fog where they started, backs to camera"
+      }
+    ],
+    "little-hope-010": [
+      {
+        "src": "lh_03",
+        "a": 1168.4,
+        "b": 1175.6,
+        "note": "The girl standing in the dark woods, a white flash and grabbing hands, Andrew and Angela land in 1692 (the game's own rapid flash cuts)"
+      }
+    ],
+    "little-hope-011": [
+      {
+        "src": "lh_05",
+        "a": 1549.3,
+        "b": 1558.2,
+        "note": "Wide of the meeting house with Mary at the centre, then Mary with the court around her (one game cut)"
+      },
+      {
+        "src": "lh_05",
+        "a": 1592.1,
+        "b": 1600.1,
+        "note": "Reverend Carver walks the floor before the townspeople"
+      },
+      {
+        "src": "lh_05",
+        "a": 1748.8,
+        "b": 1754.3,
+        "note": "The judge in his hat presiding"
+      }
+    ],
+    "little-hope-012": [
+      {
+        "src": "lh_04",
+        "a": 702.4,
+        "b": 705.7,
+        "note": "Amy, Angela's 1692 double, close"
+      },
+      {
+        "src": "lh_04",
+        "a": 706.8,
+        "b": 714.5,
+        "note": "Angela staring at her double, John behind her"
+      },
+      {
+        "src": "lh_09",
+        "a": 251.6,
+        "b": 258.7,
+        "note": "Daniel face to face with David, his 1692 double, in the church"
+      }
+    ],
+    "little-hope-013": [
+      {
+        "src": "lh_05",
+        "a": 1625.2,
+        "b": 1629.5,
+        "note": "Amy accused in the meeting house, close"
+      },
+      {
+        "src": "lh_05",
+        "a": 1648.9,
+        "b": 1654.8,
+        "note": "Joseph, John's double, before the court with Amy in the foreground"
+      },
+      {
+        "src": "lh_08",
+        "a": 390.2,
+        "b": 395.8,
+        "note": "Tabitha, Taylor's double"
+      },
+      {
+        "src": "lh_09",
+        "a": 506.2,
+        "b": 511.9,
+        "note": "David, Daniel's double"
+      }
+    ],
+    "little-hope-014": [
+      {
+        "src": "lh_09",
+        "a": 1193.8,
+        "b": 1198.9,
+        "note": "Andrew in silhouette; in the fog beyond him the burned demon holds Taylor"
+      },
+      {
+        "src": "lh_08",
+        "a": 1598.5,
+        "b": 1601.3,
+        "note": "Daniel scrambles up; a demon stands in the fog behind him"
+      },
+      {
+        "src": "lh_14",
+        "a": 1886.6,
+        "b": 1890.3,
+        "note": "Demon crawling in the foreground before the ruined house"
+      }
+    ],
+    "little-hope-015": [
+      {
+        "src": "lh_07",
+        "a": 1245.3,
+        "b": 1250.7,
+        "note": "Hanged effigies in the museum, lit by torchlight (stand-in for the hanging, see misses)"
+      },
+      {
+        "src": "lh_14",
+        "a": 201,
+        "b": 203.5,
+        "note": "Demon in chains crawling"
+      },
+      {
+        "src": "lh_14",
+        "a": 568.3,
+        "b": 570.9,
+        "note": "Demon crawling toward Daniel"
+      }
+    ],
+    "little-hope-016": [
+      {
+        "src": "lh_08",
+        "a": 1593.5,
+        "b": 1597.4,
+        "note": "Charred arm and hand of the burned demon reaching, close"
+      }
+    ],
+    "little-hope-017": [
+      {
+        "src": "lh_14",
+        "a": 134.95,
+        "b": 138.1,
+        "note": "Dark water under the bridge, ripples as something rises"
+      },
+      {
+        "src": "lh_14",
+        "a": 147.8,
+        "b": 151.7,
+        "note": "The drowned demon on the wet ground, then wide with the demon in the foreground and three figures in the light (one game cut)"
+      },
+      {
+        "src": "lh_14",
+        "a": 221.6,
+        "b": 226.8,
+        "note": "The demon crawling in chains at the water's edge, then sinking back into the dark (one game cut at 222.8)"
+      }
+    ],
+    "little-hope-018": [
+      {
+        "src": "lh_14",
+        "a": 247.5,
+        "b": 254.1,
+        "note": "John, Angela and Andrew talking at the picket fence"
+      },
+      {
+        "src": "lh_09",
+        "a": 179.9,
+        "b": 185.6,
+        "note": "Church interior, cross on the altar, shaft of light"
+      },
+      {
+        "src": "lh_02",
+        "a": 109.1,
+        "b": 116.7,
+        "note": "Graveyard in the fog: a stone cross with a crow, mourners under umbrellas behind"
+      }
+    ],
+    "little-hope-019": [
+      {
+        "src": "lh_01",
+        "a": 526.3,
+        "b": 530.3,
+        "note": "1972: Anthony, Tanya and Dennis in the hall"
+      },
+      {
+        "src": "lh_02",
+        "a": 1300.9,
+        "b": 1306.6,
+        "note": "Present day: the five walking toward camera"
+      },
+      {
+        "src": "lh_01",
+        "a": 319.5,
+        "b": 322.8,
+        "note": "1972: James and Anne in the bedroom"
+      },
+      {
+        "src": "lh_04",
+        "a": 532.8,
+        "b": 538.7,
+        "note": "Present day: the five standing on the road, wide"
+      },
+      {
+        "src": "lh_01",
+        "a": 215.5,
+        "b": 218.8,
+        "note": "The driver's hands on the wheel, no face"
+      }
+    ],
+    "little-hope-020": [
+      {
+        "src": "lh_12",
+        "a": 1053.4,
+        "b": 1062.3,
+        "note": "Andrew outside the diner, turning and looking around, alone"
+      }
+    ],
+    "little-hope-021": [
+      {
+        "src": "lh_12",
+        "a": 1047.5,
+        "b": 1052.3,
+        "note": "John in profile against the dawn light, the last of them"
+      },
+      {
+        "src": "lh_12",
+        "a": 1041.9,
+        "b": 1046.4,
+        "note": "Wide of the diner, two small figures beside it"
+      },
+      {
+        "src": "lh_12",
+        "a": 1063.6,
+        "b": 1070.6,
+        "note": "The same wide of the diner, nobody there"
+      }
+    ],
+    "little-hope-022": [
+      {
+        "src": "lh_12",
+        "a": 1071.7,
+        "b": 1074.8,
+        "note": "The back of an older man's head, diner lights behind"
+      },
+      {
+        "src": "lh_12",
+        "a": 1075.9,
+        "b": 1083.4,
+        "note": "Camera moves round him: the bus company patch on his sleeve, then his profile"
+      },
+      {
+        "src": "lh_12",
+        "a": 1084.5,
+        "b": 1092.3,
+        "note": "The older Anthony's face revealed outside the diner"
+      }
+    ],
+    "little-hope-023": [
+      {
+        "src": "lh_14",
+        "a": 276.9,
+        "b": 280.4,
+        "note": "John, close"
+      },
+      {
+        "src": "lh_01",
+        "a": 323.9,
+        "b": 327.5,
+        "note": "James, close"
+      },
+      {
+        "src": "lh_14",
+        "a": 266.4,
+        "b": 269.8,
+        "note": "Angela, close"
+      },
+      {
+        "src": "lh_01",
+        "a": 315.9,
+        "b": 318.4,
+        "note": "Anne at the bookshelves"
+      },
+      {
+        "src": "lh_14",
+        "a": 602,
+        "b": 604.8,
+        "note": "Daniel, close, John behind him"
+      },
+      {
+        "src": "lh_01",
+        "a": 517.2,
+        "b": 520.6,
+        "note": "Dennis with his records"
+      },
+      {
+        "src": "lh_07",
+        "a": 878,
+        "b": 881.2,
+        "note": "Taylor in profile"
+      },
+      {
+        "src": "lh_01",
+        "a": 502.2,
+        "b": 505.6,
+        "note": "Tanya, close"
+      }
+    ],
+    "little-hope-024": [
+      {
+        "src": "lh_03",
+        "a": 1231,
+        "b": 1236.1,
+        "note": "Mary in 1692, close"
+      },
+      {
+        "src": "lh_01",
+        "a": 310.7,
+        "b": 314.8,
+        "note": "Megan in 1972, close"
+      }
+    ],
+    "little-hope-025": [
+      {
+        "src": "lh_14",
+        "a": 2387.2,
+        "b": 2392.6,
+        "note": "The burnt ruin of the house at dawn, wide"
+      },
+      {
+        "src": "lh_14",
+        "a": 2393.6,
+        "b": 2401.5,
+        "note": "Andrew sitting on the porch of the ruin, slow push in"
+      },
+      {
+        "src": "lh_01",
+        "a": 1023.7,
+        "b": 1029.5,
+        "note": "Flashback: fire spreading through the living room"
+      },
+      {
+        "src": "lh_14",
+        "a": 2522.6,
+        "b": 2526.6,
+        "note": "The older Anthony at the ruin, head bowed"
+      },
+      {
+        "src": "lh_01",
+        "a": 1018.6,
+        "b": 1022.2,
+        "note": "Flashback: the kitchen ablaze"
+      }
+    ],
+    "little-hope-026": [
+      {
+        "src": "lh_01",
+        "a": 965.1,
+        "b": 972,
+        "note": "Megan in silhouette walking into the kitchen to the stove"
+      },
+      {
+        "src": "lh_01",
+        "a": 984.8,
+        "b": 989.9,
+        "note": "Gas flame in the foreground, the doll on the stove catches fire"
+      },
+      {
+        "src": "lh_14",
+        "a": 2527.7,
+        "b": 2532.3,
+        "note": "The older Anthony, head bowed, Megan standing beside him"
+      }
+    ],
+    "little-hope-027": [
+      {
+        "src": "lh_12",
+        "a": 660.4,
+        "b": 668.4,
+        "note": "Mary standing before the judges in the court"
+      },
+      {
+        "src": "lh_12",
+        "a": 725.9,
+        "b": 731.2,
+        "note": "Mary close, giving her testimony"
+      },
+      {
+        "src": "lh_05",
+        "a": 1571.1,
+        "b": 1574,
+        "note": "Mary close at the first trial"
+      }
+    ],
+    "little-hope-028": [
+      {
+        "src": "lh_04",
+        "a": 1879.4,
+        "b": 1887.4,
+        "note": "Carver with a candle, taking the poppet from the barrel"
+      },
+      {
+        "src": "lh_04",
+        "a": 1890.6,
+        "b": 1895.7,
+        "note": "Mary looking up at Carver, who stands over her"
+      },
+      {
+        "src": "lh_04",
+        "a": 1922.7,
+        "b": 1930.9,
+        "note": "Mary answering him, close"
+      }
+    ],
+    "little-hope-029": [
+      {
+        "src": "lh_12",
+        "a": 646.8,
+        "b": 654.1,
+        "note": "The final trial: wide of the court, then high angle as Carver takes the floor (one game cut)"
+      },
+      {
+        "src": "lh_12",
+        "a": 762.3,
+        "b": 769.5,
+        "note": "Abraham, Andrew's double, pointing and speaking out"
+      },
+      {
+        "src": "lh_12",
+        "a": 789.2,
+        "b": 796.2,
+        "note": "Andrew at Abraham's shoulder, speaking up"
+      },
+      {
+        "src": "lh_01",
+        "a": 975.3,
+        "b": 979.1,
+        "note": "Megan close by the stove, her shadow on the wall"
+      }
+    ],
+    "little-hope-030": [
+      {
+        "src": "lh_12",
+        "a": 1230.6,
+        "b": 1239.5,
+        "note": "Good ending: the older Anthony's face in daylight, calm"
+      },
+      {
+        "src": "lh_14",
+        "a": 2368.4,
+        "b": 2376.4,
+        "note": "Bleak ending: Andrew kneeling alone at the steps of the ruin, camera pulling back (arrest not in the recording, see misses)"
+      }
+    ],
+    "little-hope-031": [
+      {
+        "src": "lh_09",
+        "a": 1242.1,
+        "b": 1250,
+        "note": "The burning figure walks away and dissolves into the fog"
+      },
+      {
+        "src": "lh_12",
+        "a": 1181.8,
+        "b": 1188.3,
+        "note": "High angle: Anthony walking away alone under a single lamp"
+      }
+    ],
+    "little-hope-032": [
+      {
+        "src": "lh_14",
+        "a": 547.3,
+        "b": 551.7,
+        "note": "Daniel and John running"
+      },
+      {
+        "src": "lh_08",
+        "a": 1489.2,
+        "b": 1496.7,
+        "note": "Daniel and Taylor look back; the demon's legs in the foreground walking toward them; Daniel pulls Taylor away (game cuts)"
+      },
+      {
+        "src": "lh_08",
+        "a": 1533.3,
+        "b": 1540,
+        "note": "The demon walks past the truck the pair are hiding behind"
+      },
+      {
+        "src": "lh_08",
+        "a": 1547.3,
+        "b": 1555.7,
+        "note": "The demon by the barrels, the pair hiding, then running (game cuts)"
+      }
+    ],
+    "themes-003": [
+      {
+        "src": "lh_01",
+        "a": 132.2,
+        "b": 137.6,
+        "note": "The older Anthony at the wheel, close on his face"
+      }
+    ],
+    "themes-008": [
+      {
+        "src": "lh_05",
+        "a": 1544.6,
+        "b": 1548.2,
+        "note": "Andrew and John standing in the meeting house, watching"
+      },
+      {
+        "src": "lh_04",
+        "a": 1872.9,
+        "b": 1878.3,
+        "note": "Daniel, Taylor and Angela watching Carver, his back in the foreground"
+      }
+    ],
+    "outro-004": [
+      {
+        "src": "lh_08",
+        "a": 1150,
+        "b": 1154,
+        "note": "The foggy main street under an orange street lamp, two small figures walking away"
+      }
+    ],
+    "intro-007": [
+      {
+        "src": "hoa_01",
+        "a": 1784.4,
+        "b": 1790,
+        "note": "Wide of the temple interior, pool and fire bowls (prologue)"
+      },
+      {
+        "src": "hoa_04",
+        "a": 702.2,
+        "b": 706.8,
+        "note": "Wide ruined temple hall, Salim walking through with a light"
+      }
+    ],
+    "little-hope-034": [
+      {
+        "src": "hoa_05",
+        "a": 1080.2,
+        "b": 1086.4,
+        "note": "Clawed feet walk past in the dark"
+      },
+      {
+        "src": "hoa_12",
+        "a": 1502.1,
+        "b": 1506.8,
+        "note": "Creature silhouette in foreground, watching"
+      },
+      {
+        "src": "hoa_12",
+        "a": 1521.2,
+        "b": 1528.6,
+        "note": "Creature claw close in foreground, figures far off"
+      }
+    ],
+    "house-of-ashes-001": [
+      {
+        "src": "hoa_01",
+        "a": 356.1,
+        "b": 362.9,
+        "note": "Colossal statue face above the city of Akkad"
+      },
+      {
+        "src": "hoa_01",
+        "a": 366,
+        "b": 372.8,
+        "note": "Tilt down the statue to a line of Akkadian soldiers with shields"
+      },
+      {
+        "src": "hoa_01",
+        "a": 384.8,
+        "b": 390.3,
+        "note": "Tilt down a colossal statue to the temple exterior, soldier in foreground"
+      }
+    ],
+    "house-of-ashes-002": [
+      {
+        "src": "hoa_01",
+        "a": 327.3,
+        "b": 333.3,
+        "note": "Naram-Sin seated on his throne"
+      },
+      {
+        "src": "hoa_01",
+        "a": 1794.6,
+        "b": 1797.6,
+        "note": "Gold-masked king enthroned in the temple"
+      }
+    ],
+    "house-of-ashes-003": [
+      {
+        "src": "hoa_01",
+        "a": 1802.9,
+        "b": 1808.3,
+        "note": "Eclipse seen through temple columns, then creature-eye view of soldiers running"
+      },
+      {
+        "src": "hoa_01",
+        "a": 1810.8,
+        "b": 1819.8,
+        "note": "Creature-eye view of soldiers at the door, then a soldier bars it"
+      }
+    ],
+    "house-of-ashes-004": [
+      {
+        "src": "hoa_03",
+        "a": 570.2,
+        "b": 575.6,
+        "note": "Desert wide with helicopter"
+      },
+      {
+        "src": "hoa_03",
+        "a": 784.5,
+        "b": 789,
+        "note": "Helicopters over the valley, wide"
+      },
+      {
+        "src": "hoa_03",
+        "a": 768.8,
+        "b": 773.1,
+        "note": "Helicopters seen from a truck window"
+      },
+      {
+        "src": "hoa_02",
+        "a": 407.6,
+        "b": 411.4,
+        "note": "Wide of the palace hall used as forward base"
+      }
+    ],
+    "house-of-ashes-005": [
+      {
+        "src": "hoa_02",
+        "a": 600.3,
+        "b": 605.5,
+        "note": "Overhead of the briefing room, then the map screen"
+      },
+      {
+        "src": "hoa_02",
+        "a": 608.2,
+        "b": 611.6,
+        "note": "Eric briefing at the map"
+      },
+      {
+        "src": "hoa_03",
+        "a": 792.2,
+        "b": 797.6,
+        "note": "Helicopters landing in the valley"
+      }
+    ],
+    "house-of-ashes-006": [
+      {
+        "src": "hoa_02",
+        "a": 530.3,
+        "b": 536.5,
+        "note": "Eric King, close"
+      }
+    ],
+    "house-of-ashes-007": [
+      {
+        "src": "hoa_02",
+        "a": 835.1,
+        "b": 839.5,
+        "note": "Eric and Rachel two-shot at the screen"
+      }
+    ],
+    "house-of-ashes-008": [
+      {
+        "src": "hoa_02",
+        "a": 128,
+        "b": 134,
+        "note": "Nick Kay close, holding Rachel"
+      }
+    ],
+    "house-of-ashes-009": [
+      {
+        "src": "hoa_03",
+        "a": 1315.5,
+        "b": 1321.5,
+        "note": "Jason Kolchek close, in the village"
+      }
+    ],
+    "house-of-ashes-010": [
+      {
+        "src": "hoa_03",
+        "a": 110.6,
+        "b": 116.4,
+        "note": "Salim crosses the courtyard to his house carrying a gift"
+      },
+      {
+        "src": "hoa_03",
+        "a": 551,
+        "b": 557,
+        "note": "Salim inside his house"
+      },
+      {
+        "src": "hoa_03",
+        "a": 562.5,
+        "b": 566.7,
+        "note": "Salim in uniform with rifle, beside his commander"
+      }
+    ],
+    "house-of-ashes-011": [
+      {
+        "src": "hoa_03",
+        "a": 1063.9,
+        "b": 1067.5,
+        "note": "Helicopter hit"
+      },
+      {
+        "src": "hoa_03",
+        "a": 1088.9,
+        "b": 1092.4,
+        "note": "Iraqi soldiers firing"
+      },
+      {
+        "src": "hoa_03",
+        "a": 1140.9,
+        "b": 1144.2,
+        "note": "Marine firing amid explosions"
+      },
+      {
+        "src": "hoa_03",
+        "a": 1357.7,
+        "b": 1361.2,
+        "note": "Ground cracks, Eric runs"
+      },
+      {
+        "src": "hoa_03",
+        "a": 1362.3,
+        "b": 1366.3,
+        "note": "Soldiers fall into the opening ground"
+      }
+    ],
+    "house-of-ashes-012": [
+      {
+        "src": "hoa_04",
+        "a": 101.2,
+        "b": 104.5,
+        "note": "Jason wakes in the cavern"
+      },
+      {
+        "src": "hoa_04",
+        "a": 108.2,
+        "b": 113.3,
+        "note": "Wide cavern, shaft of light, Jason small"
+      },
+      {
+        "src": "hoa_04",
+        "a": 820.3,
+        "b": 823.3,
+        "note": "Red flare lit in the dark"
+      }
+    ],
+    "house-of-ashes-013": [
+      {
+        "src": "hoa_04",
+        "a": 153.4,
+        "b": 160,
+        "note": "Jason's flashlight probing a black tunnel"
+      }
+    ],
+    "house-of-ashes-014": [
+      {
+        "src": "hoa_05",
+        "a": 1030.4,
+        "b": 1033.3,
+        "note": "Creature silhouette on beams, marine aims"
+      },
+      {
+        "src": "hoa_05",
+        "a": 1034.6,
+        "b": 1038.9,
+        "note": "Creature silhouette climbing, then with marines in foreground"
+      },
+      {
+        "src": "hoa_10",
+        "a": 755.1,
+        "b": 758.7,
+        "note": "Winged creature in the temple hall"
+      },
+      {
+        "src": "hoa_10",
+        "a": 601.6,
+        "b": 604.2,
+        "note": "Claw smashes through a wall slit"
+      }
+    ],
+    "house-of-ashes-015": [
+      {
+        "src": "hoa_05",
+        "a": 991.2,
+        "b": 1000.2,
+        "note": "1940s camp: lamp and tent, radio crate, then wide of the camp under lamps"
+      },
+      {
+        "src": "hoa_05",
+        "a": 1338.5,
+        "b": 1344.5,
+        "note": "High angle of the camp, relief panel and lamp"
+      },
+      {
+        "src": "hoa_05",
+        "a": 1360.2,
+        "b": 1363.2,
+        "note": "Tent with tables"
+      }
+    ],
+    "house-of-ashes-016": [
+      {
+        "src": "hoa_05",
+        "a": 569.9,
+        "b": 575.8,
+        "note": "Hand holding the expedition group photograph over desk papers"
+      },
+      {
+        "src": "hoa_05",
+        "a": 495.6,
+        "b": 499.5,
+        "note": "Black and white journal film: ruins and excavators"
+      },
+      {
+        "src": "hoa_15",
+        "a": 1162.2,
+        "b": 1168.2,
+        "note": "Journal page: handwriting and portrait of an expedition member"
+      }
+    ],
+    "house-of-ashes-017": [
+      {
+        "src": "hoa_10",
+        "a": 1393,
+        "b": 1396.3,
+        "note": "Eric raises the UV wand; turned soldier recoils in purple light"
+      },
+      {
+        "src": "hoa_10",
+        "a": 1480.2,
+        "b": 1484.8,
+        "note": "UV wand swung in the dark, purple glow"
+      }
+    ],
+    "house-of-ashes-018": [
+      {
+        "src": "hoa_04",
+        "a": 910.1,
+        "b": 913.7,
+        "note": "Creature point of view, tracking Salim through the ruin"
+      },
+      {
+        "src": "hoa_12",
+        "a": 384,
+        "b": 388.8,
+        "note": "Turned soldier listening; a survivor hides behind a sarcophagus"
+      },
+      {
+        "src": "hoa_10",
+        "a": 1305.6,
+        "b": 1308.3,
+        "note": "Turned ancient soldier, face close"
+      },
+      {
+        "src": "hoa_14",
+        "a": 588.2,
+        "b": 591.3,
+        "note": "Turned ancient soldier raises a spear"
+      }
+    ],
+    "house-of-ashes-019": [
+      {
+        "src": "hoa_10",
+        "a": 695.6,
+        "b": 700.4,
+        "note": "Jason with rifle and weapon light; marine aims"
+      },
+      {
+        "src": "hoa_10",
+        "a": 725.2,
+        "b": 729.2,
+        "note": "Light beams in the dark hall; marine fires"
+      },
+      {
+        "src": "hoa_10",
+        "a": 742.5,
+        "b": 745.6,
+        "note": "Machine gun tracers"
+      },
+      {
+        "src": "hoa_10",
+        "a": 159.6,
+        "b": 163.4,
+        "note": "Marine firing from cover, muzzle flash"
+      }
+    ],
+    "house-of-ashes-020": [
+      {
+        "src": "hoa_11",
+        "a": 1437,
+        "b": 1445.6,
+        "note": "Green glowing chasm seen from the ledge, two small figures"
+      },
+      {
+        "src": "hoa_11",
+        "a": 1515.2,
+        "b": 1519.9,
+        "note": "Cage platform descending on chains in the green shaft"
+      },
+      {
+        "src": "hoa_11",
+        "a": 1547.6,
+        "b": 1552,
+        "note": "Cage descends far into the green glow"
+      },
+      {
+        "src": "hoa_12",
+        "a": 741.2,
+        "b": 745.8,
+        "note": "Dark green cocoon, close (Back prompt in bottom-right corner, inside cropped area)"
+      }
+    ],
+    "house-of-ashes-021": [
+      {
+        "src": "hoa_13",
+        "a": 1384.2,
+        "b": 1391.6,
+        "note": "Vision: Rachel in starfield, burning craft streaks in"
+      },
+      {
+        "src": "hoa_13",
+        "a": 1392.8,
+        "b": 1399.8,
+        "note": "Vision: craft descends toward Earth"
+      },
+      {
+        "src": "hoa_13",
+        "a": 1292.3,
+        "b": 1298.3,
+        "note": "Skeletal alien figure in teal light"
+      }
+    ],
+    "house-of-ashes-022": [
+      {
+        "src": "hoa_01",
+        "a": 1052,
+        "b": 1060,
+        "note": "Fire bowl and carved winged-figure relief in torchlight, slow push"
+      },
+      {
+        "src": "hoa_01",
+        "a": 790,
+        "b": 796,
+        "note": "Stepped relief panel of figures and cuneiform by torchlight (prompt in bottom-right corner, inside cropped area)"
+      },
+      {
+        "src": "hoa_10",
+        "a": 116.3,
+        "b": 119.8,
+        "note": "Wide of the temple hall with lamassu statue"
+      }
+    ],
+    "house-of-ashes-023": [
+      {
+        "src": "hoa_10",
+        "a": 912.1,
+        "b": 916.8,
+        "note": "Nick aims rifle, Salim aims pistol behind him"
+      },
+      {
+        "src": "hoa_10",
+        "a": 937.9,
+        "b": 942,
+        "note": "Dar aims AK; Rachel and Eric aim pistols"
+      },
+      {
+        "src": "hoa_10",
+        "a": 959.4,
+        "b": 963.8,
+        "note": "Jason aims rifle close"
+      },
+      {
+        "src": "hoa_10",
+        "a": 703.6,
+        "b": 707.7,
+        "note": "Creature bursts through the gate into the light"
+      }
+    ],
+    "house-of-ashes-024": [
+      {
+        "src": "hoa_05",
+        "a": 1050.6,
+        "b": 1056,
+        "note": "Creature carries a marine off; silhouette dragging a body"
+      },
+      {
+        "src": "hoa_10",
+        "a": 1358.9,
+        "b": 1362,
+        "note": "Creature swoops on an Iraqi soldier firing"
+      },
+      {
+        "src": "hoa_10",
+        "a": 1364.2,
+        "b": 1367.3,
+        "note": "Winged creature crouched over a body in the tomb"
+      }
+    ],
+    "house-of-ashes-025": [
+      {
+        "src": "hoa_11",
+        "a": 130.6,
+        "b": 136.1,
+        "note": "Jason advances down corridor with weapon light"
+      },
+      {
+        "src": "hoa_11",
+        "a": 137.1,
+        "b": 141.5,
+        "note": "Salim raises his hands"
+      },
+      {
+        "src": "hoa_11",
+        "a": 142.6,
+        "b": 147.4,
+        "note": "Salim's silhouette with Jason beyond, then Jason aims rifle close"
+      }
+    ],
+    "house-of-ashes-026": [
+      {
+        "src": "hoa_11",
+        "a": 403,
+        "b": 411.3,
+        "note": "Jason with weapon light and Salim with bar side by side; Salim levers the gate"
+      },
+      {
+        "src": "hoa_14",
+        "a": 543.2,
+        "b": 550.3,
+        "note": "Jason aims, Salim runs in and swings his bar at a winged creature"
+      },
+      {
+        "src": "hoa_14",
+        "a": 871.2,
+        "b": 877,
+        "note": "On the giant stone hand, Jason hauls Salim up"
+      }
+    ],
+    "house-of-ashes-027": [
+      {
+        "src": "hoa_11",
+        "a": 801.2,
+        "b": 805.2,
+        "note": "Jason and Salim two-shot at the relief wall"
+      },
+      {
+        "src": "hoa_11",
+        "a": 806.2,
+        "b": 814.2,
+        "note": "Salim close, telling Jason a story"
+      },
+      {
+        "src": "hoa_11",
+        "a": 815.4,
+        "b": 819.6,
+        "note": "Salim close, then the two-shot as Jason listens"
+      }
+    ],
+    "house-of-ashes-028": [
+      {
+        "src": "hoa_11",
+        "a": 939.1,
+        "b": 943.8,
+        "note": "Jason and Salim walk a corridor together, from behind"
+      },
+      {
+        "src": "hoa_11",
+        "a": 847,
+        "b": 850.3,
+        "note": "The two walk to the gate, wide"
+      },
+      {
+        "src": "hoa_12",
+        "a": 1404.2,
+        "b": 1409.8,
+        "note": "Boots on alien ground, then the two walk toward camera"
+      },
+      {
+        "src": "hoa_12",
+        "a": 1415.1,
+        "b": 1420.9,
+        "note": "The two walking on, small, then from behind"
+      }
+    ],
+    "house-of-ashes-029": [
+      {
+        "src": "hoa_11",
+        "a": 865.2,
+        "b": 869.6,
+        "note": "Creature silhouette crawls onto a ledge in the dark"
+      },
+      {
+        "src": "hoa_11",
+        "a": 883.9,
+        "b": 887,
+        "note": "Creature rears, claws spread"
+      }
+    ],
+    "house-of-ashes-030": [
+      {
+        "src": "hoa_10",
+        "a": 238.2,
+        "b": 241.2,
+        "note": "Nick aims and fires"
+      },
+      {
+        "src": "hoa_10",
+        "a": 1332.6,
+        "b": 1335.5,
+        "note": "Salim turns as a creature hits a soldier behind him"
+      },
+      {
+        "src": "hoa_10",
+        "a": 782,
+        "b": 785.7,
+        "note": "Creatures in the fire of an explosion"
+      },
+      {
+        "src": "hoa_10",
+        "a": 188.6,
+        "b": 191,
+        "note": "Muzzle flash behind a column"
+      }
+    ],
+    "house-of-ashes-031": [
+      {
+        "src": "hoa_12",
+        "a": 1671,
+        "b": 1678.8,
+        "note": "Cocooned human face inside gold cocoon"
+      },
+      {
+        "src": "hoa_12",
+        "a": 1694.2,
+        "b": 1698.1,
+        "note": "Cocooned man's eye opens"
+      },
+      {
+        "src": "hoa_14",
+        "a": 576.4,
+        "b": 582.1,
+        "note": "Turned ancient soldier walks through firelight"
+      }
+    ],
+    "house-of-ashes-032": [
+      {
+        "src": "hoa_13",
+        "a": 1103.6,
+        "b": 1107.8,
+        "note": "Infected Rachel, Jason beside her"
+      },
+      {
+        "src": "hoa_13",
+        "a": 1115.6,
+        "b": 1123,
+        "note": "Wide: Rachel trembling, Jason standing off"
+      }
+    ],
+    "house-of-ashes-033": [
+      {
+        "src": "hoa_13",
+        "a": 1351.3,
+        "b": 1355,
+        "note": "Nick close, anguished"
+      },
+      {
+        "src": "hoa_13",
+        "a": 1358.1,
+        "b": 1362.8,
+        "note": "Rachel clutching her head"
+      },
+      {
+        "src": "hoa_13",
+        "a": 1337.6,
+        "b": 1341.8,
+        "note": "The group seen past Rachel's arm"
+      },
+      {
+        "src": "hoa_12",
+        "a": 1718.2,
+        "b": 1725.4,
+        "note": "Cocoon membrane, then the face of the cocooned man"
+      }
+    ],
+    "house-of-ashes-034": [
+      {
+        "src": "hoa_12",
+        "a": 994.5,
+        "b": 1002.5,
+        "note": "Slow pan across the vast blue interior"
+      },
+      {
+        "src": "hoa_12",
+        "a": 1009,
+        "b": 1017,
+        "note": "Slow pan across the alien structure"
+      }
+    ],
+    "house-of-ashes-035": [
+      {
+        "src": "hoa_14",
+        "a": 189.2,
+        "b": 194.8,
+        "note": "Nick, Salim and Jason kneel, planning"
+      },
+      {
+        "src": "hoa_14",
+        "a": 304.7,
+        "b": 308,
+        "note": "Wide of the hive, Nick small with flashlight"
+      },
+      {
+        "src": "hoa_14",
+        "a": 325,
+        "b": 328.2,
+        "note": "Nick crouched planting a charge"
+      },
+      {
+        "src": "hoa_14",
+        "a": 331.6,
+        "b": 336.1,
+        "note": "Nick at the trunk, planting"
+      }
+    ],
+    "house-of-ashes-036": [
+      {
+        "src": "hoa_14",
+        "a": 901.6,
+        "b": 910.6,
+        "note": "Marine and Jason crawl out into daylight; Jason pulls Salim up"
+      },
+      {
+        "src": "hoa_14",
+        "a": 913.1,
+        "b": 917.9,
+        "note": "Nick smiles at the sun; survivors stand under it"
+      }
+    ],
+    "house-of-ashes-037": [
+      {
+        "src": "hoa_14",
+        "a": 887.3,
+        "b": 891.8,
+        "note": "White sun in open sky"
+      },
+      {
+        "src": "hoa_14",
+        "a": 985.3,
+        "b": 991,
+        "note": "Wide: survivors in the village in daylight, farmhouse"
+      }
+    ],
+    "house-of-ashes-038": [
+      {
+        "src": "hoa_14",
+        "a": 1007.2,
+        "b": 1011.3,
+        "note": "Eclipse crescent"
+      },
+      {
+        "src": "hoa_14",
+        "a": 1017.6,
+        "b": 1022.9,
+        "note": "Eclipse ring; creature flies across it"
+      }
+    ],
+    "house-of-ashes-039": [
+      {
+        "src": "hoa_14",
+        "a": 992.2,
+        "b": 997.5,
+        "note": "Nick from behind looks at the sun"
+      },
+      {
+        "src": "hoa_14",
+        "a": 1012.4,
+        "b": 1016.5,
+        "note": "Salim looks up as the sky darkens"
+      }
+    ],
+    "house-of-ashes-040": [
+      {
+        "src": "hoa_14",
+        "a": 1136.7,
+        "b": 1139.4,
+        "note": "Farmhouse exterior, creatures crawling toward it"
+      },
+      {
+        "src": "hoa_14",
+        "a": 1159.6,
+        "b": 1163.4,
+        "note": "Turned soldier with spear against Salim, red flare light"
+      },
+      {
+        "src": "hoa_14",
+        "a": 1225.7,
+        "b": 1229.6,
+        "note": "Creature at the window; Jason with flare"
+      },
+      {
+        "src": "hoa_14",
+        "a": 1232.4,
+        "b": 1235.9,
+        "note": "Salim with flare; creature roaring"
+      }
+    ],
+    "house-of-ashes-041": [
+      {
+        "src": "hoa_14",
+        "a": 1353.6,
+        "b": 1356.8,
+        "note": "Eclipse ends, sun flares out"
+      },
+      {
+        "src": "hoa_14",
+        "a": 1360.4,
+        "b": 1365.9,
+        "note": "Creatures burning in the light"
+      }
+    ],
+    "house-of-ashes-042": [
+      {
+        "src": "hoa_14",
+        "a": 1411.5,
+        "b": 1417.6,
+        "note": "Nick outside with arriving soldiers"
+      },
+      {
+        "src": "hoa_14",
+        "a": 1438.7,
+        "b": 1444.6,
+        "note": "Soldier escorts Salim"
+      },
+      {
+        "src": "hoa_14",
+        "a": 1470.9,
+        "b": 1474.3,
+        "note": "Helicopters fly off over the mountains"
+      },
+      {
+        "src": "hoa_14",
+        "a": 1477.7,
+        "b": 1483.2,
+        "note": "Helicopters fly into the sun"
+      }
+    ],
+    "house-of-ashes-043": [
+      {
+        "src": "hoa_04",
+        "a": 942.3,
+        "b": 946.7,
+        "note": "Horror: Salim frightened on the ground"
+      },
+      {
+        "src": "hoa_13",
+        "a": 1132.6,
+        "b": 1135.7,
+        "note": "Science fiction: wide alien hall with consoles"
+      },
+      {
+        "src": "hoa_14",
+        "a": 391.3,
+        "b": 394.9,
+        "note": "Action: the hive explodes"
+      },
+      {
+        "src": "hoa_12",
+        "a": 1082,
+        "b": 1087,
+        "note": "Human drama: Salim close, head down"
+      }
+    ],
+    "house-of-ashes-044": [
+      {
+        "src": "hoa_14",
+        "a": 1237,
+        "b": 1243.2,
+        "note": "Salim fires; creature close with wings spread"
+      },
+      {
+        "src": "hoa_14",
+        "a": 452.2,
+        "b": 456.8,
+        "note": "Creature looms in foreground, fire behind"
+      },
+      {
+        "src": "hoa_14",
+        "a": 1113.7,
+        "b": 1117.9,
+        "note": "Nick aims rifle"
+      },
+      {
+        "src": "hoa_10",
+        "a": 249.3,
+        "b": 252.4,
+        "note": "Nick aims rifle, close"
+      }
+    ],
+    "house-of-ashes-045": [
+      {
+        "src": "hoa_12",
+        "a": 1494,
+        "b": 1497.9,
+        "note": "Two silhouettes in the vast teal cavern, then two tiny figures atop a vessel"
+      },
+      {
+        "src": "hoa_12",
+        "a": 1455.1,
+        "b": 1459,
+        "note": "Two silhouettes look out at the vast interior"
+      },
+      {
+        "src": "hoa_12",
+        "a": 1507.9,
+        "b": 1512.8,
+        "note": "Wide vast cavern, two tiny figures"
+      },
+      {
+        "src": "hoa_13",
+        "a": 1277,
+        "b": 1284.8,
+        "note": "Group of five small before the alien spire"
+      },
+      {
+        "src": "hoa_12",
+        "a": 1460.2,
+        "b": 1465.3,
+        "note": "View through an oval opening onto the vast interior"
+      }
+    ],
+    "house-of-ashes-046": [
+      {
+        "src": "hoa_14",
+        "a": 980.7,
+        "b": 984.2,
+        "note": "Jason in daylight"
+      },
+      {
+        "src": "hoa_14",
+        "a": 1000.5,
+        "b": 1006,
+        "note": "Salim close, then walks away from the marines"
+      }
+    ],
+    "themes-004": [
+      {
+        "src": "hoa_11",
+        "a": 921,
+        "b": 924.3,
+        "note": "High angle: Salim and Jason against winged creature"
+      },
+      {
+        "src": "hoa_11",
+        "a": 927,
+        "b": 930.8,
+        "note": "The two stand over the dead creature"
+      }
+    ],
+    "themes-009": [
+      {
+        "src": "hoa_10",
+        "a": 951,
+        "b": 955.8,
+        "note": "Salim open-handed, lowering his pistol"
+      },
+      {
+        "src": "hoa_10",
+        "a": 968.8,
+        "b": 972.5,
+        "note": "Eric holds his pistol up and away"
+      }
+    ],
+    "outro-005": [
+      {
+        "src": "hoa_01",
+        "a": 1823.2,
+        "b": 1828.1,
+        "note": "Wide temple hall, stepped altar and candles, a soldier runs"
+      }
+    ],
+    "intro-008": [
+      {
+        "src": "dim_03",
+        "a": 1313,
+        "b": 1318.4,
+        "note": "Island hotel exterior under overcast sky, slow move across the tower"
+      }
+    ],
+    "devil-in-me-001": [
+      {
+        "src": "dim_02",
+        "a": 1497.5,
+        "b": 1500.2,
+        "note": "Grey water and mist with the island cliffs beyond (2.7 s, ends before a fade)"
+      },
+      {
+        "src": "dim_02",
+        "a": 1466.4,
+        "b": 1474.8,
+        "note": "Misty lake and island from the lookout, Mark and Charlie in foreground"
+      },
+      {
+        "src": "dim_02",
+        "a": 1581.3,
+        "b": 1589.3,
+        "note": "Fog over the water seen through the ferry railings"
+      }
+    ],
+    "devil-in-me-002": [
+      {
+        "src": "dim_10",
+        "a": 1733.5,
+        "b": 1737,
+        "note": "Red-lit corridor, still silhouette of a man in a hat in the lit doorway at the end"
+      },
+      {
+        "src": "dim_18",
+        "a": 2521.8,
+        "b": 2525.4,
+        "note": "Night mist, a lone still figure standing far off"
+      },
+      {
+        "src": "dim_14",
+        "a": 1524,
+        "b": 1529.4,
+        "note": "Dark silhouette walks away into a teal-lit doorway"
+      }
+    ],
+    "devil-in-me-003": [
+      {
+        "src": "dim_01",
+        "a": 21.1,
+        "b": 23.3,
+        "note": "1893: World's Fair Hotel exterior, brick facade (2.2 s only; quote text appears after)"
+      },
+      {
+        "src": "dim_01",
+        "a": 74.2,
+        "b": 78.8,
+        "note": "Tilt up from the cobbles to Jeff and Marie, the newlyweds, on the street"
+      },
+      {
+        "src": "dim_01",
+        "a": 97.1,
+        "b": 105.5,
+        "note": "The couple walk up to the hotel entrance, from behind"
+      }
+    ],
+    "devil-in-me-004": [
+      {
+        "src": "dim_01",
+        "a": 196.9,
+        "b": 205.5,
+        "note": "H. H. Holmes behind the front desk, medium"
+      },
+      {
+        "src": "dim_01",
+        "a": 211.1,
+        "b": 216.8,
+        "note": "Holmes close, welcoming"
+      }
+    ],
+    "devil-in-me-005": [
+      {
+        "src": "dim_01",
+        "a": 298.8,
+        "b": 304.5,
+        "note": "Over the couple's shoulders to Holmes at the desk"
+      },
+      {
+        "src": "dim_01",
+        "a": 218.1,
+        "b": 221.3,
+        "note": "Holmes under the RECEPTION sign with Jeff and Marie"
+      }
+    ],
+    "devil-in-me-006": [
+      {
+        "src": "dim_01",
+        "a": 586.2,
+        "b": 591.3,
+        "note": "Holmes opens the room door for the couple"
+      },
+      {
+        "src": "dim_01",
+        "a": 868.9,
+        "b": 873.8,
+        "note": "View down through a concealed hatch at Jeff below"
+      },
+      {
+        "src": "dim_01",
+        "a": 923.6,
+        "b": 926.6,
+        "note": "Jeff runs down the corridor"
+      },
+      {
+        "src": "dim_01",
+        "a": 931.9,
+        "b": 938.1,
+        "note": "Jeff pounds on the sealed door, wide corridor"
+      }
+    ],
+    "devil-in-me-007": [
+      {
+        "src": "dim_01",
+        "a": 146,
+        "b": 155,
+        "note": "1893 lobby wide through the pillars, slow"
+      },
+      {
+        "src": "dim_01",
+        "a": 1051.6,
+        "b": 1060.4,
+        "note": "Holmes at the jewellery counter, desk lamp in foreground, slow"
+      },
+      {
+        "src": "dim_01",
+        "a": 1080,
+        "b": 1087.7,
+        "note": "Holmes front-on, portrait-like"
+      }
+    ],
+    "devil-in-me-008": [
+      {
+        "src": "dim_01",
+        "a": 156.6,
+        "b": 162.6,
+        "note": "1893 hotel lobby, the couple at the desk, slow track past a skull in foreground"
+      },
+      {
+        "src": "dim_03",
+        "a": 1405.2,
+        "b": 1411.2,
+        "note": "Present-day replica lobby, the crew walking in"
+      }
+    ],
+    "devil-in-me-009": [
+      {
+        "src": "dim_01",
+        "a": 1520,
+        "b": 1527,
+        "note": "Present day: Kate presenting on the courtroom set"
+      },
+      {
+        "src": "dim_01",
+        "a": 1578.4,
+        "b": 1583.8,
+        "note": "The take playing back on the edit monitor"
+      }
+    ],
+    "devil-in-me-010": [
+      {
+        "src": "dim_02",
+        "a": 1736.3,
+        "b": 1740.6,
+        "note": "Mark behind the camera, then the crew shooting: reflector, director, presenter"
+      },
+      {
+        "src": "dim_01",
+        "a": 1539.2,
+        "b": 1544.7,
+        "note": "Kate with the Holmes actor on the courtroom set"
+      }
+    ],
+    "devil-in-me-011": [
+      {
+        "src": "dim_02",
+        "a": 1716.8,
+        "b": 1720.6,
+        "note": "Charlie Lonnit close, cap and glasses"
+      }
+    ],
+    "devil-in-me-012": [
+      {
+        "src": "dim_01",
+        "a": 1549,
+        "b": 1553,
+        "note": "Kate Wilder close, presenting to camera"
+      }
+    ],
+    "devil-in-me-013": [
+      {
+        "src": "dim_02",
+        "a": 1488.8,
+        "b": 1491.8,
+        "note": "Mark with the camera to his eye, Charlie pointing beside him"
+      }
+    ],
+    "devil-in-me-014": [
+      {
+        "src": "dim_03",
+        "a": 1185.8,
+        "b": 1189.4,
+        "note": "Jamie Tiergan close"
+      }
+    ],
+    "devil-in-me-015": [
+      {
+        "src": "dim_02",
+        "a": 1726.25,
+        "b": 1729.4,
+        "note": "Whip-pan lands on Erin in headphones with the sound recorder beside Mark's camera (clean from 1727.0)"
+      }
+    ],
+    "devil-in-me-016": [
+      {
+        "src": "dim_07",
+        "a": 121.7,
+        "b": 127.2,
+        "note": "Charlie, hands raised, trying to calm the crew"
+      },
+      {
+        "src": "dim_07",
+        "a": 195.5,
+        "b": 202,
+        "note": "Kate, arms crossed, facing Charlie; Kate close and angry"
+      }
+    ],
+    "devil-in-me-017": [
+      {
+        "src": "dim_01",
+        "a": 1605.3,
+        "b": 1613.5,
+        "note": "Charlie on the phone, close"
+      }
+    ],
+    "devil-in-me-018": [
+      {
+        "src": "dim_02",
+        "a": 214.5,
+        "b": 221.9,
+        "note": "The limousine waiting by the misty lake, seen through trees"
+      },
+      {
+        "src": "dim_02",
+        "a": 1503,
+        "b": 1506.7,
+        "note": "The ferry barge on the foggy water"
+      }
+    ],
+    "devil-in-me-019": [
+      {
+        "src": "dim_02",
+        "a": 1576.8,
+        "b": 1580.2,
+        "note": "The ferry on the water with the crew aboard, wide"
+      },
+      {
+        "src": "dim_02",
+        "a": 1594,
+        "b": 1600.4,
+        "note": "The crew leaning on the ferry rail"
+      },
+      {
+        "src": "dim_02",
+        "a": 1601.4,
+        "b": 1607.4,
+        "note": "The host at the wheel from behind, crew through the window"
+      }
+    ],
+    "devil-in-me-020": [
+      {
+        "src": "dim_03",
+        "a": 1327.4,
+        "b": 1331.8,
+        "note": "Hotel front, the crew walking up the drive"
+      }
+    ],
+    "devil-in-me-021": [
+      {
+        "src": "dim_03",
+        "a": 1433.2,
+        "b": 1438.2,
+        "note": "Lobby wide, lamp in foreground"
+      },
+      {
+        "src": "dim_04",
+        "a": 1020,
+        "b": 1025,
+        "note": "Charlie walking a long hotel corridor"
+      },
+      {
+        "src": "dim_06",
+        "a": 962,
+        "b": 968,
+        "note": "Row of animatronic figures on the dark stage"
+      }
+    ],
+    "devil-in-me-022": [
+      {
+        "src": "dim_02",
+        "a": 1652.87,
+        "b": 1655.87,
+        "note": "The host by the iron gate, arms spread in welcome"
+      },
+      {
+        "src": "dim_03",
+        "a": 1340.5,
+        "b": 1345,
+        "note": "Rack focus to a PRIVATE PROPERTY KEEP OUT sign"
+      },
+      {
+        "src": "dim_03",
+        "a": 1346.2,
+        "b": 1350,
+        "note": "Someone watching the crew from an upper window"
+      }
+    ],
+    "devil-in-me-023": [
+      {
+        "src": "dim_09",
+        "a": 1636.1,
+        "b": 1639.3,
+        "note": "The wall slides shut; Kate's hands on it"
+      },
+      {
+        "src": "dim_09",
+        "a": 1641.6,
+        "b": 1644.6,
+        "note": "Kate watches the panel close"
+      },
+      {
+        "src": "dim_09",
+        "a": 1645.7,
+        "b": 1649.3,
+        "note": "A gloved finger presses a red button; Kate and Erin push at the closed wall"
+      }
+    ],
+    "devil-in-me-024": [
+      {
+        "src": "dim_09",
+        "a": 1650.5,
+        "b": 1657.7,
+        "note": "Walls closing in on Jamie; top-down of the shrinking room"
+      },
+      {
+        "src": "dim_12",
+        "a": 1328.7,
+        "b": 1331.8,
+        "note": "Surveillance monitor showing a hotel room"
+      }
+    ],
+    "devil-in-me-025": [
+      {
+        "src": "dim_09",
+        "a": 1622.3,
+        "b": 1627.9,
+        "note": "The four in the corridor as the walls start to move"
+      },
+      {
+        "src": "dim_09",
+        "a": 1629,
+        "b": 1635,
+        "note": "The group pulled apart as a wall moves between them"
+      },
+      {
+        "src": "dim_09",
+        "a": 1658.9,
+        "b": 1665.1,
+        "note": "Jamie alone in the changed corridor"
+      }
+    ],
+    "devil-in-me-026": [
+      {
+        "src": "dim_12",
+        "a": 419.4,
+        "b": 423.8,
+        "note": "Control desk and monitors, Jamie approaching"
+      },
+      {
+        "src": "dim_06",
+        "a": 1464.9,
+        "b": 1468.6,
+        "note": "Fisheye surveillance view of the group in a corridor"
+      },
+      {
+        "src": "dim_12",
+        "a": 1320.6,
+        "b": 1326.6,
+        "note": "Kate at the console in the control room"
+      }
+    ],
+    "devil-in-me-027": [
+      {
+        "src": "dim_14",
+        "a": 1322,
+        "b": 1330.5,
+        "note": "Bank of monitors in the dark lair"
+      },
+      {
+        "src": "dim_14",
+        "a": 1415.3,
+        "b": 1421,
+        "note": "The man in the bowler hat from behind, looking out"
+      }
+    ],
+    "devil-in-me-028": [
+      {
+        "src": "dim_12",
+        "a": 1580.9,
+        "b": 1588.3,
+        "note": "Kate in the tiled chamber as the wall slides"
+      },
+      {
+        "src": "dim_12",
+        "a": 1594.9,
+        "b": 1599.8,
+        "note": "Wide: Kate and Jamie on either side of the glass wall"
+      },
+      {
+        "src": "dim_12",
+        "a": 1612.9,
+        "b": 1618.8,
+        "note": "Jamie from behind, Kate through the glass; hand on the glass"
+      }
+    ],
+    "devil-in-me-029": [
+      {
+        "src": "dim_09",
+        "a": 1296.4,
+        "b": 1304.4,
+        "note": "Pan from Erin in chamber B across the gauges to Kate in chamber A"
+      },
+      {
+        "src": "dim_09",
+        "a": 1340.9,
+        "b": 1345.9,
+        "note": "Erin gasping inside the chamber"
+      }
+    ],
+    "devil-in-me-030": [
+      {
+        "src": "dim_12",
+        "a": 1650.6,
+        "b": 1656,
+        "note": "Kate close, shouting through the glass"
+      },
+      {
+        "src": "dim_12",
+        "a": 1661.5,
+        "b": 1666.6,
+        "note": "Jamie close, deciding"
+      },
+      {
+        "src": "dim_09",
+        "a": 1393.8,
+        "b": 1398.5,
+        "note": "Erin pleading at the chamber window"
+      },
+      {
+        "src": "dim_12",
+        "a": 1556.9,
+        "b": 1561.7,
+        "note": "The killer in the bowler hat from behind, watching them"
+      }
+    ],
+    "devil-in-me-031": [
+      {
+        "src": "dim_10",
+        "a": 419.3,
+        "b": 426,
+        "note": "Workshop wide: figure on the table under a ring of lamps"
+      },
+      {
+        "src": "dim_10",
+        "a": 430.2,
+        "b": 436.2,
+        "note": "Animatronic face in extreme close-up, wire in the nose"
+      },
+      {
+        "src": "dim_12",
+        "a": 1026,
+        "b": 1033,
+        "note": "Costume design sheet for the Du'Met figure on the pinboard"
+      }
+    ],
+    "devil-in-me-032": [
+      {
+        "src": "dim_10",
+        "a": 968.1,
+        "b": 976.5,
+        "note": "Hand holding a CONFIDENTIAL file over the desk"
+      },
+      {
+        "src": "dim_07",
+        "a": 1020,
+        "b": 1028.5,
+        "note": "Hands holding a newspaper clipping about a serial killer"
+      }
+    ],
+    "devil-in-me-033": [
+      {
+        "src": "dim_15",
+        "a": 1100,
+        "b": 1106.5,
+        "note": "Stylised evidence-room montage from Munday's case (typed text fragments in the top-left corner)"
+      }
+    ],
+    "devil-in-me-034": [
+      {
+        "src": "dim_16",
+        "a": 400.8,
+        "b": 404.1,
+        "note": "The killer's Holmes mask and bowler hat, close, lit by fire"
+      },
+      {
+        "src": "dim_18",
+        "a": 4072.4,
+        "b": 4078.4,
+        "note": "The masked killer standing in hat and apron, teal light"
+      },
+      {
+        "src": "dim_18",
+        "a": 3362.4,
+        "b": 3367.7,
+        "note": "Full figure from behind walking down a lit corridor"
+      }
+    ],
+    "devil-in-me-035": [
+      {
+        "src": "dim_08",
+        "a": 797.8,
+        "b": 805.5,
+        "note": "Mannequins dressed as the crew seated at the candle-lit table"
+      },
+      {
+        "src": "dim_06",
+        "a": 1231.2,
+        "b": 1239,
+        "note": "Animatronic in boater and striped vest, others behind"
+      }
+    ],
+    "devil-in-me-036": [
+      {
+        "src": "dim_18",
+        "a": 2246.3,
+        "b": 2250.7,
+        "note": "The killer in silhouette walking toward camera down the hedge lane"
+      },
+      {
+        "src": "dim_15",
+        "a": 916.8,
+        "b": 921.3,
+        "note": "The killer, masked, walking steadily toward camera"
+      },
+      {
+        "src": "dim_14",
+        "a": 1411.2,
+        "b": 1414.2,
+        "note": "His shoes stepping into a lit doorway"
+      }
+    ],
+    "devil-in-me-037": [
+      {
+        "src": "dim_11",
+        "a": 1154.7,
+        "b": 1157.8,
+        "note": "Shredder teeth turning"
+      },
+      {
+        "src": "dim_09",
+        "a": 1352.3,
+        "b": 1357,
+        "note": "Control lever and pressure gauges"
+      },
+      {
+        "src": "dim_12",
+        "a": 389.9,
+        "b": 395.9,
+        "note": "Looking up the machinery shaft, cables and walkways"
+      }
+    ],
+    "devil-in-me-038": [
+      {
+        "src": "dim_12",
+        "a": 374,
+        "b": 381,
+        "note": "Rotating shot of the multi-level steel structure behind the walls"
+      },
+      {
+        "src": "dim_12",
+        "a": 400.9,
+        "b": 406.5,
+        "note": "The machinery hub, wide"
+      }
+    ],
+    "devil-in-me-039": [
+      {
+        "src": "dim_15",
+        "a": 939.5,
+        "b": 945.5,
+        "note": "Survivors running through the dark woods"
+      },
+      {
+        "src": "dim_15",
+        "a": 1645,
+        "b": 1649.8,
+        "note": "The lighthouse lamp sweeping its beam at night"
+      }
+    ],
+    "devil-in-me-040": [
+      {
+        "src": "dim_16",
+        "a": 412.1,
+        "b": 415.5,
+        "note": "Survivors run along the dock"
+      },
+      {
+        "src": "dim_16",
+        "a": 452.9,
+        "b": 455.8,
+        "note": "Kate looks up; the killer walks down the dock toward the boat"
+      },
+      {
+        "src": "dim_16",
+        "a": 542.8,
+        "b": 546.8,
+        "note": "He steps aboard and raises the axe"
+      },
+      {
+        "src": "dim_16",
+        "a": 555,
+        "b": 557.2,
+        "note": "Jamie smashes a gas tank into him"
+      },
+      {
+        "src": "dim_16",
+        "a": 600.5,
+        "b": 603.9,
+        "note": "Mark gets up and grapples with him"
+      },
+      {
+        "src": "dim_16",
+        "a": 619.9,
+        "b": 622.8,
+        "note": "The killer rises again, fist raised"
+      }
+    ],
+    "devil-in-me-041": [
+      {
+        "src": "dim_16",
+        "a": 524.6,
+        "b": 530.3,
+        "note": "The killer climbs aboard and stands with the axe"
+      },
+      {
+        "src": "dim_16",
+        "a": 584.6,
+        "b": 589.8,
+        "note": "Mark fights him for the axe; a hand tears at the mask"
+      }
+    ],
+    "devil-in-me-042": [
+      {
+        "src": "dim_16",
+        "a": 689.4,
+        "b": 693.6,
+        "note": "Wreck burning on the dark water by the rocks"
+      },
+      {
+        "src": "dim_16",
+        "a": 766,
+        "b": 774.6,
+        "note": "Three survivors sitting on the sea wall at misty sunrise"
+      }
+    ],
+    "devil-in-me-043": [
+      {
+        "src": "dim_16",
+        "a": 699.9,
+        "b": 703,
+        "note": "Dissolve to the killer's white mask floating in the dark water"
+      },
+      {
+        "src": "dim_16",
+        "a": 465.6,
+        "b": 468.8,
+        "note": "Still dark water at night"
+      },
+      {
+        "src": "dim_16",
+        "a": 853.6,
+        "b": 857.3,
+        "note": "The still lake at sunrise through the reeds"
+      }
+    ],
+    "devil-in-me-044": [
+      {
+        "src": "dim_16",
+        "a": 1143,
+        "b": 1146.1,
+        "note": "A new family at home, the daughter comes in with a laptop"
+      },
+      {
+        "src": "dim_16",
+        "a": 1151.6,
+        "b": 1155.5,
+        "note": "The daughter announces the prize trip"
+      },
+      {
+        "src": "dim_16",
+        "a": 1164.6,
+        "b": 1173,
+        "note": "Laptop screen: CONGRATULATIONS over a photo of the hotel, slow zoom"
+      }
+    ],
+    "devil-in-me-045": [
+      {
+        "src": "dim_16",
+        "a": 1072.4,
+        "b": 1080.4,
+        "note": "The killer's mask lying on the beach at sunrise, static"
+      },
+      {
+        "src": "dim_16",
+        "a": 1081.4,
+        "b": 1090.4,
+        "note": "Same shot continues, hold"
+      }
+    ],
+    "themes-005": [
+      {
+        "src": "dim_18",
+        "a": 4237,
+        "b": 4241,
+        "note": "The masked killer at work in hat and apron"
+      }
+    ],
+    "themes-010": [
+      {
+        "src": "dim_12",
+        "a": 1672.1,
+        "b": 1678.6,
+        "note": "Jamie's hand goes to the red button, Kate behind the glass; she presses"
+      },
+      {
+        "src": "dim_09",
+        "a": 1428.8,
+        "b": 1433.7,
+        "note": "Kate struggling in the chamber, then Mark turns the control valve"
+      }
+    ],
+    "outro-006": [
+      {
+        "src": "dim_03",
+        "a": 1319.5,
+        "b": 1323.5,
+        "note": "The hotel's corner bay from below, later part of the exterior move"
+      }
+    ],
+    "outro-007": [
+      {
+        "src": "dim_05",
+        "a": 1744.3,
+        "b": 1748.5,
+        "note": "The dining room, candle-lit table laid, the crew seated"
+      },
+      {
+        "src": "dim_08",
+        "a": 792.9,
+        "b": 796.6,
+        "note": "Wide of the dining room, table laid under the chandelier, mannequins seated"
+      }
+    ],
+    "origins-001": [
+      {
+        "src": "ud_04",
+        "a": 38.2,
+        "b": 41.4,
+        "note": "Until Dawn: aerial of the snowbound forest",
+        "crop": {
+          "zoom": 1.32,
+          "x": 0.5,
+          "y": 0
+        }
+      },
+      {
+        "src": "ud_04",
+        "a": 41.8,
+        "b": 44.8,
+        "note": "Until Dawn: headlights on the mountain road",
+        "crop": {
+          "zoom": 1.32,
+          "x": 0.5,
+          "y": 0
+        }
+      },
+      {
+        "src": "ud_04",
+        "a": 375.2,
+        "b": 379.4,
+        "note": "Until Dawn: the cabin in the snow at night",
+        "crop": {
+          "zoom": 1.32,
+          "x": 0.5,
+          "y": 0
+        }
+      },
+      {
+        "src": "ud_04",
+        "a": 380.3,
+        "b": 384.3,
+        "note": "Until Dawn: approaching the cabin",
+        "crop": {
+          "zoom": 1.32,
+          "x": 0.5,
+          "y": 0
+        }
+      }
+    ],
+    "origins-002": [
+      {
+        "src": "ud_04",
+        "a": 63.1,
+        "b": 66.8,
+        "note": "Until Dawn: the cable car against the mountain",
+        "crop": {
+          "zoom": 1.32,
+          "x": 0.5,
+          "y": 0
+        }
+      },
+      {
+        "src": "ud_04",
+        "a": 18.05,
+        "b": 19.85,
+        "note": "Until Dawn: the friends together in the snow",
+        "crop": {
+          "zoom": 1.32,
+          "x": 0.5,
+          "y": 0
+        }
+      }
+    ],
+    "origins-003": [
+      {
+        "src": "ud_04",
+        "a": 53,
+        "b": 55.9,
+        "note": "Until Dawn: Sam, close",
+        "crop": {
+          "zoom": 1.32,
+          "x": 0.5,
+          "y": 0
+        }
+      },
+      {
+        "src": "ud_04",
+        "a": 365.3,
+        "b": 369.8,
+        "note": "Until Dawn: Mike by the window, uneasy",
+        "crop": {
+          "zoom": 1.32,
+          "x": 0.5,
+          "y": 0
+        }
+      },
+      {
+        "src": "ud_04",
+        "a": 456.2,
+        "b": 459.6,
+        "note": "Until Dawn: Jessica, close",
+        "crop": {
+          "zoom": 1.32,
+          "x": 0.5,
+          "y": 0
+        }
+      }
+    ],
+    "themes-019": [
+      {
+        "src": "d8020_prologue",
+        "a": 107.6,
+        "b": 116.5,
+        "note": "Directive 8020: the Cassiopeia's hull against the stars",
+        "crop": {
+          "zoom": 1.5,
+          "x": 0.5,
+          "y": 0.42
+        }
+      }
+    ],
+    "themes-020": [
+      {
+        "src": "d8020_prologue",
+        "a": 588.2,
+        "b": 592.6,
+        "note": "Directive 8020: crewman, frightened",
+        "crop": {
+          "zoom": 1.5,
+          "x": 0.5,
+          "y": 0.42
+        }
+      },
+      {
+        "src": "d8020_prologue",
+        "a": 570.6,
+        "b": 575.4,
+        "note": "Directive 8020: struggle in the corridor",
+        "crop": {
+          "zoom": 1.5,
+          "x": 0.5,
+          "y": 0.42
+        }
+      },
+      {
+        "src": "d8020_prologue",
+        "a": 598,
+        "b": 602.3,
+        "note": "Directive 8020: dark corridor",
+        "crop": {
+          "zoom": 1.5,
+          "x": 0.5,
+          "y": 0.42
+        }
+      }
+    ],
+    "intro-010": [
+      {
+        "src": "lh_03",
+        "a": 1348.5,
+        "b": 1355.2,
+        "note": "Wide from behind, standing in the library"
+      }
+    ],
+    "origins-004": [
+      {
+        "src": "mom_01",
+        "a": 1294.7,
+        "b": 1298.9,
+        "note": "First scene: camera drifts off him across the dark shelves to a framed painting"
+      },
+      {
+        "src": "mom_04",
+        "a": 1131.9,
+        "b": 1136,
+        "note": "Third scene: close on his hand running along a row of book spines"
+      }
+    ],
+    "origins-007": [
+      {
+        "src": "mom_04",
+        "a": 1160,
+        "b": 1166,
+        "note": "Third scene: close over his shoulder at the shelves, he turns and speaks to the viewer"
+      }
+    ],
+    "curator-intro-001": [
+      {
+        "src": "mom_01",
+        "a": 1255.9,
+        "b": 1261.5,
+        "note": "First scene, wide: he looks up from the book and greets the viewer"
+      }
+    ],
+    "curator-intro-002": [
+      {
+        "src": "mom_04",
+        "a": 1152.5,
+        "b": 1158.5,
+        "note": "Third scene: from behind at the shelves, sliding a book out"
+      },
+      {
+        "src": "mom_04",
+        "a": 1186.4,
+        "b": 1190,
+        "note": "Third scene: close on his hands opening the book (short, 3.6 s)"
+      }
+    ],
+    "curator-intro-003": [
+      {
+        "src": "mom_01",
+        "a": 1279.2,
+        "b": 1286.9,
+        "note": "First scene: close on his face as he speaks to the viewer"
+      },
+      {
+        "src": "mom_03",
+        "a": 806.3,
+        "b": 810.6,
+        "note": "Second scene: close on his face, a thin smile"
+      }
+    ],
+    "curator-intro-004": [
+      {
+        "src": "mom_01",
+        "a": 1247.2,
+        "b": 1254.8,
+        "note": "First scene, wide: the Curator at his candlelit desk, head down, writing in the book"
+      }
+    ],
+    "curator-intro-005": [
+      {
+        "src": "mom_01",
+        "a": 1262.6,
+        "b": 1269.4,
+        "note": "First scene, wide: talking, glancing down at the open book, skull and candle on the desk"
+      },
+      {
+        "src": "mom_01",
+        "a": 1288,
+        "b": 1293.6,
+        "note": "First scene, wide: seated at the desk, hands on the open book"
+      }
+    ],
+    "curator-intro-006": [
+      {
+        "src": "mom_04",
+        "a": 1172.2,
+        "b": 1178,
+        "note": "Third scene: medium at the shelves, reaching for another book"
+      },
+      {
+        "src": "mom_04",
+        "a": 1179,
+        "b": 1185.3,
+        "note": "Third scene: takes a book down, opens it and looks up at the viewer"
+      }
+    ],
+    "curator-001": [
+      {
+        "src": "dim_01",
+        "a": 1251,
+        "b": 1257.5,
+        "note": "Wide of the library, The Curator by the tall window"
+      },
+      {
+        "src": "dim_01",
+        "a": 1281.5,
+        "b": 1289.5,
+        "note": "Sits at the desk by candlelight, open book in front of him"
+      }
+    ],
+    "curator-002": [
+      {
+        "src": "lh_01",
+        "a": 1499.4,
+        "b": 1507.4,
+        "note": "Seated, facing the viewer, gesturing"
+      },
+      {
+        "src": "lh_03",
+        "a": 1362.4,
+        "b": 1370.4,
+        "note": "Medium, holding a folder toward the viewer"
+      }
+    ],
+    "curator-003": [
+      {
+        "src": "lh_03",
+        "a": 1376.8,
+        "b": 1385,
+        "note": "Close on his face, hand to his chin"
+      },
+      {
+        "src": "dim_01",
+        "a": 1318,
+        "b": 1326,
+        "note": "Close on his face, looking at the viewer"
+      }
+    ],
+    "curator-004": [
+      {
+        "src": "dim_16",
+        "a": 899.7,
+        "b": 908,
+        "note": "Exterior of the library window at night, The Curator at his desk inside"
+      },
+      {
+        "src": "dim_08",
+        "a": 1569.5,
+        "b": 1577.5,
+        "note": "Walks through the dark library in profile"
+      }
+    ],
+    "curator-005": [
+      {
+        "src": "dim_08",
+        "a": 1559.6,
+        "b": 1567.6,
+        "note": "Standing at the fireplace looking into the fire"
+      }
+    ],
+    "curator-006": [
+      {
+        "src": "lh_01",
+        "a": 1376.8,
+        "b": 1382.9,
+        "note": "Standing by the window with candles"
+      },
+      {
+        "src": "lh_01",
+        "a": 1435,
+        "b": 1440.1,
+        "note": "At the shelves with the candelabra"
+      }
+    ],
+    "curator-007": [
+      {
+        "src": "mom_08",
+        "a": 1787.6,
+        "b": 1795,
+        "note": "Fourth scene, wide: writing in the book"
+      },
+      {
+        "src": "mom_03",
+        "a": 749,
+        "b": 756,
+        "note": "Second scene, wide: writing at the desk, shaft of light across the shelves"
+      },
+      {
+        "src": "mom_08",
+        "a": 1803.6,
+        "b": 1810.5,
+        "note": "Fourth scene, wide: reading the open book, head down"
+      }
+    ],
+    "curator-008": [
+      {
+        "src": "lh_01",
+        "a": 1609,
+        "b": 1617,
+        "note": "Close on his face, bookshelves behind",
+        "crop": {
+          "zoom": 1.44,
+          "x": 0.5,
+          "y": 0.385
+        }
+      },
+      {
+        "src": "mom_08",
+        "a": 1821.2,
+        "b": 1828,
+        "note": "Fourth scene, wide: leans forward on the desk, talking"
+      },
+      {
+        "src": "lh_03",
+        "a": 1456.5,
+        "b": 1463.5,
+        "note": "Close on his face"
+      }
+    ],
+    "curator-009": [
+      {
+        "src": "dim_16",
+        "a": 924.4,
+        "b": 929.9,
+        "note": "At the desk looking down at the book; he hesitates"
+      },
+      {
+        "src": "dim_16",
+        "a": 930,
+        "b": 934.3,
+        "note": "He tears a page out of the book"
+      },
+      {
+        "src": "dim_16",
+        "a": 934.5,
+        "b": 939,
+        "note": "From behind: tears a page - slides the torn page aside and glances over his shoulder"
+      },
+      {
+        "src": "dim_16",
+        "a": 939.2,
+        "b": 944.4,
+        "note": "Turns in the chair and looks toward the library doors (tears a page scene)"
+      }
+    ],
+    "curator-010": [
+      {
+        "src": "dim_16",
+        "a": 944.6,
+        "b": 950,
+        "note": "The library doors, then the dark library wide (tears a page scene)"
+      },
+      {
+        "src": "dim_16",
+        "a": 956.5,
+        "b": 964.4,
+        "note": "Close: turns back from the doors and looks down (end of tears a page scene)"
+      }
+    ],
+    "curator-011": [
+      {
+        "src": "lh_01",
+        "a": 1481,
+        "b": 1489.9,
+        "note": "Wide of the library, walks to the armchair and sits"
+      },
+      {
+        "src": "mom_04",
+        "a": 1126.9,
+        "b": 1130.9,
+        "note": "Third scene: walks away from camera toward the tall shelves, light shafts across the library"
+      },
+      {
+        "src": "dim_16",
+        "a": 950.1,
+        "b": 956.3,
+        "note": "Dark library and the door handles, close (tears a page scene)"
+      },
+      {
+        "src": "mom_08",
+        "a": 1767.8,
+        "b": 1771.3,
+        "note": "Fourth scene: wide of the whole library, light rays through dust, desk and globe at right (short, 3.5 s)"
+      }
+    ],
+    "themes-018": [
+      {
+        "src": "mom_04",
+        "a": 1121.2,
+        "b": 1125.8,
+        "note": "Third scene: he closes the book and gets up from the desk"
+      },
+      {
+        "src": "mom_04",
+        "a": 1137,
+        "b": 1141.4,
+        "note": "Third scene: at the shelves choosing a volume, glancing back"
+      }
+    ],
+    "themes-021": [
+      {
+        "src": "mom_08",
+        "a": 1837,
+        "b": 1843,
+        "note": "Fourth scene, wide: talking, hands resting on the book"
+      },
+      {
+        "src": "mom_08",
+        "a": 1796.2,
+        "b": 1802.5,
+        "note": "Fourth scene, wide: looks up and opens his hands to the viewer"
+      }
+    ],
+    "themes-022": [
+      {
+        "src": "dim_16",
+        "a": 911,
+        "b": 919.5,
+        "note": "Writing in the book: names struck through with the quill"
+      },
+      {
+        "src": "lh_01",
+        "a": 1536,
+        "b": 1544,
+        "note": "Seated with the book on his lap, slow push"
+      }
+    ],
+    "themes-023": [
+      {
+        "src": "dim_01",
+        "a": 1296,
+        "b": 1304,
+        "note": "At the desk, hands clasped, looking at the viewer"
+      },
+      {
+        "src": "lh_01",
+        "a": 1518.6,
+        "b": 1526.3,
+        "note": "Close on his face"
+      },
+      {
+        "src": "lh_01",
+        "a": 1530,
+        "b": 1534.8,
+        "note": "Extreme close on his face"
+      }
+    ],
+    "outro-001": [
+      {
+        "src": "dim_01",
+        "a": 1362.5,
+        "b": 1367.5,
+        "note": "Wide of the desk with globe, skull and candle"
+      },
+      {
+        "src": "dim_01",
+        "a": 1215,
+        "b": 1222,
+        "note": "Skull on the desk, then The Curator standing in the library"
+      }
+    ],
+    "outro-008": [
+      {
+        "src": "lh_01",
+        "a": 1406.2,
+        "b": 1413.5,
+        "note": "Medium, closing the book"
+      }
+    ],
+    "intro-001": [
+      {
+        "src": "mom_04",
+        "a": 835.4,
+        "b": 839.6,
+        "note": "The dive boat ploughing through the night storm toward camera, lightning"
+      },
+      {
+        "src": "dim_16",
+        "a": 481.6,
+        "b": 486,
+        "note": "The lighthouse and its beam over the water at night"
+      }
+    ],
+    "intro-002": [
+      {
+        "src": "mom_06",
+        "a": 405.2,
+        "b": 410,
+        "note": "Danny turns sharply in a corridor, Fliss watching behind him"
+      },
+      {
+        "src": "lh_03",
+        "a": 1180.5,
+        "b": 1186.2,
+        "note": "Andrew on the ground, looking up"
+      },
+      {
+        "src": "hoa_04",
+        "a": 114.4,
+        "b": 119.8,
+        "note": "Jason close, dazed after the fall"
+      },
+      {
+        "src": "dim_06",
+        "a": 405.6,
+        "b": 410.4,
+        "note": "Erin frightened, then listening at a door"
+      }
+    ],
+    "intro-003": [
+      {
+        "src": "lh_08",
+        "a": 360.2,
+        "b": 365.1,
+        "note": "A hand sliding the bolt of a door"
+      },
+      {
+        "src": "dim_13",
+        "a": 1280.7,
+        "b": 1288.7,
+        "note": "A hand pressing buttons on a red-lit control panel"
+      }
+    ],
+    "intro-004": [
+      {
+        "src": "mom_10",
+        "a": 1464.6,
+        "b": 1471,
+        "note": "High wide: the dive boat alone on a grey open sea, shrinking into the distance (ending footage, no faces)"
+      }
+    ],
+    "intro-009": [
+      {
+        "src": "mom_10",
+        "a": 1341.8,
+        "b": 1346.2,
+        "note": "Daylight: the freighter's rusted hull at frame right as the dive boat heads out toward a low sun"
+      },
+      {
+        "src": "lh_01",
+        "a": 195.9,
+        "b": 200.5,
+        "note": "Covered bridge and police car in the fog, wide"
+      },
+      {
+        "src": "hoa_01",
+        "a": 617,
+        "b": 625,
+        "note": "Prologue: dark stairway rising to a torch-lit doorway"
+      },
+      {
+        "src": "dim_03",
+        "a": 1153.5,
+        "b": 1161.5,
+        "note": "Pan along the wooden bridge as the host and crew cross, then wide of the bridge over the ravine"
+      }
+    ],
+    "origins-005": [
+      {
+        "src": "mom_03",
+        "a": 1007.1,
+        "b": 1011.7,
+        "note": "All five together on deck at dusk"
+      },
+      {
+        "src": "lh_03",
+        "a": 1283.5,
+        "b": 1287.5,
+        "note": "The whole group of five facing camera in the forest"
+      },
+      {
+        "src": "hoa_05",
+        "a": 1116.5,
+        "b": 1122.5,
+        "note": "Two marines run out of a cave tunnel, wide"
+      },
+      {
+        "src": "dim_01",
+        "a": 1655,
+        "b": 1661,
+        "note": "The five crew standing in a row on the street"
+      }
+    ],
+    "origins-006": [
+      {
+        "src": "mom_02",
+        "a": 937,
+        "b": 943,
+        "note": "Dive boat from astern on bright open sea, continuous wide"
+      },
+      {
+        "src": "lh_01",
+        "a": 99.1,
+        "b": 103.5,
+        "note": "Aerial top-down of the bus on the night road"
+      },
+      {
+        "src": "hoa_03",
+        "a": 756.3,
+        "b": 760.8,
+        "note": "Mountain landscape in daylight"
+      },
+      {
+        "src": "dim_02",
+        "a": 206.5,
+        "b": 213,
+        "note": "Misty autumn woods on the island, static"
+      }
+    ],
+    "little-hope-033": [
+      {
+        "src": "mom_05",
+        "a": 312,
+        "b": 318,
+        "note": "A lone figure with a torch standing in a mist-filled corridor, facing camera"
+      },
+      {
+        "src": "lh_04",
+        "a": 216.5,
+        "b": 224.5,
+        "note": "The group on the foggy road under street lamps"
+      }
+    ],
+    "themes-001": [
+      {
+        "src": "mom_10",
+        "a": 959.5,
+        "b": 966.5,
+        "note": "Night exterior: Fliss small on the freighter's outer gangway under deck lamps, open sea at left"
+      },
+      {
+        "src": "lh_02",
+        "a": 1221.7,
+        "b": 1229.7,
+        "note": "Bar exterior seen through foliage, the group approaching"
+      },
+      {
+        "src": "hoa_11",
+        "a": 1322.3,
+        "b": 1329.7,
+        "note": "Wide blue cavern, tiny figure with flashlight"
+      },
+      {
+        "src": "dim_03",
+        "a": 1228.8,
+        "b": 1232.8,
+        "note": "Wide: wooden bridge over the ravine in mist, figures crossing"
+      }
+    ],
+    "themes-006": [
+      {
+        "src": "lh_08",
+        "a": 1451.6,
+        "b": 1456.2,
+        "note": "Taylor with her hands to her face, frightened"
+      },
+      {
+        "src": "dim_16",
+        "a": 792.8,
+        "b": 800.1,
+        "note": "Kate close at sunrise, shaken"
+      }
+    ],
+    "themes-011": [
+      {
+        "src": "mom_12",
+        "a": 977.7,
+        "b": 982,
+        "note": "Brad from behind walking a corridor lined with rusted lockers"
+      },
+      {
+        "src": "lh_08",
+        "a": 1462.4,
+        "b": 1466.9,
+        "note": "Taylor listening, Daniel's shoulder in the foreground"
+      },
+      {
+        "src": "hoa_11",
+        "a": 945,
+        "b": 950.8,
+        "note": "Silhouette steps into a candle-lit chamber"
+      },
+      {
+        "src": "dim_04",
+        "a": 972.5,
+        "b": 979,
+        "note": "Charlie walking a dim hotel corridor, quiet exploration"
+      },
+      {
+        "src": "lh_07",
+        "a": 908,
+        "b": 916,
+        "note": "Taylor and Daniel hiding, frightened, close"
+      }
+    ],
+    "themes-012": [
+      {
+        "src": "dim_13",
+        "a": 584.8,
+        "b": 591.1,
+        "note": "Kate holding Charlie's cap, grieving"
+      },
+      {
+        "src": "lh_02",
+        "a": 137.6,
+        "b": 145.6,
+        "note": "Funeral umbrellas seen from above, a crow (grief)"
+      }
+    ],
+    "themes-013": [
+      {
+        "src": "mom_10",
+        "a": 782,
+        "b": 789,
+        "note": "Two figures from behind stepping into a black corridor, a single lamp far ahead"
+      },
+      {
+        "src": "dim_16",
+        "a": 226.5,
+        "b": 234.5,
+        "note": "Lit house porch at night, a figure at the door"
+      },
+      {
+        "src": "lh_07",
+        "a": 890,
+        "b": 898,
+        "note": "Daniel hiding behind a tree, a candle in the distance"
+      }
+    ],
+    "themes-014": [
+      {
+        "src": "dim_10",
+        "a": 618.2,
+        "b": 623.8,
+        "note": "Mark steps into a spot-lit alcove of the workshop"
+      },
+      {
+        "src": "lh_14",
+        "a": 1819,
+        "b": 1825,
+        "note": "John stepping through the dark burnt house"
+      },
+      {
+        "src": "mom_12",
+        "a": 1005.6,
+        "b": 1009.8,
+        "note": "Brad looks up at a mummified soldier hanging in the hold (aftermath, not graphic)"
+      },
+      {
+        "src": "dim_13",
+        "a": 591.4,
+        "b": 599.3,
+        "note": "Survivors as silhouettes among lamps in the fog, wide"
+      }
+    ],
+    "themes-015": [
+      {
+        "src": "dim_16",
+        "a": 860,
+        "b": 868,
+        "note": "Survivors on the shore at sunrise as police arrive"
+      }
+    ],
+    "themes-016": [
+      {
+        "src": "mom_06",
+        "a": 484.5,
+        "b": 492.5,
+        "note": "Quiet exploration: Fliss from behind walking a dark corridor by torchlight"
+      },
+      {
+        "src": "lh_03",
+        "a": 876.5,
+        "b": 884.5,
+        "note": "Andrew walking the foggy road with a torch, quiet exploration"
+      }
+    ],
+    "themes-017": [
+      {
+        "src": "dim_08",
+        "a": 403.5,
+        "b": 411.5,
+        "note": "Jamie exploring the lounge among seated mannequins"
+      },
+      {
+        "src": "mom_07",
+        "a": 308.2,
+        "b": 316,
+        "note": "Wide of the cargo hold, Fliss small among the crates with her torch"
+      },
+      {
+        "src": "lh_03",
+        "a": 968.3,
+        "b": 976.3,
+        "note": "From under a porch, two figures with torches on the foggy road"
+      },
+      {
+        "src": "dim_03",
+        "a": 1476.6,
+        "b": 1484.6,
+        "note": "Black-gloved hands on a rocking chair"
+      }
+    ],
+    "outro-002": [
+      {
+        "src": "mom_08",
+        "a": 1853.2,
+        "b": 1860,
+        "note": "Fourth scene, wide: shuffling a deck of cards at the desk"
+      },
+      {
+        "src": "mom_08",
+        "a": 1861,
+        "b": 1868,
+        "note": "Fourth scene, wide: still shuffling, watching the viewer"
+      }
+    ]
+  }
 }
