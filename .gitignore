@@ -20,3 +20,8 @@ out
 
 # Alignment diagnostics written by tools/align-srt.mjs
 *.aligned.json
+
+# Dark Pictures documentary: source game footage and the clips trimmed from it.
+# Both are large and third-party copyrighted, so they stay out of the repository.
+footage
+public/dpa/clips

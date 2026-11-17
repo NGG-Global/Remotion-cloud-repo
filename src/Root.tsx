@@ -40,6 +40,8 @@ import {
   starRevealSchema,
 } from "./compositions/StarReveal";
 import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
+import { DarkPictures } from "./dpa/DarkPictures";
+import { DPA_DURATION, DPA_FORMAT } from "./dpa/edl";
 import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
 import { RigSheet } from "./gacy/dev/RigSheet";
 import { SetTest } from "./gacy/dev/SetTest";
@@ -109,6 +111,13 @@ export const RemotionRoot: React.FC = () => {
         component={GacyDocumentary}
         durationInFrames={GACY_DURATION}
         {...FORMAT}
+      />
+
+      <Composition
+        id="DarkPictures"
+        component={DarkPictures}
+        durationInFrames={DPA_DURATION}
+        {...DPA_FORMAT}
       />
 
       <Composition

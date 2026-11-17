@@ -1,0 +1,256 @@
+# The Dark Pictures Anthology documentary: editorial plan.
+#
+# One line per beat:  first-last | game | transition | topic | picture needed
+#
+# first-last are sentence numbers in src/dpa/data/transcript.json, so every cut
+# lands on a real spoken boundary. tools/dpa/build-edl.mjs turns this file into
+# src/dpa/data/edl.json. Games: MOM Man of Medan, LH Little Hope, HOA House of
+# Ashes, DIM The Devil in Me, CUR The Curator, UD Until Dawn, D8020 Directive
+# 8020, MIX several games.
+
+@ cold-open
+0-2 | MOM | fade | Cold open: an abandoned ship in mid-ocean, footsteps in the corridor, someone approaching | The derelict ship at sea, then a dark rusted corridor from a character's point of view; flashlight beam, slow advance. Fades up from black on the first word
+3-5 | MOM | cut | You turn and see a friend you watched die ten minutes ago | A character turns; a familiar figure steps out of the dark at the end of the corridor. No face that gives away who survives
+6-7 | MOM | cut | Run, fight, or trust your eyes | Close-up of a frightened character with a weapon half-raised, hesitating. Cinematic angle with no choice prompt on screen
+8-9 | MOM | cut | Three seconds to decide. Good luck | Tight close-up on the eyes, figure closing in; cut away before the outcome
+
+@ intro
+10 | MIX | fade | This is the experience The Dark Pictures Anthology sets out to create | Strong atmospheric establishing image, a ship or shoreline at night. No logo or title card
+11-13 | MIX | cut | No protected hero, no promise the good win, no promise you will understand | Three reaction close-ups from three different games: Fliss (MOM), Andrew (LH), Rachel (HOA)
+14-16 | MIX | cut | Any character can die; the sensible choice may be the fatal one | A character commits to an action in a tense scene; cut on the moment it goes wrong, without showing a named death
+17-18 | MIX | dissolve | What makes the series interesting is the stories it tells | Slow atmospheric bridge: open sea at dusk or drifting fog
+19 | MOM | cut | A ghost ship hiding a military experiment | Exterior of the Ourang Medan at night in heavy sea
+20 | LH | cut | An abandoned town where the past will not stay buried | Fog-bound main street of Little Hope, empty
+21 | HOA | cut | An ancient temple beneath Iraq | Wide of the buried Akkadian temple interior, torch or flare light. No creature in frame
+22-23 | DIM | cut | A hotel built to kill its guests | Exterior of the island hotel under an overcast sky
+24-25 | MIX | cut | Four different stories, four ways to frighten us | Four quick shots, one per game in release order, about a second each
+26 | CUR | cut | One mysterious man present whenever someone dies | The Curator from behind or in silhouette among the shelves. Face withheld until he is named
+
+@ origins
+27-30 | UD | dissolve | 2015 and Until Dawn, a horror game that plays like a film | Until Dawn: Blackwood lodge exterior in snow. Not on the supplied footage list; needs Until Dawn material or a decision to cover with library shots
+31-32 | UD | cut | Eight friends at a remote mountain lodge, and they are not alone | Until Dawn: the group arriving, cable car and lodge interior
+33-34 | UD | cut | Interactive horror in which the player's choices change the story | Until Dawn: a character at a tense moment, cinematic angle without interface
+35-39 | CUR | dissolve | Supermassive Games sees the potential and tries something other than a sequel | The library shelves, slow move along rows of books. The Curator not yet in frame
+40-43 | MIX | cut | Each game a standalone horror film: new cast, new setting, new kind of horror | Four group shots: the divers on the boat (MOM), the bus passengers (LH), the marines (HOA), the film crew (DIM)
+44-46 | MIX | cut | The anthology is born: 2019, then a game a year for four years | Opening establishing shot of each game in release order
+47-48 | CUR | cut | One thing connects them all: The Curator | First clear look at The Curator, turning to the viewer
+
+@ curator-intro
+49 | CUR | cut | A man in a suit welcomes us to a vast library | Wide of the repository with The Curator greeting the viewer
+50-52 | CUR | cut | Countless books, each the story of people in the wrong place at the wrong time | Shelves, spines, a book being opened on the desk
+53-56 | CUR | cut | Polite, sometimes a hint, sometimes a joke, and he seems to know who will die | Medium and close shots of him speaking; a knowing half-smile
+57-59 | CUR | cut | He cannot simply intervene. There are rules | He stops himself mid-gesture, looks away, returns to writing
+60-63 | CUR | cut | He knows too much, and death interests him personally | Close on his eyes and hands; candlelight. Hold the in-game cameos for the later chapter
+64-66 | CUR | cut | Who is he? First we open the first book | He lifts a volume from the shelf and opens it
+67-69 | MOM | dissolve | A ship lost at sea with everyone aboard dead. At least, that is how it begins | Storm at sea, the freighter's silhouette emerging through rain
+
+@ man-of-medan
+70-71 | MOM | dissolve | 1947: a distress call from a ship named Ourang Medan | 1947 prologue: the freighter being loaded in harbour, then under way at night
+72-76 | MOM | cut | The message: crew dead, captain dead, then the signal is lost | Prologue: radio room, crewmen collapsing, corridor lights failing
+77-80 | MOM | cut | The rescue party finds bodies everywhere, faces frozen in terror | Prologue aftermath: dead crew at their stations, close on a terrified face
+81-82 | MOM | cut | No sign of a struggle; soon after, the ship burns and explodes | Storm and lightning over the ship. The game shows no explosion, so stay on storm and fire-lit shots
+83-87 | MOM | dissolve | Nobody has ever proved the ship existed, yet the legend endured | Present day: the derelict hull adrift in fog, slow and wide
+88-89 | MOM | cut | The starting point of the first game, Man of Medan | Present-day opening: the Duke of Milan dive boat on bright open sea
+90 | MOM | cut | A group of friends on a diving holiday | The five together on deck
+91 | MOM | cut | Alex and his brother Brad | Close-ups: Alex, then Brad
+92-93 | MOM | cut | Julia, her brother Conrad, and Fliss, the boat's captain | Close-ups: Julia, Conrad, Fliss at the helm
+94-96 | MOM | cut | The plan: dive a Second World War plane wreck | Underwater: the divers descending to the aircraft wreck
+97-100 | MOM | cut | In horror films a remote holiday always works out fine | Evening on deck, drinks, laughter; a boat watching from a distance
+101-104 | MOM | cut | Pirates seize the boat, find clues to an old hoard and take the group with them | Night boarding: Olson, Junior and Danny, hostages tied up below deck
+105-107 | MOM | cut | The destination: a huge abandoned military ship | Arrival at the Ourang Medan in the storm, the hull towering over the boat
+108-109 | MOM | cut | Rusted rooms, old corpses everywhere | Interior: corroded corridors, mummified bodies
+110-114 | MOM | cut | Figures that are not there, voices, corpses that rise, friends as monsters | Short hallucination beats: the girl in the corridor, a body sitting up, a distorted figure
+115-119 | MOM | cut | The pirates lose their grip: one is chased by figures, another is sure the ship wants him dead | Junior and Danny panicking in the dark; Olson losing control
+120-122 | MOM | cut | As players we do not know whom to believe | A character turning in the dark, flashlight sweeping an empty room
+123-127 | MOM | cut | Every character sees something different: a monster to one, an ordinary person to another | The matched scene shown from both sides, monster first, then the same framing with a person
+128-130 | MOM | cut | Armed, charged by a creature, instinct says attack. What if it is your friend? | Character with a weapon facing a charging figure; hold on the moment before the blow
+131-133 | MOM | cut | Military documents, a secret cargo, and something called Manchurian Gold | Hands on manifests and crates in the hold. Use the in-world props, not the collectible reading screen
+134-137 | MOM | cut | Not gold: a military chemical agent that causes severe hallucinations, leaking from its containers | Cargo hold: ruptured canisters, mist spreading along the deck
+138-140 | MOM | dissolve | The crew saw things, turned on each other, and the ship became a floating graveyard | 1947 prologue: soldiers hallucinating and firing; bodies in the corridors
+141-144 | MOM | cut | The ghosts and monsters were never there, at least not as the characters saw them | A hallucination resolving into what was really in the room
+145-148 | MOM | cut | The real danger: frightened people who cannot tell reality from what their mind produces | Two characters aiming at each other, both terrified
+149-151 | MOM | cut | The game teaches us to fear, then punishes us for obeying it | Close on a hesitating face; a weapon lowered
+152-154 | MOM | cut | Attack everything and you kill your friends; run blindly and you hit a trap | A character sprinting through corridors, a door slamming shut
+155-156 | MOM | cut | Ignore the clues and you miss the only way off the ship | Finding the part needed to restart the boat; the escape route
+157-159 | MOM | cut | Calling for help is no guarantee: the military has secrets it wants buried | Radio room call; military helicopters arriving over the ship
+160-162 | MOM | cut | Not a perfect game: thin characters, strings of jump scares | Neutral group scene on the ship; one sudden scare
+163-166 | MOM | cut | Its central idea is brilliant: our own senses become the enemy | Close on an eye or a face staring at something unseen; the ship receding in fog
+
+@ little-hope
+167-170 | LH | fade | The next game goes further: not only what we see, but what we remember | Night road in fog, headlights; slow
+171-173 | LH | dissolve | The 1970s, a small American town, a family about to lose everything | 1972 prologue: the Clarke house at night, the family indoors
+174-177 | LH | cut | The house catches fire, the flames spread, the children run, the parents are trapped | The fire sequence, cut fast
+178-180 | LH | cut | Anthony has to watch from outside as the people closest to him die | Young Anthony on the lawn, the house burning behind him
+181-184 | LH | cut | For Anthony it never ends, not that night and not decades later | Slow push on Anthony's face lit by the fire; embers
+185-186 | LH | cut | The second game, Little Hope: an optimistic name for a place where everything wants you dead | The empty town in fog. Avoid the town sign if a clean alternative exists
+187-189 | LH | cut | Years later a bus carrying four students and their professor passes the abandoned town | The bus on the night road; passengers inside
+190-192 | LH | cut | The driver swerves to avoid a figure on the road and the bus overturns | The girl in the road, the crash. Cut fast
+193-196 | LH | cut | Trapped in thick fog; every way out leads back to the same place | Crash site, the fog wall, walking in and emerging where they started
+197 | LH | cut | They begin to see people from the past | The first pull into a 1692 vision
+198-200 | LH | dissolve | 1692: fear of witches, trials in the town | Colonial Little Hope, the meeting house, a trial in session
+201-203 | LH | cut | The people of the past look exactly like them | A present-day character face to face with a 1692 double
+204-206 | LH | cut | Angela's double is accused; John's is involved; others resemble Taylor and Daniel | Amy accused, Joseph in the dock, Tabitha and Dennis
+207-209 | LH | cut | Monstrous creatures, and not random ones | A demon emerging from the fog
+210-211 | LH | cut | Each creature mirrors a death from the trials: the hanged | The 1692 hanging, then the demon that carries its marks
+212 | LH | cut | The burned | The charred demon
+213-214 | LH | cut | The drowned, dragging others to the water, as if the town punishes them again and again | The drowned demon at the water's edge
+215-218 | LH | cut | A supernatural explanation: reincarnation, a curse, a wrong to be righted | The group talking it through; church and graveyard atmosphere
+219-222 | LH | cut | But why does everyone resemble the family from the fire, where is the driver, why the hints about one troubled man | Intercut the 1972 family with the present-day cast; the driver's empty seat. Do not show the reveal yet
+223-224 | LH | cut | The twist: the group we followed was never there | Ending: Andrew alone on the road, the others gone. Slow
+225-227 | LH | cut | John, Angela, Daniel and Taylor were never passengers; they exist in the driver's mind | The diner: the companions fading out one by one
+228-230 | LH | cut | The driver is Anthony, sole survivor of the fire, living the story as Andrew | The older Anthony, the bus driver, revealed
+231-234 | LH | cut | The companions mirror his dead family: father, mother, brother and sister | Matched pairs, present-day face then 1972 face: John and James, Angela and Anne, Daniel and Dennis, Taylor and Tanya
+235-237 | LH | cut | Mary is tied to the memory of his little sister Megan | Mary in 1692, then Megan in 1972
+238-242 | LH | dissolve | The whole journey is one man facing decades of guilt, fighting his memories | Old Anthony at the burnt ruin of the house; the fire in flashback
+243-246 | LH | cut | Someone to blame, so that he can stop blaming himself | Megan by the stove with her doll; Anthony's face
+247-249 | LH | cut | Mary appears responsible for accusations that kill innocent people | Mary testifying at the trial
+250-252 | LH | cut | She is under the influence of Reverend Carver, who exploits the town's fear | Reverend Carver with Mary, quietly directing her
+253-256 | LH | cut | Blame the girl or name the man behind her: will Anthony go on blaming his sister | The final trial; Andrew speaking up; cut to Megan
+257-261 | LH | cut | Several endings: a measure of peace, or still captive to guilt | Good ending: Anthony at the diner, calm. For the bleak ending use the arrest, not the gun
+262-266 | LH | cut | The monsters are only the form our fear chooses to take | A demon dissolving into fog; Anthony walking away
+267-271 | LH | cut | A divisive twist: after hours of running, the monsters were not real | Chase footage through the town, demons in pursuit
+272-275 | MIX | cut | Joke: before a third game I would ask for a blood test | Callback pair using new footage: the mist in the hold (MOM), the fog (LH)
+276-279 | HOA | cut | Supermassive changes course: this time the monsters are entirely real, and hungry | Darkness, a shape moving, a screech. Glimpse only; cut to black on the last word
+
+@ house-of-ashes
+280-283 | HOA | fade | Thousands of years ago in Mesopotamia: the Akkadian Empire | 2231 BC prologue: Akkad, the temple exterior, soldiers
+284-286 | HOA | cut | In the reign of Naram-Sin something terrible happens | Naram-Sin in the temple
+287-290 | HOA | cut | The temple becomes a place of death and the kingdom begins to fall | Prologue: the eclipse, soldiers dragged into the dark. Creatures in glimpses only
+291-294 | HOA | dissolve | 2003: the invasion of Iraq, and soldiers about to learn the real danger | Helicopters over the desert; the forward base
+295-298 | HOA | cut | House of Ashes opens on a US operation hunting a chemical weapons site | Briefing room, then the helicopters setting down at the village
+299-300 | HOA | cut | Eric, the officer leading the mission | Eric King, close
+301 | HOA | cut | Rachel, his wife, the marriage in crisis | Rachel King; a look between her and Eric
+302-303 | HOA | cut | Nick, in a secret relationship with Rachel | Nick Kay; Nick and Rachel together
+304-305 | HOA | cut | Jason, a hard soldier with fixed views of the enemy | Jason Kolchek
+306-308 | HOA | cut | Salim, an Iraqi soldier who only wants to go home to his son | Salim at home with Zain, then in uniform
+309-311 | HOA | cut | Firefight; the ground gives way; soldiers fall into caverns and ancient ruins | The village firefight and the collapse. Cut fast
+312-314 | HOA | cut | Underground, cut off, no clear way back | Waking in the dark cavern; flares
+315-317 | HOA | cut | They are not alone: something alive moves in the dark | Black tunnel, movement at the edge of the light
+318-320 | HOA | cut | It climbs walls, flies, and tears a man apart in seconds | Creature attack in short glimpses. Cut fast
+321-324 | HOA | cut | Bodies, signs of struggle, the remains of an archaeological expedition | The 1940s camp: tents, crates, equipment under dust
+325-328 | HOA | cut | Randolph Hodgson's expedition explored the temple in the 1940s and learned too late | Hodgson's journals and photographs as props in the scene
+329-331 | HOA | cut | The creatures are sensitive to light | UV lamp or sunlight burning a creature
+332-334 | HOA | cut | They hunt by sense in the dark and infect humans with a parasite | A creature hunting by sound; an infected body changing
+335-338 | HOA | cut | A standard vampire tale, but under the Iraqi desert with rifles and flashlights | Marines firing with weapon lights in the temple halls
+339-342 | HOA | cut | The revelation: not demons, not vampires, but extraterrestrial | Descent into the deeper, non-human structure; cocoons. Slow
+343-346 | HOA | dissolve | Millions of years ago a craft carrying bat-like beings crashed; the parasite turned them | The vision sequence: the craft, the crash, the species
+347-350 | HOA | cut | For millennia people explained them with what they believed: demons, curses, the gods' anger | Akkadian reliefs and demon statues in torchlight
+351-355 | HOA | cut | It starts as a war story, then introduces a threat that makes the conflict meaningless | Americans and Iraqis aiming at each other; a creature breaks it up
+356-358 | HOA | cut | The monsters do not care whose side you are on. Everyone is food | A creature taking soldiers from both sides
+359-361 | HOA | cut | Jason and Salim: at first Jason sees only the enemy | Their first meeting at gunpoint
+362-366 | HOA | cut | Forced to cooperate, they learn to trust each other | Jason and Salim fighting side by side; one hauling the other up
+367-369 | HOA | cut | Salim the father, Jason looking for meaning: the strongest thread in the game | A quiet exchange between the two
+370-373 | HOA | cut | The game asks whether we can change how we see other people | The two walking on together through the ruins
+374-375 | HOA | cut | It is still a horror game | A creature lunging from the dark
+376-380 | HOA | cut | Deeper in: ammunition running out, wounds mounting, attacks continuing | Combat montage. Cut fast
+381-385 | HOA | cut | The missing became part of the parasite's life cycle; every infected person is a threat | Cocooned humans; a turned soldier
+386-388 | HOA | cut | Rachel may be infected: save her or kill her before she turns | Infected Rachel; the others arguing over her, weapon drawn
+389-392 | HOA | cut | No clear right answer: cruelty can protect, refusing to give up can save | Faces during the decision; Rachel in the cocoon
+393-395 | HOA | cut | The source: the alien ship buried deep under the temple | The vast interior of the ship. Wide and slow
+396-401 | HOA | cut | Destroy the nest: a dangerous plan that needs enemies to work together | Setting the charges in the hive; Americans and Salim covering each other
+402-404 | HOA | cut | Back to the surface. For a moment the nightmare seems over | Climbing out into daylight
+405-408 | HOA | cut | Sun, open air, no more caves, no more dark | Desert light, the farmhouse
+409-410 | HOA | cut | Then a solar eclipse, and the creatures follow them out | The eclipse darkening the sky; creatures emerging
+411-412 | HOA | cut | Joke: the universe still finds a way to ruin your day | The survivors looking up at the eclipse
+413-414 | HOA | cut | The last stand in a hut on the surface, holding out until the eclipse ends | The farmhouse siege. Cut fast
+415-417 | HOA | cut | The sun returns and the creatures retreat or burn | The eclipse ending; creatures burning in the light
+418-421 | HOA | cut | With the right choices all five can survive; otherwise far fewer | Survivors together at the end; the extraction
+422-426 | HOA | cut | Widely seen as one of the strongest entries: horror, science fiction, action, human drama | Four short highlights, one per quality named
+427-431 | HOA | cut | After two illusions, a physical threat that has to be fought | Creature in close view; soldiers returning fire
+432-436 | HOA | cut | Every assumption was too small; the war above looks absurd beside something millions of years old | The scale of the ship against the soldiers
+437-438 | HOA | cut | Sometimes the only way to survive is to stop seeing the other man as an enemy | Jason and Salim parting
+
+@ devil-in-me
+439-442 | DIM | fade | The series seemed to have a formula; the fourth game throws it away | Grey water and mist, the island and lighthouse in the distance
+443-447 | DIM | cut | No aliens, no parasites, no ghosts, no curse. Just one man, and that is enough | A still figure in silhouette at the end of a corridor. Mask not yet clear
+448-451 | DIM | dissolve | Chicago, 1893: the World's Fair, a city full of visitors | 1893 prologue: the hotel exterior, the newlyweds arriving
+452-454 | DIM | cut | H. H. Holmes: fraudster, swindler, murderer | Holmes at the front desk, welcoming guests
+455-456 | DIM | cut | Linked to several killings, convicted of the murder of Benjamin Pitezel | Holmes with Jeff and Marie in the prologue
+457-461 | DIM | cut | The Murder Castle: secret rooms, hidden passages, devices built to trap and kill | Prologue: a concealed passage, a peephole, the sealed room
+462-465 | DIM | cut | Much of the story was inflated by the press of the day, but the legend outlived Holmes | Period interiors, slow; a portrait of Holmes
+466-468 | DIM | dissolve | What if someone rebuilt the castle, to use it for its reputed purpose | Dissolve from the 1893 hotel to the modern replica on the island
+469-470 | DIM | cut | The Devil in Me, fourth and final game of the first season | Present-day opening
+471 | DIM | cut | A small crew producing a true-crime documentary series | The Lonnit Entertainment crew at work on a shoot
+472 | DIM | cut | Charlie, producer and director | Charlie Lonnit
+473 | DIM | cut | Kate, the presenter | Kate Wilder
+474 | DIM | cut | Mark, the cameraman | Mark Nestor with his camera
+475 | DIM | cut | Jamie, lighting and technical | Jamie Tiergan
+476 | DIM | cut | Erin, sound | Erin Keenan with the boom microphone
+477-479 | DIM | cut | A struggling production: tight budget, friction, a bleak outlook | The crew arguing
+480-481 | DIM | cut | Charlie takes a call from a man named Granthem Du'Met | Charlie on the phone
+482-483 | DIM | cut | He claims to own an exact replica of Holmes's hotel and invites them to an isolated island | The crossing to the island; the car waiting
+484-488 | DIM | cut | Joke: I would check for mobile signal, or at least the Google reviews | The crew on the boat in the fog; a phone with no signal held up
+489-490 | DIM | cut | The crew arrives; the hotel is impressive | The hotel revealed from the drive
+491-493 | DIM | cut | Period rooms, long corridors, antiques and mechanical contrivances | Lobby, corridor, the animatronic figures
+494-496 | DIM | cut | Something is wrong: an odd host, locked rooms, dead telephones | Du'Met at a distance; a locked door; a dead handset
+497-498 | DIM | cut | The hotel was not built to look like a trap. It is one | A wall sliding shut behind a character
+499-501 | DIM | cut | Walls move, doors lock, rooms change shape, and someone is watching | Moving walls; a bank of surveillance monitors
+502-504 | DIM | cut | The hotel itself becomes the enemy, built to separate people | Shifting corridors splitting the group
+505-506 | DIM | cut | Rooms that force a choice, cameras that let the killer watch the fear | The control room; a hidden camera lens
+507-509 | DIM | cut | He wants to control the experience, to leave them no way out | The killer in front of the monitors
+510-512 | DIM | cut | A trap with two people on either side of a moving glass wall | The glass-wall trap
+513-514 | DIM | cut | Another: a room built to suffocate whoever is inside | The suffocation chamber
+515-518 | DIM | cut | The traps turn relationships into weapons, and he wants to watch | Faces during the choice; the killer observing
+519-522 | DIM | cut | The host is part of an elaborate deception: false identities, lured visitors | The workshop: masks, mannequins, the Du'Met figure
+523-525 | DIM | cut | Clues point to Hector Munday, a former FBI agent whose case became an obsession | Files and clippings as props in the scene
+526-527 | DIM | cut | Instead of investigating killers, he began to imitate them | Munday flashback scenes
+528-530 | DIM | cut | The killer sees himself as the heir to H. H. Holmes | The killer in the Holmes mask and hat, full view
+531-534 | DIM | cut | Murder as art: recreate the legend and surpass the original | The animatronic tableaux
+535-538 | DIM | cut | No supernatural power, not an alien, not a demon | The killer walking steadily toward the camera
+539-541 | DIM | cut | Money, time, technical skill and a disturbing amount of creativity | Gears, pistons, the mechanisms behind the walls
+542-544 | DIM | cut | Joke: he would have made an excellent escape-room designer | Wide of an elaborate trap room
+545-546 | DIM | cut | The survivors try to leave the island; he has no intention of allowing it | Running through the woods toward the lighthouse and dock
+547-551 | DIM | cut | He keeps coming, reappears, survives severe injuries | The chase; the killer rising after a blow. Cut fast
+552-553 | DIM | cut | The final confrontation, on a boat | The fight on the boat
+554-555 | DIM | cut | Depending on our choices some die and some escape | Aftermath on the water
+556-558 | DIM | cut | He falls into the water. Is he really dead? | The killer going under; the still surface
+559-561 | DIM | cut | The ending hints it will start again: more people, another invitation | Epilogue: a new family arriving on the island
+562-566 | DIM | cut | A fitting close: no strange science, no trauma, no aliens, only a man who chose this | Close on the mask; hold
+
+@ curator
+567-569 | CUR | fade | After four games, back to the figure who waited for us throughout | The library; The Curator at his desk
+570-573 | CUR | cut | In every game we return to his library: questions, reactions, hints | Interlude scenes from the later games, so nothing from the opening chapter repeats
+574-577 | CUR | cut | Unsurprised by death, sometimes amused, sometimes disappointed when we save someone | Reaction close-ups: amused, then disappointed
+578-582 | CUR | cut | He is not only in the library: a suited figure in the background of certain scenes | His in-game cameos, at least two games
+583-584 | CUR | cut | He does not intervene. He is simply there | Another cameo, static, held
+585-587 | CUR | cut | One theory: The Curator is a representation of Death | The Curator half in shadow, candle or clock in frame
+588-592 | CUR | cut | Not a reaper with a scythe: a being who records human fates while we decide | Writing in the book with a pen
+593-596 | CUR | cut | The rules that bind him, and the hint that someone oversees him too | He breaks off, glances upward or over his shoulder
+597-600 | CUR | cut | The Devil in Me: he hesitates, looks to the library doors, tears a page from a book | That exact scene from The Devil in Me, kept whole
+601-604 | CUR | cut | Why? To help, to break the rules, or to see what happens | His face afterwards, the torn page in his hand
+605-610 | CUR | cut | One of the few mysteries that carries from game to game | Slow pull back through the library
+
+@ themes
+611-614 | MIX | cut | What connects the four games? On the surface, almost nothing | Four books on the desk, or four establishing shots not used earlier
+615 | MOM | cut | Man of Medan: hallucination | A hallucination moment
+616 | LH | cut | Little Hope: trauma and guilt | Anthony
+617 | HOA | cut | House of Ashes: alien monsters and cooperation between enemies | Jason and Salim against a creature
+618 | DIM | cut | The Devil in Me: a serial killer | The killer
+619-620 | MIX | cut | Beneath the differences, one idea: fear changes how we decide | A frightened face at the point of choosing
+621 | MOM | cut | Man of Medan: whether to trust our senses | A character staring at something that may not be there
+622 | LH | cut | Little Hope: how the past distorts the present | A present-day character watching a 1692 scene
+623 | HOA | cut | House of Ashes: whether to go on seeing others as enemies | An American and an Iraqi lowering their weapons
+624 | DIM | cut | The Devil in Me: how far we will go to save ourselves and those around us | A character at a trap control
+625-628 | MIX | cut | Never enough information, and still we have to choose | Four moments of hesitation, one per game
+629-631 | MIX | cut | The series makes us take responsibility for the story | A character grieving over someone lost. Not graphic
+632-637 | MIX | cut | In an ordinary horror film we shout at the screen: why go in, why open the door, why not run | Three quick matched shots: stepping into a dark room, a hand on a door, a figure frozen
+638-643 | MIX | cut | Here we are the ones who open the door, and learn minutes later what it cost | A door opened; the consequence
+644 | MIX | cut | Suddenly it is harder to laugh at horror-film characters | Survivors in the aftermath
+645-648 | MIX | cut | The series has its faults: twists, characters, choices that feel arbitrary | Quiet exploration footage without interface
+649-652 | MIX | cut | A trivial event can kill a character much later, which is exactly the feeling intended | A small action, then its late consequence
+653-655 | CUR | cut | Season one is complete, but the series was not meant to end there | The Curator closing a book and reaching for the next
+656-658 | D8020 | cut | The next announced game, Directive 8020: science-fiction horror in space | Directive 8020: the ship Cassiopeia. Not on the supplied footage list
+659-661 | D8020 | cut | Far from ghost ships and murder hotels, the same question: what will you do when a life depends on your decision | Directive 8020: crew under threat
+662-664 | CUR | cut | Why The Curator remains so intriguing | The Curator at the desk
+665-669 | CUR | cut | The story is ready, the characters are in place, the danger waits. The ending is not yet written | The open book, a blank page, the pen above it
+670-674 | CUR | cut | He only watches. We decide who dies | He looks straight at the viewer; hold
+
+@ outro
+675-676 | CUR | fade | Sign-off: subscribe and comment | Library ambience, candles, shelves. No on-screen text
+677-679 | MIX | cut | If you had to survive one of them yourself, which would you choose | The four books side by side
+680 | MOM | cut | The ghost ship | The Ourang Medan, an angle not used before
+681 | LH | cut | The cursed town | Little Hope in fog, an angle not used before
+682 | HOA | cut | The temple under the ground | The temple, an angle not used before
+683 | DIM | cut | The murder hotel | The hotel, an angle not used before
+684-685 | DIM | cut | Joke: at the hotel there is at least a chance of breakfast | The hotel dining room, table laid
+686-688 | CUR | cut | Good night, if you can sleep | The Curator closes the book; the light goes down to black
