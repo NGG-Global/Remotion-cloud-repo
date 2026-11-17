@@ -1,4 +1,82 @@
 {
+  "cold-open-001": {
+    "file": "dpa/clips/cold-open-001-be3c008661.mp4"
+  },
+  "cold-open-001b": {
+    "file": "dpa/clips/cold-open-001b-ca0a4c1831.mp4"
+  },
+  "cold-open-002": {
+    "file": "dpa/clips/cold-open-002-f28399aa69.mp4"
+  },
+  "cold-open-002b": {
+    "file": "dpa/clips/cold-open-002b-e2d43d982b.mp4"
+  },
+  "cold-open-003": {
+    "file": "dpa/clips/cold-open-003-79f3f6a259.mp4"
+  },
+  "cold-open-004": {
+    "file": "dpa/clips/cold-open-004-6e8bea2a1c.mp4"
+  },
+  "cold-open-004b": {
+    "file": "dpa/clips/cold-open-004b-bf57401869.mp4"
+  },
+  "intro-001": {
+    "file": "dpa/clips/intro-001-f5815eacd5.mp4"
+  },
+  "intro-001b": {
+    "file": "dpa/clips/intro-001b-eac2e01de6.mp4"
+  },
+  "intro-002": {
+    "file": "dpa/clips/intro-002-4bcf97866a.mp4"
+  },
+  "intro-002b": {
+    "file": "dpa/clips/intro-002b-96f7578b31.mp4"
+  },
+  "intro-002c": {
+    "file": "dpa/clips/intro-002c-bc3907f539.mp4"
+  },
+  "intro-002d": {
+    "file": "dpa/clips/intro-002d-1fe238563c.mp4"
+  },
+  "intro-003": {
+    "file": "dpa/clips/intro-003-ae0528deb2.mp4"
+  },
+  "intro-003b": {
+    "file": "dpa/clips/intro-003b-0bbf157f2c.mp4"
+  },
+  "intro-004": {
+    "file": "dpa/clips/intro-004-f74bf5ae17.mp4"
+  },
+  "intro-005": {
+    "file": "dpa/clips/intro-005-7f8e11edad.mp4"
+  },
+  "intro-006": {
+    "file": "dpa/clips/intro-006-cf7bc81895.mp4"
+  },
+  "intro-007": {
+    "file": "dpa/clips/intro-007-cbcbb298b3.mp4"
+  },
+  "intro-007b": {
+    "file": "dpa/clips/intro-007b-3b210a62b6.mp4"
+  },
+  "intro-008": {
+    "file": "dpa/clips/intro-008-ebcb4d1b09.mp4"
+  },
+  "intro-009": {
+    "file": "dpa/clips/intro-009-1c260cb6db.mp4"
+  },
+  "intro-009b": {
+    "file": "dpa/clips/intro-009b-1dba0c481d.mp4"
+  },
+  "intro-009c": {
+    "file": "dpa/clips/intro-009c-a5ae7ee48f.mp4"
+  },
+  "intro-009d": {
+    "file": "dpa/clips/intro-009d-44312161a2.mp4"
+  },
+  "intro-010": {
+    "file": "dpa/clips/intro-010-26daa5230a.mp4"
+  },
   "origins-001": {
     "file": "dpa/clips/origins-001-c457bd15db.mp4"
   },
@@ -26,6 +104,1581 @@
   "origins-003c": {
     "file": "dpa/clips/origins-003c-c99e79c940.mp4"
   },
+  "origins-004": {
+    "file": "dpa/clips/origins-004-6964b93fd1.mp4"
+  },
+  "origins-004b": {
+    "file": "dpa/clips/origins-004b-8d90106f08.mp4"
+  },
+  "origins-005": {
+    "file": "dpa/clips/origins-005-a98d20c2bf.mp4"
+  },
+  "origins-005b": {
+    "file": "dpa/clips/origins-005b-80ee1b45de.mp4"
+  },
+  "origins-005c": {
+    "file": "dpa/clips/origins-005c-c242819fd6.mp4"
+  },
+  "origins-005d": {
+    "file": "dpa/clips/origins-005d-80289f609f.mp4"
+  },
+  "origins-006": {
+    "file": "dpa/clips/origins-006-5830a13ad4.mp4"
+  },
+  "origins-006b": {
+    "file": "dpa/clips/origins-006b-a6dc1131de.mp4"
+  },
+  "origins-006c": {
+    "file": "dpa/clips/origins-006c-b052c98609.mp4"
+  },
+  "origins-006d": {
+    "file": "dpa/clips/origins-006d-3ffe529df1.mp4"
+  },
+  "origins-007": {
+    "file": "dpa/clips/origins-007-4632493fdd.mp4"
+  },
+  "curator-intro-001": {
+    "file": "dpa/clips/curator-intro-001-3f70510aaf.mp4"
+  },
+  "curator-intro-002": {
+    "file": "dpa/clips/curator-intro-002-144b6b49eb.mp4"
+  },
+  "curator-intro-002b": {
+    "file": "dpa/clips/curator-intro-002b-5a13933386.mp4"
+  },
+  "curator-intro-003": {
+    "file": "dpa/clips/curator-intro-003-acddb3a27c.mp4"
+  },
+  "curator-intro-003b": {
+    "file": "dpa/clips/curator-intro-003b-81ea156921.mp4"
+  },
+  "curator-intro-004": {
+    "file": "dpa/clips/curator-intro-004-e51ce9fe85.mp4"
+  },
+  "curator-intro-005": {
+    "file": "dpa/clips/curator-intro-005-b6b469e3c2.mp4"
+  },
+  "curator-intro-005b": {
+    "file": "dpa/clips/curator-intro-005b-705043535a.mp4"
+  },
+  "curator-intro-006": {
+    "file": "dpa/clips/curator-intro-006-367b957918.mp4"
+  },
+  "curator-intro-006b": {
+    "file": "dpa/clips/curator-intro-006b-ee7678e4c5.mp4"
+  },
+  "curator-intro-007": {
+    "file": "dpa/clips/curator-intro-007-a875e2bcbf.mp4"
+  },
+  "curator-intro-007b": {
+    "file": "dpa/clips/curator-intro-007b-5eec5d6957.mp4"
+  },
+  "man-of-medan-001": {
+    "file": "dpa/clips/man-of-medan-001-9193f9a911.mp4"
+  },
+  "man-of-medan-001b": {
+    "file": "dpa/clips/man-of-medan-001b-079124b01f.mp4"
+  },
+  "man-of-medan-001c": {
+    "file": "dpa/clips/man-of-medan-001c-89751093e0.mp4"
+  },
+  "man-of-medan-002": {
+    "file": "dpa/clips/man-of-medan-002-b16f232da0.mp4"
+  },
+  "man-of-medan-002b": {
+    "file": "dpa/clips/man-of-medan-002b-3e4f2fb0cc.mp4"
+  },
+  "man-of-medan-002c": {
+    "file": "dpa/clips/man-of-medan-002c-a1d5087fb5.mp4"
+  },
+  "man-of-medan-002d": {
+    "file": "dpa/clips/man-of-medan-002d-a6d64de78d.mp4"
+  },
+  "man-of-medan-003": {
+    "file": "dpa/clips/man-of-medan-003-d482370523.mp4"
+  },
+  "man-of-medan-003b": {
+    "file": "dpa/clips/man-of-medan-003b-884fcf7c56.mp4"
+  },
+  "man-of-medan-003c": {
+    "file": "dpa/clips/man-of-medan-003c-74979eaf76.mp4"
+  },
+  "man-of-medan-003d": {
+    "file": "dpa/clips/man-of-medan-003d-ec243d552f.mp4"
+  },
+  "man-of-medan-004": {
+    "file": "dpa/clips/man-of-medan-004-4871f7fab8.mp4"
+  },
+  "man-of-medan-004b": {
+    "file": "dpa/clips/man-of-medan-004b-cbaf8a1643.mp4"
+  },
+  "man-of-medan-005": {
+    "file": "dpa/clips/man-of-medan-005-ce184d78d6.mp4"
+  },
+  "man-of-medan-005b": {
+    "file": "dpa/clips/man-of-medan-005b-21e6c8ab3b.mp4"
+  },
+  "man-of-medan-005c": {
+    "file": "dpa/clips/man-of-medan-005c-b20524f53d.mp4"
+  },
+  "man-of-medan-005d": {
+    "file": "dpa/clips/man-of-medan-005d-8afbb375ba.mp4"
+  },
+  "man-of-medan-006": {
+    "file": "dpa/clips/man-of-medan-006-29870872be.mp4"
+  },
+  "man-of-medan-006b": {
+    "file": "dpa/clips/man-of-medan-006b-45bac39c5e.mp4"
+  },
+  "man-of-medan-007": {
+    "file": "dpa/clips/man-of-medan-007-6be837135e.mp4"
+  },
+  "man-of-medan-008": {
+    "file": "dpa/clips/man-of-medan-008-f6b5c22725.mp4"
+  },
+  "man-of-medan-009": {
+    "file": "dpa/clips/man-of-medan-009-dfb6122c20.mp4"
+  },
+  "man-of-medan-009b": {
+    "file": "dpa/clips/man-of-medan-009b-5fc02a2d84.mp4"
+  },
+  "man-of-medan-009c": {
+    "file": "dpa/clips/man-of-medan-009c-b7445ab0fe.mp4"
+  },
+  "man-of-medan-010": {
+    "file": "dpa/clips/man-of-medan-010-654130de9e.mp4"
+  },
+  "man-of-medan-010b": {
+    "file": "dpa/clips/man-of-medan-010b-f1cee132d0.mp4"
+  },
+  "man-of-medan-011": {
+    "file": "dpa/clips/man-of-medan-011-358b559179.mp4"
+  },
+  "man-of-medan-011b": {
+    "file": "dpa/clips/man-of-medan-011b-b5b6aea6f6.mp4"
+  },
+  "man-of-medan-011c": {
+    "file": "dpa/clips/man-of-medan-011c-74af29da67.mp4"
+  },
+  "man-of-medan-011d": {
+    "file": "dpa/clips/man-of-medan-011d-0f97660f79.mp4"
+  },
+  "man-of-medan-012": {
+    "file": "dpa/clips/man-of-medan-012-56ff36ec41.mp4"
+  },
+  "man-of-medan-012b": {
+    "file": "dpa/clips/man-of-medan-012b-847168ae0c.mp4"
+  },
+  "man-of-medan-012c": {
+    "file": "dpa/clips/man-of-medan-012c-4b2ef10bc8.mp4"
+  },
+  "man-of-medan-012d": {
+    "file": "dpa/clips/man-of-medan-012d-191949efdf.mp4"
+  },
+  "man-of-medan-013": {
+    "file": "dpa/clips/man-of-medan-013-bd2604a941.mp4"
+  },
+  "man-of-medan-013b": {
+    "file": "dpa/clips/man-of-medan-013b-bbd0fad535.mp4"
+  },
+  "man-of-medan-013c": {
+    "file": "dpa/clips/man-of-medan-013c-ea23f2d8dc.mp4"
+  },
+  "man-of-medan-014": {
+    "file": "dpa/clips/man-of-medan-014-8c0ad3abfe.mp4"
+  },
+  "man-of-medan-015": {
+    "file": "dpa/clips/man-of-medan-015-58d82469d0.mp4"
+  },
+  "man-of-medan-015b": {
+    "file": "dpa/clips/man-of-medan-015b-da1e6b4b98.mp4"
+  },
+  "man-of-medan-015c": {
+    "file": "dpa/clips/man-of-medan-015c-fe1dd4c135.mp4"
+  },
+  "man-of-medan-015d": {
+    "file": "dpa/clips/man-of-medan-015d-3d92746016.mp4"
+  },
+  "man-of-medan-016": {
+    "file": "dpa/clips/man-of-medan-016-fd54c07899.mp4"
+  },
+  "man-of-medan-016b": {
+    "file": "dpa/clips/man-of-medan-016b-f4a52aa7d9.mp4"
+  },
+  "man-of-medan-016c": {
+    "file": "dpa/clips/man-of-medan-016c-3dc29eddb6.mp4"
+  },
+  "man-of-medan-016d": {
+    "file": "dpa/clips/man-of-medan-016d-12d51c39b4.mp4"
+  },
+  "man-of-medan-017": {
+    "file": "dpa/clips/man-of-medan-017-8129c20b10.mp4"
+  },
+  "man-of-medan-018": {
+    "file": "dpa/clips/man-of-medan-018-6499c8398e.mp4"
+  },
+  "man-of-medan-018b": {
+    "file": "dpa/clips/man-of-medan-018b-567663a085.mp4"
+  },
+  "man-of-medan-018c": {
+    "file": "dpa/clips/man-of-medan-018c-fcf900e0c0.mp4"
+  },
+  "man-of-medan-019": {
+    "file": "dpa/clips/man-of-medan-019-2fdceee787.mp4"
+  },
+  "man-of-medan-019b": {
+    "file": "dpa/clips/man-of-medan-019b-e82326bd1b.mp4"
+  },
+  "man-of-medan-019c": {
+    "file": "dpa/clips/man-of-medan-019c-4d0f8c921c.mp4"
+  },
+  "man-of-medan-020": {
+    "file": "dpa/clips/man-of-medan-020-2c5e53d540.mp4"
+  },
+  "man-of-medan-020b": {
+    "file": "dpa/clips/man-of-medan-020b-e52f17dab4.mp4"
+  },
+  "man-of-medan-020c": {
+    "file": "dpa/clips/man-of-medan-020c-ab11ceae4b.mp4"
+  },
+  "man-of-medan-020d": {
+    "file": "dpa/clips/man-of-medan-020d-5d78788c74.mp4"
+  },
+  "man-of-medan-021": {
+    "file": "dpa/clips/man-of-medan-021-440b589153.mp4"
+  },
+  "man-of-medan-021b": {
+    "file": "dpa/clips/man-of-medan-021b-843c6a7433.mp4"
+  },
+  "man-of-medan-021c": {
+    "file": "dpa/clips/man-of-medan-021c-1000c3f294.mp4"
+  },
+  "man-of-medan-022": {
+    "file": "dpa/clips/man-of-medan-022-802423ef71.mp4"
+  },
+  "man-of-medan-022b": {
+    "file": "dpa/clips/man-of-medan-022b-6c40d36693.mp4"
+  },
+  "man-of-medan-022c": {
+    "file": "dpa/clips/man-of-medan-022c-c2ccf63bd5.mp4"
+  },
+  "man-of-medan-023": {
+    "file": "dpa/clips/man-of-medan-023-5d4e7d79bd.mp4"
+  },
+  "man-of-medan-023b": {
+    "file": "dpa/clips/man-of-medan-023b-eab48fe3be.mp4"
+  },
+  "man-of-medan-024": {
+    "file": "dpa/clips/man-of-medan-024-f5f4021670.mp4"
+  },
+  "man-of-medan-024b": {
+    "file": "dpa/clips/man-of-medan-024b-a0cacc92fb.mp4"
+  },
+  "man-of-medan-024c": {
+    "file": "dpa/clips/man-of-medan-024c-e7ba894cd0.mp4"
+  },
+  "man-of-medan-024d": {
+    "file": "dpa/clips/man-of-medan-024d-cd39dede2e.mp4"
+  },
+  "man-of-medan-025": {
+    "file": "dpa/clips/man-of-medan-025-cf4fccfe0a.mp4"
+  },
+  "man-of-medan-025b": {
+    "file": "dpa/clips/man-of-medan-025b-8ebc190e10.mp4"
+  },
+  "man-of-medan-025c": {
+    "file": "dpa/clips/man-of-medan-025c-67e67f194e.mp4"
+  },
+  "man-of-medan-026": {
+    "file": "dpa/clips/man-of-medan-026-c15435e6bf.mp4"
+  },
+  "man-of-medan-026b": {
+    "file": "dpa/clips/man-of-medan-026b-c6111d5bd4.mp4"
+  },
+  "man-of-medan-026c": {
+    "file": "dpa/clips/man-of-medan-026c-3b91c9e3c6.mp4"
+  },
+  "man-of-medan-027": {
+    "file": "dpa/clips/man-of-medan-027-11f3de213f.mp4"
+  },
+  "man-of-medan-027b": {
+    "file": "dpa/clips/man-of-medan-027b-460ba4dbcd.mp4"
+  },
+  "man-of-medan-027c": {
+    "file": "dpa/clips/man-of-medan-027c-25cf65eb40.mp4"
+  },
+  "man-of-medan-028": {
+    "file": "dpa/clips/man-of-medan-028-bd2f02f2ec.mp4"
+  },
+  "man-of-medan-028b": {
+    "file": "dpa/clips/man-of-medan-028b-70ab170e85.mp4"
+  },
+  "man-of-medan-028c": {
+    "file": "dpa/clips/man-of-medan-028c-12a33d1ac4.mp4"
+  },
+  "man-of-medan-028d": {
+    "file": "dpa/clips/man-of-medan-028d-5b6ad9d156.mp4"
+  },
+  "man-of-medan-029": {
+    "file": "dpa/clips/man-of-medan-029-609ddb6825.mp4"
+  },
+  "man-of-medan-029b": {
+    "file": "dpa/clips/man-of-medan-029b-69780c4e1c.mp4"
+  },
+  "man-of-medan-030": {
+    "file": "dpa/clips/man-of-medan-030-62aab6340b.mp4"
+  },
+  "man-of-medan-030b": {
+    "file": "dpa/clips/man-of-medan-030b-73e566a898.mp4"
+  },
+  "man-of-medan-030c": {
+    "file": "dpa/clips/man-of-medan-030c-5dd7d7c73d.mp4"
+  },
+  "little-hope-001": {
+    "file": "dpa/clips/little-hope-001-20491e756d.mp4"
+  },
+  "little-hope-001b": {
+    "file": "dpa/clips/little-hope-001b-21c30b0c8a.mp4"
+  },
+  "little-hope-001c": {
+    "file": "dpa/clips/little-hope-001c-2abcc3ccb5.mp4"
+  },
+  "little-hope-002": {
+    "file": "dpa/clips/little-hope-002-852ea126f4.mp4"
+  },
+  "little-hope-002b": {
+    "file": "dpa/clips/little-hope-002b-23eb2300d8.mp4"
+  },
+  "little-hope-003": {
+    "file": "dpa/clips/little-hope-003-0b9a7da655.mp4"
+  },
+  "little-hope-003b": {
+    "file": "dpa/clips/little-hope-003b-2d384371ae.mp4"
+  },
+  "little-hope-003c": {
+    "file": "dpa/clips/little-hope-003c-af6d28aa67.mp4"
+  },
+  "little-hope-003d": {
+    "file": "dpa/clips/little-hope-003d-87b2ba7f18.mp4"
+  },
+  "little-hope-003e": {
+    "file": "dpa/clips/little-hope-003e-4768fa50f7.mp4"
+  },
+  "little-hope-004": {
+    "file": "dpa/clips/little-hope-004-f37a624af0.mp4"
+  },
+  "little-hope-004b": {
+    "file": "dpa/clips/little-hope-004b-0ccc40e212.mp4"
+  },
+  "little-hope-004c": {
+    "file": "dpa/clips/little-hope-004c-15c31586de.mp4"
+  },
+  "little-hope-005": {
+    "file": "dpa/clips/little-hope-005-fa83bf1789.mp4"
+  },
+  "little-hope-005b": {
+    "file": "dpa/clips/little-hope-005b-fc5921962a.mp4"
+  },
+  "little-hope-005c": {
+    "file": "dpa/clips/little-hope-005c-b11d5e8cb1.mp4"
+  },
+  "little-hope-006": {
+    "file": "dpa/clips/little-hope-006-6cc5f5a673.mp4"
+  },
+  "little-hope-006b": {
+    "file": "dpa/clips/little-hope-006b-c0b9b7c66b.mp4"
+  },
+  "little-hope-007": {
+    "file": "dpa/clips/little-hope-007-fcaf79e1b8.mp4"
+  },
+  "little-hope-007b": {
+    "file": "dpa/clips/little-hope-007b-41b71e6929.mp4"
+  },
+  "little-hope-007c": {
+    "file": "dpa/clips/little-hope-007c-50a71e6065.mp4"
+  },
+  "little-hope-007d": {
+    "file": "dpa/clips/little-hope-007d-a0a7c497e3.mp4"
+  },
+  "little-hope-008": {
+    "file": "dpa/clips/little-hope-008-1f9d81edb7.mp4"
+  },
+  "little-hope-008b": {
+    "file": "dpa/clips/little-hope-008b-a3338b302f.mp4"
+  },
+  "little-hope-008c": {
+    "file": "dpa/clips/little-hope-008c-e0fc9e5610.mp4"
+  },
+  "little-hope-009": {
+    "file": "dpa/clips/little-hope-009-a63d7cfc59.mp4"
+  },
+  "little-hope-009b": {
+    "file": "dpa/clips/little-hope-009b-8fe1f83a22.mp4"
+  },
+  "little-hope-009c": {
+    "file": "dpa/clips/little-hope-009c-a320d8dfe1.mp4"
+  },
+  "little-hope-009d": {
+    "file": "dpa/clips/little-hope-009d-e1097c707d.mp4"
+  },
+  "little-hope-010": {
+    "file": "dpa/clips/little-hope-010-8536974097.mp4"
+  },
+  "little-hope-011": {
+    "file": "dpa/clips/little-hope-011-3b7ae17e31.mp4"
+  },
+  "little-hope-011b": {
+    "file": "dpa/clips/little-hope-011b-d05cf10968.mp4"
+  },
+  "little-hope-011c": {
+    "file": "dpa/clips/little-hope-011c-4ebabf3069.mp4"
+  },
+  "little-hope-012": {
+    "file": "dpa/clips/little-hope-012-56fc02612c.mp4"
+  },
+  "little-hope-012b": {
+    "file": "dpa/clips/little-hope-012b-6ab9652908.mp4"
+  },
+  "little-hope-012c": {
+    "file": "dpa/clips/little-hope-012c-be4af8c45d.mp4"
+  },
+  "little-hope-013": {
+    "file": "dpa/clips/little-hope-013-701aef9dae.mp4"
+  },
+  "little-hope-013b": {
+    "file": "dpa/clips/little-hope-013b-5ea2659030.mp4"
+  },
+  "little-hope-013c": {
+    "file": "dpa/clips/little-hope-013c-0680164e88.mp4"
+  },
+  "little-hope-013d": {
+    "file": "dpa/clips/little-hope-013d-65927727e1.mp4"
+  },
+  "little-hope-014": {
+    "file": "dpa/clips/little-hope-014-ed877b7e4f.mp4"
+  },
+  "little-hope-014b": {
+    "file": "dpa/clips/little-hope-014b-b210000b9b.mp4"
+  },
+  "little-hope-014c": {
+    "file": "dpa/clips/little-hope-014c-79fa80b67e.mp4"
+  },
+  "little-hope-015": {
+    "file": "dpa/clips/little-hope-015-4ecbb52265.mp4"
+  },
+  "little-hope-015b": {
+    "file": "dpa/clips/little-hope-015b-5f48889152.mp4"
+  },
+  "little-hope-015c": {
+    "file": "dpa/clips/little-hope-015c-51f8c21d18.mp4"
+  },
+  "little-hope-016": {
+    "file": "dpa/clips/little-hope-016-b58637a4d4.mp4"
+  },
+  "little-hope-017": {
+    "file": "dpa/clips/little-hope-017-a108ffc661.mp4"
+  },
+  "little-hope-017b": {
+    "file": "dpa/clips/little-hope-017b-7c5da9acef.mp4"
+  },
+  "little-hope-017c": {
+    "file": "dpa/clips/little-hope-017c-e6706ece9f.mp4"
+  },
+  "little-hope-018": {
+    "file": "dpa/clips/little-hope-018-8abf0e95ad.mp4"
+  },
+  "little-hope-018b": {
+    "file": "dpa/clips/little-hope-018b-d1cc6c0b4b.mp4"
+  },
+  "little-hope-018c": {
+    "file": "dpa/clips/little-hope-018c-fad630e348.mp4"
+  },
+  "little-hope-019": {
+    "file": "dpa/clips/little-hope-019-6599e18a98.mp4"
+  },
+  "little-hope-019b": {
+    "file": "dpa/clips/little-hope-019b-49b773dee3.mp4"
+  },
+  "little-hope-019c": {
+    "file": "dpa/clips/little-hope-019c-c05994350e.mp4"
+  },
+  "little-hope-019d": {
+    "file": "dpa/clips/little-hope-019d-72f1249e56.mp4"
+  },
+  "little-hope-019e": {
+    "file": "dpa/clips/little-hope-019e-ffb3e2a38b.mp4"
+  },
+  "little-hope-020": {
+    "file": "dpa/clips/little-hope-020-37cdeb8904.mp4"
+  },
+  "little-hope-021": {
+    "file": "dpa/clips/little-hope-021-1d6018016d.mp4"
+  },
+  "little-hope-021b": {
+    "file": "dpa/clips/little-hope-021b-0816699015.mp4"
+  },
+  "little-hope-021c": {
+    "file": "dpa/clips/little-hope-021c-40a595c801.mp4"
+  },
+  "little-hope-022": {
+    "file": "dpa/clips/little-hope-022-c835fd9553.mp4"
+  },
+  "little-hope-022b": {
+    "file": "dpa/clips/little-hope-022b-c5b548ddd8.mp4"
+  },
+  "little-hope-022c": {
+    "file": "dpa/clips/little-hope-022c-decaf37039.mp4"
+  },
+  "little-hope-023": {
+    "file": "dpa/clips/little-hope-023-d2044b3e0e.mp4"
+  },
+  "little-hope-023b": {
+    "file": "dpa/clips/little-hope-023b-08b675e75e.mp4"
+  },
+  "little-hope-023c": {
+    "file": "dpa/clips/little-hope-023c-6ebf2d6859.mp4"
+  },
+  "little-hope-023d": {
+    "file": "dpa/clips/little-hope-023d-241b71b223.mp4"
+  },
+  "little-hope-023e": {
+    "file": "dpa/clips/little-hope-023e-477cd07e30.mp4"
+  },
+  "little-hope-023f": {
+    "file": "dpa/clips/little-hope-023f-bf03ffba45.mp4"
+  },
+  "little-hope-023g": {
+    "file": "dpa/clips/little-hope-023g-baae50f642.mp4"
+  },
+  "little-hope-023h": {
+    "file": "dpa/clips/little-hope-023h-a85f344201.mp4"
+  },
+  "little-hope-024": {
+    "file": "dpa/clips/little-hope-024-e1a6fc8b84.mp4"
+  },
+  "little-hope-024b": {
+    "file": "dpa/clips/little-hope-024b-6d2023dfcb.mp4"
+  },
+  "little-hope-025": {
+    "file": "dpa/clips/little-hope-025-63ad5bae03.mp4"
+  },
+  "little-hope-025b": {
+    "file": "dpa/clips/little-hope-025b-0e16870615.mp4"
+  },
+  "little-hope-025c": {
+    "file": "dpa/clips/little-hope-025c-efa5ec7802.mp4"
+  },
+  "little-hope-025d": {
+    "file": "dpa/clips/little-hope-025d-5fc512969f.mp4"
+  },
+  "little-hope-025e": {
+    "file": "dpa/clips/little-hope-025e-8707c67ac2.mp4"
+  },
+  "little-hope-026": {
+    "file": "dpa/clips/little-hope-026-42c36b58ca.mp4"
+  },
+  "little-hope-026b": {
+    "file": "dpa/clips/little-hope-026b-5c6f9a6c32.mp4"
+  },
+  "little-hope-026c": {
+    "file": "dpa/clips/little-hope-026c-4f886e6337.mp4"
+  },
+  "little-hope-027": {
+    "file": "dpa/clips/little-hope-027-a179ba053c.mp4"
+  },
+  "little-hope-027b": {
+    "file": "dpa/clips/little-hope-027b-b6a294044d.mp4"
+  },
+  "little-hope-027c": {
+    "file": "dpa/clips/little-hope-027c-32feb81bdd.mp4"
+  },
+  "little-hope-028": {
+    "file": "dpa/clips/little-hope-028-759d1f5bac.mp4"
+  },
+  "little-hope-028b": {
+    "file": "dpa/clips/little-hope-028b-7682208c2d.mp4"
+  },
+  "little-hope-028c": {
+    "file": "dpa/clips/little-hope-028c-e35d5073ee.mp4"
+  },
+  "little-hope-029": {
+    "file": "dpa/clips/little-hope-029-f179828cee.mp4"
+  },
+  "little-hope-029b": {
+    "file": "dpa/clips/little-hope-029b-1e8747a582.mp4"
+  },
+  "little-hope-029c": {
+    "file": "dpa/clips/little-hope-029c-e1760215cb.mp4"
+  },
+  "little-hope-029d": {
+    "file": "dpa/clips/little-hope-029d-434bf3b634.mp4"
+  },
+  "little-hope-030": {
+    "file": "dpa/clips/little-hope-030-2e95c1fba4.mp4"
+  },
+  "little-hope-030b": {
+    "file": "dpa/clips/little-hope-030b-5de7b2d32b.mp4"
+  },
+  "little-hope-031": {
+    "file": "dpa/clips/little-hope-031-fa73dedd81.mp4"
+  },
+  "little-hope-031b": {
+    "file": "dpa/clips/little-hope-031b-949e4a2b8b.mp4"
+  },
+  "little-hope-032": {
+    "file": "dpa/clips/little-hope-032-1f51a21b66.mp4"
+  },
+  "little-hope-032b": {
+    "file": "dpa/clips/little-hope-032b-78bccc00c0.mp4"
+  },
+  "little-hope-032c": {
+    "file": "dpa/clips/little-hope-032c-168a42f9e0.mp4"
+  },
+  "little-hope-032d": {
+    "file": "dpa/clips/little-hope-032d-70fbe1af45.mp4"
+  },
+  "little-hope-033": {
+    "file": "dpa/clips/little-hope-033-6ba255841d.mp4"
+  },
+  "little-hope-033b": {
+    "file": "dpa/clips/little-hope-033b-76cbb7c38c.mp4"
+  },
+  "little-hope-034": {
+    "file": "dpa/clips/little-hope-034-e0866c637b.mp4"
+  },
+  "little-hope-034b": {
+    "file": "dpa/clips/little-hope-034b-a4019674fc.mp4"
+  },
+  "little-hope-034c": {
+    "file": "dpa/clips/little-hope-034c-2785963439.mp4"
+  },
+  "house-of-ashes-001": {
+    "file": "dpa/clips/house-of-ashes-001-8e58becf2c.mp4"
+  },
+  "house-of-ashes-001b": {
+    "file": "dpa/clips/house-of-ashes-001b-d10afeef94.mp4"
+  },
+  "house-of-ashes-001c": {
+    "file": "dpa/clips/house-of-ashes-001c-953eb2d19a.mp4"
+  },
+  "house-of-ashes-002": {
+    "file": "dpa/clips/house-of-ashes-002-064939ae54.mp4"
+  },
+  "house-of-ashes-002b": {
+    "file": "dpa/clips/house-of-ashes-002b-3adc9276c9.mp4"
+  },
+  "house-of-ashes-003": {
+    "file": "dpa/clips/house-of-ashes-003-25cc47484c.mp4"
+  },
+  "house-of-ashes-003b": {
+    "file": "dpa/clips/house-of-ashes-003b-0365b90275.mp4"
+  },
+  "house-of-ashes-004": {
+    "file": "dpa/clips/house-of-ashes-004-d211212f7b.mp4"
+  },
+  "house-of-ashes-004b": {
+    "file": "dpa/clips/house-of-ashes-004b-4c28a05267.mp4"
+  },
+  "house-of-ashes-004c": {
+    "file": "dpa/clips/house-of-ashes-004c-312464bf77.mp4"
+  },
+  "house-of-ashes-004d": {
+    "file": "dpa/clips/house-of-ashes-004d-64f6a34ec1.mp4"
+  },
+  "house-of-ashes-005": {
+    "file": "dpa/clips/house-of-ashes-005-ee3fb71846.mp4"
+  },
+  "house-of-ashes-005b": {
+    "file": "dpa/clips/house-of-ashes-005b-878056ff95.mp4"
+  },
+  "house-of-ashes-005c": {
+    "file": "dpa/clips/house-of-ashes-005c-4e835bbcec.mp4"
+  },
+  "house-of-ashes-006": {
+    "file": "dpa/clips/house-of-ashes-006-775350e4ff.mp4"
+  },
+  "house-of-ashes-007": {
+    "file": "dpa/clips/house-of-ashes-007-fdebea527d.mp4"
+  },
+  "house-of-ashes-008": {
+    "file": "dpa/clips/house-of-ashes-008-86fd794b16.mp4"
+  },
+  "house-of-ashes-009": {
+    "file": "dpa/clips/house-of-ashes-009-04f4f8c176.mp4"
+  },
+  "house-of-ashes-010": {
+    "file": "dpa/clips/house-of-ashes-010-a90f96712e.mp4"
+  },
+  "house-of-ashes-010b": {
+    "file": "dpa/clips/house-of-ashes-010b-4aeb59a2ea.mp4"
+  },
+  "house-of-ashes-010c": {
+    "file": "dpa/clips/house-of-ashes-010c-1948e9da82.mp4"
+  },
+  "house-of-ashes-011": {
+    "file": "dpa/clips/house-of-ashes-011-5eb6481c31.mp4"
+  },
+  "house-of-ashes-011b": {
+    "file": "dpa/clips/house-of-ashes-011b-0d7cc71ef4.mp4"
+  },
+  "house-of-ashes-011c": {
+    "file": "dpa/clips/house-of-ashes-011c-a198a7deb0.mp4"
+  },
+  "house-of-ashes-011d": {
+    "file": "dpa/clips/house-of-ashes-011d-0b9ec59d2f.mp4"
+  },
+  "house-of-ashes-011e": {
+    "file": "dpa/clips/house-of-ashes-011e-869b58c572.mp4"
+  },
+  "house-of-ashes-012": {
+    "file": "dpa/clips/house-of-ashes-012-061f7a36ff.mp4"
+  },
+  "house-of-ashes-012b": {
+    "file": "dpa/clips/house-of-ashes-012b-3a1d1f0582.mp4"
+  },
+  "house-of-ashes-012c": {
+    "file": "dpa/clips/house-of-ashes-012c-b83711d242.mp4"
+  },
+  "house-of-ashes-013": {
+    "file": "dpa/clips/house-of-ashes-013-357286e130.mp4"
+  },
+  "house-of-ashes-014": {
+    "file": "dpa/clips/house-of-ashes-014-fae66e07bb.mp4"
+  },
+  "house-of-ashes-014b": {
+    "file": "dpa/clips/house-of-ashes-014b-fee05ff4a6.mp4"
+  },
+  "house-of-ashes-014c": {
+    "file": "dpa/clips/house-of-ashes-014c-a4eedebca5.mp4"
+  },
+  "house-of-ashes-014d": {
+    "file": "dpa/clips/house-of-ashes-014d-daec4988d2.mp4"
+  },
+  "house-of-ashes-015": {
+    "file": "dpa/clips/house-of-ashes-015-f9a35daebc.mp4"
+  },
+  "house-of-ashes-015b": {
+    "file": "dpa/clips/house-of-ashes-015b-539dafa4cb.mp4"
+  },
+  "house-of-ashes-015c": {
+    "file": "dpa/clips/house-of-ashes-015c-55c10655e2.mp4"
+  },
+  "house-of-ashes-016": {
+    "file": "dpa/clips/house-of-ashes-016-c871d241b7.mp4"
+  },
+  "house-of-ashes-016b": {
+    "file": "dpa/clips/house-of-ashes-016b-7bba3d65fb.mp4"
+  },
+  "house-of-ashes-016c": {
+    "file": "dpa/clips/house-of-ashes-016c-5ec5074e70.mp4"
+  },
+  "house-of-ashes-017": {
+    "file": "dpa/clips/house-of-ashes-017-3550e7ce5b.mp4"
+  },
+  "house-of-ashes-017b": {
+    "file": "dpa/clips/house-of-ashes-017b-50cd22ba25.mp4"
+  },
+  "house-of-ashes-018": {
+    "file": "dpa/clips/house-of-ashes-018-76e0522b48.mp4"
+  },
+  "house-of-ashes-018b": {
+    "file": "dpa/clips/house-of-ashes-018b-50279410e0.mp4"
+  },
+  "house-of-ashes-018c": {
+    "file": "dpa/clips/house-of-ashes-018c-2e25365eee.mp4"
+  },
+  "house-of-ashes-018d": {
+    "file": "dpa/clips/house-of-ashes-018d-a22e53e37f.mp4"
+  },
+  "house-of-ashes-019": {
+    "file": "dpa/clips/house-of-ashes-019-1ce8a8af03.mp4"
+  },
+  "house-of-ashes-019b": {
+    "file": "dpa/clips/house-of-ashes-019b-9baf4ec285.mp4"
+  },
+  "house-of-ashes-019c": {
+    "file": "dpa/clips/house-of-ashes-019c-aa3f458c36.mp4"
+  },
+  "house-of-ashes-019d": {
+    "file": "dpa/clips/house-of-ashes-019d-a4032b1ff9.mp4"
+  },
+  "house-of-ashes-020": {
+    "file": "dpa/clips/house-of-ashes-020-2279cb921a.mp4"
+  },
+  "house-of-ashes-020b": {
+    "file": "dpa/clips/house-of-ashes-020b-6923b6c85d.mp4"
+  },
+  "house-of-ashes-020c": {
+    "file": "dpa/clips/house-of-ashes-020c-17d20da586.mp4"
+  },
+  "house-of-ashes-020d": {
+    "file": "dpa/clips/house-of-ashes-020d-e43f7937ae.mp4"
+  },
+  "house-of-ashes-021": {
+    "file": "dpa/clips/house-of-ashes-021-0d1ef04e47.mp4"
+  },
+  "house-of-ashes-021b": {
+    "file": "dpa/clips/house-of-ashes-021b-13897ac1aa.mp4"
+  },
+  "house-of-ashes-021c": {
+    "file": "dpa/clips/house-of-ashes-021c-10e0832295.mp4"
+  },
+  "house-of-ashes-022": {
+    "file": "dpa/clips/house-of-ashes-022-f6f46f95cc.mp4"
+  },
+  "house-of-ashes-022b": {
+    "file": "dpa/clips/house-of-ashes-022b-2f7f76fb4f.mp4"
+  },
+  "house-of-ashes-022c": {
+    "file": "dpa/clips/house-of-ashes-022c-80158f0746.mp4"
+  },
+  "house-of-ashes-023": {
+    "file": "dpa/clips/house-of-ashes-023-ca737ca7c5.mp4"
+  },
+  "house-of-ashes-023b": {
+    "file": "dpa/clips/house-of-ashes-023b-1a88ca94bc.mp4"
+  },
+  "house-of-ashes-023c": {
+    "file": "dpa/clips/house-of-ashes-023c-70498f19ab.mp4"
+  },
+  "house-of-ashes-023d": {
+    "file": "dpa/clips/house-of-ashes-023d-d684f7330c.mp4"
+  },
+  "house-of-ashes-024": {
+    "file": "dpa/clips/house-of-ashes-024-ae1253c52d.mp4"
+  },
+  "house-of-ashes-024b": {
+    "file": "dpa/clips/house-of-ashes-024b-c1d684428b.mp4"
+  },
+  "house-of-ashes-024c": {
+    "file": "dpa/clips/house-of-ashes-024c-a2f1f61c04.mp4"
+  },
+  "house-of-ashes-025": {
+    "file": "dpa/clips/house-of-ashes-025-5d081aec2d.mp4"
+  },
+  "house-of-ashes-025b": {
+    "file": "dpa/clips/house-of-ashes-025b-618b1d6f68.mp4"
+  },
+  "house-of-ashes-025c": {
+    "file": "dpa/clips/house-of-ashes-025c-e7322b71a4.mp4"
+  },
+  "house-of-ashes-026": {
+    "file": "dpa/clips/house-of-ashes-026-23ff206b18.mp4"
+  },
+  "house-of-ashes-026b": {
+    "file": "dpa/clips/house-of-ashes-026b-f90c81883c.mp4"
+  },
+  "house-of-ashes-026c": {
+    "file": "dpa/clips/house-of-ashes-026c-64656fe939.mp4"
+  },
+  "house-of-ashes-027": {
+    "file": "dpa/clips/house-of-ashes-027-eb82e0a761.mp4"
+  },
+  "house-of-ashes-027b": {
+    "file": "dpa/clips/house-of-ashes-027b-d1e8ead066.mp4"
+  },
+  "house-of-ashes-027c": {
+    "file": "dpa/clips/house-of-ashes-027c-2227f83a7a.mp4"
+  },
+  "house-of-ashes-028": {
+    "file": "dpa/clips/house-of-ashes-028-9105eea168.mp4"
+  },
+  "house-of-ashes-028b": {
+    "file": "dpa/clips/house-of-ashes-028b-c9541a24c2.mp4"
+  },
+  "house-of-ashes-028c": {
+    "file": "dpa/clips/house-of-ashes-028c-8f7674ef6d.mp4"
+  },
+  "house-of-ashes-028d": {
+    "file": "dpa/clips/house-of-ashes-028d-36fc77669b.mp4"
+  },
+  "house-of-ashes-029": {
+    "file": "dpa/clips/house-of-ashes-029-ba2e910646.mp4"
+  },
+  "house-of-ashes-029b": {
+    "file": "dpa/clips/house-of-ashes-029b-0fdc574a7c.mp4"
+  },
+  "house-of-ashes-030": {
+    "file": "dpa/clips/house-of-ashes-030-79256a4759.mp4"
+  },
+  "house-of-ashes-030b": {
+    "file": "dpa/clips/house-of-ashes-030b-3df377b861.mp4"
+  },
+  "house-of-ashes-030c": {
+    "file": "dpa/clips/house-of-ashes-030c-c4d531ec7c.mp4"
+  },
+  "house-of-ashes-030d": {
+    "file": "dpa/clips/house-of-ashes-030d-cb90b9ed5f.mp4"
+  },
+  "house-of-ashes-031": {
+    "file": "dpa/clips/house-of-ashes-031-afa58ed7b9.mp4"
+  },
+  "house-of-ashes-031b": {
+    "file": "dpa/clips/house-of-ashes-031b-d8499acf27.mp4"
+  },
+  "house-of-ashes-031c": {
+    "file": "dpa/clips/house-of-ashes-031c-a43b015f44.mp4"
+  },
+  "house-of-ashes-032": {
+    "file": "dpa/clips/house-of-ashes-032-8c70065aee.mp4"
+  },
+  "house-of-ashes-032b": {
+    "file": "dpa/clips/house-of-ashes-032b-d067c4ba32.mp4"
+  },
+  "house-of-ashes-033": {
+    "file": "dpa/clips/house-of-ashes-033-7b5b2b8c44.mp4"
+  },
+  "house-of-ashes-033b": {
+    "file": "dpa/clips/house-of-ashes-033b-054e2debb3.mp4"
+  },
+  "house-of-ashes-033c": {
+    "file": "dpa/clips/house-of-ashes-033c-4bc3613102.mp4"
+  },
+  "house-of-ashes-033d": {
+    "file": "dpa/clips/house-of-ashes-033d-e9c558bd8d.mp4"
+  },
+  "house-of-ashes-034": {
+    "file": "dpa/clips/house-of-ashes-034-3a23a797c2.mp4"
+  },
+  "house-of-ashes-034b": {
+    "file": "dpa/clips/house-of-ashes-034b-558837ca6a.mp4"
+  },
+  "house-of-ashes-035": {
+    "file": "dpa/clips/house-of-ashes-035-746506632d.mp4"
+  },
+  "house-of-ashes-035b": {
+    "file": "dpa/clips/house-of-ashes-035b-9722370320.mp4"
+  },
+  "house-of-ashes-035c": {
+    "file": "dpa/clips/house-of-ashes-035c-8a89e92080.mp4"
+  },
+  "house-of-ashes-035d": {
+    "file": "dpa/clips/house-of-ashes-035d-491c4b17e6.mp4"
+  },
+  "house-of-ashes-036": {
+    "file": "dpa/clips/house-of-ashes-036-693dc2021d.mp4"
+  },
+  "house-of-ashes-036b": {
+    "file": "dpa/clips/house-of-ashes-036b-7d362260f3.mp4"
+  },
+  "house-of-ashes-037": {
+    "file": "dpa/clips/house-of-ashes-037-08a18e9e3d.mp4"
+  },
+  "house-of-ashes-037b": {
+    "file": "dpa/clips/house-of-ashes-037b-29d5af1d99.mp4"
+  },
+  "house-of-ashes-038": {
+    "file": "dpa/clips/house-of-ashes-038-1f8ef31267.mp4"
+  },
+  "house-of-ashes-038b": {
+    "file": "dpa/clips/house-of-ashes-038b-9fb42d8b93.mp4"
+  },
+  "house-of-ashes-039": {
+    "file": "dpa/clips/house-of-ashes-039-dcbfd6d39e.mp4"
+  },
+  "house-of-ashes-039b": {
+    "file": "dpa/clips/house-of-ashes-039b-94385f8bdb.mp4"
+  },
+  "house-of-ashes-040": {
+    "file": "dpa/clips/house-of-ashes-040-108444e107.mp4"
+  },
+  "house-of-ashes-040b": {
+    "file": "dpa/clips/house-of-ashes-040b-c5c9299455.mp4"
+  },
+  "house-of-ashes-040c": {
+    "file": "dpa/clips/house-of-ashes-040c-3f275d1bdd.mp4"
+  },
+  "house-of-ashes-040d": {
+    "file": "dpa/clips/house-of-ashes-040d-620f1d6cea.mp4"
+  },
+  "house-of-ashes-041": {
+    "file": "dpa/clips/house-of-ashes-041-e3c311b4a5.mp4"
+  },
+  "house-of-ashes-041b": {
+    "file": "dpa/clips/house-of-ashes-041b-2031b23b24.mp4"
+  },
+  "house-of-ashes-042": {
+    "file": "dpa/clips/house-of-ashes-042-464136c8da.mp4"
+  },
+  "house-of-ashes-042b": {
+    "file": "dpa/clips/house-of-ashes-042b-7ff3cd8198.mp4"
+  },
+  "house-of-ashes-042c": {
+    "file": "dpa/clips/house-of-ashes-042c-6a9827c6b3.mp4"
+  },
+  "house-of-ashes-042d": {
+    "file": "dpa/clips/house-of-ashes-042d-bd8188b3c0.mp4"
+  },
+  "house-of-ashes-043": {
+    "file": "dpa/clips/house-of-ashes-043-2d2cf8ae2e.mp4"
+  },
+  "house-of-ashes-043b": {
+    "file": "dpa/clips/house-of-ashes-043b-acb556538c.mp4"
+  },
+  "house-of-ashes-043c": {
+    "file": "dpa/clips/house-of-ashes-043c-c5d5c2c9a7.mp4"
+  },
+  "house-of-ashes-043d": {
+    "file": "dpa/clips/house-of-ashes-043d-a43bbeb228.mp4"
+  },
+  "house-of-ashes-044": {
+    "file": "dpa/clips/house-of-ashes-044-1136a7d044.mp4"
+  },
+  "house-of-ashes-044b": {
+    "file": "dpa/clips/house-of-ashes-044b-ce53c877f9.mp4"
+  },
+  "house-of-ashes-044c": {
+    "file": "dpa/clips/house-of-ashes-044c-eb34a1962c.mp4"
+  },
+  "house-of-ashes-044d": {
+    "file": "dpa/clips/house-of-ashes-044d-8de713d952.mp4"
+  },
+  "house-of-ashes-045": {
+    "file": "dpa/clips/house-of-ashes-045-309f888435.mp4"
+  },
+  "house-of-ashes-045b": {
+    "file": "dpa/clips/house-of-ashes-045b-e24b7721bf.mp4"
+  },
+  "house-of-ashes-045c": {
+    "file": "dpa/clips/house-of-ashes-045c-3a57672898.mp4"
+  },
+  "house-of-ashes-045d": {
+    "file": "dpa/clips/house-of-ashes-045d-9387f106ee.mp4"
+  },
+  "house-of-ashes-045e": {
+    "file": "dpa/clips/house-of-ashes-045e-744a59adf6.mp4"
+  },
+  "house-of-ashes-046": {
+    "file": "dpa/clips/house-of-ashes-046-3242c1fd41.mp4"
+  },
+  "house-of-ashes-046b": {
+    "file": "dpa/clips/house-of-ashes-046b-500361a932.mp4"
+  },
+  "devil-in-me-001": {
+    "file": "dpa/clips/devil-in-me-001-2baa254b1b.mp4"
+  },
+  "devil-in-me-001b": {
+    "file": "dpa/clips/devil-in-me-001b-a71856536b.mp4"
+  },
+  "devil-in-me-001c": {
+    "file": "dpa/clips/devil-in-me-001c-f46ac8e73d.mp4"
+  },
+  "devil-in-me-002": {
+    "file": "dpa/clips/devil-in-me-002-6d35ce5577.mp4"
+  },
+  "devil-in-me-002b": {
+    "file": "dpa/clips/devil-in-me-002b-0a0cac3d70.mp4"
+  },
+  "devil-in-me-002c": {
+    "file": "dpa/clips/devil-in-me-002c-9d3e3f2e28.mp4"
+  },
+  "devil-in-me-003": {
+    "file": "dpa/clips/devil-in-me-003-1ae5bbc258.mp4"
+  },
+  "devil-in-me-003b": {
+    "file": "dpa/clips/devil-in-me-003b-b2dcf188f6.mp4"
+  },
+  "devil-in-me-003c": {
+    "file": "dpa/clips/devil-in-me-003c-5bb20cacf3.mp4"
+  },
+  "devil-in-me-004": {
+    "file": "dpa/clips/devil-in-me-004-2b298b1c85.mp4"
+  },
+  "devil-in-me-004b": {
+    "file": "dpa/clips/devil-in-me-004b-3a0bc2bdb1.mp4"
+  },
+  "devil-in-me-005": {
+    "file": "dpa/clips/devil-in-me-005-fa724de0f1.mp4"
+  },
+  "devil-in-me-005b": {
+    "file": "dpa/clips/devil-in-me-005b-bed2eb43c5.mp4"
+  },
+  "devil-in-me-006": {
+    "file": "dpa/clips/devil-in-me-006-ad88dc38cd.mp4"
+  },
+  "devil-in-me-006b": {
+    "file": "dpa/clips/devil-in-me-006b-8a0c57dd67.mp4"
+  },
+  "devil-in-me-006c": {
+    "file": "dpa/clips/devil-in-me-006c-e53615b65a.mp4"
+  },
+  "devil-in-me-006d": {
+    "file": "dpa/clips/devil-in-me-006d-934a5102a9.mp4"
+  },
+  "devil-in-me-007": {
+    "file": "dpa/clips/devil-in-me-007-170e6c6c9a.mp4"
+  },
+  "devil-in-me-007b": {
+    "file": "dpa/clips/devil-in-me-007b-a8714dec39.mp4"
+  },
+  "devil-in-me-007c": {
+    "file": "dpa/clips/devil-in-me-007c-462e010347.mp4"
+  },
+  "devil-in-me-008": {
+    "file": "dpa/clips/devil-in-me-008-1bc970d047.mp4"
+  },
+  "devil-in-me-008b": {
+    "file": "dpa/clips/devil-in-me-008b-7cdf348470.mp4"
+  },
+  "devil-in-me-009": {
+    "file": "dpa/clips/devil-in-me-009-b48f03c85d.mp4"
+  },
+  "devil-in-me-009b": {
+    "file": "dpa/clips/devil-in-me-009b-19228c4fba.mp4"
+  },
+  "devil-in-me-010": {
+    "file": "dpa/clips/devil-in-me-010-7253d48bef.mp4"
+  },
+  "devil-in-me-010b": {
+    "file": "dpa/clips/devil-in-me-010b-6a6c7289a8.mp4"
+  },
+  "devil-in-me-011": {
+    "file": "dpa/clips/devil-in-me-011-b49676c557.mp4"
+  },
+  "devil-in-me-012": {
+    "file": "dpa/clips/devil-in-me-012-56e9a35c78.mp4"
+  },
+  "devil-in-me-013": {
+    "file": "dpa/clips/devil-in-me-013-7aeda36c61.mp4"
+  },
+  "devil-in-me-014": {
+    "file": "dpa/clips/devil-in-me-014-b57cab8b77.mp4"
+  },
+  "devil-in-me-015": {
+    "file": "dpa/clips/devil-in-me-015-7a0f618782.mp4"
+  },
+  "devil-in-me-016": {
+    "file": "dpa/clips/devil-in-me-016-a10b98bbf8.mp4"
+  },
+  "devil-in-me-016b": {
+    "file": "dpa/clips/devil-in-me-016b-905bbe58bc.mp4"
+  },
+  "devil-in-me-017": {
+    "file": "dpa/clips/devil-in-me-017-3eb250aac8.mp4"
+  },
+  "devil-in-me-018": {
+    "file": "dpa/clips/devil-in-me-018-e203e48d60.mp4"
+  },
+  "devil-in-me-018b": {
+    "file": "dpa/clips/devil-in-me-018b-02e796f1eb.mp4"
+  },
+  "devil-in-me-019": {
+    "file": "dpa/clips/devil-in-me-019-e614ed7575.mp4"
+  },
+  "devil-in-me-019b": {
+    "file": "dpa/clips/devil-in-me-019b-53da2107ab.mp4"
+  },
+  "devil-in-me-019c": {
+    "file": "dpa/clips/devil-in-me-019c-b476bbccef.mp4"
+  },
+  "devil-in-me-020": {
+    "file": "dpa/clips/devil-in-me-020-0741c77314.mp4"
+  },
+  "devil-in-me-021": {
+    "file": "dpa/clips/devil-in-me-021-c433240fac.mp4"
+  },
+  "devil-in-me-021b": {
+    "file": "dpa/clips/devil-in-me-021b-8e671c92d9.mp4"
+  },
+  "devil-in-me-021c": {
+    "file": "dpa/clips/devil-in-me-021c-27d2748b48.mp4"
+  },
+  "devil-in-me-022": {
+    "file": "dpa/clips/devil-in-me-022-09f6bc363f.mp4"
+  },
+  "devil-in-me-022b": {
+    "file": "dpa/clips/devil-in-me-022b-5498b63442.mp4"
+  },
+  "devil-in-me-022c": {
+    "file": "dpa/clips/devil-in-me-022c-f59d7fd86f.mp4"
+  },
+  "devil-in-me-023": {
+    "file": "dpa/clips/devil-in-me-023-017e289d1e.mp4"
+  },
+  "devil-in-me-023b": {
+    "file": "dpa/clips/devil-in-me-023b-7beed84aa1.mp4"
+  },
+  "devil-in-me-023c": {
+    "file": "dpa/clips/devil-in-me-023c-a4652bed53.mp4"
+  },
+  "devil-in-me-024": {
+    "file": "dpa/clips/devil-in-me-024-872dd29eeb.mp4"
+  },
+  "devil-in-me-024b": {
+    "file": "dpa/clips/devil-in-me-024b-bfa3340811.mp4"
+  },
+  "devil-in-me-025": {
+    "file": "dpa/clips/devil-in-me-025-1e8c63c1d4.mp4"
+  },
+  "devil-in-me-025b": {
+    "file": "dpa/clips/devil-in-me-025b-fa40f1eea8.mp4"
+  },
+  "devil-in-me-025c": {
+    "file": "dpa/clips/devil-in-me-025c-2dd8c90f4c.mp4"
+  },
+  "devil-in-me-026": {
+    "file": "dpa/clips/devil-in-me-026-87b36dec9a.mp4"
+  },
+  "devil-in-me-026b": {
+    "file": "dpa/clips/devil-in-me-026b-8ec6236f3b.mp4"
+  },
+  "devil-in-me-026c": {
+    "file": "dpa/clips/devil-in-me-026c-ac71806773.mp4"
+  },
+  "devil-in-me-027": {
+    "file": "dpa/clips/devil-in-me-027-f9f46d8297.mp4"
+  },
+  "devil-in-me-027b": {
+    "file": "dpa/clips/devil-in-me-027b-a903524399.mp4"
+  },
+  "devil-in-me-028": {
+    "file": "dpa/clips/devil-in-me-028-1139b7c22b.mp4"
+  },
+  "devil-in-me-028b": {
+    "file": "dpa/clips/devil-in-me-028b-b67c2a0f2a.mp4"
+  },
+  "devil-in-me-028c": {
+    "file": "dpa/clips/devil-in-me-028c-5fc92deecd.mp4"
+  },
+  "devil-in-me-029": {
+    "file": "dpa/clips/devil-in-me-029-3a1dacbf84.mp4"
+  },
+  "devil-in-me-029b": {
+    "file": "dpa/clips/devil-in-me-029b-b16002ed2c.mp4"
+  },
+  "devil-in-me-030": {
+    "file": "dpa/clips/devil-in-me-030-a40989d844.mp4"
+  },
+  "devil-in-me-030b": {
+    "file": "dpa/clips/devil-in-me-030b-f6210fd5c6.mp4"
+  },
+  "devil-in-me-030c": {
+    "file": "dpa/clips/devil-in-me-030c-a7add8b5db.mp4"
+  },
+  "devil-in-me-030d": {
+    "file": "dpa/clips/devil-in-me-030d-1e9743384f.mp4"
+  },
+  "devil-in-me-031": {
+    "file": "dpa/clips/devil-in-me-031-321a46ff9b.mp4"
+  },
+  "devil-in-me-031b": {
+    "file": "dpa/clips/devil-in-me-031b-d103fb5b21.mp4"
+  },
+  "devil-in-me-031c": {
+    "file": "dpa/clips/devil-in-me-031c-c55ca0b5a2.mp4"
+  },
+  "devil-in-me-032": {
+    "file": "dpa/clips/devil-in-me-032-3cb78c3671.mp4"
+  },
+  "devil-in-me-032b": {
+    "file": "dpa/clips/devil-in-me-032b-55274e2306.mp4"
+  },
+  "devil-in-me-033": {
+    "file": "dpa/clips/devil-in-me-033-13b9f1f4be.mp4"
+  },
+  "devil-in-me-034": {
+    "file": "dpa/clips/devil-in-me-034-230f527fdd.mp4"
+  },
+  "devil-in-me-034b": {
+    "file": "dpa/clips/devil-in-me-034b-e94213ae1a.mp4"
+  },
+  "devil-in-me-034c": {
+    "file": "dpa/clips/devil-in-me-034c-5b1db7a8a2.mp4"
+  },
+  "devil-in-me-035": {
+    "file": "dpa/clips/devil-in-me-035-fc785e9510.mp4"
+  },
+  "devil-in-me-035b": {
+    "file": "dpa/clips/devil-in-me-035b-4c1782077c.mp4"
+  },
+  "devil-in-me-036": {
+    "file": "dpa/clips/devil-in-me-036-5a743e2318.mp4"
+  },
+  "devil-in-me-036b": {
+    "file": "dpa/clips/devil-in-me-036b-2876293cc0.mp4"
+  },
+  "devil-in-me-036c": {
+    "file": "dpa/clips/devil-in-me-036c-36d915e93e.mp4"
+  },
+  "devil-in-me-037": {
+    "file": "dpa/clips/devil-in-me-037-fc8d0fefa2.mp4"
+  },
+  "devil-in-me-037b": {
+    "file": "dpa/clips/devil-in-me-037b-fa1b9f6a89.mp4"
+  },
+  "devil-in-me-037c": {
+    "file": "dpa/clips/devil-in-me-037c-4e0dd90fb0.mp4"
+  },
+  "devil-in-me-038": {
+    "file": "dpa/clips/devil-in-me-038-da6abd65dd.mp4"
+  },
+  "devil-in-me-038b": {
+    "file": "dpa/clips/devil-in-me-038b-c3d5dac75a.mp4"
+  },
+  "devil-in-me-039": {
+    "file": "dpa/clips/devil-in-me-039-5ab120b97f.mp4"
+  },
+  "devil-in-me-039b": {
+    "file": "dpa/clips/devil-in-me-039b-44b8a333b9.mp4"
+  },
+  "devil-in-me-040": {
+    "file": "dpa/clips/devil-in-me-040-15e9828166.mp4"
+  },
+  "devil-in-me-040b": {
+    "file": "dpa/clips/devil-in-me-040b-cfcdbd4b4e.mp4"
+  },
+  "devil-in-me-040c": {
+    "file": "dpa/clips/devil-in-me-040c-9ec9a048bc.mp4"
+  },
+  "devil-in-me-040d": {
+    "file": "dpa/clips/devil-in-me-040d-e4bdb76002.mp4"
+  },
+  "devil-in-me-040e": {
+    "file": "dpa/clips/devil-in-me-040e-825848cb14.mp4"
+  },
+  "devil-in-me-040f": {
+    "file": "dpa/clips/devil-in-me-040f-ce8929c24d.mp4"
+  },
+  "devil-in-me-041": {
+    "file": "dpa/clips/devil-in-me-041-ff54545443.mp4"
+  },
+  "devil-in-me-041b": {
+    "file": "dpa/clips/devil-in-me-041b-445e8ad861.mp4"
+  },
+  "devil-in-me-042": {
+    "file": "dpa/clips/devil-in-me-042-bc3b306de0.mp4"
+  },
+  "devil-in-me-042b": {
+    "file": "dpa/clips/devil-in-me-042b-87104f72ea.mp4"
+  },
+  "devil-in-me-043": {
+    "file": "dpa/clips/devil-in-me-043-da8bd2b672.mp4"
+  },
+  "devil-in-me-043b": {
+    "file": "dpa/clips/devil-in-me-043b-52a96f9bf0.mp4"
+  },
+  "devil-in-me-043c": {
+    "file": "dpa/clips/devil-in-me-043c-dfafc0710d.mp4"
+  },
+  "devil-in-me-044": {
+    "file": "dpa/clips/devil-in-me-044-605e87ee54.mp4"
+  },
+  "devil-in-me-044b": {
+    "file": "dpa/clips/devil-in-me-044b-66ce560c6b.mp4"
+  },
+  "devil-in-me-044c": {
+    "file": "dpa/clips/devil-in-me-044c-b006904bf5.mp4"
+  },
+  "devil-in-me-045": {
+    "file": "dpa/clips/devil-in-me-045-8f70ced2d6.mp4"
+  },
+  "devil-in-me-045b": {
+    "file": "dpa/clips/devil-in-me-045b-5c0499b896.mp4"
+  },
+  "curator-001": {
+    "file": "dpa/clips/curator-001-47d5d1f931.mp4"
+  },
+  "curator-001b": {
+    "file": "dpa/clips/curator-001b-cd55fa68c2.mp4"
+  },
+  "curator-002": {
+    "file": "dpa/clips/curator-002-02f6af3f73.mp4"
+  },
+  "curator-002b": {
+    "file": "dpa/clips/curator-002b-34395c0c11.mp4"
+  },
+  "curator-003": {
+    "file": "dpa/clips/curator-003-204bc4425a.mp4"
+  },
+  "curator-003b": {
+    "file": "dpa/clips/curator-003b-0768f96b9e.mp4"
+  },
+  "curator-004": {
+    "file": "dpa/clips/curator-004-c0d38762bb.mp4"
+  },
+  "curator-004b": {
+    "file": "dpa/clips/curator-004b-0fcbc8203d.mp4"
+  },
+  "curator-005": {
+    "file": "dpa/clips/curator-005-167b1ff429.mp4"
+  },
+  "curator-006": {
+    "file": "dpa/clips/curator-006-586c5ce5fd.mp4"
+  },
+  "curator-006b": {
+    "file": "dpa/clips/curator-006b-4ec8b71346.mp4"
+  },
+  "curator-007": {
+    "file": "dpa/clips/curator-007-9aa812df98.mp4"
+  },
+  "curator-007b": {
+    "file": "dpa/clips/curator-007b-7323e8d9a8.mp4"
+  },
+  "curator-007c": {
+    "file": "dpa/clips/curator-007c-bb65c7e9dc.mp4"
+  },
+  "curator-008": {
+    "file": "dpa/clips/curator-008-9a2e8e7d25.mp4"
+  },
+  "curator-008b": {
+    "file": "dpa/clips/curator-008b-fa35e21094.mp4"
+  },
+  "curator-008c": {
+    "file": "dpa/clips/curator-008c-d88323db95.mp4"
+  },
+  "curator-009": {
+    "file": "dpa/clips/curator-009-e40cb22ef9.mp4"
+  },
+  "curator-009b": {
+    "file": "dpa/clips/curator-009b-0a6348c12a.mp4"
+  },
+  "curator-009c": {
+    "file": "dpa/clips/curator-009c-970924ae58.mp4"
+  },
+  "curator-009d": {
+    "file": "dpa/clips/curator-009d-4f4e3e8615.mp4"
+  },
+  "curator-010": {
+    "file": "dpa/clips/curator-010-cdfe5dce5d.mp4"
+  },
+  "curator-010b": {
+    "file": "dpa/clips/curator-010b-e88ce5a1db.mp4"
+  },
+  "curator-011": {
+    "file": "dpa/clips/curator-011-ccaf92512b.mp4"
+  },
+  "curator-011b": {
+    "file": "dpa/clips/curator-011b-23e687534f.mp4"
+  },
+  "curator-011c": {
+    "file": "dpa/clips/curator-011c-29943bc4f8.mp4"
+  },
+  "curator-011d": {
+    "file": "dpa/clips/curator-011d-b2004e8237.mp4"
+  },
+  "themes-001": {
+    "file": "dpa/clips/themes-001-2065b3c9cf.mp4"
+  },
+  "themes-001b": {
+    "file": "dpa/clips/themes-001b-eeccb36d60.mp4"
+  },
+  "themes-001c": {
+    "file": "dpa/clips/themes-001c-5725fd026c.mp4"
+  },
+  "themes-001d": {
+    "file": "dpa/clips/themes-001d-5b3494d056.mp4"
+  },
+  "themes-002": {
+    "file": "dpa/clips/themes-002-c85ac4710d.mp4"
+  },
+  "themes-003": {
+    "file": "dpa/clips/themes-003-962ae28e0c.mp4"
+  },
+  "themes-004": {
+    "file": "dpa/clips/themes-004-85fc9e2b37.mp4"
+  },
+  "themes-004b": {
+    "file": "dpa/clips/themes-004b-bb2bf44903.mp4"
+  },
+  "themes-005": {
+    "file": "dpa/clips/themes-005-58c6980040.mp4"
+  },
+  "themes-006": {
+    "file": "dpa/clips/themes-006-5579cde93d.mp4"
+  },
+  "themes-006b": {
+    "file": "dpa/clips/themes-006b-ef2a41e75f.mp4"
+  },
+  "themes-007": {
+    "file": "dpa/clips/themes-007-c9b40bc314.mp4"
+  },
+  "themes-008": {
+    "file": "dpa/clips/themes-008-2326677d79.mp4"
+  },
+  "themes-008b": {
+    "file": "dpa/clips/themes-008b-688f3853b6.mp4"
+  },
+  "themes-009": {
+    "file": "dpa/clips/themes-009-584e29d693.mp4"
+  },
+  "themes-009b": {
+    "file": "dpa/clips/themes-009b-2e313a55ee.mp4"
+  },
+  "themes-010": {
+    "file": "dpa/clips/themes-010-c250c0e863.mp4"
+  },
+  "themes-010b": {
+    "file": "dpa/clips/themes-010b-4f5e36ec17.mp4"
+  },
+  "themes-011": {
+    "file": "dpa/clips/themes-011-a76f0f3590.mp4"
+  },
+  "themes-011b": {
+    "file": "dpa/clips/themes-011b-1e0aaaaf89.mp4"
+  },
+  "themes-011c": {
+    "file": "dpa/clips/themes-011c-ed1430fe3d.mp4"
+  },
+  "themes-011d": {
+    "file": "dpa/clips/themes-011d-c8d10c43fd.mp4"
+  },
+  "themes-011e": {
+    "file": "dpa/clips/themes-011e-5d278fb098.mp4"
+  },
+  "themes-012": {
+    "file": "dpa/clips/themes-012-5adea492ce.mp4"
+  },
+  "themes-012b": {
+    "file": "dpa/clips/themes-012b-f94fff14e5.mp4"
+  },
+  "themes-013": {
+    "file": "dpa/clips/themes-013-c6a239ace7.mp4"
+  },
+  "themes-013b": {
+    "file": "dpa/clips/themes-013b-1351ad72ca.mp4"
+  },
+  "themes-013c": {
+    "file": "dpa/clips/themes-013c-1471181428.mp4"
+  },
+  "themes-014": {
+    "file": "dpa/clips/themes-014-222adfccb6.mp4"
+  },
+  "themes-014b": {
+    "file": "dpa/clips/themes-014b-292b072b8b.mp4"
+  },
+  "themes-014c": {
+    "file": "dpa/clips/themes-014c-517965c81c.mp4"
+  },
+  "themes-014d": {
+    "file": "dpa/clips/themes-014d-c750fe6310.mp4"
+  },
+  "themes-015": {
+    "file": "dpa/clips/themes-015-fc99471ed6.mp4"
+  },
+  "themes-016": {
+    "file": "dpa/clips/themes-016-8e9485fb40.mp4"
+  },
+  "themes-016b": {
+    "file": "dpa/clips/themes-016b-0d5dfb04e2.mp4"
+  },
+  "themes-017": {
+    "file": "dpa/clips/themes-017-6e9ba38a98.mp4"
+  },
+  "themes-017b": {
+    "file": "dpa/clips/themes-017b-a2e0eb7b7c.mp4"
+  },
+  "themes-017c": {
+    "file": "dpa/clips/themes-017c-3a01140be3.mp4"
+  },
+  "themes-017d": {
+    "file": "dpa/clips/themes-017d-71d0fd0985.mp4"
+  },
+  "themes-018": {
+    "file": "dpa/clips/themes-018-d539275f4a.mp4"
+  },
+  "themes-018b": {
+    "file": "dpa/clips/themes-018b-87fe49c44c.mp4"
+  },
   "themes-019": {
     "file": "dpa/clips/themes-019-e03dd9cf50.mp4"
   },
@@ -37,5 +1690,59 @@
   },
   "themes-020c": {
     "file": "dpa/clips/themes-020c-3b84cdd6b4.mp4"
+  },
+  "themes-021": {
+    "file": "dpa/clips/themes-021-1532640f4d.mp4"
+  },
+  "themes-021b": {
+    "file": "dpa/clips/themes-021b-a9f3d3c26a.mp4"
+  },
+  "themes-022": {
+    "file": "dpa/clips/themes-022-d7def9dd87.mp4"
+  },
+  "themes-022b": {
+    "file": "dpa/clips/themes-022b-dacb313469.mp4"
+  },
+  "themes-023": {
+    "file": "dpa/clips/themes-023-33fc68ba5e.mp4"
+  },
+  "themes-023b": {
+    "file": "dpa/clips/themes-023b-534e2326f5.mp4"
+  },
+  "themes-023c": {
+    "file": "dpa/clips/themes-023c-2dbc5f64bb.mp4"
+  },
+  "outro-001": {
+    "file": "dpa/clips/outro-001-0cb88e6f38.mp4"
+  },
+  "outro-001b": {
+    "file": "dpa/clips/outro-001b-5d97b55f26.mp4"
+  },
+  "outro-002": {
+    "file": "dpa/clips/outro-002-18f5339b3c.mp4"
+  },
+  "outro-002b": {
+    "file": "dpa/clips/outro-002b-186e2a4152.mp4"
+  },
+  "outro-003": {
+    "file": "dpa/clips/outro-003-4eca486d1f.mp4"
+  },
+  "outro-004": {
+    "file": "dpa/clips/outro-004-891554bd61.mp4"
+  },
+  "outro-005": {
+    "file": "dpa/clips/outro-005-0bb96b31de.mp4"
+  },
+  "outro-006": {
+    "file": "dpa/clips/outro-006-92ade6176c.mp4"
+  },
+  "outro-007": {
+    "file": "dpa/clips/outro-007-797d8ccef2.mp4"
+  },
+  "outro-007b": {
+    "file": "dpa/clips/outro-007b-be0b29ca29.mp4"
+  },
+  "outro-008": {
+    "file": "dpa/clips/outro-008-56e73eb5af.mp4"
   }
 }

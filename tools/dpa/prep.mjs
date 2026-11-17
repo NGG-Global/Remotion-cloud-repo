@@ -119,7 +119,7 @@ await pool(todo, jobs, async ({ shot, source, seek, frames, crop, name }) => {
   }
   const colour = sourceColour(source);
   filters.push(
-    `scale=${W}:${H}:force_original_aspect_ratio=increase:flags=bicubic:` +
+    `scale=${W}:${H}:force_original_aspect_ratio=increase:flags=lanczos:` +
       `in_color_matrix=${colour.matrix}:in_range=${colour.range}:` +
       `out_color_matrix=bt709:out_range=tv`,
     `crop=${W}:${H}`,
