@@ -20,3 +20,8 @@ out
 
 # Alignment diagnostics written by tools/align-srt.mjs
 *.aligned.json
+
+# Hiroshima documentary: generated media (rebuild with tools/hiroshima/*.mjs)
+public/hiroshima/clips
+public/hiroshima/graded
+public/hiroshima/audio/mix.wav

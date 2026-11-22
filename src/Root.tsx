@@ -41,6 +41,10 @@ import {
 } from "./compositions/StarReveal";
 import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
 import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
+import {
+  HIROSHIMA_DURATION,
+  HiroshimaDocumentary,
+} from "./hiroshima/HiroshimaDocumentary";
 import { RigSheet } from "./gacy/dev/RigSheet";
 import { SetTest } from "./gacy/dev/SetTest";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
@@ -108,6 +112,13 @@ export const RemotionRoot: React.FC = () => {
         id="GacyDocumentary"
         component={GacyDocumentary}
         durationInFrames={GACY_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="HiroshimaNagasaki"
+        component={HiroshimaDocumentary}
+        durationInFrames={HIROSHIMA_DURATION}
         {...FORMAT}
       />
 

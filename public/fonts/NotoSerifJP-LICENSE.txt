@@ -1,0 +1,7 @@
+Noto Serif JP (subset: 黒い雨被爆者山口彊二重), weight 600.
+Copyright 2017 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
+Licensed under the SIL Open Font License, Version 1.1:
+https://openfontlicense.org/open-font-license-official-text/
+Served by Google Fonts (fonts.google.com/noto/specimen/Noto+Serif+JP); the
+subset was requested with the Google Fonts `text=` parameter so only the
+glyphs the Hiroshima documentary shows are shipped.

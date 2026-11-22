@@ -444,6 +444,24 @@ npx remotion render StarReveal out/star-reveal.mp4
 npx remotion still StarReveal out/star-reveal.png --frame=90
 ```
 
+## Hiroshima and Nagasaki documentary
+
+`HiroshimaNagasaki` is a 23:44 archival documentary in the *מאחורי הסיוט*
+series, cut to a three-part Hebrew narration: U.S. government film of 1945–46,
+Universal newsreels and Commons photographs, with maps, explanatory graphics
+and a synthesised score. The source films are not committed; four tools in
+`tools/hiroshima` fetch them, cut and grade the segments, grade the stills and
+build the soundtrack.
+
+```bash
+npx remotion render HiroshimaNagasaki out/hiroshima-nagasaki-720p.mp4 \
+  --scale=0.6666666666666666 --concurrency=4 --crf=23
+```
+
+How it is built, the editorial decisions and the known limits are in
+`docs/HIROSHIMA_NOTES.md`; every source and licence is in
+`docs/HIROSHIMA_SOURCES.md`.
+
 ## Cloud rendering
 
 `npm run bundle` produces a static bundle that any render service can serve.
