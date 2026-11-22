@@ -454,8 +454,8 @@ and a synthesised score. The source films are not committed; four tools in
 build the soundtrack.
 
 ```bash
-npx remotion render HiroshimaNagasaki out/hiroshima-nagasaki-720p.mp4 \
-  --scale=0.6666666666666666 --concurrency=4 --crf=23
+npx remotion render HiroshimaNagasaki out/hiroshima-master-720p.mp4 \
+  --scale=0.6666666666666666 --concurrency=4 --crf=19
 ```
 
 How it is built, the editorial decisions and the known limits are in

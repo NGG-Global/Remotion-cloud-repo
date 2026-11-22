@@ -29,8 +29,18 @@ Each tool reads the shot list, so after editing `edit.ts` run `cut-clips.mjs` (i
 ## Render
 
 ```bash
-npx remotion render HiroshimaNagasaki out/hiroshima-nagasaki-720p.mp4 \
-  --scale=0.6666666666666666 --concurrency=4 --crf=23
+npx remotion render HiroshimaNagasaki out/hiroshima-master-720p.mp4 \
+  --scale=0.6666666666666666 --concurrency=4 --crf=19 --jpeg-quality=92
+```
+
+Measured in the 4-core cloud container this was built in: the full 720p render took about 2 h 50 min (Chrome's software compositor is the bottleneck, not the video decoding) and produced a 632 MB file, H.264 at about 3.2 Mbit/s with 317 kbit/s AAC. All 42,720 frames decoded without error.
+
+The delivery copy (sent in chat, and a sensible YouTube upload) is a two-pass re-encode of that master at about 1.55 Mbit/s, roughly 300 MB:
+
+```bash
+ffmpeg -i out/hiroshima-master-720p.mp4 -c:v libx264 -preset slow -b:v 1550k -pass 1 -an -f null /dev/null
+ffmpeg -i out/hiroshima-master-720p.mp4 -c:v libx264 -preset slow -b:v 1550k -maxrate 3000k -bufsize 6000k \
+  -pass 2 -c:a aac -b:a 128k -movflags +faststart out/hiroshima-nagasaki-720p.mp4
 ```
 
 A section, for review (frames are seconds × 30):
@@ -75,4 +85,5 @@ These are in the supplied voice-over, not in the picture. They are not wrong as 
 - **Two licences are not fully settled** (see `docs/HIROSHIMA_SOURCES.md`): the Prelinger "Enola Gay outtakes" (no licence on the item page; Prelinger material is generally released to the public domain) and the 1946 Strategic Bombing Survey film shot by the Japanese Nippon Eigasha crew (public domain in the U.S.; status elsewhere not verified). Both should be cleared before any broadcast use outside YouTube.
 - **No photograph of Tsutomu Yamaguchi** is used: none with a free licence was found. His chapter is carried by maps, the places he passed through, and a name card.
 - **Wikimedia rate limits** stopped several further stills from downloading (a Marcel Junod photograph, the Sumitomo Bank shadow, the 1955 ABCC building). The edit does not depend on them.
+- **Two captions sit on bright picture**: "ניסויי ביקיני" (22:07–22:18) partly over a white cloud, and "ועידת פוטסדאם" (22:42) over the edge of the mounted photograph. Both are legible but weaker than the rest; moving them needs a re-render of those seconds only (`--frames`).
 - **AAC timing**: as with the other documentaries in this repository, H.264/AAC output decodes about 43 ms late in ffmpeg (encoder priming). There is no lip sync in this film; render a ProRes master (`npm run render:master`) if a sample-exact file is needed.
