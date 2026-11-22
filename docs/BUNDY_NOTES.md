@@ -34,11 +34,11 @@ npx remotion render TedBundy out/bundy-master-720p.mp4 \
   --scale=0.6666666666666666 --concurrency=4 --crf=19 --jpeg-quality=92
 ```
 
-The delivery copy is a two-pass re-encode of the master at about 1.55 Mbit/s, roughly 280 MB:
+The delivery copy is a two-pass re-encode of the master at about 1.55 Mbit/s, roughly 280 MB. The medium preset is used for speed on a 4-core machine; at this bit rate the difference from the slow preset is small:
 
 ```bash
-ffmpeg -i out/bundy-master-720p.mp4 -c:v libx264 -preset slow -b:v 1550k -pass 1 -an -f null /dev/null
-ffmpeg -i out/bundy-master-720p.mp4 -c:v libx264 -preset slow -b:v 1550k -maxrate 3000k -bufsize 6000k \
+ffmpeg -i out/bundy-master-720p.mp4 -c:v libx264 -preset medium -b:v 1550k -pass 1 -an -f null /dev/null
+ffmpeg -i out/bundy-master-720p.mp4 -c:v libx264 -preset medium -b:v 1550k -maxrate 3000k -bufsize 6000k \
   -pass 2 -c:a aac -b:a 128k -movflags +faststart out/ted-bundy-720p.mp4
 ```
 
