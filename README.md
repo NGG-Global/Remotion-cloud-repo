@@ -462,6 +462,27 @@ How it is built, the editorial decisions and the known limits are in
 `docs/HIROSHIMA_NOTES.md`; every source and licence is in
 `docs/HIROSHIMA_SOURCES.md`.
 
+## Ted Bundy documentary
+
+`TedBundy` is a 22:36 documentary in the *פני הרוע* series, cut to a
+three-part Hebrew narration: photographs of Bundy from the State Archives of
+Florida, the Florida Department of Corrections and the FBI, 1970s photographs
+of the places of the story (EPA DOCUMERICA, Library of Congress), maps, memorial
+cards naming the women, and public-domain U.S. government films of 1968–1975 as
+period atmosphere. It shows no photographs of the victims and no crime-scene
+material. The films are not committed; the Hiroshima tools cut and grade them
+(`cut-clips.mjs bundy`, `grade-stills.mjs bundy`) and `tools/bundy/score.mjs`
+builds the soundtrack.
+
+```bash
+npx remotion render TedBundy out/bundy-master-720p.mp4 \
+  --scale=0.6666666666666666 --concurrency=4 --crf=19
+```
+
+How it is built, the editorial decisions and the known limits are in
+`docs/BUNDY_NOTES.md`; every source and licence is in `docs/BUNDY_SOURCES.md`;
+the YouTube text is `docs/BUNDY_YOUTUBE.md`.
+
 ## Cloud rendering
 
 `npm run bundle` produces a static bundle that any render service can serve.

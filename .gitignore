@@ -25,3 +25,8 @@ out
 public/hiroshima/clips
 public/hiroshima/graded
 public/hiroshima/audio/mix.wav
+
+# Bundy documentary: generated media (rebuild with tools/hiroshima/*.mjs bundy, tools/bundy/score.mjs)
+public/bundy/clips
+public/bundy/graded
+public/bundy/audio/mix.wav

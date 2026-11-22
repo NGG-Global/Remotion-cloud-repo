@@ -45,6 +45,7 @@ import {
   HIROSHIMA_DURATION,
   HiroshimaDocumentary,
 } from "./hiroshima/HiroshimaDocumentary";
+import { BUNDY_DURATION, BundyDocumentary } from "./bundy/BundyDocumentary";
 import { RigSheet } from "./gacy/dev/RigSheet";
 import { SetTest } from "./gacy/dev/SetTest";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
@@ -119,6 +120,13 @@ export const RemotionRoot: React.FC = () => {
         id="HiroshimaNagasaki"
         component={HiroshimaDocumentary}
         durationInFrames={HIROSHIMA_DURATION}
+        {...FORMAT}
+      />
+
+      <Composition
+        id="TedBundy"
+        component={BundyDocumentary}
+        durationInFrames={BUNDY_DURATION}
         {...FORMAT}
       />
 

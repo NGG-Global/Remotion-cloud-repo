@@ -11,6 +11,8 @@ type StingProps = {
   readonly episode?: string;
   /** Longer, slower variant for the welcome after the cold open. */
   readonly grand?: boolean;
+  /** Small Latin line under the grand variant; null for none. */
+  readonly tagline?: string | null;
 };
 
 /**
@@ -21,6 +23,7 @@ export const Sting: React.FC<StingProps> = ({
   series,
   episode,
   grand = false,
+  tagline = "WHITECHAPEL · 1888",
 }) => {
   const frame = useCurrentFrame();
   const bloom = grand ? easeInOut(ramp(frame, 0, 70)) : 0;
@@ -72,7 +75,7 @@ export const Sting: React.FC<StingProps> = ({
             style={{ marginTop: 26, letterSpacing: 2 }}
           />
         ) : null}
-        {grand ? (
+        {grand && tagline ? (
           <div
             style={{
               marginTop: 34,
@@ -83,7 +86,7 @@ export const Sting: React.FC<StingProps> = ({
               opacity: 0.7 * easeOut(ramp(frame, 80, 110)),
             }}
           >
-            WHITECHAPEL · 1888
+            {tagline}
           </div>
         ) : null}
       </AbsoluteFill>

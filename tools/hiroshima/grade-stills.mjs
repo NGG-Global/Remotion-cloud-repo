@@ -3,7 +3,9 @@
  * blurred, darkened backdrop that a mounted (portrait or small) picture sits
  * on.
  *
- *   node --experimental-strip-types tools/hiroshima/grade-stills.mjs
+ *   node --experimental-strip-types tools/hiroshima/grade-stills.mjs [project]
+ *
+ * `project` is the folder under src/ and public/ (default "hiroshima").
  *
  * Reads public/hiroshima/stills (the downloaded originals) and writes
  * public/hiroshima/graded/<variant>.jpg and <variant>-mount.jpg.
@@ -12,12 +14,14 @@ import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 
-const { stillJobs, stillVariant, GRADE_FILTERS } =
-  await import("../../src/hiroshima/data/edit.ts");
-const { STILLS } = await import("../../src/hiroshima/data/stills.ts");
+const project = process.argv[2] ?? "hiroshima";
+const { stillJobs, stillVariant, GRADE_FILTERS } = await import(
+  `../../src/${project}/data/edit.ts`
+);
+const { STILLS } = await import(`../../src/${project}/data/stills.ts`);
 
-const IN = path.resolve("public/hiroshima/stills");
-const OUT = path.resolve("public/hiroshima/graded");
+const IN = path.resolve(`public/${project}/stills`);
+const OUT = path.resolve(`public/${project}/graded`);
 fs.mkdirSync(OUT, { recursive: true });
 
 for (const v of stillJobs()) {

@@ -1,7 +1,10 @@
 /**
  * Cuts every archival segment the edit plays out of the downloaded films.
  *
- *   node --experimental-strip-types tools/hiroshima/cut-clips.mjs [--force]
+ *   node --experimental-strip-types tools/hiroshima/cut-clips.mjs [project] [--force]
+ *
+ * `project` is the folder under src/ and public/ (default "hiroshima"; also
+ * "bundy"). Its films are read from the project's raw directory below.
  *
  * Reads the shot list (src/hiroshima/data/edit.ts) and the film registry
  * (src/hiroshima/data/sources.ts), and writes one H.264 file per segment to
@@ -15,12 +18,16 @@ import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
 
-const { clipJobs, GRADE_FILTERS } =
-  await import("../../src/hiroshima/data/edit.ts");
-const { FILMS } = await import("../../src/hiroshima/data/sources.ts");
+const project =
+  process.argv.slice(2).find((a) => !a.startsWith("--")) ?? "hiroshima";
+const RAW_DIRS = { hiroshima: ".cache/raw", bundy: ".cache/raw-bundy" };
+const { clipJobs, GRADE_FILTERS } = await import(
+  `../../src/${project}/data/edit.ts`
+);
+const { FILMS } = await import(`../../src/${project}/data/sources.ts`);
 
-const RAW = path.resolve(".cache/raw");
-const OUT = path.resolve("public/hiroshima/clips");
+const RAW = path.resolve(RAW_DIRS[project] ?? `.cache/raw-${project}`);
+const OUT = path.resolve(`public/${project}/clips`);
 const force = process.argv.includes("--force");
 fs.mkdirSync(OUT, { recursive: true });
 
@@ -83,8 +90,13 @@ const run = async (job) => {
     );
   }
   filters.push(
+    // Square the pixels first: NTSC MPEG-2 sources store 4:3 frames in
+    // non-square pixels (e.g. 368×480 at 40:23), which a browser may not honour.
+    "scale=trunc(iw*sar/2)*2:ih",
+    "setsar=1",
     "scale=-2:720:flags=lanczos",
     "fps=30",
+    ...(film.pre ? [film.pre] : []),
     GRADE_FILTERS[job.grade],
   );
   if (job.blur) filters.push(`gblur=sigma=${job.blur * 1.4}`);
