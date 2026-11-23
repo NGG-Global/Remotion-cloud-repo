@@ -40,6 +40,7 @@ import {
   starRevealSchema,
 } from "./compositions/StarReveal";
 import { JACK_THE_RIPPER_DURATION, JackTheRipper } from "./doc/JackTheRipper";
+import { LYRIC_VIDEO_DURATION, LyricVideo } from "./lyrics/LyricVideo";
 import { GACY_DURATION, GacyDocumentary } from "./gacy/GacyDocumentary";
 import { RigSheet } from "./gacy/dev/RigSheet";
 import { SetTest } from "./gacy/dev/SetTest";
@@ -199,6 +200,13 @@ export const RemotionRoot: React.FC = () => {
         height={1280}
         schema={starRevealSchema}
         defaultProps={starRevealDefaultProps}
+      />
+
+      <Composition
+        id="LyricsAlTishkechiOti"
+        component={LyricVideo}
+        durationInFrames={LYRIC_VIDEO_DURATION}
+        {...FORMAT}
       />
 
       <Composition
