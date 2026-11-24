@@ -251,6 +251,58 @@ export const ConceptsToVectors: React.FC<{
           </React.Fragment>
         );
       })}
+      {/* Lead-in before the first example is named: the claim, the brain
+          it is about, and three empty slots waiting to be filled. */}
+      <At
+        x={540}
+        y={80}
+        scale={pop(t, 0.1, fps, 10)}
+        opacity={1 - ramp(t, m.vectors + 0.2, m.vectors + 0.5)}
+      >
+        <Pill color={C.card} ink={C.cardInk} size={54} emoji="📜">
+          הטענה המרכזית
+        </Pill>
+      </At>
+      <At
+        x={540}
+        y={270 + bob(t, 2, 8)}
+        scale={pop(t, 0.35, fps, 10) * (1 - ramp(t, m.dog - 0.3, m.dog + 0.2))}
+      >
+        <Emoji char="🧠" size={190} />
+      </At>
+      <At
+        x={540}
+        y={405}
+        scale={pop(t, 0.6, fps, 10)}
+        opacity={1 - ramp(t, m.dog - 0.3, m.dog + 0.2)}
+      >
+        <Label size={50}>המושגים האנושיים שלנו</Label>
+      </At>
+      {[820, 540, 260].map((x, i) => (
+        <At
+          key={x}
+          x={x}
+          y={560}
+          scale={pop(t, 0.9 + i * 0.15, fps, 11)}
+          opacity={t < marks[i] ? 1 : 0}
+        >
+          <div
+            style={{
+              width: 190,
+              height: 190,
+              borderRadius: "50%",
+              border: `8px dashed ${C.gridStrong}`,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Label size={80} color={C.textMuted}>
+              ?
+            </Label>
+          </div>
+        </At>
+      ))}
       <At x={540} y={80} scale={pop(t, m.vectors + 0.5, fps, 10)}>
         <Pill color={C.yellow} size={62}>
           מושג = וקטור

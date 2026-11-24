@@ -46,7 +46,7 @@ export const ProjectionScene: React.FC<{
   return (
     <Stage>
       {/* long-term memory cloud */}
-      <At x={540} y={240} scale={pop(t, m.latent, fps, 10)}>
+      <At x={540} y={240} scale={pop(t, Math.min(0.2, m.latent), fps, 10)}>
         <div
           style={{
             width: 900,
@@ -57,6 +57,14 @@ export const ProjectionScene: React.FC<{
             boxShadow: glow > 0 ? `0 0 ${60 * glow}px ${C.purple}` : undefined,
           }}
         />
+      </At>
+      <At
+        x={540}
+        y={250 + bob(t, 1, 8)}
+        scale={pop(t, 0.5, fps, 9)}
+        opacity={1 - ramp(t, m.dog - 0.4, m.dog)}
+      >
+        <Emoji char="💡" size={170} />
       </At>
       <At x={540} y={110} opacity={ramp(t, m.ltm, m.ltm + 0.4)}>
         <Label size={40} color={C.purple}>

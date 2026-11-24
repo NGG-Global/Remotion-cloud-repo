@@ -168,6 +168,31 @@ export const ShapeShifter: React.FC<{
   });
   return (
     <Stage>
+      {/* Lead-in: who has known this for a long time. */}
+      {[
+        { x: 780, e: "📜", label: "פילוסופים", at: 0.1, c: C.sky },
+        { x: 300, e: "🧠", label: "פסיכולוגים", at: 0.45, c: C.pink },
+      ].map((w) => (
+        <At
+          key={w.label}
+          x={w.x}
+          y={560}
+          scale={pop(t, w.at, fps, 10)}
+          opacity={1 - ramp(t, m.animal - 0.3, m.animal + 0.1)}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 14,
+            }}
+          >
+            <Disc char={w.e} size={220} color={w.c} />
+            <Label size={52}>{w.label}</Label>
+          </div>
+        </At>
+      ))}
       <At
         x={540}
         y={150 + bob(t, 0, 10)}
@@ -300,6 +325,38 @@ export const CampsScene: React.FC<{
   const missing = t >= m.partial ? 4 : -1;
   return (
     <Stage>
+      {/* Lead-in: science as one piece, until the split. */}
+      {[-1, 1].map((side) => {
+        const apart = glide(t, m.split - 0.1, m.split + 0.7);
+        return (
+          <At
+            key={side}
+            x={540 + side * apart * 160}
+            y={500}
+            scale={pop(t, 0.1, fps, 10)}
+            rotate={side * apart * 18}
+            opacity={1 - ramp(t, m.split + 0.4, m.split + 0.9)}
+          >
+            <div
+              style={{
+                width: 280,
+                height: 280,
+                clipPath: side < 0 ? "inset(0 50% 0 0)" : "inset(0 0 0 50%)",
+              }}
+            >
+              <Disc char="🔬" size={280} color={C.mint} />
+            </div>
+          </At>
+        );
+      })}
+      <At
+        x={540}
+        y={720}
+        scale={pop(t, 0.4, fps, 10)}
+        opacity={1 - ramp(t, m.split, m.split + 0.4)}
+      >
+        <Label size={56}>המדע</Label>
+      </At>
       {/* divider */}
       <div
         style={{

@@ -697,6 +697,26 @@ export const WordMath: React.FC<{
   let wi = 0;
   return (
     <Stage>
+      {/* Lead-in: "this is where it gets interesting". */}
+      <At
+        x={540}
+        y={470 + bob(t, 1, 10, 3)}
+        scale={pop(t, 0.1, fps, 8)}
+        opacity={1 - ramp(t, m.math - 0.2, m.math + 0.2)}
+        rotate={bob(t, 3, 6, 4)}
+      >
+        <Emoji char="🍿" size={260} />
+      </At>
+      <At
+        x={540}
+        y={720}
+        scale={pop(t, 0.4, fps, 9)}
+        opacity={1 - ramp(t, m.math - 0.2, m.math + 0.2)}
+      >
+        <Pill color={C.yellow} size={56}>
+          עכשיו זה נהיה מעניין
+        </Pill>
+      </At>
       <At x={540} y={120} scale={pop(t, m.math, fps, 10)}>
         <Pill color={C.card} ink={C.cardInk} size={46} emoji="🧮">
           מתמטיקה וקטורית בסיסית
