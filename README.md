@@ -420,6 +420,74 @@ npx remotion still Calibration out/grid.png --props='{"screen":"settings"}'
 npx remotion still RegionCheck out/map.png  --props='{"screen":"settings"}'
 ```
 
+## Why concepts are vectors (vertical)
+
+A fun 9:16 explainer (1080x1920, 30 fps, 11:21) cut to a Hebrew narration
+that reviews a paper arguing human concepts are, at bottom, high-dimensional
+vectors. Code lives in `src/vectors/`.
+
+```bash
+npx remotion render ConceptsAreVectors out/concepts-are-vectors.mp4 --concurrency=4
+```
+
+On a 4-core machine a full render takes about two hours; budget accordingly.
+
+**The narration is slowed, not just stretched.** The supplied read ran at
+about 147 words a minute. `tools/slow-narration.py` makes it sound natural in
+three steps, each documented in the script:
+
+1. Rubber Band time-stretch to 92% speed, pitch and formants preserved.
+2. Pauses that already exist after sentences (+0.22 s) and commas (+0.08 s)
+   are lengthened in their quietest 30 ms, never mid-word, and only where the
+   level is already below -45 dB.
+3. EBU R128 loudness normalisation to -16 LUFS with a -1.5 dBTP ceiling, for
+   phone speakers. Level only; timing is untouched.
+
+The result runs 10:02 -> 11:23 (about 129 words a minute). The script also
+remaps the word timings onto the new track; they were checked against the
+audio (pauses at -66 dB median, words at -24 dB).
+
+**Timings come from a word-level transcript.** The track was transcribed
+locally with faster-whisper and the Hebrew-tuned
+`ivrit-ai/whisper-large-v3-turbo-ct2` model, which handles Hebrew far better
+than the English or stock multilingual models. `src/vectors/data/words.ts`
+holds the result. Words Whisper split at a hyphen or geresh are re-joined
+(`ה-VSA`, `רוג'ר`), and a few slips in the voice-over itself are corrected in
+the caption text only (`עשרים שלמים` -> `עשורים שלמים`, `השרים` -> `העשורים`,
+`חדשות` -> `עדשות`).
+
+**Scenes are placed by phrase, not by second.** `src/vectors/beats.ts` is the
+storyboard: each beat opens on a spoken phrase, and every timed event inside a
+scene is another phrase, looked up in narration order by `makeCues()`. A
+phrase that is not found throws, so a typo fails the render rather than
+mistiming a scene, and re-timing the audio moves every cut with it.
+
+| Piece                     | What it does                                                 |
+| ------------------------- | ------------------------------------------------------------ |
+| `beats.ts`                | Storyboard: 48 beats across an opening and six chapters      |
+| `cues.ts`                 | Phrase lookup on the word timings                            |
+| `captions.ts`, `Captions` | Word-synced RTL captions, paged at breaths and sentence ends |
+| `Header`                  | Chapter label and a progress bar that fills right to left    |
+| `scenes/*`                | One file per chapter; each scene takes phrase-derived marks  |
+| `components/Space.tsx`    | Arrows, axes and tags for the vector diagrams                |
+
+Layout keeps captions between y=1285 and y=1585, clear of the bottom ~350 px
+that Shorts, Reels and TikTok cover with their own interface.
+
+**Emoji are bundled.** `public/fonts/emoji/VectorsEmoji.ttf` is a 196 KB
+subset of Noto Color Emoji (SIL OFL 1.1) holding only the glyphs the video
+uses, so a CI render matches a local one. After adding an emoji to a scene,
+run `tools/subset-emoji.sh` (needs `pip install fonttools`).
+
+Two details worth keeping:
+
+- The VSA binding scene uses real arithmetic: bipolar (±1) vectors bound by
+  element-wise multiplication, so multiplying the bound symbol by "Virginia"
+  again returns exactly "Washington", as shown on screen.
+- Claims stay as strong as the narration and no stronger. The reaction-time
+  bars are relative, with no invented milliseconds, and Shepard's result is
+  drawn as the exponential decay of similarity with distance he described.
+
 ## Starter examples
 
 `TitleCard` and `Explainer` are the minimal compositions this project started

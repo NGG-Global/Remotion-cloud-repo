@@ -45,6 +45,8 @@ import { RigSheet } from "./gacy/dev/RigSheet";
 import { SetTest } from "./gacy/dev/SetTest";
 import { TinyTempoAd, TINY_TEMPO_AD_DURATION } from "./tiny-tempo/TinyTempoAd";
 import { FORMAT, seconds } from "./theme";
+import { VectorsExplainer, VECTORS_DURATION } from "./vectors/VectorsExplainer";
+import { VERTICAL } from "./vectors/theme";
 
 /**
  * The list of renderable videos in this project.
@@ -55,6 +57,13 @@ import { FORMAT, seconds } from "./theme";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="ConceptsAreVectors"
+        component={VectorsExplainer}
+        durationInFrames={VECTORS_DURATION}
+        {...VERTICAL}
+      />
+
       <Composition
         id="ClaudeIntro"
         component={ClaudeIntro}
