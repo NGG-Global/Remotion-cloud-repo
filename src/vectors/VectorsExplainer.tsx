@@ -25,7 +25,10 @@ export const VectorsExplainer: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: "#15123a" }}>
       <Backdrop />
-      <Audio src={staticFile("audio/vectors-narration.mp3")} />
+      {/* The MP3 decodes about 68 ms late in the renderer (measured against
+          ffmpeg's decode, which the word timings are aligned to), so start
+          it 2 frames in to keep captions and voice locked. */}
+      <Audio src={staticFile("audio/vectors-narration.mp3")} trimBefore={2} />
 
       {BEATS.map((beat, i) => {
         const from = frameOf(beat.start);
