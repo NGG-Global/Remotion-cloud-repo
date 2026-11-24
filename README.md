@@ -474,7 +474,7 @@ mistiming a scene, and re-timing the audio moves every cut with it.
 Layout keeps captions between y=1285 and y=1585, clear of the bottom ~350 px
 that Shorts, Reels and TikTok cover with their own interface.
 
-**Emoji are bundled.** `public/fonts/emoji/VectorsEmoji.ttf` is a 196 KB
+**Emoji are bundled.** `public/fonts/emoji/VectorsEmoji.ttf` is a ~200 KB
 subset of Noto Color Emoji (SIL OFL 1.1) holding only the glyphs the video
 uses, so a CI render matches a local one. After adding an emoji to a scene,
 run `tools/subset-emoji.sh` (needs `pip install fonttools`).
